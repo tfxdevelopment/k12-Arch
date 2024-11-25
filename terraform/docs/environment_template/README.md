@@ -12,7 +12,7 @@ This directory lays out a default structure for Terraform environments so that t
 
 
 ## Usage
-1. Copy the `environment_template` directory into the `k12-infra/terraform/environments` directory and give it a name which identifies the environment or stage it will build (*i.e. dev, prod*)
+1. Copy the `environment_template` directory into the `k12-infra/terraform/environments` directory and give it a name which identifies the environment or stage it will build (*for K12 this will be development, testing, staging, or production*)
 2. Edit the `.tf` files for your resources and set them up accordingly.
 4. If you are overriding the default value for any module variables create an entry for them in `variables.tf`.
 5. 
