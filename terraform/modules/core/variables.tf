@@ -1,17 +1,6 @@
 variable "environment_name" {}
 variable "location" {}
-variable "dev_ip_list" {
-    type    = map(string)
-}
-variable "zscaler_ip_list" {
-    type    = map(string)
-}
-
-variable "tags" {
-    type    = map(string)
-    # default = {
-    #     environment = "${var.environment_name}"
-    #     creator     = "Terraform"
-    #     tf_module   = "core"
-    # }
-}
+variable "dev_ip_list" {type = map(string)}
+variable "zscaler_ip_list" {type = map(string)}
+variable "tags" {type = map(string)}
+variable "contributor_principal_id" {}

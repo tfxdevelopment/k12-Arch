@@ -1,33 +1,34 @@
 module "core" {
     source = "../../modules/core"
     #variables
-    environment_name = var.environment_name
-    location = var.location
-    tags = var.tags
-    zscaler_ip_list = var.zscaler_ip_list
-    dev_ip_list = var.dev_ip_list
+    environment_name = local.environment_name
+    location = local.location
+    tags = merge(local.tags, {module = "core"})
+    zscaler_ip_list = local.zscaler_ip_list
+    dev_ip_list = local.dev_ip_list
+    contributor_principal_id = local.contributor_principal_id
 }
 
 module "web-enrollment" {
     source = "../../modules/web-enrollment"
     #variables
-    environment_name = var.environment_name
-    location = var.location
+    environment_name = local.environment_name
+    location = local.location
     resource_group_name = module.core.rg_name
-    tags = var.tags
-    zscaler_ip_list = var.zscaler_ip_list
-    dev_ip_list = var.dev_ip_list
+    tags = merge(local.tags, {module = "web-enrollment"})
+    zscaler_ip_list = local.zscaler_ip_list
+    dev_ip_list = local.dev_ip_list
 }
 
 module "api-enrollment" {
     source = "../../modules/api-enrollment"
     #variables
-    environment_name = var.environment_name
-    location = var.location
+    environment_name = local.environment_name
+    location = local.location
     resource_group_name = module.core.rg_name
-    tags = var.tags
-    zscaler_ip_list = var.zscaler_ip_list
-    dev_ip_list = var.dev_ip_list
-    publisher_email = var.publisher_email
-    publisher_name = var.publisher_name
+    tags = merge(local.tags, {module = "api-enrollment"})
+    zscaler_ip_list = local.zscaler_ip_list
+    dev_ip_list = local.dev_ip_list
+    publisher_email = local.publisher_email
+    publisher_name = local.publisher_name
 }

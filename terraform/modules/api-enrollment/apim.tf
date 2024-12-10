@@ -24,10 +24,5 @@ resource "azurerm_api_management_api" "api_enrollment" {
   api_management_name = azurerm_api_management.api_enrollment.name
   revision            = "1"
   display_name        = "${var.environment_name}-api-enrollment"
-  path                = "example"
   protocols           = ["https"]
-  import {
-    content_format = "swagger-link-json"
-    content_value  = "https://raw.githubusercontent.com/hashicorp/terraform-provider-azurerm/refs/heads/main/internal/services/apimanagement/testdata/api_management_api_schema_swagger.json"
-  }
 }

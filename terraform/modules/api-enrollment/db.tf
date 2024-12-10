@@ -1,7 +1,7 @@
 resource "azurerm_mssql_server" "api-enrollment-db" {
   name                         = "${var.environment_name}-api-enrollment"
   resource_group_name          = var.resource_group_name
-  location                     = "eastus2"
+  location                     = var.location
   version                      = "12.0"
   minimum_tls_version          = "1.2"
 
@@ -18,7 +18,8 @@ resource "azurerm_mssql_database" "api-enrollment-k12" {
   name         = "K12"
   server_id    = azurerm_mssql_server.api-enrollment-db.id
   collation    = "SQL_Latin1_General_CP1_CI_AS"
-  license_type = "LicenseIncluded"
+  min_capacity = 2
+  auto_pause_delay_in_minutes = -1
   max_size_gb  = 2
   sku_name     = "GP_S_Gen5_2"
 
