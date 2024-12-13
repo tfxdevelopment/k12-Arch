@@ -21,4 +21,8 @@ resource "azurerm_windows_function_app" "api-enrollment" {
       use_dotnet_isolated_runtime = true
     }
   }
+
+  identity {
+    type = "SystemAssigned"
+  }
 }
