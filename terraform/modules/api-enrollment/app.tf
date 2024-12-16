@@ -45,7 +45,7 @@ resource "azurerm_application_insights_web_test" "dev-api-enrollment-test" {
   kind                    = "ping"
 
   geo_locations = [
-    "us-va-ash-azr"  //East US??
+    "us-va-ash-azr" //US East
   ]
 
   configuration = <<XML
@@ -56,3 +56,24 @@ resource "azurerm_application_insights_web_test" "dev-api-enrollment-test" {
 </WebTest>
 XML
 }
+
+resource "azurerm_monitor_action_group" "app-insights-smart-detection" {
+  name                = "Application Insights Smart Detection"
+  resource_group_name = var.resource_group_name
+  short_name          = "SmartDetect"
+  location            = "Global"
+  enabled             = true
+
+  arm_role_receiver {
+    name                      = "Monitoring Contributor"
+    role_id                   = "749f88d5-cbae-40b8-bcfc-e573ddc772fa"
+    use_common_alert_schema   = true
+  }
+
+  arm_role_receiver {
+    name                      = "Monitoring Reader"
+    role_id                   = "43d0d8ad-25c7-4714-9337-8ba259a9fe05"
+    use_common_alert_schema   = true
+  }
+}
+
