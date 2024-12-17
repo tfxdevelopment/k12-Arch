@@ -19,4 +19,16 @@ locals {
         start_ip        = "136.226.40.1"
         end_ip          = "136.226.60.255"
     }
+    arm_role_receivers = [
+        {
+        name                    = "Monitoring Contributor"
+        role_id                 = "749f88d5-cbae-40b8-bcfc-e573ddc772fa"
+        use_common_alert_schema = true
+        },
+        {
+        name                    = "Monitoring Reader"
+        role_id                 = "43d0d8ad-25c7-4714-9337-8ba259a9fe05"
+        use_common_alert_schema = true
+        }
+    ]
 }

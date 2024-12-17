@@ -51,7 +51,7 @@ resource "azurerm_application_insights_web_test" "dev-api-enrollment-test" {
   configuration = <<XML
 <WebTest Name="${var.environment_name}-api-availability-test" Id="00000000-0000-0000-0000-000000000000" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="30" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
   <Items>
-    <Request Method="GET" Version="1.1" Url="https://development-api-enrollment.azure-api.net/status-0123456789abcdef" ThinkTime="0" Timeout="30" ParseDependentRequests="False" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="200" />
+    <Request Method="GET" Version="1.1" Url="https://${var.environment_name}-api-enrollment.azure-api.net/status-0123456789abcdef" ThinkTime="0" Timeout="30" ParseDependentRequests="False" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="200" />
   </Items>
 </WebTest>
 XML
@@ -64,16 +64,50 @@ resource "azurerm_monitor_action_group" "app-insights-smart-detection" {
   location            = "Global"
   enabled             = true
 
-  arm_role_receiver {
-    name                      = "Monitoring Contributor"
-    role_id                   = "749f88d5-cbae-40b8-bcfc-e573ddc772fa"
-    use_common_alert_schema   = true
-  }
-
-  arm_role_receiver {
-    name                      = "Monitoring Reader"
-    role_id                   = "43d0d8ad-25c7-4714-9337-8ba259a9fe05"
-    use_common_alert_schema   = true
+  dynamic "arm_role_receiver" {
+    for_each = var.arm_role_receivers
+    content {
+      name                    = arm_role_receiver.value.name
+      role_id                 = arm_role_receiver.value.role_id
+      use_common_alert_schema = arm_role_receiver.value.use_common_alert_schema
+    }
   }
 }
+
+resource "azurerm_portal_dashboard" "dev-api-enrollment-dashboard" {
+  name                = "${var.environment_name}-api-enrollment-dashboard"
+  resource_group_name = var.resource_group_name
+  location            = var.location
+
+  dashboard_properties = jsonencode({
+    "lenses": {
+      "0": {
+        "order": 0,
+        "parts": {}
+      }
+    },
+    "metadata": {
+      "model": {
+        "timeRange": {
+          "value": {
+            "relative": {
+              "duration": 24,
+              "timeUnit": "hour"
+            }
+          }
+        },
+        "filterLocale": "en-us",
+        "filters": {
+          "MsPortalFx_TimeRange": {
+            "model": {
+              "format": "utc",
+              "relative": "24h"
+            }
+          }
+        }
+      }
+    }
+  })
+}
+
 
