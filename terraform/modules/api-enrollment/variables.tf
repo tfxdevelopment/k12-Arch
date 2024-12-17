@@ -6,3 +6,11 @@ variable "publisher_email" {}
 variable "dev_ip_list" {type = map(string)}
 variable "zscaler_ip_list" {type = map(string)}
 variable "tags" {type = map(string)}
+variable "arm_role_receivers" {
+  type = list(object({
+    name                    = string
+    role_id                 = string
+    use_common_alert_schema = bool
+  }))
+  description = "List of ARM role receivers for action groups."
+}
