@@ -27,7 +27,8 @@ resource "azurerm_api_management_api" "api_enrollment" {
   protocols           = ["https"]
 
   ######################################   TODO: FUTURE WORK  ################################################################################
-  # * Only way to get all the definitions and operations in. It does not import the policies and backend configuration. Ideally, we should be managing each operation and defition using terraform not Json...
+  # Only way to get all the definitions and operations in. It does not import the policies and backend configuration. 
+  # Ideally, we should be managing each operation and defition using terraform not Json...
   import {
     content_format = "openapi+json"
     content_value  = templatefile("${path.module}/apim_oprations_definitions_v1.json", {
@@ -38,10 +39,11 @@ resource "azurerm_api_management_api" "api_enrollment" {
 
 #######################################   TODO: FUTURE WORK  ################################################################################
 # * There is currently no way of associating/creating "Definitions" to an operation.
-# * Tried this workaround by first creating a schema and then linking it to operation but still didnt create the definition itself. https://stackoverflow.com/questions/69229878/terrform-module-for-azure-apim-definitions
+# * Tried this workaround by first creating a schema and then linking it to operation but still didnt create the definition itself.
+# * https://stackoverflow.com/questions/69229878/terrform-module-for-azure-apim-definitions
 # * Only way is to import the json file from dev environment as seen above.
 
-################################# keep the code below for when terraform decides to add definition functionality ############################
+################################# keep the code below for when Hashi decides to add definition functionality ############################
 
 # Define all endpoints below. 
 # GetAllPrograms
