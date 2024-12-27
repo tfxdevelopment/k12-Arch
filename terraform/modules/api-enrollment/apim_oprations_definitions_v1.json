@@ -1,0 +1,2014 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+      "title": "${environment}-api-enrollment",
+      "description": "K12 APIs",
+      "version": "v1"
+  },
+  "servers": [
+      {
+          "url": "https://${environment}-api-enrollment.azure-api.net/${environment}-api-enrollment/v1"
+      }
+  ],
+  "paths": {
+      "/enrollment/programs": {
+          "get": {
+              "tags": [
+                  "Programs"
+              ],
+              "summary": "GetAllPrograms",
+              "operationId": "GetAllPrograms",
+              "responses": {
+                  "200": {
+                      "description": "The OK response message containing a JSON result.",
+                      "content": {
+                          "application/json": {
+                              "schema": {
+                                  "$ref": "#/components/schemas/getAllEnrollmentProgramsViewModel"
+                              }
+                          }
+                      }
+                  },
+                  "500": {
+                      "description": "Internal server error",
+                      "content": {
+                          "application/json": {}
+                      }
+                  }
+              }
+          },
+          "post": {
+              "tags": [
+                  "Programs"
+              ],
+              "summary": "AddProgram",
+              "operationId": "AddProgram",
+              "requestBody": {
+                  "description": "Input Enrollment program model",
+                  "content": {
+                      "application/json": {
+                          "schema": {
+                              "$ref": "#/components/schemas/enrollmentProgramCreateViewModel"
+                          }
+                      }
+                  }
+              },
+              "responses": {
+                  "201": {
+                      "description": "The Created response message containing Location URL.",
+                      "content": {
+                          "application/json": {
+                              "schema": {
+                                  "$ref": "#/components/schemas/void"
+                              }
+                          }
+                      }
+                  },
+                  "400": {
+                      "description": "Invalid request due to validation errors",
+                      "content": {
+                          "application/json": {
+                              "schema": {
+                                  "$ref": "#/components/schemas/validationResultArray"
+                              },
+                              "example": [
+                                  {
+                                      "memberNames": [
+                                          "string"
+                                      ],
+                                      "errorMessage": "string"
+                                  }
+                              ]
+                          }
+                      }
+                  },
+                  "500": {
+                      "description": "Internal server error",
+                      "content": {
+                          "application/json": {}
+                      }
+                  }
+              }
+          }
+      },
+      "/enrollment/programs/{token}": {
+          "get": {
+              "tags": [
+                  "Programs"
+              ],
+              "summary": "GetProgramByToken",
+              "operationId": "GetProgramByToken",
+              "parameters": [
+                  {
+                      "name": "token",
+                      "in": "path",
+                      "required": true,
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": "The OK response message containing a JSON result.",
+                      "content": {
+                          "application/json": {
+                              "schema": {
+                                  "$ref": "#/components/schemas/enrollmentProgramViewModel"
+                              }
+                          }
+                      }
+                  },
+                  "404": {
+                      "description": "Program not found for the given token",
+                      "content": {
+                          "application/json": {}
+                      }
+                  },
+                  "500": {
+                      "description": "Internal server error",
+                      "content": {
+                          "application/json": {}
+                      }
+                  }
+              }
+          },
+          "delete": {
+              "tags": [
+                  "Programs"
+              ],
+              "summary": "DeleteProgram",
+              "operationId": "DeleteProgram",
+              "parameters": [
+                  {
+                      "name": "token",
+                      "in": "path",
+                      "required": true,
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "responses": {
+                  "204": {
+                      "description": "Returns No Content result",
+                      "content": {
+                          "application/json": {
+                              "schema": {
+                                  "$ref": "#/components/schemas/void"
+                              }
+                          }
+                      }
+                  },
+                  "404": {
+                      "description": "Program not found",
+                      "content": {
+                          "application/json": {}
+                      }
+                  },
+                  "422": {
+                      "description": "Cannot delete Program when there is an active session",
+                      "content": {
+                          "application/json": {}
+                      }
+                  },
+                  "500": {
+                      "description": "Internal server error",
+                      "content": {
+                          "application/json": {}
+                      }
+                  }
+              }
+          },
+          "put": {
+              "tags": [
+                  "Programs"
+              ],
+              "summary": "UpdateProgram",
+              "operationId": "UpdateProgram",
+              "parameters": [
+                  {
+                      "name": "token",
+                      "in": "path",
+                      "required": true,
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "requestBody": {
+                  "description": "Input Enrollment program model",
+                  "content": {
+                      "application/json": {
+                          "schema": {
+                              "$ref": "#/components/schemas/enrollmentProgramUpdateViewModel"
+                          }
+                      }
+                  }
+              },
+              "responses": {
+                  "202": {
+                      "description": "The Accepted response message containing Location URL.",
+                      "content": {
+                          "application/json": {
+                              "schema": {
+                                  "$ref": "#/components/schemas/void"
+                              }
+                          }
+                      }
+                  },
+                  "400": {
+                      "description": "Invalid request due to validation errors",
+                      "content": {
+                          "application/json": {
+                              "schema": {
+                                  "$ref": "#/components/schemas/validationResultArray"
+                              },
+                              "example": [
+                                  {
+                                      "memberNames": [
+                                          "string"
+                                      ],
+                                      "errorMessage": "string"
+                                  }
+                              ]
+                          }
+                      }
+                  },
+                  "404": {
+                      "description": "Program not found",
+                      "content": {
+                          "application/json": {}
+                      }
+                  },
+                  "422": {
+                      "description": "Cannot update Program when there is an active session",
+                      "content": {
+                          "application/json": {}
+                      }
+                  },
+                  "500": {
+                      "description": "Internal server error",
+                      "content": {
+                          "application/json": {}
+                      }
+                  }
+              }
+          }
+      },
+      "/enrollment/{token}/newenrollment": {
+          "get": {
+              "tags": [
+                  "enrollment"
+              ],
+              "summary": "NewEnrollment",
+              "operationId": "newenrollment",
+              "parameters": [
+                  {
+                      "name": "token",
+                      "in": "path",
+                      "required": true,
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": "The enrollment session details.",
+                      "content": {
+                          "application/json": {
+                              "schema": {
+                                  "$ref": "#/components/schemas/newEnrollmentSessionViewModel"
+                              }
+                          }
+                      }
+                  },
+                  "400": {
+                      "description": "Bad request due to invalid token.",
+                      "content": {
+                          "application/json": {}
+                      }
+                  },
+                  "500": {
+                      "description": "Internal server error.",
+                      "content": {
+                          "application/json": {}
+                      }
+                  }
+              }
+          }
+      },
+      "/enrollment/{sessionId}/prompt": {
+          "post": {
+              "tags": [
+                  "enrollment"
+              ],
+              "summary": "SubmitPromptData",
+              "operationId": "submitpromptdata",
+              "parameters": [
+                  {
+                      "name": "sessionId",
+                      "in": "path",
+                      "required": true,
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "requestBody": {
+                  "description": "The prompt data being submitted.",
+                  "content": {
+                      "application/json": {
+                          "schema": {
+                              "$ref": "#/components/schemas/submitPromptDataViewModel"
+                          },
+                          "example": {
+                              "enrollmentSessionId": "string",
+                              "key": "string",
+                              "keyPath": "string",
+                              "components": [
+                                  {
+                                      "keyPath": "string",
+                                      "inputValues": [
+                                          {
+                                              "keyPath": "string",
+                                              "value": "string"
+                                          }
+                                      ]
+                                  }
+                              ]
+                          }
+                      }
+                  }
+              },
+              "responses": {
+                  "200": {
+                      "description": "The enrollment session details after submitting the prompt.",
+                      "content": {
+                          "application/json": {
+                              "schema": {
+                                  "$ref": "#/components/schemas/enrollmentSessionViewModel"
+                              }
+                          }
+                      }
+                  },
+                  "400": {
+                      "description": "Bad request due to integrity check errors.",
+                      "content": {
+                          "application/json": {
+                              "schema": {
+                                  "$ref": "#/components/schemas/EnrollmentSessionIdPromptPost400ApplicationJsonResponse"
+                              }
+                          }
+                      }
+                  },
+                  "500": {
+                      "description": "Internal server error.",
+                      "content": {
+                          "application/json": {}
+                      }
+                  }
+              }
+          }
+      },
+      "/enrollment/{sessionId}/enrollmentsession": {
+          "get": {
+              "tags": [
+                  "enrollment"
+              ],
+              "summary": "GetEnrollmentSession",
+              "operationId": "getenrollmentsession",
+              "parameters": [
+                  {
+                      "name": "sessionId",
+                      "in": "path",
+                      "required": true,
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": "The details of the enrollment session.",
+                      "content": {
+                          "application/json": {
+                              "schema": {
+                                  "$ref": "#/components/schemas/getEnrollmentSessionViewModel"
+                              }
+                          }
+                      }
+                  },
+                  "400": {
+                      "description": "Invalid sessionId provided.",
+                      "content": {
+                          "application/json": {}
+                      }
+                  },
+                  "500": {
+                      "description": "Internal server error.",
+                      "content": {
+                          "application/json": {}
+                      }
+                  }
+              }
+          }
+      },
+      "/enrollment/{sessionId}/prompt/{promptKeyPath}": {
+          "get": {
+              "tags": [
+                  "enrollment"
+              ],
+              "summary": "GetEnrollmentSessionPrompt",
+              "operationId": "GetEnrollmentSessionPrompt",
+              "parameters": [
+                  {
+                      "name": "sessionId",
+                      "in": "path",
+                      "required": true,
+                      "schema": {
+                          "type": "string"
+                      }
+                  },
+                  {
+                      "name": "promptKeyPath",
+                      "in": "path",
+                      "required": true,
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": "An enrollment session prompt.",
+                      "content": {
+                          "application/json": {
+                              "schema": {
+                                  "$ref": "#/components/schemas/promptViewModel"
+                              }
+                          }
+                      }
+                  },
+                  "400": {
+                      "description": "Invalid parameters",
+                      "content": {
+                          "application/json": {}
+                      }
+                  },
+                  "500": {
+                      "description": "Internal server error.",
+                      "content": {
+                          "application/json": {}
+                      }
+                  }
+              }
+          }
+      },
+      "/enrollment/{accountId}/getalltasks": {
+          "get": {
+              "tags": [
+                  "enrollment"
+              ],
+              "summary": "GetAllTasks",
+              "operationId": "GetAllTasks",
+              "parameters": [
+                  {
+                      "name": "accountId",
+                      "in": "path",
+                      "required": true,
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": "Get all tasks per account",
+                      "content": {
+                          "application/json": {
+                              "schema": {
+                                  "$ref": "#/components/schemas/finalReviewDTO"
+                              }
+                          }
+                      }
+                  },
+                  "400": {
+                      "description": "Bad request due to invalid token.",
+                      "content": {
+                          "application/json": {}
+                      }
+                  },
+                  "500": {
+                      "description": "Internal server error.",
+                      "content": {
+                          "application/json": {}
+                      }
+                  }
+              }
+          }
+      },
+      "/enrollment/programs/datatypes": {
+          "get": {
+              "tags": [
+                  "Programs"
+              ],
+              "summary": "GetAllDatatypes",
+              "operationId": "GetAllDatatypes",
+              "responses": {
+                  "200": {
+                      "description": "The OK response contains the valid DataTypes",
+                      "content": {
+                          "application/json": {
+                              "schema": {
+                                  "$ref": "#/components/schemas/allTypesViewModel"
+                              },
+                              "example": {
+                                  "value": [
+                                      "string"
+                                  ]
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+      },
+      "/enrollment/programs/componenttypes": {
+          "get": {
+              "tags": [
+                  "Programs"
+              ],
+              "summary": "GetAllComponentTypes",
+              "operationId": "GetAllComponentTypes",
+              "responses": {
+                  "200": {
+                      "description": "The OK response contains the valid ComponentTypes",
+                      "content": {
+                          "application/json": {
+                              "schema": {
+                                  "$ref": "#/components/schemas/allTypesViewModel"
+                              },
+                              "example": {
+                                  "value": [
+                                      "string"
+                                  ]
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+      },
+      "/enrollment/programs/inputtypes": {
+          "get": {
+              "tags": [
+                  "Programs"
+              ],
+              "summary": "GetAllInputTypes",
+              "operationId": "GetAllInputTypes",
+              "responses": {
+                  "200": {
+                      "description": "The OK response contains the valid InputTypes",
+                      "content": {
+                          "application/json": {
+                              "schema": {
+                                  "$ref": "#/components/schemas/allTypesViewModel"
+                              },
+                              "example": {
+                                  "value": [
+                                      "string"
+                                  ]
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+      },
+      "/enrollment/{sessionId}/finalprompt": {
+          "get": {
+              "tags": [
+                  "enrollment"
+              ],
+              "summary": "GetFinalPrompt",
+              "operationId": "GetFinalPrompt",
+              "parameters": [
+                  {
+                      "name": "sessionId",
+                      "in": "path",
+                      "required": true,
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": "The final review data for the enrollment session.",
+                      "content": {
+                          "application/json": {
+                              "schema": {
+                                  "$ref": "#/components/schemas/finalReviewViewModel"
+                              },
+                              "example": {
+                                  "finalReviewSections": [
+                                      {
+                                          "title": "string",
+                                          "inputValues": [
+                                              {
+                                                  "name": "string",
+                                                  "value": "string"
+                                              }
+                                          ],
+                                          "editUrl": "string"
+                                      }
+                                  ]
+                              }
+                          }
+                      }
+                  },
+                  "400": {
+                      "description": "Bad request due to invalid token.",
+                      "content": {
+                          "application/json": {}
+                      }
+                  },
+                  "500": {
+                      "description": "Internal server error.",
+                      "content": {
+                          "application/json": {}
+                      }
+                  }
+              }
+          }
+      },
+      "/enrollment/{token}/{sessionId}/completeprompt": {
+          "get": {
+              "tags": [
+                  "enrollment"
+              ],
+              "summary": "SubmitCompletedEnrollment",
+              "operationId": "SubmitCompletedEnrollment",
+              "parameters": [
+                  {
+                      "name": "token",
+                      "in": "path",
+                      "required": true,
+                      "schema": {
+                          "type": "string"
+                      }
+                  },
+                  {
+                      "name": "sessionId",
+                      "in": "path",
+                      "required": true,
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": "Successfully submitted the completed enrollment."
+                  },
+                  "400": {
+                      "description": "Bad request due to invalid session ID or token."
+                  },
+                  "500": {
+                      "description": "Internal server error."
+                  }
+              }
+          }
+      },
+      "/comms/{accountId}/ArchiveAccountMessages": {
+          "post": {
+              "tags": [
+                  "Communications"
+              ],
+              "summary": "ArchiveAccountMessages",
+              "operationId": "ArchiveAccountMessages",
+              "parameters": [
+                  {
+                      "name": "accountId",
+                      "in": "path",
+                      "required": true,
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "requestBody": {
+                  "description": "Message ID's to archive.",
+                  "content": {
+                      "application/json": {
+                          "schema": {
+                              "$ref": "#/components/schemas/Body"
+                          },
+                          "example": [
+                              "string"
+                          ]
+                      }
+                  }
+              },
+              "responses": {
+                  "200": {
+                      "description": "Success or Fail status with optional message.",
+                      "content": {
+                          "application/json": {
+                              "schema": {
+                                  "$ref": "#/components/schemas/genericResponse"
+                              },
+                              "example": {
+                                  "success": true,
+                                  "message": "string"
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+      },
+      "/comms/{accountId}/GetAllAccountMessages": {
+          "get": {
+              "tags": [
+                  "Communications"
+              ],
+              "summary": "GetAllAccountMessages",
+              "operationId": "GetAllAccountMessages",
+              "parameters": [
+                  {
+                      "name": "accountId",
+                      "in": "path",
+                      "required": true,
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": "The details of the message being sent.",
+                      "content": {
+                          "application/json": {
+                              "schema": {
+                                  "$ref": "#/components/schemas/accountMessageViewModelArray"
+                              },
+                              "example": [
+                                  {
+                                      "messageId": "string",
+                                      "recipientName": "string",
+                                      "message": "string",
+                                      "senderId": "string",
+                                      "senderName": "string",
+                                      "senderTypeId": 0,
+                                      "recipientId": "string",
+                                      "recipientTypeId": 0,
+                                      "dateSent": "string",
+                                      "dateRead": "string",
+                                      "dateArchived": "string"
+                                  }
+                              ]
+                          }
+                      }
+                  },
+                  "400": {
+                      "description": "Invalid request made.",
+                      "content": {
+                          "application/json": {}
+                      }
+                  },
+                  "500": {
+                      "description": "Internal server error.",
+                      "content": {
+                          "application/json": {}
+                      }
+                  }
+              }
+          }
+      },
+      "/comms/{accountId}/SendAccountMessage": {
+          "post": {
+              "tags": [
+                  "Communications"
+              ],
+              "summary": "SendAccountMessage",
+              "operationId": "SendAccountMessage",
+              "parameters": [
+                  {
+                      "name": "accountId",
+                      "in": "path",
+                      "required": true,
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "requestBody": {
+                  "description": "Details of the message.",
+                  "content": {
+                      "application/json": {
+                          "schema": {
+                              "$ref": "#/components/schemas/sendAccountMessageViewModel"
+                          },
+                          "example": {
+                              "senderId": "string",
+                              "recipientId": "string",
+                              "message": "string"
+                          }
+                      }
+                  }
+              },
+              "responses": {
+                  "200": {
+                      "description": "Success or Fail status with optional message.",
+                      "content": {
+                          "application/json": {
+                              "schema": {
+                                  "$ref": "#/components/schemas/genericResponse"
+                              },
+                              "example": {
+                                  "success": true,
+                                  "message": "string"
+                              }
+                          }
+                      }
+                  },
+                  "400": {
+                      "description": "Invalid message details provided.",
+                      "content": {
+                          "application/json": {}
+                      }
+                  },
+                  "500": {
+                      "description": "Internal server error.",
+                      "content": {
+                          "application/json": {}
+                      }
+                  }
+              }
+          }
+      },
+      "/comms/{accountId}/MarkAccountMessageAsRead": {
+          "post": {
+              "tags": [
+                  "Communications"
+              ],
+              "summary": "MarkAccountMessageAsRead",
+              "operationId": "MarkAccountMessageAsRead",
+              "parameters": [
+                  {
+                      "name": "accountId",
+                      "in": "path",
+                      "required": true,
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "requestBody": {
+                  "description": "Toggle the read/unread state of message.",
+                  "content": {
+                      "application/json": {
+                          "schema": {
+                              "$ref": "#/components/schemas/toggleAccountMessageStatusViewModel"
+                          },
+                          "example": {
+                              "messageId": "string",
+                              "dateRead": "string"
+                          }
+                      }
+                  }
+              },
+              "responses": {
+                  "200": {
+                      "description": "Success or Fail status with optional message.",
+                      "content": {
+                          "application/json": {
+                              "schema": {
+                                  "$ref": "#/components/schemas/genericResponse"
+                              },
+                              "example": {
+                                  "success": true,
+                                  "message": "string"
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+      },
+      "/enrollment/PromptFileUpload": {
+          "post": {
+              "tags": [
+                  "enrollment"
+              ],
+              "summary": "SubmitPromptFileUpload",
+              "operationId": "SubmitPromptFileUpload",
+              "responses": {
+                  "200": {
+                      "description": "The file upload result details.",
+                      "content": {
+                          "application/json": {
+                              "schema": {
+                                  "$ref": "#/components/schemas/jsonResult"
+                              },
+                              "example": {
+                                  "contentType": "string",
+                                  "serializerSettings": {},
+                                  "statusCode": 0,
+                                  "value": {}
+                              }
+                          }
+                      }
+                  },
+                  "400": {
+                      "description": "Bad request due to invalid data.",
+                      "content": {
+                          "application/json": {}
+                      }
+                  },
+                  "500": {
+                      "description": "Internal server error.",
+                      "content": {
+                          "application/json": {}
+                      }
+                  }
+              }
+          }
+      },
+      "/enrollment/GetPromptFileUpload": {
+          "post": {
+              "tags": [
+                  "enrollment"
+              ],
+              "summary": "GetPromptFileUpload",
+              "operationId": "GetPromptFileUpload",
+              "responses": {
+                  "200": {
+                      "description": "The file was not found.",
+                      "content": {
+                          "application/json": {
+                              "schema": {
+                                  "$ref": "#/components/schemas/jsonResult"
+                              },
+                              "example": {
+                                  "contentType": "string",
+                                  "serializerSettings": {},
+                                  "statusCode": 0,
+                                  "value": {}
+                              }
+                          }
+                      }
+                  },
+                  "400": {
+                      "description": "Bad request due to invalid data.",
+                      "content": {
+                          "application/json": {}
+                      }
+                  },
+                  "500": {
+                      "description": "Internal server error.",
+                      "content": {
+                          "application/json": {}
+                      }
+                  }
+              }
+          }
+      }
+  },
+  "components": {
+      "schemas": {
+          "accountMessageViewModel": {
+              "type": "object",
+              "properties": {
+                  "messageId": {
+                      "type": "string",
+                      "format": "uuid"
+                  },
+                  "recipientName": {
+                      "type": "string"
+                  },
+                  "message": {
+                      "type": "string"
+                  },
+                  "senderId": {
+                      "type": "string",
+                      "format": "uuid"
+                  },
+                  "senderName": {
+                      "type": "string"
+                  },
+                  "senderTypeId": {
+                      "type": "integer",
+                      "format": "int32"
+                  },
+                  "recipientId": {
+                      "type": "string",
+                      "format": "uuid"
+                  },
+                  "recipientTypeId": {
+                      "type": "integer",
+                      "format": "int32"
+                  },
+                  "dateSent": {
+                      "type": "string",
+                      "format": "date-time"
+                  },
+                  "dateRead": {
+                      "type": "string",
+                      "format": "date-time"
+                  },
+                  "dateArchived": {
+                      "type": "string",
+                      "format": "date-time"
+                  }
+              }
+          },
+          "allTypesViewModel": {
+              "type": "object",
+              "properties": {
+                  "value": {
+                      "type": "array",
+                      "items": {
+                          "type": "string"
+                      }
+                  }
+              }
+          },
+          "enrollmentProgramCreateViewModel": {
+              "required": [
+                  "name",
+                  "key",
+                  "keyPath",
+                  "version",
+                  "prompts"
+              ],
+              "type": "object",
+              "properties": {
+                  "name": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "key": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "keyPath": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "version": {
+                      "type": "integer",
+                      "format": "int32"
+                  },
+                  "prompts": {
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/components/schemas/promptCreateViewModel"
+                      }
+                  },
+                  "isCurrent": {
+                      "type": "boolean"
+                  },
+                  "isPublished": {
+                      "type": "boolean"
+                  }
+              }
+          },
+          "enrollmentProgramUpdateViewModel": {
+              "required": [
+                  "token",
+                  "name",
+                  "key",
+                  "keyPath",
+                  "version",
+                  "prompts"
+              ],
+              "type": "object",
+              "properties": {
+                  "token": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "name": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "key": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "keyPath": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "version": {
+                      "type": "integer",
+                      "format": "int32"
+                  },
+                  "prompts": {
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/components/schemas/promptUpdateViewModel"
+                      }
+                  }
+              }
+          },
+          "enrollmentProgramViewModel": {
+              "type": "object",
+              "properties": {
+                  "token": {
+                      "type": "string"
+                  },
+                  "name": {
+                      "type": "string"
+                  },
+                  "key": {
+                      "type": "string"
+                  },
+                  "keyPath": {
+                      "type": "string"
+                  },
+                  "version": {
+                      "type": "integer",
+                      "format": "int32"
+                  },
+                  "prompts": {
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/components/schemas/promptViewModel"
+                      }
+                  }
+              }
+          },
+          "enrollmentSessionViewModel": {
+              "type": "object",
+              "properties": {
+                  "enrollmentProgramToken": {
+                      "type": "string"
+                  },
+                  "sessionId": {
+                      "type": "string",
+                      "format": "uuid"
+                  },
+                  "nextPrompt": {
+                      "$ref": "#/components/schemas/nextPromptViewModel"
+                  }
+              }
+          },
+          "finalReviewDTO": {
+              "type": "object"
+          },
+          "finalReviewViewModel": {
+              "type": "object",
+              "properties": {
+                  "finalReviewSections": {
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/components/schemas/reviewSectionViewModel"
+                      }
+                  }
+              }
+          },
+          "genericResponse": {
+              "type": "object",
+              "properties": {
+                  "success": {
+                      "type": "boolean"
+                  },
+                  "message": {
+                      "type": "string"
+                  }
+              }
+          },
+          "getAllEnrollmentProgramsViewModel": {
+              "type": "object",
+              "properties": {
+                  "value": {
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/components/schemas/enrollmentProgramViewModel"
+                      }
+                  }
+              }
+          },
+          "getEnrollmentSessionViewModel": {
+              "type": "object",
+              "properties": {
+                  "enrollmentProgramToken": {
+                      "type": "string"
+                  },
+                  "sessionId": {
+                      "type": "string",
+                      "format": "uuid"
+                  },
+                  "nextPrompt": {
+                      "$ref": "#/components/schemas/promptViewModel"
+                  },
+                  "enrollmentProgram": {
+                      "$ref": "#/components/schemas/enrollmentProgramViewModel"
+                  },
+                  "promptData": {
+                      "type": "object",
+                      "additionalProperties": {
+                          "$ref": "#/components/schemas/promptDataViewModel"
+                      }
+                  }
+              }
+          },
+          "inputCreateViewModel": {
+              "required": [
+                  "key",
+                  "keyPath",
+                  "inputType",
+                  "order",
+                  "dataType",
+                  "isRequired"
+              ],
+              "type": "object",
+              "properties": {
+                  "key": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "keyPath": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "inputType": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "order": {
+                      "type": "integer",
+                      "format": "int32"
+                  },
+                  "label": {
+                      "type": "string"
+                  },
+                  "instructions": {
+                      "type": "string"
+                  },
+                  "dataType": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "isRequired": {
+                      "type": "boolean"
+                  },
+                  "min": {
+                      "type": "integer",
+                      "format": "int32"
+                  },
+                  "value": {
+                      "type": "string"
+                  },
+                  "options": {
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/components/schemas/inputOptionViewModel"
+                      }
+                  }
+              }
+          },
+          "inputOptionViewModel": {
+              "type": "object",
+              "properties": {
+                  "order": {
+                      "type": "integer",
+                      "format": "int32"
+                  },
+                  "label": {
+                      "type": "string"
+                  },
+                  "value": {
+                      "type": "string"
+                  },
+                  "dataType": {
+                      "type": "string"
+                  }
+              }
+          },
+          "inputUpdateViewModel": {
+              "required": [
+                  "inputType",
+                  "order",
+                  "label",
+                  "key",
+                  "keyPath",
+                  "dataType",
+                  "isRequired"
+              ],
+              "type": "object",
+              "properties": {
+                  "inputType": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "order": {
+                      "type": "integer",
+                      "format": "int32"
+                  },
+                  "label": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "instructions": {
+                      "type": "string"
+                  },
+                  "key": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "keyPath": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "dataType": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "isRequired": {
+                      "type": "boolean"
+                  },
+                  "min": {
+                      "type": "integer",
+                      "format": "int32"
+                  },
+                  "options": {
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/components/schemas/inputOptionViewModel"
+                      }
+                  }
+              }
+          },
+          "inputViewModel": {
+              "required": [
+                  "inputType",
+                  "order",
+                  "key",
+                  "keyPath",
+                  "dataType",
+                  "isRequired"
+              ],
+              "type": "object",
+              "properties": {
+                  "inputType": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "order": {
+                      "type": "integer",
+                      "format": "int32"
+                  },
+                  "label": {
+                      "type": "string"
+                  },
+                  "instructions": {
+                      "type": "string"
+                  },
+                  "key": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "keyPath": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "dataType": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "isRequired": {
+                      "type": "boolean"
+                  },
+                  "min": {
+                      "type": "integer",
+                      "format": "int32"
+                  },
+                  "value": {
+                      "type": "string"
+                  },
+                  "options": {
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/components/schemas/inputOptionViewModel"
+                      }
+                  }
+              }
+          },
+          "jsonResult": {
+              "type": "object",
+              "properties": {
+                  "contentType": {
+                      "type": "string"
+                  },
+                  "serializerSettings": {
+                      "type": "object"
+                  },
+                  "statusCode": {
+                      "type": "integer",
+                      "format": "int32"
+                  },
+                  "value": {
+                      "type": "object"
+                  }
+              }
+          },
+          "newEnrollmentSessionViewModel": {
+              "type": "object",
+              "properties": {
+                  "enrollmentProgramToken": {
+                      "type": "string"
+                  },
+                  "sessionId": {
+                      "type": "string",
+                      "format": "uuid"
+                  },
+                  "nextPrompt": {
+                      "$ref": "#/components/schemas/promptViewModel"
+                  }
+              }
+          },
+          "nextPromptViewModel": {
+              "type": "object",
+              "properties": {
+                  "key": {
+                      "type": "string"
+                  },
+                  "keyPath": {
+                      "type": "string"
+                  },
+                  "order": {
+                      "type": "integer",
+                      "format": "int32"
+                  },
+                  "title": {
+                      "type": "string"
+                  },
+                  "header": {
+                      "type": "string"
+                  },
+                  "subHeader": {
+                      "type": "string"
+                  },
+                  "instructions": {
+                      "type": "string"
+                  },
+                  "isRequired": {
+                      "type": "boolean"
+                  },
+                  "components": {
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/components/schemas/promptComponentViewModel"
+                      }
+                  },
+                  "prompts": {
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/components/schemas/promptViewModel"
+                      }
+                  },
+                  "locationUrl": {
+                      "type": "string"
+                  }
+              }
+          },
+          "promptComponentCreateViewModel": {
+              "required": [
+                  "key",
+                  "keyPath",
+                  "componentType",
+                  "order",
+                  "inputs"
+              ],
+              "type": "object",
+              "properties": {
+                  "key": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "keyPath": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "componentType": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "order": {
+                      "type": "integer",
+                      "format": "int32"
+                  },
+                  "header": {
+                      "type": "string"
+                  },
+                  "instructions": {
+                      "type": "string"
+                  },
+                  "inputs": {
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/components/schemas/inputCreateViewModel"
+                      }
+                  }
+              }
+          },
+          "promptComponentUpdateViewModel": {
+              "required": [
+                  "key",
+                  "keyPath",
+                  "componentType",
+                  "order",
+                  "inputs"
+              ],
+              "type": "object",
+              "properties": {
+                  "key": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "keyPath": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "componentType": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "order": {
+                      "type": "integer",
+                      "format": "int32"
+                  },
+                  "header": {
+                      "type": "string"
+                  },
+                  "instructions": {
+                      "type": "string"
+                  },
+                  "inputs": {
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/components/schemas/inputUpdateViewModel"
+                      }
+                  }
+              }
+          },
+          "promptComponentViewModel": {
+              "required": [
+                  "key",
+                  "keyPath",
+                  "componentType",
+                  "order",
+                  "inputs"
+              ],
+              "type": "object",
+              "properties": {
+                  "key": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "keyPath": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "componentType": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "order": {
+                      "type": "integer",
+                      "format": "int32"
+                  },
+                  "header": {
+                      "type": "string"
+                  },
+                  "instructions": {
+                      "type": "string"
+                  },
+                  "inputs": {
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/components/schemas/inputViewModel"
+                      }
+                  }
+              }
+          },
+          "promptCreateViewModel": {
+              "required": [
+                  "key",
+                  "keyPath",
+                  "order",
+                  "title",
+                  "header",
+                  "isRequired",
+                  "components",
+                  "prompts"
+              ],
+              "type": "object",
+              "properties": {
+                  "key": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "keyPath": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "name": {
+                      "type": "string"
+                  },
+                  "order": {
+                      "type": "integer",
+                      "format": "int32"
+                  },
+                  "title": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "header": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "subHeader": {
+                      "type": "string"
+                  },
+                  "instructions": {
+                      "type": "string"
+                  },
+                  "isRequired": {
+                      "type": "boolean"
+                  },
+                  "components": {
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/components/schemas/promptComponentCreateViewModel"
+                      }
+                  },
+                  "prompts": {
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/components/schemas/promptCreateViewModel"
+                      }
+                  },
+                  "conditionKeySource": {
+                      "type": "string"
+                  },
+                  "comparisonOperator": {
+                      "type": "string"
+                  },
+                  "conditionValueKey": {
+                      "type": "string"
+                  },
+                  "conditionValue": {
+                      "type": "string"
+                  }
+              }
+          },
+          "promptDataViewModel": {
+              "type": "object",
+              "properties": {
+                  "id": {
+                      "type": "string",
+                      "format": "uuid"
+                  },
+                  "enrollmentSessionId": {
+                      "type": "string",
+                      "format": "uuid"
+                  },
+                  "key": {
+                      "type": "string"
+                  },
+                  "keyPath": {
+                      "type": "string"
+                  },
+                  "order": {
+                      "type": "integer",
+                      "format": "int32"
+                  },
+                  "title": {
+                      "type": "string"
+                  },
+                  "header": {
+                      "type": "string"
+                  },
+                  "createdDateTime": {
+                      "type": "string",
+                      "format": "date-time"
+                  },
+                  "lastUpdatedDateTime": {
+                      "type": "string",
+                      "format": "date-time"
+                  },
+                  "components": {
+                      "type": "object",
+                      "additionalProperties": {
+                          "$ref": "#/components/schemas/promptComponentViewModel"
+                      }
+                  }
+              }
+          },
+          "promptUpdateViewModel": {
+              "required": [
+                  "key",
+                  "keyPath",
+                  "order",
+                  "title",
+                  "isRequired",
+                  "components",
+                  "prompts"
+              ],
+              "type": "object",
+              "properties": {
+                  "key": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "keyPath": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "order": {
+                      "type": "integer",
+                      "format": "int32"
+                  },
+                  "title": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "header": {
+                      "type": "string"
+                  },
+                  "instructions": {
+                      "type": "string"
+                  },
+                  "isRequired": {
+                      "type": "boolean"
+                  },
+                  "components": {
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/components/schemas/promptComponentUpdateViewModel"
+                      }
+                  },
+                  "prompts": {
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/components/schemas/promptUpdateViewModel"
+                      }
+                  },
+                  "conditionKeySource": {
+                      "type": "string"
+                  },
+                  "comparisonOperator": {
+                      "type": "string"
+                  },
+                  "conditionValueKey": {
+                      "type": "string"
+                  },
+                  "conditionValue": {
+                      "type": "string"
+                  }
+              }
+          },
+          "promptViewModel": {
+              "type": "object",
+              "properties": {
+                  "key": {
+                      "type": "string"
+                  },
+                  "keyPath": {
+                      "type": "string"
+                  },
+                  "order": {
+                      "type": "integer",
+                      "format": "int32"
+                  },
+                  "title": {
+                      "type": "string"
+                  },
+                  "header": {
+                      "type": "string"
+                  },
+                  "subHeader": {
+                      "type": "string"
+                  },
+                  "instructions": {
+                      "type": "string"
+                  },
+                  "isRequired": {
+                      "type": "boolean"
+                  },
+                  "components": {
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/components/schemas/promptComponentViewModel"
+                      }
+                  },
+                  "prompts": {
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/components/schemas/promptViewModel"
+                      }
+                  },
+                  "conditionKeySource": {
+                      "type": "string"
+                  },
+                  "comparisonOperator": {
+                      "type": "string"
+                  },
+                  "conditionValueKey": {
+                      "type": "string"
+                  },
+                  "conditionValue": {
+                      "type": "string"
+                  }
+              }
+          },
+          "reviewInputValuesViewModel": {
+              "type": "object",
+              "properties": {
+                  "name": {
+                      "type": "string"
+                  },
+                  "value": {
+                      "type": "string"
+                  }
+              }
+          },
+          "reviewSectionViewModel": {
+              "type": "object",
+              "properties": {
+                  "title": {
+                      "type": "string"
+                  },
+                  "inputValues": {
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/components/schemas/reviewInputValuesViewModel"
+                      }
+                  },
+                  "editUrl": {
+                      "type": "string"
+                  }
+              }
+          },
+          "sendAccountMessageViewModel": {
+              "type": "object",
+              "properties": {
+                  "senderId": {
+                      "type": "string",
+                      "format": "uuid"
+                  },
+                  "recipientId": {
+                      "type": "string",
+                      "format": "uuid"
+                  },
+                  "message": {
+                      "type": "string"
+                  }
+              }
+          },
+          "submitPromptDataComponentViewModel": {
+              "required": [
+                  "keyPath",
+                  "inputValues"
+              ],
+              "type": "object",
+              "properties": {
+                  "keyPath": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "inputValues": {
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/components/schemas/submitPromptDataInputValueViewModel"
+                      }
+                  }
+              }
+          },
+          "submitPromptDataInputValueViewModel": {
+              "required": [
+                  "keyPath"
+              ],
+              "type": "object",
+              "properties": {
+                  "keyPath": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "value": {
+                      "type": "string"
+                  }
+              }
+          },
+          "submitPromptDataViewModel": {
+              "required": [
+                  "enrollmentSessionId",
+                  "key",
+                  "keyPath",
+                  "components"
+              ],
+              "type": "object",
+              "properties": {
+                  "enrollmentSessionId": {
+                      "minLength": 1,
+                      "type": "string",
+                      "format": "uuid"
+                  },
+                  "key": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "keyPath": {
+                      "minLength": 1,
+                      "type": "string"
+                  },
+                  "components": {
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/components/schemas/submitPromptDataComponentViewModel"
+                      }
+                  }
+              }
+          },
+          "toggleAccountMessageStatusViewModel": {
+              "type": "object",
+              "properties": {
+                  "messageId": {
+                      "type": "string",
+                      "format": "uuid"
+                  },
+                  "dateRead": {
+                      "type": "string",
+                      "format": "date-time"
+                  }
+              }
+          },
+          "validationResult": {
+              "type": "object",
+              "properties": {
+                  "memberNames": {
+                      "type": "array",
+                      "items": {
+                          "type": "string"
+                      }
+                  },
+                  "errorMessage": {
+                      "type": "string"
+                  }
+              }
+          },
+          "void": {
+              "type": "object"
+          },
+          "EnrollmentSessionIdPromptPost400ApplicationJsonResponse": {
+              "type": "object"
+          },
+          "validationResultArray": {
+              "type": "array",
+              "items": {
+                  "$ref": "#/components/schemas/validationResult"
+              }
+          },
+          "Body": {
+              "type": "array",
+              "items": {
+                  "type": "string",
+                  "format": "uuid"
+              }
+          },
+          "accountMessageViewModelArray": {
+              "type": "array",
+              "items": {
+                  "$ref": "#/components/schemas/accountMessageViewModel"
+              }
+          }
+      },
+      "securitySchemes": {
+          "apiKeyHeader": {
+              "type": "apiKey",
+              "name": "Ocp-Apim-Subscription-Key",
+              "in": "header"
+          },
+          "apiKeyQuery": {
+              "type": "apiKey",
+              "name": "subscription-key",
+              "in": "query"
+          }
+      }
+  },
+  "security": [
+      {
+          "apiKeyHeader": []
+      },
+      {
+          "apiKeyQuery": []
+      }
+  ]
+}
