@@ -1,0 +1,1067 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "${environment}-api-enrollment",
+        "description": "K12 APIs - Version 2",
+        "version": "v2"
+    },
+    "servers": [
+        {
+            "url": "http://${environment}-api-enrollment.azure-api.net/${environment}-api-enrollment/v2"
+        }
+    ],
+    "paths": {
+        "/v1/enrollment/programs": {
+            "get": {
+                "tags": [
+                    "Programs",
+                    "v1"
+                ],
+                "summary": "GetAllPrograms",
+                "operationId": "GetAllPrograms",
+                "responses": {
+                    "200": {
+                        "description": "The OK response message containing a JSON result.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/getAllEnrollmentProgramsViewModel"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal server error",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Programs",
+                    "v1"
+                ],
+                "summary": "AddProgram",
+                "operationId": "AddProgram",
+                "requestBody": {
+                    "description": "Input Enrollment program model",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/enrollmentProgramCreateViewModel"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "The Created response message containing Location URL.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/void"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid request due to validation errors",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/validationResultArray"
+                                },
+                                "example": [
+                                    {
+                                        "memberNames": [
+                                            "string"
+                                        ],
+                                        "errorMessage": "string"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal server error",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/v1/enrollment/programs/{token}": {
+            "get": {
+                "tags": [
+                    "Programs",
+                    "v1"
+                ],
+                "summary": "GetProgramByToken",
+                "operationId": "GetProgramByToken",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The OK response message containing a JSON result.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/enrollmentProgramViewModel"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Program not found for the given token",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "500": {
+                        "description": "Internal server error",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Programs",
+                    "v1"
+                ],
+                "summary": "DeleteProgram",
+                "operationId": "DeleteProgram",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Returns No Content result",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/void"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Program not found",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "422": {
+                        "description": "Cannot delete Program when there is an active session",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "500": {
+                        "description": "Internal server error",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Programs",
+                    "v1"
+                ],
+                "summary": "UpdateProgram",
+                "operationId": "UpdateProgram",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "Input Enrollment program model",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/enrollmentProgramUpdateViewModel"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "202": {
+                        "description": "The Accepted response message containing Location URL.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/void"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid request due to validation errors",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/validationResultArray"
+                                },
+                                "example": [
+                                    {
+                                        "memberNames": [
+                                            "string"
+                                        ],
+                                        "errorMessage": "string"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Program not found",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "422": {
+                        "description": "Cannot update Program when there is an active session",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "500": {
+                        "description": "Internal server error",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/v1/enrollment/programs/datatypes": {
+            "get": {
+                "tags": [
+                    "Programs",
+                    "v1"
+                ],
+                "summary": "GetAllDatatypes",
+                "operationId": "GetAllDatatypes",
+                "responses": {
+                    "200": {
+                        "description": "The OK response contains the valid DataTypes",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/allTypesViewModel"
+                                },
+                                "example": {
+                                    "value": [
+                                        "string"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/v1/enrollment/programs/componenttypes": {
+            "get": {
+                "tags": [
+                    "Programs",
+                    "v1"
+                ],
+                "summary": "GetAllComponentTypes",
+                "operationId": "GetAllComponentTypes",
+                "responses": {
+                    "200": {
+                        "description": "The OK response contains the valid ComponentTypes",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/allTypesViewModel"
+                                },
+                                "example": {
+                                    "value": [
+                                        "string"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/v1/enrollment/programs/inputtypes": {
+            "get": {
+                "tags": [
+                    "Programs",
+                    "v1"
+                ],
+                "summary": "GetAllInputTypes",
+                "operationId": "GetAllInputTypes",
+                "responses": {
+                    "200": {
+                        "description": "The OK response contains the valid InputTypes",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/allTypesViewModel"
+                                },
+                                "example": {
+                                    "value": [
+                                        "string"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/v2/enrollment/programs": {
+            "post": {
+                "tags": [
+                    "Programs",
+                    "v2"
+                ],
+                "summary": "AddProgramV2",
+                "operationId": "AddProgramV2",
+                "requestBody": {
+                    "description": "Input Enrollment program model",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/enrollmentProgramCreateViewModel"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "The Created response message containing Location URL.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/void"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid request due to validation errors",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/validationResultArray"
+                                },
+                                "example": [
+                                    {
+                                        "memberNames": [
+                                            "string"
+                                        ],
+                                        "errorMessage": "string"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal server error",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "allTypesViewModel": {
+                "type": "object",
+                "properties": {
+                    "value": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "enrollmentProgramCreateViewModel": {
+                "required": [
+                    "name",
+                    "key",
+                    "keyPath",
+                    "version",
+                    "prompts"
+                ],
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "key": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "keyPath": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "version": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "prompts": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/promptCreateViewModel"
+                        }
+                    },
+                    "isCurrent": {
+                        "type": "boolean"
+                    },
+                    "isPublished": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "enrollmentProgramUpdateViewModel": {
+                "required": [
+                    "token",
+                    "name",
+                    "key",
+                    "keyPath",
+                    "version",
+                    "prompts"
+                ],
+                "type": "object",
+                "properties": {
+                    "token": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "name": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "key": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "keyPath": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "version": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "prompts": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/promptUpdateViewModel"
+                        }
+                    }
+                }
+            },
+            "enrollmentProgramViewModel": {
+                "type": "object",
+                "properties": {
+                    "token": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "key": {
+                        "type": "string"
+                    },
+                    "keyPath": {
+                        "type": "string"
+                    },
+                    "version": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "prompts": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/promptViewModel"
+                        }
+                    }
+                }
+            },
+            "getAllEnrollmentProgramsViewModel": {
+                "type": "object",
+                "properties": {
+                    "value": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/enrollmentProgramViewModel"
+                        }
+                    }
+                }
+            },
+            "inputCreateViewModel": {
+                "required": [
+                    "key",
+                    "keyPath",
+                    "inputType",
+                    "order",
+                    "dataType",
+                    "isRequired"
+                ],
+                "type": "object",
+                "properties": {
+                    "key": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "keyPath": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "inputType": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "order": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "label": {
+                        "type": "string"
+                    },
+                    "instructions": {
+                        "type": "string"
+                    },
+                    "dataType": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "isRequired": {
+                        "type": "boolean"
+                    },
+                    "min": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "value": {
+                        "type": "string"
+                    },
+                    "options": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/inputOptionViewModel"
+                        }
+                    }
+                }
+            },
+            "inputOptionViewModel": {
+                "type": "object",
+                "properties": {
+                    "order": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "label": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": "string"
+                    },
+                    "dataType": {
+                        "type": "string"
+                    }
+                }
+            },
+            "inputUpdateViewModel": {
+                "required": [
+                    "inputType",
+                    "order",
+                    "label",
+                    "key",
+                    "keyPath",
+                    "dataType",
+                    "isRequired"
+                ],
+                "type": "object",
+                "properties": {
+                    "inputType": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "order": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "label": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "instructions": {
+                        "type": "string"
+                    },
+                    "key": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "keyPath": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "dataType": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "isRequired": {
+                        "type": "boolean"
+                    },
+                    "min": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "options": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/inputOptionViewModel"
+                        }
+                    }
+                }
+            },
+            "inputViewModel": {
+                "required": [
+                    "inputType",
+                    "order",
+                    "key",
+                    "keyPath",
+                    "dataType",
+                    "isRequired"
+                ],
+                "type": "object",
+                "properties": {
+                    "inputType": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "order": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "label": {
+                        "type": "string"
+                    },
+                    "instructions": {
+                        "type": "string"
+                    },
+                    "key": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "keyPath": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "dataType": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "isRequired": {
+                        "type": "boolean"
+                    },
+                    "min": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "value": {
+                        "type": "string"
+                    },
+                    "options": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/inputOptionViewModel"
+                        }
+                    }
+                }
+            },
+            "promptComponentCreateViewModel": {
+                "required": [
+                    "key",
+                    "keyPath",
+                    "componentType",
+                    "order",
+                    "inputs"
+                ],
+                "type": "object",
+                "properties": {
+                    "key": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "keyPath": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "componentType": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "order": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "header": {
+                        "type": "string"
+                    },
+                    "instructions": {
+                        "type": "string"
+                    },
+                    "inputs": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/inputCreateViewModel"
+                        }
+                    }
+                }
+            },
+            "promptComponentUpdateViewModel": {
+                "required": [
+                    "key",
+                    "keyPath",
+                    "componentType",
+                    "order",
+                    "inputs"
+                ],
+                "type": "object",
+                "properties": {
+                    "key": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "keyPath": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "componentType": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "order": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "header": {
+                        "type": "string"
+                    },
+                    "instructions": {
+                        "type": "string"
+                    },
+                    "inputs": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/inputUpdateViewModel"
+                        }
+                    }
+                }
+            },
+            "promptComponentViewModel": {
+                "required": [
+                    "key",
+                    "keyPath",
+                    "componentType",
+                    "order",
+                    "inputs"
+                ],
+                "type": "object",
+                "properties": {
+                    "key": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "keyPath": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "componentType": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "order": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "header": {
+                        "type": "string"
+                    },
+                    "instructions": {
+                        "type": "string"
+                    },
+                    "inputs": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/inputViewModel"
+                        }
+                    }
+                }
+            },
+            "promptCreateViewModel": {
+                "required": [
+                    "key",
+                    "keyPath",
+                    "order",
+                    "title",
+                    "header",
+                    "isRequired",
+                    "components",
+                    "prompts"
+                ],
+                "type": "object",
+                "properties": {
+                    "key": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "keyPath": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "order": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "title": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "header": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "subHeader": {
+                        "type": "string"
+                    },
+                    "instructions": {
+                        "type": "string"
+                    },
+                    "isRequired": {
+                        "type": "boolean"
+                    },
+                    "components": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/promptComponentCreateViewModel"
+                        }
+                    },
+                    "prompts": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/promptCreateViewModel"
+                        }
+                    },
+                    "conditionKeySource": {
+                        "type": "string"
+                    },
+                    "comparisonOperator": {
+                        "type": "string"
+                    },
+                    "conditionValueKey": {
+                        "type": "string"
+                    },
+                    "conditionValue": {
+                        "type": "string"
+                    }
+                }
+            },
+            "promptUpdateViewModel": {
+                "required": [
+                    "key",
+                    "keyPath",
+                    "order",
+                    "title",
+                    "isRequired",
+                    "components",
+                    "prompts"
+                ],
+                "type": "object",
+                "properties": {
+                    "key": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "keyPath": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "order": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "title": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "header": {
+                        "type": "string"
+                    },
+                    "instructions": {
+                        "type": "string"
+                    },
+                    "isRequired": {
+                        "type": "boolean"
+                    },
+                    "components": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/promptComponentUpdateViewModel"
+                        }
+                    },
+                    "prompts": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/promptUpdateViewModel"
+                        }
+                    },
+                    "conditionKeySource": {
+                        "type": "string"
+                    },
+                    "comparisonOperator": {
+                        "type": "string"
+                    },
+                    "conditionValueKey": {
+                        "type": "string"
+                    },
+                    "conditionValue": {
+                        "type": "string"
+                    }
+                }
+            },
+            "promptViewModel": {
+                "type": "object",
+                "properties": {
+                    "key": {
+                        "type": "string"
+                    },
+                    "keyPath": {
+                        "type": "string"
+                    },
+                    "order": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "title": {
+                        "type": "string"
+                    },
+                    "header": {
+                        "type": "string"
+                    },
+                    "subHeader": {
+                        "type": "string"
+                    },
+                    "instructions": {
+                        "type": "string"
+                    },
+                    "isRequired": {
+                        "type": "boolean"
+                    },
+                    "components": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/promptComponentViewModel"
+                        }
+                    },
+                    "prompts": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/promptViewModel"
+                        }
+                    },
+                    "conditionKeySource": {
+                        "type": "string"
+                    },
+                    "comparisonOperator": {
+                        "type": "string"
+                    },
+                    "conditionValueKey": {
+                        "type": "string"
+                    },
+                    "conditionValue": {
+                        "type": "string"
+                    }
+                }
+            },
+            "validationResult": {
+                "type": "object",
+                "properties": {
+                    "memberNames": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "errorMessage": {
+                        "type": "string"
+                    }
+                }
+            },
+            "void": {
+                "type": "object"
+            },
+            "validationResultArray": {
+                "type": "array",
+                "items": {
+                    "$ref": "#/components/schemas/validationResult"
+                }
+            }
+        },
+        "securitySchemes": {
+            "apiKeyHeader": {
+                "type": "apiKey",
+                "name": "Ocp-Apim-Subscription-Key",
+                "in": "header"
+            },
+            "apiKeyQuery": {
+                "type": "apiKey",
+                "name": "subscription-key",
+                "in": "query"
+            }
+        }
+    },
+    "security": [
+        {
+            "apiKeyHeader": []
+        },
+        {
+            "apiKeyQuery": []
+        }
+    ]
+}
