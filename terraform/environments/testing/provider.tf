@@ -9,7 +9,7 @@ terraform {
     resource_group_name  = "k12-infra"
     storage_account_name = "k12infra"
     container_name       = "tfstate"
-    key                  = "training.tfstate"
+    key                  = "testing.tfstate"
   }
 
   required_version = ">= 1.1.0"
