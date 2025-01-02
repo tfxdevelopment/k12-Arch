@@ -1,9 +1,9 @@
 locals {
     tags = {
-        environment = "development"
+        environment = "testing"
         source = "terraform"
     }
-    environment_name = "development"
+    environment_name = "testing"
     location = "East US 2"
     publisher_name= "CFI"
     publisher_email = "luke.samuels@randstadusa.onmicrosoft.com"
