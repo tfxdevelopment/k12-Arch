@@ -33,3 +33,14 @@ module "api-enrollment" {
     publisher_name = local.publisher_name
     arm_role_receivers  = local.arm_role_receivers
 }
+
+module "admin-web-enrollment" {
+    source = "../../modules/web-enrollment"
+    #variables
+    environment_name = "admin"
+    location = local.location
+    resource_group_name = module.core.rg_name
+    tags = merge(local.tags, {module = "web-enrollment"})
+    zscaler_ip_list = local.zscaler_ip_list
+    dev_ip_list = local.dev_ip_list
+}
