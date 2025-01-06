@@ -35,7 +35,7 @@ module "api-enrollment" {
     arm_role_receivers  = local.arm_role_receivers
 }
 
-module "admin-web-enrollment" {
+module "admin-web" {
     source = "../../modules/web-enrollment"
     #variables
     app_name = "admin"
