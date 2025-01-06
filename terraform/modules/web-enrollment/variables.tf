@@ -1,4 +1,5 @@
 variable "environment_name" {}
+variable "app_name" {}
 variable "location" {}
 variable "resource_group_name" {}
 variable "dev_ip_list" {type = map(string)}

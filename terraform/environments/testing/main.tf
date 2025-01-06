@@ -12,6 +12,7 @@ module "core" {
 module "web-enrollment" {
     source = "../../modules/web-enrollment"
     #variables
+    app_name = "enrollment"
     environment_name = local.environment_name
     location = local.location
     resource_group_name = module.core.rg_name
@@ -37,7 +38,8 @@ module "api-enrollment" {
 module "admin-web-enrollment" {
     source = "../../modules/web-enrollment"
     #variables
-    environment_name = "admin"
+    app_name = "admin"
+    environment_name = local.environment_name
     location = local.location
     resource_group_name = module.core.rg_name
     tags = merge(local.tags, {module = "web-enrollment"})
