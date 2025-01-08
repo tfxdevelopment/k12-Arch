@@ -9,7 +9,7 @@ module "core" {
     contributor_principal_id = local.contributor_principal_id
 }
 
-module "web-enrollment" {
+module "enrollment-web" {
     source = "../../modules/web-enrollment"
     #variables
     app_name = "enrollment"
@@ -21,7 +21,7 @@ module "web-enrollment" {
     dev_ip_list = local.dev_ip_list
 }
 
-module "api-enrollment" {
+module "enrollment-api" {
     source = "../../modules/api-enrollment"
     #variables
     environment_name = local.environment_name
