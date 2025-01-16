@@ -3,4 +3,11 @@ resource "azurerm_static_web_app" "web-enrollment" {
   resource_group_name = var.resource_group_name
   location            = "eastus2"
   sku_tier            = "Standard"
+
+  lifecycle {
+    ignore_changes = [
+      tags,
+      sku_tier
+    ]
+  }
 }

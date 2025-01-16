@@ -15,6 +15,10 @@ locals {
         John            = "99.114.124.169"
         Saj             = "108.44.218.186"
         Angelo          = "184.89.241.44"
+        Mounisha        = "99.23.196.62"
+        BrandonD        = "68.132.46.95"
+        Jafeth          = "104.13.182.33"
+        Margarita       = "96.255.236.185"
     }
     zscaler_ip_list = {
         start_ip        = "136.226.40.1"
