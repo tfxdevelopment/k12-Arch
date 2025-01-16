@@ -55,6 +55,12 @@ resource "azurerm_application_insights_web_test" "dev-api-enrollment-test" {
     </Items>
   </WebTest>
   XML
+
+  lifecycle {
+    ignore_changes = [
+      tags
+    ]
+  }
 }
 
 resource "azurerm_monitor_action_group" "app-insights-smart-detection" {
