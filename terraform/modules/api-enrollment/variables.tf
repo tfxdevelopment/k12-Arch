@@ -14,3 +14,15 @@ variable "arm_role_receivers" {
   }))
   description = "List of ARM role receivers for action groups."
 }
+
+variable "sql_connection_string" {
+  description = "Connection string for the SQL database"
+  type        = string
+  sensitive   = false
+}
+
+variable "blob_storage_connection_string" {
+  description = "Connection string for Azure Blob Storage"
+  type        = string
+  sensitive   = false
+}

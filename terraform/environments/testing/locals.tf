@@ -13,7 +13,7 @@ locals {
         Brandon         = "75.241.107.96"
         Jason           = "136.226.2.112"
         John            = "99.114.124.169"
-        Saj             = "108.44.218.186"
+        Saj             = "70.106.216.229"
         Angelo          = "184.89.241.44"
         Mounisha        = "99.23.196.62"
         BrandonD        = "68.132.46.95"
@@ -36,4 +36,7 @@ locals {
         use_common_alert_schema = true
         }
     ]
+    sql_connection_string = "Server=tcp:testing-api-enrollment.database.windows.net,1433;Initial Catalog=K12;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;Authentication=\"Active Directory Default\";"
+    blob_storage_connection_string = "DefaultEndpointsProtocol=https;AccountName=devk12;AccountKey=Eyb2bJfCvd4LTCnbtpKBFcOU+pJZ4cNxrl1PICYUtXEm5Lct98DmAa8kAXLCFx+Zd/QEE51hVbUZ+AStKmhfzg==;EndpointSuffix=core.windows.net"
+
 }
