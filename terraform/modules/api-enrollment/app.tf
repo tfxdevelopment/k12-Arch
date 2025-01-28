@@ -13,17 +13,65 @@ resource "azurerm_windows_function_app" "api-enrollment" {
 
   storage_account_name       = azurerm_storage_account.api-enrollment.name
   storage_account_access_key = azurerm_storage_account.api-enrollment.primary_access_key
-  service_plan_id        = azurerm_service_plan.api-enrollment.id
+  service_plan_id            = azurerm_service_plan.api-enrollment.id
+
+  app_settings = {
+    "AzureWebJobs.MarkAccountMessageAsRead.Disabled" = "1"
+    "StorageContainerName"                           = "document-leases"
+  }
 
   site_config {
     application_stack {
       dotnet_version = "v8.0"
       use_dotnet_isolated_runtime = true
     }
+
+    cors {
+      allowed_origins = ["*"]
+      support_credentials = false
+    }
+  }
+
+  connection_string {
+    name  = "DefaultConnectionString"
+    type  = "SQLAzure"
+    value = var.sql_connection_string
+  }
+
+  connection_string {
+    name  = "AzureBlobStorage"
+    type  = "Custom"
+    value = var.blob_storage_connection_string
   }
 
   identity {
     type = "SystemAssigned"
+  }
+
+  sticky_settings {
+    app_setting_names = [
+      "APPINSIGHTS_INSTRUMENTATIONKEY",
+      "APPLICATIONINSIGHTS_CONNECTION_STRING",
+      "APPINSIGHTS_PROFILERFEATURE_VERSION",
+      "APPINSIGHTS_SNAPSHOTFEATURE_VERSION",
+      "ApplicationInsightsAgent_EXTENSION_VERSION",
+      "XDT_MicrosoftApplicationInsights_BaseExtensions",
+      "DiagnosticServices_EXTENSION_VERSION",
+      "InstrumentationEngine_EXTENSION_VERSION",
+      "SnapshotDebugger_EXTENSION_VERSION",
+      "XDT_MicrosoftApplicationInsights_Mode",
+      "XDT_MicrosoftApplicationInsights_PreemptSdk",
+      "APPLICATIONINSIGHTS_CONFIGURATION_CONTENT",
+      "XDT_MicrosoftApplicationInsightsJava",
+      "XDT_MicrosoftApplicationInsights_NodeJS"
+    ]
+  }
+
+  lifecycle {
+    ignore_changes = [
+      tags,
+      site_config
+    ]
   }
 }
 

@@ -24,22 +24,5 @@ resource "azurerm_api_management_api_version_set" "api-enrollment" {
   versioning_scheme   = "Segment"
 }
 
-resource "azurerm_api_management_api" "api_enrollment" {
-  name                = "${var.environment_name}-api-enrollment"
-  resource_group_name = var.resource_group_name
-  api_management_name = azurerm_api_management.api_enrollment.name
-  revision            = "v1"
-  display_name        = "${var.environment_name}-api-enrollment"
-  protocols           = ["https"]
 
-  ######################################   TODO: FUTURE WORK  ################################################################################
-  # Only way to get all the definitions and operations in. It does not import the policies and backend configuration. 
-  # Ideally, we should be managing each operation and defition using terraform not Json...
-  import {
-    content_format = "openapi+json"
-    content_value  = templatefile("${path.module}/apim_oprations_definitions_v1.json", {
-      environment = var.environment_name
-    })
-  }
-}
 

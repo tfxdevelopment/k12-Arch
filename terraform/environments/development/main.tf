@@ -33,6 +33,8 @@ module "enrollment-api" {
     publisher_email = local.publisher_email
     publisher_name = local.publisher_name
     arm_role_receivers  = local.arm_role_receivers
+    sql_connection_string  = local.sql_connection_string
+    blob_storage_connection_string = local.blob_storage_connection_string
 }
 
 module "admin-web" {
