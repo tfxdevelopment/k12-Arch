@@ -6,8 +6,8 @@ resource "azurerm_mssql_server" "api-enrollment-db" {
   minimum_tls_version          = "1.2"
 
   azuread_administrator {
-    login_username = "CFI-AzureDevOps - K12 - Project Collection Admin - Limited"
-    object_id = "df8b0836-7e1b-41dc-8e66-6b6792256785"
+    login_username = "CFI-AzureDevOps - K12 - Contributors"
+    object_id = "50a9f81f-da2d-4770-ba17-c642a38e9eb0"
     azuread_authentication_only = true
   }
 
@@ -19,7 +19,7 @@ resource "azurerm_mssql_database" "api-enrollment-k12" {
   server_id    = azurerm_mssql_server.api-enrollment-db.id
   collation    = "SQL_Latin1_General_CP1_CI_AS"
   min_capacity = 2
-  auto_pause_delay_in_minutes = -1
+  auto_pause_delay_in_minutes = 240
   max_size_gb  = 2
   sku_name     = "GP_S_Gen5_2"
 
