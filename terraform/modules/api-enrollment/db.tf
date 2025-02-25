@@ -52,3 +52,21 @@ resource "azurerm_mssql_firewall_rule" "api-enrollment-allow-devs" {
   start_ip_address = each.value
   end_ip_address   = each.value
 }
+
+# # Sometimes you have to manually set env variables before running terraform
+# # export SQLCMDUSER="CFI-AzureDevOps - K12 - Contributors"
+# # export SQLCMDAUTHMODE="ActiveDirectoryInteractive"
+
+# resource "null_resource" "run-sql-scripts" {
+#   provisioner "local-exec" {
+#     command = <<EOT
+#       export SQLCMDUSER="CFI-AzureDevOps - K12 - Contributors"
+#       export SQLCMDAUTHMODE="ActiveDirectoryInteractive"
+      
+#       for file in CFlK12.Database/Enrollment/Tables/*.sql; do
+#         sqlcmd -S ${azurerm_mssql_server.api-enrollment-db.fully_qualified_domain_name} -G -d K12 -i $file
+#       done
+#     EOT
+#   }
+#   depends_on = [azurerm_mssql_database.api-enrollment-k12]
+# }
