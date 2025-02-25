@@ -1,0 +1,7 @@
+﻿CREATE TABLE [Enrollment].[Topic]
+(
+	[Id] UNIQUEIDENTIFIER NOT NULL PRIMARY KEY, 
+    [Name] VARCHAR(400) NOT NULL, 
+    [Description] VARCHAR(MAX) NOT NULL, 
+    [Order] INT NOT NULL 
+)

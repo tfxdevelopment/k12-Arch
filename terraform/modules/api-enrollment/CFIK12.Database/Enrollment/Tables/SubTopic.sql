@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[SubTopic]
+(
+	[Id] UNIQUEIDENTIFIER NOT NULL PRIMARY KEY ,
+    [TopicId]  UNIQUEIDENTIFIER NOT NULL,
+    [Name] VARCHAR(400) NOT NULL, 
+    [Description] VARCHAR(MAX) NOT NULL, 
+    [Order] INT NOT NULL 
+)
