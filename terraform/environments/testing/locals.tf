@@ -10,7 +10,7 @@ locals {
     contributor_principal_id = "df8b0836-7e1b-41dc-8e66-6b6792256785"   # principal id of the group/user that will have the Contributor role assigned
     dev_ip_list = {
         Luke            = "151.196.123.136"
-        Brandon         = "75.241.107.96"
+        Brandon         = "75.232.70.158"
         Jason           = "136.226.2.112"
         John            = "99.114.124.169"
         Saj             = "70.106.216.229"
@@ -21,6 +21,7 @@ locals {
         Margarita       = "96.255.236.185"
         Habib           = "170.85.70.85"
         Patrick         = "70.114.238.88"
+        Mario           = "47.203.166.159"
     }
     zscaler_ip_list = {
         start_ip        = "136.226.40.1"
