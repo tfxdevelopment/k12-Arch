@@ -1,0 +1,23 @@
+trigger:
+  - main  
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+  - task: UseNode@1
+    inputs:
+      version: '20.x' 
+
+  - script: |
+      npm install
+    displayName: 'Install dependencies'
+
+  - script: |
+      node generate.js
+    displayName: 'Run Faker Script and Insert Data into Azure SQL'
+    env:
+      DB_USER: $(DB_USER)
+      DB_PASSWORD: $(DB_PASSWORD)
+      DB_SERVER: $(DB_SERVER)
+      DB_NAME: $(DB_NAME)
