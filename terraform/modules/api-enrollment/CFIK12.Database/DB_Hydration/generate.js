@@ -13,6 +13,33 @@ const dbConfig = {
     }
 };
 
+// Function to create the table if it does not exist
+async function createTable(pool) {
+    const createTableQuery = `
+        IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='FakeUsers' AND xtype='U')
+        CREATE TABLE FakeUsers (
+            id INT IDENTITY(1,1) PRIMARY KEY,
+            fullName NVARCHAR(255),
+            firstName NVARCHAR(255),
+            lastName NVARCHAR(255),
+            phoneNumber NVARCHAR(50),
+            email NVARCHAR(255),
+            streetAddress NVARCHAR(255),
+            city NVARCHAR(255),
+            state NVARCHAR(255),
+            zip NVARCHAR(50),
+            companyName NVARCHAR(255)
+        );
+    `;
+
+    try {
+        await pool.request().query(createTableQuery);
+        console.log("Table 'FakeUsers' ensured.");
+    } catch (err) {
+        console.error("Error creating table:", err);
+    }
+}
+
 // Function to generate fake data
 function generateFakeData() {
     return {
@@ -34,6 +61,9 @@ async function insertDataIntoDB() {
     try {
         let pool = await sql.connect(dbConfig);
         console.log("Connected to database.");
+
+        // Ensure the table exists before inserting data
+        await createTable(pool);
 
         for (let i = 0; i < 1000; i++) {
             let data = generateFakeData();
