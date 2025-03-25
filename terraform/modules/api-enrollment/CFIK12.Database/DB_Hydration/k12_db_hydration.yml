@@ -10,8 +10,10 @@ steps:
       version: '20.x' 
 
   - script: |
-      npm install
+      npm init -y
+      npm install @faker-js/faker mssql
     displayName: 'Install dependencies'
+
 
   - script: |
       node generate.js
