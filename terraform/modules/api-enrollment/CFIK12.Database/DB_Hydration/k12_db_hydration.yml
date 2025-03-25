@@ -15,7 +15,7 @@ steps:
     displayName: 'Install dependencies'
 
   - script: |
-      node modules/api-enrollment/CFIK12.Database/DB_Hydration/generate.js
+      node terraform/modules/api-enrollment/CFIK12.Database/DB_Hydration/generate.js
     displayName: 'Run Faker Script and Insert Data into Azure SQL'
     env:
       DB_USER: $(DB_USER)
