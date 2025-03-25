@@ -15,7 +15,7 @@ steps:
 
   - script: |
       npm init -y
-      npm install @faker-js/faker mssql @azure/identity
+      npm install @faker-js/faker mssql @azure/identity@^3.2.0
     displayName: 'Install dependencies'
     workingDirectory: terraform/modules/api-enrollment/CFIK12.Database/DB_Hydration
 

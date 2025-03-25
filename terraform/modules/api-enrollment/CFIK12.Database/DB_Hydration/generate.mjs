@@ -1,4 +1,4 @@
-import { ClientAssertionCredential } from '@azure/identity';
+import { WorkloadIdentityCredential } from "@azure/identity";
 import fs from 'fs/promises';
 import sql from 'mssql';
 import { faker } from '@faker-js/faker';
@@ -15,13 +15,8 @@ if (!server || !database || !tenantId || !clientId) {
   process.exit(1);
 }
 
-// Get an access token from Azure AD using federated identity
 async function getToken() {
-  const clientAssertion = async () => {
-    return await fs.readFile(federatedTokenPath, 'utf8');
-  };
-
-  const credential = new ClientAssertionCredential(tenantId, clientId, clientAssertion);
+  const credential = new WorkloadIdentityCredential();
   const token = await credential.getToken("https://database.windows.net/");
   return token.token;
 }
