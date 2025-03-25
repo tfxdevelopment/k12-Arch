@@ -23,8 +23,16 @@ async function getToken() {
   const { stdout } = await execAsync(
     `az account get-access-token --resource https://database.windows.net/ --query accessToken -o tsv`
   );
-  return stdout.trim();
+  
+  const token = stdout.trim();
+  if (!token) {
+    console.error("Failed to get access token from Azure CLI");
+    process.exit(1);
+  }
+
+  return token;
 }
+
 
 // Create SQL connection config
 async function getSqlConfig() {
