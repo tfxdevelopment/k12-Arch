@@ -2,6 +2,8 @@ import { WorkloadIdentityCredential } from "@azure/identity";
 import fs from 'fs/promises';
 import sql from 'mssql';
 import { faker } from '@faker-js/faker';
+import { exec } from 'child_process';
+import { promisify } from 'util';
 
 // Load from env
 const server = process.env.DB_SERVER;
@@ -15,10 +17,13 @@ if (!server || !database || !tenantId || !clientId) {
   process.exit(1);
 }
 
+const execAsync = promisify(exec);
+
 async function getToken() {
-  const credential = new WorkloadIdentityCredential();
-  const token = await credential.getToken("https://database.windows.net/");
-  return token.token;
+  const { stdout } = await execAsync(
+    `az account get-access-token --resource https://database.windows.net/ --query accessToken -o tsv`
+  );
+  return stdout.trim();
 }
 
 // Create SQL connection config
@@ -104,13 +109,13 @@ async function insertData() {
           VALUES (@fullName, @firstName, @lastName, @phoneNumber, @email, @streetAddress, @city, @state, @zip, @companyName)
         `);
 
-      console.log(`✅ Inserted record ${i + 1}`);
+      console.log(`Inserted record ${i + 1}`);
     }
 
-    console.log("🎉 Data insertion completed.");
+    console.log("Data insertion completed.");
     await pool.close();
   } catch (err) {
-    console.error("❌ Error inserting data:", err);
+    console.error("Error inserting data:", err);
     process.exit(1);
   }
 }
