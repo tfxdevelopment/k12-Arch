@@ -16,13 +16,13 @@ steps:
   - task: AzureCLI@2
     displayName: 'Run Faker Script and Insert Data into Azure SQL'
     inputs:
-      azureSubscription: 'k12-development'  
+      azureSubscription: 'k12-development'
       scriptType: bash
       scriptLocation: inlineScript
       inlineScript: |
         npm install @faker-js/faker mssql @azure/identity@latest
         node generate.mjs
-    workingDirectory: 'terraform/modules/api-enrollment/CFIK12.Database/DB_Hydration'
+      workingDirectory: 'terraform/modules/api-enrollment/CFIK12.Database/DB_Hydration'
     env:
       DB_SERVER: $(DB_SERVER)
       DB_NAME: $(DB_NAME)
