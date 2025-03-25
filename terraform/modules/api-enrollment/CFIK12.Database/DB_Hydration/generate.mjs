@@ -1,55 +1,39 @@
-import { WorkloadIdentityCredential } from "@azure/identity";
-import fs from 'fs/promises';
+import { WorkloadIdentityCredential } from '@azure/identity';
 import sql from 'mssql';
 import { faker } from '@faker-js/faker';
-import { exec } from 'child_process';
-import { promisify } from 'util';
 
-// Load from env
 const server = process.env.DB_SERVER;
 const database = process.env.DB_NAME;
 const tenantId = process.env.AZURE_TENANT_ID;
 const clientId = process.env.AZURE_CLIENT_ID;
-const federatedTokenPath = process.env.FEDERATED_TOKEN_FILE || '/var/run/secrets/azure/tokens/azure-identity-token';
+const tokenFile = process.env.AZURE_FEDERATED_TOKEN_FILE;
 
-if (!server || !database || !tenantId || !clientId) {
-  console.error("Missing required environment variables. Check DB_SERVER, DB_NAME, AZURE_TENANT_ID, AZURE_CLIENT_ID.");
+if (!server || !database || !tenantId || !clientId || !tokenFile) {
+  console.error("Missing required env vars.");
   process.exit(1);
 }
 
-const execAsync = promisify(exec);
-
 async function getToken() {
-  try {
-    const { stdout } = await execAsync(
-      `az account get-access-token --resource https://database.windows.net/ --query accessToken -o tsv`
-    );
+  const credential = new WorkloadIdentityCredential({
+    tenantId,
+    clientId,
+    tokenFilePath: tokenFile
+  });
 
-    const token = stdout.trim();
-
-    if (!token || typeof token !== 'string') {
-      console.error("Access token is missing or not a string");
-      process.exit(1);
-    }
-
-    return token;
-  } catch (err) {
-    console.error("Failed to retrieve token:", err);
-    process.exit(1);
-  }
+  const accessToken = await credential.getToken("https://database.windows.net/");
+  return accessToken?.token;
 }
 
-
-// Create SQL connection config
 async function getSqlConfig() {
   const token = await getToken();
+  if (!token) {
+    throw new Error("Token retrieval failed");
+  }
 
   return {
     server,
     database,
-    authentication: {
-      type: 'azure-active-directory-access-token'
-    },
+    authentication: { type: 'azure-active-directory-access-token' },
     options: {
       encrypt: true,
       accessToken: token,
