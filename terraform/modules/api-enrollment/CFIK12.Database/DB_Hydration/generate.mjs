@@ -20,17 +20,23 @@ if (!server || !database || !tenantId || !clientId) {
 const execAsync = promisify(exec);
 
 async function getToken() {
-  const { stdout } = await execAsync(
-    `az account get-access-token --resource https://database.windows.net/ --query accessToken -o tsv`
-  );
-  
-  const token = stdout.trim();
-  if (!token) {
-    console.error("Failed to get access token from Azure CLI");
+  try {
+    const { stdout } = await execAsync(
+      `az account get-access-token --resource https://database.windows.net/ --query accessToken -o tsv`
+    );
+
+    const token = stdout.trim();
+
+    if (!token || typeof token !== 'string') {
+      console.error("Access token is missing or not a string");
+      process.exit(1);
+    }
+
+    return token;
+  } catch (err) {
+    console.error("Failed to retrieve token:", err);
     process.exit(1);
   }
-
-  return token;
 }
 
 
