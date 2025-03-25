@@ -15,7 +15,7 @@ steps:
     workingDirectory: terraform/modules/api-enrollment/CFIK12.Database/DB_Hydration
 
   - script: |
-      node terraform/modules/api-enrollment/CFIK12.Database/DB_Hydration/generate.js
+      node terraform/modules/api-enrollment/CFIK12.Database/DB_Hydration/generate.mjs
     displayName: 'Run Faker Script and Insert Data into Azure SQL'
     env:
       DB_SERVER: $(DB_SERVER)
