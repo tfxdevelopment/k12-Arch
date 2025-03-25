@@ -1,26 +1,35 @@
-import { DefaultAzureCredential } from '@azure/identity';
+import { ClientAssertionCredential } from '@azure/identity';
+import fs from 'fs/promises';
 import sql from 'mssql';
 import { faker } from '@faker-js/faker';
 
-// Required Environment Variables
+// Load from env
 const server = process.env.DB_SERVER;
 const database = process.env.DB_NAME;
+const tenantId = process.env.AZURE_TENANT_ID;
+const clientId = process.env.AZURE_CLIENT_ID;
+const federatedTokenPath = process.env.FEDERATED_TOKEN_FILE || '/var/run/secrets/azure/tokens/azure-identity-token';
 
-if (!server || !database) {
-  console.error("Missing required environment variables: DB_SERVER or DB_NAME");
+if (!server || !database || !tenantId || !clientId) {
+  console.error("Missing required environment variables. Check DB_SERVER, DB_NAME, AZURE_TENANT_ID, AZURE_CLIENT_ID.");
   process.exit(1);
 }
 
-// Get an access token from Azure AD for Azure SQL
+// Get an access token from Azure AD using federated identity
 async function getToken() {
-  const credential = new DefaultAzureCredential();
-  const tokenResponse = await credential.getToken("https://database.windows.net/");
-  return tokenResponse.token;
+  const clientAssertion = async () => {
+    return await fs.readFile(federatedTokenPath, 'utf8');
+  };
+
+  const credential = new ClientAssertionCredential(tenantId, clientId, clientAssertion);
+  const token = await credential.getToken("https://database.windows.net/");
+  return token.token;
 }
 
-// SQL Connection Config
+// Create SQL connection config
 async function getSqlConfig() {
   const token = await getToken();
+
   return {
     server,
     database,
@@ -29,12 +38,13 @@ async function getSqlConfig() {
     },
     options: {
       encrypt: true,
-      accessToken: token
+      accessToken: token,
+      trustServerCertificate: true
     }
   };
 }
 
-// Ensure table exists
+// Create table if it doesn't exist
 async function createTable(pool) {
   const query = `
     IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='FakeUsers' AND xtype='U')
@@ -56,7 +66,7 @@ async function createTable(pool) {
   console.log("Ensured 'FakeUsers' table exists.");
 }
 
-// Insert fake data
+// Create fake data
 function generateFakeData() {
   return {
     fullName: faker.person.fullName(),
@@ -72,11 +82,12 @@ function generateFakeData() {
   };
 }
 
-// Main
+// Main logic
 async function insertData() {
   try {
     const config = await getSqlConfig();
     const pool = await sql.connect(config);
+
     await createTable(pool);
 
     for (let i = 0; i < 1000; i++) {
@@ -98,13 +109,13 @@ async function insertData() {
           VALUES (@fullName, @firstName, @lastName, @phoneNumber, @email, @streetAddress, @city, @state, @zip, @companyName)
         `);
 
-      console.log(`Inserted record ${i + 1}`);
+      console.log(`✅ Inserted record ${i + 1}`);
     }
 
-    console.log("Data insertion completed.");
+    console.log("🎉 Data insertion completed.");
     await pool.close();
   } catch (err) {
-    console.error("Error inserting data:", err);
+    console.error("❌ Error inserting data:", err);
     process.exit(1);
   }
 }

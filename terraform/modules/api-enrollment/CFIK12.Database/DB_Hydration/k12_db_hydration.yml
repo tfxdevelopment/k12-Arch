@@ -2,12 +2,17 @@ trigger:
   - main  
 
 variables:
-  - group: DatabaseCredentials
+  - group: DatabaseCredentials  # must contain DB_SERVER and DB_NAME
 
 pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+  - task: UseNode@1
+    inputs:
+      version: '20.x'
+    displayName: 'Use Node.js 20.x'
+
   - script: |
       npm init -y
       npm install @faker-js/faker mssql @azure/identity
@@ -20,4 +25,6 @@ steps:
     env:
       DB_SERVER: $(DB_SERVER)
       DB_NAME: $(DB_NAME)
-
+      AZURE_CLIENT_ID: 71619381-c5a4-4269-b4fc-ec711ba40fac
+      AZURE_TENANT_ID: 3f80a41f-c452-4071-a415-4df4176730e2
+      FEDERATED_TOKEN_FILE: /var/run/secrets/azure/tokens/azure-identity-token
