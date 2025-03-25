@@ -1,6 +1,9 @@
 trigger:
   - main  
 
+variables:
+  - group: DatabaseCredentials
+  
 pool:
   vmImage: 'ubuntu-latest'
 
