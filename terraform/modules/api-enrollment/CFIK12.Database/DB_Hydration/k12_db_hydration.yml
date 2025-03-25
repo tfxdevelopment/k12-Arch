@@ -14,12 +14,12 @@ steps:
       npm install @faker-js/faker mssql
     displayName: 'Install dependencies'
 
-
   - script: |
-      node generate.js
+      node modules/api-enrollment/CFIK12.Database/DB_Hydration/generate.js
     displayName: 'Run Faker Script and Insert Data into Azure SQL'
     env:
       DB_USER: $(DB_USER)
       DB_PASSWORD: $(DB_PASSWORD)
       DB_SERVER: $(DB_SERVER)
       DB_NAME: $(DB_NAME)
+
