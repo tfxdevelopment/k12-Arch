@@ -3,26 +3,21 @@ trigger:
 
 variables:
   - group: DatabaseCredentials
-  
+
 pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-  - task: UseNode@1
-    inputs:
-      version: '20.x' 
-
   - script: |
       npm init -y
-      npm install @faker-js/faker mssql
+      npm install @faker-js/faker mssql @azure/identity
     displayName: 'Install dependencies'
+    workingDirectory: terraform/modules/api-enrollment/CFIK12.Database/DB_Hydration
 
   - script: |
       node terraform/modules/api-enrollment/CFIK12.Database/DB_Hydration/generate.js
     displayName: 'Run Faker Script and Insert Data into Azure SQL'
     env:
-      DB_USER: $(DB_USER)
-      DB_PASSWORD: $(DB_PASSWORD)
       DB_SERVER: $(DB_SERVER)
       DB_NAME: $(DB_NAME)
 
