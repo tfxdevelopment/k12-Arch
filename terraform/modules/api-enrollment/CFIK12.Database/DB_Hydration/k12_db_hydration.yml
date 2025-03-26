@@ -1,5 +1,8 @@
 trigger:
-  - main  
+  - main
+
+variables:
+  - group: DatabaseCredentials
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -7,17 +10,19 @@ pool:
 steps:
   - task: UseNode@1
     inputs:
-      version: '20.x' 
+      version: '20.x'
+    displayName: 'Use Node.js'
 
-  - script: |
-      npm install
-    displayName: 'Install dependencies'
-
-  - script: |
-      node generate.js
+  - task: AzureCLI@2
     displayName: 'Run Faker Script and Insert Data into Azure SQL'
+    inputs:
+      azureSubscription: 'k12-development'  # Must be federated connection
+      scriptType: bash
+      scriptLocation: inlineScript
+      inlineScript: |
+        npm install @faker-js/faker mssql
+        node generate.mjs
+      workingDirectory: 'terraform/modules/api-enrollment/CFIK12.Database/DB_Hydration'
     env:
-      DB_USER: $(DB_USER)
-      DB_PASSWORD: $(DB_PASSWORD)
       DB_SERVER: $(DB_SERVER)
       DB_NAME: $(DB_NAME)
