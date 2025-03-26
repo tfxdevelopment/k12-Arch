@@ -13,14 +13,16 @@ steps:
       version: '20.x'
     displayName: 'Use Node.js'
 
-  - script: |
-      npm install @faker-js/faker mssql @azure/identity@latest
-      node generate.mjs
+  - task: AzureCLI@2
     displayName: 'Run Faker Script and Insert Data into Azure SQL'
-    workingDirectory: terraform/modules/api-enrollment/CFIK12.Database/DB_Hydration
+    inputs:
+      azureSubscription: 'k12-development'  # Must be federated connection
+      scriptType: bash
+      scriptLocation: inlineScript
+      inlineScript: |
+        npm install @faker-js/faker mssql
+        node generate.mjs
+      workingDirectory: 'terraform/modules/api-enrollment/CFIK12.Database/DB_Hydration'
     env:
       DB_SERVER: $(DB_SERVER)
       DB_NAME: $(DB_NAME)
-      AZURE_CLIENT_ID: $(AZURE_CLIENT_ID)
-      AZURE_TENANT_ID: $(AZURE_TENANT_ID)
-      AZURE_FEDERATED_TOKEN_FILE: /var/run/secrets/azure/tokens/azure-identity-token

@@ -1,34 +1,39 @@
-import { WorkloadIdentityCredential } from '@azure/identity';
 import sql from 'mssql';
 import { faker } from '@faker-js/faker';
+import { exec } from 'child_process';
+import { promisify } from 'util';
 
+const execAsync = promisify(exec);
+
+// Required environment variables
 const server = process.env.DB_SERVER;
 const database = process.env.DB_NAME;
-const tenantId = process.env.AZURE_TENANT_ID;
-const clientId = process.env.AZURE_CLIENT_ID;
-const tokenFile = process.env.AZURE_FEDERATED_TOKEN_FILE;
 
-if (!server || !database || !tenantId || !clientId || !tokenFile) {
-  console.error("Missing required env vars.");
+if (!server || !database) {
+  console.error("Missing required environment variables: DB_SERVER or DB_NAME");
   process.exit(1);
 }
 
 async function getToken() {
-  const credential = new WorkloadIdentityCredential({
-    tenantId,
-    clientId,
-    tokenFilePath: tokenFile
-  });
+  try {
+    const { stdout } = await execAsync(
+      `az account get-access-token --resource https://database.windows.net/ --query accessToken -o tsv`
+    );
 
-  const accessToken = await credential.getToken("https://database.windows.net/");
-  return accessToken?.token;
+    const token = stdout.trim();
+    if (!token || typeof token !== 'string') {
+      throw new Error("Access token is missing or invalid");
+    }
+
+    return token;
+  } catch (err) {
+    console.error("Failed to retrieve token using Azure CLI:", err);
+    process.exit(1);
+  }
 }
 
 async function getSqlConfig() {
   const token = await getToken();
-  if (!token) {
-    throw new Error("Token retrieval failed");
-  }
 
   return {
     server,
@@ -42,7 +47,6 @@ async function getSqlConfig() {
   };
 }
 
-// Create table if it doesn't exist
 async function createTable(pool) {
   const query = `
     IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='FakeUsers' AND xtype='U')
@@ -64,7 +68,6 @@ async function createTable(pool) {
   console.log("Ensured 'FakeUsers' table exists.");
 }
 
-// Create fake data
 function generateFakeData() {
   return {
     fullName: faker.person.fullName(),
@@ -80,7 +83,6 @@ function generateFakeData() {
   };
 }
 
-// Main logic
 async function insertData() {
   try {
     const config = await getSqlConfig();
