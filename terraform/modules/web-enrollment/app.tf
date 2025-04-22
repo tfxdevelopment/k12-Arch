@@ -61,3 +61,56 @@ resource "azurerm_cdn_frontdoor_route" "default_route" {
   https_redirect_enabled        = true
   link_to_default_domain        = true  # <--- Keep Azure Front Door Default Domain
 }
+
+
+#Enable this when we get proper CNAME for lower env
+
+# resource "azurerm_web_application_firewall_policy" "waf_policy" {
+#   name                = "${var.app_name}-${var.environment_name}-waf-policy"
+#   resource_group_name = var.resource_group_name
+#   location            = "eastus2"
+#   policy_settings {
+#     enabled = true
+#     mode    = "Prevention"
+#   }
+
+#   custom_rules {
+#     name     = "AllowSpecificIPs"
+#     priority = 1
+#     rule_type = "MatchRule"
+#     action    = "Allow"
+
+#     match_conditions {
+#       match_variable     = "RemoteAddr"
+#       operator           = "IPMatch"
+#       match_values       = ["203.0.113.0/24"]
+#       negation_condition = false
+#     }
+#   }
+
+#   custom_rules {
+#     name     = "DenyAllOthers"
+#     priority = 2
+#     rule_type = "MatchRule"
+#     action    = "Block"
+#   }
+# }
+# resource "azurerm_cdn_frontdoor_security_policy" "afd_waf_policy" {
+#   name                     = "${var.app_name}-${var.environment_name}-afd-security-policy"
+#   cdn_frontdoor_profile_id = azurerm_cdn_frontdoor_profile.afd_profile.id
+
+#   security_policies {
+#     waf_policy {
+#       firewall_policy_id = azurerm_web_application_firewall_policy.waf_policy.id
+
+#       associations {
+#         domain {
+#           cdn_frontdoor_domain_id = azurerm_cdn_frontdoor_endpoint.frontend_endpoint.id
+#         }
+
+#         patterns_to_match = ["/*"]
+#         route_ids         = [azurerm_cdn_frontdoor_route.default_route.id]
+#       }
+#     }
+#   }
+# }
