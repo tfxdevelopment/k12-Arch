@@ -70,7 +70,8 @@ resource "azurerm_windows_function_app" "api-enrollment" {
   lifecycle {
     ignore_changes = [
       tags,
-      site_config
+      site_config,
+      connection_string
     ]
   }
 }

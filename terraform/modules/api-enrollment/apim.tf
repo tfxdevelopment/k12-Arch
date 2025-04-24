@@ -10,9 +10,7 @@ resource "azurerm_api_management" "api_enrollment" {
   tags      = var.tags
 
   lifecycle {
-    ignore_changes = [
-      tags
-    ]
+    ignore_changes = all
   }
 }
 
@@ -22,6 +20,10 @@ resource "azurerm_api_management_api_version_set" "api-enrollment" {
   api_management_name = azurerm_api_management.api_enrollment.name
   display_name        = "${var.environment_name}-api-enrollment"
   versioning_scheme   = "Segment"
+
+  lifecycle {
+    ignore_changes = all
+  }
 }
 
 
