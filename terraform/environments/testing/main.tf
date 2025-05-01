@@ -60,3 +60,15 @@ module "providers-web" {
     zscaler_ip_list = local.zscaler_ip_list
     dev_ip_list = local.dev_ip_list
 }
+
+module "schools-web" {
+    source = "../../modules/web-enrollment"
+    #variables
+    app_name = "schools"
+    environment_name = local.environment_name
+    location = local.location
+    resource_group_name = module.core.rg_name
+    tags = merge(local.tags, {module = "web-enrollment"})
+    zscaler_ip_list = local.zscaler_ip_list
+    dev_ip_list = local.dev_ip_list
+}
