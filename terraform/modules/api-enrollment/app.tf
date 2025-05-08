@@ -81,6 +81,12 @@ resource "azurerm_application_insights" "api-enrollment-insights" {
   resource_group_name = var.resource_group_name
   location            = var.location
   application_type    = "web"
+
+  lifecycle {
+    ignore_changes = [
+      workspace_id
+    ]
+  }
 }
 
 resource "azurerm_application_insights_web_test" "dev-api-enrollment-test" {
