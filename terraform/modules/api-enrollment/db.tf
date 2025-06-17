@@ -8,7 +8,7 @@ resource "azurerm_mssql_server" "api-enrollment-db" {
   azuread_administrator {
     login_username = "CFI-AzureDevOps - K12 - Contributors"
     object_id = "50a9f81f-da2d-4770-ba17-c642a38e9eb0"
-    azuread_authentication_only = true
+    azuread_authentication_only = false
   }
 
   tags      = var.tags
