@@ -63,7 +63,8 @@ resource "azurerm_windows_function_app" "api-enrollment" {
       "XDT_MicrosoftApplicationInsights_PreemptSdk",
       "APPLICATIONINSIGHTS_CONFIGURATION_CONTENT",
       "XDT_MicrosoftApplicationInsightsJava",
-      "XDT_MicrosoftApplicationInsights_NodeJS"
+      "XDT_MicrosoftApplicationInsights_NodeJS",
+      "AzureSignalRConnectionString"
     ]
   }
 
@@ -71,7 +72,8 @@ resource "azurerm_windows_function_app" "api-enrollment" {
     ignore_changes = [
       tags,
       site_config,
-      connection_string
+      connection_string,
+      app_settings
     ]
   }
 }
@@ -171,4 +173,42 @@ resource "azurerm_portal_dashboard" "dev-api-enrollment-dashboard" {
   })
 }
 
+resource "azurerm_signalr_service" "api_enrollment_signalr" {
+  name                = "${var.environment_name}-api-enrollment-signalr"
+  location            = var.location
+  resource_group_name = var.resource_group_name
 
+  sku {
+    name     = "Standard_S1"
+    capacity = 1
+  }
+
+  cors {
+    allowed_origins = ["*"]
+  }
+
+  public_network_access_enabled               = true
+  local_auth_enabled                          = true
+  aad_auth_enabled                            = true
+  tls_client_cert_enabled                     = false
+  service_mode                                = "Serverless"
+  serverless_connection_timeout_in_seconds    = 30
+
+  connectivity_logs_enabled     = true
+  messaging_logs_enabled        = true
+  http_request_logs_enabled     = true
+  live_trace_enabled            = true
+
+  live_trace {
+    enabled                   = true
+    connectivity_logs_enabled = true
+    messaging_logs_enabled    = true
+    http_request_logs_enabled = true
+  }
+
+  lifecycle {
+    ignore_changes = [
+      tags
+    ]
+  }
+}
