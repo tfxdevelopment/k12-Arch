@@ -212,3 +212,33 @@ resource "azurerm_signalr_service" "api_enrollment_signalr" {
     ]
   }
 }
+
+resource "azurerm_key_vault" "api_enrollment_kv" {
+  name                        = "${var.environment_name}apikv"
+  location                    = var.location
+  resource_group_name         = var.resource_group_name
+  tenant_id                   = "3f80a41f-c452-4071-a415-4df4176730e2"
+  sku_name                    = "standard"
+  purge_protection_enabled    = true
+  soft_delete_retention_days  = 7
+  enable_rbac_authorization   = true
+
+  lifecycle {
+    ignore_changes = [tags]
+  }
+}
+
+# resource "azurerm_role_assignment" "kv_reader" {
+#   depends_on = [ azurerm_key_vault.api_enrollment_kv]
+#   scope                = azurerm_key_vault.api_enrollment_kv.id
+#   role_definition_name = "Key Vault Secrets Officer"
+#   principal_id         = azurerm_windows_function_app.api-enrollment.identity[0].principal_id
+# }
+
+
+resource "azurerm_role_assignment" "k12_contributors_kv_rw" {
+  depends_on = [ azurerm_key_vault.api_enrollment_kv]
+  scope                = azurerm_key_vault.api_enrollment_kv.id
+  role_definition_name = "Key Vault Secrets Officer"
+  principal_id         = "50a9f81f-da2d-4770-ba17-c642a38e9eb0"
+}
