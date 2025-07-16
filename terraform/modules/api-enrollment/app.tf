@@ -228,12 +228,12 @@ resource "azurerm_key_vault" "api_enrollment_kv" {
   }
 }
 
-# resource "azurerm_role_assignment" "kv_reader" {
-#   depends_on = [ azurerm_key_vault.api_enrollment_kv]
-#   scope                = azurerm_key_vault.api_enrollment_kv.id
-#   role_definition_name = "Key Vault Secrets Officer"
-#   principal_id         = azurerm_windows_function_app.api-enrollment.identity[0].principal_id
-# }
+resource "azurerm_role_assignment" "kv_reader" {
+  depends_on = [ azurerm_key_vault.api_enrollment_kv]
+  scope                = azurerm_key_vault.api_enrollment_kv.id
+  role_definition_name = "Key Vault Secrets Officer"
+  principal_id         = azurerm_windows_function_app.api-enrollment.identity[0].principal_id
+}
 
 
 resource "azurerm_role_assignment" "k12_contributors_kv_rw" {
