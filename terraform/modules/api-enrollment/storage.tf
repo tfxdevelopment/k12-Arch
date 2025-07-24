@@ -14,3 +14,20 @@ resource "azurerm_storage_account" "api-enrollment-hns" {
   account_replication_type = "LRS"
   is_hns_enabled           = true
 }
+
+data "azurerm_linux_function_app" "api_enrollment" {
+  name                = "${var.environment_name}-api-enrollment"
+  resource_group_name = var.resource_group_name
+}
+
+resource "azurerm_role_assignment" "function_blob_delegator" {
+  scope                = azurerm_storage_account.api-enrollment-hns.id
+  role_definition_name = "Storage Blob Delegator"
+  principal_id         = data.azurerm_linux_function_app.api_enrollment.identity[0].principal_id
+}
+
+resource "azurerm_role_assignment" "k12_contributors_sa" {
+  scope                = azurerm_storage_account.api-enrollment-hns.id
+  role_definition_name = "Storage Blob Delegator"
+  principal_id         = "50a9f81f-da2d-4770-ba17-c642a38e9eb0"
+}
