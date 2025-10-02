@@ -242,3 +242,63 @@ resource "azurerm_role_assignment" "k12_contributors_kv_rw" {
   role_definition_name = "Key Vault Secrets Officer"
   principal_id         = "50a9f81f-da2d-4770-ba17-c642a38e9eb0"
 }
+
+resource "azurerm_storage_account" "api_enrollment_logic_app_sa" {
+  name                     = "stapilogicapp${var.environment_name}"
+  resource_group_name      = var.resource_group_name
+  location                 = var.location
+  account_tier             = "Standard"
+  account_replication_type = "LRS"
+}
+resource "azurerm_service_plan" "api_enrollment_logic_app_service_plan" {
+  name                = "${var.environment_name}-api-enrollment-sp"
+  location            = var.location
+  resource_group_name = var.resource_group_name
+  os_type  = "Windows"
+  sku_name = "WS1"
+}
+resource "azurerm_logic_app_standard" "api_enrollment_logic_app" {
+  name                       = "${var.environment_name}-api-enrollment-la"
+  location                   = var.location
+  resource_group_name        = var.resource_group_name
+  app_service_plan_id        = azurerm_service_plan.api_enrollment_logic_app_service_plan.id
+  storage_account_name       = azurerm_storage_account.api_enrollment_logic_app_sa.name
+  storage_account_access_key = azurerm_storage_account.api_enrollment_logic_app_sa.primary_access_key
+  app_settings = {
+    "FUNCTIONS_WORKER_RUNTIME"     = "dotnet"
+  }
+  identity {
+    type = "SystemAssigned"
+  }
+
+  lifecycle {
+    ignore_changes = [
+      tags,
+      app_settings
+    ]
+  }
+}
+resource "azurerm_role_assignment" "api_enrollment_function_app_to_logic_app" {
+  depends_on           = [azurerm_logic_app_standard.api_enrollment_logic_app]
+  scope                = azurerm_logic_app_standard.api_enrollment_logic_app.id
+  role_definition_name = "Contributor"
+  principal_id         = azurerm_windows_function_app.api-enrollment.identity[0].principal_id
+}
+resource "azurerm_role_assignment" "api_enrollment_logic_app_to_enrollment_database" {
+  depends_on           = [azurerm_logic_app_standard.api_enrollment_logic_app]
+  scope                = azurerm_mssql_database.api-enrollment-k12.id
+  role_definition_name = "Contributor"
+  principal_id         = azurerm_logic_app_standard.api_enrollment_logic_app.identity[0].principal_id
+}
+
+data "azurerm_api_management" "apim" {
+  name                = "${var.environment_name}-api-enrollment"  
+  resource_group_name = var.resource_group_name
+}
+
+resource "azurerm_role_assignment" "logic_app_to_apim_reader" {
+  depends_on           = [azurerm_logic_app_standard.api_enrollment_logic_app]
+  scope                = data.azurerm_api_management.apim.id
+  role_definition_name = "API Management Service Reader Role"
+  principal_id         = azurerm_logic_app_standard.api_enrollment_logic_app.identity[0].principal_id
+}
