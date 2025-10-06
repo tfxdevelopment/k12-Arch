@@ -5,6 +5,11 @@ resource "azurerm_static_web_app" "web-enrollment" {
   sku_size            = "Standard"
   sku_tier            = "Standard"
 
+  app_settings = {
+    "PastDueTaskStatusCronSchedule"                 = "0 0 0 * * *"
+    "UserResourceAccessMappingFullSyncCronSchedule" = "0 */10 * * * *"
+  }
+
   lifecycle {
     ignore_changes = [
       tags,
