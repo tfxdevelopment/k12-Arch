@@ -23,6 +23,11 @@ resource "azurerm_mssql_database" "api-enrollment-k12" {
   max_size_gb  = 2
   sku_name     = "GP_S_Gen5_2"
 
+  identity {
+    type         = "UserAssigned"
+    identity_ids = [azurerm_user_assigned_identity.adf_mi.id]
+  }
+
   tags      = var.tags
 
   # prevent the possibility of accidental data loss
