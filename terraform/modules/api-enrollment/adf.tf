@@ -9,6 +9,6 @@ resource "azurerm_user_assigned_identity" "adf_mi" {
 
 resource "azurerm_role_assignment" "adf_mi_to_enrollmenthns" {
   scope                 = azurerm_storage_account.api-enrollment-hns.id
-  role_definition_name  = "Storage Blob Contributor"
+  role_definition_name  = "Storage Blob Data Contributor"
   principal_id          = azurerm_user_assigned_identity.adf_mi.principal_id
 }
