@@ -1,0 +1,29 @@
+{
+  "name": "@k12-arch/node-tools",
+  "version": "0.1.0",
+  "description": "Architecture pattern utilities and tools for Node.js applications",
+  "main": "src/index.js",
+  "bin": {
+    "k12-arch": "./bin/cli.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "build": "echo 'Build step would go here'",
+    "test": "echo 'Tests would go here'",
+    "lint": "echo 'Linting would go here'"
+  },
+  "keywords": [
+    "architecture",
+    "patterns",
+    "enterprise",
+    "microservices",
+    "clean-architecture",
+    "cqrs",
+    "ddd"
+  ],
+  "author": "k12-Arch Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
