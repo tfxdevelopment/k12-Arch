@@ -1,0 +1,865 @@
+Date: Sat, 15 Nov 2025 19:52:10 +0000 (UTC)
+Message-ID: <471003887.203.1763236330043@ba890a2d1db2>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_202_587757563.1763236330043"
+
+------=_Part_202_587757563.1763236330043
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>K12Technology Roadmap</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: solid 1px;
+            padding: 5px;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font: var(--ds-font-body-small, Arial, Helvetica, FreeSans, sans-se=
+rif);
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: var(--ds-surface, #fff) !important;
+        color: var(--ds-text, #000) !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: var(--ds-text, #000);
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        page-break-after: avoid;
+    }
+
+    pre {
+        font: var(--ds-font-code, Monaco, "Courier New", monospace);
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0px;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0px;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>K12Technology Roadmap</h1>
+    <div class=3D"Section1">
+        <h2 id=3D"K12TechnologyRoadmap-K12Modernization">K12 Modernization<=
+/h2>
+<p>IT Stakeholder Presentation<br>
+October 2025</p>
+<ul>
+<li>
+<p>College Foundation, Inc.</p></li>
+<li>
+<p>North Carolina SEAA Programs</p></li>
+<li>
+<p><strong>Timeline:</strong> October 15, 2025 - May 1, 2026</p></li>
+</ul>
+<hr>
+<h2 id=3D"K12TechnologyRoadmap-Agenda">Agenda</h2>
+<ol start=3D"1">
+<li>
+<p><strong>Executive Summary</strong> =E2=80=93 Project overview and timeli=
+ne</p>
+<ol start=3D"1">
+<li>
+<p>Modernizaton Scope</p></li>
+<li>
+<p>Core Capabilities</p></li>
+<li>
+<p><strong>Platform Overview</strong> =E2=80=93 Complete system scope</p></=
+li>
+<li>
+<p>Tools</p></li>
+<li>
+<p>Infrastructure</p></li>
+<li>
+<p>Cross-Cutting Concerns</p></li>
+<li>
+<p>3rd-Party Integrations</p></li>
+<li>
+<p>Data Migrations</p></li>
+</ol></li>
+<li>
+<p><strong>Complete Feature Inventory</strong> =E2=80=93 All core capabilit=
+ies</p></li>
+<li>
+<p><strong>Risk Assessment</strong> =E2=80=93 Critical areas and mitigation=
+</p></li>
+<li>
+<p><strong>Success Criteria</strong> =E2=80=93 Delivery milestones and qual=
+ity metrics</p></li>
+<li>
+<p><strong>Next Steps</strong> =E2=80=93 Execution and monitoring</p></li>
+</ol>
+<hr>
+<h2 id=3D"K12TechnologyRoadmap-ExecutiveSummary">Executive Summary</h2>
+<hr>
+<h3 id=3D"K12TechnologyRoadmap-CompleteK12ModernizationScope">Complete K12 =
+Modernization Scope</h3>
+<p><strong>Timeline:</strong> October 15, 2025 - May 1, 2026 (28 weeks)</p>
+<p><strong>Platform Serves:</strong></p>
+<ul>
+<li>
+<p>Two scholarship programs (ESA+, Opportunity Scholarship)</p></li>
+<li>
+<p>Up to 80,000 concurrent users</p></li>
+<li>
+<p>Four web portals (Household, School, Provider, Admin)</p></li>
+<li>
+<p>Comprehensive scholarship lifecycle management</p></li>
+</ul>
+<hr>
+<h3 id=3D"K12TechnologyRoadmap-CoreCapabilitiesRequired">Core Capabilities =
+Required</h3>
+<ol start=3D"1">
+<li>
+<p><strong>Household &amp; Student Management (15+ features):</strong> This=
+ domain covers the core entry points for end-users. Critical features inclu=
+de the <strong>ESA+ and OS application workflows</strong>, <strong>renewal =
+processes</strong>, and student profile and account management.</p></li>
+<li>
+<p><strong>School Management (20+ features):</strong> This focuses on insti=
+tutional requirements, including <strong>school registration and profiles</=
+strong>, <strong>annual certification workflows</strong>, and the crucial, =
+time-sensitive <strong>semester parent endorsement</strong> process.</p></l=
+i>
+<li>
+<p><strong>Provider Management (12+ features):</strong> This involves manag=
+ing service providers (tutors, therapists) who accept ESA+ funds. Key featu=
+res include <strong>provider registration and enrollment</strong>, the publ=
+ic <strong>provider directory</strong>, and <strong>invoice submission and =
+processing</strong>.</p></li>
+<li>
+<p><strong>Admin Portal Operations (30+ features):</strong> This is the ope=
+rational core for SEAA staff, enabling <strong>application processing and r=
+eview</strong>, <strong>verification management</strong> (domicile, income,=
+ sampling), <strong>award management</strong> (lottery, calculation, lifecy=
+cle), and necessary <strong>reporting and analytics</strong>.</p></li>
+<li>
+<p><strong>Payment &amp; Financial Systems (18+ features):</strong> This do=
+main handles the disbursement of scholarship funds. Critical requirements i=
+nclude <strong>direct payment school processing</strong>, <strong>ESA+ wall=
+et and purchasing</strong> (which relies heavily on ClassWallet integration=
+), <strong>tax reporting (1099-G)</strong>, <strong>rollover management</st=
+rong>, and <strong>minimum spending enforcement</strong> ($1,000 threshold =
+for ESA+).</p></li>
+<li>
+<p><strong>Verification &amp; Compliance (15+ features):</strong> This doma=
+in is critical for regulatory adherence and includes eligibility verificati=
+on workflows, ongoing compliance monitoring, and <strong>integrations with =
+7 state agencies</strong>. The mandatory process of <strong>verification sa=
+mpling</strong> (4% of applications) and handling non-cooperation falls her=
+e.</p></li>
+</ol>
+<p><strong>Critical Deadline:</strong> <strong>May 1, 2026</strong> - All c=
+ore functionality must be production-ready</p>
+<hr>
+<p>STATUS KEYS:</p>
+<ul>
+<li>
+<p>NI: NOT IMPLEMENTED</p></li>
+<li>
+<p>IP: IN PROGRESS</p></li>
+<li>
+<p>SU: STATUS UNKNOWN</p></li>
+<li>
+<p>DONE: COMPLETED</p></li>
+</ul>
+<h3 id=3D"K12TechnologyRoadmap-PlatformArchitecture">Platform Architecture<=
+/h3>
+<ul>
+<li>
+<p>Serverless / Microservices (IP)</p>
+<ul>
+<li>
+<p>Azure Functions, API Management, SQL Database</p></li>
+</ul></li>
+<li>
+<p>Event-driven Processing (IP)</p>
+<ul>
+<li>
+<p>Event Grid, Azure Functions, Azure Logic Apps</p></li>
+</ul></li>
+<li>
+<p>Business Logic Layer (NI)</p>
+<ul>
+<li>
+<p>Rules Engine (IP)</p></li>
+</ul></li>
+<li>
+<p>Analysis &amp; Design (NI)</p>
+<ul>
+<li>
+<p>artifacts (diagrams)</p></li>
+<li>
+<p>Azure Network</p></li>
+<li>
+<p>Domain Diagram(s)</p></li>
+</ul></li>
+<li>
+<p>Architecture Decision Record (NI)</p></li>
+<li>
+<p>SignalR (for Message Center) (DONE)</p></li>
+<li>
+<p>Document Storage (DataLake) (DONE)</p></li>
+</ul>
+<blockquote>
+<p>FE: responsive architecture/tools/execution</p>
+</blockquote>
+<h3 id=3D"K12TechnologyRoadmap-Tools">Tools</h3>
+<ul>
+<li>
+<p>Frontend</p>
+<ul>
+<li>
+<p>ADA/WCAG compliance (IP)</p></li>
+<li>
+<p>Jest (unit testing) (IP)</p></li>
+<li>
+<p>UI Control Suite (DONE)</p></li>
+<li>
+<p>Prettier, Pre-Commit Hooks (NI)</p></li>
+<li>
+<p>Nx Console/Generators (NI)</p></li>
+</ul></li>
+<li>
+<p>Backend</p>
+<ul>
+<li>
+<p>Rules Engine Framework Selecction (IP)</p></li>
+</ul></li>
+</ul>
+<h3 id=3D"K12TechnologyRoadmap-Infrastructure">Infrastructure</h3>
+<ul>
+<li>
+<p>Network Security (DONE)</p></li>
+<li>
+<p>CI/CD Piplelines from development to production (IP)</p></li>
+<li>
+<p>Reliability</p></li>
+<li>
+<p>Quality</p>
+<ul>
+<li>
+<p>Testing</p></li>
+</ul></li>
+<li>
+<p>Security</p>
+<ul>
+<li>
+<p>Package scanning (IP)</p></li>
+</ul></li>
+</ul>
+<h3 id=3D"K12TechnologyRoadmap-Cross-CuttingConcernsRequired">Cross-Cutting=
+ Concerns Required</h3>
+<ul>
+<li>
+<p>Observability/Telemetry (IP)</p></li>
+<li>
+<p>Enrollment Builder (IP)</p>
+<ul>
+<li>
+<p>UI Admin, Render Engine, Components</p></li>
+<li>
+<p>Data Mapper</p></li>
+</ul></li>
+<li>
+<p>Entra (DONE)</p></li>
+<li>
+<p><a class=3D"external-link" href=3D"https://cfi-nc.atlassian.net/browse/K=
+12-4297" rel=3D"nofollow">Communication Center</a> (DONE)</p>
+<ul>
+<li>
+<p>Email</p></li>
+<li>
+<p>In-application notifications</p></li>
+</ul></li>
+<li>
+<p>Query Builder (Cube Core) (IP)</p>
+<ul>
+<li>
+<p>reporting</p></li>
+<li>
+<p>ad-hoc queries</p></li>
+<li>
+<p>recipient list generation</p></li>
+</ul></li>
+<li>
+<p>Task Engine (DONE)</p></li>
+<li>
+<p>Document Storage (DONE)</p>
+<ul>
+<li>
+<p>Versioning</p></li>
+<li>
+<p>Retention</p></li>
+</ul></li>
+<li>
+<p>PandaDocs (DONE)</p></li>
+<li>
+<p>Audit Logging (NI)</p></li>
+<li>
+<p>PID Generator/Integration (NI)</p></li>
+</ul>
+<hr>
+<h3 id=3D"K12TechnologyRoadmap-3rd-PartyIntegration(s)">3rd-Party Integrati=
+on(s)</h3>
+<ul>
+<li>
+<p><a class=3D"external-link" href=3D"https://cfi-nc.atlassian.net/issues/?=
+jql=3Dtextfields%20~%20%22CLASSWALLET%2A%22&amp;selectedIssue=3DK12-373&amp=
+;wildcardFlag=3Dtrue" rel=3D"nofollow">ClassWallet</a> (NI)</p></li>
+<li>
+<p><a class=3D"external-link" href=3D"https://cfi-nc.atlassian.net/issues/?=
+jql=3Dtextfields%20~%20%22RDS%2A%22&amp;selectedIssue=3DK12-2964&amp;wildca=
+rdFlag=3Dtrue" rel=3D"nofollow">RDS</a> (NI)</p></li>
+<li>
+<p>SparkPost (Email Engine) (DONE)</p></li>
+<li>
+<p>Aperio/CISCO Call Center (Provider Lookup) (NI)</p></li>
+<li>
+<p>PandaDocs (DONE)</p></li>
+<li>
+<p>Cube Cloud (API and SDK integration) (IP)</p></li>
+</ul>
+<hr>
+<h3 id=3D"K12TechnologyRoadmap-DataMigrations">Data Migrations</h3>
+<ul>
+<li>
+<p>Schools (NI)</p></li>
+<li>
+<p>Providers (NI)</p></li>
+<li>
+<p>Household and Students (NI)</p></li>
+<li>
+<p>Operational Data (existing) (NI)</p></li>
+</ul>
+<hr>
+<h2 id=3D"K12TechnologyRoadmap-K-12SEAAModernizationProject:TechnologyRoadm=
+apReport">K-12 SEAA Modernization Project: Technology Roadmap Report</h2>
+<hr>
+<h3 id=3D"K12TechnologyRoadmap-1.DefinitionofaTechnologyRoadmap">1. Definit=
+ion of a Technology Roadmap</h3>
+<p>A Technology Roadmap, in the context of the K-12 SEAA Modernization proj=
+ect, is a <strong>strategic, phased delivery plan</strong> covering the ent=
+ire scope of work, designed to guide the development teams toward a <strong=
+>critical production launch deadline of May 1, 2026</strong>.</p>
+<p>Based on the materials, the roadmap functions as the implementation plan=
+, detailing the sequential delivery of <strong>110+ distinct features</stro=
+ng> across six core functional domains, the integration of <strong>high-ris=
+k external systems</strong> (like ClassWallet), and the resolution of criti=
+cal architectural and data integrity deficiencies. The roadmap prioritizes =
+the delivery of cross-cutting services early to ensure the foundation for <=
+strong>security (Entra ID)</strong>, <strong>logic (Rules Engine)</strong>,=
+ and <strong>communication (Communication Center)</strong> is stable before=
+ executing advanced administrative and financial workflows.</p>
+<hr>
+<h3 id=3D"K12TechnologyRoadmap-2.ProjectContextandStateofProject">2. Projec=
+t Context and State of Project</h3>
+<p>The K-12 SEAA Modernization project has been in development for approxim=
+ately one year. The project serves two scholarship programs (ESA+ and Oppor=
+tunity Scholarship) and must support up to <strong>80,000 concurrent users<=
+/strong> across four web portals (Household, School, Provider, Admin).</p>
+<h4 id=3D"K12TechnologyRoadmap-CoreFeatures">Core Features</h4>
+<ul>
+<li>
+<p><strong>Status</strong>: <strong>NOT IMPLEMENTED (NI)</strong></p></li>
+<li>
+<p><strong>Challenges</strong>: None of the <em>core</em> features are impl=
+emented, integrated and/or complete.</p>
+<ul>
+<li>
+<p>Registration and application workflows for ESA+ and Opportunity Scholars=
+hip</p></li>
+<li>
+<p>Renewal processes</p></li>
+<li>
+<p>School and Provider management portals</p></li>
+<li>
+<p>Admin portal operations for SEAA staff</p></li>
+<li>
+<p>Payment processing and financial systems</p></li>
+<li>
+<p>Verification and compliance workflows, including state agency integratio=
+ns</p></li>
+<li>
+<p>Database schema for all domains (modernization)</p></li>
+</ul></li>
+<li>
+<p><strong>Resolution</strong>:</p>
+<ul>
+<li>
+<p>Implement <code>workflow-centric</code> operations to deliver core featu=
+res in a phased manner over the next 7 months.</p></li>
+<li>
+<p>Start with <strong>foundational</strong> features (i.e., Student, Househ=
+old, School, Provider) and <strong>logical sequence(s)</strong></p>
+<ul>
+<li>
+<p>Stop focus on tool-building</p></li>
+<li>
+<p>Stop focus on "what is easy" (e.g., Provider)</p></li>
+</ul></li>
+<li>
+<p>Focus on <code>event-driven</code> <strong>workflows</strong> to decoupl=
+e services and improve scalability</p>
+<ul>
+<li>
+<p><em><strong>REQUIRES</strong></em>: grouping tasks to operational workfl=
+ows with application context</p></li>
+</ul></li>
+<li>
+<p>Prioritize high-risk external integrations (ClassWallet, RDS) early in t=
+he roadmap</p></li>
+<li>
+<p>Need application <strong>database</strong> and <strong>resources</strong=
+> to enforce relational integrity and domain-driven design</p>
+<ul>
+<li>
+<p>Implement a <em>coordination</em> of database schemas, changes, and envi=
+ronment deployments</p></li>
+</ul></li>
+</ul></li>
+</ul>
+<h4 id=3D"K12TechnologyRoadmap-Architecture(Backend)">Architecture (Backend=
+)</h4>
+<ul>
+<li>
+<p><strong>Status</strong>: <strong>NI / IN PROGRESS (IP)</strong></p></li>
+<li>
+<p><strong>Challenges</strong>:</p>
+<ul>
+<li>
+<p><strong>Process</strong>: Architecture Design, Analysis, and Decision Re=
+cords (NI)</p></li>
+<li>
+<p>Business Logic Layer (NI)</p></li>
+<li>
+<p><strong>Workflow</strong> and <strong>Event-driven</strong> Processing (=
+IP)</p></li>
+<li>
+<p>Strong <strong>Business Logic</strong> with <strong>Rules Engine</strong=
+> (IP)</p></li>
+</ul></li>
+<li>
+<p><strong>Resolution</strong>:</p>
+<ul>
+<li>
+<p>Complete Architecture Decision Records (ADRs) for all major design decis=
+ions</p></li>
+<li>
+<p>Finalize Business Logic Layer design using Rules Engine</p></li>
+<li>
+<p>Fully implement event-driven architecture with <code>Workflow-centric</c=
+ode> operations and <strong>Task</strong> Engine</p>
+<ul>
+<li>
+<p><em><strong>REQUIRES</strong></em>: grouping tasks to <strong>operationa=
+l workflows</strong> with application context</p></li>
+</ul></li>
+</ul></li>
+</ul>
+<h4 id=3D"K12TechnologyRoadmap-Architecture(Frontend)">Architecture (Fronte=
+nd)</h4>
+<ul>
+<li>
+<p><strong>Status</strong>: <strong>New</strong></p></li>
+<li>
+<p><strong>Challenges</strong>:</p>
+<ul>
+<li>
+<p>(4) autonomous teams working in silos without architectural governance</=
+p></li>
+<li>
+<p>Consistent components communication (i.e., API, responses ) patterns not=
+ established</p></li>
+<li>
+<p>Enterprise cross-cutting concerns (i.e., logging, error handling, teleme=
+try) not implemented/standardized</p></li>
+</ul></li>
+<li>
+<p><strong>Resolution</strong>:</p>
+<ul>
+<li>
+<p>(1) Frontend Architect to coordinate implementation of patterns, compone=
+nts, and shared libraries</p>
+<ul>
+<li>
+<p>Adding core cross-cutting concerns (i.e., logging, error handling, and c=
+onfiguration)</p></li>
+</ul></li>
+<li>
+<p>Document and socialize standards for API contracts, responses, and error=
+ handling</p></li>
+<li>
+<p>Establish architectural governance process for all teams to follow</p></=
+li>
+<li>
+<p>Implement shared libraries for cross-cutting concerns and utilities</p>
+<ul>
+<li>
+<p>shared models and DTO library projects</p></li>
+<li>
+<p>shared layout and styles/assets library projects</p></li>
+<li>
+<p>Data access layer with repository pattern (i.e., Http Service)</p></li>
+</ul></li>
+</ul></li>
+</ul>
+<h4 id=3D"K12TechnologyRoadmap-Cross-CuttingServices">Cross-Cutting Service=
+s</h4>
+<ul>
+<li>
+<p><strong>Status</strong>: <strong>DONE / IP</strong></p></li>
+<li>
+<p><strong>Details</strong>:</p>
+<ul>
+<li>
+<p>Microsoft Entra (Security) (DONE)</p></li>
+<li>
+<p>Communication Center (DONE)</p></li>
+<li>
+<p>SignalR (DONE)</p></li>
+<li>
+<p>PandaDocs (DONE)</p></li>
+<li>
+<p>Document Storage (DONE)</p></li>
+<li>
+<p>Rules Engine (IP)</p></li>
+<li>
+<p>Observability/Telemetry (IP).</p></li>
+</ul></li>
+<li>
+<p><strong>Resolution</strong>:</p>
+<ul>
+<li>
+<p>Complete implementation and integration of Rules Engine with business lo=
+gic</p></li>
+<li>
+<p>Finalize Observability/Telemetry for end-to-end monitoring and diagnosti=
+cs</p>
+<ul>
+<li>
+<p>AppInsights, Log Analytics, Distributed Tracing</p></li>
+<li>
+<p>by Application (i.e., frontend and backend), environment</p></li>
+<li>
+<p>monitoring dashboards and alerts (thresholds)</p></li>
+</ul></li>
+</ul></li>
+</ul>
+<h4 id=3D"K12TechnologyRoadmap-3rd-PartyIntegrations">3rd-Party Integration=
+s</h4>
+<ul>
+<li>
+<p><strong>Status</strong>: <strong>NI / DONE / IP</strong></p></li>
+<li>
+<p><strong>Details</strong>:</p>
+<ul>
+<li>
+<p>SparkPost (Email Engine) (DONE)</p></li>
+<li>
+<p>PandaDocs (DONE)</p></li>
+<li>
+<p>ClassWallet (NI)</p></li>
+<li>
+<p>State Agency Integrations (RDS) (NI)</p></li>
+<li>
+<p>Aperio/CISCO Call Center (NI)</p></li>
+</ul></li>
+<li>
+<p><strong>Resolution</strong>:</p>
+<ul>
+<li>
+<p>Prioritize ClassWallet and RDS integrations early in the roadmap due to =
+high risk</p></li>
+<li>
+<p>Establish integration patterns and error handling strategies for externa=
+l systems</p></li>
+</ul></li>
+</ul>
+<h4 id=3D"K12TechnologyRoadmap-Data&amp;DataMigration">Data &amp; Data Migr=
+ation</h4>
+<ul>
+<li>
+<p><strong>Status</strong>: <strong>NOT IMPLEMENTED (NI)</strong></p></li>
+<li>
+<p><strong>Details</strong>:</p>
+<ul>
+<li>
+<p>Migrations for Schools (NI)</p></li>
+<li>
+<p>Providers (NI)</p></li>
+<li>
+<p>Household</p></li>
+<li>
+<p>Students (NI)</p></li>
+<li>
+<p>and Operational Data (NI) are all pending</p></li>
+</ul></li>
+<li>
+<p><strong>Resolution</strong>:</p>
+<ul>
+<li>
+<p>Implement and/or stabilize the modernization schema(s)</p>
+<ul>
+<li>
+<p><em><strong>Need resource(s) to lead schema design and enforcement</stro=
+ng></em></p></li>
+</ul></li>
+<li>
+<p>Develop comprehensive data migration strategy and tools</p>
+<ul>
+<li>
+<p><em><strong>Need resource(s) to lead schema design and enforcement</stro=
+ng></em></p></li>
+<li>
+<p>Prioritize migrations based on feature delivery roadmap to ensure data a=
+vailability for core functionalities</p></li>
+</ul></li>
+</ul></li>
+</ul>
+<p>|</p>
+<h3 id=3D"K12TechnologyRoadmap-3.CriticalRiskAssessmentandMitigation">3. Cr=
+itical Risk Assessment and Mitigation</h3>
+<p>The project faces several <strong>HIGH RISK</strong> areas that could je=
+opardize the May 1, 2026 deadline.</p>
+<div class=3D"table-wrap">
+<table data-table-width=3D"760" data-layout=3D"default" data-local-id=3D"d9=
+c4f4ba-4158-4bb4-96ec-b327d959ec82" class=3D"confluenceTable">
+<tbody>
+<tr>
+<th class=3D"confluenceTh">
+<p>Critical Risk</p></th>
+<th class=3D"confluenceTh">
+<p>Challenge</p></th>
+<th class=3D"confluenceTh">
+<p>Mitigation Strategy</p></th>
+</tr>
+<tr>
+<td class=3D"confluenceTd">
+<p><strong>ClassWallet Integration</strong></p></td>
+<td class=3D"confluenceTd">
+<p>High vendor dependency for all <strong>ESA+ wallet, purchasing, and expe=
+nse management</strong> workflows in Phase 4.</p></td>
+<td class=3D"confluenceTd">
+<p>Use <strong>Idempotency keys</strong> for all transactions and perform <=
+strong>rigorous sandbox testing</strong> early.</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">
+<p><strong>Database Schemas</strong></p></td>
+<td class=3D"confluenceTd">
+<p>High risk due to lack of resources and/or expertise in modernizing legac=
+y schemas.</p></td>
+<td class=3D"confluenceTd">
+<p>Execute a <strong>Rapid Assessment and Remediation</strong> plan to iden=
+tify and address schema issues in parallel with development efforts. Focus =
+on <strong>foundational data schemas</strong> first.</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">
+<p><strong>Legacy Data Migration</strong></p></td>
+<td class=3D"confluenceTd">
+<p>High risk due to legacy data quality, volume, and the <strong>current sc=
+hema's lack of relational integrity</strong>.</p></td>
+<td class=3D"confluenceTd">
+<p>Execute a <strong>Phased Migration by Bounded Context</strong> rather th=
+an a single "Big Bang" approach to reduce risk and allow for iterative vali=
+dation.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+    </div>
+</body>
+</html>
+------=_Part_202_587757563.1763236330043--
