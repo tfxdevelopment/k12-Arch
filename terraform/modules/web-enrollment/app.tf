@@ -22,7 +22,7 @@ resource "azurerm_static_web_app" "web-enrollment" {
 resource "azurerm_cdn_frontdoor_profile" "afd_profile" {
   name                = "${var.app_name}-${var.environment_name}-afd-profile"
   resource_group_name = var.resource_group_name
-  sku_name            = "Premium_AzureFrontDoor"
+  sku_name            = "Standard_AzureFrontDoor"
 }
 
 # Backend Pool

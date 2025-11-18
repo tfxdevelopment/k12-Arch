@@ -9,6 +9,10 @@ resource "azurerm_api_management" "api_enrollment" {
 
   tags      = var.tags
 
+  identity {
+    type = "SystemAssigned"
+  }
+
   lifecycle {
     ignore_changes = all
   }
@@ -72,6 +76,10 @@ resource "azurerm_api_management_certificate" "apim_cert" {
   resource_group_name = var.resource_group_name
 
   key_vault_secret_id = azurerm_key_vault_certificate.apim_cert.secret_id
+
+  depends_on = [
+    azurerm_role_assignment.kv_apim_secrets
+  ]
 }
 
 resource "azurerm_api_management_api_version_set" "api-enrollment" {
