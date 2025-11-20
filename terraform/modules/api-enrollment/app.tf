@@ -243,6 +243,14 @@ resource "azurerm_role_assignment" "k12_contributors_kv_rw" {
   principal_id         = "50a9f81f-da2d-4770-ba17-c642a38e9eb0"
 }
 
+resource "azurerm_role_assignment" "kv_apim_secrets" {
+  depends_on = [azurerm_key_vault.api_enrollment_kv]
+
+  scope                = azurerm_key_vault.api_enrollment_kv.id
+  role_definition_name = "Key Vault Secrets Officer"
+  principal_id         = azurerm_api_management.api_enrollment.identity[0].principal_id
+}
+
 resource "azurerm_storage_account" "api_enrollment_logic_app_sa" {
   name                     = "stapilogicapp${var.environment_name}"
   resource_group_name      = var.resource_group_name
