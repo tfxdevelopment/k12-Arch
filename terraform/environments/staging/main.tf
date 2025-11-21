@@ -7,6 +7,7 @@ module "core" {
     zscaler_ip_list = local.zscaler_ip_list
     dev_ip_list = local.dev_ip_list
     contributor_principal_id = local.contributor_principal_id
+    resource_group_name = module.core.rg_name
 }
 
 module "enrollment-web" {
