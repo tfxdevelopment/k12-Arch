@@ -8,7 +8,7 @@
     <PackageVersion Include="Aspire.Hosting.AppHost" Version="9.0.0" />
     <PackageVersion Include="Aspire.Hosting.Dapr" Version="9.0.0" />
     <PackageVersion Include="Aspire.Hosting.NodeJs" Version="9.0.0" />
-    <PackageVersion Include="Aspire.Azure.AI.OpenAI" Version="9.0.0" />
+    <PackageVersion Include="Aspire.Azure.AI.OpenAI" Version="13.0.0-preview.1.25560.3" />
     <!-- OpenTelemetry -->
     <PackageVersion Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.9.0" />
     <PackageVersion Include="OpenTelemetry.Extensions.Hosting" Version="1.9.0" />
