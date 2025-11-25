@@ -1,4 +1,6 @@
+import {} from "@nuxt/content"
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { defineContentConfig, defineCollectionSource, defineCollection } from '@nuxt/content'
 export default defineNuxtConfig({
   compatibilityDate: '2025-11-01',
   devtools: { enabled: true },

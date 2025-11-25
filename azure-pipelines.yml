@@ -1,0 +1,214 @@
+trigger:
+  branches:
+    include:
+      - main
+      - develop
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  buildConfiguration: 'Release'
+  dotnetVersion: '9.0.x'
+  nodeVersion: '22.x'
+  azureSubscription: 'K12-Azure-Gov'  # Service connection name
+
+stages:
+  - stage: Build
+    displayName: 'Build Aspire Solution'
+    jobs:
+      - job: BuildDotnet
+        displayName: 'Build .NET Aspire Projects'
+        steps:
+          - task: UseDotNet@2
+            inputs:
+              version: $(dotnetVersion)
+              includePreviewVersions: true
+
+          - script: dotnet workload install aspire
+            displayName: 'Install .NET Aspire Workload'
+
+          - script: dotnet restore K12.sln
+            displayName: 'Restore Dependencies'
+
+          - script: dotnet build K12.sln --configuration $(buildConfiguration) --no-restore
+            displayName: 'Build Solution'
+
+          - script: dotnet test K12.sln --configuration $(buildConfiguration) --no-build --verbosity normal
+            displayName: 'Run Tests'
+
+      - job: BuildAngular
+        displayName: 'Build Angular Documentation Site'
+        steps:
+          - task: NodeTool@0
+            inputs:
+              versionSpec: $(nodeVersion)
+
+          - script: npm ci
+            workingDirectory: k12-docs
+            displayName: 'Install Dependencies'
+
+          - script: npm run build
+            workingDirectory: k12-docs
+            displayName: 'Build Nuxt App'
+
+          - task: PublishPipelineArtifact@1
+            inputs:
+              targetPath: 'k12-docs/.output/public'
+              artifact: 'docs-site-build'
+              publishLocation: 'pipeline'
+
+  - stage: GenerateManifest
+    displayName: 'Generate Deployment Manifest'
+    dependsOn: Build
+    condition: succeeded()
+    jobs:
+      - job: AspireManifest
+        displayName: 'Generate Aspire Manifest'
+        steps:
+          - task: UseDotNet@2
+            inputs:
+              version: $(dotnetVersion)
+              includePreviewVersions: true
+
+          - script: |
+              dotnet workload install aspire
+              dotnet tool install -g azd || true
+            displayName: 'Install Tools'
+
+          - script: |
+              mkdir -p $(Build.ArtifactStagingDirectory)/manifest
+              azd infra synth --output $(Build.ArtifactStagingDirectory)/manifest
+            displayName: 'Generate Aspire Manifest (azd infra synth)'
+            workingDirectory: $(System.DefaultWorkingDirectory)
+
+          - task: PublishPipelineArtifact@1
+            inputs:
+              targetPath: '$(Build.ArtifactStagingDirectory)/manifest'
+              artifact: 'aspire-manifest'
+              publishLocation: 'pipeline'
+
+  - stage: TranslateIaC
+    displayName: 'Translate to Terraform & Bicep'
+    dependsOn: GenerateManifest
+    condition: succeeded()
+    jobs:
+      - job: TranslateToTerraform
+        displayName: 'Aspire Manifest → Terraform'
+        steps:
+          - task: DownloadPipelineArtifact@2
+            inputs:
+              artifact: 'aspire-manifest'
+              path: '$(Pipeline.Workspace)/manifest'
+
+          - task: UsePythonVersion@0
+            inputs:
+              versionSpec: '3.x'
+
+          - script: |
+              mkdir -p $(Build.ArtifactStagingDirectory)/terraform
+              python scripts/manifest-to-terraform.py \
+                --manifest $(Pipeline.Workspace)/manifest/manifest.json \
+                --output $(Build.ArtifactStagingDirectory)/terraform
+            displayName: 'Convert Manifest to Terraform'
+
+          - task: PublishPipelineArtifact@1
+            inputs:
+              targetPath: '$(Build.ArtifactStagingDirectory)/terraform'
+              artifact: 'terraform-iac'
+              publishLocation: 'pipeline'
+
+      - job: TranslateToBicep
+        displayName: 'Aspire Manifest → Bicep'
+        steps:
+          - task: DownloadPipelineArtifact@2
+            inputs:
+              artifact: 'aspire-manifest'
+              path: '$(Pipeline.Workspace)/manifest'
+
+          - task: UsePythonVersion@0
+            inputs:
+              versionSpec: '3.x'
+
+          - script: |
+              mkdir -p $(Build.ArtifactStagingDirectory)/bicep
+              python scripts/manifest-to-bicep.py \
+                --manifest $(Pipeline.Workspace)/manifest/manifest.json \
+                --output $(Build.ArtifactStagingDirectory)/bicep
+            displayName: 'Convert Manifest to Bicep'
+
+          - task: PublishPipelineArtifact@1
+            inputs:
+              targetPath: '$(Build.ArtifactStagingDirectory)/bicep'
+              artifact: 'bicep-iac'
+              publishLocation: 'pipeline'
+
+  - stage: DeployDev
+    displayName: 'Deploy to Dev (Azure Container Apps)'
+    dependsOn: TranslateIaC
+    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/develop'))
+    jobs:
+      - deployment: DeployACA_Dev
+        displayName: 'Deploy to ACA Dev Environment'
+        environment: 'K12-Dev'
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - task: DownloadPipelineArtifact@2
+                  inputs:
+                    artifact: 'bicep-iac'
+                    path: '$(Pipeline.Workspace)/bicep'
+
+                - task: AzureCLI@2
+                  inputs:
+                    azureSubscription: $(azureSubscription)
+                    scriptType: 'bash'
+                    scriptLocation: 'inlineScript'
+                    inlineScript: |
+                      az deployment group create \
+                        --resource-group k12-dev-rg \
+                        --template-file $(Pipeline.Workspace)/bicep/main.bicep \
+                        --parameters environment=dev location=eastus
+                  displayName: 'Deploy Bicep to Azure Container Apps'
+
+  - stage: DeployProd
+    displayName: 'Deploy to Production (Azure Container Apps)'
+    dependsOn: TranslateIaC
+    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
+    jobs:
+      - deployment: DeployACA_Prod
+        displayName: 'Deploy to ACA Production Environment'
+        environment: 'K12-Production'
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - task: DownloadPipelineArtifact@2
+                  inputs:
+                    artifact: 'terraform-iac'
+                    path: '$(Pipeline.Workspace)/terraform'
+
+                - task: TerraformInstaller@0
+                  inputs:
+                    terraformVersion: '1.9.0'
+
+                - task: TerraformTaskV4@4
+                  inputs:
+                    provider: 'azurerm'
+                    command: 'init'
+                    workingDirectory: '$(Pipeline.Workspace)/terraform'
+                    backendServiceArm: $(azureSubscription)
+                    backendAzureRmResourceGroupName: 'k12-terraform-state-rg'
+                    backendAzureRmStorageAccountName: 'k12tfstate'
+                    backendAzureRmContainerName: 'tfstate'
+                    backendAzureRmKey: 'k12.terraform.tfstate'
+                  displayName: 'Terraform Init'
+
+                - task: TerraformTaskV4@4
+                  inputs:
+                    provider: 'azurerm'
+                    command: 'apply'
+                    workingDirectory: '$(Pipeline.Workspace)/terraform'
+                    environmentServiceNameAzureRM: $(azureSubscription)
+                  displayName: 'Terraform Apply'
