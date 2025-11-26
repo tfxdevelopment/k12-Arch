@@ -163,17 +163,18 @@
 
 ## 🎯 MAJOR INITIATIVE: PROPOSED CLOUD-NATIVE ARCHITECTURE
 
-**Status**: 🚧 In Development - Week 3/10 Complete
-**Timeline**: 10 weeks (Started November 24, 2025)
-**Approval**: Leadership sign-off in progress
+**Status**: 🚧 In Development - Week 3/10 Complete (Documentation) | PI 4 Starting (Implementation)
+**Timeline**: 3 months Phase 1 (PI 4-6) - Started PI 4, November 2025
+**Approval**: Leadership sign-off approved - Phase 1 scope
 **Completion**: 20/48 documents (42%)
 
 ### Executive Summary
-This initiative proposes migrating K12 MyPortal to a modern cloud-native architecture to support **80,000 concurrent users** during peak enrollment. Key decisions include:
+This initiative proposes migrating K12 MyPortal to a modern cloud-native architecture to support **80,000 concurrent users** during peak enrollment. **Phase 1 (3 months, PI 4-6)** includes:
 - Azure Container Apps + .NET 10 (eliminates cold starts)
 - Data API Builder for 80% code reduction on CRUD operations
-- Trino + CubeJS analytics stack (saves $32K over 3 years vs Azure alternatives)
+- Claims-based authorization (Entra ID JWT tokens - NO SQL RLS)
 - Containerized monolith approach (avoids microservices complexity)
+- **Phase 2** (deferred): Trino + CubeJS analytics stack
 
 **Cost**: $6,955/month (+20% vs current) for 2.7x capacity + enterprise analytics
 
@@ -349,8 +350,8 @@ This initiative proposes migrating K12 MyPortal to a modern cloud-native archite
 - [x] **ANALYTICS-01**: Data Federation Strategy ✅
   - Trino catalog configuration (SQL Server, ADLS Gen2, Cosmos DB)
   - Query optimization patterns and caching strategies
-  - RLS enforcement via CubeJS security context
-  - Status: **COMPLETED** (2024-11-24)
+  - Claims-based security via CubeJS security context (NO RLS)
+  - Status: **COMPLETED** (2024-11-24, UPDATED 2024-11-25 - RLS removed)
   - Location: [wiki/09-proposed-architecture/05-analytics/ANALYTICS-01-data-federation.md](wiki/09-proposed-architecture/05-analytics/ANALYTICS-01-data-federation.md)
   - Lines: 652
 
@@ -426,8 +427,8 @@ This initiative proposes migrating K12 MyPortal to a modern cloud-native archite
 **Remaining**: 28 (58%)
 **Estimated Time Remaining**: 42 hours (~5.3 days)
 
-**Next Milestone**: Week 4-5 completion (26/48 documents = 54%)
-**Target Go-Live**: May 2026 (in time for 2026-2027 enrollment cycle)
+**Next Milestone**: End of PI 4 (POC validated, remaining docs complete)
+**Target Go-Live**: End of PI 6 (March 2026) - in time for 2026-2027 enrollment cycle
 
 ---
 

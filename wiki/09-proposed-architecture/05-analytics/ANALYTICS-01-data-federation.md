@@ -136,7 +136,7 @@ sqlserver.domain-compaction-threshold=100
 - `Awards.Allocations`
 - `Awards.Disbursements`
 - `Comms.EmailLog`
-- `dbo.UserResourceAccessMap` (RLS enforcement)
+- `dbo.UserResourceAccessMap` (for reference only - claims-based auth used instead)
 
 **Example Query:**
 ```sql
@@ -338,18 +338,20 @@ SET SESSION join_distribution_type = 'BROADCAST';  -- Faster for <10K rows
 
 ## Security & Compliance
 
-### 1. Row-Level Security (RLS) in Federated Queries
+### 1. Claims-Based Security in Federated Queries
 
-**Problem:** Azure SQL enforces RLS, but Trino bypasses it (uses service account, not user identity)
+**Approach:** Claims-based filtering in CubeJS layer (NOT database RLS)
 
-**Solution:** Apply RLS filtering in Trino via CubeJS (next layer up)
+**Why:** Trino connects to SQL using service account (no user context), so authorization happens in application layer
+
+**Solution:** CubeJS applies JWT claims filtering before executing Trino queries
 
 ```javascript
-// CubeJS applies RLS based on JWT claims
+// CubeJS security context from validated JWT token (Entra ID)
 cube(`EnrollmentApplications`, {
   sql: `SELECT * FROM trino.sqlserver.enrollment.applications`,
 
-  // RLS: Filter based on user's custom security attributes
+  // Claims-based security: Filter based on JWT token claims
   dataSource: ({ securityContext }) => {
     const role = securityContext.role;
     const studentIds = securityContext.studentIds || [];
@@ -359,30 +361,26 @@ cube(`EnrollmentApplications`, {
     } else if (role === 'Household') {
       return `
         SELECT * FROM trino.sqlserver.enrollment.applications
-        WHERE student_id IN (${studentIds.join(',')})  // See only their students
+        WHERE student_id IN (${studentIds.join(',')})  // Filter by claims
+      `;
+    } else if (role === 'Provider') {
+      const providerId = securityContext.providerId;
+      return `
+        SELECT * FROM trino.sqlserver.enrollment.applications
+        WHERE provider_id = ${providerId}  // Filter by provider claim
       `;
     }
+
+    return `SELECT * FROM trino.sqlserver.enrollment.applications WHERE 1=0`; // No access
   }
 });
 ```
 
-**Alternative (Preferred):** Use Trino's built-in `system access control`
-
-**File:** `/etc/trino/access-control/rules.json`
-```json
-{
-  "catalogs": [
-    {
-      "user": "household_.*",
-      "catalog": "sqlserver",
-      "schema": "Enrollment",
-      "table": "Applications",
-      "privileges": ["SELECT"],
-      "filter": "student_id IN (SELECT resource_id FROM sqlserver.dbo.UserResourceAccessMap WHERE user_id = CURRENT_USER)"
-    }
-  ]
-}
-```
+**Benefits:**
+- ✅ No SQL session context required
+- ✅ Works with all Trino connectors (SQL Server, ADLS Gen2, Cosmos DB)
+- ✅ Filtering logic in one place (CubeJS security context)
+- ✅ Testable with mock JWT tokens
 
 ### 2. Encryption & Compliance
 - **In-Transit:** TLS 1.3 for all Trino connections (client → coordinator, coordinator → workers)

@@ -13,7 +13,7 @@
 2. [Semantic Layer Architecture](#semantic-layer-architecture)
 3. [Data Modeling Best Practices](#data-modeling-best-practices)
 4. [Pre-Aggregation Strategies](#pre-aggregation-strategies)
-5. [Multi-Tenant Row-Level Security](#multi-tenant-row-level-security)
+5. [Multi-Tenant Claims-Based Security](#multi-tenant-claims-based-security)
 6. [Caching Architecture with Redis](#caching-architecture-with-redis)
 7. [Dashboard Embedding Patterns](#dashboard-embedding-patterns)
 8. [Production Data Models](#production-data-models)
@@ -28,7 +28,7 @@ This document defines the **CubeJS semantic layer architecture** for K12 MyPorta
 
 - **70% query performance improvement** through intelligent pre-aggregations
 - **Single source of truth** for business metrics across all dashboards
-- **Multi-tenant row-level security** with Entra ID integration
+- **Multi-tenant claims-based security** with Entra ID integration
 - **Sub-100ms response times** for cached dashboard queries
 - **Real-time and historical analytics** from Trino data federation
 
@@ -610,7 +610,7 @@ preAggregations: {
 
 ---
 
-## Multi-Tenant Row-Level Security
+## Multi-Tenant Claims-Based Security
 
 ### Requirements
 
@@ -662,7 +662,7 @@ module.exports = {
 };
 ```
 
-### Row-Level Security in Cubes
+### Claims-Based Security in Cubes
 
 #### Pattern 1: Security Context in SQL
 
