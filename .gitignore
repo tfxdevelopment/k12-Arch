@@ -1,0 +1,51 @@
+# .NET Aspire specific
+.aspire/
+**/bin/
+**/obj/
+**/.vs/
+**/.vscode/
+*.user
+*.suo
+
+# Build outputs
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa]rm/
+[Aa]rm64/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# Aspire manifests (generated)
+manifest.json
+
+# Azure Developer CLI
+.azure/
+
+# Dapr (only exclude runtime directory, not source components)
+.dapr/
+
+# Docker
+docker-compose.override.yml
+
+# Node modules (for docs-site)
+node_modules/
+dist/
+.nuxt/
+.output/
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/

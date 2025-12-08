@@ -1,0 +1,22 @@
+{
+  "name": "@k12/nx-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for managing NX workspace operations",
+  "type": "module",
+  "bin": {
+    "nx-mcp": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.6.0",
+    "execa": "^9.5.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "typescript": "^5.6.3"
+  }
+}
