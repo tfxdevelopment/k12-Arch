@@ -38,8 +38,6 @@ C4Context
     Rel(k12, dmv, "Verifies residency")
     Rel(k12, dor, "Verifies income")
     Rel(k12, dpi, "Syncs student data")
-
-    UpdateLayoutConfig($c4ShapeInRow="4", $c4BoundaryInRow="1")
 ```
 
 ## Key Relationships
