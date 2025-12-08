@@ -1,0 +1,87 @@
+---
+query: "Generate cloud diagrams of these workflows integrations I need to create. "
+references:
+  - "File: /k12-api-enrollment/terraform/variables.tf"
+  - "File: /k12-api-enrollment/terraform/main.tf"
+  - "File:
+    /k12-query-builder/src/K12.QueryBuilder.AppHost/appsettings.Development.jso\
+    n.template"
+  - "File:
+    /k12-query-builder/src/infra/superset/docker/nginx/templates/superset.conf.\
+    template"
+  - "File:
+    /k12-querybuilder-prototype/infra/superset/docker/nginx/templates/superset.\
+    conf.template"
+  - "File: /k12-Arch/src/K12.AppHost/components/statestore.yaml"
+  - "File: /k12-Arch/src/K12.AppHost/components/pubsub.yaml"
+  - "File: /k12-api-enrollment/swagger-to-apim-pipeline.yml"
+generationTime: 2025-12-08T05:09:16.725Z
+id: cbac47ec-4ed6-4403-b1ce-fceb1bbacdde
+---
+architecture-beta
+    %% Main Azure Infrastructure Groups
+    group azure_infrastructure(logos:aws-vpc)[Azure Infrastructure]
+    group compute_layer(mdi:server)[Compute Layer]
+    group data_layer(mdi:database)[Data Layer]
+    group integration_layer(mdi:api)[Integration Layer]
+    group monitoring_layer(mdi:chart-line)[Monitoring Layer]
+    
+    %% Core Resource Group
+    service resource_group(mdi:cloud)[Resource Group k12_enrollment_rg] in azure_infrastructure
+    
+    %% Monitoring Services
+    service log_analytics(mdi:chart-line)[Log Analytics Workspace] in monitoring_layer
+    service app_insights(mdi:chart-line)[Application Insights] in monitoring_layer
+    
+    %% Compute Layer Services
+    service container_env(logos:kubernetes)[Container App Environment] in compute_layer
+    service container_app(mdi:server)[Container App API] in compute_layer
+    
+    %% Data Layer Services
+    service sql_server(logos:aws-rds)[SQL Server] in data_layer
+    service sql_database(logos:aws-rds)[SQL Database K12] in data_layer
+    service storage_account(logos:aws-s3)[Storage Account] in data_layer
+    service storage_container(logos:aws-s3)[Storage Container Provider] in data_layer
+    
+    %% Integration Layer Services
+    service signalr_service(mdi:api)[SignalR Service] in integration_layer
+    service servicebus_namespace(mdi:api)[Service Bus Namespace] in integration_layer
+    service api_management(mdi:api)[API Management] in integration_layer
+    
+    %% Identity and Security
+    service managed_identity(mdi:account)[Managed Identity] in azure_infrastructure
+    service aad_admin(mdi:shield)[Azure AD Admin] in azure_infrastructure
+    
+    %% Core Infrastructure Connections
+    resource_group:R --> L:log_analytics
+    resource_group:R --> L:container_env
+    resource_group:R --> L:sql_server
+    resource_group:R --> L:storage_account
+    
+    %% Monitoring Connections
+    log_analytics:R --> L:app_insights
+    log_analytics:R --> L:container_env
+    app_insights:R --> L:container_app
+    
+    %% Compute Connections
+    container_env:R --> L:container_app
+    
+    %% Data Layer Connections
+    sql_server:R --> L:sql_database
+    storage_account:R --> L:storage_container
+    
+    %% Container App to Data Layer
+    container_app:B --> T:sql_database
+    container_app:B --> T:storage_account
+    
+    %% Container App to Integration Layer
+    container_app:R --> L:signalr_service
+    container_app:R --> L:servicebus_namespace
+    
+    %% API Management Integration
+    api_management:R --> L:container_app
+    
+    %% Security and Identity
+    managed_identity:R --> L:sql_server
+    managed_identity:R --> L:container_app
+    aad_admin:R --> L:sql_server
