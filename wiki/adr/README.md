@@ -34,6 +34,11 @@ Write an ADR when you make a significant decision about:
 | [ADR-006](ADR-006-terraform-iac.md) | Terraform for IaC | Accepted | 2024-07-XX |
 | [ADR-007](ADR-007-angular-19-framework.md) | Angular 19 Framework | Accepted | 2024-08-XX |
 | [ADR-008](ADR-008-multi-schema-database.md) | Multi-Schema Database Design | Accepted | 2024-07-XX |
+| [ADR-009](ADR-009-analytics-query-engine-abstraction.md) | Analytics Query Engine Abstraction | Proposed | 2025-12-08 |
+| [ADR-010](ADR-010-embedded-analytics-components.md) | Embedded Analytics Component Strategy | Proposed | 2025-12-08 |
+| [ADR-011](ADR-011-azure-data-api-builder.md) | Azure Data API Builder for Analytics | Proposed | 2025-12-08 |
+| [ADR-012](ADR-012-roster-workflow-orchestration.md) | Azure Durable Functions for Roster Workflow | Proposed | 2025-12-11 |
+| [ADR-013](ADR-013-rds-async-integration-pattern.md) | RDS Asynchronous Integration Pattern | Accepted | 2025-12-12 |
 
 ## Template
 

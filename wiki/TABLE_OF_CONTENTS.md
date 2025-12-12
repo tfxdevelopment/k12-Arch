@@ -23,12 +23,100 @@
   - Non-Functional Requirements
   - Technology Stack Summary
 
+### Azure Infrastructure
+- [Azure Infrastructure Documentation](02-architecture/azure-infrastructure.md)
+  - Environment Summary (Dev/Test/Staging/Prod)
+  - Resource Inventory (185 resources)
+  - Frontend Applications (Static Web Apps)
+  - API Layer (APIM, App Services)
+  - Database Layer (SQL Servers, Databases)
+  - Storage Layer (Blob, ADLS Gen2)
+  - Security Layer (Key Vault, Managed Identities)
+  - Real-Time & Messaging (SignalR, Service Bus)
+  - Monitoring & Observability
+  - Production DR Architecture
+- [Azure RDS Integration Infrastructure](02-architecture/azure-rds-integration-infrastructure.md)
+  - K12-RDS Communication Flow
+  - Azure Service Bus Configuration
+  - MuleSoft ESB Integration
+  - NC Agency Connections (DMV, DOR, DPI)
+
+### C4 Architecture Diagrams
+- [Architecture Overview (Executive Summary)](02-architecture/c4-diagrams/00-architecture-overview.md)
+  - Executive Summary Diagram
+  - Technology Stack
+  - Environment Pipeline
+  - Four-App Architecture
+  - Security Hub & Spoke Model
+- [C4 Level 1: System Context](02-architecture/c4-diagrams/01-system-context.md)
+  - User Interactions
+  - External System Integrations
+  - System Boundaries
+- [C4 Level 2: Container Diagram](02-architecture/c4-diagrams/02-container-diagram.md)
+  - Web Application (Angular SPA)
+  - API Gateway (APIM)
+  - API Functions (.NET 8)
+  - Database (Azure SQL)
+  - Storage (Blob, ADLS Gen2)
+  - Real-time Service (SignalR)
+  - Data Flow Diagrams
+- [C4 Deployment Diagram](02-architecture/c4-diagrams/03-deployment-diagram.md)
+  - Per-Environment Resource Map
+  - Production Architecture (with DR)
+  - Network Topology
+  - Security Infrastructure
+- [C4 Roster Workflow Context](02-architecture/c4-diagrams/04-roster-workflow-context.md)
+  - System Context for Workflow
+  - Container Interactions
+  - Workflow State Diagram
+  - Deployment View
+- [C4 RDS Integration Context](02-architecture/c4-diagrams/05-rds-integration-context.md)
+  - System Context for RDS
+  - Container Interactions
+  - K12 Rule Engine Architecture
+  - Data Flow Diagrams
+
 ### Architecture Deep-Dives
 - Identity & Access Management
   - [Microsoft Entra ID Hub and Spoke Model](https://cfi-nc.atlassian.net/wiki/spaces/KR/pages/4053696597)
   - [Identity Provider (CIAM) Options Analysis](https://cfi-nc.atlassian.net/wiki/spaces/KR/pages/4032725075)
   - Custom Security Attributes
   - Administrative Units (Delegated Administration)
+
+### Proposed Architecture (Event-Driven)
+- [Operations: Messaging (Azure Service Bus)](09-proposed-architecture/OPS-messaging.md)
+- ADRs (Proposed)
+  - [Standardize on Azure Service Bus](09-proposed-architecture/07-adr-proposed/ADR-PROP-azure-service-bus-standard.md)
+  - [Event Schema & Versioning](09-proposed-architecture/07-adr-proposed/ADR-PROP-event-schema-versioning.md)
+
+### Business Workflows
+- [Workflows Overview](02-architecture/workflows/README.md)
+  - [WF-01: Roster - To Be Certified](02-architecture/workflows/WF-01-roster-to-be-certified.md)
+    - Workflow States & Transitions
+    - Event-Driven Architecture
+    - Azure Durable Functions Design
+    - Proposed Database Schema
+    - Related Workflows
+
+### Analytics Platform (k12-querybuilder)
+- [QueryBuilder Analytics Platform](02-architecture/QueryBuilder-Analytics-Platform.md)
+  - .NET Aspire Orchestration
+  - Cube.js Semantic Layer
+  - Trino Query Federation
+  - Metabase Business Intelligence
+  - Query API (.NET 10 Minimal API)
+  - Service Layer Pattern
+  - Rate Limiting & Caching
+  - Security & Validation
+- [QueryBuilder SDK Design](02-architecture/QueryBuilder-SDK-Design.md)
+  - Pluggable Query Engine Architecture
+  - Integration with DataMapper SemanticLayer
+  - Query Definition Storage (Analytics Schema)
+  - Snapshot & Caching System
+  - Query Sharing & Permissions
+  - API Endpoints & SDK Interfaces
+  - Cube.js & Trino Adapters
+  - Future DBT Integration
 
 ## Section 3: Technical Documentation
 
@@ -260,6 +348,7 @@
 - NC DMV (Residency Validation)
 - NC Department of Revenue (Income Validation)
 - NC DPI (Student Data - Planned)
+- NC RDS (Residency Determination Service via MuleSoft) - [INT-07](02-architecture/integrations/INT-07-rds-residency-determination-service.md)
 
 ### Technology Versions
 | Component | Version |
@@ -302,5 +391,5 @@
 
 ---
 
-*Last Updated: November 15, 2025*
+*Last Updated: December 11, 2025*
 *Maintained by: K12 Technical Team*

@@ -66,12 +66,24 @@ The K12 MyPortal system follows a modern, cloud-native architecture pattern buil
 │  • SendGrid          - Email notifications               │
 │  • PandaDoc          - Document generation & e-signature │
 │  • Microsoft Graph   - Azure AD integration              │
-│  • Melissa Data      - Address validation (API)         │
-│  • NC DMV            - Residency validation              │
-│  • NC Dept of Revenue- Income validation                │
-│  • NC DPI            - Student data (planned)            │
+│  • Melissa Data      - Address validation (API)          │
+│  • RDS (MuleSoft)    - Residency determination service   │
+│    └─ NC DMV         - Driver license verification       │
+│    └─ NC DOR         - Tax filing verification           │
+│    └─ NC DPI         - Student data (future)             │
 └──────────────────────────────────────────────────────────┘
 ```
+
+#### RDS Integration (INT-07)
+
+The Residency Determination Service (RDS) provides automated NC residency verification via Azure Service Bus queues and MuleSoft ESB:
+
+- **K12 → RDS**: Request messages with parent SSN, DOB, license info
+- **RDS → Agencies**: SFTP file exchange with DMV/DOR (daily batch)
+- **RDS → K12**: Response messages with raw agency data
+- **K12 Decision**: K12 is the **source of truth** for final residency determination
+
+See [INT-07: RDS Integration](integrations/INT-07-rds-residency-determination-service.md) and [ADR-013](../adr/ADR-013-rds-async-integration-pattern.md) for details.
 
 ## Architectural Patterns
 
@@ -225,7 +237,18 @@ graph TD
 
 ## Data Architecture
 
-### Database Schema
+### Database Strategy
+
+The K12 MyPortal platform uses a **dual-database architecture** with clear separation of concerns:
+
+| Database | Type | Purpose | Use Case |
+|----------|------|---------|----------|
+| **Azure SQL** | Primary | All transactional data | Enrollment, programs, users, awards |
+| **Azure PostgreSQL** | Analytics Only | Cube.js → Metabase sync | Pre-aggregated analytics data |
+
+> **Important:** Azure SQL (SQL Server) is the **primary database** for all application data. PostgreSQL is used **exclusively** for the QueryBuilder analytics pipeline to sync pre-aggregated data to Metabase. See [ADR-010 Option 6](adr/ADR-010-embedded-analytics-components.md#option-6-custom-angular--cubejs--postgresql-recommended-evolution) for details.
+
+### Azure SQL Schema (Primary Database)
 
 Azure SQL Server with multi-schema design:
 
@@ -236,11 +259,40 @@ Azure SQL Server with multi-schema design:
 | `Households` | Household data | Household, Members, Addresses |
 | `Awards` | Awards system | AwardAllocations, Disbursements |
 | `Comms` | Communications | Messages, Templates, Logs |
+| `Analytics` | Query definitions (NEW) | QueryDefinition, QuerySnapshot, QuerySchedule |
 
 **Important**:
 - Models generated via Entity Framework (`efg generate`)
 - Data access via Dapper (NOT Entity Framework)
 - Be cautious with `efg generate` - may not reflect all dev work
+
+### Azure PostgreSQL (Analytics Only)
+
+Azure PostgreSQL Flexible Server is used **only** for the QueryBuilder analytics pipeline:
+
+```
+┌──────────────────┐     ┌──────────────────┐     ┌──────────────────┐
+│   Azure SQL      │     │   Cube.js        │     │ Azure PostgreSQL │
+│   (Primary)      │────▶│   Semantic Layer │────▶│  (Analytics)     │
+│                  │     │   Sync           │     │                  │
+│ • Enrollment     │     │ • Pre-aggregations│    │ • TimescaleDB    │
+│ • Programs       │     │ • Materialized   │     │ • pg_trgm        │
+│ • Awards         │     │   views          │     │ • pgvector       │
+└──────────────────┘     └──────────────────┘     └──────────────────┘
+                                                           │
+                                                           ▼
+                                                  ┌──────────────────┐
+                                                  │   Metabase       │
+                                                  │   (Optional BI)  │
+                                                  └──────────────────┘
+```
+
+**PostgreSQL Extensions:**
+- `TimescaleDB` - Time-series optimization for enrollment trends
+- `pg_trgm` - Fuzzy search for query builder autocomplete
+- `pgvector` - AI/semantic search (future)
+
+See: [QueryBuilder SDK Design](integrations/QueryBuilder/SDK-Design.md) for implementation details.
 
 ### Document Storage (ADLS Gen2)
 
@@ -360,12 +412,25 @@ k12-infra/terraform/
 | **API Backend** | Azure Functions (.NET 8) | Serverless, cost-effective |
 | **Data Access** | Dapper | Performance over EF |
 | **Frontend** | Angular 19 + Nx | Modern SPA, monorepo benefits |
-| **Database** | Azure SQL | Enterprise features, RLS |
+| **Primary Database** | Azure SQL | Enterprise features, RLS |
+| **Analytics Database** | Azure PostgreSQL Flexible Server | Cube.js/Metabase sync only |
 | **Identity** | Entra ID + B2C | Native Azure integration |
 | **API Gateway** | Azure APIM | Centralized security, throttling |
 | **File Storage** | ADLS Gen2 | Hierarchical access control |
 | **IaC** | Terraform | Multi-cloud, declarative |
 | **CI/CD** | Azure DevOps | Integrated with Azure |
+| **Container Orchestration** | .NET Aspire | Local dev + deployment automation |
+| **Container Registry** | Azure Container Registry | Container image storage |
+| **Analytics Containers** | Azure Container Apps | Cube.js, Trino, Metabase |
+| **Semantic Layer** | Cube.js | Pre-aggregations, caching |
+| **Query Federation** | Trino | Multi-source SQL |
+
+## Business Workflows
+
+The K12 MyPortal system includes several orchestrated business workflows:
+
+- [Workflows Documentation](workflows/README.md) - Index of all workflow documentation
+- [WF-01: Roster - To Be Certified](workflows/WF-01-roster-to-be-certified.md) - Student roster certification workflow
 
 ## Related Documentation
 
