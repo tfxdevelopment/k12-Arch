@@ -3,11 +3,16 @@
 ## Metadata
 - **Status:** Draft
 - **Date:** 2024-11-24
-- **Related ADRs:** ADR-PROP-004 (Trino), ADR-PROP-005 (CubeJS)
-- **Related Docs:** API-03 (Analytics APIs)
+- **Related ADRs:** ADR-PROP-004 (Trino), ADR-PROP-005 (CubeJS), [ADR-009](../../adr/ADR-009-analytics-query-engine-abstraction.md), [ADR-010](../../adr/ADR-010-embedded-analytics-components.md), [ADR-011](../../adr/ADR-011-azure-data-api-builder.md)
+- **Related Docs:** API-03 (Analytics APIs), [QueryBuilder SDK Design](../../02-architecture/integrations/QueryBuilder/SDK-Design.md)
 
 ## Executive Summary
 Data federation strategy using **Trino** as the distributed SQL query engine to unify Azure SQL (transactional data), ADLS Gen2 (document metadata), and future data sources (Cosmos DB, external APIs) for K12 MyPortal analytics.
+
+> **Update (December 2025):** This document is complemented by newer ADRs:
+> - **ADR-009**: Introduces `IQueryEngine` abstraction allowing pluggable query engines (Cube.js, Trino, Data API Builder)
+> - **ADR-010**: Defines embedded analytics component strategy with PostgreSQL-enhanced architecture (Option 6)
+> - **ADR-011**: Documents Azure Data API Builder as a zero-code fallback engine
 
 ## Problem Statement
 

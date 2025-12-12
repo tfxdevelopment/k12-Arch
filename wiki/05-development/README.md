@@ -271,6 +271,209 @@ Separate pipelines for each app:
 - `swagger-to-apim-pipeline.yml` - OpenAPI to Azure API Management
 - `apim-policy-pipeline.yml` - API Management policy updates
 
+### QueryBuilder Analytics Pipelines (Aspire + Azure Container Apps)
+
+The QueryBuilder analytics platform uses **.NET Aspire** for orchestration and deploys to **Azure Container Apps** via Azure Pipelines.
+
+#### Aspire Manifest Generation
+
+Aspire generates a deployment manifest that describes all services, containers, and their relationships:
+
+```bash
+# Navigate to AppHost project
+cd k12-querybuilder/K12.QueryBuilder.AppHost
+
+# Generate manifest (saves as artifact in CI/CD)
+dotnet run --publisher manifest --output-path ./aspire-manifest.json
+
+# OR use the new aspire CLI (Aspire 9.2+)
+aspire publish --publisher manifest -o ./output
+```
+
+**Manifest contains:**
+- Container definitions (Cube.js, Trino, Metabase, Redis)
+- Service bindings and ports
+- Environment variables with placeholder references
+- Connection strings for inter-service communication
+
+#### Azure Pipelines Deployment Workflow
+
+```yaml
+# azure-pipelines-querybuilder.yml
+trigger:
+  branches:
+    include:
+      - development
+      - main
+  paths:
+    include:
+      - 'k12-querybuilder/**'
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  azureSubscription: 'K12-Azure-Service-Connection'
+  containerRegistry: 'k12acr.azurecr.io'
+  resourceGroup: 'rg-k12-querybuilder-$(environment)'
+
+stages:
+  - stage: Build
+    displayName: 'Build & Generate Manifest'
+    jobs:
+      - job: BuildAndPublish
+        steps:
+          # Install .NET 10 SDK
+          - task: UseDotNet@2
+            inputs:
+              version: '10.x'
+              includePreviewVersions: true
+
+          # Install Aspire workload
+          - script: dotnet workload install aspire
+            displayName: 'Install Aspire Workload'
+
+          # Restore dependencies
+          - script: dotnet restore
+            workingDirectory: 'k12-querybuilder'
+            displayName: 'Restore Dependencies'
+
+          # Build solution
+          - script: dotnet build --configuration Release --no-restore
+            workingDirectory: 'k12-querybuilder'
+            displayName: 'Build Solution'
+
+          # Generate Aspire manifest
+          - script: |
+              dotnet run --project K12.QueryBuilder.AppHost \
+                --publisher manifest \
+                --output-path $(Build.ArtifactStagingDirectory)/aspire-manifest.json
+            workingDirectory: 'k12-querybuilder'
+            displayName: 'Generate Aspire Manifest'
+
+          # Build container images
+          - script: |
+              dotnet publish K12.QueryBuilder.API \
+                --os linux --arch x64 \
+                -p:ContainerRegistry=$(containerRegistry) \
+                -p:ContainerImageTag=$(Build.BuildId)
+            workingDirectory: 'k12-querybuilder'
+            displayName: 'Build Container Images'
+
+          # Login to Azure Container Registry
+          - task: Docker@2
+            inputs:
+              containerRegistry: $(containerRegistry)
+              command: 'login'
+            displayName: 'Login to ACR'
+
+          # Push container images
+          - script: |
+              docker push $(containerRegistry)/k12-query-api:$(Build.BuildId)
+              docker push $(containerRegistry)/k12-query-api:latest
+            displayName: 'Push Images to ACR'
+
+          # Publish manifest as artifact
+          - publish: $(Build.ArtifactStagingDirectory)/aspire-manifest.json
+            artifact: 'aspire-manifest'
+            displayName: 'Publish Manifest Artifact'
+
+  - stage: DeployDev
+    displayName: 'Deploy to Development'
+    dependsOn: Build
+    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/development'))
+    jobs:
+      - deployment: DeployToContainerApps
+        environment: 'k12-querybuilder-dev'
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                # Download manifest artifact
+                - download: current
+                  artifact: 'aspire-manifest'
+
+                # Deploy using Azure CLI
+                - task: AzureCLI@2
+                  inputs:
+                    azureSubscription: $(azureSubscription)
+                    scriptType: 'bash'
+                    scriptLocation: 'inlineScript'
+                    inlineScript: |
+                      # Deploy Container Apps using manifest
+                      az containerapp update \
+                        --name k12-query-api \
+                        --resource-group $(resourceGroup) \
+                        --image $(containerRegistry)/k12-query-api:$(Build.BuildId)
+                  displayName: 'Deploy to Container Apps'
+```
+
+#### Azure Developer CLI (azd) Integration
+
+For simplified deployment, configure Azure Pipelines with `azd`:
+
+```bash
+# One-time setup: Configure Azure Pipeline
+cd k12-querybuilder/K12.QueryBuilder.AppHost
+azd pipeline config --provider azdo
+
+# This creates:
+# - Service connection to Azure
+# - Pipeline YAML file
+# - Environment variables/secrets
+```
+
+**Pipeline generated by azd:**
+```yaml
+# .azdo/pipelines/azure-dev.yml (auto-generated)
+stages:
+  - stage: Provision
+    jobs:
+      - job: provision
+        steps:
+          - task: AzureCLI@2
+            inputs:
+              azureSubscription: $(AZURE_SERVICE_CONNECTION)
+              scriptType: bash
+              scriptLocation: inlineScript
+              inlineScript: |
+                azd provision --no-prompt
+
+  - stage: Deploy
+    jobs:
+      - job: deploy
+        steps:
+          - task: AzureCLI@2
+            inputs:
+              azureSubscription: $(AZURE_SERVICE_CONNECTION)
+              scriptType: bash
+              scriptLocation: inlineScript
+              inlineScript: |
+                azd deploy --no-prompt
+```
+
+#### Container Registry Configuration
+
+Images are pushed to **Azure Container Registry (ACR)**:
+
+| Image | Description | Registry Path |
+|-------|-------------|---------------|
+| `k12-query-api` | Query API (.NET 10) | `k12acr.azurecr.io/k12-query-api` |
+| `k12-cubejs` | Cube.js semantic layer | `k12acr.azurecr.io/k12-cubejs` |
+| `k12-trino` | Trino query federation | `k12acr.azurecr.io/k12-trino` |
+| `k12-metabase` | Metabase BI (optional) | `k12acr.azurecr.io/k12-metabase` |
+
+**ACR Authentication:**
+```bash
+# CI/CD uses managed identity or service principal
+az acr login --name k12acr
+
+# Local development uses Docker credential helper
+docker login k12acr.azurecr.io
+```
+
+See: [ASPIRE-01: AppHost Setup](../09-proposed-architecture/02-aspire/ASPIRE-01-apphost-setup.md) for detailed Aspire configuration.
+
 ## Code Standards
 
 ### Backend (.NET)

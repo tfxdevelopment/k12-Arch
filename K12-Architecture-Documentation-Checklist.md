@@ -857,6 +857,15 @@ Target: Complete Priority 4 items
 
 ---
 
-**Last Updated**: November 23, 2025  
-**Next Review**: After Week 1 completion  
+## Documentation Health Report
+
+A comprehensive automated documentation health report is available:
+- **Report**: [DOCUMENTATION-HEALTH-REPORT.md](wiki/DOCUMENTATION-HEALTH-REPORT.md)
+- **Health Score**: 72/100 (Good with areas for improvement)
+- **Broken Links Fixed**: Created missing README files for security and integrations
+
+---
+
+**Last Updated**: December 11, 2025
+**Next Review**: December 18, 2025
 **Owner**: Architecture Team

@@ -1,9 +1,15 @@
 # ANALYTICS-02: Semantic Layer Design with CubeJS
 
 **Status:** Proposed
-**Last Updated:** 2025-11-24
+**Last Updated:** 2025-12-08
 **Target Audience:** Data Engineers, Analytics Developers, BI Developers, Frontend Engineers
-**Related Documents:** [ADR-PROP-005](../07-adr-proposed/ADR-PROP-005-cubejs.md), [ADR-PROP-004](../07-adr-proposed/ADR-PROP-004-trino.md), [API-03](../03-hybrid-api/API-03-analytics-apis.md)
+**Related Documents:**
+- [ADR-PROP-005](../07-adr-proposed/ADR-PROP-005-cubejs.md) (CubeJS)
+- [ADR-PROP-004](../07-adr-proposed/ADR-PROP-004-trino.md) (Trino)
+- [ADR-009](../../adr/ADR-009-analytics-query-engine-abstraction.md) (Query Engine Abstraction)
+- [ADR-010](../../adr/ADR-010-embedded-analytics-components.md) (Embedded Analytics Components)
+- [ADR-011](../../adr/ADR-011-azure-data-api-builder.md) (Azure Data API Builder)
+- [QueryBuilder SDK Design](../../02-architecture/integrations/QueryBuilder/SDK-Design.md)
 
 ---
 
@@ -23,6 +29,12 @@
 ---
 
 ## Executive Summary
+
+> **Update (December 2025):** This document is now complemented by newer architectural decisions:
+> - **ADR-009**: Introduces `IQueryEngine` abstraction with CubeJS as the primary engine
+> - **ADR-010 Option 6**: Recommends PostgreSQL-enhanced architecture with Cube.js → PostgreSQL sync
+> - Custom Angular components that mirror Metabase SDK patterns (no React dependency)
+> - See [QueryBuilder SDK Design](../../02-architecture/integrations/QueryBuilder/SDK-Design.md) for implementation
 
 This document defines the **CubeJS semantic layer architecture** for K12 MyPortal, providing a unified metrics layer that delivers:
 
@@ -2357,7 +2369,11 @@ This semantic layer design provides:
 - [ADR-PROP-004: Trino Data Federation](../07-adr-proposed/ADR-PROP-004-trino.md)
 - [ADR-PROP-005: CubeJS Semantic Layer](../07-adr-proposed/ADR-PROP-005-cubejs.md)
 - [API-03: Analytics APIs](../03-hybrid-api/API-03-analytics-apis.md)
+- [ADR-009: Analytics Query Engine Abstraction](../../adr/ADR-009-analytics-query-engine-abstraction.md)
+- [ADR-010: Embedded Analytics Components](../../adr/ADR-010-embedded-analytics-components.md)
+- [ADR-011: Azure Data API Builder](../../adr/ADR-011-azure-data-api-builder.md)
+- [QueryBuilder SDK Design](../../02-architecture/integrations/QueryBuilder/SDK-Design.md)
 
-**Last Updated:** 2025-11-24
+**Last Updated:** 2025-12-08
 **Document Owner:** CFI Architecture Team
-**Status:** Week 3 Deliverable (Analytics Deep-Dive)
+**Status:** Week 3 Deliverable (Analytics Deep-Dive) - Updated with December 2025 ADRs
