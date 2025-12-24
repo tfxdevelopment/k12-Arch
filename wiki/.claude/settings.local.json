@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(xlsx)",
+      "Skill(docx)"
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "MCP_DOCKER"
+  ],
+  "enableAllProjectMcpServers": true
+}

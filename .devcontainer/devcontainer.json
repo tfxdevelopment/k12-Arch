@@ -1,0 +1,111 @@
+{
+  "name": "K12 Full-Stack Development",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "devcontainer",
+  "workspaceFolder": "/workspaces/K12-Arch",
+
+  "features": {
+    "ghcr.io/devcontainers/features/dotnet:2": {
+      "version": "9.0",
+      "installUsingApt": false
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    },
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {
+      "moby": true,
+      "dockerDashComposeVersion": "v2"
+    },
+    "ghcr.io/devcontainers/features/azure-cli:1": {},
+    "ghcr.io/devcontainers-contrib/features/terraform-asdf:2": {}
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-dotnettools.csdevkit",
+        "ms-dotnettools.csharp",
+        "ms-dotnettools.vscode-dotnet-runtime",
+        "angular.ng-template",
+        "nrwl.angular-console",
+        "ms-azuretools.vscode-docker",
+        "ms-azuretools.vscode-dapr",
+        "hashicorp.terraform",
+        "ms-azure-devops.azure-pipelines",
+        "humao.rest-client",
+        "ms-mssql.mssql",
+        "redhat.vscode-yaml",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "bradlc.vscode-tailwindcss",
+        "github.copilot",
+        "ms-vscode.azure-account"
+      ],
+      "settings": {
+        "dotnet.defaultSolution": "K12.Aspire.sln",
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": "explicit"
+        },
+        "typescript.preferences.importModuleSpecifier": "relative",
+        "files.associations": {
+          "*.yaml": "yaml",
+          "*.yml": "yaml"
+        }
+      }
+    }
+  },
+
+  "postCreateCommand": "bash .devcontainer/post-create.sh",
+  "postStartCommand": "echo 'K12 DevContainer ready! Run: dotnet run --project src/K12.AppHost'",
+
+  "remoteUser": "vscode",
+
+  "mounts": [
+    "source=${localWorkspaceFolder}/../k12-api-enrollment,target=/workspaces/k12-api-enrollment,type=bind,consistency=cached",
+    "source=${localWorkspaceFolder}/../k12-web-enrollment,target=/workspaces/k12-web-enrollment,type=bind,consistency=cached",
+    "source=${localWorkspaceFolder}/../k12-infra,target=/workspaces/k12-infra,type=bind,consistency=cached",
+    "source=${localWorkspaceFolder}/../k12-test-api-postman,target=/workspaces/k12-test-api-postman,type=bind,consistency=cached"
+  ],
+
+  "forwardPorts": [
+    15888,
+    6379,
+    8081,
+    1433,
+    8082,
+    3000,
+    8025,
+    7071,
+    4200,
+    4300,
+    4500,
+    4600,
+    3500,
+    50001
+  ],
+
+  "portsAttributes": {
+    "15888": { "label": "Aspire Dashboard", "onAutoForward": "openBrowser" },
+    "6379": { "label": "Redis" },
+    "8081": { "label": "Redis Commander", "onAutoForward": "openBrowser" },
+    "1433": { "label": "SQL Server" },
+    "8082": { "label": "DbGate (SQL UI)", "onAutoForward": "openBrowser" },
+    "3000": { "label": "Metabase", "onAutoForward": "openBrowser" },
+    "8025": { "label": "MailHog", "onAutoForward": "openBrowser" },
+    "7071": { "label": "K12 Functions API" },
+    "4200": { "label": "Admin Portal", "onAutoForward": "openBrowser" },
+    "4300": { "label": "Household Portal" },
+    "4500": { "label": "Providers Portal" },
+    "4600": { "label": "Schools Portal" },
+    "3500": { "label": "Dapr HTTP" },
+    "50001": { "label": "Dapr gRPC" }
+  },
+
+  "hostRequirements": {
+    "cpus": 8,
+    "memory": "16gb",
+    "storage": "64gb"
+  }
+}

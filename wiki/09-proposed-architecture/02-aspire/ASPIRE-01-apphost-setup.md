@@ -285,30 +285,88 @@ var cubejs = builder.AddContainer("k12-cubejs", "cubejs/cube", "latest")
     .WaitFor(redis);
 
 // ─────────────────────────────────────────────────────────────────
-// 6. Dapr Integration (Service Mesh)
+// 6. Dapr Integration (ALL 8 Building Blocks)
 // ─────────────────────────────────────────────────────────────────
+//
+// K12 uses ALL 8 Dapr building blocks for cross-cutting concerns.
+// This provides identical behavior in local dev and production.
+// See: ADR-PROP-006: Dapr for Cross-Cutting Concerns
+//
 
-builder.AddDapr(dapr =>
+builder.AddDapr(options =>
 {
-    // Add Dapr state store (Redis)
-    dapr.AddStateStore("statestore", "state.redis", options =>
-    {
-        options.Metadata.Add("redisHost", redis.Resource.ConnectionStringExpression);
-        options.Metadata.Add("redisPassword", "");  // No password for local Redis
-    });
-
-    // Add Dapr pub/sub (Redis Streams)
-    dapr.AddPubSub("pubsub", "pubsub.redis", options =>
-    {
-        options.Metadata.Add("redisHost", redis.Resource.ConnectionStringExpression);
-    });
-
-    // Enable Dapr for Functions container
-    functions.WithDaprSidecar("k12-functions");
-
-    // Enable Dapr for DAB container
-    dab.WithDaprSidecar("k12-dab");
+    options.DaprGrpcPort = 50001;
+    options.DaprHttpPort = 3500;
+    options.EnableTelemetry = true;
 });
+
+// ────────────────────────────────────────────────────────
+// Building Block 1: Service Invocation (Automatic - no config needed)
+// ────────────────────────────────────────────────────────
+
+// ────────────────────────────────────────────────────────
+// Building Block 2: State Management (Redis)
+// ────────────────────────────────────────────────────────
+builder.AddDaprStateStore("statestore", "state.redis", options =>
+{
+    options.Metadata.Add("redisHost", redis.Resource.ConnectionStringExpression);
+    options.Metadata.Add("redisPassword", "");  // No password for local Redis
+    options.Metadata.Add("keyPrefix", "k12");
+    options.Metadata.Add("actorStateStore", "true");
+});
+
+// ────────────────────────────────────────────────────────
+// Building Block 3: Pub/Sub (Redis Streams - local)
+// ────────────────────────────────────────────────────────
+builder.AddDaprPubSub("pubsub", "pubsub.redis", options =>
+{
+    options.Metadata.Add("redisHost", redis.Resource.ConnectionStringExpression);
+    options.Metadata.Add("consumerID", "k12-local");
+});
+
+// ────────────────────────────────────────────────────────
+// Building Block 4: Bindings (Local File System - documents)
+// ────────────────────────────────────────────────────────
+builder.AddDaprBinding("documents", "bindings.localstorage", options =>
+{
+    options.Metadata.Add("rootPath", "./local-documents");
+});
+
+// ────────────────────────────────────────────────────────
+// Building Block 5: Secrets (Local File)
+// ────────────────────────────────────────────────────────
+builder.AddDaprSecretStore("secrets", "secretstores.local.file", options =>
+{
+    options.Metadata.Add("secretsFile", "./secrets/local-secrets.json");
+    options.Metadata.Add("nestedSeparator", ":");
+});
+
+// ────────────────────────────────────────────────────────
+// Building Block 6: Configuration (Local File)
+// ────────────────────────────────────────────────────────
+builder.AddDaprConfiguration("config", "configuration.local.file", options =>
+{
+    options.Metadata.Add("configFile", "./config/local-config.json");
+});
+
+// ────────────────────────────────────────────────────────
+// Building Block 7: Workflows (Dapr Workflow Runtime)
+// ────────────────────────────────────────────────────────
+// Workflows are enabled automatically with Dapr sidecar
+// No additional configuration needed for local development
+
+// ────────────────────────────────────────────────────────
+// Building Block 8: Jobs (Cron Binding)
+// ────────────────────────────────────────────────────────
+// For local development, jobs are triggered manually or via tests
+// Production uses Dapr cron binding components
+
+// ────────────────────────────────────────────────────────
+// Enable Dapr Sidecars for Services
+// ────────────────────────────────────────────────────────
+functions.WithDaprSidecar("k12-functions");
+dab.WithDaprSidecar("k12-dab");
+cubejs.WithDaprSidecar("k12-cubejs");
 
 // ─────────────────────────────────────────────────────────────────
 // 7. Build and Run
