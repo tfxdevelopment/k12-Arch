@@ -1,0 +1,75 @@
+{
+    "rds_id": 252,
+    "k12Id": "465935137",
+    "academicYear": "2025-2026",
+    "batchId": "20250924",
+    "requested": 1758807381893,
+    "completed": 1760644795080, //Epoch in ms
+    "completionStatus": "COMPLETE",
+    "errorCodes": "SSNERR,LNERR,LICERR,DOBERR", //All possible values SSNERR,LNERR,LICERR,DOBERR,STERR
+    "tracking": [
+        {
+            "source": "DMV",
+            "complete": true,
+            "hasAgencyErrors": null,
+            "errorCodes": "SSNERR,LICERR,DOBERR", //All possible values SSNERR,LICERR,DOBERR,STERR
+            "sources": [
+                {
+                    "requestedDate": 1758754325015, //Epoch in ms
+                    "responseDate": 1758901098385, //Epoch in ms
+                    "deceasedDate": null, //Date YYYY-MM-DD
+                    "errorCode": "DOT06",
+                    "details": [
+                        {
+                            "date": "2025-10-08",
+                            "driverLicence": "N",
+                            "vehicleRegistered": "N"
+                        },
+                        {
+                            "date": "2024-10-08",
+                            "driverLicence": "N",
+                            "vehicleRegistered": "Y"
+                        },
+                        {
+                            "date": "2023-10-08",
+                            "driverLicence": "Y",
+                            "vehicleRegistered": "Y"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "source": "DOR",
+            "complete": true,
+            "hasAgencyErrors": null,
+            "errorCodes": "SSNERR,LNERR", //All possible values SSNERR,LNERR
+            "sources": [
+                {
+                    "requestedDate": 1758754325015, //Epoch in ms
+                    "responseDate": 1758901407882, //Epoch in ms
+                    "year": "2024",
+                    "ncResident": "Y",
+                    "filingStatus": "5",
+                    "residencyIndicator": "N"
+                },
+                {
+                    "requestedDate": 1758754325015, //Epoch in ms
+                    "responseDate": 1758901407882, //Epoch in ms
+                    "year": "2023",
+                    "ncResident": "N",
+                    "filingStatus": "1",
+                    "residencyIndicator": "N"
+                },
+                {
+                    "requestedDate": 1758754325015, //Epoch in ms
+                    "responseDate": 1758901407882, //Epoch in ms
+                    "year": "2022",
+                    "ncResident": "X",
+                    "filingStatus": "X",
+                    "residencyIndicator": "X"
+                }
+            ]
+        }
+    ]
+}

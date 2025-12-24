@@ -425,6 +425,11 @@ k12-infra/terraform/
 | **Semantic Layer** | Cube.js | Pre-aggregations, caching |
 | **Query Federation** | Trino | Multi-source SQL |
 
+> **Proposed Architecture Update:** The future-state architecture migrates ALL services to **Azure Container Apps** (not App Service) with **Dapr** providing abstractions for all cross-cutting concerns. See [Proposed Architecture](../09-proposed-architecture/README.md) for details including:
+> - Azure Container Apps as the hosting platform
+> - Dapr for service invocation, state, pub/sub, secrets, configuration, workflows, and jobs
+> - .NET Aspire for local development with identical behavior to production
+
 ## Business Workflows
 
 The K12 MyPortal system includes several orchestrated business workflows:

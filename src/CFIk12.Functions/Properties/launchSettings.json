@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "CFIk12.Functions": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7059",
+      "launchBrowser": false
+    }
+  }
+}

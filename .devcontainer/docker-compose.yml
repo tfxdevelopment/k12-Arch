@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  devcontainer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      # Main workspace
+      - ..:/workspaces/K12-Arch:cached
+      # Additional K12 repositories (mounted via devcontainer.json mounts)
+      # These are also defined in devcontainer.json but included here for Docker Compose awareness
+      - ../..:/workspaces:cached
+
+    # Docker-in-Docker socket (created by feature)
+    # The docker-in-docker feature handles this automatically
+
+    # Environment variables for development
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - DOTNET_CLI_TELEMETRY_OPTOUT=1
+      - DOTNET_NOLOGO=1
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - NUGET_XMLDOC_MODE=skip
+      # Dapr configuration
+      - DAPR_HTTP_PORT=3500
+      - DAPR_GRPC_PORT=50001
+      # Angular configuration
+      - NG_CLI_ANALYTICS=false
+      - NODE_OPTIONS=--max-old-space-size=8192
+
+    # Keep container running
+    command: sleep infinity
+
+    # Network mode for Docker-in-Docker
+    network_mode: host
+
+    # Security options for Docker-in-Docker
+    privileged: true
+
+    # Resource limits (optional, adjust based on host machine)
+    # Uncomment if needed:
+    # deploy:
+    #   resources:
+    #     limits:
+    #       cpus: '8'
+    #       memory: 16G
+    #     reservations:
+    #       cpus: '4'
+    #       memory: 8G

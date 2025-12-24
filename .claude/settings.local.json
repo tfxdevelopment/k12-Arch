@@ -1,0 +1,39 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cat:*)",
+      "WebSearch",
+      "WebFetch(domain:www.metabase.com)",
+      "WebFetch(domain:cube.dev)",
+      "WebFetch(domain:github.com)",
+      "Bash(dir:*)",
+      "Bash(git -C \"d:\\Projects\\cfi\\K12\\K12-Arch\" log --oneline -20)",
+      "Bash(wc:*)",
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "Bash(ls:*)",
+      "Bash(xargs:*)",
+      "Bash(claude mcp add:*)",
+      "Bash(claude mcp list:*)",
+      "Bash(git -C \"D:\\Projects\\cfi\\K12\\K12-Arch\" log --oneline -20)",
+      "mcp__MCP_DOCKER__create_entities",
+      "mcp__MCP_DOCKER__create_relations",
+      "mcp__MCP_DOCKER__read_graph",
+      "mcp__MCP_DOCKER__delete_entities",
+      "mcp__MCP_DOCKER__delete_relations",
+      "mcp__MCP_DOCKER__resolve-library-id",
+      "mcp__MCP_DOCKER__documentation",
+      "mcp__MCP_DOCKER__get-library-docs"
+    ],
+    "deny": [],
+    "ask": []
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "MCP_DOCKER"
+  ],
+  "enabledPlugins": {
+    "documentation-generator@claude-code-templates": true,
+    "documentation-generation@claude-code-workflows": true
+  }
+}

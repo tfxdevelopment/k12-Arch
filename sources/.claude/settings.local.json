@@ -1,0 +1,5 @@
+{
+  "disabledMcpjsonServers": [
+    "MCP_DOCKER"
+  ]
+}
