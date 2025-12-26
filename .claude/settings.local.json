@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build:*)",
+      "Bash(cat:*)",
+      "Bash(npm install:*)",
+      "Bash(npx nx sync)",
+      "Bash(npx nx sync:*)",
+      "Bash(npm run build:cli:*)",
+      "Bash(npm run start:cli:*)",
+      "Bash(node dist/packages/cli/main.cjs:*)",
+      "Bash(node:*)",
+      "Bash(npm run cli:*)",
+      "Bash(find:*)",
+      "Bash(dotnet new:*)",
+      "Bash(dotnet sln add:*)",
+      "Bash(dotnet sln:*)",
+      "Bash(dotnet add:*)",
+      "Bash(dotnet build:*)",
+      "Bash(claude mcp add:*)",
+      "Bash(claude mcp remove:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -1,0 +1,17 @@
+environment              = "dev"
+resource_group_name     = "k12-dev-rg"
+location                = "eastus"
+container_registry_url  = "k12acr.azurecr.io"
+image_tag               = "dev-latest"
+docs_api_min_replicas   = 1
+docs_api_max_replicas   = 5
+docs_site_min_replicas  = 1
+docs_site_max_replicas  = 3
+
+common_tags = {
+  Environment = "k12-dev"
+  ManagedBy   = "Terraform"
+  Project     = "K12-Docs"
+  CostCenter  = "Engineering"
+  Stack       = "Development"
+}
