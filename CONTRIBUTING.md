@@ -25,11 +25,13 @@ By participating in this project, you agree to maintain a respectful and inclusi
 
 ### Pull Requests
 
-1. **Fork the repository** and create your branch from `main`
+We follow a GitFlow workflow with feature branches:
+
+1. **Create a feature branch** from `development` (e.g., `feature/your-feature-name`)
 2. **Make your changes** following our coding standards
 3. **Test your changes** thoroughly
 4. **Update documentation** as needed
-5. **Submit a pull request** with a clear description
+5. **Submit a pull request** targeting the `development` branch with a clear description
 
 ## Development Setup
 
