@@ -1,0 +1,20 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: appconfiguration
+spec:
+  type: configuration.azure.appconfig
+  version: v1
+  metadata:
+  - name: connectionString
+    secretKeyRef:
+      name: appconfig-credentials
+      key: connection-string
+  - name: maxRetries
+    value: "3"
+  - name: retryDelay
+    value: "4s"
+  - name: maxRetryDelay
+    value: "120s"
+  - name: subscribePollInterval
+    value: "24h"

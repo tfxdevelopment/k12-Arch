@@ -176,6 +176,52 @@ The manifest will provision:
 
 ## Configuration
 
+### AppHost Configuration (`appsettings.json`)
+
+```json
+{
+  "Aspire": {
+    "Dashboard": {
+      "EnableMetrics": true,
+      "EnableTracing": true,
+      "EnableLogs": true
+    }
+  },
+  "Dapr": {
+    "GrpcPort": 50001,
+    "HttpPort": 3500,
+    "EnableTelemetry": true,
+    "LogLevel": "info"
+  },
+  "Services": {
+    "DocsApi": { "Port": 5000 },
+    "DocsSite": { "Port": 4200 }
+  }
+}
+```
+
+### Docs API Configuration
+
+The Docs API uses comprehensive configuration in `appsettings.json`:
+
+```json
+{
+  "Dapr": {
+    "AppId": "docs-api",
+    "AppPort": 5000
+  },
+  "Documentation": {
+    "WikiPath": "../../wiki",
+    "EnableMarkdownRendering": true,
+    "CacheExpirationMinutes": 30
+  },
+  "OpenApi": {
+    "Title": "K12 Architecture Documentation API",
+    "Version": "v1"
+  }
+}
+```
+
 ### Environment Variables
 
 Configure services via `appsettings.json` or environment variables:
@@ -189,10 +235,22 @@ Configure services via `appsettings.json` or environment variables:
 
 ### Dapr Components
 
-Dapr components are configured in the AppHost:
-- State stores (Redis, Azure Cosmos DB)
-- Pub/Sub (Azure Service Bus, RabbitMQ)
-- Secrets (Azure Key Vault)
+Dapr components are configured in `src/K12.AppHost/components/`:
+
+#### Local Development Components
+- **statestore.yaml** - Redis state store for local development
+- **pubsub.yaml** - Redis pub/sub for local messaging
+- **workflow.yaml** - Dapr workflow engine for orchestration
+
+#### Production-Ready Components
+- **cosmosdb-statestore.yaml** - Azure Cosmos DB state store
+- **servicebus.yaml** - Azure Service Bus for enterprise messaging
+- **secrets.yaml** - Azure Key Vault for secrets management
+- **blobstorage.yaml** - Azure Blob Storage binding
+- **appconfiguration.yaml** - Azure App Configuration for dynamic config
+- **dapr-config.yaml** - Global Dapr runtime configuration
+
+See [components/README.md](./src/K12.AppHost/components/README.md) for detailed configuration and usage examples.
 
 ### APIM Configuration
 
