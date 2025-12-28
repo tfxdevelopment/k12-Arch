@@ -37,7 +37,6 @@ We follow a GitFlow workflow with feature branches:
 
 ### Prerequisites
 
-- Node.js 14+ (for Node.js tools)
 - .NET 8.0+ (for .NET tools)
 - Git
 
@@ -47,10 +46,6 @@ We follow a GitFlow workflow with feature branches:
 # Clone your fork
 git clone https://github.com/YOUR_USERNAME/k12-Arch.git
 cd k12-Arch
-
-# For Node.js tools
-cd tools/node
-npm install
 
 # For .NET tools
 cd tools/dotnet
@@ -67,14 +62,6 @@ dotnet build
 - Add comments for complex logic
 - Keep functions/methods small and focused
 - Write meaningful commit messages
-
-### JavaScript/Node.js
-
-- Use ES6+ features
-- Follow JSDoc for documentation
-- Use meaningful variable names
-- Handle errors appropriately
-- Write unit tests for new features
 
 ### C#/.NET
 
@@ -134,7 +121,7 @@ When adding or updating wiki content:
    [Links to related content]
    ```
 
-3. **Include code examples** in both JavaScript and C# when applicable
+3. **Include code examples** in C# when applicable
 
 4. **Add cross-references** to related patterns and principles
 
@@ -148,13 +135,7 @@ When adding or updating wiki content:
 
 ### Adding New Pattern Implementations
 
-1. **Node.js**:
-   - Add implementation in `tools/node/src/patterns/`
-   - Export from `src/index.js`
-   - Add tests
-   - Update README
-
-2. **.NET**:
+1. **.NET**:
    - Add implementation in `tools/dotnet/K12Arch.Tools/Patterns/`
    - Add XML documentation
    - Add unit tests
@@ -169,13 +150,6 @@ When adding or updating wiki content:
 5. Document usage
 
 ## Testing
-
-### Node.js
-```bash
-cd tools/node
-npm test
-npm run lint
-```
 
 ### .NET
 ```bash

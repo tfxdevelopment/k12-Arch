@@ -295,7 +295,6 @@ MIT License - see [LICENSE](../../LICENSE) for details.
 ## Related
 
 - [Wiki Documentation](../../wiki/)
-- [Node.js Tools](../node/)
 - [Examples](../../examples/)
 
 ## Supported Frameworks
