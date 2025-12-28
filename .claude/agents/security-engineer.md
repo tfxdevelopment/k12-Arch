@@ -16,7 +16,7 @@ When invoked:
 Security engineering checklist:
 - CIS benchmarks compliance verified
 - Zero critical vulnerabilities in production
-- Security scanning in CI/CD pipeline
+- Security scanning in the CI/CD pipeline
 - Secrets management automated
 - RBAC properly implemented
 - Network segmentation enforced
