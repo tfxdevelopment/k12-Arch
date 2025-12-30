@@ -310,3 +310,73 @@ resource "azurerm_role_assignment" "logic_app_to_apim_reader" {
   role_definition_name = "API Management Service Reader Role"
   principal_id         = azurerm_logic_app_standard.api_enrollment_logic_app.identity[0].principal_id
 }
+
+# 1. Log Analytics for container app env
+resource "azurerm_log_analytics_workspace" "aca_logs" {
+  name                = "${var.environment_name}-aca-logs"
+  location            = var.location
+  resource_group_name = var.resource_group_name
+  sku                 = "PerGB2018"
+}
+
+# 2. Azure Container App Environment 
+resource "azurerm_container_app_environment" "api_env" {
+  name                       = "${var.environment_name}-k12-cae"
+  location                   = var.location
+  resource_group_name        = var.resource_group_name
+  log_analytics_workspace_id = azurerm_log_analytics_workspace.aca_logs.id
+}
+
+# 3. Azure Container Registry
+resource "azurerm_container_registry" "acr" {
+name                  = "${replace(var.environment_name, "-", "")}k12acr"
+  resource_group_name = var.resource_group_name
+  location            = var.location
+  sku                 = "Basic"
+  admin_enabled       = false # We are using Managed Identity instead
+}
+
+//Import
+//terraform import 'module.enrollment-api.azurerm_container_app.api_app' "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/development/providers/Microsoft.App/containerApps/development-app"
+
+# 4. The Container App
+resource "azurerm_container_app" "api_app" {
+  name                         = "${var.environment_name}-app"
+  container_app_environment_id = azurerm_container_app_environment.api_env.id
+  resource_group_name          = var.resource_group_name
+  revision_mode                = "Single"
+
+  identity {
+    type = "SystemAssigned"
+  }
+
+  # registry {
+  #   server   = azurerm_container_registry.acr.login_server
+  #   identity = "system" # Tells ACA to use the System Identity to pull images
+  # }
+
+  ingress {
+    external_enabled = true
+    target_port      = 80      # The quickstart image listens on port 80
+    traffic_weight {
+      percentage      = 100
+      latest_revision = true
+    }
+  }
+
+  template {
+    container {
+      name   = "dummynet"
+      image  = "mcr.microsoft.com/k8se/quickstart:latest"
+      cpu    = 0.5
+      memory = "1Gi"
+    }
+  }
+}
+
+# 5. Permission: Allow the App to pull from the Registry
+resource "azurerm_role_assignment" "acr_pull" {
+  scope                = azurerm_container_registry.acr.id
+  role_definition_name = "AcrPull"
+  principal_id         = azurerm_container_app.api_app.identity[0].principal_id
+}
