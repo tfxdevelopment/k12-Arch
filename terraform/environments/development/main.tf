@@ -78,7 +78,8 @@ module "messaging" {
     source = "../../modules/messaging"
     #variables
     environment_name = local.environment_name
-    location = local.location
+    location = "eastus"
     resource_group_name = module.core.rg_name
     tags = merge(local.tags, {module = "messaging"})
 }
+

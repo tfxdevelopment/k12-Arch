@@ -197,7 +197,6 @@ resource "azurerm_signalr_service" "api_enrollment_signalr" {
   connectivity_logs_enabled     = true
   messaging_logs_enabled        = true
   http_request_logs_enabled     = true
-  live_trace_enabled            = true
 
   live_trace {
     enabled                   = true

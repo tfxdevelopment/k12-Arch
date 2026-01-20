@@ -43,24 +43,17 @@ variable "local_auth_enabled" {
   default     = false
 }
 
-variable "zone_redundant" {
-  type        = bool
-  description = "Enable zone redundancy for the namespace"
-  default     = true
-}
-
 variable "queues" {
   type = list(object({
     name                                 = string
-    lock_duration                        = optional(string, "PT1M")
-    max_size_in_megabytes                = optional(number, 1024)
-    requires_duplicate_detection         = optional(bool, false)
-    requires_session                     = optional(bool, false)
-    default_message_ttl                  = optional(string, "P14D")
-    dead_lettering_on_message_expiration = optional(bool, false)
-    enable_batched_operations            = optional(bool, true)
-    duplicate_detection_history_time_window = optional(string, "PT10M")
-    max_delivery_count                   = optional(number, 10)
+    lock_duration                        = optional(string)
+    max_size_in_megabytes                = optional(number)
+    requires_duplicate_detection         = optional(bool)
+    requires_session                     = optional(bool)
+    default_message_ttl                  = optional(string)
+    dead_lettering_on_message_expiration = optional(bool)
+    duplicate_detection_history_time_window = optional(string)
+    max_delivery_count                   = optional(number)
   }))
   default = [
     {
@@ -96,3 +89,4 @@ variable "queues" {
   ]
   description = "List of Service Bus queues to create"
 }
+
