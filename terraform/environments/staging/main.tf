@@ -73,3 +73,12 @@ module "schools-web" {
     zscaler_ip_list = local.zscaler_ip_list
     dev_ip_list = local.dev_ip_list
 }
+
+module "messaging" {
+    source = "../../modules/messaging"
+    #variables
+    environment_name = local.environment_name
+    location = local.location
+    resource_group_name = module.core.rg_name
+    tags = merge(local.tags, {module = "messaging"})
+}
