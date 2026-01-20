@@ -1,6 +1,6 @@
 # Service Bus Namespace
 resource "azurerm_servicebus_namespace" "k12" {
-  name                = "${var.servicebus_namespace_name}"
+  name                = "${var.servicebus_namespace_name}-${var.environment_name}-sbns"
   location            = var.location
   resource_group_name = var.resource_group_name
   sku                 = "Standard"
