@@ -9,25 +9,25 @@ output "namespace_name" {
 }
 
 output "namespace_connection_string" {
-  value       = azurerm_servicebus_namespace_authorization_rule.root_manage.primary_connection_string
+  value       = data.azurerm_servicebus_namespace_authorization_rule.root_manage.primary_connection_string
   description = "The primary connection string for the namespace"
   sensitive   = true
 }
 
 output "namespace_connection_string_secondary" {
-  value       = azurerm_servicebus_namespace_authorization_rule.root_manage.secondary_connection_string
+  value       = data.azurerm_servicebus_namespace_authorization_rule.root_manage.secondary_connection_string
   description = "The secondary connection string for the namespace"
   sensitive   = true
 }
 
 output "namespace_primary_key" {
-  value       = azurerm_servicebus_namespace_authorization_rule.root_manage.primary_key
+  value       = data.azurerm_servicebus_namespace_authorization_rule.root_manage.primary_key
   description = "The primary key for the namespace"
   sensitive   = true
 }
 
 output "namespace_secondary_key" {
-  value       = azurerm_servicebus_namespace_authorization_rule.root_manage.secondary_key
+  value       = data.azurerm_servicebus_namespace_authorization_rule.root_manage.secondary_key
   description = "The secondary key for the namespace"
   sensitive   = true
 }

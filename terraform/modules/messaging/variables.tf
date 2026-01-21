@@ -46,45 +46,70 @@ variable "local_auth_enabled" {
 variable "queues" {
   type = list(object({
     name                                 = string
-    lock_duration                        = optional(string)
-    max_size_in_megabytes                = optional(number)
-    requires_duplicate_detection         = optional(bool)
-    requires_session                     = optional(bool)
-    default_message_ttl                  = optional(string)
-    dead_lettering_on_message_expiration = optional(bool)
-    duplicate_detection_history_time_window = optional(string)
-    max_delivery_count                   = optional(number)
+    lock_duration                        = string
+    max_size_in_megabytes                = number
+    requires_duplicate_detection         = bool
+    requires_session                     = bool
+    default_message_ttl                  = string
+    dead_lettering_on_message_expiration = bool
+    duplicate_detection_history_time_window = string
+    max_delivery_count                   = number
   }))
   default = [
     {
-      name                         = "application-events"
-      requires_duplicate_detection = false
-      requires_session             = false
+      name                                 = "application-events"
+      lock_duration                        = "PT1M"
+      max_size_in_megabytes                = 1024
+      requires_duplicate_detection         = false
+      requires_session                     = false
+      default_message_ttl                  = "P14D"
       dead_lettering_on_message_expiration = false
+      duplicate_detection_history_time_window = "PT10M"
+      max_delivery_count                   = 10
     },
     {
-      name                         = "new-residency-queue"
-      requires_duplicate_detection = true
-      requires_session             = false
+      name                                 = "new-residency-queue"
+      lock_duration                        = "PT1M"
+      max_size_in_megabytes                = 1024
+      requires_duplicate_detection         = true
+      requires_session                     = false
+      default_message_ttl                  = "P14D"
       dead_lettering_on_message_expiration = true
+      duplicate_detection_history_time_window = "PT10M"
+      max_delivery_count                   = 10
     },
     {
-      name                         = "residency-response-queue"
-      requires_duplicate_detection = true
-      requires_session             = true
+      name                                 = "residency-response-queue"
+      lock_duration                        = "PT1M"
+      max_size_in_megabytes                = 1024
+      requires_duplicate_detection         = true
+      requires_session                     = true
+      default_message_ttl                  = "P14D"
       dead_lettering_on_message_expiration = false
+      duplicate_detection_history_time_window = "PT10M"
+      max_delivery_count                   = 10
     },
     {
-      name                         = "residency-status-queue"
-      requires_duplicate_detection = true
-      requires_session             = true
+      name                                 = "residency-status-queue"
+      lock_duration                        = "PT1M"
+      max_size_in_megabytes                = 1024
+      requires_duplicate_detection         = true
+      requires_session                     = true
+      default_message_ttl                  = "P14D"
       dead_lettering_on_message_expiration = false
+      duplicate_detection_history_time_window = "PT10M"
+      max_delivery_count                   = 10
     },
     {
-      name                         = "system-events"
-      requires_duplicate_detection = false
-      requires_session             = false
+      name                                 = "system-events"
+      lock_duration                        = "PT1M"
+      max_size_in_megabytes                = 1024
+      requires_duplicate_detection         = false
+      requires_session                     = false
+      default_message_ttl                  = "P14D"
       dead_lettering_on_message_expiration = false
+      duplicate_detection_history_time_window = "PT10M"
+      max_delivery_count                   = 10
     }
   ]
   description = "List of Service Bus queues to create"
