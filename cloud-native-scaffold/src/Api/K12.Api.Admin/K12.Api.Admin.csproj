@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <UserSecretsId>k12-cloudnative-admin-api</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
+    <PackageReference Include="Swashbuckle.AspNetCore" />
+    <PackageReference Include="Scalar.AspNetCore" />
+    <PackageReference Include="Dapr.AspNetCore" />
+    <PackageReference Include="Dapr.Client" />
+    <PackageReference Include="MediatR" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+    <PackageReference Include="Mapster.DependencyInjection" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\K12.ServiceDefaults\K12.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\..\Shared\K12.BuildingBlocks\K12.BuildingBlocks.csproj" />
+    <ProjectReference Include="..\..\Shared\K12.Contracts\K12.Contracts.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\K12.Infrastructure\K12.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\K12.Infrastructure.Azure\K12.Infrastructure.Azure.csproj" />
+  </ItemGroup>
+
+</Project>

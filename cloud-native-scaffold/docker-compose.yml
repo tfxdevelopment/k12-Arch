@@ -1,0 +1,97 @@
+version: '3.8'
+
+services:
+  # SQL Server for local development
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: k12-sqlserver
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "YourStrong!Passw0rd"
+      MSSQL_PID: "Developer"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver-data:/var/opt/mssql
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P YourStrong!Passw0rd -Q 'SELECT 1' || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - k12-network
+
+  # Redis for Dapr state store and pub/sub
+  redis:
+    image: redis:7-alpine
+    container_name: k12-redis
+    command: redis-server --appendonly yes
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    networks:
+      - k12-network
+
+  # Redis Commander for Redis UI
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    container_name: k12-redis-commander
+    environment:
+      REDIS_HOSTS: local:redis:6379
+    ports:
+      - "8081:8081"
+    depends_on:
+      - redis
+    networks:
+      - k12-network
+
+  # Azurite for Azure Storage emulation
+  azurite:
+    image: mcr.microsoft.com/azure-storage/azurite:latest
+    container_name: k12-azurite
+    command: azurite --blobHost 0.0.0.0 --queueHost 0.0.0.0 --tableHost 0.0.0.0
+    ports:
+      - "10000:10000"  # Blob service
+      - "10001:10001"  # Queue service
+      - "10002:10002"  # Table service
+    volumes:
+      - azurite-data:/data
+    networks:
+      - k12-network
+
+  # Dapr Zipkin for distributed tracing
+  zipkin:
+    image: openzipkin/zipkin:latest
+    container_name: k12-zipkin
+    ports:
+      - "9411:9411"
+    networks:
+      - k12-network
+
+  # Dapr Placement Service (for actors)
+  dapr-placement:
+    image: daprio/dapr:1.15.0
+    container_name: k12-dapr-placement
+    command: ["./placement", "-port", "50006"]
+    ports:
+      - "50006:50006"
+    networks:
+      - k12-network
+
+volumes:
+  sqlserver-data:
+    driver: local
+  redis-data:
+    driver: local
+  azurite-data:
+    driver: local
+
+networks:
+  k12-network:
+    driver: bridge
