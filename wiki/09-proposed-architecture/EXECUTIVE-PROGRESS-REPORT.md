@@ -231,7 +231,7 @@ The K12 MyPortal cloud-native architecture documentation initiative has complete
 ## Supporting Documentation
 
 All 20 completed documents are available at:
-📁 `c:/Projects/CFI/K12/k12-Arch/wiki/09-proposed-architecture/`
+📁 `wiki/09-proposed-architecture/`
 
 **Key Documents for Leadership Review:**
 1. **[EXECUTIVE-BRIEF.md](EXECUTIVE-BRIEF.md)** - 1-page summary with business case

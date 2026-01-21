@@ -1,3 +1,10 @@
+# Redirect: Event Schema and Versioning (moved)
+
+This ADR has moved to the canonical ADR folder:
+
+- [ADR-PROP-event-schema-versioning.md](../../adr/ADR-PROP-event-schema-versioning.md)
+
+This file is a redirect stub preserved for link compatibility.
 # ADR: Event Schema and Versioning Standards
 
 Date: 2025-12-11

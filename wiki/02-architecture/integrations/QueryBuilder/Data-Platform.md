@@ -31,7 +31,7 @@ Azure SQL ──▶ Trino ──▶ Cube.js ──sync──▶ PostgreSQL ─�
 - Metabase uses PostgreSQL as its default backend
 - PostgreSQL extensions (TimescaleDB, pg_trgm) enable advanced analytics
 
-See [ADR-010 Option 6](../../adr/ADR-010-embedded-analytics-components.md) for details.
+See [ADR-010 Option 6](../../../adr/ADR-010-embedded-analytics-components.md) for details.
 
 ---
 
@@ -574,7 +574,7 @@ az containerapp up --name k12-querybuilder-api \
 
 ## Roadmap & Recommendations
 
-> **Note:** See [ADR-009](../../adr/ADR-009-analytics-query-engine-abstraction.md), [ADR-010](../../adr/ADR-010-embedded-analytics-components.md), and [ADR-011](../../adr/ADR-011-azure-data-api-builder.md) for architectural decisions.
+> **Note:** See [ADR-009](../../../adr/ADR-009-analytics-query-engine-abstraction.md), [ADR-010](../../../adr/ADR-010-embedded-analytics-components.md), and [ADR-011](../../../adr/ADR-011-azure-data-api-builder.md) for architectural decisions.
 
 ### Phase 1: Core SDK (Immediate)
 - [ ] Implement `IQueryBuilderService` with basic CRUD for query definitions
@@ -639,9 +639,9 @@ az containerapp up --name k12-querybuilder-api \
 - [DataMapper SemanticLayer Tables](../../k12-api-enrollment/CFIK12.Database/Enrollment/Tables/)
 
 ### Architecture Decision Records
-- [ADR-009: Analytics Query Engine Abstraction](../../adr/ADR-009-analytics-query-engine-abstraction.md) - IQueryEngine interface design
-- [ADR-010: Embedded Analytics Components](../../adr/ADR-010-embedded-analytics-components.md) - Angular component strategy & Option 6
-- [ADR-011: Azure Data API Builder](../../adr/ADR-011-azure-data-api-builder.md) - DAB as fallback engine
+- [ADR-009: Analytics Query Engine Abstraction](../../../adr/ADR-009-analytics-query-engine-abstraction.md) - IQueryEngine interface design
+- [ADR-010: Embedded Analytics Components](../../../adr/ADR-010-embedded-analytics-components.md) - Angular component strategy & Option 6
+- [ADR-011: Azure Data API Builder](../../../adr/ADR-011-azure-data-api-builder.md) - DAB as fallback engine
 
 ### Proposed Analytics Architecture
 - [ANALYTICS-01: Data Federation](../../../09-proposed-architecture/05-analytics/ANALYTICS-01-data-federation.md)

@@ -963,7 +963,7 @@ This is the formal approval request. We need three signatures: SEAA Product Lead
    - Migration runbooks
 
 **All documentation available at:**
-`c:/Projects/CFI/K12/k12-Arch/wiki/09-proposed-architecture/`
+`wiki/09-proposed-architecture/`
 
 ---
 
@@ -988,7 +988,7 @@ If you'd like to dive deeper into any aspect of this proposal, we have 48 compre
 - Create Jira ticket: [K12 Project Board](https://cfi-nc.atlassian.net/jira/software/c/projects/K12)
 
 **Documentation Repository:**
-- Location: `c:/Projects/CFI/K12/k12-Arch/wiki/09-proposed-architecture/`
+- Location: `wiki/09-proposed-architecture/`
 - Confluence: [System Architecture Space](https://cfi-nc.atlassian.net/wiki/spaces/KR)
 
 ---

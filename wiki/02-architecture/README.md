@@ -1,5 +1,14 @@
 # System Architecture
 
+## Target Implementation Shape (In Progress)
+
+- [Project Structure (Target .NET Monorepo)](PROJECT-STRUCTURE.md)
+- [BFF / Orchestrators](BFF-ORCHESTRATORS.md)
+- [Shared Contracts](CONTRACTS.md)
+- [Repository Organization Issues](REPO-ORGANIZATION-ISSUES.md)
+- [Sensei PDF Concerns Checklist](SENSEI-PDF-CONCERNS.md)
+- [Cloud-Native Architecture](cloud-native/README.md)
+
 ## High-Level Architecture
 
 The K12 MyPortal system follows a modern, cloud-native architecture pattern built on Azure Government Cloud to meet FedRAMP compliance requirements.
@@ -244,9 +253,9 @@ The K12 MyPortal platform uses a **dual-database architecture** with clear separ
 | Database | Type | Purpose | Use Case |
 |----------|------|---------|----------|
 | **Azure SQL** | Primary | All transactional data | Enrollment, programs, users, awards |
-| **Azure PostgreSQL** | Analytics Only | Cube.js → Metabase sync | Pre-aggregated analytics data |
+| **Trino** | Analytics Engine | CubeJS + Metabase queries | Federated analytics over curated sources |
 
-> **Important:** Azure SQL (SQL Server) is the **primary database** for all application data. PostgreSQL is used **exclusively** for the QueryBuilder analytics pipeline to sync pre-aggregated data to Metabase. See [ADR-010 Option 6](adr/ADR-010-embedded-analytics-components.md#option-6-custom-angular--cubejs--postgresql-recommended-evolution) for details.
+> **Important:** Azure SQL (SQL Server) remains the **primary database** for application data. Analytics runs through **CubeJS + Trino + Metabase**; Trino executes federated queries and Metabase exposes its API to applications.
 
 ### Azure SQL Schema (Primary Database)
 
@@ -266,28 +275,24 @@ Azure SQL Server with multi-schema design:
 - Data access via Dapper (NOT Entity Framework)
 - Be cautious with `efg generate` - may not reflect all dev work
 
-### Azure PostgreSQL (Analytics Only)
-
-Azure PostgreSQL Flexible Server is used **only** for the QueryBuilder analytics pipeline:
+### Analytics Engine (Trino + CubeJS + Metabase)
 
 ```
 ┌──────────────────┐     ┌──────────────────┐     ┌──────────────────┐
-│   Azure SQL      │     │   Cube.js        │     │ Azure PostgreSQL │
-│   (Primary)      │────▶│   Semantic Layer │────▶│  (Analytics)     │
-│                  │     │   Sync           │     │                  │
-│ • Enrollment     │     │ • Pre-aggregations│    │ • TimescaleDB    │
-│ • Programs       │     │ • Materialized   │     │ • pg_trgm        │
-│ • Awards         │     │   views          │     │ • pgvector       │
+│   Azure SQL      │     │   CubeJS         │     │     Trino        │
+│   (Primary)      │────▶│   Semantic/API   │────▶│  (Analytics)     │
+│                  │     │   Layer          │     │  Engine          │
+│ • Enrollment     │     │ • Pre-aggregations│    │ • Federated SQL  │
+│ • Programs       │     │ • Caching        │     │ • Connectors     │
+│ • Awards         │     │                  │     │                  │
 └──────────────────┘     └──────────────────┘     └──────────────────┘
                                                            │
                                                            ▼
                                                   ┌──────────────────┐
-                                                  │   Metabase       │
-                                                  │   (Optional BI)  │
+                                                  │    Metabase      │
+                                                  │ (BI + API)       │
                                                   └──────────────────┘
 ```
-
-**PostgreSQL Extensions:**
 - `TimescaleDB` - Time-series optimization for enrollment trends
 - `pg_trgm` - Fuzzy search for query builder autocomplete
 - `pgvector` - AI/semantic search (future)
@@ -411,9 +416,9 @@ k12-infra/terraform/
 | **Cloud Platform** | Azure Government | FedRAMP compliance |
 | **API Backend** | Azure Functions (.NET 8) | Serverless, cost-effective |
 | **Data Access** | Dapper | Performance over EF |
-| **Frontend** | Angular 19 + Nx | Modern SPA, monorepo benefits |
+| **Frontend** | Angular 22 + Nx 22 | Modern SPA, monorepo benefits |
 | **Primary Database** | Azure SQL | Enterprise features, RLS |
-| **Analytics Database** | Azure PostgreSQL Flexible Server | Cube.js/Metabase sync only |
+| **Analytics Engine** | Trino | Analytics via CubeJS + Metabase |
 | **Identity** | Entra ID + B2C | Native Azure integration |
 | **API Gateway** | Azure APIM | Centralized security, throttling |
 | **File Storage** | ADLS Gen2 | Hierarchical access control |
@@ -425,9 +430,7 @@ k12-infra/terraform/
 | **Semantic Layer** | Cube.js | Pre-aggregations, caching |
 | **Query Federation** | Trino | Multi-source SQL |
 
-> **Proposed Architecture Update:** The future-state architecture migrates ALL services to **Azure Container Apps** (not App Service) with **Dapr** providing abstractions for all cross-cutting concerns. See [Proposed Architecture](../09-proposed-architecture/README.md) for details including:
-> - Azure Container Apps as the hosting platform
-> - Dapr for service invocation, state, pub/sub, secrets, configuration, workflows, and jobs
+> **Proposed Architecture Update:** The future-state architecture migrates ALL services to **Azure Container Apps** (not App Service) with **Dapr** sidecar building blocks (service invocation, state, pub/sub, secrets, bindings, config; no server components). See [Proposed Architecture](../09-proposed-architecture/README.md) for details.
 > - .NET Aspire for local development with identical behavior to production
 
 ## Business Workflows
@@ -441,9 +444,9 @@ The K12 MyPortal system includes several orchestrated business workflows:
 
 - [Identity Provider (CIAM) Analysis](https://cfi-nc.atlassian.net/wiki/spaces/KR/pages/4032725075)
 - [Microsoft Entra ID Hub and Spoke Model](https://cfi-nc.atlassian.net/wiki/spaces/KR/pages/4053696597)
-- [Infrastructure README](../../../k12-infra/terraform/README.md)
-- [API Backend README](../../../k12-api-enrollment/README.md)
-- [Frontend README](../../../k12-web-enrollment/README.md)
+- [Infrastructure README](../07-deployment/README.md)
+- [API Backend README](backend/README.md)
+- [Frontend README](../05-development/frontend/README.md)
 
 ---
 

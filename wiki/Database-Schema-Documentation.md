@@ -976,9 +976,9 @@ GRANT EXECUTE TO [<function-app-name>];
 
 ### Related Documentation
 
-- [Backend Architecture](./Backend-Architecture.md) (if exists)
-- [API Documentation](./API-Documentation.md) (if exists)
-- [Deployment Guide](./Deployment-Guide.md) (if exists)
+- [Backend Architecture](02-architecture/backend/README.md)
+- [API Documentation](09-proposed-architecture/03-hybrid-api/README.md)
+- [Deployment Guide](07-deployment/README.md)
 
 ---
 

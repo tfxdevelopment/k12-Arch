@@ -1,3 +1,10 @@
+# Redirect: ADR-009 (archived)
+
+This ADR is now maintained in the canonical ADR folder:
+
+- [ADR-009-analytics-query-engine-abstraction.md](../ADR-009-analytics-query-engine-abstraction.md)
+
+This file is a redirect stub preserved for link compatibility.
 # ADR-009: Analytics Query Engine Abstraction Layer
 
 > **ARCHIVED** - This ADR has been superseded. See [ADR-014: Metabase as Unified Analytics Platform](../ADR-014-metabase-analytics.md) for the current approach.

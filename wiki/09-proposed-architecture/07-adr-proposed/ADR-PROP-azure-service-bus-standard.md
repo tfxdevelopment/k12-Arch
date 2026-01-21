@@ -1,3 +1,10 @@
+# Redirect: Azure Service Bus Standard (moved)
+
+This ADR has moved to the canonical ADR folder:
+
+- [ADR-PROP-azure-service-bus-standard.md](../../adr/ADR-PROP-azure-service-bus-standard.md)
+
+This file is a redirect stub preserved for link compatibility.
 # ADR: Standardize on Azure Service Bus for Messaging
 
 Date: 2025-12-11

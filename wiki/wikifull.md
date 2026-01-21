@@ -352,8 +352,8 @@ C4Context
 
 - [Container Diagram (Level 2)](02-container-diagram.md)
 - [System Architecture Overview](../README.md)
-- [Security Architecture](../security/README.md)
-- [Integration Architecture](../integrations/README.md)
+- [Security Architecture](02-architecture/security/README.md)
+- [Integration Architecture](02-architecture/integrations/README.md)
 ````
 
 .\wiki/02-architecture/c4-diagrams/02-container-diagram.md
@@ -1017,7 +1017,7 @@ terraform apply -var-file=environments/prod.tfvars
 - [C4 Level 1: System Context](01-system-context.md)
 - [C4 Level 3: Backend Components](03-backend-components.md)
 - [C4 Level 3: Frontend Components](04-frontend-components.md)
-- [Security Architecture](../security/README.md)
+- [Security Architecture](02-architecture/security/README.md)
 - [Database Schema Documentation](../../Database-Schema-Documentation.md)
 
 ## References
@@ -3486,7 +3486,7 @@ When troubleshooting ClassWallet integration issues:
 
 - **Confluence Page**: [ClassWallet Integration Specification](https://cfi-nc.atlassian.net/wiki/spaces/KR/pages/4350410805)
 - **ADR-012**: [Payment Processing Architecture](../../../wiki/adr/ADR-012-payment-processing.md)
-- **Security Documentation**: [Hub & Spoke Security Model](../security/hub-spoke-security-model.md)
+- **Security Documentation**: [Hub & Spoke Security Model](02-architecture/security/hub-spoke-security-model.md)
 
 ### Related Architecture Documents
 
@@ -19733,7 +19733,7 @@ GitHub Actions CI/CD
 
 - [ADR-PROP-001: Container Functions on Container Apps](../07-adr-proposed/ADR-PROP-001-container-functions.md) - Why containerization
 - [CONT-01: Container Functions Architecture](CONT-01-container-functions-architecture.md) - Functions container details
-- [CONT-06: Dapr Service Mesh](CONT-06-dapr-integration.md) - Dapr components and configuration
+- [CONT-06: Dapr Service Mesh](09-proposed-architecture/01-container-apps/CONT-06-dapr-integration.md) - Dapr components and configuration
 - [ASPIRE-01: AppHost Setup](../02-aspire/ASPIRE-01-apphost-setup.md) - Local multi-container development
 
 ---
@@ -20769,7 +20769,7 @@ K12.AppHost/infra/
 - [ADR-PROP-002: .NET Aspire for Orchestration](../07-adr-proposed/ADR-PROP-002-aspire.md) - ADR for Aspire decision
 - [CONT-01: Container Functions Architecture](../01-container-apps/CONT-01-container-functions-architecture.md) - Functions container
 - [CONT-02: Environment Design](../01-container-apps/CONT-02-environment-design.md) - Multi-container environment
-- [ASPIRE-02: Local Development Workflow](ASPIRE-02-local-development.md) - Day-to-day development
+- [ASPIRE-02: Local Development Workflow](09-proposed-architecture/02-aspire/ASPIRE-02-local-development.md) - Day-to-day development
 
 ---
 
@@ -20810,7 +20810,7 @@ K12.AppHost/infra/
 **Status:** Proposed
 **Last Updated:** 2025-11-24
 **Target Audience:** Backend Developers, DevOps Engineers
-**Related ADRs:** [ADR-PROP-003](../02-adrs/ADR-PROP-003-data-api-builder.md)
+**Related ADRs:** [ADR-PROP-003](adr/ADR-PROP-003-data-api-builder.md)
 
 ## Overview
 
@@ -22672,10 +22672,10 @@ INCLUDE (ApplicationId, SchoolId, SubmittedDate);
 
 ## References
 
-- [ADR-PROP-003: Data API Builder Decision](../02-adrs/ADR-PROP-003-data-api-builder.md)
+- [ADR-PROP-003: Data API Builder Decision](adr/ADR-PROP-003-data-api-builder.md)
 - [Architecture Overview](../01-architecture-overview.md)
-- [Database Schema](../../02-architecture/database-schema-documentation.md)
-- [Security Model](../../02-architecture/security/hub-and-spoke-security-model.md)
+- [Database Schema](Database-Schema-Documentation.md)
+- [Security Model](../../02-architecture/security/hub-spoke-security-model.md)
 - [DAB Official Docs](https://learn.microsoft.com/azure/data-api-builder/)
 
 ````
@@ -22687,7 +22687,7 @@ INCLUDE (ApplicationId, SchoolId, SubmittedDate);
 **Status:** Proposed
 **Last Updated:** 2025-11-24
 **Target Audience:** Backend Developers, Business Analysts
-**Related ADRs:** [ADR-PROP-002](../02-adrs/ADR-PROP-002-container-apps-platform.md), [ADR-PROP-006](../02-adrs/ADR-PROP-006-nrules-engine.md)
+**Related ADRs:** [ADR-PROP-001](adr/ADR-PROP-001-container-functions.md), [ADR-005](adr/ADR-005-nrules-business-rules.md)
 
 ## Overview
 
@@ -23692,8 +23692,8 @@ dependencies
 
 ## References
 
-- [ADR-PROP-002: Container Apps Platform](../02-adrs/ADR-PROP-002-container-apps-platform.md)
-- [ADR-PROP-006: NRules Engine](../02-adrs/ADR-PROP-006-nrules-engine.md)
+- [ADR-PROP-001: Container Functions](adr/ADR-PROP-001-container-functions.md)
+- [ADR-005: NRules for Business Rules Engine](adr/ADR-005-nrules-business-rules.md)
 - [API-01: DAB Implementation](./API-01-dab-implementation.md)
 - [RULES-01: NRules Implementation](../04-business-rules/RULES-01-nrules-implementation.md)
 
@@ -23706,7 +23706,7 @@ dependencies
 **Status:** Proposed
 **Last Updated:** 2025-11-24
 **Target Audience:** Data Engineers, Analytics Developers, Frontend Developers
-**Related ADRs:** [ADR-PROP-004](../02-adrs/ADR-PROP-004-trino-query-engine.md), [ADR-PROP-005](../02-adrs/ADR-PROP-005-cubejs-analytics.md)
+**Related ADRs:** [ADR-PROP-004](adr/ADR-PROP-004-trino.md), [ADR-PROP-005](adr/ADR-PROP-005-cubejs.md)
 
 ## Overview
 
@@ -25061,8 +25061,8 @@ requests
 
 ## References
 
-- [ADR-PROP-004: Trino Query Engine](../02-adrs/ADR-PROP-004-trino-query-engine.md)
-- [ADR-PROP-005: CubeJS Analytics](../02-adrs/ADR-PROP-005-cubejs-analytics.md)
+- [ADR-PROP-004: Trino Query Engine](adr/ADR-PROP-004-trino.md)
+- [ADR-PROP-005: CubeJS Analytics](adr/ADR-PROP-005-cubejs.md)
 - [API-01: DAB Implementation](./API-01-dab-implementation.md)
 - [API-02: Functions Business Logic](./API-02-functions-business-logic.md)
 - [Trino Docs](https://trino.io/docs/current/)
@@ -26866,10 +26866,10 @@ Before production launch, validate all reliability features in staging environme
 - [Polly Resilience Framework](https://www.pollydocs.org/)
 
 ### Related K12 Documents
-- [ADR-PROP-001: Container Functions Architecture](c:/Projects/CFI/K12/k12-Arch/wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-001-container-functions.md) - Container Apps rationale
-- [ADR-PROP-008: No Microservices](c:/Projects/CFI/K12/k12-Arch/wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-008-no-microservices.md) - Simplicity over complexity
-- [CONT-02: Environment Design](c:/Projects/CFI/K12/k12-Arch/wiki/09-proposed-architecture/01-container-apps/CONT-02-environment-design.md) - Container Apps environment configuration
-- [EXECUTIVE-BRIEF.md](c:/Projects/CFI/K12/k12-Arch/wiki/09-proposed-architecture/EXECUTIVE-BRIEF.md) - Business case and cost justification
+- [ADR-PROP-001: Container Functions Architecture](adr/ADR-PROP-001-container-functions.md) - Container Apps rationale
+- [ADR-PROP-008: No Microservices](adr/ADR-PROP-008-no-microservices.md) - Simplicity over complexity
+- [CONT-02: Environment Design](09-proposed-architecture/01-container-apps/CONT-02-environment-design.md) - Container Apps environment configuration
+- [EXECUTIVE-BRIEF.md](09-proposed-architecture/EXECUTIVE-BRIEF.md) - Business case and cost justification
 
 ### Industry Best Practices
 - [Google SRE Book: Chapter 26 - Availability Table](https://sre.google/sre-book/availability-table/)
@@ -27531,7 +27531,7 @@ AzureKeyVaultLogs
 - [SEC-01: Entra ID Configuration](../../02-architecture/security/SEC-01-entra-id-configuration.md)
 - [SEC-02: Authorization Model](../../02-architecture/security/SEC-02-authorization-model.md)
 - [ADR-003: Entra ID B2C for CIAM](../../adr/ADR-003-entra-id-b2c-ciam.md)
-- [SECURITY-MIGRATION-TODOS: RLS → Claims Migration Plan](../../../SECURITY-MIGRATION-TODOS.md)
+- [SECURITY-MIGRATION-TODOS: RLS → Claims Migration Plan](../SECURITY-MIGRATION-TODOS.md)
 
 ---
 
@@ -28928,7 +28928,7 @@ View Cost Analysis: https://portal.azure.com/#view/cost-analysis
 - [WA-01: Reliability Assessment (Geo-Replication Costs)](./WA-01-reliability.md)
 - [WA-02: Security Assessment (Defender + Sentinel Costs)](./WA-02-security.md)
 - [EXECUTIVE-BRIEF.md (ROI Analysis)](../EXECUTIVE-BRIEF.md)
-- [LOAD-TEST.md (Right-Sizing Data Source)](../05-testing/LOAD-TEST.md)
+- [LOAD-TEST.md (Right-Sizing Data Source)](05-testing/LOAD-TEST.md)
 
 ### Industry Resources
 
@@ -35698,7 +35698,7 @@ Functions on Container Apps **auto-configure KEDA** based on triggers:
 
 - [ADR-PROP-002: .NET Aspire for Orchestration](ADR-PROP-002-aspire.md) - Local development tooling
 - [ADR-PROP-003: Data API Builder for CRUD APIs](ADR-PROP-003-data-api-builder.md) - Zero-code API layer
-- [ADR-PROP-006: Dapr for Microservices Patterns](ADR-PROP-006-dapr.md) - Service mesh integration
+- [ADR-PROP-006: Dapr for Microservices Patterns](adr/ADR-PROP-006-dapr.md) - Service mesh integration
 - [ADR-PROP-008: No Microservices Decomposition](ADR-PROP-008-no-microservices.md) - Keep monolith
 - [ADR-007: Angular 19 Framework](../../adr/ADR-007-angular-19-framework.md) - Frontend remains unchanged
 
@@ -36408,7 +36408,7 @@ Aspire provisions resources with tags for cost tracking:
 - [ADR-PROP-003: Data API Builder for CRUD APIs](ADR-PROP-003-data-api-builder.md) - One of the 5 containers
 - [ADR-PROP-004: Trino for Data Federation](ADR-PROP-004-trino.md) - Analytics container
 - [ADR-PROP-005: CubeJS Semantic Layer](ADR-PROP-005-cubejs.md) - BI container
-- [ADR-PROP-006: Dapr for Microservices Patterns](ADR-PROP-006-dapr.md) - Service mesh (integrated with Aspire)
+- [ADR-PROP-006: Dapr for Microservices Patterns](adr/ADR-PROP-006-dapr.md) - Service mesh (integrated with Aspire)
 
 ---
 
@@ -39711,7 +39711,7 @@ K12.API/
 - [ADR-PROP-001: Azure Container Functions on Container Apps](ADR-PROP-001-container-functions.md) - Hosting platform enables this decision
 - [ADR-PROP-003: Data API Builder for CRUD APIs](ADR-PROP-003-data-api-builder.md) - Sidecar service (not extraction)
 - [ADR-PROP-004: Trino for Data Federation](ADR-PROP-004-trino.md) - Sidecar service (not extraction)
-- [ADR-PROP-006: Dapr for Microservices Patterns](ADR-PROP-006-dapr.md) - Microservices benefits WITHOUT decomposition
+- [ADR-PROP-006: Dapr for Microservices Patterns](adr/ADR-PROP-006-dapr.md) - Microservices benefits WITHOUT decomposition
 
 ---
 
@@ -40995,7 +40995,7 @@ This is the formal approval request. We need three signatures: SEAA Product Lead
    - Migration runbooks
 
 **All documentation available at:**
-`c:/Projects/CFI/K12/k12-Arch/wiki/09-proposed-architecture/`
+`wiki/09-proposed-architecture/`
 
 ---
 
@@ -41020,7 +41020,7 @@ If you'd like to dive deeper into any aspect of this proposal, we have 48 compre
 - Create Jira ticket: [K12 Project Board](https://cfi-nc.atlassian.net/jira/software/c/projects/K12)
 
 **Documentation Repository:**
-- Location: `c:/Projects/CFI/K12/k12-Arch/wiki/09-proposed-architecture/`
+- Location: `wiki/09-proposed-architecture/`
 - Confluence: [System Architecture Space](https://cfi-nc.atlassian.net/wiki/spaces/KR)
 
 ---
@@ -41269,11 +41269,11 @@ The K12 MyPortal cloud-native architecture documentation initiative has complete
 ## Supporting Documentation
 
 All 20 completed documents are available at:
-📁 `c:/Projects/CFI/K12/k12-Arch/wiki/09-proposed-architecture/`
+📁 `wiki/09-proposed-architecture/`
 
 **Key Documents for Leadership Review:**
 1. **[EXECUTIVE-BRIEF.md](EXECUTIVE-BRIEF.md)** - 1-page summary with business case
-2. **[ADR-PROP-008-no-microservices.md](07-adr-proposed/ADR-PROP-008-no-microservices.md)** - Why containerized monolith beats microservices
+2. **[ADR-PROP-008-no-microservices.md](adr/ADR-PROP-008-no-microservices.md)** - Why containerized monolith beats microservices
 3. **[WA-03-cost-optimization.md](04-well-architected/WA-03-cost-optimization.md)** - Detailed cost analysis and optimization roadmap
 4. **[README.md](README.md)** - Architecture overview and 10-week timeline
 
@@ -41368,14 +41368,13 @@ This directory contains the **proposed future-state architecture** for K12 MyPor
 - [ASPIRE-07: Testing Strategies](02-aspire/ASPIRE-07-testing.md)
 
 #### **3. Architecture Decision Records (Proposed)** (`07-adr-proposed/`)
-- [ADR-PROP-001: Azure Container Functions on Container Apps](07-adr-proposed/ADR-PROP-001-container-functions.md) ⭐ **CRITICAL**
-- [ADR-PROP-002: .NET Aspire Orchestration](07-adr-proposed/ADR-PROP-002-aspire.md)
-- [ADR-PROP-003: Data API Builder for CRUD APIs](07-adr-proposed/ADR-PROP-003-data-api-builder.md) ⭐ **CRITICAL**
-- [ADR-PROP-004: Trino for Data Federation](07-adr-proposed/ADR-PROP-004-trino.md)
-- [ADR-PROP-005: CubeJS Semantic Layer](07-adr-proposed/ADR-PROP-005-cubejs.md)
-- [ADR-PROP-006: Dapr for Microservices Patterns](07-adr-proposed/ADR-PROP-006-dapr.md)
-- [ADR-PROP-007: Hybrid IaC (Aspire + Terraform)](07-adr-proposed/ADR-PROP-007-hybrid-iac.md)
-- [ADR-PROP-008: No Microservices Decomposition](07-adr-proposed/ADR-PROP-008-no-microservices.md) ⭐ **CRITICAL**
+- [ADR-PROP-001: Azure Container Functions on Container Apps](adr/ADR-PROP-001-container-functions.md) ⭐ **CRITICAL**
+- [ADR-PROP-002: .NET Aspire Orchestration](adr/ADR-PROP-002-aspire.md)
+- [ADR-PROP-003: Data API Builder for CRUD APIs](adr/ADR-PROP-003-data-api-builder.md) (archived)
+- [ADR-PROP-004: Trino for Data Federation](adr/ADR-PROP-004-trino.md) (archived)
+- [ADR-PROP-005: CubeJS Semantic Layer](adr/ADR-PROP-005-cubejs.md) (archived)
+- [ADR-PROP-006: Dapr for Cross-Cutting Concerns](adr/ADR-PROP-006-dapr.md)
+- [ADR-PROP-008: No Microservices Decomposition](adr/ADR-PROP-008-no-microservices.md) ⭐ **CRITICAL**
 
 ### **Priority 1: High (Week 3-5)**
 

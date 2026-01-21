@@ -3,8 +3,13 @@
 ## Main Wiki
 - [Home](README.md)
 
+## Documentation Health
+- [Documentation Health Report](DOCUMENTATION-HEALTH-REPORT.md)
+- [Incompleteness Scan](DOCUMENTATION-INCOMPLETENESS-SCAN.md)
+
 ## Section 1: Project Overview
 - [Project Overview](01-project-overview/README.md)
+  - [Roadmap](01-project-overview/roadmap/README.md)
   - Project Charter
   - Timeline & Milestones
   - Stakeholders & Governance
@@ -22,6 +27,17 @@
   - Infrastructure as Code
   - Non-Functional Requirements
   - Technology Stack Summary
+
+### Target .NET Structure (In Progress)
+- [Project Structure (Target .NET Monorepo)](02-architecture/PROJECT-STRUCTURE.md)
+- [BFF / Orchestrators](02-architecture/BFF-ORCHESTRATORS.md)
+- [Shared Contracts](02-architecture/CONTRACTS.md)
+- [Repository Organization Issues](02-architecture/REPO-ORGANIZATION-ISSUES.md)
+- [Sensei PDF Concerns Checklist](02-architecture/SENSEI-PDF-CONCERNS.md)
+
+### Standalone Architecture Docs (Checklist)
+- [Backend Architecture](02-architecture/backend/README.md)
+- [Data Architecture](02-architecture/data/README.md)
 
 ### Azure Infrastructure
 - [Azure Infrastructure Documentation](02-architecture/azure-infrastructure.md)
@@ -99,7 +115,7 @@
     - Related Workflows
 
 ### Analytics Platform (k12-querybuilder)
-- [QueryBuilder Analytics Platform](02-architecture/QueryBuilder-Analytics-Platform.md)
+- [QueryBuilder Analytics Platform](02-architecture/integrations/QueryBuilder/Data-Platform.md)
   - .NET Aspire Orchestration
   - Cube.js Semantic Layer
   - Trino Query Federation
@@ -108,7 +124,7 @@
   - Service Layer Pattern
   - Rate Limiting & Caching
   - Security & Validation
-- [QueryBuilder SDK Design](02-architecture/QueryBuilder-SDK-Design.md)
+- [QueryBuilder SDK Design](02-architecture/integrations/QueryBuilder/SDK-Design.md)
   - Pluggable Query Engine Architecture
   - Integration with DataMapper SemanticLayer
   - Query Definition Storage (Analytics Schema)
@@ -120,9 +136,12 @@
 
 ## Section 3: Technical Documentation
 
+### Standards
+- [Standards](04-standards/README.md)
+
 ### Backend (k12-api-enrollment)
-- [Backend README](../../k12-api-enrollment/README.md)
-- [API Setup Guide](../../k12-api-enrollment/README.md#setup)
+- [Backend Repo (k12-api-enrollment)](01-project-overview/external-repositories.md#k12-api-enrollment-primary-backend-api)
+- [API Setup Guide (k12-api-enrollment)](01-project-overview/external-repositories.md#k12-api-enrollment-primary-backend-api)
 - Layered Architecture
   - API Layer (Azure Functions HTTP Triggers)
   - Middleware Layer (Error Handling, Authentication)
@@ -140,8 +159,8 @@
   - Integration Tests (Newman/Postman)
 
 ### Frontend (k12-web-enrollment)
-- [Frontend README](../../k12-web-enrollment/README.md)
-- [Setup Guide](../../k12-web-enrollment/README.md#development-server)
+- [Frontend Repo (k12-web-enrollment)](01-project-overview/external-repositories.md#k12-web-enrollment-angular--nx)
+- [Setup Guide (k12-web-enrollment)](01-project-overview/external-repositories.md#k12-web-enrollment-angular--nx)
 - Application Structure
   - Admin Portal (port 4200)
   - Household Enrollment (port 4300)
@@ -156,8 +175,11 @@
 - [UI Component Strategy](https://cfi-nc.atlassian.net/wiki/spaces/KR/pages/4461035529)
 - Testing (Jest)
 
-### Infrastructure (k12-infra)
-- [Terraform README](../../k12-infra/terraform/README.md)
+### Frontend (Standalone Docs)
+- [Frontend Architecture Docs](05-development/frontend/README.md)
+
+### Infrastructure
+> Infrastructure documentation (see Azure DevOps k12-infra repository)
 - Environment Management
   - Development
   - Testing
@@ -170,8 +192,8 @@
   - Data (SQL, Storage)
   - Networking (VNet, APIM)
 
-### API Testing (k12-test-api-postman)
-- [Testing README](../../k12-test-api-postman/README.md)
+### API Testing
+> API testing documentation (see Azure DevOps k12-test-api-postman repository)
 - Newman CLI Setup
 - Collection Structure
   - Development Collections
@@ -282,6 +304,12 @@
   - Security Best Practices
   - Common Development Tasks
   - Troubleshooting
+
+## Section 6.5: Deployment (Standalone Docs)
+- [Deployment](07-deployment/README.md)
+
+## Section 6.6: Operations (Standalone Docs)
+- [Operations](06-operations/README.md)
 
 ## Section 6: Operations & Support
 

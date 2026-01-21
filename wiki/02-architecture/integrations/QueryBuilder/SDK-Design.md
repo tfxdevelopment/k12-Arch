@@ -1082,7 +1082,7 @@ public class SnapshotCacheService : ISnapshotCacheService
 
 ## Recommendations & Future Enhancements
 
-> **Note:** See [ADR-009](../../adr/ADR-009-analytics-query-engine-abstraction.md), [ADR-010](../../adr/ADR-010-embedded-analytics-components.md), and [ADR-011](../../adr/ADR-011-azure-data-api-builder.md) for architectural decisions.
+> **Note:** See [ADR-009](../../../adr/ADR-009-analytics-query-engine-abstraction.md), [ADR-010](../../../adr/ADR-010-embedded-analytics-components.md), and [ADR-011](../../../adr/ADR-011-azure-data-api-builder.md) for architectural decisions.
 
 ### Phase 1: Core SDK (Immediate)
 - [ ] Implement `IQueryBuilderService` with basic CRUD
@@ -1100,7 +1100,7 @@ public class SnapshotCacheService : ISnapshotCacheService
 - [ ] Implement `DataApiBuilderEngine` as fallback (ADR-011)
 
 ### Phase 3: PostgreSQL-Enhanced Architecture
-> This phase implements the recommended evolution path from [ADR-010 Option 6](../../adr/ADR-010-embedded-analytics-components.md#option-6-custom-angular--cubejs--postgresql-recommended-evolution).
+> This phase implements the recommended evolution path from [ADR-010 Option 6](../../../adr/ADR-010-embedded-analytics-components.md#option-6-custom-angular--cubejs--postgresql-recommended-evolution).
 
 - [ ] Deploy Azure PostgreSQL Flexible Server for pre-aggregated data
 - [ ] Enable PostgreSQL extensions:
@@ -1290,7 +1290,7 @@ Metabase-like functionality without Pro/Enterprise licensing:
 | `K12FilterBarComponent` | Filter components | Dimension filters |
 | `K12DrillMenuComponent` | `mapQuestionClickActions` | Custom drill-down |
 
-See [ADR-010: Embedded Analytics Components](../../adr/ADR-010-embedded-analytics-components.md) for full implementation details.
+See [ADR-010: Embedded Analytics Components](../../../adr/ADR-010-embedded-analytics-components.md) for full implementation details.
 
 ---
 
@@ -1303,9 +1303,9 @@ See [ADR-010: Embedded Analytics Components](../../adr/ADR-010-embedded-analytic
 - [Hub and Spoke Security Model](https://cfi-nc.atlassian.net/wiki/spaces/KR/pages/4053696597)
 
 ### Architecture Decision Records
-- [ADR-009: Analytics Query Engine Abstraction](../../adr/ADR-009-analytics-query-engine-abstraction.md)
-- [ADR-010: Embedded Analytics Components](../../adr/ADR-010-embedded-analytics-components.md)
-- [ADR-011: Azure Data API Builder](../../adr/ADR-011-azure-data-api-builder.md)
+- [ADR-009: Analytics Query Engine Abstraction](../../../adr/ADR-009-analytics-query-engine-abstraction.md)
+- [ADR-010: Embedded Analytics Components](../../../adr/ADR-010-embedded-analytics-components.md)
+- [ADR-011: Azure Data API Builder](../../../adr/ADR-011-azure-data-api-builder.md)
 
 ### External Resources
 - [Azure PostgreSQL Flexible Server](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/overview)

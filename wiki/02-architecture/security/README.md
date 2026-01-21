@@ -15,10 +15,10 @@ The K12 MyPortal security architecture implements a **Hub and Spoke** model with
 
 | Document | Description | Status |
 |----------|-------------|--------|
-| [SEC-01: Entra ID Configuration](SEC-01-entra-id-configuration.md) | Hub & Spoke model, custom security attributes, administrative units | Complete |
-| [SEC-02: Authorization Model](SEC-02-authorization-model.md) | Application roles, permissions, authorization flow | Complete |
-| [SEC-03: Row-Level Security](SEC-03-row-level-security.md) | RLS policy definitions, context info, testing strategy | Complete |
-| [SEC-04: Audit Logging](SEC-04-audit-logging.md) | Audit events, log retention, compliance | Complete |
+| [SEC-01: Entra ID Configuration](./SEC-01-entra-id-configuration.md) | Hub & Spoke model, custom security attributes, administrative units | Complete |
+| [SEC-02: Authorization Model](./SEC-02-authorization-model.md) | Application roles, permissions, authorization flow | Complete |
+| [SEC-03: Row-Level Security](./SEC-03-row-level-security.md) | RLS policy definitions, context info, testing strategy | Complete |
+| [SEC-04: Audit Logging](./SEC-04-audit-logging.md) | Audit events, log retention, compliance | Complete |
 
 ## Security Architecture Highlights
 

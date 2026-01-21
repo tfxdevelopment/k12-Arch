@@ -1,3 +1,10 @@
+# Redirect: ADR-PROP-006 (moved)
+
+This ADR has moved to the canonical ADR folder:
+
+- [ADR-PROP-006-dapr.md](../../adr/ADR-PROP-006-dapr.md)
+
+This file is a redirect stub preserved for link compatibility.
 # ADR-PROP-006: Dapr for Cross-Cutting Concerns
 
 **Status:** Proposed

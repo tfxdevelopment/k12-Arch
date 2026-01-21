@@ -750,7 +750,7 @@ ab -n 1000 -c 100 -T 'application/json' \
 - [ADR-PROP-004: Trino for Data Federation](../07-adr-proposed/ADR-PROP-004-trino.md)
 - [API-03: Analytics APIs](../03-hybrid-api/API-03-analytics-apis.md)
 - [ANALYTICS-02: Semantic Layer Design](./ANALYTICS-02-semantic-layer.md)
-- [ANALYTICS-03: Dashboard Architecture](./ANALYTICS-03-dashboard-architecture.md)
+- [ANALYTICS-03: Real-Time vs Batch Analytics](./ANALYTICS-03-realtime-vs-batch.md)
 
 ### External Resources
 - [Trino GitHub Repository](https://github.com/trinodb/trino)

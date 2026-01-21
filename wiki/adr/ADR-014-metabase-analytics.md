@@ -227,16 +227,16 @@ export class AnalyticsDashboardComponent {
 ## Related Decisions
 
 * **Supersedes:**
-  * [ADR-009: Analytics Query Engine Abstraction](/_archive/ADR-009-analytics-query-engine-abstraction.md)
-  * [ADR-010: Embedded Analytics Components](/_archive/ADR-010-embedded-analytics-components.md)
-  * [ADR-PROP-003: Data API Builder](/_archive/ADR-PROP-003-data-api-builder.md)
-  * [ADR-PROP-004: Trino](/_archive/ADR-PROP-004-trino.md)
-  * [ADR-PROP-005: CubeJS](/_archive/ADR-PROP-005-cubejs.md)
+  * [ADR-009: Analytics Query Engine Abstraction](ADR-009-analytics-query-engine-abstraction.md)
+  * [ADR-010: Embedded Analytics Components](ADR-010-embedded-analytics-components.md)
+  * [ADR-PROP-003: Data API Builder](ADR-PROP-003-data-api-builder.md)
+  * [ADR-PROP-004: Trino](ADR-PROP-004-trino.md)
+  * [ADR-PROP-005: CubeJS](ADR-PROP-005-cubejs.md)
 
 * **Related:**
-  * [ADR-PROP-001: Container Functions on Container Apps](../09-proposed-architecture/07-adr-proposed/ADR-PROP-001-container-functions.md)
-  * [ADR-PROP-002: .NET Aspire Orchestration](../09-proposed-architecture/07-adr-proposed/ADR-PROP-002-aspire.md)
-  * [ADR-PROP-006: Dapr for Cross-Cutting Concerns](../09-proposed-architecture/07-adr-proposed/ADR-PROP-006-dapr.md)
+  * [ADR-PROP-001: Container Functions on Container Apps](ADR-PROP-001-container-functions.md)
+  * [ADR-PROP-002: .NET Aspire Orchestration](ADR-PROP-002-aspire.md)
+  * [ADR-PROP-006: Dapr for Cross-Cutting Concerns](ADR-PROP-006-dapr.md)
 
 ---
 

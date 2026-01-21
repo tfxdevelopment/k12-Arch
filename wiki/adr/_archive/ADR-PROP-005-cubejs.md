@@ -1,3 +1,10 @@
+# Redirect: ADR-PROP-005 (archived)
+
+This ADR is now maintained in the canonical ADR folder:
+
+- [ADR-PROP-005-cubejs.md](../ADR-PROP-005-cubejs.md)
+
+This file is a redirect stub preserved for link compatibility.
 # ADR-PROP-005: CubeJS Semantic Layer for BI and Dashboards
 
 > ⚠️ **ARCHIVED** - This ADR has been superseded. See [ADR-014: Metabase as Unified Analytics Platform](../ADR-014-metabase-analytics.md) for the current approach.

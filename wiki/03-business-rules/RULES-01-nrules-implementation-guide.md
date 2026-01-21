@@ -27,7 +27,7 @@ The K12 system requires sophisticated business logic to handle:
 - **Lottery assignment**: Priority groups, waitlist management, tie-breaking rules
 - **Compliance validation**: FERPA, FedRAMP, state regulations
 
-See [ADR-005](../../adr/ADR-005-nrules-business-rules.md) for the full decision rationale.
+See [ADR-005](../adr/ADR-005-nrules-business-rules.md) for the full decision rationale.
 
 ## Table of Contents
 
@@ -584,7 +584,7 @@ public class DocumentValidationResult
 
 ### Pattern 5: Audit Logging Integration
 
-Integrate with the audit logging system ([SEC-04](../../02-architecture/security/SEC-04-audit-logging.md)) to track rule execution.
+Integrate with the audit logging system ([SEC-04](../02-architecture/security/SEC-04-audit-logging.md)) to track rule execution.
 
 ```csharp
 // Subscribe to rule fired event
@@ -2173,11 +2173,11 @@ session.Insert(expensiveResult); // Insert pre-computed fact
 
 ## Related Documentation
 
-- [ADR-005: NRules for Business Rules Engine](../../adr/ADR-005-nrules-business-rules.md)
-- [ADR-002: Dapper over Entity Framework](../../adr/ADR-002-dapper-over-entity-framework.md)
-- [SEC-04: Audit Logging Architecture](../../02-architecture/security/SEC-04-audit-logging.md)
-- [Database Schema Documentation](../../Database-Schema-Documentation.md)
-- [System Architecture Overview](../../02-architecture/README.md)
+- [ADR-005: NRules for Business Rules Engine](../adr/ADR-005-nrules-business-rules.md)
+- [ADR-002: Dapper over Entity Framework](../adr/ADR-002-dapper-over-entity-framework.md)
+- [SEC-04: Audit Logging Architecture](../02-architecture/security/SEC-04-audit-logging.md)
+- [Database Schema Documentation](../Database-Schema-Documentation.md)
+- [System Architecture Overview](../02-architecture/README.md)
 
 ## References
 

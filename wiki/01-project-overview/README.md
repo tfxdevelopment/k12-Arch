@@ -181,8 +181,8 @@ As of February 28, 2024:
 
 - [Revised K12 Project Charter (Confluence)](https://cfi-nc.atlassian.net/wiki/spaces/KR/pages/4213407777)
 - [K12 Roadmap (Confluence)](https://cfi-nc.atlassian.net/wiki/spaces/KR/pages/4086530071)
-- [RAID Logs](../../07-program-management/raid-logs.md)
 - [System Architecture](../02-architecture/README.md)
+- [External Repositories](./external-repositories.md)
 
 ---
 

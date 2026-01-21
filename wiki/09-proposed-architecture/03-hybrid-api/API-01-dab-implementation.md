@@ -3,7 +3,7 @@
 **Status:** Proposed
 **Last Updated:** 2025-11-24
 **Target Audience:** Backend Developers, DevOps Engineers
-**Related ADRs:** [ADR-PROP-003](../02-adrs/ADR-PROP-003-data-api-builder.md)
+**Related ADRs:** [ADR-PROP-003](../../adr/ADR-PROP-003-data-api-builder.md)
 
 ## Overview
 
@@ -1865,8 +1865,8 @@ INCLUDE (ApplicationId, SchoolId, SubmittedDate);
 
 ## References
 
-- [ADR-PROP-003: Data API Builder Decision](../02-adrs/ADR-PROP-003-data-api-builder.md)
-- [Architecture Overview](../01-architecture-overview.md)
-- [Database Schema](../../02-architecture/database-schema-documentation.md)
-- [Security Model](../../02-architecture/security/hub-and-spoke-security-model.md)
+- [ADR-PROP-003: Data API Builder Decision](../../adr/ADR-PROP-003-data-api-builder.md)
+- [Architecture Overview](../../02-architecture/README.md)
+- [Database Schema](../../Database-Schema-Documentation.md)
+- [Security Model](../../02-architecture/security/hub-spoke-security-model.md)
 - [DAB Official Docs](https://learn.microsoft.com/azure/data-api-builder/)

@@ -1,3 +1,10 @@
+# Redirect: ADR-PROP-003 (archived)
+
+This ADR is now maintained in the canonical ADR folder:
+
+- [ADR-PROP-003-data-api-builder.md](../ADR-PROP-003-data-api-builder.md)
+
+This file is a redirect stub preserved for link compatibility.
 # ADR-PROP-003: Data API Builder for CRUD APIs
 
 > ⚠️ **ARCHIVED** - This ADR has been superseded. See [ADR-014: Metabase as Unified Analytics Platform](../ADR-014-metabase-analytics.md) for the current approach.

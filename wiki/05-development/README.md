@@ -100,7 +100,7 @@ See: [k12-web-enrollment/README.md](../../../k12-web-enrollment/README.md)
 3. Place in directory on your `$PATH`
 4. Restart terminals/editors
 
-See: [k12-infra/terraform/README.md](../../../k12-infra/terraform/README.md)
+See: [infra/terraform/README.md](../../infra/terraform/README.md)
 
 ### API Testing (Postman/Newman)
 
@@ -120,7 +120,7 @@ newman run development/development_admin.collection.json \
   -e development/development.environment.json
 ```
 
-See: [k12-test-api-postman/README.md](../../../k12-test-api-postman/README.md)
+See: [k12-test-api-postman/README.md](../../k12-test-api-postman/README.md) <!-- FIXME: Repo missing from workspace -->
 
 ## Development Workflow
 
@@ -662,11 +662,11 @@ lsof -ti:4200 | xargs kill -9
 ## Additional Resources
 
 ### Documentation
-- [CLAUDE.md](../../../CLAUDE.md) - Project instructions for AI assistance
-- [API README](../../../k12-api-enrollment/README.md)
-- [Web README](../../../k12-web-enrollment/README.md)
-- [Infra README](../../../k12-infra/terraform/README.md)
-- [Testing README](../../../k12-test-api-postman/README.md)
+- [CLAUDE.md](../../CLAUDE.md) - Project instructions for AI assistance
+- [API README](../../k12-api-enrollment/README.md) <!-- FIXME: Repo missing -->
+- [Web README](../../k12-web-enrollment/README.md) <!-- FIXME: Repo missing -->
+- [Infra README](../../infra/terraform/README.md)
+- [Testing README](../../k12-test-api-postman/README.md) <!-- FIXME: Repo missing -->
 
 ### External Links
 - [Azure DevOps Project](https://dev.azure.com/CFI-AzureDevOps/K12)

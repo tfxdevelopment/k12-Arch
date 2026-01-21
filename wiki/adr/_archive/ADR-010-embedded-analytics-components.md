@@ -1,3 +1,10 @@
+# Redirect: ADR-010 (archived)
+
+This ADR is now maintained in the canonical ADR folder:
+
+- [ADR-010-embedded-analytics-components.md](../ADR-010-embedded-analytics-components.md)
+
+This file is a redirect stub preserved for link compatibility.
 # ADR-010: Embedded Analytics Component Strategy
 
 > **ARCHIVED** - This ADR has been superseded. See [ADR-014: Metabase as Unified Analytics Platform](../ADR-014-metabase-analytics.md) for the current approach.

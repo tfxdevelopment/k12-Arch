@@ -16,25 +16,26 @@ The Aspire solution provides a local development environment with:
 ## Project Structure
 
 ```
-k12-Arch/
+CFI.K12/
 ├── src/
-│   ├── K12.AppHost/              # Aspire orchestrator
-│   │   ├── Program.cs            # Main orchestration logic
-│   │   ├── appsettings.json      # Configuration
-│   │   └── apim-config/          # APIM emulator configuration
-│   │       └── apim.json         # API definitions
+│   ├── AppHosts/              # Aspire orchestrators
+│   |   ├── Core/              # Aspire orchestrators
+│   │       ├── Program.cs            # Main orchestration logic
+│   │       ├── appsettings.json      # Configuration
+│   │       └── .config/          # APIM emulator configuration
+│   │          └── apim.json         # API definitions
 │   ├── K12.ServiceDefaults/      # Shared service configurations
 │   │   └── Extensions.cs         # OpenTelemetry, health checks, service discovery
 │   └── K12.Docs.Api/             # Documentation API
 │       └── Program.cs            # Minimal API for markdown serving
 ├── .aspire/
 │   └── manifest.json             # Aspire manifest for deployment
-└── K12.Aspire.sln                # Solution file
+└── K12.CFI.sln                # Solution file
 ```
 
 ## Prerequisites
 
-- .NET 9.0 SDK or later
+- .NET 10.0 SDK or later
 - Docker Desktop (for APIM emulator and Dapr)
 - Node.js 18+ (for Angular documentation site)
 - Visual Studio 2022 17.9+ or Visual Studio Code with C# Dev Kit

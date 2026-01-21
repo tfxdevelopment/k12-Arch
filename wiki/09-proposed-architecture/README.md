@@ -25,9 +25,9 @@ This directory contains the **proposed future-state architecture** for K12 MyPor
 |-----------|-----------|---------|
 | **Hosting** | Azure Container Apps | Managed Kubernetes, NOT App Service |
 | **Compute** | Azure Container Functions on Container Apps | Business logic, no cold starts, 80K scale |
-| **Analytics** | Metabase | Local container (dev), Container Apps (test), Metabase Cloud (prod) |
+| **Analytics** | CubeJS + Trino + Metabase (API exposed) | CubeJS semantic layer + API over Trino; Metabase UI/API for dashboards and embeds |
 | **Caching** | Azure Cache for Redis | Distributed cache for all layers (65%+ hit rate target) |
-| **Cross-Cutting** | Dapr (all 8 building blocks) | Unified abstractions for cloud-agnostic patterns |
+| **Cross-Cutting** | Dapr sidecar building blocks (no server components) | Service invocation, pub/sub, state, secrets, bindings, config |
 | **Local Dev** | .NET Aspire + Dapr | F5 to launch all containers with Dapr sidecars |
 | **IaC** | Aspire (compute) + Terraform (governance) | Hybrid approach for flexibility |
 | **Runtime** | .NET 10 (LTS) | Latest long-term support, released Nov 11, 2025 |
@@ -44,10 +44,10 @@ K12 uses **Dapr (Distributed Application Runtime)** as the abstraction layer for
 | 4 | **Bindings** | Local file system | Azure Blob, SendGrid | Document storage, email |
 | 5 | **Secrets** | Local secrets file | Azure Key Vault | API keys, connection strings |
 | 6 | **Configuration** | Local config file | Azure App Configuration | Feature flags, settings |
-| 7 | **Workflows** | Dapr Workflow runtime | Dapr Workflow runtime | Roster certification |
-| 8 | **Jobs** | Dapr Jobs runtime | Dapr Jobs runtime | Scheduled tasks |
 
-See [ADR-PROP-006: Dapr for Cross-Cutting Concerns](07-adr-proposed/ADR-PROP-006-dapr.md) and [CONT-06: Dapr Integration](01-container-apps/CONT-06-dapr-integration.md) for details.
+> Server components (actors, workflows, jobs) are intentionally excluded because Azure Container Apps does not host the required Dapr control plane. Long-running work is handled via application-level orchestrators and scheduled containers.
+
+See [ADR-PROP-006: Dapr for Cross-Cutting Concerns](../adr/ADR-PROP-006-dapr.md) and [CONT-06: Dapr Integration](01-container-apps/CONT-06-dapr-integration.md) for details.
 
 ### ❌ **Rejected Approaches**
 
@@ -55,8 +55,8 @@ See [ADR-PROP-006: Dapr for Cross-Cutting Concerns](07-adr-proposed/ADR-PROP-006
 |----------|----------|-----------|
 | **Microservices Decomposition** | Rejected | Container Apps solves scale (1000 instances), 6-month timeline vs 12-18 months |
 | **Azure App Service** | Rejected | No Dapr support, no KEDA scaling, no multi-container environments |
-| **Azure Durable Functions** | Superseded | Dapr Workflows provides consistent abstraction layer |
-| **Azure Functions Timer Triggers** | Superseded | Dapr Jobs provides cloud-agnostic scheduled tasks |
+| **Azure Durable Functions** | Superseded | Containerized functions + app-level process managers; Dapr server components not available on ACA |
+| **Azure Functions Timer Triggers** | Superseded | Scheduled containers/cron jobs managed at app level; no Dapr Jobs on ACA |
 
 ---
 
@@ -84,13 +84,12 @@ See [ADR-PROP-006: Dapr for Cross-Cutting Concerns](07-adr-proposed/ADR-PROP-006
 - [ASPIRE-07: Testing Strategies](02-aspire/ASPIRE-07-testing.md)
 
 #### **3. Architecture Decision Records (Proposed)** (`07-adr-proposed/`)
-- [ADR-PROP-001: Azure Container Functions on Container Apps](07-adr-proposed/ADR-PROP-001-container-functions.md) ⭐ **CRITICAL**
-- [ADR-PROP-002: .NET Aspire Orchestration](07-adr-proposed/ADR-PROP-002-aspire.md)
-- [ADR-PROP-006: Dapr for Microservices Patterns](07-adr-proposed/ADR-PROP-006-dapr.md)
-- [ADR-PROP-007: Hybrid IaC (Aspire + Terraform)](07-adr-proposed/ADR-PROP-007-hybrid-iac.md)
-- [ADR-PROP-008: No Microservices Decomposition](07-adr-proposed/ADR-PROP-008-no-microservices.md) ⭐ **CRITICAL**
+- [ADR-PROP-001: Azure Container Functions on Container Apps](../adr/ADR-PROP-001-container-functions.md) ⭐ **CRITICAL**
+- [ADR-PROP-002: .NET Aspire Orchestration](../adr/ADR-PROP-002-aspire.md)
+- [ADR-PROP-006: Dapr for Cross-Cutting Concerns](../adr/ADR-PROP-006-dapr.md)
+- [ADR-PROP-008: No Microservices Decomposition](../adr/ADR-PROP-008-no-microservices.md) ⭐ **CRITICAL**
 
-> **Archived ADRs:** ADR-PROP-003 (DAB), ADR-PROP-004 (Trino), ADR-PROP-005 (CubeJS) superseded by [ADR-014: Metabase Analytics](../adr/ADR-014-metabase-analytics.md)
+> **Archived ADRs:** [ADR-PROP-003 (DAB)](../adr/ADR-PROP-003-data-api-builder.md), [ADR-PROP-004 (Trino)](../adr/ADR-PROP-004-trino.md), [ADR-PROP-005 (CubeJS)](../adr/ADR-PROP-005-cubejs.md) superseded by [ADR-014: Metabase Analytics](../adr/ADR-014-metabase-analytics.md)
 
 ### **Priority 1: High (Week 3-5)**
 
@@ -107,7 +106,7 @@ See [ADR-PROP-006: Dapr for Cross-Cutting Concerns](07-adr-proposed/ADR-PROP-006
 - [ANALYTICS-03: Dashboard Embedding](04-analytics/ANALYTICS-03-dashboard-embedding.md)
 - [ANALYTICS-04: Query Performance Optimization](04-analytics/ANALYTICS-04-query-optimization.md)
 
-> **Note:** Analytics simplified from Trino+CubeJS to Metabase-only per [ADR-014](../adr/ADR-014-metabase-analytics.md)
+> **Note:** Analytics stack is CubeJS + Trino + Metabase with Metabase API exposed; ADR updates pending to reflect this alignment.
 
 #### **6. Well-Architected Framework** (`05-well-architected/`)
 - [WA-01: Reliability](05-well-architected/WA-01-reliability.md)
@@ -181,8 +180,8 @@ See [ADR-PROP-006: Dapr for Cross-Cutting Concerns](07-adr-proposed/ADR-PROP-006
 | **Max Concurrent Users** | ~30K (theoretical) | 80K (load tested) |
 | **API Latency (p95)** | 3-5s | <2s (Functions) |
 | **Cold Start** | 2-5s (common) | 0s (always warm) |
-| **Cache Hit Rate** | 0% (no caching) | 65%+ (Redis + Metabase) |
-| **Analytics Query Time** | N/A | <5s (Metabase with Azure SQL) |
+| **Cache Hit Rate** | 0% (no caching) | 65%+ (Redis + Metabase API) |
+| **Analytics Query Time** | N/A | <5s (CubeJS + Trino + Metabase) |
 | **Deployment Time** | 15 min | 5 min (azd deploy, blue-green) |
 
 ### Business Outcomes
@@ -199,7 +198,7 @@ See [ADR-PROP-006: Dapr for Cross-Cutting Concerns](07-adr-proposed/ADR-PROP-006
 
 - **Azure Container Apps** - Fully managed Kubernetes-based platform
 - **.NET 10** - LTS (Nov 11, 2025 release), 3 years support
-- **Metabase** - Unified analytics platform (local container, Container Apps cluster, Metabase Cloud)
+- **CubeJS + Trino + Metabase** - Semantic layer, query engine, and BI (Metabase API exposed for app consumption)
 - **Dapr** - All 8 building blocks for cloud-agnostic patterns
 - **.NET Aspire** - Cloud-native orchestration framework
 - **Azure Developer CLI (azd)** - Infrastructure provisioning automation

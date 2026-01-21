@@ -90,26 +90,30 @@ flowchart LR
 
 ### Proposed Architecture ADRs
 
-See [09-proposed-architecture/07-adr-proposed/](../09-proposed-architecture/07-adr-proposed/) for proposed future architecture decisions:
+The following ADRs describe proposed future-state architecture decisions and are maintained in this folder:
 
 | ADR | Title | Status |
 |-----|-------|--------|
-| ADR-PROP-001 | Container Functions on Container Apps | Critical |
-| ADR-PROP-002 | .NET Aspire Orchestration | High |
-| ADR-PROP-006 | Dapr for Cross-Cutting Concerns | High |
-| ADR-PROP-008 | No Microservices Decomposition | Critical |
+| [ADR-PROP-001](ADR-PROP-001-container-functions.md) | Container Functions on Container Apps | Proposed |
+| [ADR-PROP-002](ADR-PROP-002-aspire.md) | .NET Aspire Orchestration | Proposed |
+| [ADR-PROP-006](ADR-PROP-006-dapr.md) | Dapr for Cross-Cutting Concerns | Proposed |
+| [ADR-PROP-008](ADR-PROP-008-no-microservices.md) | No Microservices Decomposition | Proposed |
+| [ADR: Service Bus Standard](ADR-PROP-azure-service-bus-standard.md) | Standardize on Azure Service Bus for Messaging | Proposed |
+| [ADR: Event Schema Versioning](ADR-PROP-event-schema-versioning.md) | Event Schema and Versioning Standards | Proposed |
 
 ### Archived ADRs (Superseded)
 
-The following ADRs have been superseded by [ADR-014: Metabase as Unified Analytics Platform](ADR-014-metabase-analytics.md) and moved to the `_archive/` folder:
+The following ADRs were superseded by [ADR-014: Metabase as Unified Analytics Platform](ADR-014-metabase-analytics.md):
 
 | ADR | Title | Superseded By | Date Archived |
 |-----|-------|---------------|---------------|
-| [ADR-009](_archive/ADR-009-analytics-query-engine-abstraction.md) | Analytics Query Engine Abstraction | ADR-014 | 2025-12-22 |
-| [ADR-010](_archive/ADR-010-embedded-analytics-components.md) | Embedded Analytics Component Strategy | ADR-014 | 2025-12-22 |
-| [ADR-PROP-003](_archive/ADR-PROP-003-data-api-builder.md) | Data API Builder for CRUD APIs | ADR-014 | 2025-12-22 |
-| [ADR-PROP-004](_archive/ADR-PROP-004-trino.md) | Trino for Data Federation | ADR-014 | 2025-12-22 |
-| [ADR-PROP-005](_archive/ADR-PROP-005-cubejs.md) | CubeJS Semantic Layer | ADR-014 | 2025-12-22 |
+| [ADR-009](ADR-009-analytics-query-engine-abstraction.md) | Analytics Query Engine Abstraction | ADR-014 | 2025-12-22 |
+| [ADR-010](ADR-010-embedded-analytics-components.md) | Embedded Analytics Component Strategy | ADR-014 | 2025-12-22 |
+| [ADR-PROP-003](ADR-PROP-003-data-api-builder.md) | Data API Builder for CRUD APIs | ADR-014 | 2025-12-22 |
+| [ADR-PROP-004](ADR-PROP-004-trino.md) | Trino for Data Federation | ADR-014 | 2025-12-22 |
+| [ADR-PROP-005](ADR-PROP-005-cubejs.md) | CubeJS Semantic Layer | ADR-014 | 2025-12-22 |
+
+The `_archive/` folder contains redirect stubs preserved for link compatibility.
 
 ## Template
 

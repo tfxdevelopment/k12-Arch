@@ -1,3 +1,10 @@
+# Redirect: ADR-PROP-004 (archived)
+
+This ADR is now maintained in the canonical ADR folder:
+
+- [ADR-PROP-004-trino.md](../ADR-PROP-004-trino.md)
+
+This file is a redirect stub preserved for link compatibility.
 # ADR-PROP-004: Trino for Data Federation and Analytics
 
 > ⚠️ **ARCHIVED** - This ADR has been superseded. See [ADR-014: Metabase as Unified Analytics Platform](../ADR-014-metabase-analytics.md) for the current approach.
