@@ -12,12 +12,6 @@ resource "azurerm_servicebus_namespace" "k12" {
   tags = var.tags
 }
 
-# Reference the default RootManageSharedAccessKey (created automatically with namespace)
-data "azurerm_servicebus_namespace_authorization_rule" "root_manage" {
-  name         = "RootManageSharedAccessKey"
-  namespace_id = azurerm_servicebus_namespace.k12.id
-}
-
 # Service Bus Queues
 resource "azurerm_servicebus_queue" "queues" {
   for_each = { for queue in var.queues : queue.name => queue }
