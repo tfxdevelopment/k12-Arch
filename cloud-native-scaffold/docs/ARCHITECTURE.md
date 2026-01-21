@@ -66,16 +66,17 @@ The architecture is designed to run natively in the cloud with:
 
 ## Technology Stack Rationale
 
-### .NET 9
+### .NET 10 (Preview)
 
 **Why:**
+- Latest .NET preview with cutting-edge features
 - Modern, high-performance runtime
 - Cross-platform (Linux containers)
-- Native AOT compilation support
+- Native AOT compilation improvements
 - Excellent cloud integration
-- Long-term support
+- Preview of upcoming LTS features
 
-### .NET Aspire
+### .NET Aspire 10 (Preview)
 
 **Why:**
 - Simplifies local development orchestration

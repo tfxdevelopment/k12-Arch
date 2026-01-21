@@ -1,6 +1,6 @@
 # K12 MyPortal - Cloud-Native Architecture Scaffold
 
-A modern, cloud-native microservices architecture for the K12 MyPortal system using .NET 9, .NET Aspire, Dapr, and Azure services.
+A modern, cloud-native microservices architecture for the K12 MyPortal system using .NET 10 (preview), .NET Aspire 10, Dapr, and Azure services.
 
 ## Overview
 
@@ -19,8 +19,8 @@ This project demonstrates a production-ready cloud-native architecture following
 
 | Component | Technology | Purpose |
 |-----------|-----------|---------|
-| **Runtime** | .NET 9 | Modern, high-performance platform |
-| **Orchestration** | .NET Aspire | Local development & service orchestration |
+| **Runtime** | .NET 10 (preview) | Latest preview with cutting-edge features |
+| **Orchestration** | .NET Aspire 10 (preview) | Cloud-native orchestration & observability |
 | **Cloud Platform** | Dapr | Cloud-native building blocks (portable) |
 | **Database** | Azure SQL / SQL Server | Relational data storage |
 | **Caching/State** | Redis | Distributed cache & Dapr state store |
@@ -67,7 +67,7 @@ cloud-native-scaffold/
 
 ### Prerequisites
 
-- [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9.0)
+- [.NET 10 SDK (Preview)](https://dotnet.microsoft.com/download/dotnet/10.0)
 - [Docker Desktop](https://www.docker.com/products/docker-desktop)
 - [Dapr CLI](https://docs.dapr.io/getting-started/install-dapr-cli/)
 - [Make](https://www.gnu.org/software/make/) (optional, for Makefile commands)
@@ -258,6 +258,56 @@ public class DaprEventBus : IEventBus
    - Generates deployment manifests
    - Container-ready
    - Azure-optimized
+
+## Package Management
+
+This project uses **Central Package Management (CPM)** with all package versions defined in `Directory.Packages.props`.
+
+### Key Benefits
+
+- ✅ **Single source of truth** for all package versions
+- ✅ **Consistent versions** across all projects
+- ✅ **Easier updates** - change version in one place
+- ✅ **Reduced merge conflicts**
+- ✅ **Transitive dependency pinning**
+
+### .NET 10 & Aspire 10 Preview
+
+This project uses the latest preview versions:
+
+- **.NET 10 SDK Preview** (`net10.0`)
+- **Aspire 10 Preview** (`10.0.0-preview.1.25118.6`)
+- **Microsoft packages** aligned to .NET 10
+
+**Note**: Preview versions require the .NET 10 preview feed configured in `nuget.config`.
+
+### Adding Packages
+
+Reference packages in `.csproj` **without version**:
+
+```xml
+<PackageReference Include="Newtonsoft.Json" />
+```
+
+Add version to `Directory.Packages.props`:
+
+```xml
+<PackageVersion Include="Newtonsoft.Json" Version="13.0.3" />
+```
+
+### Updating Packages
+
+Update versions in `Directory.Packages.props`:
+
+```bash
+# Check for outdated packages
+dotnet list package --outdated
+
+# Check for vulnerable packages
+dotnet list package --vulnerable
+```
+
+See [Package Management Guide](docs/PACKAGE_MANAGEMENT.md) for detailed documentation.
 
 ## Development Guide
 
