@@ -2,6 +2,8 @@ version: '3.8'
 
 services:
   # SQL Server for local development
+  # NOTE: The SA_PASSWORD below is for LOCAL DEVELOPMENT ONLY.
+  # For other environments, use Docker secrets or secure environment files.
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2022-latest
     container_name: k12-sqlserver
@@ -75,8 +77,9 @@ services:
       - k12-network
 
   # Dapr Placement Service (for actors)
+  # Use DAPR_VERSION env var to keep this in sync with Dapr package versions (e.g., Directory.Packages.props)
   dapr-placement:
-    image: daprio/dapr:1.15.0
+    image: daprio/dapr:${DAPR_VERSION:-1.15.0}
     container_name: k12-dapr-placement
     command: ["./placement", "-port", "50006"]
     ports:

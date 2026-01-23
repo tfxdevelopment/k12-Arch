@@ -33,7 +33,10 @@ bld/
 *.sln.docstates
 
 # Secrets and environment files
+# Do not commit appsettings files that may contain secrets (connection strings, API keys, etc.)
+appsettings.json
 appsettings.*.json
+# If kept in source control, appsettings.Development.json must only contain safe development defaults (no secrets).
 !appsettings.Development.json
 local.settings.json
 .env
