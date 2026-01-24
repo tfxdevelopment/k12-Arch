@@ -75,7 +75,7 @@ The K12 MyPortal cloud-native architecture documentation initiative has complete
 **Decision:** Containerized monolith approach (ADR-PROP-008)
 **Rationale:**
 - Container Apps scales to 1000 instances (handles 80K users without decomposition)
-- 6-month timeline vs 12-18 months for microservices
+- 3-month Phase 1 timeline vs 12-18 months for microservices
 - +22% cost vs +107% for microservices on AKS
 - Maintains ACID transactions (no distributed sagas)
 
@@ -87,7 +87,7 @@ The K12 MyPortal cloud-native architecture documentation initiative has complete
 - 100 hand-written CRUD functions → 25 JSON configs (80% code reduction)
 - <50ms latency (10x faster than Functions)
 - Hot reload (instant schema changes, no deployment)
-- Integrates with existing RLS security model
+- Claims-based authorization using Entra ID JWT tokens
 
 **Impact:** $9,000/month labor savings (60 developer hours reclaimed)
 
@@ -211,7 +211,7 @@ The K12 MyPortal cloud-native architecture documentation initiative has complete
 1. **Week 1-3 demonstrates feasibility** - 20 comprehensive documents validate technical approach
 2. **Financial case is sound** - 231% ROI with labor savings exceeding infrastructure costs
 3. **Risk is low** - Proven Microsoft stack, incremental migration, enterprise-grade reliability
-4. **Timeline is achievable** - 6-month implementation vs 12-18 for microservices alternative
+4. **Timeline is achievable** - 3-month Phase 1 implementation vs 12-18 for microservices alternative
 5. **Business need is urgent** - Current 30K user ceiling cannot support enrollment growth
 
 **What We're Asking:**
@@ -231,7 +231,7 @@ The K12 MyPortal cloud-native architecture documentation initiative has complete
 ## Supporting Documentation
 
 All 20 completed documents are available at:
-📁 `c:/Projects/CFI/K12/k12-Arch/wiki/09-proposed-architecture/`
+📁 `wiki/09-proposed-architecture/`
 
 **Key Documents for Leadership Review:**
 1. **[EXECUTIVE-BRIEF.md](EXECUTIVE-BRIEF.md)** - 1-page summary with business case

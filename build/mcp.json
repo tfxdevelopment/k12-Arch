@@ -1,0 +1,28 @@
+{
+  "mcpServers": {
+    "microsoft-learn": {
+      "description": "Add trusted and up-to-date content from Microsoft Learn to your AI agent",
+      "enabled": true,
+      "tools": [
+        "microsoft_docs_search",
+        "microsoft_code_sample_search",
+        "microsoft_docs_fetch"
+      ]
+    },
+    "nx-workspace": {
+      "command": "node",
+      "args": [".mcp-servers/nx-mcp/dist/index.js"],
+      "description": "Manage NX workspace operations (build, test, generate)"
+    },
+    "aspire-cli": {
+      "command": "node",
+      "args": [".mcp-servers/aspire-mcp/dist/index.js"],
+      "description": "Manage .NET Aspire operations (run, build, manifest generation)"
+    }
+  },
+  "metadata": {
+    "created": "2025-11-24",
+    "purpose": "MCP server configuration for K12 Architecture Documentation project",
+    "notes": "This configuration enables access to official Microsoft/Azure documentation through the Microsoft Learn MCP server, plus custom NX and Aspire MCP servers for workspace management"
+  }
+}

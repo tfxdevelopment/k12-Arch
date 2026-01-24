@@ -1792,10 +1792,10 @@ Before production launch, validate all reliability features in staging environme
 - [Polly Resilience Framework](https://www.pollydocs.org/)
 
 ### Related K12 Documents
-- [ADR-PROP-001: Container Functions Architecture](c:/Projects/CFI/K12/k12-Arch/wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-001-container-functions.md) - Container Apps rationale
-- [ADR-PROP-008: No Microservices](c:/Projects/CFI/K12/k12-Arch/wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-008-no-microservices.md) - Simplicity over complexity
-- [CONT-02: Environment Design](c:/Projects/CFI/K12/k12-Arch/wiki/09-proposed-architecture/01-container-apps/CONT-02-environment-design.md) - Container Apps environment configuration
-- [EXECUTIVE-BRIEF.md](c:/Projects/CFI/K12/k12-Arch/wiki/09-proposed-architecture/EXECUTIVE-BRIEF.md) - Business case and cost justification
+- [ADR-PROP-001: Container Functions Architecture](../../adr/ADR-PROP-001-container-functions.md) - Container Apps rationale
+- [ADR-PROP-008: No Microservices](../../adr/ADR-PROP-008-no-microservices.md) - Simplicity over complexity
+- [CONT-02: Environment Design](../01-container-apps/CONT-02-environment-design.md) - Container Apps environment configuration
+- [EXECUTIVE-BRIEF.md](../EXECUTIVE-BRIEF.md) - Business case and cost justification
 
 ### Industry Best Practices
 - [Google SRE Book: Chapter 26 - Availability Table](https://sre.google/sre-book/availability-table/)

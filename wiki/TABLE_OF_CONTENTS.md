@@ -3,8 +3,13 @@
 ## Main Wiki
 - [Home](README.md)
 
+## Documentation Health
+- [Documentation Health Report](DOCUMENTATION-HEALTH-REPORT.md)
+- [Incompleteness Scan](DOCUMENTATION-INCOMPLETENESS-SCAN.md)
+
 ## Section 1: Project Overview
 - [Project Overview](01-project-overview/README.md)
+  - [Roadmap](01-project-overview/roadmap/README.md)
   - Project Charter
   - Timeline & Milestones
   - Stakeholders & Governance
@@ -23,6 +28,70 @@
   - Non-Functional Requirements
   - Technology Stack Summary
 
+### Target .NET Structure (In Progress)
+- [Project Structure (Target .NET Monorepo)](02-architecture/PROJECT-STRUCTURE.md)
+- [BFF / Orchestrators](02-architecture/BFF-ORCHESTRATORS.md)
+- [Shared Contracts](02-architecture/CONTRACTS.md)
+- [Repository Organization Issues](02-architecture/REPO-ORGANIZATION-ISSUES.md)
+- [Sensei PDF Concerns Checklist](02-architecture/SENSEI-PDF-CONCERNS.md)
+
+### Standalone Architecture Docs (Checklist)
+- [Backend Architecture](02-architecture/backend/README.md)
+- [Data Architecture](02-architecture/data/README.md)
+
+### Azure Infrastructure
+- [Azure Infrastructure Documentation](02-architecture/azure-infrastructure.md)
+  - Environment Summary (Dev/Test/Staging/Prod)
+  - Resource Inventory (185 resources)
+  - Frontend Applications (Static Web Apps)
+  - API Layer (APIM, App Services)
+  - Database Layer (SQL Servers, Databases)
+  - Storage Layer (Blob, ADLS Gen2)
+  - Security Layer (Key Vault, Managed Identities)
+  - Real-Time & Messaging (SignalR, Service Bus)
+  - Monitoring & Observability
+  - Production DR Architecture
+- [Azure RDS Integration Infrastructure](02-architecture/azure-rds-integration-infrastructure.md)
+  - K12-RDS Communication Flow
+  - Azure Service Bus Configuration
+  - MuleSoft ESB Integration
+  - NC Agency Connections (DMV, DOR, DPI)
+
+### C4 Architecture Diagrams
+- [Architecture Overview (Executive Summary)](02-architecture/c4-diagrams/00-architecture-overview.md)
+  - Executive Summary Diagram
+  - Technology Stack
+  - Environment Pipeline
+  - Four-App Architecture
+  - Security Hub & Spoke Model
+- [C4 Level 1: System Context](02-architecture/c4-diagrams/01-system-context.md)
+  - User Interactions
+  - External System Integrations
+  - System Boundaries
+- [C4 Level 2: Container Diagram](02-architecture/c4-diagrams/02-container-diagram.md)
+  - Web Application (Angular SPA)
+  - API Gateway (APIM)
+  - API Functions (.NET 8)
+  - Database (Azure SQL)
+  - Storage (Blob, ADLS Gen2)
+  - Real-time Service (SignalR)
+  - Data Flow Diagrams
+- [C4 Deployment Diagram](02-architecture/c4-diagrams/03-deployment-diagram.md)
+  - Per-Environment Resource Map
+  - Production Architecture (with DR)
+  - Network Topology
+  - Security Infrastructure
+- [C4 Roster Workflow Context](02-architecture/c4-diagrams/04-roster-workflow-context.md)
+  - System Context for Workflow
+  - Container Interactions
+  - Workflow State Diagram
+  - Deployment View
+- [C4 RDS Integration Context](02-architecture/c4-diagrams/05-rds-integration-context.md)
+  - System Context for RDS
+  - Container Interactions
+  - K12 Rule Engine Architecture
+  - Data Flow Diagrams
+
 ### Architecture Deep-Dives
 - Identity & Access Management
   - [Microsoft Entra ID Hub and Spoke Model](https://cfi-nc.atlassian.net/wiki/spaces/KR/pages/4053696597)
@@ -30,11 +99,49 @@
   - Custom Security Attributes
   - Administrative Units (Delegated Administration)
 
+### Proposed Architecture (Event-Driven)
+- [Operations: Messaging (Azure Service Bus)](09-proposed-architecture/OPS-messaging.md)
+- ADRs (Proposed)
+  - [Standardize on Azure Service Bus](09-proposed-architecture/07-adr-proposed/ADR-PROP-azure-service-bus-standard.md)
+  - [Event Schema & Versioning](09-proposed-architecture/07-adr-proposed/ADR-PROP-event-schema-versioning.md)
+
+### Business Workflows
+- [Workflows Overview](02-architecture/workflows/README.md)
+  - [WF-01: Roster - To Be Certified](02-architecture/workflows/WF-01-roster-to-be-certified.md)
+    - Workflow States & Transitions
+    - Event-Driven Architecture
+    - Azure Durable Functions Design
+    - Proposed Database Schema
+    - Related Workflows
+
+### Analytics Platform (k12-querybuilder)
+- [QueryBuilder Analytics Platform](02-architecture/integrations/QueryBuilder/Data-Platform.md)
+  - .NET Aspire Orchestration
+  - Cube.js Semantic Layer
+  - Trino Query Federation
+  - Metabase Business Intelligence
+  - Query API (.NET 10 Minimal API)
+  - Service Layer Pattern
+  - Rate Limiting & Caching
+  - Security & Validation
+- [QueryBuilder SDK Design](02-architecture/integrations/QueryBuilder/SDK-Design.md)
+  - Pluggable Query Engine Architecture
+  - Integration with DataMapper SemanticLayer
+  - Query Definition Storage (Analytics Schema)
+  - Snapshot & Caching System
+  - Query Sharing & Permissions
+  - API Endpoints & SDK Interfaces
+  - Cube.js & Trino Adapters
+  - Future DBT Integration
+
 ## Section 3: Technical Documentation
 
+### Standards
+- [Standards](04-standards/README.md)
+
 ### Backend (k12-api-enrollment)
-- [Backend README](../../k12-api-enrollment/README.md)
-- [API Setup Guide](../../k12-api-enrollment/README.md#setup)
+- [Backend Repo (k12-api-enrollment)](01-project-overview/external-repositories.md#k12-api-enrollment-primary-backend-api)
+- [API Setup Guide (k12-api-enrollment)](01-project-overview/external-repositories.md#k12-api-enrollment-primary-backend-api)
 - Layered Architecture
   - API Layer (Azure Functions HTTP Triggers)
   - Middleware Layer (Error Handling, Authentication)
@@ -52,8 +159,8 @@
   - Integration Tests (Newman/Postman)
 
 ### Frontend (k12-web-enrollment)
-- [Frontend README](../../k12-web-enrollment/README.md)
-- [Setup Guide](../../k12-web-enrollment/README.md#development-server)
+- [Frontend Repo (k12-web-enrollment)](01-project-overview/external-repositories.md#k12-web-enrollment-angular--nx)
+- [Setup Guide (k12-web-enrollment)](01-project-overview/external-repositories.md#k12-web-enrollment-angular--nx)
 - Application Structure
   - Admin Portal (port 4200)
   - Household Enrollment (port 4300)
@@ -68,8 +175,11 @@
 - [UI Component Strategy](https://cfi-nc.atlassian.net/wiki/spaces/KR/pages/4461035529)
 - Testing (Jest)
 
-### Infrastructure (k12-infra)
-- [Terraform README](../../k12-infra/terraform/README.md)
+### Frontend (Standalone Docs)
+- [Frontend Architecture Docs](05-development/frontend/README.md)
+
+### Infrastructure
+> Infrastructure documentation (see Azure DevOps k12-infra repository)
 - Environment Management
   - Development
   - Testing
@@ -82,8 +192,8 @@
   - Data (SQL, Storage)
   - Networking (VNet, APIM)
 
-### API Testing (k12-test-api-postman)
-- [Testing README](../../k12-test-api-postman/README.md)
+### API Testing
+> API testing documentation (see Azure DevOps k12-test-api-postman repository)
 - Newman CLI Setup
 - Collection Structure
   - Development Collections
@@ -195,6 +305,12 @@
   - Common Development Tasks
   - Troubleshooting
 
+## Section 6.5: Deployment (Standalone Docs)
+- [Deployment](07-deployment/README.md)
+
+## Section 6.6: Operations (Standalone Docs)
+- [Operations](06-operations/README.md)
+
 ## Section 6: Operations & Support
 
 ### Production Support
@@ -260,6 +376,7 @@
 - NC DMV (Residency Validation)
 - NC Department of Revenue (Income Validation)
 - NC DPI (Student Data - Planned)
+- NC RDS (Residency Determination Service via MuleSoft) - [INT-07](02-architecture/integrations/INT-07-rds-residency-determination-service.md)
 
 ### Technology Versions
 | Component | Version |
@@ -302,5 +419,5 @@
 
 ---
 
-*Last Updated: November 15, 2025*
+*Last Updated: December 11, 2025*
 *Maintained by: K12 Technical Team*

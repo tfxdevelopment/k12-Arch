@@ -1,0 +1,13 @@
+[{
+    "k12Id": "10000001982", //K12 Parent Id - will be return in the response
+    "academicYear": "2023-2025", //Academic Year - will be return in the response
+    "batchId": "1", //K12 Sequence Number for subsequent calls - will be return in the response
+    "firstName": "Ricky",
+    "lastName": "Bobby",
+    "ssn": "012345678",
+    "dmvCustomerId": "0000100000",
+    "dmvState": "NC",
+    "dob": "1981-08-11",
+    "validationDate": "2025-07-01", //Date for which validation need to run for
+    "timestamp": 1754933504000 //Epoch in ms - Request timestamp
+}]

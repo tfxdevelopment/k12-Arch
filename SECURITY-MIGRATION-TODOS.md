@@ -188,15 +188,16 @@ cube(`EnrollmentApplications`, {
 
 ## 🛠️ Implementation Checklist
 
-### Phase 1: Document Updates (Week 1)
-- [ ] Update WA-02-security.md (remove RLS sections, add claims-based auth)
-- [ ] Create SEC-03-PROPOSED-claims-based-authorization.md (new document)
-- [ ] Update API-01-dab-implementation.md (DAB policy examples)
-- [ ] Update API-03-analytics-apis.md (CubeJS security context)
-- [ ] Update ANALYTICS-01-data-federation.md (remove Trino RLS workarounds)
-- [ ] Update EXECUTIVE-BRIEF.md (security statements)
+### Phase 1: Document Updates (PI 4 Week 1) - IN PROGRESS ✅
+- [x] Update WA-02-security.md (remove RLS sections, add claims-based auth)
+- [x] Update API-01-dab-implementation.md (DAB policy examples)
+- [x] Update ANALYTICS-01-data-federation.md (remove Trino RLS workarounds)
+- [x] Update ANALYTICS-02-semantic-layer.md (CubeJS claims-based security)
+- [x] Update EXECUTIVE-BRIEF.md (security statements, 3-month timeline)
+- [ ] Update API-03-analytics-apis.md (CubeJS security context) - IN PROGRESS
 - [ ] Update EXECUTIVE-PROGRESS-REPORT.md (security statements)
 - [ ] Update EXECUTIVE-PRESENTATION.md (Slides 8, 17)
+- [ ] Create SEC-03-PROPOSED-claims-based-authorization.md (new document)
 
 ### Phase 2: Code Implementation (Week 2-3)
 - [ ] Create `EntraAuthorizationMiddleware` (.NET)

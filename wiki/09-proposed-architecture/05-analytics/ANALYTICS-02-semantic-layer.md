@@ -1,9 +1,15 @@
 # ANALYTICS-02: Semantic Layer Design with CubeJS
 
 **Status:** Proposed
-**Last Updated:** 2025-11-24
+**Last Updated:** 2025-12-08
 **Target Audience:** Data Engineers, Analytics Developers, BI Developers, Frontend Engineers
-**Related Documents:** [ADR-PROP-005](../07-adr-proposed/ADR-PROP-005-cubejs.md), [ADR-PROP-004](../07-adr-proposed/ADR-PROP-004-trino.md), [API-03](../03-hybrid-api/API-03-analytics-apis.md)
+**Related Documents:**
+- [ADR-PROP-005](../07-adr-proposed/ADR-PROP-005-cubejs.md) (CubeJS)
+- [ADR-PROP-004](../07-adr-proposed/ADR-PROP-004-trino.md) (Trino)
+- [ADR-009](../../adr/ADR-009-analytics-query-engine-abstraction.md) (Query Engine Abstraction)
+- [ADR-010](../../adr/ADR-010-embedded-analytics-components.md) (Embedded Analytics Components)
+- [ADR-011](../../adr/ADR-011-azure-data-api-builder.md) (Azure Data API Builder)
+- [QueryBuilder SDK Design](../../02-architecture/integrations/QueryBuilder/SDK-Design.md)
 
 ---
 
@@ -13,7 +19,7 @@
 2. [Semantic Layer Architecture](#semantic-layer-architecture)
 3. [Data Modeling Best Practices](#data-modeling-best-practices)
 4. [Pre-Aggregation Strategies](#pre-aggregation-strategies)
-5. [Multi-Tenant Row-Level Security](#multi-tenant-row-level-security)
+5. [Multi-Tenant Claims-Based Security](#multi-tenant-claims-based-security)
 6. [Caching Architecture with Redis](#caching-architecture-with-redis)
 7. [Dashboard Embedding Patterns](#dashboard-embedding-patterns)
 8. [Production Data Models](#production-data-models)
@@ -24,11 +30,17 @@
 
 ## Executive Summary
 
+> **Update (December 2025):** This document is now complemented by newer architectural decisions:
+> - **ADR-009**: Introduces `IQueryEngine` abstraction with CubeJS as the primary engine
+> - **ADR-010 Option 6**: Recommends PostgreSQL-enhanced architecture with Cube.js → PostgreSQL sync
+> - Custom Angular components that mirror Metabase SDK patterns (no React dependency)
+> - See [QueryBuilder SDK Design](../../02-architecture/integrations/QueryBuilder/SDK-Design.md) for implementation
+
 This document defines the **CubeJS semantic layer architecture** for K12 MyPortal, providing a unified metrics layer that delivers:
 
 - **70% query performance improvement** through intelligent pre-aggregations
 - **Single source of truth** for business metrics across all dashboards
-- **Multi-tenant row-level security** with Entra ID integration
+- **Multi-tenant claims-based security** with Entra ID integration
 - **Sub-100ms response times** for cached dashboard queries
 - **Real-time and historical analytics** from Trino data federation
 
@@ -610,7 +622,7 @@ preAggregations: {
 
 ---
 
-## Multi-Tenant Row-Level Security
+## Multi-Tenant Claims-Based Security
 
 ### Requirements
 
@@ -662,7 +674,7 @@ module.exports = {
 };
 ```
 
-### Row-Level Security in Cubes
+### Claims-Based Security in Cubes
 
 #### Pattern 1: Security Context in SQL
 
@@ -2357,7 +2369,11 @@ This semantic layer design provides:
 - [ADR-PROP-004: Trino Data Federation](../07-adr-proposed/ADR-PROP-004-trino.md)
 - [ADR-PROP-005: CubeJS Semantic Layer](../07-adr-proposed/ADR-PROP-005-cubejs.md)
 - [API-03: Analytics APIs](../03-hybrid-api/API-03-analytics-apis.md)
+- [ADR-009: Analytics Query Engine Abstraction](../../adr/ADR-009-analytics-query-engine-abstraction.md)
+- [ADR-010: Embedded Analytics Components](../../adr/ADR-010-embedded-analytics-components.md)
+- [ADR-011: Azure Data API Builder](../../adr/ADR-011-azure-data-api-builder.md)
+- [QueryBuilder SDK Design](../../02-architecture/integrations/QueryBuilder/SDK-Design.md)
 
-**Last Updated:** 2025-11-24
+**Last Updated:** 2025-12-08
 **Document Owner:** CFI Architecture Team
-**Status:** Week 3 Deliverable (Analytics Deep-Dive)
+**Status:** Week 3 Deliverable (Analytics Deep-Dive) - Updated with December 2025 ADRs

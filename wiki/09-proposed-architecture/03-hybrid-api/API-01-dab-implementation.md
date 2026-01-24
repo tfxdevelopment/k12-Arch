@@ -3,7 +3,7 @@
 **Status:** Proposed
 **Last Updated:** 2025-11-24
 **Target Audience:** Backend Developers, DevOps Engineers
-**Related ADRs:** [ADR-PROP-003](../02-adrs/ADR-PROP-003-data-api-builder.md)
+**Related ADRs:** [ADR-PROP-003](../../adr/ADR-PROP-003-data-api-builder.md)
 
 ## Overview
 
@@ -13,7 +13,7 @@ This guide provides complete implementation instructions for Data API Builder (D
 
 - **Zero-code CRUD APIs**: Auto-generated REST and GraphQL endpoints from database schema
 - **GraphQL Relationships**: Single-request complex queries (eliminating N+1 problems)
-- **Row-Level Security**: Native SQL session context integration
+- **Claims-Based Authorization**: DAB policy enforcement using JWT claims
 - **Performance**: Sub-50ms p95 latency for simple operations
 - **Developer Productivity**: Eliminates boilerplate repository/controller code
 
@@ -965,43 +965,69 @@ Create `c:/Projects/CFI/K12/k12-api-dab/dab-config.json`:
 }
 ```
 
-## Row-Level Security Integration
+## Claims-Based Authorization (Application Layer)
 
-### SQL Session Context Setup
+### DAB Policy Configuration
 
-DAB automatically sets session context variables for RLS enforcement:
+DAB enforces authorization using JWT claims **before** executing SQL queries (no database RLS):
 
-```sql
--- DAB sets these automatically from JWT claims
-EXEC sp_set_session_context @key = N'UserId', @value = '12345-guid';
-EXEC sp_set_session_context @key = N'Role', @value = 'authenticated';
-EXEC sp_set_session_context @key = N'HouseholdId', @value = '67890-guid';
+```json
+{
+  "entities": {
+    "Student": {
+      "source": "Enrollment.Students",
+      "permissions": [
+        {
+          "role": "Admin",
+          "actions": ["create", "read", "update", "delete"]
+        },
+        {
+          "role": "Household",
+          "actions": ["read"],
+          "policy": {
+            "database": "@item.HouseholdId eq @claims.householdId"
+          }
+        }
+      ]
+    },
+    "Application": {
+      "source": "Enrollment.Applications",
+      "permissions": [
+        {
+          "role": "Admin",
+          "actions": ["*"]
+        },
+        {
+          "role": "Household",
+          "actions": ["create", "read", "update"],
+          "policy": {
+            "database": "@item.HouseholdId eq @claims.householdId"
+          }
+        },
+        {
+          "role": "Provider",
+          "actions": ["read"],
+          "policy": {
+            "database": "@item.ProviderId eq @claims.providerId"
+          }
+        }
+      ]
+    }
+  }
+}
 ```
 
-### RLS Policy Example
+**How It Works:**
+1. DAB validates JWT token (Entra ID)
+2. Extracts claims from token (`householdId`, `providerId`, `role`)
+3. Applies policy filter **in DAB layer** before SQL execution
+4. Generates SQL with WHERE clause: `WHERE HouseholdId = 'guid-from-claims'`
 
-```sql
--- RLS policy for Students table
-CREATE SECURITY POLICY StudentAccessPolicy
-ADD FILTER PREDICATE dbo.fn_StudentAccessPredicate(HouseholdId)
-ON dbo.Students
-WITH (STATE = ON);
-
-GO
-
--- Predicate function
-CREATE FUNCTION dbo.fn_StudentAccessPredicate(@HouseholdId UNIQUEIDENTIFIER)
-RETURNS TABLE
-WITH SCHEMABINDING
-AS
-RETURN SELECT 1 AS AccessResult
-WHERE
-    -- Admin role has full access
-    SESSION_CONTEXT(N'Role') = 'admin'
-    OR
-    -- User can only see students in their household
-    @HouseholdId = CAST(SESSION_CONTEXT(N'HouseholdId') AS UNIQUEIDENTIFIER);
-```
+**Benefits:**
+- ✅ No SQL session context required
+- ✅ Works with GraphQL and REST
+- ✅ Filters applied before database query (performance optimization)
+- ✅ Portable (can add MongoDB, Cosmos DB sources later)
 
 ## REST API Endpoints
 
@@ -1010,8 +1036,9 @@ DAB auto-generates RESTful endpoints:
 ### Students
 
 ```bash
-# GET all students (filtered by RLS)
+# GET all students (filtered by DAB claims policy)
 GET /api/students
+Authorization: Bearer <JWT-token-with-claims>
 
 # GET student by ID
 GET /api/students/student_id/{id}
@@ -1049,8 +1076,9 @@ DELETE /api/students/student_id/{id}
 ### Applications
 
 ```bash
-# GET applications for authenticated user (RLS enforced)
+# GET applications for authenticated user (DAB claims policy enforced)
 GET /api/applications
+Authorization: Bearer <JWT-token-with-claims>
 
 # GET application with related data
 GET /api/applications?$expand=student,school,provider,awards
@@ -1837,8 +1865,8 @@ INCLUDE (ApplicationId, SchoolId, SubmittedDate);
 
 ## References
 
-- [ADR-PROP-003: Data API Builder Decision](../02-adrs/ADR-PROP-003-data-api-builder.md)
-- [Architecture Overview](../01-architecture-overview.md)
-- [Database Schema](../../02-architecture/database-schema-documentation.md)
-- [Security Model](../../02-architecture/security/hub-and-spoke-security-model.md)
+- [ADR-PROP-003: Data API Builder Decision](../../adr/ADR-PROP-003-data-api-builder.md)
+- [Architecture Overview](../../02-architecture/README.md)
+- [Database Schema](../../Database-Schema-Documentation.md)
+- [Security Model](../../02-architecture/security/hub-spoke-security-model.md)
 - [DAB Official Docs](https://learn.microsoft.com/azure/data-api-builder/)

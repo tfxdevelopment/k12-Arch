@@ -1,3 +1,10 @@
+# Redirect: ADR-PROP-002 (moved)
+
+This ADR has moved to the canonical ADR folder:
+
+- [ADR-PROP-002-aspire.md](../../adr/ADR-PROP-002-aspire.md)
+
+This file is a redirect stub preserved for link compatibility.
 # ADR-PROP-002: .NET Aspire for Cloud-Native Orchestration
 
 **Status:** ✅ Proposed
