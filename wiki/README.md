@@ -32,14 +32,14 @@ The K12 MyPortal project is a comprehensive web-based system for administering t
 - Integration architecture
 - Security architecture (Entra ID Hub & Spoke)
 
-### 3. [Technical Documentation](./03-technical/README.md)
+### 3. Technical Documentation
 - Backend (Azure Functions, .NET 8)
 - Frontend (Angular 19, Nx monorepo)
 - Database (Azure SQL, schemas)
 - Infrastructure as Code (Terraform)
 - API documentation
 
-### 4. [Business Requirements](./04-requirements/README.md)
+### 4. Business Requirements
 - Functional requirements
 - Process flows (ESA+, Opportunity Scholarship)
 - Standard Operating Procedures (SOPs)
@@ -58,7 +58,7 @@ The K12 MyPortal project is a comprehensive web-based system for administering t
 - Monitoring and alerting
 - Security and compliance
 
-### 7. [Program Management](./07-program-management/README.md)
+### 7. Program Management
 - RAID logs (Risks, Assumptions, Issues, Decisions)
 - Sprint planning and roadmap
 - Communication plan
@@ -67,10 +67,11 @@ The K12 MyPortal project is a comprehensive web-based system for administering t
 ## Quick Links
 
 ### Repository Documentation
-- [API Backend README](../../k12-api-enrollment/README.md)
-- [Web Frontend README](../../k12-web-enrollment/README.md)
-- [Infrastructure README](../../k12-infra/terraform/README.md)
-- [API Testing README](../../k12-test-api-postman/README.md)
+- [External Repositories](./01-project-overview/external-repositories.md)
+  - Backend API: `k12-api-enrollment`
+  - Frontend: `k12-web-enrollment`
+  - Infrastructure: `k12-infra`
+  - API testing: `k12-test-api-postman`
 
 ### External Resources
 - [Confluence Space](https://cfi-nc.atlassian.net/wiki/spaces/KR/overview)
@@ -133,6 +134,10 @@ This wiki is specifically curated for enterprise architects who need to:
 - Each section has its own README with detailed subsections
 - Cross-references link to relevant source code and Confluence pages
 - Code examples include file paths with line numbers for easy reference
+
+### About wikifull.md
+
+- [wikifull.md](./wikifull.md) is an export/aggregate artifact. Prefer curated pages (like section READMEs and the Table of Contents) for primary navigation.
 
 ## Contributing
 

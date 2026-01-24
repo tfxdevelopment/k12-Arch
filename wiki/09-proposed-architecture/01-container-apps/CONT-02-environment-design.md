@@ -216,13 +216,15 @@ ContainerAppConsoleLogs_CL
     by bin(TimeGenerated, 5m)
 ```
 
-### 3. Dapr Control Plane
+### 3. Dapr Control Plane (All 8 Building Blocks)
 
-**Purpose:** Service mesh for mTLS encryption, pub/sub, service discovery, state management
+**Purpose:** Unified abstraction layer for ALL cross-cutting concerns. Dapr is built into Container Apps and provides identical behavior to local development with Aspire.
 
-**Auto-Configured Components:**
-- **Placement Service** - Manages actor placement (not used in K12, but available)
-- **Operator** - Manages Dapr component updates (state stores, pub/sub)
+> **Important:** K12 uses **all 8 Dapr building blocks** as documented in [ADR-PROP-006](../07-adr-proposed/ADR-PROP-006-dapr.md). This provides cloud-agnostic abstractions that work identically in local development and production.
+
+**Auto-Configured Control Plane:**
+- **Placement Service** - Manages actor placement and workflow state
+- **Operator** - Manages Dapr component updates
 - **Sidecar Injector** - Injects Dapr sidecar into each container replica
 
 **Configuration:**
@@ -238,9 +240,16 @@ az containerapp env create \
   --dapr-instrumentation-key $APP_INSIGHTS_INSTRUMENTATION_KEY
 ```
 
-**Dapr Components (Defined in Environment):**
+---
 
-**State Store (Redis):**
+#### All 8 Dapr Components (Production Configuration)
+
+**1. Service Invocation (No Component Needed)**
+Service invocation is automatic when Dapr is enabled. Provides mTLS, retries, and circuit breakers.
+
+---
+
+**2. State Store (Azure Cache for Redis)**
 ```yaml
 apiVersion: dapr.io/v1alpha1
 kind: Component
@@ -258,10 +267,19 @@ spec:
         name: redis-password
         key: password
     - name: enableTLS
-      value: true
+      value: "true"
+    - name: actorStateStore
+      value: "true"
+    - name: keyPrefix
+      value: k12
+scopes:
+  - k12-functions
+  - k12-dab
 ```
 
-**Pub/Sub (Azure Service Bus):**
+---
+
+**3. Pub/Sub (Azure Service Bus)**
 ```yaml
 apiVersion: dapr.io/v1alpha1
 kind: Component
@@ -269,14 +287,189 @@ metadata:
   name: pubsub
   namespace: k12-prod-env
 spec:
-  type: pubsub.azure.servicebus
+  type: pubsub.azure.servicebus.topics
   version: v1
   metadata:
     - name: connectionString
       secretKeyRef:
         name: servicebus-connection
         key: connectionString
+    - name: maxDeliveryCount
+      value: "5"
+    - name: lockDurationInSec
+      value: "60"
+    - name: maxConcurrentHandlers
+      value: "10"
+scopes:
+  - k12-functions
 ```
+
+---
+
+**4. Bindings (Azure Blob Storage)**
+```yaml
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: documents
+  namespace: k12-prod-env
+spec:
+  type: bindings.azure.blobstorage
+  version: v1
+  metadata:
+    - name: storageAccount
+      value: k12documents
+    - name: storageAccessKey
+      secretKeyRef:
+        name: blob-storage
+        key: accessKey
+    - name: container
+      value: enrollment-documents
+    - name: decodeBase64
+      value: "true"
+scopes:
+  - k12-functions
+```
+
+**Bindings (SendGrid Email)**
+```yaml
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: email
+  namespace: k12-prod-env
+spec:
+  type: bindings.twilio.sendgrid
+  version: v1
+  metadata:
+    - name: apiKey
+      secretKeyRef:
+        name: sendgrid
+        key: apiKey
+    - name: emailFrom
+      value: noreply@ncseaa.edu
+    - name: emailFromName
+      value: NC SEAA K12 Portal
+scopes:
+  - k12-functions
+```
+
+---
+
+**5. Secrets (Azure Key Vault)**
+```yaml
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: secrets
+  namespace: k12-prod-env
+spec:
+  type: secretstores.azure.keyvault
+  version: v1
+  metadata:
+    - name: vaultName
+      value: k12-keyvault-prod
+    - name: azureClientId
+      value: "{managed-identity-client-id}"
+auth:
+  secretStore: kubernetes
+```
+
+---
+
+**6. Configuration (Azure App Configuration)**
+```yaml
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: config
+  namespace: k12-prod-env
+spec:
+  type: configuration.azure.appconfig
+  version: v1
+  metadata:
+    - name: host
+      value: k12-appconfig.azconfig.io
+    - name: connectionString
+      secretKeyRef:
+        name: appconfig
+        key: connectionString
+    - name: maxRetries
+      value: "3"
+    - name: subscribePollInterval
+      value: "30s"
+scopes:
+  - k12-functions
+```
+
+---
+
+**7. Workflows (Dapr Workflow Runtime)**
+Dapr Workflows are enabled automatically in Container Apps. No component configuration needed.
+
+```bash
+# Enable workflows on container app
+az containerapp update \
+  --name k12-functions \
+  --resource-group k12-prod-rg \
+  --dapr-enable-api-logging true
+```
+
+---
+
+**8. Jobs (Dapr Cron Binding)**
+```yaml
+# Daily audit cleanup job
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: job-audit-cleanup
+  namespace: k12-prod-env
+spec:
+  type: bindings.cron
+  version: v1
+  metadata:
+    - name: schedule
+      value: "0 0 2 * * *"  # Daily at 2 AM
+    - name: route
+      value: /jobs/audit-cleanup
+scopes:
+  - k12-functions
+---
+# Weekly enrollment reminder (Monday 9 AM)
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: job-enrollment-reminder
+  namespace: k12-prod-env
+spec:
+  type: bindings.cron
+  version: v1
+  metadata:
+    - name: schedule
+      value: "0 0 9 * * 1"
+    - name: route
+      value: /jobs/enrollment-reminder
+scopes:
+  - k12-functions
+```
+
+---
+
+#### Dapr Component Summary
+
+| Building Block | Component Name | Azure Service | Purpose |
+|---------------|---------------|---------------|---------|
+| Service Invocation | (automatic) | Dapr sidecar | mTLS, retries |
+| State Management | `statestore` | Azure Cache for Redis | Session cache |
+| Pub/Sub | `pubsub` | Azure Service Bus | Event messaging |
+| Bindings | `documents`, `email` | Blob Storage, SendGrid | External systems |
+| Secrets | `secrets` | Azure Key Vault | Secure storage |
+| Configuration | `config` | Azure App Configuration | Dynamic settings |
+| Workflows | (automatic) | Dapr runtime | Orchestration |
+| Jobs | `job-*` | Cron binding | Scheduled tasks |
+
+See [CONT-06: Dapr Integration](CONT-06-dapr-integration.md) for detailed usage examples and code patterns.
 
 ### 4. Managed Identity
 

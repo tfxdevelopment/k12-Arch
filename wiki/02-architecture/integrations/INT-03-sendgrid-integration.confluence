@@ -1,0 +1,1290 @@
+<h1>INT-03: SendGrid Integration</h1>
+<p><strong>Integration ID:</strong> INT-03<br><strong>System:</strong> SendGrid Email Delivery Platform<br><strong>Type:</strong> External REST API<br><strong>Classification:</strong> Business Critical<br><strong>Status:</strong> Active (Production)<br><strong>Last Updated:</strong> 2025-01-15</p>
+<h2>Table of Contents</h2>
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#integration-architecture">Integration Architecture</a></li>
+<li><a href="#api-specifications">API Specifications</a></li>
+<li><a href="#data-flow">Data Flow</a></li>
+<li><a href="#implementation">Implementation</a></li>
+<li><a href="#error-handling">Error Handling</a></li>
+<li><a href="#security">Security</a></li>
+<li><a href="#monitoring--logging">Monitoring &amp; Logging</a></li>
+<li><a href="#testing-strategy">Testing Strategy</a></li>
+<li><a href="#common-issues--troubleshooting">Common Issues &amp; Troubleshooting</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+<hr>
+<h2>Overview</h2>
+<h3>Purpose</h3>
+<p>SendGrid is the <strong>primary email delivery platform</strong> for the NC SEAA K-12 Scholarship Management System. It handles all transactional and operational email communications including:</p>
+<ul>
+<li><strong>Transactional Emails</strong>: Account creation, password resets, verification codes</li>
+<li><strong>Application Notifications</strong>: Application status updates, approval/denial notifications</li>
+<li><strong>Award Communications</strong>: Award letters, disbursement notifications</li>
+<li><strong>Document Alerts</strong>: Signature requests, document completion notices</li>
+<li><strong>Provider Communications</strong>: Invoice notifications, payment confirmations</li>
+<li><strong>System Alerts</strong>: Security alerts, compliance reminders, deadline notifications</li>
+<li><strong>Marketing Campaigns</strong>: Program announcements, enrollment reminders (future)</li>
+<li><strong>Email Templates</strong>: Branded, responsive HTML templates with dynamic content</li>
+<li><strong>Delivery Tracking</strong>: Open rates, click-through rates, bounce handling</li>
+<li><strong>Suppression Management</strong>: Unsubscribes, bounces, spam complaints</li>
+</ul>
+<h3>Business Context</h3>
+<p>SendGrid provides MyPortal with:</p>
+<ol>
+<li><strong>Reliable Delivery</strong>: 99.9% SLA with redundant infrastructure</li>
+<li><strong>High Throughput</strong>: Handle 50,000+ emails/day during peak enrollment</li>
+<li><strong>Deliverability</strong>: Industry-leading inbox placement rates (&gt;98%)</li>
+<li><strong>Template Management</strong>: Centralized, version-controlled email templates</li>
+<li><strong>Analytics</strong>: Real-time email engagement metrics</li>
+<li><strong>Compliance</strong>: CAN-SPAM Act compliance, automatic unsubscribe handling</li>
+<li><strong>Security</strong>: SPF, DKIM, DMARC authentication for email spoofing prevention</li>
+</ol>
+<h3>Integration Scope</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>MyPortal Responsibility</th>
+<th>SendGrid Responsibility</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Email Composition</td>
+<td>Generate email content and data</td>
+<td>Apply template rendering</td>
+</tr>
+<tr>
+<td>Sending</td>
+<td>Trigger send via API</td>
+<td>Deliver to recipient inbox</td>
+</tr>
+<tr>
+<td>Template Management</td>
+<td>Define template variables</td>
+<td>Store and render templates</td>
+</tr>
+<tr>
+<td>Delivery Tracking</td>
+<td>Display status in UI</td>
+<td>Track delivery, opens, clicks</td>
+</tr>
+<tr>
+<td>Bounce Handling</td>
+<td>Process webhook events</td>
+<td>Detect bounces and report</td>
+</tr>
+<tr>
+<td>Unsubscribe Management</td>
+<td>Update user preferences</td>
+<td>Process unsubscribe requests</td>
+</tr>
+<tr>
+<td>Analytics</td>
+<td>Dashboard visualization</td>
+<td>Collect engagement metrics</td>
+</tr>
+</tbody></table>
+<h3>Key Metrics</h3>
+<ul>
+<li><strong>Email Volume</strong>: 1.2M emails/year (~50,000/day peak)</li>
+<li><strong>Delivery Rate</strong>: 99.2% (industry average: 95%)</li>
+<li><strong>Open Rate</strong>: 42% (industry average: 21%)</li>
+<li><strong>Click-Through Rate</strong>: 8.5% (industry average: 2.6%)</li>
+<li><strong>Bounce Rate</strong>: 0.8% (target: &lt;2%)</li>
+<li><strong>Spam Complaint Rate</strong>: 0.02% (target: &lt;0.1%)</li>
+<li><strong>API Call Volume</strong>: ~65,000 calls/month (800 req/min peak)</li>
+<li><strong>SLA</strong>: 99.9% uptime, &lt;500ms response time</li>
+</ul>
+<hr>
+<h2>Integration Architecture</h2>
+<h3>High-Level Architecture</h3>
+<pre><code class="language-mermaid">graph TB
+    subgraph &quot;MyPortal Ecosystem&quot;
+        API[K12 API&lt;br/&gt;Azure Functions]
+        DB[(Azure SQL&lt;br/&gt;Database)]
+        QUEUE[Azure Storage&lt;br/&gt;Queue]
+        KV[Azure Key Vault&lt;br/&gt;API Keys]
+    end
+
+    subgraph &quot;SendGrid Infrastructure&quot;
+        SG_API[SendGrid API&lt;br/&gt;REST Endpoints]
+        SG_SMTP[SendGrid SMTP&lt;br/&gt;Relay]
+        SG_WEBHOOK[SendGrid&lt;br/&gt;Webhooks]
+        SG_TEMPLATES[SendGrid&lt;br/&gt;Template Engine]
+    end
+
+    subgraph &quot;Email Recipients&quot;
+        PARENT[Parents]
+        PROVIDER[Providers]
+        ADMIN[Admins]
+    end
+
+    API --&gt;|1. Get API Key| KV
+    API --&gt;|2. Queue Email| QUEUE
+    QUEUE --&gt;|3. Dequeue| API
+    API --&gt;|4. Send Email| SG_API
+    SG_API --&gt;|5. Render Template| SG_TEMPLATES
+    SG_TEMPLATES --&gt;|6. Deliver| SG_SMTP
+    SG_SMTP --&gt;|7. Send| PARENT
+    SG_SMTP --&gt;|8. Send| PROVIDER
+    SG_WEBHOOK --&gt;|9. Delivery Event| API
+    API --&gt;|10. Update Status| DB
+
+    style API fill:#0078d4
+    style SG_API fill:#1a82e2
+</code></pre>
+<h3>Component Responsibilities</h3>
+<h4>MyPortal API Layer</h4>
+<ul>
+<li><strong>API/Functions/EmailFunctions.cs</strong>: Azure Function triggers for email operations</li>
+<li><strong>Application/Services/EmailService.cs</strong>: Business logic for email composition</li>
+<li><strong>Infrastructure/HttpClients/SendGridClient.cs</strong>: HTTP client for SendGrid API</li>
+<li><strong>Domain/Entities/Email.cs</strong>: Domain model for email messages</li>
+</ul>
+<h4>SendGrid API Layer</h4>
+<ul>
+<li><strong>Base URL (Production)</strong>: <code>https://api.sendgrid.com/v3</code></li>
+<li><strong>Authentication</strong>: Bearer token (API Key in <code>Authorization</code> header)</li>
+<li><strong>Rate Limits</strong>: No strict rate limit, burst protection advised</li>
+</ul>
+<h3>Email Processing Flow</h3>
+<pre><code class="language-mermaid">stateDiagram-v2
+    [*] --&gt; Queued: Queue Email
+    Queued --&gt; Processing: Dequeue
+    Processing --&gt; Sent: SendGrid Accepted
+    Processing --&gt; Failed: SendGrid Rejected
+    Sent --&gt; Delivered: Recipient Inbox
+    Sent --&gt; Bounced: Invalid Email
+    Sent --&gt; Blocked: Spam Filter
+    Delivered --&gt; Opened: Recipient Opens
+    Opened --&gt; Clicked: Link Clicked
+    Failed --&gt; Retry: Transient Error
+    Retry --&gt; Processing: Exponential Backoff
+    Retry --&gt; Dead: Max Retries Exceeded
+
+    Delivered --&gt; [*]
+    Bounced --&gt; [*]
+    Blocked --&gt; [*]
+    Dead --&gt; [*]
+</code></pre>
+<h3>Email Queue Strategy</h3>
+<p>MyPortal uses <strong>Azure Storage Queues</strong> for asynchronous email processing:</p>
+<table>
+<thead>
+<tr>
+<th>Queue</th>
+<th>Purpose</th>
+<th>Processing Rate</th>
+<th>Max Retries</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>emails-transactional</code></td>
+<td>Urgent emails (password reset)</td>
+<td>100/min</td>
+<td>3</td>
+</tr>
+<tr>
+<td><code>emails-notification</code></td>
+<td>Application status updates</td>
+<td>50/min</td>
+<td>5</td>
+</tr>
+<tr>
+<td><code>emails-bulk</code></td>
+<td>Batch communications</td>
+<td>500/min</td>
+<td>2</td>
+</tr>
+</tbody></table>
+<p><strong>Benefits:</strong></p>
+<ul>
+<li><strong>Decoupling</strong>: API responds immediately, email sent asynchronously</li>
+<li><strong>Rate Limiting</strong>: Control SendGrid API call rate</li>
+<li><strong>Retry Logic</strong>: Automatic retry on transient failures</li>
+<li><strong>Priority</strong>: Separate queues for different email types</li>
+</ul>
+<hr>
+<h2>API Specifications</h2>
+<h3>Authentication</h3>
+<p>SendGrid uses <strong>API Key authentication</strong> with Bearer token.</p>
+<h4>API Key Configuration</h4>
+<pre><code class="language-http">POST https://api.sendgrid.com/v3/mail/send
+Authorization: Bearer {YOUR_API_KEY}
+Content-Type: application/json
+</code></pre>
+<p><strong>Key Permissions:</strong></p>
+<ul>
+<li><code>mail.send</code>: Send emails</li>
+<li><code>templates.read</code>: Read email templates</li>
+<li><code>stats.read</code>: Access analytics</li>
+</ul>
+<h3>API Endpoints</h3>
+<h4>1. Send Email (Transactional)</h4>
+<p><strong>Endpoint:</strong> <code>POST /v3/mail/send</code></p>
+<p><strong>Purpose:</strong> Send a single transactional email with dynamic content.</p>
+<p><strong>Request:</strong></p>
+<pre><code class="language-json">{
+  &quot;personalizations&quot;: [
+    {
+      &quot;to&quot;: [
+        {
+          &quot;email&quot;: &quot;parent@example.com&quot;,
+          &quot;name&quot;: &quot;John Smith&quot;
+        }
+      ],
+      &quot;dynamic_template_data&quot;: {
+        &quot;student_name&quot;: &quot;Emily Smith&quot;,
+        &quot;application_id&quot;: &quot;APP-2024-001234&quot;,
+        &quot;application_status&quot;: &quot;Approved&quot;,
+        &quot;award_amount&quot;: &quot;$7,500&quot;,
+        &quot;next_steps&quot;: &quot;Check your email for the award letter and disbursement timeline.&quot;
+      }
+    }
+  ],
+  &quot;from&quot;: {
+    &quot;email&quot;: &quot;noreply@myportal.nc.gov&quot;,
+    &quot;name&quot;: &quot;NC SEAA MyPortal&quot;
+  },
+  &quot;reply_to&quot;: {
+    &quot;email&quot;: &quot;support@myportal.nc.gov&quot;,
+    &quot;name&quot;: &quot;MyPortal Support&quot;
+  },
+  &quot;template_id&quot;: &quot;d-abc123def456ghi789&quot;,
+  &quot;categories&quot;: [&quot;application&quot;, &quot;approval&quot;],
+  &quot;custom_args&quot;: {
+    &quot;application_id&quot;: &quot;APP-2024-001234&quot;,
+    &quot;student_id&quot;: &quot;STU-2024-001234&quot;,
+    &quot;environment&quot;: &quot;production&quot;
+  },
+  &quot;tracking_settings&quot;: {
+    &quot;click_tracking&quot;: {
+      &quot;enable&quot;: true,
+      &quot;enable_text&quot;: false
+    },
+    &quot;open_tracking&quot;: {
+      &quot;enable&quot;: true,
+      &quot;substitution_tag&quot;: &quot;%open-track%&quot;
+    }
+  }
+}
+</code></pre>
+<p><strong>Response (202 Accepted):</strong></p>
+<pre><code class="language-http">HTTP/1.1 202 Accepted
+X-Message-Id: msg-abc123def456ghi789
+Content-Length: 0
+</code></pre>
+<p><strong>Response Headers:</strong></p>
+<ul>
+<li><code>X-Message-Id</code>: Unique identifier for tracking email delivery</li>
+</ul>
+<h4>2. Send Email (Simple - No Template)</h4>
+<p><strong>Request:</strong></p>
+<pre><code class="language-json">{
+  &quot;personalizations&quot;: [
+    {
+      &quot;to&quot;: [
+        {
+          &quot;email&quot;: &quot;admin@myportal.nc.gov&quot;,
+          &quot;name&quot;: &quot;System Administrator&quot;
+        }
+      ],
+      &quot;subject&quot;: &quot;ALERT: High Bounce Rate Detected&quot;
+    }
+  ],
+  &quot;from&quot;: {
+    &quot;email&quot;: &quot;alerts@myportal.nc.gov&quot;,
+    &quot;name&quot;: &quot;MyPortal Alerts&quot;
+  },
+  &quot;content&quot;: [
+    {
+      &quot;type&quot;: &quot;text/plain&quot;,
+      &quot;value&quot;: &quot;The email bounce rate has exceeded 2% in the last hour. Please investigate.&quot;
+    },
+    {
+      &quot;type&quot;: &quot;text/html&quot;,
+      &quot;value&quot;: &quot;&lt;p&gt;The email bounce rate has exceeded &lt;strong&gt;2%&lt;/strong&gt; in the last hour. Please investigate.&lt;/p&gt;&quot;
+    }
+  ]
+}
+</code></pre>
+<h4>3. Send Bulk Email (Multiple Recipients)</h4>
+<p><strong>Request:</strong></p>
+<pre><code class="language-json">{
+  &quot;personalizations&quot;: [
+    {
+      &quot;to&quot;: [
+        {
+          &quot;email&quot;: &quot;parent1@example.com&quot;,
+          &quot;name&quot;: &quot;Parent One&quot;
+        }
+      ],
+      &quot;dynamic_template_data&quot;: {
+        &quot;student_name&quot;: &quot;Emily Smith&quot;,
+        &quot;deadline_date&quot;: &quot;December 31, 2024&quot;
+      }
+    },
+    {
+      &quot;to&quot;: [
+        {
+          &quot;email&quot;: &quot;parent2@example.com&quot;,
+          &quot;name&quot;: &quot;Parent Two&quot;
+        }
+      ],
+      &quot;dynamic_template_data&quot;: {
+        &quot;student_name&quot;: &quot;Michael Johnson&quot;,
+        &quot;deadline_date&quot;: &quot;December 31, 2024&quot;
+      }
+    }
+  ],
+  &quot;from&quot;: {
+    &quot;email&quot;: &quot;noreply@myportal.nc.gov&quot;,
+    &quot;name&quot;: &quot;NC SEAA MyPortal&quot;
+  },
+  &quot;template_id&quot;: &quot;d-deadline-reminder-v2&quot;
+}
+</code></pre>
+<p><strong>Bulk Send Best Practices:</strong></p>
+<ul>
+<li><strong>Batch Size</strong>: Max 1,000 personalizations per request</li>
+<li><strong>Rate Limiting</strong>: Wait 100ms between batches</li>
+<li><strong>Error Handling</strong>: Log failed personalizations for retry</li>
+</ul>
+<h4>4. Get Email Statistics</h4>
+<p><strong>Endpoint:</strong> <code>GET /v3/stats</code></p>
+<p><strong>Query Parameters:</strong></p>
+<ul>
+<li><code>start_date</code>: YYYY-MM-DD (e.g., <code>2024-11-01</code>)</li>
+<li><code>end_date</code>: YYYY-MM-DD (e.g., <code>2024-11-15</code>)</li>
+<li><code>aggregated_by</code>: <code>day</code>, <code>week</code>, <code>month</code></li>
+<li><code>categories</code>: Filter by email category</li>
+</ul>
+<p><strong>Response (200 OK):</strong></p>
+<pre><code class="language-json">[
+  {
+    &quot;date&quot;: &quot;2024-11-15&quot;,
+    &quot;stats&quot;: [
+      {
+        &quot;metrics&quot;: {
+          &quot;requests&quot;: 3245,
+          &quot;delivered&quot;: 3218,
+          &quot;opens&quot;: 1354,
+          &quot;unique_opens&quot;: 1156,
+          &quot;clicks&quot;: 278,
+          &quot;unique_clicks&quot;: 245,
+          &quot;bounces&quot;: 18,
+          &quot;spam_reports&quot;: 1,
+          &quot;unsubscribes&quot;: 3
+        }
+      }
+    ]
+  }
+]
+</code></pre>
+<p><strong>Calculated Metrics:</strong></p>
+<ul>
+<li><strong>Delivery Rate</strong>: <code>(delivered / requests) * 100</code> = 99.17%</li>
+<li><strong>Open Rate</strong>: <code>(unique_opens / delivered) * 100</code> = 35.92%</li>
+<li><strong>Click Rate</strong>: <code>(unique_clicks / delivered) * 100</code> = 7.61%</li>
+<li><strong>Bounce Rate</strong>: <code>(bounces / requests) * 100</code> = 0.55%</li>
+</ul>
+<h4>5. List Email Templates</h4>
+<p><strong>Endpoint:</strong> <code>GET /v3/templates</code></p>
+<p><strong>Query Parameters:</strong></p>
+<ul>
+<li><code>generations</code>: <code>legacy</code> or <code>dynamic</code> (use <code>dynamic</code>)</li>
+<li><code>page_size</code>: Results per page (default: 200)</li>
+</ul>
+<p><strong>Response (200 OK):</strong></p>
+<pre><code class="language-json">{
+  &quot;result&quot;: [
+    {
+      &quot;id&quot;: &quot;d-abc123def456ghi789&quot;,
+      &quot;name&quot;: &quot;Application Approval&quot;,
+      &quot;generation&quot;: &quot;dynamic&quot;,
+      &quot;updated_at&quot;: &quot;2024-09-15T10:00:00Z&quot;,
+      &quot;versions&quot;: [
+        {
+          &quot;id&quot;: &quot;v-abc123&quot;,
+          &quot;template_id&quot;: &quot;d-abc123def456ghi789&quot;,
+          &quot;active&quot;: 1,
+          &quot;name&quot;: &quot;Application Approval v2&quot;,
+          &quot;updated_at&quot;: &quot;2024-09-15T10:00:00Z&quot;,
+          &quot;subject&quot;: &quot;Your scholarship application has been approved!&quot;,
+          &quot;html_content&quot;: &quot;&lt;html&gt;...&lt;/html&gt;&quot;,
+          &quot;plain_content&quot;: &quot;Your application has been approved...&quot;
+        }
+      ]
+    }
+  ]
+}
+</code></pre>
+<h4>6. Validate Email Address</h4>
+<p><strong>Endpoint:</strong> <code>POST /v3/validations/email</code></p>
+<p><strong>Purpose:</strong> Validate email address format and deliverability (requires paid plan).</p>
+<p><strong>Request:</strong></p>
+<pre><code class="language-json">{
+  &quot;email&quot;: &quot;parent@example.com&quot;,
+  &quot;source&quot;: &quot;signup&quot;
+}
+</code></pre>
+<p><strong>Response (200 OK):</strong></p>
+<pre><code class="language-json">{
+  &quot;result&quot;: {
+    &quot;email&quot;: &quot;parent@example.com&quot;,
+    &quot;verdict&quot;: &quot;Valid&quot;,
+    &quot;score&quot;: 0.98,
+    &quot;local&quot;: &quot;parent&quot;,
+    &quot;host&quot;: &quot;example.com&quot;,
+    &quot;checks&quot;: {
+      &quot;domain&quot;: {
+        &quot;has_valid_address_syntax&quot;: true,
+        &quot;has_mx_or_a_record&quot;: true,
+        &quot;is_suspected_disposable_address&quot;: false
+      },
+      &quot;local_part&quot;: {
+        &quot;is_suspected_role_address&quot;: false
+      }
+    }
+  }
+}
+</code></pre>
+<h3>Webhook Events</h3>
+<p>SendGrid sends <strong>webhook notifications</strong> for email delivery events.</p>
+<h4>Webhook Configuration</h4>
+<p><strong>MyPortal Webhook Endpoint:</strong> <code>https://k12-api.myportal.nc.gov/api/webhooks/sendgrid</code></p>
+<p><strong>Authentication:</strong> OAuth (recommended) or Basic Auth</p>
+<p><strong>Events:</strong></p>
+<ul>
+<li><code>processed</code>: Email accepted by SendGrid</li>
+<li><code>delivered</code>: Email delivered to recipient&#39;s mail server</li>
+<li><code>open</code>: Recipient opened email (requires open tracking)</li>
+<li><code>click</code>: Recipient clicked link in email</li>
+<li><code>bounce</code>: Email bounced (invalid address)</li>
+<li><code>dropped</code>: SendGrid dropped email (spam, unsubscribed)</li>
+<li><code>deferred</code>: Temporary delivery issue, will retry</li>
+<li><code>unsubscribe</code>: Recipient unsubscribed</li>
+<li><code>spam_report</code>: Recipient marked as spam</li>
+</ul>
+<h4>Webhook Payload Example</h4>
+<pre><code class="language-json">[
+  {
+    &quot;email&quot;: &quot;parent@example.com&quot;,
+    &quot;timestamp&quot;: 1700152800,
+    &quot;smtp-id&quot;: &quot;&lt;abc123@sendgrid.net&gt;&quot;,
+    &quot;event&quot;: &quot;delivered&quot;,
+    &quot;category&quot;: [&quot;application&quot;, &quot;approval&quot;],
+    &quot;sg_event_id&quot;: &quot;evt-abc123def456&quot;,
+    &quot;sg_message_id&quot;: &quot;msg-abc123def456ghi789&quot;,
+    &quot;response&quot;: &quot;250 OK&quot;,
+    &quot;application_id&quot;: &quot;APP-2024-001234&quot;,
+    &quot;student_id&quot;: &quot;STU-2024-001234&quot;
+  },
+  {
+    &quot;email&quot;: &quot;parent@example.com&quot;,
+    &quot;timestamp&quot;: 1700156400,
+    &quot;smtp-id&quot;: &quot;&lt;abc123@sendgrid.net&gt;&quot;,
+    &quot;event&quot;: &quot;open&quot;,
+    &quot;category&quot;: [&quot;application&quot;, &quot;approval&quot;],
+    &quot;sg_event_id&quot;: &quot;evt-def456ghi789&quot;,
+    &quot;sg_message_id&quot;: &quot;msg-abc123def456ghi789&quot;,
+    &quot;useragent&quot;: &quot;Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X)&quot;,
+    &quot;ip&quot;: &quot;192.168.1.100&quot;
+  }
+]
+</code></pre>
+<p><strong>Webhook Signature Verification:</strong></p>
+<p>SendGrid supports <strong>signature verification</strong> using public key cryptography.</p>
+<pre><code class="language-csharp">public static bool VerifyWebhookSignature(
+    string publicKey,
+    string payload,
+    string signature,
+    string timestamp)
+{
+    var timestampPayload = timestamp + payload;
+
+    using var ecdsa = ECDsa.Create();
+    ecdsa.ImportSubjectPublicKeyInfo(Convert.FromBase64String(publicKey), out _);
+
+    var signatureBytes = Convert.FromBase64String(signature);
+    var payloadBytes = Encoding.UTF8.GetBytes(timestampPayload);
+
+    return ecdsa.VerifyData(payloadBytes, signatureBytes, HashAlgorithmName.SHA256);
+}
+</code></pre>
+<hr>
+<h2>Data Flow</h2>
+<h3>1. Transactional Email Flow (Password Reset)</h3>
+<pre><code class="language-mermaid">sequenceDiagram
+    participant User as Parent Portal
+    participant API as MyPortal API
+    participant DB as Azure SQL
+    participant SG as SendGrid API
+
+    User-&gt;&gt;API: Request Password Reset
+    API-&gt;&gt;DB: Generate Reset Token
+    API-&gt;&gt;API: Compose Email Content
+    API-&gt;&gt;SG: POST /v3/mail/send
+    Note right of SG: Template: password-reset-v2
+    SG--&gt;&gt;API: 202 Accepted (Message ID)
+    API-&gt;&gt;DB: Log Email Sent
+    API--&gt;&gt;User: Check your email
+
+    SG-&gt;&gt;SG: Deliver Email
+    SG-&gt;&gt;User: Email: Password Reset
+    User-&gt;&gt;User: Click Reset Link
+</code></pre>
+<h3>2. Application Approval Email with Queue</h3>
+<pre><code class="language-mermaid">sequenceDiagram
+    participant Admin as Admin Portal
+    participant API as MyPortal API
+    participant DB as Azure SQL
+    participant Queue as Azure Storage Queue
+    participant Worker as Queue Processor
+    participant SG as SendGrid API
+    participant Parent as Parent Email
+
+    Admin-&gt;&gt;API: Approve Application
+    API-&gt;&gt;DB: Update Status = APPROVED
+    API-&gt;&gt;Queue: Queue Email Message
+    API--&gt;&gt;Admin: Success
+
+    Worker-&gt;&gt;Queue: Dequeue Message
+    Worker-&gt;&gt;DB: Get Application Details
+    Worker-&gt;&gt;SG: POST /v3/mail/send
+    SG--&gt;&gt;Worker: 202 Accepted
+    Worker-&gt;&gt;DB: Update Email Status = SENT
+
+    SG-&gt;&gt;Parent: Deliver Email
+    SG-&gt;&gt;API: Webhook: delivered
+    API-&gt;&gt;DB: Update Email Status = DELIVERED
+
+    Parent-&gt;&gt;Parent: Open Email
+    SG-&gt;&gt;API: Webhook: open
+    API-&gt;&gt;DB: Log Email Opened
+</code></pre>
+<h3>3. Bulk Email Campaign (Deadline Reminders)</h3>
+<pre><code class="language-mermaid">sequenceDiagram
+    participant Scheduler as Azure Timer
+    participant API as MyPortal API
+    participant DB as Azure SQL
+    participant SG as SendGrid API
+
+    Scheduler-&gt;&gt;API: Trigger Daily Reminder Job
+    API-&gt;&gt;DB: Get Parents with Incomplete Apps
+    DB--&gt;&gt;API: Return 5,000 Parents
+
+    loop Process in Batches of 1,000
+        API-&gt;&gt;API: Compose Personalized Emails
+        API-&gt;&gt;SG: POST /v3/mail/send (1,000 recipients)
+        SG--&gt;&gt;API: 202 Accepted
+        API-&gt;&gt;DB: Log Batch Sent
+        API-&gt;&gt;API: Wait 100ms (Rate Limit)
+    end
+
+    API-&gt;&gt;DB: Log Campaign Complete
+</code></pre>
+<h3>4. Bounce Handling Flow</h3>
+<pre><code class="language-mermaid">sequenceDiagram
+    participant SG as SendGrid
+    participant Webhook as Webhook Endpoint
+    participant API as MyPortal API
+    participant DB as Azure SQL
+
+    SG-&gt;&gt;Webhook: POST /webhooks/sendgrid
+    Note right of Webhook: Event: bounce (hard)
+    Webhook-&gt;&gt;Webhook: Verify Signature
+    Webhook-&gt;&gt;API: Process Bounce Event
+    API-&gt;&gt;DB: Mark Email as Bounced
+    API-&gt;&gt;DB: Update User Email Status = INVALID
+
+    alt Bounce Count &gt;= 3
+        API-&gt;&gt;DB: Suppress Future Emails
+        API-&gt;&gt;API: Send SMS Notification (fallback)
+    end
+
+    API-&gt;&gt;API: Alert Admin if Bounce Rate &gt; 2%
+</code></pre>
+<hr>
+<h2>Implementation</h2>
+<h3>C# Implementation with Azure Functions</h3>
+<h4>1. SendGrid HTTP Client Configuration</h4>
+<p><strong>File:</strong> <code>Infrastructure/HttpClients/SendGridClient.cs</code></p>
+<pre><code class="language-csharp">using System;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Text;
+using System.Text.Json;
+using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
+using Polly;
+using Polly.CircuitBreaker;
+using Polly.Retry;
+
+namespace K12.Infrastructure.HttpClients
+{
+    public class SendGridClient : ISendGridClient
+    {
+        private readonly HttpClient _httpClient;
+        private readonly IConfiguration _configuration;
+        private readonly ILogger&lt;SendGridClient&gt; _logger;
+        private readonly AsyncRetryPolicy&lt;HttpResponseMessage&gt; _retryPolicy;
+        private readonly AsyncCircuitBreakerPolicy&lt;HttpResponseMessage&gt; _circuitBreakerPolicy;
+
+        public SendGridClient(
+            HttpClient httpClient,
+            IConfiguration configuration,
+            ILogger&lt;SendGridClient&gt; logger)
+        {
+            _httpClient = httpClient;
+            _configuration = configuration;
+            _logger = logger;
+
+            var baseUrl = _configuration[&quot;SendGrid:BaseUrl&quot;];
+            var apiKey = _configuration[&quot;SendGrid:ApiKey&quot;];
+
+            _httpClient.BaseAddress = new Uri(baseUrl);
+            _httpClient.DefaultRequestHeaders.Add(&quot;Authorization&quot;, $&quot;Bearer {apiKey}&quot;);
+            _httpClient.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue(&quot;application/json&quot;));
+
+            _retryPolicy = BuildRetryPolicy();
+            _circuitBreakerPolicy = BuildCircuitBreakerPolicy();
+        }
+
+        private AsyncRetryPolicy&lt;HttpResponseMessage&gt; BuildRetryPolicy()
+        {
+            return Policy
+                .HandleResult&lt;HttpResponseMessage&gt;(r =&gt;
+                    (int)r.StatusCode &gt;= 500 ||
+                    r.StatusCode == System.Net.HttpStatusCode.RequestTimeout ||
+                    r.StatusCode == System.Net.HttpStatusCode.TooManyRequests)
+                .WaitAndRetryAsync(
+                    retryCount: 3,
+                    sleepDurationProvider: retryAttempt =&gt;
+                        TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)),
+                    onRetry: (outcome, timespan, retryCount, context) =&gt;
+                    {
+                        _logger.LogWarning(
+                            &quot;SendGrid API retry {RetryCount} after {Delay}ms&quot;,
+                            retryCount,
+                            timespan.TotalMilliseconds);
+                    });
+        }
+
+        private AsyncCircuitBreakerPolicy&lt;HttpResponseMessage&gt; BuildCircuitBreakerPolicy()
+        {
+            return Policy
+                .HandleResult&lt;HttpResponseMessage&gt;(r =&gt; (int)r.StatusCode &gt;= 500)
+                .CircuitBreakerAsync(
+                    handledEventsAllowedBeforeBreaking: 5,
+                    durationOfBreak: TimeSpan.FromMinutes(1),
+                    onBreak: (outcome, duration) =&gt;
+                    {
+                        _logger.LogError(&quot;SendGrid circuit breaker opened&quot;);
+                    },
+                    onReset: () =&gt;
+                    {
+                        _logger.LogInformation(&quot;SendGrid circuit breaker reset&quot;);
+                    });
+        }
+
+        /// &lt;summary&gt;
+        /// Send email using dynamic template
+        /// &lt;/summary&gt;
+        public async Task&lt;SendEmailResponse&gt; SendEmailAsync(SendEmailRequest request)
+        {
+            var content = new StringContent(
+                JsonSerializer.Serialize(request, new JsonSerializerOptions
+                {
+                    PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                    DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+                }),
+                Encoding.UTF8,
+                &quot;application/json&quot;);
+
+            var policy = Policy.WrapAsync(_retryPolicy, _circuitBreakerPolicy);
+
+            var response = await policy.ExecuteAsync(async () =&gt;
+                await _httpClient.PostAsync(&quot;/v3/mail/send&quot;, content));
+
+            if (!response.IsSuccessStatusCode)
+            {
+                var errorContent = await response.Content.ReadAsStringAsync();
+                _logger.LogError(
+                    &quot;SendGrid SendEmail failed: {StatusCode} - {Error}&quot;,
+                    response.StatusCode,
+                    errorContent);
+            }
+
+            response.EnsureSuccessStatusCode();
+
+            var messageId = response.Headers.GetValues(&quot;X-Message-Id&quot;).FirstOrDefault();
+
+            return new SendEmailResponse
+            {
+                MessageId = messageId,
+                StatusCode = (int)response.StatusCode
+            };
+        }
+
+        /// &lt;summary&gt;
+        /// Send simple text email (no template)
+        /// &lt;/summary&gt;
+        public async Task&lt;SendEmailResponse&gt; SendSimpleEmailAsync(
+            string to,
+            string subject,
+            string plainText,
+            string html = null)
+        {
+            var request = new SendEmailRequest
+            {
+                Personalizations = new List&lt;Personalization&gt;
+                {
+                    new Personalization
+                    {
+                        To = new List&lt;EmailAddress&gt;
+                        {
+                            new EmailAddress { Email = to }
+                        },
+                        Subject = subject
+                    }
+                },
+                From = new EmailAddress
+                {
+                    Email = _configuration[&quot;SendGrid:FromEmail&quot;],
+                    Name = _configuration[&quot;SendGrid:FromName&quot;]
+                },
+                Content = new List&lt;Content&gt;
+                {
+                    new Content { Type = &quot;text/plain&quot;, Value = plainText }
+                }
+            };
+
+            if (!string.IsNullOrEmpty(html))
+            {
+                request.Content.Add(new Content { Type = &quot;text/html&quot;, Value = html });
+            }
+
+            return await SendEmailAsync(request);
+        }
+
+        /// &lt;summary&gt;
+        /// Get email statistics
+        /// &lt;/summary&gt;
+        public async Task&lt;EmailStatsResponse&gt; GetStatisticsAsync(
+            DateTime startDate,
+            DateTime endDate,
+            string aggregatedBy = &quot;day&quot;)
+        {
+            var url = $&quot;/v3/stats?start_date={startDate:yyyy-MM-dd}&amp;end_date={endDate:yyyy-MM-dd}&amp;aggregated_by={aggregatedBy}&quot;;
+
+            var policy = Policy.WrapAsync(_retryPolicy, _circuitBreakerPolicy);
+
+            var response = await policy.ExecuteAsync(async () =&gt;
+                await _httpClient.GetAsync(url));
+
+            response.EnsureSuccessStatusCode();
+
+            return await JsonSerializer.DeserializeAsync&lt;EmailStatsResponse&gt;(
+                await response.Content.ReadAsStreamAsync());
+        }
+
+        /// &lt;summary&gt;
+        /// List email templates
+        /// &lt;/summary&gt;
+        public async Task&lt;TemplateListResponse&gt; ListTemplatesAsync()
+        {
+            var url = &quot;/v3/templates?generations=dynamic&quot;;
+
+            var policy = Policy.WrapAsync(_retryPolicy, _circuitBreakerPolicy);
+
+            var response = await policy.ExecuteAsync(async () =&gt;
+                await _httpClient.GetAsync(url));
+
+            response.EnsureSuccessStatusCode();
+
+            return await JsonSerializer.DeserializeAsync&lt;TemplateListResponse&gt;(
+                await response.Content.ReadAsStreamAsync());
+        }
+    }
+
+    // DTOs
+
+    public class SendEmailRequest
+    {
+        public List&lt;Personalization&gt; Personalizations { get; set; }
+        public EmailAddress From { get; set; }
+        public EmailAddress ReplyTo { get; set; }
+        public string TemplateId { get; set; }
+        public List&lt;string&gt; Categories { get; set; }
+        public Dictionary&lt;string, string&gt; CustomArgs { get; set; }
+        public List&lt;Content&gt; Content { get; set; }
+        public TrackingSettings TrackingSettings { get; set; }
+    }
+
+    public class Personalization
+    {
+        public List&lt;EmailAddress&gt; To { get; set; }
+        public string Subject { get; set; }
+        public Dictionary&lt;string, object&gt; DynamicTemplateData { get; set; }
+        public Dictionary&lt;string, string&gt; CustomArgs { get; set; }
+    }
+
+    public class EmailAddress
+    {
+        public string Email { get; set; }
+        public string Name { get; set; }
+    }
+
+    public class Content
+    {
+        public string Type { get; set; }
+        public string Value { get; set; }
+    }
+
+    public class TrackingSettings
+    {
+        public ClickTracking ClickTracking { get; set; }
+        public OpenTracking OpenTracking { get; set; }
+    }
+
+    public class ClickTracking
+    {
+        public bool Enable { get; set; }
+        public bool EnableText { get; set; }
+    }
+
+    public class OpenTracking
+    {
+        public bool Enable { get; set; }
+        public string SubstitutionTag { get; set; }
+    }
+
+    public class SendEmailResponse
+    {
+        public string MessageId { get; set; }
+        public int StatusCode { get; set; }
+    }
+}
+</code></pre>
+<h4>2. Email Service Layer</h4>
+<p><strong>File:</strong> <code>Application/Services/EmailService.cs</code></p>
+<pre><code class="language-csharp">using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Azure.Storage.Queues;
+using K12.Domain.Entities;
+using K12.Domain.Repositories;
+using K12.Infrastructure.HttpClients;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
+
+namespace K12.Application.Services
+{
+    public class EmailService : IEmailService
+    {
+        private readonly ISendGridClient _sendGridClient;
+        private readonly IEmailRepository _emailRepository;
+        private readonly QueueClient _queueClient;
+        private readonly IConfiguration _configuration;
+        private readonly ILogger&lt;EmailService&gt; _logger;
+
+        public EmailService(
+            ISendGridClient sendGridClient,
+            IEmailRepository emailRepository,
+            QueueServiceClient queueServiceClient,
+            IConfiguration configuration,
+            ILogger&lt;EmailService&gt; logger)
+        {
+            _sendGridClient = sendGridClient;
+            _emailRepository = emailRepository;
+            _configuration = configuration;
+            _logger = logger;
+
+            var queueName = _configuration[&quot;Email:QueueName&quot;];
+            _queueClient = queueServiceClient.GetQueueClient(queueName);
+        }
+
+        /// &lt;summary&gt;
+        /// Send application approval email
+        /// &lt;/summary&gt;
+        public async Task SendApplicationApprovalEmailAsync(int applicationId)
+        {
+            // Queue email for asynchronous processing
+            var message = new
+            {
+                Type = &quot;ApplicationApproval&quot;,
+                ApplicationId = applicationId,
+                Timestamp = DateTime.UtcNow
+            };
+
+            await _queueClient.SendMessageAsync(
+                Convert.ToBase64String(
+                    System.Text.Encoding.UTF8.GetBytes(
+                        System.Text.Json.JsonSerializer.Serialize(message))));
+
+            _logger.LogInformation(
+                &quot;Queued application approval email for Application {ApplicationId}&quot;,
+                applicationId);
+        }
+
+        /// &lt;summary&gt;
+        /// Process email from queue (called by queue trigger function)
+        /// &lt;/summary&gt;
+        public async Task ProcessApplicationApprovalEmailAsync(int applicationId)
+        {
+            // Get application details
+            var application = await GetApplicationDetailsAsync(applicationId);
+
+            var templateId = _configuration[&quot;SendGrid:Templates:ApplicationApproval&quot;];
+
+            var request = new SendEmailRequest
+            {
+                Personalizations = new List&lt;Personalization&gt;
+                {
+                    new Personalization
+                    {
+                        To = new List&lt;EmailAddress&gt;
+                        {
+                            new EmailAddress
+                            {
+                                Email = application.Parent.Email,
+                                Name = $&quot;{application.Parent.FirstName} {application.Parent.LastName}&quot;
+                            }
+                        },
+                        DynamicTemplateData = new Dictionary&lt;string, object&gt;
+                        {
+                            [&quot;student_name&quot;] = $&quot;{application.Student.FirstName} {application.Student.LastName}&quot;,
+                            [&quot;application_id&quot;] = application.ApplicationId,
+                            [&quot;award_amount&quot;] = $&quot;${application.AwardAmount:N0}&quot;,
+                            [&quot;school_year&quot;] = application.SchoolYear,
+                            [&quot;next_steps_url&quot;] = $&quot;{_configuration[&quot;App:BaseUrl&quot;]}/next-steps&quot;
+                        }
+                    }
+                },
+                From = new EmailAddress
+                {
+                    Email = _configuration[&quot;SendGrid:FromEmail&quot;],
+                    Name = _configuration[&quot;SendGrid:FromName&quot;]
+                },
+                ReplyTo = new EmailAddress
+                {
+                    Email = _configuration[&quot;SendGrid:ReplyToEmail&quot;]
+                },
+                TemplateId = templateId,
+                Categories = new List&lt;string&gt; { &quot;application&quot;, &quot;approval&quot; },
+                CustomArgs = new Dictionary&lt;string, string&gt;
+                {
+                    [&quot;application_id&quot;] = application.ApplicationId,
+                    [&quot;student_id&quot;] = application.Student.StudentId
+                },
+                TrackingSettings = new TrackingSettings
+                {
+                    ClickTracking = new ClickTracking { Enable = true },
+                    OpenTracking = new OpenTracking { Enable = true }
+                }
+            };
+
+            try
+            {
+                var response = await _sendGridClient.SendEmailAsync(request);
+
+                // Log email in database
+                await _emailRepository.CreateAsync(new Email
+                {
+                    ApplicationId = applicationId,
+                    RecipientEmail = application.Parent.Email,
+                    EmailType = EmailType.ApplicationApproval,
+                    SendGridMessageId = response.MessageId,
+                    Status = EmailStatus.Sent,
+                    SentAt = DateTime.UtcNow
+                });
+
+                _logger.LogInformation(
+                    &quot;Sent application approval email for Application {ApplicationId}, MessageId: {MessageId}&quot;,
+                    applicationId,
+                    response.MessageId);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(
+                    ex,
+                    &quot;Failed to send application approval email for Application {ApplicationId}&quot;,
+                    applicationId);
+                throw;
+            }
+        }
+
+        /// &lt;summary&gt;
+        /// Send password reset email (immediate, not queued)
+        /// &lt;/summary&gt;
+        public async Task SendPasswordResetEmailAsync(string email, string resetToken)
+        {
+            var templateId = _configuration[&quot;SendGrid:Templates:PasswordReset&quot;];
+            var resetUrl = $&quot;{_configuration[&quot;App:BaseUrl&quot;]}/reset-password?token={resetToken}&quot;;
+
+            var request = new SendEmailRequest
+            {
+                Personalizations = new List&lt;Personalization&gt;
+                {
+                    new Personalization
+                    {
+                        To = new List&lt;EmailAddress&gt;
+                        {
+                            new EmailAddress { Email = email }
+                        },
+                        DynamicTemplateData = new Dictionary&lt;string, object&gt;
+                        {
+                            [&quot;reset_url&quot;] = resetUrl,
+                            [&quot;expiration_minutes&quot;] = 30
+                        }
+                    }
+                },
+                From = new EmailAddress
+                {
+                    Email = _configuration[&quot;SendGrid:FromEmail&quot;],
+                    Name = _configuration[&quot;SendGrid:FromName&quot;]
+                },
+                TemplateId = templateId,
+                Categories = new List&lt;string&gt; { &quot;authentication&quot;, &quot;password-reset&quot; }
+            };
+
+            var response = await _sendGridClient.SendEmailAsync(request);
+
+            _logger.LogInformation(
+                &quot;Sent password reset email to {Email}, MessageId: {MessageId}&quot;,
+                email,
+                response.MessageId);
+        }
+
+        private async Task&lt;Application&gt; GetApplicationDetailsAsync(int applicationId)
+        {
+            // Query application with related entities
+            return null; // Placeholder
+        }
+    }
+}
+</code></pre>
+<h4>3. Azure Function Queue Trigger</h4>
+<p><strong>File:</strong> <code>API/Functions/EmailFunctions.cs</code></p>
+<pre><code class="language-csharp">using System;
+using System.Text.Json;
+using System.Threading.Tasks;
+using K12.Application.Services;
+using Microsoft.Azure.Functions.Worker;
+using Microsoft.Extensions.Logging;
+
+namespace K12.API.Functions
+{
+    public class EmailFunctions
+    {
+        private readonly IEmailService _emailService;
+        private readonly ILogger&lt;EmailFunctions&gt; _logger;
+
+        public EmailFunctions(
+            IEmailService emailService,
+            ILogger&lt;EmailFunctions&gt; logger)
+        {
+            _emailService = emailService;
+            _logger = logger;
+        }
+
+        /// &lt;summary&gt;
+        /// Queue trigger: Process queued emails
+        /// &lt;/summary&gt;
+        [Function(&quot;ProcessEmailQueue&quot;)]
+        public async Task ProcessEmailQueue(
+            [QueueTrigger(&quot;emails-notification&quot;)] string message,
+            FunctionContext context)
+        {
+            try
+            {
+                var emailMessage = JsonSerializer.Deserialize&lt;EmailQueueMessage&gt;(message);
+
+                _logger.LogInformation(
+                    &quot;Processing email: Type={Type}, ApplicationId={ApplicationId}&quot;,
+                    emailMessage.Type,
+                    emailMessage.ApplicationId);
+
+                switch (emailMessage.Type)
+                {
+                    case &quot;ApplicationApproval&quot;:
+                        await _emailService.ProcessApplicationApprovalEmailAsync(
+                            emailMessage.ApplicationId);
+                        break;
+
+                    // Add other email types...
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, &quot;Error processing email queue message&quot;);
+                throw; // Let Azure Functions retry logic handle
+            }
+        }
+
+        /// &lt;summary&gt;
+        /// Webhook endpoint for SendGrid events
+        /// &lt;/summary&gt;
+        [Function(&quot;SendGridWebhook&quot;)]
+        public async Task SendGridWebhook(
+            [HttpTrigger(AuthorizationLevel.Function, &quot;post&quot;,
+                Route = &quot;webhooks/sendgrid&quot;)]
+            Microsoft.Azure.Functions.Worker.Http.HttpRequestData req)
+        {
+            // Process SendGrid webhook events
+            // Update email status in database
+        }
+    }
+
+    public class EmailQueueMessage
+    {
+        public string Type { get; set; }
+        public int ApplicationId { get; set; }
+        public DateTime Timestamp { get; set; }
+    }
+}
+</code></pre>
+<hr>
+<h2>Error Handling</h2>
+<h3>Retry Policies</h3>
+<ul>
+<li><strong>Exponential backoff</strong>: 3 retries (2s, 4s, 8s)</li>
+<li><strong>Circuit breaker</strong>: Open after 5 failures, 1-minute break</li>
+<li><strong>Queue visibility timeout</strong>: 5 minutes (auto-retry if not processed)</li>
+</ul>
+<h3>Common Error Scenarios</h3>
+<h4>1. Invalid Email Address</h4>
+<pre><code class="language-csharp">catch (HttpRequestException ex) when (ex.StatusCode == HttpStatusCode.BadRequest)
+{
+    var errorResponse = await ParseErrorResponseAsync(ex);
+
+    if (errorResponse.Errors?.Any(e =&gt; e.Field == &quot;personalizations[0].to[0].email&quot;) ?? false)
+    {
+        // Mark email as invalid in database
+        await _emailRepository.MarkAsInvalidAsync(email);
+
+        _logger.LogWarning(&quot;Invalid email address: {Email}&quot;, email);
+    }
+}
+</code></pre>
+<h4>2. Rate Limit Exceeded</h4>
+<pre><code class="language-csharp">catch (HttpRequestException ex) when (ex.StatusCode == HttpStatusCode.TooManyRequests)
+{
+    var retryAfter = ex.Response.Headers.RetryAfter?.Delta ?? TimeSpan.FromSeconds(60);
+
+    _logger.LogWarning(&quot;SendGrid rate limit exceeded, retrying after {Seconds}s&quot;, retryAfter.TotalSeconds);
+
+    await Task.Delay(retryAfter);
+    // Retry will happen automatically via Polly
+}
+</code></pre>
+<hr>
+<h2>Security</h2>
+<h3>SPF, DKIM, DMARC Configuration</h3>
+<p><strong>DNS Records for myportal.nc.gov:</strong></p>
+<pre><code class="language-dns"># SPF (Sender Policy Framework)
+myportal.nc.gov. IN TXT &quot;v=spf1 include:sendgrid.net ~all&quot;
+
+# DKIM (DomainKeys Identified Mail)
+s1._domainkey.myportal.nc.gov. IN CNAME s1.domainkey.u12345678.wl123.sendgrid.net.
+s2._domainkey.myportal.nc.gov. IN CNAME s2.domainkey.u12345678.wl123.sendgrid.net.
+
+# DMARC (Domain-based Message Authentication, Reporting &amp; Conformance)
+_dmarc.myportal.nc.gov. IN TXT &quot;v=DMARC1; p=quarantine; rua=mailto:dmarc@myportal.nc.gov&quot;
+</code></pre>
+<h3>API Key Rotation</h3>
+<pre><code class="language-bash"># Rotate SendGrid API key every 90 days
+az keyvault secret set \
+  --vault-name k12-keyvault-prod \
+  --name sendgrid-api-key \
+  --value &quot;SG.new_api_key_here&quot;
+</code></pre>
+<hr>
+<h2>Monitoring &amp; Logging</h2>
+<h3>Application Insights Metrics</h3>
+<pre><code class="language-csharp">public void TrackEmailSent(string emailType, string recipient)
+{
+    _telemetryClient.TrackEvent(&quot;Email_Sent&quot;,
+        new Dictionary&lt;string, string&gt;
+        {
+            { &quot;emailType&quot;, emailType },
+            { &quot;recipient&quot;, recipient }
+        });
+}
+
+public void TrackEmailBounce(string recipient, string bounceReason)
+{
+    _telemetryClient.TrackEvent(&quot;Email_Bounced&quot;,
+        new Dictionary&lt;string, string&gt;
+        {
+            { &quot;recipient&quot;, recipient },
+            { &quot;reason&quot;, bounceReason }
+        });
+}
+</code></pre>
+<h3>KQL Queries</h3>
+<p><strong>Email Delivery Rate (Last 7 Days):</strong></p>
+<pre><code class="language-kusto">customEvents
+| where timestamp &gt; ago(7d)
+| where name in (&quot;Email_Sent&quot;, &quot;Email_Delivered&quot;, &quot;Email_Bounced&quot;)
+| summarize
+    Sent = countif(name == &quot;Email_Sent&quot;),
+    Delivered = countif(name == &quot;Email_Delivered&quot;),
+    Bounced = countif(name == &quot;Email_Bounced&quot;)
+| extend DeliveryRate = (Delivered * 100.0) / Sent
+</code></pre>
+<hr>
+<h2>Testing Strategy</h2>
+<h3>Unit Tests</h3>
+<pre><code class="language-csharp">[Fact]
+public async Task SendApplicationApprovalEmail_ValidApplication_SendsEmail()
+{
+    // Arrange
+    var mockClient = new Mock&lt;ISendGridClient&gt;();
+    mockClient.Setup(c =&gt; c.SendEmailAsync(It.IsAny&lt;SendEmailRequest&gt;()))
+        .ReturnsAsync(new SendEmailResponse { MessageId = &quot;msg-123&quot;, StatusCode = 202 });
+
+    var service = new EmailService(mockClient.Object, null, null, null, null);
+
+    // Act
+    await service.ProcessApplicationApprovalEmailAsync(123);
+
+    // Assert
+    mockClient.Verify(c =&gt; c.SendEmailAsync(
+        It.Is&lt;SendEmailRequest&gt;(r =&gt; r.TemplateId.Contains(&quot;ApplicationApproval&quot;))),
+        Times.Once);
+}
+</code></pre>
+<hr>
+<h2>Common Issues &amp; Troubleshooting</h2>
+<h3>Issue 1: Low Open Rates</h3>
+<p><strong>Symptoms:</strong> Open rate &lt; 20%</p>
+<p><strong>Resolution:</strong></p>
+<ul>
+<li>Check subject line effectiveness</li>
+<li>Verify sender reputation</li>
+<li>Test different send times</li>
+</ul>
+<h3>Issue 2: High Bounce Rate</h3>
+<p><strong>Symptoms:</strong> Bounce rate &gt; 2%</p>
+<p><strong>Resolution:</strong></p>
+<ul>
+<li>Implement email validation before send</li>
+<li>Remove invalid emails from database</li>
+<li>Use double opt-in for new signups</li>
+</ul>
+<hr>
+<h2>References</h2>
+<ul>
+<li><strong>SendGrid API Documentation</strong>: <a href="https://docs.sendgrid.com/api-reference">https://docs.sendgrid.com/api-reference</a></li>
+<li><strong>Confluence Page</strong>: <a href="https://cfi-nc.atlassian.net/wiki/spaces/KR/pages/4351721474">Email Integration Spec</a></li>
+<li><strong>Email Templates</strong>: <a href="https://mc.sendgrid.com/dynamic-templates">https://mc.sendgrid.com/dynamic-templates</a></li>
+</ul>
+<hr>
+<p><strong>Document Version:</strong> 1.0<br><strong>Last Reviewed:</strong> 2025-01-15<br><strong>Next Review:</strong> 2025-04-15<br><strong>Owner:</strong> CFI Integration Team</p>

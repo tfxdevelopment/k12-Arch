@@ -3,7 +3,7 @@
 **Status:** Proposed
 **Last Updated:** 2025-11-24
 **Target Audience:** Backend Developers, Business Analysts
-**Related ADRs:** [ADR-PROP-002](../02-adrs/ADR-PROP-002-container-apps-platform.md), [ADR-PROP-006](../02-adrs/ADR-PROP-006-nrules-engine.md)
+**Related ADRs:** [ADR-PROP-001](../../adr/ADR-PROP-001-container-functions.md), [ADR-005](../../adr/ADR-005-nrules-business-rules.md)
 
 ## Overview
 
@@ -1008,7 +1008,7 @@ dependencies
 
 ## References
 
-- [ADR-PROP-002: Container Apps Platform](../02-adrs/ADR-PROP-002-container-apps-platform.md)
-- [ADR-PROP-006: NRules Engine](../02-adrs/ADR-PROP-006-nrules-engine.md)
+- [ADR-PROP-001: Container Functions](../../adr/ADR-PROP-001-container-functions.md)
+- [ADR-005: NRules for Business Rules Engine](../../adr/ADR-005-nrules-business-rules.md)
 - [API-01: DAB Implementation](./API-01-dab-implementation.md)
-- [RULES-01: NRules Implementation](../04-business-rules/RULES-01-nrules-implementation.md)
+- [RULES-01: NRules Implementation](../../03-business-rules/RULES-01-nrules-implementation-guide.md)

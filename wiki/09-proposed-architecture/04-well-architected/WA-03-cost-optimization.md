@@ -1382,7 +1382,7 @@ View Cost Analysis: https://portal.azure.com/#view/cost-analysis
 - [WA-01: Reliability Assessment (Geo-Replication Costs)](./WA-01-reliability.md)
 - [WA-02: Security Assessment (Defender + Sentinel Costs)](./WA-02-security.md)
 - [EXECUTIVE-BRIEF.md (ROI Analysis)](../EXECUTIVE-BRIEF.md)
-- [LOAD-TEST.md (Right-Sizing Data Source)](../05-testing/LOAD-TEST.md)
+- [LOAD-TEST.md (Right-Sizing Data Source)](../../05-testing/LOAD-TEST.md)
 
 ### Industry Resources
 

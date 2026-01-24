@@ -5,5 +5,8 @@
     ],
     "deny": [],
     "ask": []
+  },
+  "enabledPlugins": {
+    "content-marketing@claude-code-workflows": true
   }
 }

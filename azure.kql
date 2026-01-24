@@ -1,0 +1,9 @@
+resources
+| where name contains "K12" or tags contains "K12"
+| project id, name, type, location, resourceGroup, properties, createdBy = properties.createdBy, createdTime = properties.createdTime, changedBy = properties.changedBy, changedTime = properties.changedTime, provisioningState = properties.provisioningState
+| join kind=leftouter (
+    resources
+    | project id, managedBy, sku, plan, identity, tags
+    | extend managedById = tostring(managedBy)
+) on $left.id == $right.managedById
+| project id, name, type, location, resourceGroup, createdBy, createdTime, changedBy, changedTime, provisioningState, sku, plan, identity, tags

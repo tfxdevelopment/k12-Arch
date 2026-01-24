@@ -1,0 +1,6 @@
+currently_attending
+graduated_from_high_school
+homeless
+student_found
+
+y/n/m -> m is treated as a not found

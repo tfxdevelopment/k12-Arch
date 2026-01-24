@@ -1,3 +1,10 @@
+# Redirect: ADR-PROP-008 (moved)
+
+This ADR has moved to the canonical ADR folder:
+
+- [ADR-PROP-008-no-microservices.md](../../adr/ADR-PROP-008-no-microservices.md)
+
+This file is a redirect stub preserved for link compatibility.
 # ADR-PROP-008: No Microservices Decomposition
 
 **Status:** ✅ Proposed

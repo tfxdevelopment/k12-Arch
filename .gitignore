@@ -49,3 +49,8 @@ Thumbs.db
 # Logs
 *.log
 logs/
+
+# Nx
+.nx/installation
+.nx/cache
+.nx/workspace-data

@@ -1,5 +1,14 @@
 # System Architecture
 
+## Target Implementation Shape (In Progress)
+
+- [Project Structure (Target .NET Monorepo)](PROJECT-STRUCTURE.md)
+- [BFF / Orchestrators](BFF-ORCHESTRATORS.md)
+- [Shared Contracts](CONTRACTS.md)
+- [Repository Organization Issues](REPO-ORGANIZATION-ISSUES.md)
+- [Sensei PDF Concerns Checklist](SENSEI-PDF-CONCERNS.md)
+- [Cloud-Native Architecture](cloud-native/README.md)
+
 ## High-Level Architecture
 
 The K12 MyPortal system follows a modern, cloud-native architecture pattern built on Azure Government Cloud to meet FedRAMP compliance requirements.
@@ -66,12 +75,24 @@ The K12 MyPortal system follows a modern, cloud-native architecture pattern buil
 │  • SendGrid          - Email notifications               │
 │  • PandaDoc          - Document generation & e-signature │
 │  • Microsoft Graph   - Azure AD integration              │
-│  • Melissa Data      - Address validation (API)         │
-│  • NC DMV            - Residency validation              │
-│  • NC Dept of Revenue- Income validation                │
-│  • NC DPI            - Student data (planned)            │
+│  • Melissa Data      - Address validation (API)          │
+│  • RDS (MuleSoft)    - Residency determination service   │
+│    └─ NC DMV         - Driver license verification       │
+│    └─ NC DOR         - Tax filing verification           │
+│    └─ NC DPI         - Student data (future)             │
 └──────────────────────────────────────────────────────────┘
 ```
+
+#### RDS Integration (INT-07)
+
+The Residency Determination Service (RDS) provides automated NC residency verification via Azure Service Bus queues and MuleSoft ESB:
+
+- **K12 → RDS**: Request messages with parent SSN, DOB, license info
+- **RDS → Agencies**: SFTP file exchange with DMV/DOR (daily batch)
+- **RDS → K12**: Response messages with raw agency data
+- **K12 Decision**: K12 is the **source of truth** for final residency determination
+
+See [INT-07: RDS Integration](integrations/INT-07-rds-residency-determination-service.md) and [ADR-013](../adr/ADR-013-rds-async-integration-pattern.md) for details.
 
 ## Architectural Patterns
 
@@ -225,7 +246,18 @@ graph TD
 
 ## Data Architecture
 
-### Database Schema
+### Database Strategy
+
+The K12 MyPortal platform uses a **dual-database architecture** with clear separation of concerns:
+
+| Database | Type | Purpose | Use Case |
+|----------|------|---------|----------|
+| **Azure SQL** | Primary | All transactional data | Enrollment, programs, users, awards |
+| **Trino** | Analytics Engine | CubeJS + Metabase queries | Federated analytics over curated sources |
+
+> **Important:** Azure SQL (SQL Server) remains the **primary database** for application data. Analytics runs through **CubeJS + Trino + Metabase**; Trino executes federated queries and Metabase exposes its API to applications.
+
+### Azure SQL Schema (Primary Database)
 
 Azure SQL Server with multi-schema design:
 
@@ -236,11 +268,36 @@ Azure SQL Server with multi-schema design:
 | `Households` | Household data | Household, Members, Addresses |
 | `Awards` | Awards system | AwardAllocations, Disbursements |
 | `Comms` | Communications | Messages, Templates, Logs |
+| `Analytics` | Query definitions (NEW) | QueryDefinition, QuerySnapshot, QuerySchedule |
 
 **Important**:
 - Models generated via Entity Framework (`efg generate`)
 - Data access via Dapper (NOT Entity Framework)
 - Be cautious with `efg generate` - may not reflect all dev work
+
+### Analytics Engine (Trino + CubeJS + Metabase)
+
+```
+┌──────────────────┐     ┌──────────────────┐     ┌──────────────────┐
+│   Azure SQL      │     │   CubeJS         │     │     Trino        │
+│   (Primary)      │────▶│   Semantic/API   │────▶│  (Analytics)     │
+│                  │     │   Layer          │     │  Engine          │
+│ • Enrollment     │     │ • Pre-aggregations│    │ • Federated SQL  │
+│ • Programs       │     │ • Caching        │     │ • Connectors     │
+│ • Awards         │     │                  │     │                  │
+└──────────────────┘     └──────────────────┘     └──────────────────┘
+                                                           │
+                                                           ▼
+                                                  ┌──────────────────┐
+                                                  │    Metabase      │
+                                                  │ (BI + API)       │
+                                                  └──────────────────┘
+```
+- `TimescaleDB` - Time-series optimization for enrollment trends
+- `pg_trgm` - Fuzzy search for query builder autocomplete
+- `pgvector` - AI/semantic search (future)
+
+See: [QueryBuilder SDK Design](integrations/QueryBuilder/SDK-Design.md) for implementation details.
 
 ### Document Storage (ADLS Gen2)
 
@@ -359,21 +416,37 @@ k12-infra/terraform/
 | **Cloud Platform** | Azure Government | FedRAMP compliance |
 | **API Backend** | Azure Functions (.NET 8) | Serverless, cost-effective |
 | **Data Access** | Dapper | Performance over EF |
-| **Frontend** | Angular 19 + Nx | Modern SPA, monorepo benefits |
-| **Database** | Azure SQL | Enterprise features, RLS |
+| **Frontend** | Angular 22 + Nx 22 | Modern SPA, monorepo benefits |
+| **Primary Database** | Azure SQL | Enterprise features, RLS |
+| **Analytics Engine** | Trino | Analytics via CubeJS + Metabase |
 | **Identity** | Entra ID + B2C | Native Azure integration |
 | **API Gateway** | Azure APIM | Centralized security, throttling |
 | **File Storage** | ADLS Gen2 | Hierarchical access control |
 | **IaC** | Terraform | Multi-cloud, declarative |
 | **CI/CD** | Azure DevOps | Integrated with Azure |
+| **Container Orchestration** | .NET Aspire | Local dev + deployment automation |
+| **Container Registry** | Azure Container Registry | Container image storage |
+| **Analytics Containers** | Azure Container Apps | Cube.js, Trino, Metabase |
+| **Semantic Layer** | Cube.js | Pre-aggregations, caching |
+| **Query Federation** | Trino | Multi-source SQL |
+
+> **Proposed Architecture Update:** The future-state architecture migrates ALL services to **Azure Container Apps** (not App Service) with **Dapr** sidecar building blocks (service invocation, state, pub/sub, secrets, bindings, config; no server components). See [Proposed Architecture](../09-proposed-architecture/README.md) for details.
+> - .NET Aspire for local development with identical behavior to production
+
+## Business Workflows
+
+The K12 MyPortal system includes several orchestrated business workflows:
+
+- [Workflows Documentation](workflows/README.md) - Index of all workflow documentation
+- [WF-01: Roster - To Be Certified](workflows/WF-01-roster-to-be-certified.md) - Student roster certification workflow
 
 ## Related Documentation
 
 - [Identity Provider (CIAM) Analysis](https://cfi-nc.atlassian.net/wiki/spaces/KR/pages/4032725075)
 - [Microsoft Entra ID Hub and Spoke Model](https://cfi-nc.atlassian.net/wiki/spaces/KR/pages/4053696597)
-- [Infrastructure README](../../../k12-infra/terraform/README.md)
-- [API Backend README](../../../k12-api-enrollment/README.md)
-- [Frontend README](../../../k12-web-enrollment/README.md)
+- [Infrastructure README](../07-deployment/README.md)
+- [API Backend README](backend/README.md)
+- [Frontend README](../05-development/frontend/README.md)
 
 ---
 

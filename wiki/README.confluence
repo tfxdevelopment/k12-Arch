@@ -1,0 +1,220 @@
+<csp:parameters xmlns:csp="https://confluence.smart.publisher/csp">
+  <csp:file_id></csp:file_id>
+  <csp:labels_list></csp:labels_list>
+  <csp:parent_id></csp:parent_id>
+  <csp:properties>
+    <csp:key>content-appearance-published</csp:key>
+    <csp:value>fixed-width</csp:value>
+    <csp:key>content-appearance-draft</csp:key>
+    <csp:value>fixed-width</csp:value>
+  </csp:properties>
+</csp:parameters>
+
+<h1>K12 MyPortal Enterprise Architecture Wiki</h1>
+<blockquote>
+<p><strong>Enterprise Architecture Documentation for NC SEAA K-12 Scholarship Management System</strong></p>
+</blockquote>
+<p>Last Updated: 2025-11-15<br>System Owner: North Carolina State Education Assistance Authority (SEAA)<br>Development Partner: College Foundation, Inc (CFI)</p>
+<h2>Executive Summary</h2>
+<p>The K12 MyPortal project is a comprehensive web-based system for administering the ESA+ Program and the Opportunity Scholarship in North Carolina. This modern system replaces the legacy Envision/MyPortal software and is designed to be fully operational for the 2026/2027 school year.</p>
+<h3>Key Statistics</h3>
+<ul>
+<li><strong>Target Users</strong>: 100,000+ external users (families, schools, providers)</li>
+<li><strong>Application Volume</strong>: 95,000+ applications annually</li>
+<li><strong>Target Launch</strong>: February 1, 2026</li>
+<li><strong>Budget</strong>: State of NC appropriation</li>
+<li><strong>Architecture</strong>: Azure cloud-native, microservices-based</li>
+</ul>
+<h2>Documentation Structure</h2>
+<h3>1. <a href="./01-project-overview/README.md">Project Overview</a></h3>
+<ul>
+<li>Project charter and governance</li>
+<li>Stakeholders and roles</li>
+<li>Timeline and milestones</li>
+<li>Success criteria</li>
+</ul>
+<h3>2. <a href="./02-architecture/README.md">System Architecture</a></h3>
+<ul>
+<li>High-level architecture diagram</li>
+<li>Technology stack</li>
+<li>Infrastructure topology</li>
+<li>Integration architecture</li>
+<li>Security architecture (Entra ID Hub &amp; Spoke)</li>
+</ul>
+<h3>3. <a href="./03-technical/README.md">Technical Documentation</a></h3>
+<ul>
+<li>Backend (Azure Functions, .NET 8)</li>
+<li>Frontend (Angular 19, Nx monorepo)</li>
+<li>Database (Azure SQL, schemas)</li>
+<li>Infrastructure as Code (Terraform)</li>
+<li>API documentation</li>
+</ul>
+<h3>4. <a href="./04-requirements/README.md">Business Requirements</a></h3>
+<ul>
+<li>Functional requirements</li>
+<li>Process flows (ESA+, Opportunity Scholarship)</li>
+<li>Standard Operating Procedures (SOPs)</li>
+<li>Pain points and solutions</li>
+</ul>
+<h3>5. <a href="./05-development/README.md">Development Guide</a></h3>
+<ul>
+<li>Local development setup</li>
+<li>Development workflows</li>
+<li>Testing strategy</li>
+<li>CI/CD pipelines</li>
+<li>Code standards</li>
+</ul>
+<h3>6. <a href="./06-operations/README.md">Operations &amp; Support</a></h3>
+<ul>
+<li>Production support plan</li>
+<li>Disaster recovery</li>
+<li>Monitoring and alerting</li>
+<li>Security and compliance</li>
+</ul>
+<h3>7. <a href="./07-program-management/README.md">Program Management</a></h3>
+<ul>
+<li>RAID logs (Risks, Assumptions, Issues, Decisions)</li>
+<li>Sprint planning and roadmap</li>
+<li>Communication plan</li>
+<li>Change management</li>
+</ul>
+<h2>Quick Links</h2>
+<h3>Repository Documentation</h3>
+<ul>
+<li><a href="../../k12-api-enrollment/README.md">API Backend README</a></li>
+<li><a href="../../k12-web-enrollment/README.md">Web Frontend README</a></li>
+<li><a href="../../k12-infra/terraform/README.md">Infrastructure README</a></li>
+<li><a href="../../k12-test-api-postman/README.md">API Testing README</a></li>
+</ul>
+<h3>External Resources</h3>
+<ul>
+<li><a href="https://cfi-nc.atlassian.net/wiki/spaces/KR/overview">Confluence Space</a></li>
+<li><a href="https://dev.azure.com/CFI-AzureDevOps/K12">Azure DevOps Project</a></li>
+<li><a href="https://cfi-nc.atlassian.net/jira/software/c/projects/K12">Jira Board</a></li>
+</ul>
+<h2>System Components</h2>
+<h3>Backend Repositories</h3>
+<ul>
+<li><strong>k12-api-enrollment</strong>: .NET 8 Azure Functions backend API</li>
+<li><strong>k12-infra</strong>: Terraform infrastructure as code</li>
+<li><strong>k12-test-api-postman</strong>: Postman/Newman API test suites</li>
+</ul>
+<h3>Frontend Repositories</h3>
+<ul>
+<li><strong>k12-web-enrollment</strong>: Angular 19 + Nx monorepo<ul>
+<li>Admin portal (port 4200)</li>
+<li>Household enrollment (port 4300)</li>
+<li>Providers portal (port 4500)</li>
+<li>Schools portal (port 4600)</li>
+</ul>
+</li>
+</ul>
+<h3>Key Technologies</h3>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Technology</th>
+<th>Version</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Backend</strong></td>
+<td>.NET</td>
+<td>8.0</td>
+</tr>
+<tr>
+<td></td>
+<td>Azure Functions</td>
+<td>v4</td>
+</tr>
+<tr>
+<td></td>
+<td>Dapper (ORM)</td>
+<td>Latest</td>
+</tr>
+<tr>
+<td><strong>Frontend</strong></td>
+<td>Angular</td>
+<td>19.2.6</td>
+</tr>
+<tr>
+<td></td>
+<td>Nx</td>
+<td>21.4.1</td>
+</tr>
+<tr>
+<td></td>
+<td>TypeScript</td>
+<td>5.7.3</td>
+</tr>
+<tr>
+<td></td>
+<td>Angular Material</td>
+<td>19.2.9</td>
+</tr>
+<tr>
+<td><strong>Database</strong></td>
+<td>Azure SQL</td>
+<td>Latest</td>
+</tr>
+<tr>
+<td><strong>Identity</strong></td>
+<td>Microsoft Entra ID</td>
+<td>B2C</td>
+</tr>
+<tr>
+<td><strong>Infrastructure</strong></td>
+<td>Terraform</td>
+<td>Latest</td>
+</tr>
+<tr>
+<td></td>
+<td>Azure DevOps</td>
+<td>Pipelines</td>
+</tr>
+</tbody></table>
+<h2>Architecture Principles</h2>
+<ol>
+<li><strong>Cloud-Native</strong>: Azure Government Cloud for compliance (FedRAMP)</li>
+<li><strong>Microservices</strong>: Loosely coupled, independently deployable services</li>
+<li><strong>API-First</strong>: RESTful APIs with OpenAPI/Swagger documentation</li>
+<li><strong>Security by Design</strong>: Defense-in-depth with Entra ID, APIM, RLS</li>
+<li><strong>Scalability</strong>: Handle 100,000+ concurrent users during peak periods</li>
+<li><strong>Accessibility</strong>: WCAG 2.1 Level AA compliance</li>
+<li><strong>Automation</strong>: CI/CD pipelines for all deployments</li>
+</ol>
+<h2>For Enterprise Architects</h2>
+<p>This wiki is specifically curated for enterprise architects who need to:</p>
+<ul>
+<li>Understand system architecture and design decisions</li>
+<li>Review technical standards and patterns</li>
+<li>Assess security and compliance posture</li>
+<li>Evaluate integration points</li>
+<li>Plan future enhancements</li>
+<li>Conduct architecture reviews</li>
+</ul>
+<h2>Navigation Tips</h2>
+<ul>
+<li>Use the table of contents above to navigate to major sections</li>
+<li>Each section has its own README with detailed subsections</li>
+<li>Cross-references link to relevant source code and Confluence pages</li>
+<li>Code examples include file paths with line numbers for easy reference</li>
+</ul>
+<h2>Contributing</h2>
+<p>This documentation is maintained by the K12 technical team. For updates:</p>
+<ol>
+<li>Submit documentation changes via pull request</li>
+<li>Follow markdown formatting standards</li>
+<li>Include relevant diagrams (Mermaid, PlantUML)</li>
+<li>Link to source code where applicable</li>
+</ol>
+<h2>Support</h2>
+<p>For questions about this documentation:</p>
+<ul>
+<li><strong>Technical</strong>: Contact CFI Architecture Team</li>
+<li><strong>Business</strong>: Contact SEAA Product Lead</li>
+<li><strong>Project Management</strong>: Contact CFI/SEAA Project Managers</li>
+</ul>
+<hr>
+<p><em>This is a living document. Last major update: November 2025</em></p>

@@ -8,14 +8,14 @@ C4Container
 
     Person(user, "User", "Family, School, Provider, or Admin")
 
-    System_Boundary(k12, "K12 MyPortal") {
+    Container_Boundary(k12, "K12 MyPortal") {
         Container(web, "Web Application", "Angular 19, Static Web App", "Delivers SPA to user's browser")
         Container(apim, "API Gateway", "Azure APIM", "API management, JWT validation, throttling")
         Container(api, "API", "Azure Functions, .NET 8", "Business logic and orchestration")
         Container(signalr, "Real-time Service", "Azure SignalR", "Push notifications")
-        Container(db, "Database", "Azure SQL", "Stores application data")
-        Container(storage, "Blob Storage", "Azure Blob", "Temporary file storage")
-        Container(adls, "Document Storage", "ADLS Gen2", "Long-term document storage with RBAC")
+        ContainerDb(db, "Database", "Azure SQL", "Stores application data")
+        ContainerDb(storage, "Blob Storage", "Azure Blob", "Temporary file storage")
+        ContainerDb(adls, "Document Storage", "ADLS Gen2", "Long-term document storage with RBAC")
     }
 
     System_Ext(entra, "Microsoft Entra ID", "Authentication and authorization")
@@ -38,6 +38,8 @@ C4Container
     Rel(api, classwallet, "Processes payments", "HTTPS/REST")
     Rel(api, sendgrid, "Sends emails", "HTTPS/REST")
     Rel(api, pandadoc, "Generates docs", "HTTPS/REST")
+
+    UpdateLayoutConfig($c4ShapeInRow="3", $c4BoundaryInRow="1")
 ```
 
 ## Container Details
