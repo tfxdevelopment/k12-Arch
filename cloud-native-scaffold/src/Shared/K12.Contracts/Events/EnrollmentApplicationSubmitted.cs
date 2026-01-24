@@ -1,10 +1,12 @@
+using K12.BuildingBlocks.Events;
+
 namespace K12.Contracts.Events;
 
 /// <summary>
 /// Integration event published when an enrollment application is submitted.
 /// This event can be consumed by other services (e.g., Programs API for award allocation).
 /// </summary>
-public sealed record EnrollmentApplicationSubmittedEvent
+public sealed record EnrollmentApplicationSubmittedEvent : IIntegrationEvent
 {
     public Guid EventId { get; init; } = Guid.NewGuid();
     public DateTimeOffset OccurredOn { get; init; } = DateTimeOffset.UtcNow;
