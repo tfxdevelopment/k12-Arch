@@ -5,33 +5,42 @@
     <CentralPackageVersionOverrideEnabled>false</CentralPackageVersionOverrideEnabled>
   </PropertyGroup>
 
-  <ItemGroup Label="Aspire - Latest Stable 13.1.0">
-    <PackageVersion Include="Aspire.Hosting.AppHost" Version="13.1.0" />
-    <PackageVersion Include="Aspire.Hosting.Azure.ApplicationInsights" Version="13.1.0" />
-    <PackageVersion Include="Aspire.Hosting.Azure.KeyVault" Version="13.1.0" />
-    <PackageVersion Include="Aspire.Hosting.Azure.ServiceBus" Version="13.1.0" />
-    <PackageVersion Include="Aspire.Hosting.Azure.Sql" Version="13.1.0" />
+  <!-- SDK Version Properties - Update these to upgrade all related packages -->
+  <PropertyGroup>
+    <AspireVersion>13.1.0</AspireVersion>
+    <DotNetVersion>10.0.2</DotNetVersion>
+    <DotNetExtensionsVersion>10.2.0</DotNetExtensionsVersion>
+    <DaprVersion>1.16.1</DaprVersion>
+    <OpenTelemetryVersion>1.15.0</OpenTelemetryVersion>
+  </PropertyGroup>
+
+  <ItemGroup Label="Aspire - Latest Stable">
+    <PackageVersion Include="Aspire.Hosting.AppHost" Version="$(AspireVersion)" />
+    <PackageVersion Include="Aspire.Hosting.Azure.ApplicationInsights" Version="$(AspireVersion)" />
+    <PackageVersion Include="Aspire.Hosting.Azure.KeyVault" Version="$(AspireVersion)" />
+    <PackageVersion Include="Aspire.Hosting.Azure.ServiceBus" Version="$(AspireVersion)" />
+    <PackageVersion Include="Aspire.Hosting.Azure.Sql" Version="$(AspireVersion)" />
     <PackageVersion Include="Aspire.Hosting.Dapr" Version="9.1.0" />
-    <PackageVersion Include="Aspire.Hosting.Redis" Version="13.1.0" />
+    <PackageVersion Include="Aspire.Hosting.Redis" Version="$(AspireVersion)" />
   </ItemGroup>
 
   <ItemGroup Label="Dapr - Latest Stable">
-    <PackageVersion Include="Dapr.AspNetCore" Version="1.16.1" />
-    <PackageVersion Include="Dapr.Client" Version="1.16.1" />
-    <PackageVersion Include="Dapr.Extensions.Configuration" Version="1.16.1" />
+    <PackageVersion Include="Dapr.AspNetCore" Version="$(DaprVersion)" />
+    <PackageVersion Include="Dapr.Client" Version="$(DaprVersion)" />
+    <PackageVersion Include="Dapr.Extensions.Configuration" Version="$(DaprVersion)" />
   </ItemGroup>
 
   <ItemGroup Label="Microsoft - .NET 10 Stable">
-    <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="10.0.2" />
-    <PackageVersion Include="Microsoft.Extensions.Hosting" Version="10.0.2" />
-    <PackageVersion Include="Microsoft.Extensions.ServiceDiscovery" Version="10.2.0" />
-    <PackageVersion Include="Microsoft.Extensions.Http.Resilience" Version="10.2.0" />
-    <PackageVersion Include="Microsoft.Extensions.Configuration.Abstractions" Version="10.0.2" />
-    <PackageVersion Include="Microsoft.Extensions.Configuration.Binder" Version="10.0.2" />
-    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.2" />
-    <PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.2" />
-    <PackageVersion Include="Microsoft.Extensions.Diagnostics.HealthChecks" Version="10.0.2" />
-    <PackageVersion Include="Microsoft.Extensions.Hosting.Abstractions" Version="10.0.2" />
+    <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Hosting" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.ServiceDiscovery" Version="$(DotNetExtensionsVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Http.Resilience" Version="$(DotNetExtensionsVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.Abstractions" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.Binder" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Diagnostics.HealthChecks" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Hosting.Abstractions" Version="$(DotNetVersion)" />
     <PackageVersion Include="Microsoft.Identity.Web" Version="4.3.0" />
   </ItemGroup>
 
@@ -62,15 +71,15 @@
   </ItemGroup>
 
   <ItemGroup Label="Serialization - .NET 10 Stable">
-    <PackageVersion Include="System.Text.Json" Version="10.0.2" />
+    <PackageVersion Include="System.Text.Json" Version="$(DotNetVersion)" />
   </ItemGroup>
 
-  <ItemGroup Label="OpenTelemetry - Latest Stable 1.15.0">
-    <PackageVersion Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.15.0" />
-    <PackageVersion Include="OpenTelemetry.Extensions.Hosting" Version="1.15.0" />
-    <PackageVersion Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.15.0" />
-    <PackageVersion Include="OpenTelemetry.Instrumentation.Http" Version="1.15.0" />
-    <PackageVersion Include="OpenTelemetry.Instrumentation.Runtime" Version="1.15.0" />
+  <ItemGroup Label="OpenTelemetry - Latest Stable">
+    <PackageVersion Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="$(OpenTelemetryVersion)" />
+    <PackageVersion Include="OpenTelemetry.Extensions.Hosting" Version="$(OpenTelemetryVersion)" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.AspNetCore" Version="$(OpenTelemetryVersion)" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.Http" Version="$(OpenTelemetryVersion)" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.Runtime" Version="$(OpenTelemetryVersion)" />
   </ItemGroup>
 
   <ItemGroup Label="Testing - Latest Stable">
