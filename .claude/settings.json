@@ -1,5 +1,9 @@
 {
-  "enabledPlugins": {
-    "content-marketing@claude-code-workflows": true
+  "permissions": {
+    "allow": [
+      "curl"
+    ],
+    "deny": [],
+    "ask": []
   }
 }

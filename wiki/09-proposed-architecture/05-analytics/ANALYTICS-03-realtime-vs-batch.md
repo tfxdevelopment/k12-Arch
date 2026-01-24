@@ -7,21 +7,14 @@
 | Document ID | ANALYTICS-03 |
 | Title | Real-Time vs Batch Analytics Decision Framework |
 | Status | Draft |
-| Version | 1.1 |
+| Version | 1.0 |
 | Created | 2025-11-24 |
-| Last Updated | 2025-12-08 |
+| Last Updated | 2025-11-24 |
 | Author | CFI Architecture Team |
 | Week | Week 3 of 10 |
 | Related Docs | ANALYTICS-01, ANALYTICS-02, INTEGRATION-05, PERFORMANCE-01 |
-| Related ADRs | [ADR-009](../../adr/ADR-009-analytics-query-engine-abstraction.md), [ADR-010](../../adr/ADR-010-embedded-analytics-components.md), [ADR-011](../../adr/ADR-011-azure-data-api-builder.md) |
 
 ## Executive Summary
-
-> **Update (December 2025):** This document is complemented by newer ADRs:
-> - **ADR-009**: `IQueryEngine` abstraction supporting multiple engines with automatic selection
-> - **ADR-010 Option 6**: PostgreSQL-enhanced architecture with TimescaleDB for time-series optimization
-> - **ADR-011**: Azure Data API Builder as a lightweight fallback engine
-> - See [QueryBuilder SDK Design](../../02-architecture/integrations/QueryBuilder/SDK-Design.md) for implementation details
 
 This document defines the decision framework, architecture patterns, and implementation strategies for real-time and batch analytics in the K12 MyPortal cloud-native architecture. It establishes when to use stream processing versus scheduled batch queries, leveraging Azure Event Hubs for real-time data ingestion, Trino for distributed batch processing, and SignalR for live dashboard updates.
 

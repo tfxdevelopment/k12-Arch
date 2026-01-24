@@ -1,6 +1,3 @@
----
-id: 3d22d932-75e3-451b-9923-552d500fde12
----
 # C4 Level 1: System Context Diagram
 
 ## K12 MyPortal System Context
@@ -38,8 +35,6 @@ C4Context
     Rel(k12, dmv, "Verifies residency")
     Rel(k12, dor, "Verifies income")
     Rel(k12, dpi, "Syncs student data")
-
-    UpdateLayoutConfig($c4ShapeInRow="4", $c4BoundaryInRow="1")
 ```
 
 ## Key Relationships

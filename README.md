@@ -1,73 +1,77 @@
-# K12 Architecture (Docs + Architecture Hub)
+# k12-Arch
 
-This repository is the **architecture and delivery hub** for the K12 platform. It contains:
+**Enterprise & Application Architecture Patterns Knowledge Base and Tools**
 
-- The architecture wiki under `wiki/`
-- Pipeline guidance and deployment docs (Aspire -> Azure)
-- A docs site under `k12-docs/`
+## Overview
 
-> Important: most application source code may live in separate repos. Some wiki pages include cross-repo references.
+k12-Arch is a comprehensive resource for teams implementing enterprise and application software architecture patterns. This repository contains:
 
-## Start Here
+- 📚 **Wiki Knowledge Base**: LLM-friendly documentation of architecture patterns
+- 🛠️ **.NET Tools**: Libraries and utilities for .NET-based architecture implementations
 
-### Docs navigation
+## Repository Structure
 
-- Wiki home: `wiki/README.md`
-- How docs are organized: `DOCUMENTATION_GUIDE.md`
-- Pipelines (index): `PIPELINE-INDEX.md`
+```
+k12-Arch/
+├── wiki/                    # Wiki-style knowledge base
+│   ├── patterns/           # Architecture pattern documentation
+│   ├── principles/         # Design principles and best practices
+│   └── guides/             # Implementation guides
+├── tools/
+│   └── dotnet/             # .NET tools and libraries
+└── examples/               # Example implementations
+```
 
-### Target .NET structure (in progress)
+## Quick Start
 
-- Project structure: `wiki/02-architecture/PROJECT-STRUCTURE.md`
-- BFF / orchestrators: `wiki/02-architecture/BFF-ORCHESTRATORS.md`
-- Shared contracts: `wiki/02-architecture/CONTRACTS.md`
-- Repo org issues: `wiki/02-architecture/REPO-ORGANIZATION-ISSUES.md`
-- Sensei PDF concerns checklist: `wiki/02-architecture/SENSEI-PDF-CONCERNS.md`
+### Wiki Knowledge Base
 
-## What This Repo Is / Is Not
+Browse the [wiki](./wiki/) directory for comprehensive documentation on:
+- Enterprise architecture patterns (Microservices, Event-Driven, etc.)
+- Application architecture patterns (MVC, MVVM, Clean Architecture, etc.)
+- Design principles (SOLID, DRY, KISS, etc.)
+- Implementation guides and best practices
 
-- **Is**: architecture documentation, pipelines, and reference implementation scaffolding.
-- **Is not**: a guaranteed monorepo of all K12 application code (yet).
+### .NET Tools
 
-## Reference Links (curated)
+```bash
+cd tools/dotnet
+dotnet restore
+dotnet build
+```
 
-### Architecture examples
+## Features
 
-- https://github.com/dotnet-architecture/eShopOnContainers
-- https://github.com/kgrzybek/modular-monolith-with-ddd
+### Wiki Knowledge Base
+- **LLM-Optimized**: Structured for easy parsing by Large Language Models
+- **Comprehensive Coverage**: Enterprise and application architecture patterns
+- **Practical Examples**: Real-world implementation examples
+- **Cross-Referenced**: Linked concepts and related patterns
 
-### Aspire
+### .NET Tools
+- Architecture pattern implementations
+- Validation libraries
+- Project templates
+- Best practice analyzers
 
-- https://aspire.dev/testing/overview/
-- https://github.com/dotnet/aspire-samples/tree/main/samples/aspire-with-azure-functions
-- https://github.com/dotnet/aspire-samples/tree/main/samples/aspire-shop
-- https://github.com/dotnet/aspire-samples/tree/main/samples/database-migrations
-- https://github.com/CommunityToolkit/Aspire
-- https://github.com/CommunityToolkit/Aspire/tree/main/examples
+## Contributing
 
-### CLI tooling
+Contributions are welcome! Please read [CONTRIBUTING.md](./CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
 
-- https://github.com/spectreconsole/spectre.console
+## License
 
-### UI framework
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 
-- https://github.com/unoplatform/uno
+## Getting Help
 
-### SCIM / Identity reference
+- 📖 Check the [wiki](./wiki/) for documentation
+- 💬 Open an [issue](../../issues) for questions or bugs
+- 🤝 Submit a [pull request](../../pulls) for contributions
 
-- https://github.com/ToolJet/ToolJet/blob/develop/docs/openapi/scim/index.openapi.yaml
+## Roadmap
 
-### Document management notes
-
-We currently use PandaDoc for document management/signing. The long-term goal is a document management abstraction.
-
-- PandaDoc (embedded signing): https://developers.pandadoc.com/docs/embedded-signing
-- iText: https://github.com/itext/itext-dotnet
-- Documenso: https://github.com/documenso/documenso
-- DocuSeal: https://github.com/docusealco/docuseal
-- OpenSign: https://github.com/OpenSignLabs/OpenSign/tree/staging/apps/OpenSignServer
-
-### Messaging
-
-- https://github.com/BrighterCommand/Brighter
- 
+- [ ] Complete core architecture patterns documentation
+- [ ] .NET NuGet packages for architecture utilities
+- [ ] Interactive pattern selector
+- [ ] Integration with popular frameworks
+- [ ] CI/CD pipeline templates

@@ -285,88 +285,30 @@ var cubejs = builder.AddContainer("k12-cubejs", "cubejs/cube", "latest")
     .WaitFor(redis);
 
 // ─────────────────────────────────────────────────────────────────
-// 6. Dapr Integration (ALL 8 Building Blocks)
+// 6. Dapr Integration (Service Mesh)
 // ─────────────────────────────────────────────────────────────────
-//
-// K12 uses ALL 8 Dapr building blocks for cross-cutting concerns.
-// This provides identical behavior in local dev and production.
-// See: ADR-PROP-006: Dapr for Cross-Cutting Concerns
-//
 
-builder.AddDapr(options =>
+builder.AddDapr(dapr =>
 {
-    options.DaprGrpcPort = 50001;
-    options.DaprHttpPort = 3500;
-    options.EnableTelemetry = true;
+    // Add Dapr state store (Redis)
+    dapr.AddStateStore("statestore", "state.redis", options =>
+    {
+        options.Metadata.Add("redisHost", redis.Resource.ConnectionStringExpression);
+        options.Metadata.Add("redisPassword", "");  // No password for local Redis
+    });
+
+    // Add Dapr pub/sub (Redis Streams)
+    dapr.AddPubSub("pubsub", "pubsub.redis", options =>
+    {
+        options.Metadata.Add("redisHost", redis.Resource.ConnectionStringExpression);
+    });
+
+    // Enable Dapr for Functions container
+    functions.WithDaprSidecar("k12-functions");
+
+    // Enable Dapr for DAB container
+    dab.WithDaprSidecar("k12-dab");
 });
-
-// ────────────────────────────────────────────────────────
-// Building Block 1: Service Invocation (Automatic - no config needed)
-// ────────────────────────────────────────────────────────
-
-// ────────────────────────────────────────────────────────
-// Building Block 2: State Management (Redis)
-// ────────────────────────────────────────────────────────
-builder.AddDaprStateStore("statestore", "state.redis", options =>
-{
-    options.Metadata.Add("redisHost", redis.Resource.ConnectionStringExpression);
-    options.Metadata.Add("redisPassword", "");  // No password for local Redis
-    options.Metadata.Add("keyPrefix", "k12");
-    options.Metadata.Add("actorStateStore", "true");
-});
-
-// ────────────────────────────────────────────────────────
-// Building Block 3: Pub/Sub (Redis Streams - local)
-// ────────────────────────────────────────────────────────
-builder.AddDaprPubSub("pubsub", "pubsub.redis", options =>
-{
-    options.Metadata.Add("redisHost", redis.Resource.ConnectionStringExpression);
-    options.Metadata.Add("consumerID", "k12-local");
-});
-
-// ────────────────────────────────────────────────────────
-// Building Block 4: Bindings (Local File System - documents)
-// ────────────────────────────────────────────────────────
-builder.AddDaprBinding("documents", "bindings.localstorage", options =>
-{
-    options.Metadata.Add("rootPath", "./local-documents");
-});
-
-// ────────────────────────────────────────────────────────
-// Building Block 5: Secrets (Local File)
-// ────────────────────────────────────────────────────────
-builder.AddDaprSecretStore("secrets", "secretstores.local.file", options =>
-{
-    options.Metadata.Add("secretsFile", "./secrets/local-secrets.json");
-    options.Metadata.Add("nestedSeparator", ":");
-});
-
-// ────────────────────────────────────────────────────────
-// Building Block 6: Configuration (Local File)
-// ────────────────────────────────────────────────────────
-builder.AddDaprConfiguration("config", "configuration.local.file", options =>
-{
-    options.Metadata.Add("configFile", "./config/local-config.json");
-});
-
-// ────────────────────────────────────────────────────────
-// Building Block 7: Workflows (Dapr Workflow Runtime)
-// ────────────────────────────────────────────────────────
-// Workflows are enabled automatically with Dapr sidecar
-// No additional configuration needed for local development
-
-// ────────────────────────────────────────────────────────
-// Building Block 8: Jobs (Cron Binding)
-// ────────────────────────────────────────────────────────
-// For local development, jobs are triggered manually or via tests
-// Production uses Dapr cron binding components
-
-// ────────────────────────────────────────────────────────
-// Enable Dapr Sidecars for Services
-// ────────────────────────────────────────────────────────
-functions.WithDaprSidecar("k12-functions");
-dab.WithDaprSidecar("k12-dab");
-cubejs.WithDaprSidecar("k12-cubejs");
 
 // ─────────────────────────────────────────────────────────────────
 // 7. Build and Run
@@ -709,231 +651,7 @@ public async Task<IActionResult> GetStudentById(...)
 
 ---
 
-## Deployment Options
-
-Aspire supports multiple deployment approaches:
-
-| Approach | Use Case | CI/CD Integration |
-|----------|----------|-------------------|
-| **`azd up`** | Quick dev deployments | Interactive, manual |
-| **`azd pipeline config`** | Azure Pipelines/GitHub Actions | Automated, enterprise |
-| **Manifest + Custom Pipeline** | Full control | Custom Azure Pipelines |
-
----
-
-## Deployment with Azure Pipelines (Recommended for Production)
-
-### Aspire Manifest Generation
-
-For enterprise CI/CD, generate an Aspire manifest as a **build artifact** that can be used by deployment stages:
-
-```bash
-# Generate manifest during CI build
-dotnet run --project K12.AppHost \
-  --publisher manifest \
-  --output-path $(Build.ArtifactStagingDirectory)/aspire-manifest.json
-```
-
-### Azure Pipelines Integration
-
-Use `azd pipeline config --provider azdo` to auto-configure Azure Pipelines:
-
-```bash
-# One-time setup (creates pipeline YAML + service connection)
-cd K12.AppHost
-azd pipeline config --provider azdo
-
-# This generates:
-# - .azdo/pipelines/azure-dev.yml
-# - Service connection to Azure subscription
-# - Pipeline variables for secrets
-```
-
-### Custom Azure Pipeline with Manifest Artifact
-
-For full control, use a custom pipeline that saves the manifest as an artifact:
-
-```yaml
-# azure-pipelines-k12-aspire.yml
-trigger:
-  branches:
-    include:
-      - development
-      - main
-
-pool:
-  vmImage: 'ubuntu-latest'
-
-variables:
-  containerRegistry: 'k12acr.azurecr.io'
-  resourceGroup: 'rg-k12-analytics-$(environment)'
-
-stages:
-  # ═══════════════════════════════════════════════════════════════
-  # Stage 1: Build & Generate Manifest
-  # ═══════════════════════════════════════════════════════════════
-  - stage: Build
-    displayName: 'Build & Publish Artifacts'
-    jobs:
-      - job: BuildAndPublish
-        steps:
-          # Install .NET 10 SDK
-          - task: UseDotNet@2
-            inputs:
-              version: '10.x'
-              includePreviewVersions: true
-            displayName: 'Install .NET 10 SDK'
-
-          # Install Aspire workload
-          - script: dotnet workload install aspire
-            displayName: 'Install Aspire Workload'
-
-          # Restore & Build
-          - script: |
-              dotnet restore
-              dotnet build --configuration Release --no-restore
-            displayName: 'Build Solution'
-
-          # ───────────────────────────────────────────────────────
-          # Generate Aspire Manifest (Key Step!)
-          # ───────────────────────────────────────────────────────
-          - script: |
-              dotnet run --project K12.AppHost/K12.AppHost.csproj \
-                --publisher manifest \
-                --output-path $(Build.ArtifactStagingDirectory)/aspire-manifest.json
-            displayName: 'Generate Aspire Manifest'
-
-          # Build container images with .NET SDK
-          - script: |
-              dotnet publish K12.QueryBuilder.API/K12.QueryBuilder.API.csproj \
-                --os linux --arch x64 \
-                -p:ContainerRegistry=$(containerRegistry) \
-                -p:ContainerImageTag=$(Build.BuildId) \
-                -p:ContainerImageName=k12-query-api
-            displayName: 'Build Container Image'
-
-          # Login to Azure Container Registry
-          - task: Docker@2
-            inputs:
-              containerRegistry: 'K12-ACR-Connection'
-              command: 'login'
-            displayName: 'Login to ACR'
-
-          # Push images to ACR
-          - script: |
-              docker push $(containerRegistry)/k12-query-api:$(Build.BuildId)
-              docker tag $(containerRegistry)/k12-query-api:$(Build.BuildId) \
-                         $(containerRegistry)/k12-query-api:latest
-              docker push $(containerRegistry)/k12-query-api:latest
-            displayName: 'Push Images to ACR'
-
-          # ───────────────────────────────────────────────────────
-          # Publish Manifest as Build Artifact
-          # ───────────────────────────────────────────────────────
-          - publish: $(Build.ArtifactStagingDirectory)/aspire-manifest.json
-            artifact: 'aspire-manifest'
-            displayName: 'Publish Manifest Artifact'
-
-          # Publish Bicep/ARM templates (if using azd infra synth)
-          - publish: $(Build.ArtifactStagingDirectory)/infra
-            artifact: 'infrastructure'
-            displayName: 'Publish Infrastructure Templates'
-
-  # ═══════════════════════════════════════════════════════════════
-  # Stage 2: Deploy to Development
-  # ═══════════════════════════════════════════════════════════════
-  - stage: DeployDev
-    displayName: 'Deploy to Development'
-    dependsOn: Build
-    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/development'))
-    variables:
-      environment: 'dev'
-    jobs:
-      - deployment: DeployToContainerApps
-        environment: 'k12-analytics-dev'
-        strategy:
-          runOnce:
-            deploy:
-              steps:
-                # Download artifacts
-                - download: current
-                  artifact: 'aspire-manifest'
-
-                - download: current
-                  artifact: 'infrastructure'
-
-                # Deploy using Azure CLI
-                - task: AzureCLI@2
-                  inputs:
-                    azureSubscription: 'K12-Azure-Subscription'
-                    scriptType: 'bash'
-                    scriptLocation: 'inlineScript'
-                    inlineScript: |
-                      # Update Container App with new image
-                      az containerapp update \
-                        --name k12-query-api \
-                        --resource-group $(resourceGroup) \
-                        --image $(containerRegistry)/k12-query-api:$(Build.BuildId) \
-                        --set-env-vars "BUILD_ID=$(Build.BuildId)"
-                  displayName: 'Deploy to Container Apps'
-
-  # ═══════════════════════════════════════════════════════════════
-  # Stage 3: Deploy to Production (Manual Approval)
-  # ═══════════════════════════════════════════════════════════════
-  - stage: DeployProd
-    displayName: 'Deploy to Production'
-    dependsOn: Build
-    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
-    variables:
-      environment: 'prod'
-    jobs:
-      - deployment: DeployToProduction
-        environment: 'k12-analytics-prod'  # Requires manual approval
-        strategy:
-          runOnce:
-            deploy:
-              steps:
-                - download: current
-                  artifact: 'aspire-manifest'
-
-                - task: AzureCLI@2
-                  inputs:
-                    azureSubscription: 'K12-Azure-Subscription-Prod'
-                    scriptType: 'bash'
-                    scriptLocation: 'inlineScript'
-                    inlineScript: |
-                      az containerapp update \
-                        --name k12-query-api \
-                        --resource-group rg-k12-analytics-prod \
-                        --image $(containerRegistry)/k12-query-api:$(Build.BuildId)
-                  displayName: 'Deploy to Production'
-```
-
-### Container Registry Configuration
-
-Images are stored in **Azure Container Registry (ACR)**:
-
-| Image | Purpose | Registry Path |
-|-------|---------|---------------|
-| `k12-query-api` | Query API (.NET 10) | `k12acr.azurecr.io/k12-query-api` |
-| `k12-cubejs` | Cube.js semantic layer | `k12acr.azurecr.io/k12-cubejs` |
-| `k12-trino` | Trino query federation | `k12acr.azurecr.io/k12-trino` |
-
-**ACR Setup:**
-```bash
-# Create ACR (one-time)
-az acr create --name k12acr --resource-group rg-k12-shared --sku Standard
-
-# Enable admin access for CI/CD
-az acr update --name k12acr --admin-enabled true
-
-# Get credentials for Azure Pipelines service connection
-az acr credential show --name k12acr
-```
-
----
-
-## Deployment with azd (Quick Dev Deployments)
+## Deployment with azd
 
 ### What is Azure Developer CLI (azd)?
 

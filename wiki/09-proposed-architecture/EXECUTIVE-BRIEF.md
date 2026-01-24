@@ -69,7 +69,7 @@ Migrate to **Azure Container Apps** with **.NET 10**, **Data API Builder**, and 
 | Option | Monthly Cost | 3-Year TCO | Timeline | Scale Capacity |
 |--------|--------------|------------|----------|----------------|
 | **Current (Functions Premium)** | $5,800 | $209,000 | N/A | 30K users |
-| **Proposed (Container Apps + Analytics)** | **$6,955** | **$250,000** | **3 months (Phase 1)** | **80K users** |
+| **Proposed (Container Apps + Analytics)** | **$6,955** | **$250,000** | **6 months** | **80K users** |
 | **Alternative (Microservices on AKS)** | $12,000 | $432,000 | 12-18 months | 80K users |
 
 ### ROI Summary
@@ -103,25 +103,21 @@ Migrate to **Azure Container Apps** with **.NET 10**, **Data API Builder**, and 
 
 ## Timeline & Milestones
 
-### 3-Month Implementation Plan (Phase 1)
+### 6-Month Implementation Plan
 
-**Accelerated Timeline:** With Senior Platform Engineer support
+| Phase | Duration | Key Deliverables | Milestone |
+|-------|----------|------------------|-----------|
+| **Phase 1** | Weeks 1-8 | Containerize Functions, .NET 10 upgrade, deploy Dev | POC Complete |
+| **Phase 2** | Weeks 9-16 | Add Data API Builder, Aspire setup, load testing | 80K Scale Validated |
+| **Phase 3** | Weeks 17-24 | Add Trino+CubeJS analytics, multi-region, production | Production Ready |
 
-| PI | Weeks | Phase | Key Deliverables | Milestone |
-|----|-------|-------|------------------|-----------|
-| **PI 4** | 1-6 | **Documentation + POC** | Complete docs, containerize 1 Function POC, Aspire setup | POC Validated |
-| **PI 5** | 7-12 | **Core Migration** | Containerize all Functions, .NET 10 upgrade, Data API Builder, Dev deploy | 80K Scale Ready |
-| **PI 6** | 13-18 | **Production** | Load testing, blue-green deployment, production go-live | **PHASE 1 COMPLETE** |
-
-**Go-Live:** End of PI 6 (March 2026) - **In time for 2026-2027 enrollment cycle**
-
-**Phase 2 (Analytics):** Deferred to PI 7-8 (Trino + CubeJS)
+**Go-Live:** Month 6 (May 2026) - **In time for 2026-2027 enrollment cycle**
 
 ### Key Decision Points
 
-- **Week 6 (PI 4 end):** POC results - Proceed with full migration or adjust
-- **Week 12 (PI 5 end):** Load test 80K users - Validate scale targets met
-- **Week 15 (PI 6 mid):** Blue-green cutover - Gradual rollout (10% → 50% → 100%)
+- **Week 5:** Load test results (80K users) - Proceed/Optimize/Re-plan
+- **Week 12:** Analytics POC - Validate Trino/CubeJS integration
+- **Week 20:** Blue-green production deployment - Gradual rollout (10% → 100%)
 
 ---
 
@@ -133,7 +129,7 @@ Migrate to **Azure Container Apps** with **.NET 10**, **Data API Builder**, and 
 
 **Rationale:**
 - Container Apps scales to 1000 instances (handles 80K users without decomposition)
-- 3-month Phase 1 timeline (core platform) vs. 12-18 months for microservices
+- 6-month timeline vs. 12-18 months for microservices
 - +20% cost vs. +107% for microservices
 - Maintains ACID transactions (no distributed sagas)
 - Future optionality: Can extract services later if needed (strangler fig pattern)
@@ -189,7 +185,7 @@ Migrate to **Azure Container Apps** with **.NET 10**, **Data API Builder**, and 
 **Why:**
 1. **Solves 80K scale challenge** without microservices complexity
 2. **Adds enterprise analytics** for $1,155/month (vs. $6,000+ for Azure Synapse)
-3. **Fast time to market** - 3 months Phase 1 vs. 12-18 for microservices
+3. **Fast time to market** - 6 months vs. 12-18 for microservices
 4. **Low risk** - Proven Microsoft stack, incremental migration, easy rollback
 5. **Future-proof** - Modern cloud-native architecture, can scale further if needed
 6. **Cost efficient** - +20% investment vs. current, -43% vs. alternative (AKS)
@@ -198,7 +194,7 @@ Migrate to **Azure Container Apps** with **.NET 10**, **Data API Builder**, and 
 1. **Week 1:** Finalize documentation, present to stakeholders
 2. **Week 2:** POC - Containerize Functions, deploy to Dev Container Apps
 3. **Week 3:** Team training (Docker, Aspire, Container Apps)
-4. **Week 4:** Implement Data API Builder with claims-based authorization
+4. **Week 4:** Implement Data API Builder, validate RLS integration
 5. **Week 5:** Load testing (80K concurrent users) - **GO/NO-GO decision point**
 
 ---

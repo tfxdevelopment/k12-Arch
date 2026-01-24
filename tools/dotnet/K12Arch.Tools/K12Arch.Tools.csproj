@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Version>0.1.0</Version>
+    <Authors>k12-Arch Team</Authors>
+    <Company>k12-Arch</Company>
+    <Description>Architecture pattern utilities and tools for .NET applications</Description>
+    <PackageId>K12Arch.Tools</PackageId>
+    <PackageTags>architecture;patterns;enterprise;microservices;clean-architecture;cqrs;ddd</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/tfxterry/k12-Arch</RepositoryUrl>
+  </PropertyGroup>
+
+</Project>

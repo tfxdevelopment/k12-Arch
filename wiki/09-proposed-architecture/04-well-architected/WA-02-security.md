@@ -5,7 +5,7 @@
 - **Date:** 2024-11-24
 - **Framework:** Microsoft Azure Well-Architected Framework - Security Pillar
 - **Compliance:** FedRAMP Moderate, NIST 800-53, FERPA, WCAG 2.1 AA
-- **Related Documents:** SEC-01 (Entra ID), SEC-02 (Authorization), ADR-003 (Entra B2C)
+- **Related Documents:** SEC-01 (Entra ID), SEC-02 (Authorization), SEC-03 (RLS), ADR-003 (Entra B2C)
 
 ## Executive Summary
 Security assessment for K12 MyPortal's proposed Azure Container Apps architecture, maintaining **FedRAMP Moderate** compliance while adding container security, zero trust networking, and enhanced threat protection.
@@ -24,7 +24,7 @@ Security assessment for K12 MyPortal's proposed Azure Container Apps architectur
 ### Existing Security Architecture (Maintained)
 - ✅ **Hub & Spoke Model:** Entra ID as central identity authority
 - ✅ **Custom Security Attributes:** studentAccessControl for fine-grained access
-- ✅ **Defense-in-Depth:** Front Door → APIM → Claims-Based Authorization Middleware
+- ✅ **Defense-in-Depth:** APIM → API Gateway Middleware → Row-Level Security (SQL)
 - ✅ **PII Protection:** Encryption at rest (TDE), in transit (TLS 1.2+), PGP for DMV/DOR
 - ✅ **FedRAMP Moderate:** Azure Government Cloud compliance
 
@@ -255,48 +255,35 @@ customDomains:
 
 The proposed architecture **does not change** how PII is handled. All existing controls are preserved:
 
-#### Claims-Based Authorization (Application Layer)
+#### Row-Level Security (RLS) - Unchanged
+```sql
+-- Existing RLS policy (works identically in proposed architecture)
+CREATE FUNCTION Security.tvf_StudentAccessPredicate(@StudentId INT)
+RETURNS TABLE
+WITH SCHEMABINDING
+AS
+RETURN SELECT 1 AS allowed
+WHERE
+    -- Admin sees all
+    IS_MEMBER('Admin') = 1
+    OR
+    -- Household sees only their students
+    EXISTS (
+        SELECT 1 FROM Enrollment.Students s
+        INNER JOIN dbo.UserResourceAccessMap uram ON s.StudentId = uram.ResourceId
+        WHERE s.StudentId = @StudentId
+          AND uram.UserId = CAST(SESSION_CONTEXT(N'UserId') AS INT)
+          AND uram.ResourceType = 'Student'
+    );
 
-**New Security Model:** Authorization filtering in application middleware (NOT database RLS)
-
-```csharp
-// EntraAuthorizationMiddleware.cs - Claims-based filtering
-public class ClaimsAuthorizationService
-{
-    private readonly IHttpContextAccessor _context;
-
-    public async Task<List<Student>> GetAuthorizedStudents()
-    {
-        // Extract claims from validated JWT token (Entra ID)
-        var claims = _context.HttpContext.User.Claims;
-        var role = claims.FirstOrDefault(c => c.Type == "extension_Role")?.Value;
-        var studentIds = claims
-            .Where(c => c.Type == "extension_StudentAccessControl_StudentIds")
-            .Select(c => int.Parse(c.Value))
-            .ToList();
-
-        // Filter in application layer (NOT SQL RLS)
-        if (role == "Admin")
-        {
-            return await _db.Students.ToListAsync(); // Admin sees all
-        }
-        else if (role == "Household")
-        {
-            return await _db.Students
-                .Where(s => studentIds.Contains(s.StudentId))
-                .ToListAsync(); // Household sees only their students
-        }
-
-        return new List<Student>(); // Default: no access
-    }
-}
+-- Apply RLS policy (no changes)
+CREATE SECURITY POLICY Security.StudentAccessPolicy
+ADD FILTER PREDICATE Security.tvf_StudentAccessPredicate(StudentId)
+ON Enrollment.Students
+WITH (STATE = ON);
 ```
 
-**Benefits over SQL RLS:**
-- ✅ **Portable:** Works with Trino, Cosmos DB, external APIs (not SQL-only)
-- ✅ **Testable:** Mock JWT tokens in unit tests (easier than RLS testing)
-- ✅ **Cacheable:** Application-layer caching with user-scoped cache keys
-- ✅ **Simpler:** No SQL session context management required
+**Container Apps Compatibility:** ✅ RLS works identically (SQL session context preserved)
 
 #### PGP Encryption for State Agencies (Maintained)
 ```csharp
@@ -351,8 +338,8 @@ public class DmvIntegrationService
 ```
 
 **Security Benefits:**
-- JWT validation (Entra ID integration)
-- Claims-based policy enforcement in DAB layer
+- JWT validation (same as existing Functions)
+- RLS-equivalent policy enforcement
 - GraphQL query depth limiting (DoS protection)
 - Rate limiting (1000 req/min per user)
 
@@ -373,9 +360,9 @@ az sentinel workspace create \
 ```
 
 **Log Sources Integrated:**
-1. **Application Insights:** API calls, errors, performance, authorization failures
+1. **Application Insights:** API calls, errors, performance
 2. **Container App Logs:** Container lifecycle, crashes, resource usage
-3. **Azure SQL Auditing:** All database queries, schema changes
+3. **Azure SQL Auditing:** All database queries, schema changes, RLS violations
 4. **Key Vault:** Secret access (who accessed which secret when)
 5. **Entra ID:** Sign-ins, MFA events, suspicious activities
 6. **Azure Activity Log:** Infrastructure changes, role assignments
@@ -384,12 +371,12 @@ az sentinel workspace create \
 
 #### Security Analytics Rules (Automated Alerts)
 ```kql
-// Alert: Unusual number of authorization failures (potential privilege escalation attempt)
-AppTraces
-| where Message contains "Authorization failed" or Message contains "Access denied"
-| extend UserId = tostring(parse_json(Properties).UserId)
-| summarize FailureCount = count() by UserId, bin(TimeGenerated, 5m)
-| where FailureCount > 50  // >50 failures in 5 minutes
+// Alert: Unusual number of RLS denials (potential privilege escalation attempt)
+AzureDiagnostics
+| where Category == "SQLSecurityAuditEvents"
+| where statement_s contains "RLS_DENY"
+| summarize DenialCount = count() by UserId = user_id_s, bin(TimeGenerated, 5m)
+| where DenialCount > 50  // >50 denials in 5 minutes
 | extend Severity = "High"
 ```
 
@@ -407,7 +394,7 @@ AzureKeyVaultLogs
 |-------------|---------|----------|--------|
 | **FedRAMP Moderate** | ✅ Compliant | ✅ Compliant | No change (Azure Gov) |
 | **NIST 800-53** | ✅ Compliant | ✅ Enhanced | +Defender, +CMK |
-| **FERPA (PII Protection)** | ✅ Compliant | ✅ Compliant | Claims-based auth, TDE |
+| **FERPA (PII Protection)** | ✅ Compliant | ✅ Compliant | No change (RLS, TDE) |
 | **WCAG 2.1 AA** | ✅ Compliant | ✅ Compliant | No frontend changes |
 | **SOC 2 Type II** | ✅ Compliant | ✅ Compliant | Azure service compliance |
 | **ISO 27001** | ✅ Compliant | ✅ Enhanced | +Sentinel SIEM |
@@ -433,7 +420,7 @@ AzureKeyVaultLogs
 | **SQL Injection** | Tampering | Dapper parameterized queries, DAB auto-parameterization |
 | **JWT Token Theft** | Spoofing | Short-lived tokens (1 hour), refresh token rotation |
 | **Container Escape** | Elevation of Privilege | Non-root containers, Defender runtime protection |
-| **Insider Threat (DB Admin)** | Information Disclosure | Claims-based filtering in app layer, Key Vault RBAC (no direct SQL access) |
+| **Insider Threat (DB Admin)** | Information Disclosure | RLS enforced in SQL, Key Vault RBAC (no direct SQL access) |
 | **DDoS Attack** | Denial of Service | Azure Front Door (10 Tbps protection), APIM rate limiting |
 | **Supply Chain (Malicious NPM)** | Tampering | Defender for Containers dependency scanning, private NPM registry |
 
@@ -444,7 +431,7 @@ AzureKeyVaultLogs
 2. **JWT Manipulation:** Attempt role elevation, claim tampering
 3. **API Abuse:** GraphQL query bombing, excessive N+1 queries
 4. **Container Escape:** Attempt breakout to host OS
-5. **Data Exfiltration:** Attempt to bypass claims authorization, access unauthorized data
+5. **Data Exfiltration:** Attempt to bypass RLS, access unauthorized data
 
 **Budget:** $15,000 (one-time, not monthly cost)
 **Vendor:** FedRAMP-approved pentesting firm
@@ -460,10 +447,10 @@ AzureKeyVaultLogs
 4. **Remediate (2 hours):** Patch vulnerability, rotate all secrets
 5. **Report (24 hours):** FERPA breach notification (if PII accessed)
 
-#### P1: High Security Alert (Authorization Bypass Attempt)
-1. **Alert (real-time):** Sentinel triggers alert on excessive authorization failures
+#### P1: High Security Alert (RLS Bypass Attempt)
+1. **Alert (real-time):** Sentinel triggers alert on suspicious query pattern
 2. **Auto-Block (1 minute):** APIM rate limit kicks in for offending user
-3. **Investigate (30 minutes):** Security team reviews Application Insights logs
+3. **Investigate (30 minutes):** Security team reviews logs
 4. **Escalate if needed:** Promote to P0 if confirmed breach
 
 ### Security Training Requirements
@@ -496,7 +483,7 @@ AzureKeyVaultLogs
 ### Security KPIs (Measured Quarterly)
 - **Vulnerability SLA:** 100% of CRITICAL CVEs patched within 7 days
 - **Secret Rotation:** 100% of secrets rotated within 90 days
-- **Audit Compliance:** Zero successful authorization bypass attempts
+- **Audit Compliance:** Zero RLS policy violations (unauthorized data access)
 - **Incident Response:** <15 minute mean time to detection (MTTD)
 - **Pentest Results:** Zero CRITICAL findings, <5 HIGH findings
 
@@ -512,8 +499,8 @@ AzureKeyVaultLogs
 ### Related K12 Documents
 - [SEC-01: Entra ID Configuration](../../02-architecture/security/SEC-01-entra-id-configuration.md)
 - [SEC-02: Authorization Model](../../02-architecture/security/SEC-02-authorization-model.md)
+- [SEC-03: Row-Level Security](../../02-architecture/security/SEC-03-row-level-security.md)
 - [ADR-003: Entra ID B2C for CIAM](../../adr/ADR-003-entra-id-b2c-ciam.md)
-- [SECURITY-MIGRATION-TODOS: RLS → Claims Migration Plan](../../../SECURITY-MIGRATION-TODOS.md)
 
 ---
 

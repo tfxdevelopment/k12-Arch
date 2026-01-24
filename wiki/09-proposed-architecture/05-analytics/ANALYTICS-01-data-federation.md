@@ -3,16 +3,11 @@
 ## Metadata
 - **Status:** Draft
 - **Date:** 2024-11-24
-- **Related ADRs:** ADR-PROP-004 (Trino), ADR-PROP-005 (CubeJS), [ADR-009](../../adr/ADR-009-analytics-query-engine-abstraction.md), [ADR-010](../../adr/ADR-010-embedded-analytics-components.md), [ADR-011](../../adr/ADR-011-azure-data-api-builder.md)
-- **Related Docs:** API-03 (Analytics APIs), [QueryBuilder SDK Design](../../02-architecture/integrations/QueryBuilder/SDK-Design.md)
+- **Related ADRs:** ADR-PROP-004 (Trino), ADR-PROP-005 (CubeJS)
+- **Related Docs:** API-03 (Analytics APIs)
 
 ## Executive Summary
 Data federation strategy using **Trino** as the distributed SQL query engine to unify Azure SQL (transactional data), ADLS Gen2 (document metadata), and future data sources (Cosmos DB, external APIs) for K12 MyPortal analytics.
-
-> **Update (December 2025):** This document is complemented by newer ADRs:
-> - **ADR-009**: Introduces `IQueryEngine` abstraction allowing pluggable query engines (Cube.js, Trino, Data API Builder)
-> - **ADR-010**: Defines embedded analytics component strategy with PostgreSQL-enhanced architecture (Option 6)
-> - **ADR-011**: Documents Azure Data API Builder as a zero-code fallback engine
 
 ## Problem Statement
 
@@ -141,7 +136,7 @@ sqlserver.domain-compaction-threshold=100
 - `Awards.Allocations`
 - `Awards.Disbursements`
 - `Comms.EmailLog`
-- `dbo.UserResourceAccessMap` (for reference only - claims-based auth used instead)
+- `dbo.UserResourceAccessMap` (RLS enforcement)
 
 **Example Query:**
 ```sql
@@ -343,20 +338,18 @@ SET SESSION join_distribution_type = 'BROADCAST';  -- Faster for <10K rows
 
 ## Security & Compliance
 
-### 1. Claims-Based Security in Federated Queries
+### 1. Row-Level Security (RLS) in Federated Queries
 
-**Approach:** Claims-based filtering in CubeJS layer (NOT database RLS)
+**Problem:** Azure SQL enforces RLS, but Trino bypasses it (uses service account, not user identity)
 
-**Why:** Trino connects to SQL using service account (no user context), so authorization happens in application layer
-
-**Solution:** CubeJS applies JWT claims filtering before executing Trino queries
+**Solution:** Apply RLS filtering in Trino via CubeJS (next layer up)
 
 ```javascript
-// CubeJS security context from validated JWT token (Entra ID)
+// CubeJS applies RLS based on JWT claims
 cube(`EnrollmentApplications`, {
   sql: `SELECT * FROM trino.sqlserver.enrollment.applications`,
 
-  // Claims-based security: Filter based on JWT token claims
+  // RLS: Filter based on user's custom security attributes
   dataSource: ({ securityContext }) => {
     const role = securityContext.role;
     const studentIds = securityContext.studentIds || [];
@@ -366,26 +359,30 @@ cube(`EnrollmentApplications`, {
     } else if (role === 'Household') {
       return `
         SELECT * FROM trino.sqlserver.enrollment.applications
-        WHERE student_id IN (${studentIds.join(',')})  // Filter by claims
-      `;
-    } else if (role === 'Provider') {
-      const providerId = securityContext.providerId;
-      return `
-        SELECT * FROM trino.sqlserver.enrollment.applications
-        WHERE provider_id = ${providerId}  // Filter by provider claim
+        WHERE student_id IN (${studentIds.join(',')})  // See only their students
       `;
     }
-
-    return `SELECT * FROM trino.sqlserver.enrollment.applications WHERE 1=0`; // No access
   }
 });
 ```
 
-**Benefits:**
-- ✅ No SQL session context required
-- ✅ Works with all Trino connectors (SQL Server, ADLS Gen2, Cosmos DB)
-- ✅ Filtering logic in one place (CubeJS security context)
-- ✅ Testable with mock JWT tokens
+**Alternative (Preferred):** Use Trino's built-in `system access control`
+
+**File:** `/etc/trino/access-control/rules.json`
+```json
+{
+  "catalogs": [
+    {
+      "user": "household_.*",
+      "catalog": "sqlserver",
+      "schema": "Enrollment",
+      "table": "Applications",
+      "privileges": ["SELECT"],
+      "filter": "student_id IN (SELECT resource_id FROM sqlserver.dbo.UserResourceAccessMap WHERE user_id = CURRENT_USER)"
+    }
+  ]
+}
+```
 
 ### 2. Encryption & Compliance
 - **In-Transit:** TLS 1.3 for all Trino connections (client → coordinator, coordinator → workers)
@@ -750,7 +747,7 @@ ab -n 1000 -c 100 -T 'application/json' \
 - [ADR-PROP-004: Trino for Data Federation](../07-adr-proposed/ADR-PROP-004-trino.md)
 - [API-03: Analytics APIs](../03-hybrid-api/API-03-analytics-apis.md)
 - [ANALYTICS-02: Semantic Layer Design](./ANALYTICS-02-semantic-layer.md)
-- [ANALYTICS-03: Real-Time vs Batch Analytics](./ANALYTICS-03-realtime-vs-batch.md)
+- [ANALYTICS-03: Dashboard Architecture](./ANALYTICS-03-dashboard-architecture.md)
 
 ### External Resources
 - [Trino GitHub Repository](https://github.com/trinodb/trino)

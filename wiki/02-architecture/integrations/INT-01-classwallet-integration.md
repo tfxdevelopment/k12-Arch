@@ -2446,7 +2446,7 @@ When troubleshooting ClassWallet integration issues:
 ### Internal Documentation
 
 - **Confluence Page**: [ClassWallet Integration Specification](https://cfi-nc.atlassian.net/wiki/spaces/KR/pages/4350410805)
-- **ADR-012**: Payment Processing Architecture (ADR missing)
+- **ADR-012**: [Payment Processing Architecture](../../../wiki/adr/ADR-012-payment-processing.md)
 - **Security Documentation**: [Hub & Spoke Security Model](../security/hub-spoke-security-model.md)
 
 ### Related Architecture Documents

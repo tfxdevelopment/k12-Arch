@@ -23,40 +23,19 @@ This directory contains the **proposed future-state architecture** for K12 MyPor
 
 | Component | Technology | Purpose |
 |-----------|-----------|---------|
-| **Hosting** | Azure Container Apps | Managed Kubernetes, NOT App Service |
 | **Compute** | Azure Container Functions on Container Apps | Business logic, no cold starts, 80K scale |
-| **Analytics** | CubeJS + Trino + Metabase (API exposed) | CubeJS semantic layer + API over Trino; Metabase UI/API for dashboards and embeds |
+| **CRUD APIs** | Data API Builder (DAB) | Zero-code REST/GraphQL from database schema |
+| **Analytics** | Trino + CubeJS | Data federation, semantic layer, pre-aggregations |
 | **Caching** | Azure Cache for Redis | Distributed cache for all layers (65%+ hit rate target) |
-| **Cross-Cutting** | Dapr sidecar building blocks (no server components) | Service invocation, pub/sub, state, secrets, bindings, config |
-| **Local Dev** | .NET Aspire + Dapr | F5 to launch all containers with Dapr sidecars |
+| **Service Mesh** | Dapr (built into Container Apps) | mTLS, pub/sub, service invocation, state management |
+| **Local Dev** | .NET Aspire | F5 to launch all containers, auto-generate Bicep |
 | **IaC** | Aspire (compute) + Terraform (governance) | Hybrid approach for flexibility |
 | **Runtime** | .NET 10 (LTS) | Latest long-term support, released Nov 11, 2025 |
 
-### 🔧 **Dapr for ALL Cross-Cutting Concerns**
+### ❌ **Rejected Approach: Microservices Decomposition**
 
-K12 uses **Dapr (Distributed Application Runtime)** as the abstraction layer for ALL cross-cutting concerns. This provides a consistent programming model that works identically in local development (Aspire + Docker) and production (Azure Container Apps).
-
-| # | Dapr Building Block | Local (Aspire) | Production (Azure) | K12 Use Case |
-|---|---------------------|----------------|-------------------|--------------|
-| 1 | **Service Invocation** | Dapr sidecar | Container Apps Dapr | mTLS, retries, circuit breakers |
-| 2 | **State Management** | Redis container | Azure Cache for Redis | Session cache, temp data |
-| 3 | **Pub/Sub** | Redis Streams | Azure Service Bus | RDS integration, roster events |
-| 4 | **Bindings** | Local file system | Azure Blob, SendGrid | Document storage, email |
-| 5 | **Secrets** | Local secrets file | Azure Key Vault | API keys, connection strings |
-| 6 | **Configuration** | Local config file | Azure App Configuration | Feature flags, settings |
-
-> Server components (actors, workflows, jobs) are intentionally excluded because Azure Container Apps does not host the required Dapr control plane. Long-running work is handled via application-level orchestrators and scheduled containers.
-
-See [ADR-PROP-006: Dapr for Cross-Cutting Concerns](../adr/ADR-PROP-006-dapr.md) and [CONT-06: Dapr Integration](01-container-apps/CONT-06-dapr-integration.md) for details.
-
-### ❌ **Rejected Approaches**
-
-| Approach | Decision | Rationale |
-|----------|----------|-----------|
-| **Microservices Decomposition** | Rejected | Container Apps solves scale (1000 instances), 6-month timeline vs 12-18 months |
-| **Azure App Service** | Rejected | No Dapr support, no KEDA scaling, no multi-container environments |
-| **Azure Durable Functions** | Superseded | Containerized functions + app-level process managers; Dapr server components not available on ACA |
-| **Azure Functions Timer Triggers** | Superseded | Scheduled containers/cron jobs managed at app level; no Dapr Jobs on ACA |
+**Decision:** Keep Functions as containerized monolith, do NOT decompose into 10+ services
+**Rationale:** Container Apps solves scale (1000 instances), avoids distributed transaction complexity, 6-month timeline vs 12-18 for microservices
 
 ---
 
@@ -67,7 +46,9 @@ See [ADR-PROP-006: Dapr for Cross-Cutting Concerns](../adr/ADR-PROP-006-dapr.md)
 #### **1. Container Apps Architecture** (`01-container-apps/`)
 - [CONT-01: Container Functions on Container Apps](01-container-apps/CONT-01-container-functions-architecture.md)
 - [CONT-02: Container Apps Environment Design](01-container-apps/CONT-02-environment-design.md)
-- [CONT-03: Metabase Analytics Integration](01-container-apps/CONT-03-metabase-integration.md)
+- [CONT-03: Data API Builder Integration](01-container-apps/CONT-03-data-api-builder.md)
+- [CONT-04: Trino Analytics Engine](01-container-apps/CONT-04-trino-integration.md)
+- [CONT-05: CubeJS Semantic Layer](01-container-apps/CONT-05-cubejs-integration.md)
 - [CONT-06: Dapr Service Mesh](01-container-apps/CONT-06-dapr-integration.md)
 - [CONT-07: KEDA Scaling and Performance](01-container-apps/CONT-07-keda-scaling.md)
 - [CONT-08: Observability and Monitoring](01-container-apps/CONT-08-observability.md)
@@ -84,29 +65,31 @@ See [ADR-PROP-006: Dapr for Cross-Cutting Concerns](../adr/ADR-PROP-006-dapr.md)
 - [ASPIRE-07: Testing Strategies](02-aspire/ASPIRE-07-testing.md)
 
 #### **3. Architecture Decision Records (Proposed)** (`07-adr-proposed/`)
-- [ADR-PROP-001: Azure Container Functions on Container Apps](../adr/ADR-PROP-001-container-functions.md) ⭐ **CRITICAL**
-- [ADR-PROP-002: .NET Aspire Orchestration](../adr/ADR-PROP-002-aspire.md)
-- [ADR-PROP-006: Dapr for Cross-Cutting Concerns](../adr/ADR-PROP-006-dapr.md)
-- [ADR-PROP-008: No Microservices Decomposition](../adr/ADR-PROP-008-no-microservices.md) ⭐ **CRITICAL**
-
-> **Archived ADRs:** [ADR-PROP-003 (DAB)](../adr/ADR-PROP-003-data-api-builder.md), [ADR-PROP-004 (Trino)](../adr/ADR-PROP-004-trino.md), [ADR-PROP-005 (CubeJS)](../adr/ADR-PROP-005-cubejs.md) superseded by [ADR-014: Metabase Analytics](../adr/ADR-014-metabase-analytics.md)
+- [ADR-PROP-001: Azure Container Functions on Container Apps](07-adr-proposed/ADR-PROP-001-container-functions.md) ⭐ **CRITICAL**
+- [ADR-PROP-002: .NET Aspire Orchestration](07-adr-proposed/ADR-PROP-002-aspire.md)
+- [ADR-PROP-003: Data API Builder for CRUD APIs](07-adr-proposed/ADR-PROP-003-data-api-builder.md) ⭐ **CRITICAL**
+- [ADR-PROP-004: Trino for Data Federation](07-adr-proposed/ADR-PROP-004-trino.md)
+- [ADR-PROP-005: CubeJS Semantic Layer](07-adr-proposed/ADR-PROP-005-cubejs.md)
+- [ADR-PROP-006: Dapr for Microservices Patterns](07-adr-proposed/ADR-PROP-006-dapr.md)
+- [ADR-PROP-007: Hybrid IaC (Aspire + Terraform)](07-adr-proposed/ADR-PROP-007-hybrid-iac.md)
+- [ADR-PROP-008: No Microservices Decomposition](07-adr-proposed/ADR-PROP-008-no-microservices.md) ⭐ **CRITICAL**
 
 ### **Priority 1: High (Week 3-5)**
 
-#### **4. API Strategy** (`03-hybrid-api/`)
-- [API-01: Container Functions Business Logic](03-hybrid-api/API-01-functions-logic.md)
-- [API-02: Metabase Analytics APIs](03-hybrid-api/API-02-analytics-apis.md)
-- [API-03: API Gateway Patterns](03-hybrid-api/API-03-api-gateway.md)
-- [API-04: Caching Strategy](03-hybrid-api/API-04-caching-strategy.md)
-- [API-05: Performance Testing](03-hybrid-api/API-05-performance-testing.md)
+#### **4. Hybrid API Strategy** (`03-hybrid-api/`)
+- [API-01: Data API Builder Implementation](03-hybrid-api/API-01-dab-implementation.md)
+- [API-02: Container Functions Business Logic](03-hybrid-api/API-02-functions-logic.md)
+- [API-03: Analytics APIs](03-hybrid-api/API-03-analytics-apis.md)
+- [API-04: API Gateway Patterns](03-hybrid-api/API-04-api-gateway.md)
+- [API-05: Caching Strategy](03-hybrid-api/API-05-caching-strategy.md)
+- [API-06: Performance Testing](03-hybrid-api/API-06-performance-testing.md)
 
 #### **5. Analytics Architecture** (`04-analytics/`)
-- [ANALYTICS-01: Metabase Multi-Environment Strategy](04-analytics/ANALYTICS-01-metabase-deployment.md)
-- [ANALYTICS-02: Metabase Models and Questions](04-analytics/ANALYTICS-02-metabase-models.md)
-- [ANALYTICS-03: Dashboard Embedding](04-analytics/ANALYTICS-03-dashboard-embedding.md)
-- [ANALYTICS-04: Query Performance Optimization](04-analytics/ANALYTICS-04-query-optimization.md)
-
-> **Note:** Analytics stack is CubeJS + Trino + Metabase with Metabase API exposed; ADR updates pending to reflect this alignment.
+- [ANALYTICS-01: Data Federation Strategy](04-analytics/ANALYTICS-01-data-federation.md)
+- [ANALYTICS-02: Semantic Layer Design](04-analytics/ANALYTICS-02-semantic-layer.md)
+- [ANALYTICS-03: Real-Time vs Batch](04-analytics/ANALYTICS-03-realtime-batch.md)
+- [ANALYTICS-04: Data Lake Integration](04-analytics/ANALYTICS-04-data-lake.md)
+- [ANALYTICS-05: Reporting and Dashboards](04-analytics/ANALYTICS-05-reporting.md)
 
 #### **6. Well-Architected Framework** (`05-well-architected/`)
 - [WA-01: Reliability](05-well-architected/WA-01-reliability.md)
@@ -131,9 +114,10 @@ See [ADR-PROP-006: Dapr for Cross-Cutting Concerns](../adr/ADR-PROP-006-dapr.md)
 
 #### **9. Migration Guide** (`09-migration/`)
 - [MIGRATE-01: Phase 1 - Containerize Functions](09-migration/MIGRATE-01-containerize-functions.md)
-- [MIGRATE-02: Phase 2 - Aspire & Dapr](09-migration/MIGRATE-02-aspire-dapr.md)
-- [MIGRATE-03: Phase 3 - Metabase Analytics](09-migration/MIGRATE-03-metabase-analytics.md)
-- [MIGRATE-04: Phase 4 - Optimization & Multi-Region](09-migration/MIGRATE-04-optimization.md)
+- [MIGRATE-02: Phase 2 - Aspire & DAB](09-migration/MIGRATE-02-aspire-dab.md)
+- [MIGRATE-03: Phase 3 - Dapr & Service Mesh](09-migration/MIGRATE-03-dapr-service-mesh.md)
+- [MIGRATE-04: Phase 4 - Analytics Stack](09-migration/MIGRATE-04-analytics-stack.md)
+- [MIGRATE-05: Phase 5 - Optimization & Multi-Region](09-migration/MIGRATE-05-optimization.md)
 
 #### **10. Operations** (`10-operations/`)
 - [OPS-01: Monitoring and Observability](10-operations/OPS-01-monitoring.md)
@@ -178,10 +162,10 @@ See [ADR-PROP-006: Dapr for Cross-Cutting Concerns](../adr/ADR-PROP-006-dapr.md)
 | Metric | Current (Functions Premium) | Target (Container Apps) |
 |--------|----------------------------|------------------------|
 | **Max Concurrent Users** | ~30K (theoretical) | 80K (load tested) |
-| **API Latency (p95)** | 3-5s | <2s (Functions) |
+| **API Latency (p95)** | 3-5s | <2s (Functions), <50ms (DAB) |
 | **Cold Start** | 2-5s (common) | 0s (always warm) |
-| **Cache Hit Rate** | 0% (no caching) | 65%+ (Redis + Metabase API) |
-| **Analytics Query Time** | N/A | <5s (CubeJS + Trino + Metabase) |
+| **Cache Hit Rate** | 0% (no caching) | 65%+ (Redis + CubeJS) |
+| **Analytics Query Time** | N/A | <5s (CubeJS), <10s (Trino) |
 | **Deployment Time** | 15 min | 5 min (azd deploy, blue-green) |
 
 ### Business Outcomes
@@ -198,22 +182,21 @@ See [ADR-PROP-006: Dapr for Cross-Cutting Concerns](../adr/ADR-PROP-006-dapr.md)
 
 - **Azure Container Apps** - Fully managed Kubernetes-based platform
 - **.NET 10** - LTS (Nov 11, 2025 release), 3 years support
-- **CubeJS + Trino + Metabase** - Semantic layer, query engine, and BI (Metabase API exposed for app consumption)
-- **Dapr** - All 8 building blocks for cloud-agnostic patterns
+- **Data API Builder** - Zero-code REST/GraphQL API generator (Microsoft open-source)
+- **Trino** - Distributed SQL query engine for data federation
+- **CubeJS** - Semantic layer and pre-aggregation engine
+- **Dapr** - Service mesh built into Container Apps
 - **.NET Aspire** - Cloud-native orchestration framework
 - **Azure Developer CLI (azd)** - Infrastructure provisioning automation
-- **KEDA** - Kubernetes Event-Driven Autoscaling
 
 ---
 
 ## References
 
 - [Current State Architecture](../02-architecture/README.md) - Baseline documentation
-- [ADR-014: Metabase Analytics](../adr/ADR-014-metabase-analytics.md) - Analytics platform decision
 - [Azure Container Apps Documentation](https://learn.microsoft.com/en-us/azure/container-apps/)
 - [.NET Aspire Documentation](https://learn.microsoft.com/en-us/dotnet/aspire/)
-- [Metabase Documentation](https://www.metabase.com/docs/latest/)
-- [Dapr Documentation](https://docs.dapr.io/)
+- [Data API Builder](https://learn.microsoft.com/en-us/azure/data-api-builder/)
 - [Microsoft Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/)
 - [Cloud Adoption Framework](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/)
 
@@ -227,6 +210,6 @@ See [ADR-PROP-006: Dapr for Cross-Cutting Concerns](../adr/ADR-PROP-006-dapr.md)
 
 ---
 
-**Last Updated:** December 22, 2025
-**Next Review:** Q1 2026
-**Status:** 🚧 In progress - Analytics stack simplified to Metabase per ADR-014
+**Last Updated:** November 24, 2025
+**Next Review:** Week 2 completion
+**Status:** 🚧 Week 1 in progress (0/48 documents complete)

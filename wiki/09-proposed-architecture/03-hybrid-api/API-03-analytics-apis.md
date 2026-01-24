@@ -3,7 +3,7 @@
 **Status:** Proposed
 **Last Updated:** 2025-11-24
 **Target Audience:** Data Engineers, Analytics Developers, Frontend Developers
-**Related ADRs:** [ADR-PROP-004](../../adr/ADR-PROP-004-trino.md), [ADR-PROP-005](../../adr/ADR-PROP-005-cubejs.md)
+**Related ADRs:** [ADR-PROP-004](../02-adrs/ADR-PROP-004-trino-query-engine.md), [ADR-PROP-005](../02-adrs/ADR-PROP-005-cubejs-analytics.md)
 
 ## Overview
 
@@ -1358,8 +1358,8 @@ requests
 
 ## References
 
-- [ADR-PROP-004: Trino Query Engine](../../adr/ADR-PROP-004-trino.md)
-- [ADR-PROP-005: CubeJS Analytics](../../adr/ADR-PROP-005-cubejs.md)
+- [ADR-PROP-004: Trino Query Engine](../02-adrs/ADR-PROP-004-trino-query-engine.md)
+- [ADR-PROP-005: CubeJS Analytics](../02-adrs/ADR-PROP-005-cubejs-analytics.md)
 - [API-01: DAB Implementation](./API-01-dab-implementation.md)
 - [API-02: Functions Business Logic](./API-02-functions-business-logic.md)
 - [Trino Docs](https://trino.io/docs/current/)
