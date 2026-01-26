@@ -16,7 +16,8 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-    app.MapScalarApiReference();
+        // TODO: Update Scalar API reference to use new API
+    // app.MapScalarApiReference();
 }
 
 app.UseHttpsRedirection();

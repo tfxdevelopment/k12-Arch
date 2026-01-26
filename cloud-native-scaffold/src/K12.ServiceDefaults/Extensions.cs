@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using OpenTelemetry;
 using OpenTelemetry.Metrics;
@@ -84,16 +85,14 @@ public static class Extensions
             builder.Services.AddOpenTelemetry().UseOtlpExporter();
         }
 
-        // Add Azure Monitor if Application Insights connection string is configured
-        var appInsightsConnectionString = builder.Configuration["APPLICATIONINSIGHTS_CONNECTION_STRING"];
-        if (!string.IsNullOrWhiteSpace(appInsightsConnectionString))
-        {
-            builder.Services.AddOpenTelemetry()
-                .UseAzureMonitor(options =>
-                {
-                    options.ConnectionString = appInsightsConnectionString;
-                });
-        }
+        // TODO: Add Azure Monitor integration
+        // The Azure.Monitor.OpenTelemetry.AspNetCore package has changed its API in version 1.4.0
+        // See: https://learn.microsoft.com/en-us/azure/azure-monitor/app/opentelemetry-enable
+        // var appInsightsConnectionString = builder.Configuration["APPLICATIONINSIGHTS_CONNECTION_STRING"];
+        // if (!string.IsNullOrWhiteSpace(appInsightsConnectionString))
+        // {
+        //     builder.Services.AddOpenTelemetry().UseAzureMonitor();
+        // }
 
         return builder;
     }

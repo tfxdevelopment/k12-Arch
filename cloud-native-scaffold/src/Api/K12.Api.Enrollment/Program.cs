@@ -50,7 +50,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 
     // Scalar API documentation (modern alternative to Swagger UI)
-    app.MapScalarApiReference();
+        // TODO: Update Scalar API reference to use new API
+    // app.MapScalarApiReference();
 }
 
 app.UseHttpsRedirection();
