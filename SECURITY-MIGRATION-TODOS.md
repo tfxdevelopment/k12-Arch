@@ -252,9 +252,9 @@ Azure SQL (NO RLS POLICIES)
 
 ## 🔗 Related Documents
 
-- [SEC-01: Entra ID Configuration](wiki/02-architecture/security/SEC-01-entra-id-configuration.md) - JWT token structure
-- [SEC-02: Authorization Model](wiki/02-architecture/security/SEC-02-authorization-model.md) - Roles and permissions
-- [ADR-003: Entra ID B2C for CIAM](wiki/adr/ADR-003-entra-id-b2c-ciam.md) - Identity provider decision
+- [SEC-01: Entra ID Configuration](tools/wiki/02-architecture/security/SEC-01-entra-id-configuration.md) - JWT token structure
+- [SEC-02: Authorization Model](tools/wiki/02-architecture/security/SEC-02-authorization-model.md) - Roles and permissions
+- [ADR-003: Entra ID B2C for CIAM](tools/wiki/adr/ADR-003-entra-id-b2c-ciam.md) - Identity provider decision
 
 ---
 

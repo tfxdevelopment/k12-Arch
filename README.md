@@ -26,7 +26,7 @@ k12-Arch/
 
 ### Wiki Knowledge Base
 
-Browse the [wiki](./wiki/) directory for comprehensive documentation on:
+Browse the [wiki](./tools/wiki) directory for comprehensive documentation on:
 - Enterprise architecture patterns (Microservices, Event-Driven, etc.)
 - Application architecture patterns (MVC, MVVM, Clean Architecture, etc.)
 - Design principles (SOLID, DRY, KISS, etc.)
@@ -64,7 +64,7 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENSE) fi
 
 ## Getting Help
 
-- 📖 Check the [wiki](./wiki/) for documentation
+- 📖 Check the [wiki](./tools/wiki) for documentation
 - 💬 Open an [issue](../../issues) for questions or bugs
 - 🤝 Submit a [pull request](../../pulls) for contributions
 
