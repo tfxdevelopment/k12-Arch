@@ -48,51 +48,51 @@
   - Context: FedRAMP compliance requirement
   - Key decision: Azure Gov over Azure Commercial
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/adr/ADR-001-azure-government-cloud.md](wiki/adr/ADR-001-azure-government-cloud.md)
+  - Location: [wiki/adr/ADR-001-azure-government-cloud.md](tools/wiki/adr/ADR-001-azure-government-cloud.md)
 
 - [x] **ADR-002**: Dapper Over Entity Framework ✅
   - Context: Data access pattern selection
   - Key decision: Dapper for performance
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/adr/ADR-002-dapper-over-entity-framework.md](wiki/adr/ADR-002-dapper-over-entity-framework.md)
+  - Location: [wiki/adr/ADR-002-dapper-over-entity-framework.md](tools/wiki/adr/ADR-002-dapper-over-entity-framework.md)
 
 - [x] **ADR-003**: Entra ID B2C for CIAM ✅
   - Context: Customer identity and access management
   - Key decision: Entra ID B2C over alternatives
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/adr/ADR-003-entra-id-b2c-ciam.md](wiki/adr/ADR-003-entra-id-b2c-ciam.md)
+  - Location: [wiki/adr/ADR-003-entra-id-b2c-ciam.md](tools/wiki/adr/ADR-003-entra-id-b2c-ciam.md)
   - Source: [Confluence page 4032725075]
 
 - [x] **ADR-004**: Nx Monorepo for Frontend ✅
   - Context: Frontend architecture organization
   - Key decision: Nx monorepo with 4 apps + shared library
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/adr/ADR-004-nx-monorepo-frontend.md](wiki/adr/ADR-004-nx-monorepo-frontend.md)
+  - Location: [wiki/adr/ADR-004-nx-monorepo-frontend.md](tools/wiki/adr/ADR-004-nx-monorepo-frontend.md)
 
 - [x] **ADR-005**: NRules for Business Rules Engine ✅
   - Context: Complex business logic orchestration
   - Key decision: NRules over FluentValidation/Custom
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/adr/ADR-005-nrules-business-rules.md](wiki/adr/ADR-005-nrules-business-rules.md)
+  - Location: [wiki/adr/ADR-005-nrules-business-rules.md](tools/wiki/adr/ADR-005-nrules-business-rules.md)
   - Source: [Confluence page 4420075531]
 
 - [x] **ADR-006**: Terraform for Infrastructure as Code ✅
   - Context: IaC tool selection
   - Key decision: Terraform over ARM/Bicep
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/adr/ADR-006-terraform-iac.md](wiki/adr/ADR-006-terraform-iac.md)
+  - Location: [wiki/adr/ADR-006-terraform-iac.md](tools/wiki/adr/ADR-006-terraform-iac.md)
 
 - [x] **ADR-007**: Angular 19 Framework ✅
   - Context: Frontend framework selection
   - Key decision: Angular over React/Vue
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/adr/ADR-007-angular-19-framework.md](wiki/adr/ADR-007-angular-19-framework.md)
+  - Location: [wiki/adr/ADR-007-angular-19-framework.md](tools/wiki/adr/ADR-007-angular-19-framework.md)
 
 - [x] **ADR-008**: Multi-Schema Database Design ✅
   - Context: Database organization strategy
   - Key decision: Multiple schemas (dbo, Enrollment, Households, Awards, Comms)
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/adr/ADR-008-multi-schema-database.md](wiki/adr/ADR-008-multi-schema-database.md)
+  - Location: [wiki/adr/ADR-008-multi-schema-database.md](tools/wiki/adr/ADR-008-multi-schema-database.md)
 
 **ADR Subtotal**: 7/8 complete ✅✅✅ | Only ADR-005 missing (1 remaining)
 
@@ -102,13 +102,13 @@
   - Shows: External users and systems
   - Tool: Mermaid (GitHub-friendly)
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/02-architecture/c4-diagrams/01-system-context.md](wiki/02-architecture/c4-diagrams/01-system-context.md)
+  - Location: [wiki/02-architecture/c4-diagrams/01-system-context.md](tools/wiki/02-architecture/c4-diagrams/01-system-context.md)
 
 - [x] **C4-02**: Container Diagram ✅
   - Shows: Angular SPA, APIM, Functions, SQL, ADLS, SignalR
   - Tool: Mermaid
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/02-architecture/c4-diagrams/02-container-diagram.md](wiki/02-architecture/c4-diagrams/02-container-diagram.md)
+  - Location: [wiki/02-architecture/c4-diagrams/02-container-diagram.md](tools/wiki/02-architecture/c4-diagrams/02-container-diagram.md)
 
 **C4 Subtotal**: 2/2 complete ✅✅ **COMPLETE** 🎉
 
@@ -119,7 +119,7 @@
   - Custom security attributes schema
   - Administrative units setup
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/02-architecture/security/SEC-01-entra-id-configuration.md](wiki/02-architecture/security/SEC-01-entra-id-configuration.md)
+  - Location: [wiki/02-architecture/security/SEC-01-entra-id-configuration.md](tools/wiki/02-architecture/security/SEC-01-entra-id-configuration.md)
   - Source: [Confluence page 4053696597]
 
 - [x] **SEC-02**: Authorization Model Documentation ✅
@@ -127,7 +127,7 @@
   - Custom security attribute usage
   - Authorization flow with diagrams
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/02-architecture/security/SEC-02-authorization-model.md](wiki/02-architecture/security/SEC-02-authorization-model.md)
+  - Location: [wiki/02-architecture/security/SEC-02-authorization-model.md](tools/wiki/02-architecture/security/SEC-02-authorization-model.md)
   - Source: [Confluence page 4157800453]
 
 - [x] **SEC-03**: Row-Level Security Implementation ✅
@@ -135,14 +135,14 @@
   - Context info usage
   - Testing strategy
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/02-architecture/security/SEC-03-row-level-security.md](wiki/02-architecture/security/SEC-03-row-level-security.md)
+  - Location: [wiki/02-architecture/security/SEC-03-row-level-security.md](tools/wiki/02-architecture/security/SEC-03-row-level-security.md)
 
 - [x] **SEC-04**: Audit Logging Architecture ✅
   - What is logged
   - Log retention
   - Compliance requirements
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/02-architecture/security/SEC-04-audit-logging.md](wiki/02-architecture/security/SEC-04-audit-logging.md)
+  - Location: [wiki/02-architecture/security/SEC-04-audit-logging.md](tools/wiki/02-architecture/security/SEC-04-audit-logging.md)
   - Source: [Confluence page 4429611013]
 
 **Security Subtotal**: 4/4 complete ✅ **COMPLETE** 🎉
@@ -154,7 +154,7 @@
   - Implementation patterns
   - Code examples (30+ snippets)
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/03-business-rules/RULES-01-nrules-implementation-guide.md](wiki/03-business-rules/RULES-01-nrules-implementation-guide.md)
+  - Location: [wiki/03-business-rules/RULES-01-nrules-implementation-guide.md](tools/wiki/03-business-rules/RULES-01-nrules-implementation-guide.md)
   - Source: [Confluence page 4420075531]
 
 **Rules Subtotal**: 1/1 complete ✅ **COMPLETE** 🎉
@@ -188,7 +188,7 @@ This initiative proposes migrating K12 MyPortal to a modern cloud-native archite
   - 10-week timeline and milestones
   - Key architectural decisions summary
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/09-proposed-architecture/README.md](wiki/09-proposed-architecture/README.md)
+  - Location: [wiki/09-proposed-architecture/README.md](tools/wiki/09-proposed-architecture/README.md)
   - Lines: 280
 
 - [x] **EXECUTIVE-BRIEF.md** ✅
@@ -196,7 +196,7 @@ This initiative proposes migrating K12 MyPortal to a modern cloud-native archite
   - Business value, cost/ROI analysis
   - Risk assessment and success metrics
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/09-proposed-architecture/EXECUTIVE-BRIEF.md](wiki/09-proposed-architecture/EXECUTIVE-BRIEF.md)
+  - Location: [wiki/09-proposed-architecture/EXECUTIVE-BRIEF.md](tools/wiki/09-proposed-architecture/EXECUTIVE-BRIEF.md)
   - Lines: 520
 
 #### Critical Architecture Decision Records (Week 1)
@@ -206,7 +206,7 @@ This initiative proposes migrating K12 MyPortal to a modern cloud-native archite
   - Key decision: Container Apps over Functions Premium for scale (1000 instances)
   - Impact: Zero cold starts, 80K concurrent user support
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-001-container-functions.md](wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-001-container-functions.md)
+  - Location: [wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-001-container-functions.md](tools/wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-001-container-functions.md)
   - Lines: 600+
 
 - [x] **ADR-PROP-003**: Data API Builder for CRUD APIs ✅
@@ -214,7 +214,7 @@ This initiative proposes migrating K12 MyPortal to a modern cloud-native archite
   - Key decision: DAB over hand-written CRUD Functions
   - Impact: 100 Functions → 25 JSON configs (80% code reduction)
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-003-data-api-builder.md](wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-003-data-api-builder.md)
+  - Location: [wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-003-data-api-builder.md](tools/wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-003-data-api-builder.md)
   - Lines: 550+
 
 - [x] **ADR-PROP-008**: No Microservices Decomposition ✅
@@ -222,7 +222,7 @@ This initiative proposes migrating K12 MyPortal to a modern cloud-native archite
   - Key decision: Containerized monolith over 10-service architecture
   - Impact: 6-month timeline vs 12-18 months, +20% cost vs +107%
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-008-no-microservices.md](wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-008-no-microservices.md)
+  - Location: [wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-008-no-microservices.md](tools/wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-008-no-microservices.md)
   - Lines: 500+
 
 #### Container Apps Architecture (Week 1)
@@ -232,7 +232,7 @@ This initiative proposes migrating K12 MyPortal to a modern cloud-native archite
   - .NET 8 → .NET 10 upgrade path
   - Dockerfile, performance benchmarks (95K users tested)
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/09-proposed-architecture/01-container-apps/CONT-01-container-functions-architecture.md](wiki/09-proposed-architecture/01-container-apps/CONT-01-container-functions-architecture.md)
+  - Location: [wiki/09-proposed-architecture/01-container-apps/CONT-01-container-functions-architecture.md](tools/wiki/09-proposed-architecture/01-container-apps/CONT-01-container-functions-architecture.md)
   - Lines: 520+
 
 - [x] **CONT-02**: Container Apps Environment Design ✅
@@ -240,7 +240,7 @@ This initiative proposes migrating K12 MyPortal to a modern cloud-native archite
   - Multi-container deployment architecture
   - Cost model breakdown ($6,955/month)
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/09-proposed-architecture/01-container-apps/CONT-02-environment-design.md](wiki/09-proposed-architecture/01-container-apps/CONT-02-environment-design.md)
+  - Location: [wiki/09-proposed-architecture/01-container-apps/CONT-02-environment-design.md](tools/wiki/09-proposed-architecture/01-container-apps/CONT-02-environment-design.md)
   - Lines: 500+
 
 #### .NET Aspire Orchestration (Week 1)
@@ -250,7 +250,7 @@ This initiative proposes migrating K12 MyPortal to a modern cloud-native archite
   - Service discovery and configuration
   - Azure deployment automation (azd up)
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/09-proposed-architecture/02-aspire/ASPIRE-01-apphost-setup.md](wiki/09-proposed-architecture/02-aspire/ASPIRE-01-apphost-setup.md)
+  - Location: [wiki/09-proposed-architecture/02-aspire/ASPIRE-01-apphost-setup.md](tools/wiki/09-proposed-architecture/02-aspire/ASPIRE-01-apphost-setup.md)
   - Lines: 400+
 
 **Week 1 Subtotal**: 8/8 complete ✅✅✅ | Total lines: 4,870
@@ -266,7 +266,7 @@ This initiative proposes migrating K12 MyPortal to a modern cloud-native archite
   - Key decision: Aspire over manual Docker Compose
   - Impact: 2-hour setup → 5-minute F5 launch (96% reduction)
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-002-aspire.md](wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-002-aspire.md)
+  - Location: [wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-002-aspire.md](tools/wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-002-aspire.md)
   - Lines: 705
 
 - [x] **ADR-PROP-004**: Trino for Data Federation ✅
@@ -274,7 +274,7 @@ This initiative proposes migrating K12 MyPortal to a modern cloud-native archite
   - Key decision: Trino over Azure Synapse Analytics
   - Impact: $960/month vs $1,500 (36% cheaper), saves $10,800 over 3 years
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-004-trino.md](wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-004-trino.md)
+  - Location: [wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-004-trino.md](tools/wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-004-trino.md)
   - Lines: 835
 
 - [x] **ADR-PROP-005**: CubeJS for Semantic Layer ✅
@@ -282,7 +282,7 @@ This initiative proposes migrating K12 MyPortal to a modern cloud-native archite
   - Key decision: CubeJS over Power BI Premium
   - Impact: $480/month vs $833 (42% cheaper), saves $12,720 over 3 years
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-005-cubejs.md](wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-005-cubejs.md)
+  - Location: [wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-005-cubejs.md](tools/wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-005-cubejs.md)
   - Lines: 1,137
 
 #### Hybrid API Strategy Implementation (Week 2)
@@ -292,7 +292,7 @@ This initiative proposes migrating K12 MyPortal to a modern cloud-native archite
   - Full dab-config.json (600+ lines)
   - RLS integration via SQL session context
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/09-proposed-architecture/03-hybrid-api/API-01-dab-implementation.md](wiki/09-proposed-architecture/03-hybrid-api/API-01-dab-implementation.md)
+  - Location: [wiki/09-proposed-architecture/03-hybrid-api/API-01-dab-implementation.md](tools/wiki/09-proposed-architecture/03-hybrid-api/API-01-dab-implementation.md)
   - Lines: 530
 
 - [x] **API-02**: Functions Business Logic ✅
@@ -300,7 +300,7 @@ This initiative proposes migrating K12 MyPortal to a modern cloud-native archite
   - Complex business rules (NRules integration)
   - External service orchestration (ClassWallet, PandaDoc)
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/09-proposed-architecture/03-hybrid-api/API-02-functions-business-logic.md](wiki/09-proposed-architecture/03-hybrid-api/API-02-functions-business-logic.md)
+  - Location: [wiki/09-proposed-architecture/03-hybrid-api/API-02-functions-business-logic.md](tools/wiki/09-proposed-architecture/03-hybrid-api/API-02-functions-business-logic.md)
   - Lines: 440
 
 - [x] **API-03**: Analytics APIs ✅
@@ -309,7 +309,7 @@ This initiative proposes migrating K12 MyPortal to a modern cloud-native archite
   - 4 CubeJS data models with pre-aggregations
   - Angular integration (TypeScript service + dashboard)
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/09-proposed-architecture/03-hybrid-api/API-03-analytics-apis.md](wiki/09-proposed-architecture/03-hybrid-api/API-03-analytics-apis.md)
+  - Location: [wiki/09-proposed-architecture/03-hybrid-api/API-03-analytics-apis.md](tools/wiki/09-proposed-architecture/03-hybrid-api/API-03-analytics-apis.md)
   - Lines: 480
 
 **Week 2 Subtotal**: 6/6 complete ✅✅✅ | Total lines: 4,127
@@ -325,7 +325,7 @@ This initiative proposes migrating K12 MyPortal to a modern cloud-native archite
   - 99.95% SLA targets with chaos engineering validation
   - Blue-green deployment strategy
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/09-proposed-architecture/04-well-architected/WA-01-reliability.md](wiki/09-proposed-architecture/04-well-architected/WA-01-reliability.md)
+  - Location: [wiki/09-proposed-architecture/04-well-architected/WA-01-reliability.md](tools/wiki/09-proposed-architecture/04-well-architected/WA-01-reliability.md)
   - Lines: 650
 
 - [x] **WA-02**: Security Assessment ✅
@@ -333,7 +333,7 @@ This initiative proposes migrating K12 MyPortal to a modern cloud-native archite
   - Defender for Containers integration
   - Entra ID claims-based authorization (replacing RLS)
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/09-proposed-architecture/04-well-architected/WA-02-security.md](wiki/09-proposed-architecture/04-well-architected/WA-02-security.md)
+  - Location: [wiki/09-proposed-architecture/04-well-architected/WA-02-security.md](tools/wiki/09-proposed-architecture/04-well-architected/WA-02-security.md)
   - Lines: 680
 
 - [x] **WA-03**: Cost Optimization Assessment ✅
@@ -341,7 +341,7 @@ This initiative proposes migrating K12 MyPortal to a modern cloud-native archite
   - Reserved capacity planning (30% discount on 3-year commit)
   - 517% ROI with $273K labor savings
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/09-proposed-architecture/04-well-architected/WA-03-cost-optimization.md](wiki/09-proposed-architecture/04-well-architected/WA-03-cost-optimization.md)
+  - Location: [wiki/09-proposed-architecture/04-well-architected/WA-03-cost-optimization.md](tools/wiki/09-proposed-architecture/04-well-architected/WA-03-cost-optimization.md)
   - Lines: 742
 
 #### Analytics Architecture Deep Dive
@@ -351,7 +351,7 @@ This initiative proposes migrating K12 MyPortal to a modern cloud-native archite
   - Query optimization patterns and caching strategies
   - RLS enforcement via CubeJS security context
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/09-proposed-architecture/05-analytics/ANALYTICS-01-data-federation.md](wiki/09-proposed-architecture/05-analytics/ANALYTICS-01-data-federation.md)
+  - Location: [wiki/09-proposed-architecture/05-analytics/ANALYTICS-01-data-federation.md](tools/wiki/09-proposed-architecture/05-analytics/ANALYTICS-01-data-federation.md)
   - Lines: 652
 
 - [x] **ANALYTICS-02**: Semantic Layer Design ✅
@@ -359,7 +359,7 @@ This initiative proposes migrating K12 MyPortal to a modern cloud-native archite
   - Pre-aggregation strategies (70% query performance improvement)
   - Multi-tenant security with JWT claims integration
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/09-proposed-architecture/05-analytics/ANALYTICS-02-semantic-layer.md](wiki/09-proposed-architecture/05-analytics/ANALYTICS-02-semantic-layer.md)
+  - Location: [wiki/09-proposed-architecture/05-analytics/ANALYTICS-02-semantic-layer.md](tools/wiki/09-proposed-architecture/05-analytics/ANALYTICS-02-semantic-layer.md)
   - Lines: 723
 
 - [x] **ANALYTICS-03**: Real-Time vs Batch Analytics ✅
@@ -367,7 +367,7 @@ This initiative proposes migrating K12 MyPortal to a modern cloud-native archite
   - Event Hubs for real-time (SignalR notifications)
   - Trino for batch processing (scheduled reports)
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/09-proposed-architecture/05-analytics/ANALYTICS-03-realtime-vs-batch.md](wiki/09-proposed-architecture/05-analytics/ANALYTICS-03-realtime-vs-batch.md)
+  - Location: [wiki/09-proposed-architecture/05-analytics/ANALYTICS-03-realtime-vs-batch.md](tools/wiki/09-proposed-architecture/05-analytics/ANALYTICS-03-realtime-vs-batch.md)
   - Lines: 548
 
 **Week 3 Subtotal**: 6/6 complete ✅✅✅ | Total lines: 3,995
@@ -494,7 +494,7 @@ This initiative proposes migrating K12 MyPortal to a modern cloud-native archite
   - Data flow diagrams
   - Resilience patterns (Polly retry, circuit breaker)
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/02-architecture/integrations/INT-01-classwallet-integration.md](wiki/02-architecture/integrations/INT-01-classwallet-integration.md)
+  - Location: [wiki/02-architecture/integrations/INT-01-classwallet-integration.md](tools/wiki/02-architecture/integrations/INT-01-classwallet-integration.md)
   - Source: [Confluence page 4350410805]
 
 - [x] **INT-02**: PandaDoc Integration ✅
@@ -502,7 +502,7 @@ This initiative proposes migrating K12 MyPortal to a modern cloud-native archite
   - E-signature workflow
   - Template management (15 templates)
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/02-architecture/integrations/INT-02-pandadoc-integration.md](wiki/02-architecture/integrations/INT-02-pandadoc-integration.md)
+  - Location: [wiki/02-architecture/integrations/INT-02-pandadoc-integration.md](tools/wiki/02-architecture/integrations/INT-02-pandadoc-integration.md)
   - Source: [Confluence page 4318101545]
 
 - [x] **INT-03**: SendGrid Integration ✅
@@ -510,7 +510,7 @@ This initiative proposes migrating K12 MyPortal to a modern cloud-native archite
   - Transactional vs marketing (1.2M emails/year)
   - Queue processing (Azure Storage Queues)
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/02-architecture/integrations/INT-03-sendgrid-integration.md](wiki/02-architecture/integrations/INT-03-sendgrid-integration.md)
+  - Location: [wiki/02-architecture/integrations/INT-03-sendgrid-integration.md](tools/wiki/02-architecture/integrations/INT-03-sendgrid-integration.md)
   - Source: [Confluence page 4351721474]
 
 - [x] **INT-04**: Melissa Data Integration ✅
@@ -518,14 +518,14 @@ This initiative proposes migrating K12 MyPortal to a modern cloud-native archite
   - USPS standardization with caching (65% hit rate)
   - District verification
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/02-architecture/integrations/INT-04-melissa-data-integration.md](wiki/02-architecture/integrations/INT-04-melissa-data-integration.md)
+  - Location: [wiki/02-architecture/integrations/INT-04-melissa-data-integration.md](tools/wiki/02-architecture/integrations/INT-04-melissa-data-integration.md)
 
 - [x] **INT-05**: NC DMV/DOR Integration ✅
   - Residency verification (DMV SOAP API)
   - Income verification (DOR SFTP batch)
   - PII security and PGP encryption
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/02-architecture/integrations/INT-05-nc-dmv-dor-integration.md](wiki/02-architecture/integrations/INT-05-nc-dmv-dor-integration.md)
+  - Location: [wiki/02-architecture/integrations/INT-05-nc-dmv-dor-integration.md](tools/wiki/02-architecture/integrations/INT-05-nc-dmv-dor-integration.md)
   - Source: [Confluence page 4375904312]
 
 - [x] **INT-06**: NC DPI Integration (Future) ✅
@@ -533,7 +533,7 @@ This initiative proposes migrating K12 MyPortal to a modern cloud-native archite
   - Academic records integration
   - Roadmap and FERPA considerations
   - Status: **COMPLETED** (2024-11-24)
-  - Location: [wiki/02-architecture/integrations/INT-06-nc-dpi-integration.md](wiki/02-architecture/integrations/INT-06-nc-dpi-integration.md)
+  - Location: [wiki/02-architecture/integrations/INT-06-nc-dpi-integration.md](tools/wiki/02-architecture/integrations/INT-06-nc-dpi-integration.md)
 
 **Integration Subtotal**: 6/6 complete ✅✅ **COMPLETE** 🎉
 

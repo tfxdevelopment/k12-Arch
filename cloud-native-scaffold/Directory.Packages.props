@@ -2,7 +2,7 @@
   <PropertyGroup>
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
     <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
-    <CentralPackageVersionOverrideEnabled>false</CentralPackageVersionOverrideEnabled>
+    <CentralPackageVersionOverrideEnabled>true</CentralPackageVersionOverrideEnabled>
   </PropertyGroup>
 
   <ItemGroup Label="Aspire - .NET 10 Preview">

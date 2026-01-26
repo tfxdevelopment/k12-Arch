@@ -4,20 +4,20 @@
 
 This folder contains comprehensive enterprise architecture documentation for the K12 MyPortal system. The documentation has been organized from the exported Confluence content and existing README files into two formats:
 
-1. **Static Wiki** ([wiki/](wiki/)) - Markdown files for offline reading or direct GitHub viewing
+1. **Static Wiki** ([wiki/](tools/wiki)) - Markdown files for offline reading or direct GitHub viewing
 2. **Interactive Documentation Site** ([k12-docs/](k12-docs/)) - Nuxt Content-powered searchable website
 
 ## What Was Created
 
 ### 1. Static Wiki Documentation
 
-Located in [wiki/](wiki/), this is a curated set of markdown files organized specifically for enterprise architects:
+Located in [wiki/](tools/wiki), this is a curated set of markdown files organized specifically for enterprise architects:
 
 **Main Sections**:
-- **[Project Overview](wiki/01-project-overview/README.md)** - Charter, timeline, stakeholders, governance
-- **[System Architecture](wiki/02-architecture/README.md)** - High-level design, security model, integrations
-- **[Development Guide](wiki/05-development/README.md)** - Setup, workflows, CI/CD, standards
-- **[Table of Contents](wiki/TABLE_OF_CONTENTS.md)** - Complete navigation guide
+- **[Project Overview](tools/wiki/01-project-overview/README.md)** - Charter, timeline, stakeholders, governance
+- **[System Architecture](tools/wiki/02-architecture/README.md)** - High-level design, security model, integrations
+- **[Development Guide](tools/wiki/05-development/README.md)** - Setup, workflows, CI/CD, standards
+- **[Table of Contents](tools/wiki/TABLE_OF_CONTENTS.md)** - Complete navigation guide
 
 **Content Sources**:
 - ✅ Confluence export ([MyPortal K12.md](MyPortal%20K12.md)) - 12,063 lines extracted
@@ -57,7 +57,7 @@ Located in [k12-docs/](k12-docs/), this is a Nuxt 3 + Nuxt Content powered docum
 ### Viewing Static Wiki (Easiest)
 
 **Option 1: GitHub**
-- Navigate to [wiki/README.md](wiki/README.md) on GitHub
+- Navigate to [wiki/README.md](tools/wiki/README.md) on GitHub
 - GitHub will render the markdown with full formatting
 - Click links to navigate between pages
 
@@ -297,9 +297,9 @@ The Nuxt Content site provides full-text search:
 ### Recommended Actions
 
 1. **Review the Wiki**:
-   - Start with [wiki/README.md](wiki/README.md)
-   - Navigate to [System Architecture](wiki/02-architecture/README.md) for technical overview
-   - Check [Development Guide](wiki/05-development/README.md) for setup instructions
+   - Start with [wiki/README.md](tools/wiki/README.md)
+   - Navigate to [System Architecture](tools/wiki/02-architecture/README.md) for technical overview
+   - Check [Development Guide](tools/wiki/05-development/README.md) for setup instructions
 
 2. **Try the Documentation Site**:
    ```bash

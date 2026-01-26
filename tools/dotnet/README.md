@@ -1,4 +1,4 @@
-# K12Arch.Tools
+Just imagination. Here you are. Welcome. I'm Sean Keyes. Oh, I'm sorry. So where's the helmet? Who made first contact? # K12Arch.Tools
 
 .NET utilities and libraries for implementing enterprise and application architecture patterns.
 
@@ -294,7 +294,7 @@ MIT License - see [LICENSE](../../LICENSE) for details.
 
 ## Related
 
-- [Wiki Documentation](../../wiki/)
+- [Wiki Documentation](../wiki)
 - [Examples](../../examples/)
 
 ## Supported Frameworks

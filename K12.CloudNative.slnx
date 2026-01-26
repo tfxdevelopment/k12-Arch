@@ -1,0 +1,11 @@
+<Solution>
+  <Project Path="cloud-native-scaffold/src/Api/K12.Api.Admin/K12.Api.Admin.csproj" />
+  <Project Path="cloud-native-scaffold/src/Api/K12.Api.Enrollment/K12.Api.Enrollment.csproj" />
+  <Project Path="cloud-native-scaffold/src/Api/K12.Api.Programs/K12.Api.Programs.csproj" />
+  <Project Path="cloud-native-scaffold/src/Infrastructure/K12.Infrastructure.Azure/K12.Infrastructure.Azure.csproj" />
+  <Project Path="cloud-native-scaffold/src/Infrastructure/K12.Infrastructure/K12.Infrastructure.csproj" />
+  <Project Path="cloud-native-scaffold/src/K12.AppHost/K12.AppHost.csproj" />
+  <Project Path="cloud-native-scaffold/src/K12.ServiceDefaults/K12.ServiceDefaults.csproj" />
+  <Project Path="cloud-native-scaffold/src/Shared/K12.BuildingBlocks/K12.BuildingBlocks.csproj" />
+  <Project Path="cloud-native-scaffold/src/Shared/K12.Contracts/K12.Contracts.csproj" />
+</Solution>

@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(xlsx)",
+      "Skill(docx)",
+      "Bash(dotnet aspire --help:*)",
+      "Bash(aspire --help:*)",
+      "Bash(aspire add --help:*)",
+      "Bash(aspire mcp --help:*)",
+      "Bash(aspire mcp init --help:*)",
+      "Bash(aspire mcp start --help:*)",
+      "mcp__plugin_context7_context7__resolve-library-id",
+      "mcp__plugin_context7_context7__query-docs",
+      "WebFetch(domain:aspire.dev)",
+      "WebFetch(domain:www.nuget.org)",
+      "Bash(aspire add:*)",
+      "Bash(mkdir -p:*)",
+      "Bash(npm create:*)",
+      "Bash(npm install:*)",
+      "Bash(npx nuxi@latest init:*)"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "MCP_DOCKER"
+  ]
+}
