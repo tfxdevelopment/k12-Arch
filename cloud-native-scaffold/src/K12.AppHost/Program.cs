@@ -53,15 +53,7 @@ var enrollmentApi = builder.AddProject<Projects.K12_Api_Enrollment>("enrollment-
     .WithReference(messaging)
     .WithReference(blobs)
     .WithReference(appInsights)
-    .WithDaprSidecar(new DaprSidecarOptions
-    {
-        AppId = "enrollment-api",
-        AppPort = 5001,
-        DaprHttpPort = 3501,
-        DaprGrpcPort = 50001,
-        MetricsPort = 9091,
-        Config = "dapr-config"
-    })
+    .WithDaprSidecar("enrollment-api")
     .WithHttpHealthCheck("/health")
     .WithReplicas(1);
 
@@ -72,15 +64,7 @@ var programsApi = builder.AddProject<Projects.K12_Api_Programs>("programs-api")
     .WithReference(messaging)
     .WithReference(blobs)
     .WithReference(appInsights)
-    .WithDaprSidecar(new DaprSidecarOptions
-    {
-        AppId = "programs-api",
-        AppPort = 5002,
-        DaprHttpPort = 3502,
-        DaprGrpcPort = 50002,
-        MetricsPort = 9092,
-        Config = "dapr-config"
-    })
+    .WithDaprSidecar("programs-api")
     .WithHttpHealthCheck("/health")
     .WithReplicas(1);
 
@@ -88,18 +72,10 @@ var programsApi = builder.AddProject<Projects.K12_Api_Programs>("programs-api")
 var adminApi = builder.AddProject<Projects.K12_Api_Admin>("admin-api")
     .WithReference(sqlDb)
     .WithReference(redis)
-    .WithReference(messaging)
+        .WithReference(messaging)
     .WithReference(blobs)
     .WithReference(appInsights)
-    .WithDaprSidecar(new DaprSidecarOptions
-    {
-        AppId = "admin-api",
-        AppPort = 5003,
-        DaprHttpPort = 3503,
-        DaprGrpcPort = 50003,
-        MetricsPort = 9093,
-        Config = "dapr-config"
-    })
+    .WithDaprSidecar("admin-api")
     .WithHttpHealthCheck("/health")
     .WithReplicas(1);
 

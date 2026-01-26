@@ -5,81 +5,96 @@
     <CentralPackageVersionOverrideEnabled>true</CentralPackageVersionOverrideEnabled>
   </PropertyGroup>
 
-  <ItemGroup Label="Aspire - .NET 10 Preview">
-    <PackageVersion Include="Aspire.Hosting.AppHost" Version="10.0.0-preview.1.25118.6" />
-    <PackageVersion Include="Aspire.Hosting.Azure.ApplicationInsights" Version="10.0.0-preview.1.25118.6" />
-    <PackageVersion Include="Aspire.Hosting.Azure.KeyVault" Version="10.0.0-preview.1.25118.6" />
-    <PackageVersion Include="Aspire.Hosting.Azure.ServiceBus" Version="10.0.0-preview.1.25118.6" />
-    <PackageVersion Include="Aspire.Hosting.Azure.Sql" Version="10.0.0-preview.1.25118.6" />
-    <PackageVersion Include="Aspire.Hosting.Dapr" Version="10.0.0-preview.1.25118.6" />
-    <PackageVersion Include="Aspire.Hosting.Redis" Version="10.0.0-preview.1.25118.6" />
+  <!-- SDK Version Properties - Update these to upgrade all related packages -->
+  <PropertyGroup>
+    <AspireVersion>13.1.0</AspireVersion>
+    <DotNetVersion>10.0.2</DotNetVersion>
+    <DotNetExtensionsVersion>10.2.0</DotNetExtensionsVersion>
+    <DaprVersion>1.16.1</DaprVersion>
+    <OpenTelemetryVersion>1.15.0</OpenTelemetryVersion>
+  </PropertyGroup>
+
+  <ItemGroup Label="Aspire - Latest Stable">
+    <PackageVersion Include="Aspire.Hosting.AppHost" Version="$(AspireVersion)" />
+    <PackageVersion Include="Aspire.Hosting.Azure.ApplicationInsights" Version="$(AspireVersion)" />
+    <PackageVersion Include="Aspire.Hosting.Azure.KeyVault" Version="$(AspireVersion)" />
+    <PackageVersion Include="Aspire.Hosting.Azure.ServiceBus" Version="$(AspireVersion)" />
+    <PackageVersion Include="Aspire.Hosting.Azure.Sql" Version="$(AspireVersion)" />
+    <PackageVersion Include="Aspire.Hosting.Dapr" Version="9.1.0" />
+    <PackageVersion Include="Aspire.Hosting.Redis" Version="$(AspireVersion)" />
   </ItemGroup>
 
-  <ItemGroup Label="Dapr">
-    <PackageVersion Include="Dapr.AspNetCore" Version="1.15.0" />
-    <PackageVersion Include="Dapr.Client" Version="1.15.0" />
-    <PackageVersion Include="Dapr.Extensions.Configuration" Version="1.15.0" />
+  <ItemGroup Label="Dapr - Latest Stable">
+    <PackageVersion Include="Dapr.AspNetCore" Version="$(DaprVersion)" />
+    <PackageVersion Include="Dapr.Client" Version="$(DaprVersion)" />
+    <PackageVersion Include="Dapr.Extensions.Configuration" Version="$(DaprVersion)" />
   </ItemGroup>
 
-  <ItemGroup Label="Microsoft - .NET 10 Preview">
-    <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="10.0.0-preview.1.25118.6" />
-    <PackageVersion Include="Microsoft.Extensions.Hosting" Version="10.0.0-preview.1.25118.6" />
-    <PackageVersion Include="Microsoft.Extensions.ServiceDiscovery" Version="10.0.0-preview.1.25118.6" />
-    <PackageVersion Include="Microsoft.Extensions.Http.Resilience" Version="10.0.0-preview.1.25118.6" />
-    <PackageVersion Include="Microsoft.Identity.Web" Version="3.5.0" />
+  <ItemGroup Label="Microsoft - .NET 10 Stable">
+    <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Hosting" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.ServiceDiscovery" Version="$(DotNetExtensionsVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Http.Resilience" Version="$(DotNetExtensionsVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.Abstractions" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.Binder" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Diagnostics.HealthChecks" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Hosting.Abstractions" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Identity.Web" Version="4.3.0" />
   </ItemGroup>
 
-  <ItemGroup Label="Azure SDK - Latest">
-    <PackageVersion Include="Azure.Identity" Version="1.14.1" />
+  <ItemGroup Label="Azure SDK - Latest Stable">
+    <PackageVersion Include="Azure.Identity" Version="1.17.1" />
     <PackageVersion Include="Azure.Security.KeyVault.Secrets" Version="4.8.0" />
-    <PackageVersion Include="Azure.Storage.Blobs" Version="12.25.0" />
-    <PackageVersion Include="Azure.Messaging.ServiceBus" Version="7.19.0" />
-    <PackageVersion Include="Azure.Monitor.OpenTelemetry.AspNetCore" Version="1.3.0" />
+    <PackageVersion Include="Azure.Storage.Blobs" Version="12.27.0" />
+    <PackageVersion Include="Azure.Messaging.ServiceBus" Version="7.20.1" />
+    <PackageVersion Include="Azure.Monitor.OpenTelemetry.AspNetCore" Version="1.4.0" />
   </ItemGroup>
 
-  <ItemGroup Label="Data Access">
+  <ItemGroup Label="Data Access - Latest Stable">
     <PackageVersion Include="Dapper" Version="2.1.66" />
-    <PackageVersion Include="Microsoft.Data.SqlClient" Version="5.2.2" />
-    <PackageVersion Include="StackExchange.Redis" Version="2.8.16" />
+    <PackageVersion Include="Microsoft.Data.SqlClient" Version="6.1.4" />
+    <PackageVersion Include="StackExchange.Redis" Version="2.10.1" />
   </ItemGroup>
 
-  <ItemGroup Label="Validation &amp; Mapping">
-    <PackageVersion Include="FluentValidation" Version="11.11.0" />
-    <PackageVersion Include="FluentValidation.DependencyInjectionExtensions" Version="11.11.0" />
+  <ItemGroup Label="Validation &amp; Mapping - Latest Stable">
+    <PackageVersion Include="FluentValidation" Version="12.1.1" />
+    <PackageVersion Include="FluentValidation.DependencyInjectionExtensions" Version="12.1.1" />
     <PackageVersion Include="Mapster" Version="7.4.0" />
-    <PackageVersion Include="Mapster.DependencyInjection" Version="1.0.2" />
+    <PackageVersion Include="Mapster.DependencyInjection" Version="1.0.1" />
   </ItemGroup>
 
-  <ItemGroup Label="MediatR CQRS">
-    <PackageVersion Include="MediatR" Version="12.4.1" />
+  <ItemGroup Label="MediatR CQRS - Latest Stable">
+    <PackageVersion Include="MediatR" Version="14.0.0" />
     <PackageVersion Include="MediatR.Contracts" Version="2.0.1" />
   </ItemGroup>
 
-  <ItemGroup Label="Serialization">
-    <PackageVersion Include="System.Text.Json" Version="10.0.0-preview.1.25118.6" />
+  <ItemGroup Label="Serialization - .NET 10 Stable">
+    <PackageVersion Include="System.Text.Json" Version="$(DotNetVersion)" />
   </ItemGroup>
 
-  <ItemGroup Label="OpenTelemetry">
-    <PackageVersion Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.10.0" />
-    <PackageVersion Include="OpenTelemetry.Extensions.Hosting" Version="1.10.0" />
-    <PackageVersion Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.10.1" />
-    <PackageVersion Include="OpenTelemetry.Instrumentation.Http" Version="1.10.1" />
-    <PackageVersion Include="OpenTelemetry.Instrumentation.Runtime" Version="1.10.0" />
+  <ItemGroup Label="OpenTelemetry - Latest Stable">
+    <PackageVersion Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="$(OpenTelemetryVersion)" />
+    <PackageVersion Include="OpenTelemetry.Extensions.Hosting" Version="$(OpenTelemetryVersion)" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.AspNetCore" Version="$(OpenTelemetryVersion)" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.Http" Version="$(OpenTelemetryVersion)" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.Runtime" Version="$(OpenTelemetryVersion)" />
   </ItemGroup>
 
-  <ItemGroup Label="Testing">
-    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
+  <ItemGroup Label="Testing - Latest Stable">
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.13.0" />
     <PackageVersion Include="xunit" Version="2.9.3" />
-    <PackageVersion Include="xunit.runner.visualstudio" Version="2.8.2" />
-    <PackageVersion Include="coverlet.collector" Version="6.0.2" />
+    <PackageVersion Include="xunit.runner.visualstudio" Version="3.0.3" />
+    <PackageVersion Include="coverlet.collector" Version="6.1.2" />
     <PackageVersion Include="FluentAssertions" Version="7.0.0" />
     <PackageVersion Include="NSubstitute" Version="5.3.0" />
-    <PackageVersion Include="Testcontainers" Version="4.1.0" />
-    <PackageVersion Include="Testcontainers.MsSql" Version="4.1.0" />
+    <PackageVersion Include="Testcontainers" Version="4.3.0" />
+    <PackageVersion Include="Testcontainers.MsSql" Version="4.3.0" />
   </ItemGroup>
 
-  <ItemGroup Label="API Documentation">
-    <PackageVersion Include="Swashbuckle.AspNetCore" Version="7.2.0" />
-    <PackageVersion Include="Scalar.AspNetCore" Version="1.2.66" />
+  <ItemGroup Label="API Documentation - Latest Stable">
+    <PackageVersion Include="Swashbuckle.AspNetCore" Version="10.1.0" />
+    <PackageVersion Include="Scalar.AspNetCore" Version="2.12.17" />
   </ItemGroup>
 </Project>
