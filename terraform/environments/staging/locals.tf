@@ -38,5 +38,5 @@ locals {
         }
     ]
     sql_connection_string = "Server=tcp:staging-api-enrollment.database.windows.net,1433;Initial Catalog=K12;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;Authentication=\"Active Directory Default\";"
-    blob_storage_connection_string = "DefaultEndpointsProtocol=https;AccountName=devk12;AccountKey=Eyb2bJfCvd4LTCnbtpKBFcOU+pJZ4cNxrl1PICYUtXEm5Lct98DmAa8kAXLCFx+Zd/QEE51hVbUZ+AStKmhfzg==;EndpointSuffix=core.windows.net"
+    blob_storage_connection_string = "DefaultEndpointsProtocol=https;AccountName=devk12;AccountKey=${data.azurerm_key_vault_secret.storage_account_key.value};EndpointSuffix=core.windows.net"
 }
