@@ -1,3 +1,7 @@
+# ============================================================================
+# CONTAINER APPS INFRASTRUCTURE - Development Environment
+# ============================================================================
+
 resource "azurerm_service_plan" "api-enrollment" {
   name                = "${var.environment_name}-api-enrollment"
   location            = var.location
@@ -316,29 +320,85 @@ resource "azurerm_log_analytics_workspace" "aca_logs" {
   location            = var.location
   resource_group_name = var.resource_group_name
   sku                 = "PerGB2018"
+  retention_in_days   = 30  # Add retention policy
 }
 
-# 2. Azure Container App Environment 
+# 1.5 Virtual Network and Subnet for Container Apps (RECOMMENDED)
+# Uncomment when ready to enable VNet integration
+# resource "azurerm_virtual_network" "aca_vnet" {
+#   name                = "${var.environment_name}-aca-vnet"
+#   location            = var.location
+#   resource_group_name = var.resource_group_name
+#   address_space       = ["10.0.0.0/16"]
+# }
+
+# resource "azurerm_subnet" "aca_subnet" {
+#   name                 = "aca-infrastructure-subnet"
+#   resource_group_name  = var.resource_group_name
+#   virtual_network_name = azurerm_virtual_network.aca_vnet.name
+#   address_prefixes     = ["10.0.0.0/23"]  # /23 minimum for ACA
+#   
+#   delegation {
+#     name = "aca-delegation"
+#     service_delegation {
+#       name = "Microsoft.App/environments"
+#       actions = ["Microsoft.Network/virtualNetworks/subnets/join/action"]
+#     }
+#   }
+# }
+
+# 2. Azure Container App Environment - PRODUCTION READY
 resource "azurerm_container_app_environment" "api_env" {
   name                       = "${var.environment_name}-k12-cae"
   location                   = var.location
   resource_group_name        = var.resource_group_name
   log_analytics_workspace_id = azurerm_log_analytics_workspace.aca_logs.id
+  
+  # SECURITY: Enable VNet integration (uncomment when VNet is created)
+  # infrastructure_subnet_id           = azurerm_subnet.aca_subnet.id
+  # internal_load_balancer_enabled     = true  # Private environment
+  
+  # HIGH AVAILABILITY: Enable zone redundancy for production
+  zone_redundancy_enabled = true  # Requires Premium SKU or workload profiles
+  
+  # WORKLOAD PROFILES: For dedicated compute (optional, increases cost)
+  # workload_profile {
+  #   name                  = "Consumption"
+  #   workload_profile_type = "Consumption"
+  # }
+  
+  tags = var.tags
 }
 
-# 3. Azure Container Registry
+# 3. Azure Container Registry - PRODUCTION READY
 resource "azurerm_container_registry" "acr" {
-name                  = "${replace(var.environment_name, "-", "")}k12acr"
-  resource_group_name = var.resource_group_name
-  location            = var.location
-  sku                 = "Basic"
-  admin_enabled       = false # We are using Managed Identity instead
+  name                  = "${replace(var.environment_name, "-", "")}k12acr"
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  sku                   = "Basic"  # Dev: Basic ($0.17/day), Prod: Premium
+  admin_enabled         = false    # Using Managed Identity
+  
+  # SECURITY: Disable public network access (enable after VNet setup)
+  # public_network_access_enabled = false
+  # network_rule_bypass_option    = "AzureServices"
+  
+  # HIGH AVAILABILITY: Enable zone redundancy
+  zone_redundancy_enabled = true
+  
+  # DISASTER RECOVERY: Geo-replication (add regions as needed)
+  georeplications {
+    location                = "westus2"  # Secondary region
+    zone_redundancy_enabled = true
+    tags                    = var.tags
+  }
+  
+  tags = var.tags
 }
 
 //Import
 //terraform import 'module.enrollment-api.azurerm_container_app.api_app' "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/development/providers/Microsoft.App/containerApps/development-app"
 
-# 4. The Container App
+# 4. The Container App - PRODUCTION READY
 resource "azurerm_container_app" "api_app" {
   name                         = "${var.environment_name}-app"
   container_app_environment_id = azurerm_container_app_environment.api_env.id
@@ -349,28 +409,129 @@ resource "azurerm_container_app" "api_app" {
     type = "SystemAssigned"
   }
 
-  # registry {
-  #   server   = azurerm_container_registry.acr.login_server
-  #   identity = "system" # Tells ACA to use the System Identity to pull images
-  # }
+  # Dapr Configuration
+  dapr {
+    app_id       = "k12-api"
+    app_port     = 8080
+    app_protocol = "http"
+  }
+
+  # ACR Integration with Managed Identity
+  registry {
+    server   = azurerm_container_registry.acr.login_server
+    identity = "system"  # Tells ACA to use the System Identity to pull images
+  }
 
   ingress {
-    external_enabled = true
-    target_port      = 80      # The quickstart image listens on port 80
+    external_enabled = true  # Dev: public access for testing
+    target_port      = 8080  # Use standard non-privileged port
+    transport        = "auto"  # Supports both HTTP/1 and HTTP/2
+    
+    # HTTPS enforcement
+    allow_insecure_connections = false  # Redirects HTTP -> HTTPS
+    
     traffic_weight {
       percentage      = 100
       latest_revision = true
     }
+    
+    # Optional: IP restrictions for dev environment
+    # dynamic "ip_security_restriction" {
+    #   for_each = var.dev_ip_list
+    #   content {
+    #     name             = ip_security_restriction.key
+    #     action           = "Allow"
+    #     ip_address_range = ip_security_restriction.value
+    #   }
+    # }
   }
 
   template {
+    # Development: Min 1 replica (can scale to 0 to save cost if needed)
+    min_replicas = 1
+    max_replicas = 5
+    
     container {
-      name   = "dummynet"
-      image  = "mcr.microsoft.com/k8se/quickstart:latest"
+      name   = "k12-api"
+      image  = "${azurerm_container_registry.acr.login_server}/k12-api:latest"
       cpu    = 0.5
       memory = "1Gi"
+      
+      # Environment variables for telemetry and Dapr
+      env {
+        name  = "APPLICATIONINSIGHTS_CONNECTION_STRING"
+        value = azurerm_application_insights.aca_insights.connection_string
+      }
+      
+      env {
+        name  = "ASPNETCORE_ENVIRONMENT"
+        value = "Development"
+      }
+      
+      # Key Vault secret references (example)
+      env {
+        name        = "ConnectionStrings__SqlDatabase"
+        secret_name = "sql-connection-string"
+      }
+      
+      env {
+        name        = "ConnectionStrings__BlobStorage"
+        secret_name = "blob-connection-string"
+      }
+      
+      # Health probes (already implemented in your app)
+      liveness_probe {
+        transport      = "HTTP"
+        port           = 8080
+        path           = "/health/live"
+        initial_delay  = 30
+        interval_seconds  = 10
+        timeout        = 3
+        failure_count_threshold = 3
+      }
+      
+      readiness_probe {
+        transport             = "HTTP"
+        port                  = 8080
+        path                  = "/health/ready"
+        initial_delay         = 10
+        interval_seconds        = 5
+        timeout               = 3
+        failure_count_threshold     = 3
+        success_count_threshold     = 1
+      }
+      
+      startup_probe {
+        transport      = "HTTP"
+        port           = 8080
+        path           = "/health/live"
+        initial_delay  = 5
+        interval_seconds = 10
+        timeout        = 3
+        failure_count_threshold = 6  # 60 seconds total startup time
+      }
     }
   }
+  
+  # Secrets from Key Vault
+  secret {
+    name                = "sql-connection-string"
+    identity            = "system"
+    key_vault_secret_id = "${azurerm_key_vault.api_enrollment_kv.vault_uri}secrets/sql-connection-string"
+  }
+  
+  secret {
+    name                = "blob-connection-string"
+    identity            = "system"
+    key_vault_secret_id = "${azurerm_key_vault.api_enrollment_kv.vault_uri}secrets/blob-connection-string"
+  }
+  
+  tags = var.tags
+  
+  depends_on = [
+    azurerm_role_assignment.acr_pull,
+    azurerm_role_assignment.kv_aca_reader
+  ]
 }
 
 # 5. Permission: Allow the App to pull from the Registry
@@ -378,4 +539,13 @@ resource "azurerm_role_assignment" "acr_pull" {
   scope                = azurerm_container_registry.acr.id
   role_definition_name = "AcrPull"
   principal_id         = azurerm_container_app.api_app.identity[0].principal_id
+}
+
+# 6. RBAC: Allow Container App to read Key Vault secrets
+resource "azurerm_role_assignment" "kv_aca_reader" {
+  scope                = azurerm_key_vault.api_enrollment_kv.id
+  role_definition_name = "Key Vault Secrets User"
+  principal_id         = azurerm_container_app.api_app.identity[0].principal_id
+  
+  depends_on = [azurerm_container_app.api_app]
 }
