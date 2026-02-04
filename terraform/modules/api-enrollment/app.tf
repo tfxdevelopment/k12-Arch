@@ -18,6 +18,7 @@ resource "azurerm_windows_function_app" "api-enrollment" {
   app_settings = {
     "AzureWebJobs.MarkAccountMessageAsRead.Disabled" = "1"
     "StorageContainerName"                           = "document-leases"
+    "AzureSignalRConnectionString"                   = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault.api_enrollment_kv.vault_uri}secrets/AzureSignalRConnectionString/)"
   }
 
   site_config {
@@ -248,6 +249,17 @@ resource "azurerm_role_assignment" "kv_apim_secrets" {
   scope                = azurerm_key_vault.api_enrollment_kv.id
   role_definition_name = "Key Vault Secrets Officer"
   principal_id         = azurerm_api_management.api_enrollment.identity[0].principal_id
+}
+
+resource "azurerm_key_vault_secret" "signalr_connection_string" {
+  name         = "AzureSignalRConnectionString"
+  value        = azurerm_signalr_service.api_enrollment_signalr.primary_connection_string
+  key_vault_id = azurerm_key_vault.api_enrollment_kv.id
+
+  depends_on = [
+    azurerm_role_assignment.kv_reader,
+    azurerm_signalr_service.api_enrollment_signalr
+  ]
 }
 
 resource "azurerm_storage_account" "api_enrollment_logic_app_sa" {
