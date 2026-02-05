@@ -25,6 +25,7 @@ locals {
         start_ip        = "136.226.40.1"
         end_ip          = "136.226.60.255"
     }
+    db_size = 4 # in GB
     arm_role_receivers = [
         {
         name                    = "Monitoring Contributor"

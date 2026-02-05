@@ -1,4 +1,4 @@
-resource "azurerm_mssql_server" "api-enrollment-db" {
+resource "azurerm_mssql_server" "k12-dbserver" {
   name                         = "${var.environment_name}-api-enrollment"
   resource_group_name          = var.resource_group_name
   location                     = var.location
@@ -12,15 +12,16 @@ resource "azurerm_mssql_server" "api-enrollment-db" {
   }
 
   tags      = var.tags
+
 }
 
-resource "azurerm_mssql_database" "api-enrollment-k12" {
+resource "azurerm_mssql_database" "k12-database" {
   name         = "K12"
-  server_id    = azurerm_mssql_server.api-enrollment-db.id
+  server_id    = azurerm_mssql_server.k12-dbserver.id
   collation    = "SQL_Latin1_General_CP1_CI_AS"
   min_capacity = 2
   auto_pause_delay_in_minutes = 240
-  max_size_gb  = 2
+  max_size_gb  = var.db_size
   sku_name     = "GP_S_Gen5_2"
 
   identity {
@@ -31,29 +32,29 @@ resource "azurerm_mssql_database" "api-enrollment-k12" {
   tags      = var.tags
 
   # prevent the possibility of accidental data loss
-#  lifecycle {
-#    prevent_destroy = true
-#  }
+  lifecycle {
+    prevent_destroy = true
+  }
 }
 
-resource "azurerm_mssql_firewall_rule" "api-enrollment-allow-azure-services" {
+resource "azurerm_mssql_firewall_rule" "k12-database-allow-azure-services" {
   name              = "AllowAzureServices"
-  server_id         = azurerm_mssql_server.api-enrollment-db.id
+  server_id         = azurerm_mssql_server.k12-dbserver.id
   start_ip_address  = "0.0.0.0"
   end_ip_address    = "0.0.0.0"
 }
 
-resource "azurerm_mssql_firewall_rule" "api-enrollment-allow-zscaler" {
+resource "azurerm_mssql_firewall_rule" "k12-database-allow-zscaler" {
   name              = "AllowZScalerIPs"
-  server_id         = azurerm_mssql_server.api-enrollment-db.id
+  server_id         = azurerm_mssql_server.k12-dbserver.id
   start_ip_address  = "${var.zscaler_ip_list.start_ip}"
   end_ip_address    = "${var.zscaler_ip_list.end_ip}"
 }
 
-resource "azurerm_mssql_firewall_rule" "api-enrollment-allow-devs" {
+resource "azurerm_mssql_firewall_rule" "k12-database-allow-devs" {
   for_each = var.dev_ip_list
   name             = "FirewallRule-${each.key}"
-  server_id        = azurerm_mssql_server.api-enrollment-db.id
+  server_id        = azurerm_mssql_server.k12-dbserver.id
   start_ip_address = each.value
   end_ip_address   = each.value
 }
@@ -69,9 +70,31 @@ resource "azurerm_mssql_firewall_rule" "api-enrollment-allow-devs" {
 #       export SQLCMDAUTHMODE="ActiveDirectoryInteractive"
       
 #       for file in CFlK12.Database/Enrollment/Tables/*.sql; do
-#         sqlcmd -S ${azurerm_mssql_server.api-enrollment-db.fully_qualified_domain_name} -G -d K12 -i $file
+#         sqlcmd -S ${azurerm_mssql_server.k12-dbserver.fully_qualified_domain_name} -G -d K12 -i $file
 #       done
 #     EOT
 #   }
-#   depends_on = [azurerm_mssql_database.api-enrollment-k12]
+#   depends_on = [azurerm_mssql_database.k12-database]
 # }
+
+# 2026-02-05: In support of https://cfi-nc.atlassian.net/browse/K12-5342 we are renaming the terraform resources for the enrollment API database to be more generic and reusable for other databases in the future. The moved blocks indicate the old and new resource names. After this change, the database server will be named "k12-dbserver" and the database will be named "k12-database". This applies to the resource definitions in terraform only. The actual resources will retain their names in Azure for now. The firewall rules will also be renamed accordingly. Although they clutter up the code, Hashicorp recommends leaving moved blocks indefinitely to prevent accidental reuse of old resource names and to provide a clear history of changes.
+moved {
+  from = azurerm_mssql_server.api-enrollment-db
+  to   = azurerm_mssql_server.k12-dbserver
+}
+moved {
+  from = azurerm_mssql_database.api-enrollment-k12
+  to   = azurerm_mssql_database.k12-database
+}
+moved {
+  from = azurerm_mssql_firewall_rule.api-enrollment-allow-azure-services
+  to   = azurerm_mssql_firewall_rule.k12-database-allow-azure-services
+}
+moved {
+  from = azurerm_mssql_firewall_rule.api-enrollment-allow-zscaler
+  to   = azurerm_mssql_firewall_rule.k12-database-allow-zscaler
+}
+moved {
+  from = azurerm_mssql_firewall_rule.api-enrollment-allow-devs
+  to   = azurerm_mssql_firewall_rule.k12-database-allow-devs
+}

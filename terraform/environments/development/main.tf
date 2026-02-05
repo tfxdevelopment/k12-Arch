@@ -36,6 +36,7 @@ module "enrollment-api" {
     arm_role_receivers  = local.arm_role_receivers
     sql_connection_string  = local.sql_connection_string
     blob_storage_connection_string = local.blob_storage_connection_string
+    db_size = local.db_size
 }
 
 module "admin-web" {
