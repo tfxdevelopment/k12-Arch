@@ -10,12 +10,13 @@ resource "azurerm_static_web_app" "web-app" {
     "UserResourceAccessMappingFullSyncCronSchedule" = "0 */10 * * * *"
   }
 
-  lifecycle {
-    ignore_changes = [
-      tags,
-      sku_tier
-    ]
-  }
+  tags      = var.tags
+  # lifecycle {
+  #   ignore_changes = [
+  #     tags,
+  #     sku_tier
+  #   ]
+  # }
 }
 
 # Azure Front Door Profile
