@@ -20,6 +20,8 @@ module "enrollment-web" {
     tags = merge(local.tags, {module = "web-enrollment"})
     zscaler_ip_list = local.zscaler_ip_list
     dev_ip_list = local.dev_ip_list
+    web_app_sku_size = "Standard"
+    web_app_sku_tier = "Standard"
 }
 
 module "enrollment-api" {
@@ -49,6 +51,8 @@ module "admin-web" {
     tags = merge(local.tags, {module = "web-enrollment"})
     zscaler_ip_list = local.zscaler_ip_list
     dev_ip_list = local.dev_ip_list
+    web_app_sku_size = "Standard"
+    web_app_sku_tier = "Standard"
 }
 
 module "providers-web" {
@@ -61,6 +65,8 @@ module "providers-web" {
     tags = merge(local.tags, {module = "web-enrollment"})
     zscaler_ip_list = local.zscaler_ip_list
     dev_ip_list = local.dev_ip_list
+    web_app_sku_size = "Standard"
+    web_app_sku_tier = "Standard"
 }
 
 module "schools-web" {
@@ -73,6 +79,8 @@ module "schools-web" {
     tags = merge(local.tags, {module = "web-enrollment"})
     zscaler_ip_list = local.zscaler_ip_list
     dev_ip_list = local.dev_ip_list
+    web_app_sku_size = "Standard"
+    web_app_sku_tier = "Standard"
 }
 
 module "messaging" {

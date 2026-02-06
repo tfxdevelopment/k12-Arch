@@ -2,8 +2,8 @@ resource "azurerm_static_web_app" "web-app" {
   name                = "${var.app_name}-${var.environment_name}-web-app"
   resource_group_name = var.resource_group_name
   location            = "eastus2"
-  sku_size            = "Standard"
-  sku_tier            = "Standard"
+  sku_size            = var.web_app_sku_size
+  sku_tier            = var.web_app_sku_tier
 
   app_settings = {
     "PastDueTaskStatusCronSchedule"                 = "0 0 0 * * *"
