@@ -77,7 +77,10 @@ resource "azurerm_mssql_firewall_rule" "k12-database-allow-devs" {
 #   depends_on = [azurerm_mssql_database.k12-database]
 # }
 
-# 2026-02-05: In support of https://cfi-nc.atlassian.net/browse/K12-5342 we are renaming the terraform resources for the enrollment API database to be more generic and reusable for other databases in the future. The moved blocks indicate the old and new resource names. After this change, the database server will be named "k12-dbserver" and the database will be named "k12-database". This applies to the resource definitions in terraform only. The actual resources will retain their names in Azure for now. The firewall rules will also be renamed accordingly. Although they clutter up the code, Hashicorp recommends leaving moved blocks indefinitely to prevent accidental reuse of old resource names and to provide a clear history of changes.
+# 2026-02-05: As part of https://cfi-nc.atlassian.net/browse/K12-5338 we are renaming the terraform resources that use the term "enrollment" to be more generic and reusable for other resources in the future. 
+# The moved blocks indicate the old and new resource names. This applies to the resource definitions in terraform only. 
+# The actual resources will retain their names in Azure for now. 
+# Although they clutter up the code, Hashicorp recommends leaving moved blocks indefinitely to prevent accidental reuse of old resource names and to provide a clear history of changes.
 moved {
   from = azurerm_mssql_server.api-enrollment-db
   to   = azurerm_mssql_server.k12-dbserver

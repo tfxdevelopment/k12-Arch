@@ -1,4 +1,4 @@
-resource "azurerm_static_web_app" "web-enrollment" {
+resource "azurerm_static_web_app" "web-app" {
   name                = "${var.app_name}-${var.environment_name}-web-app"
   resource_group_name = var.resource_group_name
   location            = "eastus2"
@@ -41,8 +41,8 @@ resource "azurerm_cdn_frontdoor_origin" "webapp_origin" {
   cdn_frontdoor_origin_group_id = azurerm_cdn_frontdoor_origin_group.backend_pool.id
   enabled                       = true
   certificate_name_check_enabled = false
-  host_name                     = azurerm_static_web_app.web-enrollment.default_host_name  # Always points to the latest deployed instance
-  origin_host_header            = azurerm_static_web_app.web-enrollment.default_host_name
+  host_name                     = azurerm_static_web_app.web-app.default_host_name  # Always points to the latest deployed instance
+  origin_host_header            = azurerm_static_web_app.web-app.default_host_name
   http_port                     = 80
   https_port                    = 443
   priority                      = 1
@@ -120,3 +120,13 @@ resource "azurerm_cdn_frontdoor_route" "default_route" {
 #     }
 #   }
 # }
+
+# 2026-02-06: As part of https://cfi-nc.atlassian.net/browse/K12-5338 we are renaming the terraform resources that use the term "enrollment" to be more generic and reusable for other resources in the future. 
+# The moved blocks indicate the old and new resource names. This applies to the resource definitions in terraform only. 
+# The actual resources will retain their names in Azure for now. 
+# Although they clutter up the code, Hashicorp recommends leaving moved blocks indefinitely to prevent accidental reuse of old resource names and to provide a clear history of changes.
+
+moved {
+  from = azurerm_static_web_app.web-enrollment
+  to   = azurerm_static_web_app.web-app
+}
