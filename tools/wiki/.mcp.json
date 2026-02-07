@@ -1,18 +1,13 @@
 {
   "mcpServers": {
-    "aspire": {
-      "command": "aspire",
-      "args": [
-        "mcp",
-        "start"
-      ]
-    },
-    "playwright": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@playwright/mcp@latest"
-      ]
+    "contextstream": {
+      "args": [],
+      "command": "C:\\Users\\tfraser\\AppData\\Local\\ContextStream\\contextstream-mcp.exe",
+      "env": {
+        "CONTEXTSTREAM_API_KEY": "cbiq_KqNbAsVJN-6-oc0EhX8tdNY65edLqsrSLqzUv63jAgI",
+        "CONTEXTSTREAM_API_URL": "https://api.contextstream.io",
+        "CONTEXTSTREAM_CONTEXT_PACK": "true"
+      }
     }
   }
 }
