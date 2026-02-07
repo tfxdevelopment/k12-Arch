@@ -58,6 +58,14 @@
     <PackageVersion Include="StackExchange.Redis" Version="2.10.1" />
   </ItemGroup>
 
+  <ItemGroup Label="Database Migrations - Latest Stable">
+    <PackageVersion Include="DbUp" Version="6.0.0" />
+    <PackageVersion Include="DbUp.SqlServer" Version="6.0.0" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.Json" Version="$(DotNetVersion)" />
+  </ItemGroup>
+
   <ItemGroup Label="Validation &amp; Mapping - Latest Stable">
     <PackageVersion Include="FluentValidation" Version="12.1.1" />
     <PackageVersion Include="FluentValidation.DependencyInjectionExtensions" Version="12.1.1" />

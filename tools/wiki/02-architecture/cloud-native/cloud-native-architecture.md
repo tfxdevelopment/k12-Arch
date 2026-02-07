@@ -194,7 +194,7 @@ flowchart LR
   subgraph S1 [Build Stage (CI)]
     direction TB
     Push[Git Push] --> Test[Unit Tests & Security Scan]
-    Test --> Build[Build .NET/Angular Apps]
+    Test --> Build[Build Apps]
     Build --> Docker[Build & Push Container Images]
     Docker --> ACR[(Azure Container Registry)]
   end

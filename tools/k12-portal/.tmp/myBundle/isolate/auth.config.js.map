@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": ["../convex/auth.config.ts"],
+  "mappings": ";AAOA,IAAMA,IAAa;AAAA,EACjB,WAAW,CAAC;AACd,GAEOC,IAAQD;",
+  "names": ["authConfig", "auth_config_default"]
+}

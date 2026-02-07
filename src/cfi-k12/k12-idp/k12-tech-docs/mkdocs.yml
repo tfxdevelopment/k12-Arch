@@ -1,6 +1,0 @@
-site_name: k12-MyPortal-docs
-site_description: An informative description
-plugins:
-  - techdocs-core
-nav:
-  - Getting Started: index.md
