@@ -22,7 +22,10 @@ public static class CreateProgramEndpoint
 
             return result.IsSuccess
                 ? Results.Created($"/api/programs/{result.Value}", new { ProgramId = result.Value })
-                : Results.BadRequest(new { Error = result.Error.Message });
+                : Results.Problem(
+                    detail: result.Error.Message,
+                    statusCode: StatusCodes.Status400BadRequest,
+                    title: "Bad Request");
         })
         .WithName("CreateProgram")
         .WithTags("Programs")
@@ -32,7 +35,7 @@ public static class CreateProgramEndpoint
             Description = "Creates a new educational program"
         })
         .Produces<object>(StatusCodes.Status201Created)
-        .Produces<object>(StatusCodes.Status400BadRequest);
+        .ProducesProblem(StatusCodes.Status400BadRequest);
 
         return builder;
     }

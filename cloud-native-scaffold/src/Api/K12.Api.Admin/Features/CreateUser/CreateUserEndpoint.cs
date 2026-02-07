@@ -22,7 +22,10 @@ public static class CreateUserEndpoint
 
             return result.IsSuccess
                 ? Results.Created($"/api/admin/users/{result.Value}", new { UserId = result.Value })
-                : Results.BadRequest(new { Error = result.Error.Message });
+                : Results.Problem(
+                    detail: result.Error.Message,
+                    statusCode: StatusCodes.Status400BadRequest,
+                    title: "Bad Request");
         })
         .WithName("CreateUser")
         .WithTags("Admin")
@@ -32,7 +35,7 @@ public static class CreateUserEndpoint
             Description = "Creates a new system user"
         })
         .Produces<object>(StatusCodes.Status201Created)
-        .Produces<object>(StatusCodes.Status400BadRequest);
+        .ProducesProblem(StatusCodes.Status400BadRequest);
 
         return builder;
     }

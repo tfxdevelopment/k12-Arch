@@ -25,7 +25,10 @@ public static class GetUsersEndpoint
 
             return result.IsSuccess
                 ? Results.Ok(result.Value)
-                : Results.BadRequest(new { Error = result.Error.Message });
+                : Results.Problem(
+                    detail: result.Error.Message,
+                    statusCode: StatusCodes.Status400BadRequest,
+                    title: "Bad Request");
         })
         .WithName("GetUsers")
         .WithTags("Admin")
@@ -35,7 +38,7 @@ public static class GetUsersEndpoint
             Description = "Returns a paginated list of all system users"
         })
         .Produces<IReadOnlyList<object>>(StatusCodes.Status200OK)
-        .Produces<object>(StatusCodes.Status400BadRequest);
+        .ProducesProblem(StatusCodes.Status400BadRequest);
 
         return builder;
     }

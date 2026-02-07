@@ -24,7 +24,10 @@ public static class SubmitEnrollmentEndpoint
 
             return result.IsSuccess
                 ? Results.Ok(new { ApplicationId = result.Value })
-                : Results.BadRequest(new { Error = result.Error.Message });
+                : Results.Problem(
+                    detail: result.Error.Message,
+                    statusCode: StatusCodes.Status400BadRequest,
+                    title: "Bad Request");
         })
         .WithName("SubmitEnrollment")
         .WithTags("Enrollment")
@@ -34,7 +37,7 @@ public static class SubmitEnrollmentEndpoint
             Description = "Creates a new enrollment application for a student in a household for a specific program"
         })
         .Produces<object>(StatusCodes.Status200OK)
-        .Produces<object>(StatusCodes.Status400BadRequest);
+        .ProducesProblem(StatusCodes.Status400BadRequest);
 
         return builder;
     }

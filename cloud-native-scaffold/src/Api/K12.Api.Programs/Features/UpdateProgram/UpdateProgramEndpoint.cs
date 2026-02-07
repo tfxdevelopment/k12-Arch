@@ -30,7 +30,10 @@ public static class UpdateProgramEndpoint
 
             return result.IsSuccess
                 ? Results.NoContent()
-                : Results.BadRequest(new { Error = result.Error.Message });
+                : Results.Problem(
+                    detail: result.Error.Message,
+                    statusCode: StatusCodes.Status400BadRequest,
+                    title: "Bad Request");
         })
         .WithName("UpdateProgram")
         .WithTags("Programs")
@@ -40,7 +43,7 @@ public static class UpdateProgramEndpoint
             Description = "Updates an existing educational program"
         })
         .Produces(StatusCodes.Status204NoContent)
-        .Produces<object>(StatusCodes.Status400BadRequest);
+        .ProducesProblem(StatusCodes.Status400BadRequest);
 
         return builder;
     }
