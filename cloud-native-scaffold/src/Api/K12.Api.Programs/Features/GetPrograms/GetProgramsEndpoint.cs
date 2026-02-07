@@ -1,4 +1,7 @@
+using K12.Contracts.Programs;
 using MediatR;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 namespace K12.Api.Programs.Features.GetPrograms;
 
@@ -26,7 +29,9 @@ public static class GetProgramsEndpoint
 
             return result.IsSuccess
                 ? Results.Ok(result.Value)
-                : Results.BadRequest(new { Error = result.Error.Message });
+                : Results.Problem(
+                    detail: result.Error.Message,
+                    statusCode: StatusCodes.Status400BadRequest);
         })
         .WithName("GetPrograms")
         .WithTags("Programs")
@@ -35,8 +40,8 @@ public static class GetProgramsEndpoint
             Summary = "Get all programs",
             Description = "Returns a paginated list of all available programs"
         })
-        .Produces<IReadOnlyList<object>>(StatusCodes.Status200OK)
-        .Produces<object>(StatusCodes.Status400BadRequest);
+        .Produces<IReadOnlyList<ProgramDto>>(StatusCodes.Status200OK)
+        .ProducesProblem(StatusCodes.Status400BadRequest);
 
         return builder;
     }
