@@ -1,0 +1,6 @@
+{
+  "hostedAgentDeployOptions": {
+    "dockerContextPath": "g:\\Projects\\CFI\\K12\\devops\\k12-infra",
+    "dockerfilePath": "g:\\Projects\\CFI\\K12\\devops\\k12-infra\\Dockerfile"
+  }
+}
