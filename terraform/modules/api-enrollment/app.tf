@@ -359,7 +359,7 @@ resource "azurerm_container_app_environment" "api_env" {
   # internal_load_balancer_enabled     = true  # Private environment
   
   # HIGH AVAILABILITY: Enable zone redundancy for production
-  zone_redundancy_enabled = true  # Requires Premium SKU or workload profiles
+  # zone_redundancy_enabled = true  # Requires Premium SKU or workload profiles
   
   # WORKLOAD PROFILES: For dedicated compute (optional, increases cost)
   # workload_profile {
@@ -383,20 +383,17 @@ resource "azurerm_container_registry" "acr" {
   # network_rule_bypass_option    = "AzureServices"
   
   # HIGH AVAILABILITY: Enable zone redundancy
-  zone_redundancy_enabled = true
+  #zone_redundancy_enabled = true
   
   # DISASTER RECOVERY: Geo-replication (add regions as needed)
-  georeplications {
-    location                = "westus2"  # Secondary region
-    zone_redundancy_enabled = true
-    tags                    = var.tags
-  }
+  #georeplications {
+  #  location                = "westus2"  # Secondary region
+  #  zone_redundancy_enabled = true
+  #  tags                    = var.tags
+  #}
   
   tags = var.tags
 }
-
-//Import
-//terraform import 'module.enrollment-api.azurerm_container_app.api_app' "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/development/providers/Microsoft.App/containerApps/development-app"
 
 # 4. The Container App - PRODUCTION READY
 resource "azurerm_container_app" "api_app" {
@@ -458,10 +455,10 @@ resource "azurerm_container_app" "api_app" {
       memory = "1Gi"
       
       # Environment variables for telemetry and Dapr
-      env {
-        name  = "APPLICATIONINSIGHTS_CONNECTION_STRING"
-        value = azurerm_application_insights.aca_insights.connection_string
-      }
+      #env {
+      #  name  = "APPLICATIONINSIGHTS_CONNECTION_STRING"
+      #  value = azurerm_application_insights.aca_insights.connection_string
+      #}
       
       env {
         name  = "ASPNETCORE_ENVIRONMENT"
@@ -527,11 +524,6 @@ resource "azurerm_container_app" "api_app" {
   }
   
   tags = var.tags
-  
-  depends_on = [
-    azurerm_role_assignment.acr_pull,
-    azurerm_role_assignment.kv_aca_reader
-  ]
 }
 
 # 5. Permission: Allow the App to pull from the Registry
@@ -546,6 +538,4 @@ resource "azurerm_role_assignment" "kv_aca_reader" {
   scope                = azurerm_key_vault.api_enrollment_kv.id
   role_definition_name = "Key Vault Secrets User"
   principal_id         = azurerm_container_app.api_app.identity[0].principal_id
-  
-  depends_on = [azurerm_container_app.api_app]
 }
