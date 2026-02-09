@@ -11,15 +11,17 @@ module "core" {
 }
 
 module "enrollment-web" {
-    source = "../../modules/web-enrollment"
+    source = "../../modules/web-frontend"
     #variables
     app_name = "enrollment"
     environment_name = local.environment_name
     location = local.location
     resource_group_name = module.core.rg_name
-    tags = merge(local.tags, {module = "web-enrollment"})
+    tags = merge(local.tags, {module = "web-frontend"})
     zscaler_ip_list = local.zscaler_ip_list
     dev_ip_list = local.dev_ip_list
+    web_app_sku_size = "Standard"
+    web_app_sku_tier = "Standard"
 }
 
 module "enrollment-api" {
@@ -40,39 +42,59 @@ module "enrollment-api" {
 }
 
 module "admin-web" {
-    source = "../../modules/web-enrollment"
+    source = "../../modules/web-frontend"
     #variables
     app_name = "admin"
     environment_name = local.environment_name
     location = local.location
     resource_group_name = module.core.rg_name
-    tags = merge(local.tags, {module = "web-enrollment"})
+    tags = merge(local.tags, {module = "web-frontend"})
     zscaler_ip_list = local.zscaler_ip_list
     dev_ip_list = local.dev_ip_list
+    web_app_sku_size = "Standard"
+    web_app_sku_tier = "Standard"
+}
+
+module "household-web" {
+    source = "../../modules/web-frontend"
+    #variables
+    app_name = "household"
+    environment_name = local.environment_name
+    location = local.location
+    resource_group_name = module.core.rg_name
+    tags = merge(local.tags, {module = "web-frontend"})
+    zscaler_ip_list = local.zscaler_ip_list
+    dev_ip_list = local.dev_ip_list
+    web_app_sku_size = "Standard"
+    web_app_sku_tier = "Standard"
 }
 
 module "providers-web" {
-    source = "../../modules/web-enrollment"
+    source = "../../modules/web-frontend"
     #variables
     app_name = "providers"
     environment_name = local.environment_name
     location = local.location
     resource_group_name = module.core.rg_name
-    tags = merge(local.tags, {module = "web-enrollment"})
+    tags = merge(local.tags, {module = "web-frontend"})
     zscaler_ip_list = local.zscaler_ip_list
     dev_ip_list = local.dev_ip_list
+    web_app_sku_size = "Standard"
+    web_app_sku_tier = "Standard"
 }
 
 module "schools-web" {
-    source = "../../modules/web-enrollment"
+    source = "../../modules/web-frontend"
     #variables
     app_name = "schools"
     environment_name = local.environment_name
     location = local.location
     resource_group_name = module.core.rg_name
-    tags = merge(local.tags, {module = "web-enrollment"})
+    tags = merge(local.tags, {module = "web-frontend"})
     zscaler_ip_list = local.zscaler_ip_list
     dev_ip_list = local.dev_ip_list
+    web_app_sku_size = "Standard"
+    web_app_sku_tier = "Standard"
 }
 
 module "messaging" {

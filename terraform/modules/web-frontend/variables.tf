@@ -4,4 +4,6 @@ variable "location" {}
 variable "resource_group_name" {}
 variable "dev_ip_list" {type = map(string)}
 variable "zscaler_ip_list" {type = map(string)}
+variable "web_app_sku_size" {}
+variable "web_app_sku_tier" {}
 variable "tags" {type = map(string)}
