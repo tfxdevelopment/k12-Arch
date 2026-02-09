@@ -28,23 +28,3 @@ output "acr_login_server" {
   description = "ACR login server URL"
   value       = azurerm_container_registry.acr.login_server
 }
-
-output "redis_hostname" {
-  description = "Redis Cache hostname"
-  value       = azurerm_redis_cache.dapr_state.hostname
-}
-
-output "vnet_id" {
-  description = "Virtual Network ID"
-  value       = azurerm_virtual_network.k12_vnet.id
-}
-
-output "aca_subnet_id" {
-  description = "Container Apps subnet ID"
-  value       = azurerm_subnet.aca_subnet.id
-}
-
-output "apim_subnet_id" {
-  description = "APIM subnet ID for future integration"
-  value       = azurerm_subnet.apim_subnet.id
-}
