@@ -1,8 +1,4 @@
 locals {
-    tags = {
-        environment = "development"
-        source = "terraform"
-    }
     environment_name = "development"
     location = "East US 2"
     publisher_name= "CFI"
