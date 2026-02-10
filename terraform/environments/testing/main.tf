@@ -1,9 +1,15 @@
+# Tagging module for standardized tags
+module "tagging" {
+  source = "../../modules/tagging"
+  environment = local.environment_name
+}
+
 module "core" {
     source = "../../modules/core"
     #variables
     environment_name = local.environment_name
     location = local.location
-    tags = merge(local.tags, {module = "core"})
+    tags = merge(module.tagging.tags, {module = "core"})
     zscaler_ip_list = local.zscaler_ip_list
     dev_ip_list = local.dev_ip_list
     contributor_principal_id = local.contributor_principal_id
@@ -17,7 +23,7 @@ module "enrollment-web" {
     environment_name = local.environment_name
     location = local.location
     resource_group_name = module.core.rg_name
-    tags = merge(local.tags, {module = "web-frontend"})
+    tags = merge(module.tagging.tags, {module = "web-frontend"})
     zscaler_ip_list = local.zscaler_ip_list
     dev_ip_list = local.dev_ip_list
     web_app_sku_size = "Standard"
