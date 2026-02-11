@@ -2,8 +2,9 @@ resource "azurerm_service_plan" "api-enrollment" {
   name                = "${var.environment_name}-api-enrollment"
   location            = var.location
   resource_group_name = var.resource_group_name
-  sku_name = "Y1"
-  os_type = "Windows"
+  sku_name            = "Y1"
+  os_type             = "Windows"
+  tags                = var.tags
 }
 
 resource "azurerm_windows_function_app" "api-enrollment" {
@@ -69,9 +70,10 @@ resource "azurerm_windows_function_app" "api-enrollment" {
     ]
   }
 
+  tags = var.tags
+
   lifecycle {
     ignore_changes = [
-      tags,
       site_config,
       connection_string,
       app_settings
@@ -84,6 +86,7 @@ resource "azurerm_application_insights" "api-enrollment-insights" {
   resource_group_name = var.resource_group_name
   location            = var.location
   application_type    = "web"
+  tags                = var.tags
 
   lifecycle {
     ignore_changes = [
@@ -101,6 +104,7 @@ resource "azurerm_application_insights_web_test" "dev-api-enrollment-test" {
   timeout                 = 30
   enabled                 = true
   kind                    = "ping"
+  tags                    = var.tags
 
   geo_locations = [
     "us-va-ash-azr" //US East
@@ -113,12 +117,6 @@ resource "azurerm_application_insights_web_test" "dev-api-enrollment-test" {
     </Items>
   </WebTest>
   XML
-
-  lifecycle {
-    ignore_changes = [
-      tags
-    ]
-  }
 }
 
 resource "azurerm_monitor_action_group" "app-insights-smart-detection" {
@@ -127,6 +125,7 @@ resource "azurerm_monitor_action_group" "app-insights-smart-detection" {
   short_name          = "SmartDetect"
   location            = "Global"
   enabled             = true
+  tags                = var.tags
 
   dynamic "arm_role_receiver" {
     for_each = var.arm_role_receivers
@@ -142,6 +141,7 @@ resource "azurerm_portal_dashboard" "dev-api-enrollment-dashboard" {
   name                = "${var.environment_name}-api-enrollment-dashboard"
   resource_group_name = var.resource_group_name
   location            = var.location
+  tags                = var.tags
 
   dashboard_properties = jsonencode({
     "lenses": {
@@ -178,6 +178,7 @@ resource "azurerm_signalr_service" "api_enrollment_signalr" {
   name                = "${var.environment_name}-api-enrollment-signalr"
   location            = var.location
   resource_group_name = var.resource_group_name
+  tags                = var.tags
 
   sku {
     name     = "Standard_S1"
@@ -205,12 +206,6 @@ resource "azurerm_signalr_service" "api_enrollment_signalr" {
     messaging_logs_enabled    = true
     http_request_logs_enabled = true
   }
-
-  lifecycle {
-    ignore_changes = [
-      tags
-    ]
-  }
 }
 
 resource "azurerm_key_vault" "api_enrollment_kv" {
@@ -222,9 +217,10 @@ resource "azurerm_key_vault" "api_enrollment_kv" {
   purge_protection_enabled    = true
   soft_delete_retention_days  = 7
   enable_rbac_authorization   = true
+  tags                        = var.tags
 
   lifecycle {
-    ignore_changes = [tags]
+    ignore_changes = all
   }
 }
 
@@ -268,13 +264,15 @@ resource "azurerm_storage_account" "api_enrollment_logic_app_sa" {
   location                 = var.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
+  tags                     = var.tags
 }
 resource "azurerm_service_plan" "api_enrollment_logic_app_service_plan" {
   name                = "${var.environment_name}-api-enrollment-sp"
   location            = var.location
   resource_group_name = var.resource_group_name
-  os_type  = "Windows"
-  sku_name = "WS1"
+  os_type             = "Windows"
+  sku_name            = "WS1"
+  tags                = var.tags
 }
 resource "azurerm_logic_app_standard" "api_enrollment_logic_app" {
   name                       = "${var.environment_name}-api-enrollment-la"
@@ -286,13 +284,14 @@ resource "azurerm_logic_app_standard" "api_enrollment_logic_app" {
   app_settings = {
     "FUNCTIONS_WORKER_RUNTIME"     = "dotnet"
   }
+  tags = var.tags
+
   identity {
     type = "SystemAssigned"
   }
 
   lifecycle {
     ignore_changes = [
-      tags,
       app_settings
     ]
   }
@@ -328,6 +327,7 @@ resource "azurerm_log_analytics_workspace" "aca_logs" {
   location            = var.location
   resource_group_name = var.resource_group_name
   sku                 = "PerGB2018"
+  tags                = var.tags
 }
 
 # 2. Azure Container App Environment 
@@ -336,15 +336,17 @@ resource "azurerm_container_app_environment" "api_env" {
   location                   = var.location
   resource_group_name        = var.resource_group_name
   log_analytics_workspace_id = azurerm_log_analytics_workspace.aca_logs.id
+  tags                       = var.tags
 }
 
 # 3. Azure Container Registry
 resource "azurerm_container_registry" "acr" {
-name                  = "${replace(var.environment_name, "-", "")}k12acr"
+  name                = "${replace(var.environment_name, "-", "")}k12acr"
   resource_group_name = var.resource_group_name
   location            = var.location
   sku                 = "Basic"
   admin_enabled       = false # We are using Managed Identity instead
+  tags                = var.tags
 }
 
 //Import
@@ -356,6 +358,7 @@ resource "azurerm_container_app" "api_app" {
   container_app_environment_id = azurerm_container_app_environment.api_env.id
   resource_group_name          = var.resource_group_name
   revision_mode                = "Single"
+  tags                         = var.tags
 
   identity {
     type = "SystemAssigned"
