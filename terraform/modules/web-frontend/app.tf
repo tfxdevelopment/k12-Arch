@@ -24,6 +24,7 @@ resource "azurerm_cdn_frontdoor_profile" "afd_profile" {
   name                = "${var.app_name}-${var.environment_name}-afd-profile"
   resource_group_name = var.resource_group_name
   sku_name            = "Standard_AzureFrontDoor"
+  tags                = var.tags
 }
 
 # Backend Pool
@@ -54,6 +55,7 @@ resource "azurerm_cdn_frontdoor_origin" "webapp_origin" {
 resource "azurerm_cdn_frontdoor_endpoint" "frontend_endpoint" {
   name                     = "${var.app_name}-${var.environment_name}-frontend"
   cdn_frontdoor_profile_id = azurerm_cdn_frontdoor_profile.afd_profile.id
+  tags                     = var.tags
 }
 
 # Routing Rule to Forward Requests to the Web App

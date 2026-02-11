@@ -4,6 +4,7 @@ resource "azurerm_storage_account" "api-enrollment" {
   location                 = var.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
+  tags                     = var.tags
 }
 
 resource "azurerm_storage_account" "api-enrollment-hns" {
@@ -13,6 +14,7 @@ resource "azurerm_storage_account" "api-enrollment-hns" {
   account_tier             = "Standard"
   account_replication_type = "LRS"
   is_hns_enabled           = true
+  tags                     = var.tags
 }
 
 data "azurerm_linux_function_app" "api_enrollment" {
