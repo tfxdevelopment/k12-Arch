@@ -8,13 +8,11 @@ resource "azurerm_api_management" "api_enrollment" {
   sku_name = "Developer_1"
 
   tags      = var.tags
-
   identity {
     type = "SystemAssigned"
   }
-
   lifecycle {
-    ignore_changes = all
+    ignore_changes = all # covers tags
   }
 }
 

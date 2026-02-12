@@ -5,6 +5,11 @@ resource "azurerm_service_plan" "api-enrollment" {
   sku_name            = "Y1"
   os_type             = "Windows"
   tags                = var.tags
+  lifecycle {
+    ignore_changes = [
+      tags
+    ]
+  }
 }
 
 resource "azurerm_windows_function_app" "api-enrollment" {
@@ -71,12 +76,12 @@ resource "azurerm_windows_function_app" "api-enrollment" {
   }
 
   tags = var.tags
-
   lifecycle {
     ignore_changes = [
       site_config,
       connection_string,
-      app_settings
+      app_settings,
+      tags
     ]
   }
 }
@@ -87,10 +92,10 @@ resource "azurerm_application_insights" "api-enrollment-insights" {
   location            = var.location
   application_type    = "web"
   tags                = var.tags
-
   lifecycle {
     ignore_changes = [
-      workspace_id
+      workspace_id,
+      tags
     ]
   }
 }
@@ -126,6 +131,11 @@ resource "azurerm_monitor_action_group" "app-insights-smart-detection" {
   location            = "Global"
   enabled             = true
   tags                = var.tags
+  lifecycle {
+    ignore_changes = [
+      tags
+    ]
+  }
 
   dynamic "arm_role_receiver" {
     for_each = var.arm_role_receivers
@@ -142,6 +152,11 @@ resource "azurerm_portal_dashboard" "dev-api-enrollment-dashboard" {
   resource_group_name = var.resource_group_name
   location            = var.location
   tags                = var.tags
+  lifecycle {
+    ignore_changes = [
+      tags
+    ]
+  }
 
   dashboard_properties = jsonencode({
     "lenses": {
@@ -179,6 +194,11 @@ resource "azurerm_signalr_service" "api_enrollment_signalr" {
   location            = var.location
   resource_group_name = var.resource_group_name
   tags                = var.tags
+  lifecycle {
+    ignore_changes = [
+      tags
+    ]
+  }
 
   sku {
     name     = "Standard_S1"
@@ -218,9 +238,8 @@ resource "azurerm_key_vault" "api_enrollment_kv" {
   soft_delete_retention_days  = 7
   enable_rbac_authorization   = true
   tags                        = var.tags
-
   lifecycle {
-    ignore_changes = all
+    ignore_changes = all # covers tags
   }
 }
 
@@ -265,6 +284,11 @@ resource "azurerm_storage_account" "api_enrollment_logic_app_sa" {
   account_tier             = "Standard"
   account_replication_type = "LRS"
   tags                     = var.tags
+  lifecycle {
+    ignore_changes = [
+      tags
+    ]
+  }
 }
 resource "azurerm_service_plan" "api_enrollment_logic_app_service_plan" {
   name                = "${var.environment_name}-api-enrollment-sp"
@@ -273,6 +297,11 @@ resource "azurerm_service_plan" "api_enrollment_logic_app_service_plan" {
   os_type             = "Windows"
   sku_name            = "WS1"
   tags                = var.tags
+  lifecycle {
+    ignore_changes = [
+      tags
+    ]
+  }
 }
 resource "azurerm_logic_app_standard" "api_enrollment_logic_app" {
   name                       = "${var.environment_name}-api-enrollment-la"
@@ -285,14 +314,13 @@ resource "azurerm_logic_app_standard" "api_enrollment_logic_app" {
     "FUNCTIONS_WORKER_RUNTIME"     = "dotnet"
   }
   tags = var.tags
-
   identity {
     type = "SystemAssigned"
   }
-
   lifecycle {
     ignore_changes = [
-      app_settings
+      app_settings,
+      tags
     ]
   }
 }
@@ -328,6 +356,11 @@ resource "azurerm_log_analytics_workspace" "aca_logs" {
   resource_group_name = var.resource_group_name
   sku                 = "PerGB2018"
   tags                = var.tags
+  lifecycle {
+    ignore_changes = [
+      tags
+    ]
+  }
 }
 
 # 2. Azure Container App Environment 
@@ -337,6 +370,11 @@ resource "azurerm_container_app_environment" "api_env" {
   resource_group_name        = var.resource_group_name
   log_analytics_workspace_id = azurerm_log_analytics_workspace.aca_logs.id
   tags                       = var.tags
+  lifecycle {
+    ignore_changes = [
+      tags
+    ]
+  }
 }
 
 # 3. Azure Container Registry
@@ -347,6 +385,11 @@ resource "azurerm_container_registry" "acr" {
   sku                 = "Basic"
   admin_enabled       = false # We are using Managed Identity instead
   tags                = var.tags
+  lifecycle {
+    ignore_changes = [
+      tags
+    ]
+  }
 }
 
 //Import
@@ -359,6 +402,11 @@ resource "azurerm_container_app" "api_app" {
   resource_group_name          = var.resource_group_name
   revision_mode                = "Single"
   tags                         = var.tags
+  lifecycle {
+    ignore_changes = [
+      tags
+    ]
+  }
 
   identity {
     type = "SystemAssigned"

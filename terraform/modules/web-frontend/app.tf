@@ -11,12 +11,11 @@ resource "azurerm_static_web_app" "web-app" {
   }
 
   tags      = var.tags
-  # lifecycle {
-  #   ignore_changes = [
-  #     tags,
-  #     sku_tier
-  #   ]
-  # }
+  lifecycle {
+    ignore_changes = [
+      tags
+    ]
+  }
 }
 
 # Azure Front Door Profile
@@ -25,6 +24,11 @@ resource "azurerm_cdn_frontdoor_profile" "afd_profile" {
   resource_group_name = var.resource_group_name
   sku_name            = "Standard_AzureFrontDoor"
   tags                = var.tags
+  lifecycle {
+    ignore_changes = [
+      tags
+    ]
+  }
 }
 
 # Backend Pool
@@ -56,6 +60,11 @@ resource "azurerm_cdn_frontdoor_endpoint" "frontend_endpoint" {
   name                     = "${var.app_name}-${var.environment_name}-frontend"
   cdn_frontdoor_profile_id = azurerm_cdn_frontdoor_profile.afd_profile.id
   tags                     = var.tags
+  lifecycle {
+    ignore_changes = [
+      tags
+    ]
+  }
 }
 
 # Routing Rule to Forward Requests to the Web App
