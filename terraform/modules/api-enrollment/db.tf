@@ -12,6 +12,11 @@ resource "azurerm_mssql_server" "k12-dbserver" {
   }
 
   tags      = var.tags
+  lifecycle {
+    ignore_changes = [
+      tags
+    ]
+  }
 
 }
 
@@ -30,10 +35,12 @@ resource "azurerm_mssql_database" "k12-database" {
   }
 
   tags      = var.tags
-
   # prevent the possibility of accidental data loss
   lifecycle {
     prevent_destroy = true
+    ignore_changes = [
+      tags
+    ]
   }
 }
 

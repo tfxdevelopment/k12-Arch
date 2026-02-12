@@ -10,6 +10,11 @@ resource "azurerm_servicebus_namespace" "k12" {
   local_auth_enabled            = var.local_auth_enabled
 
   tags = var.tags
+  lifecycle {
+    ignore_changes = [
+      tags
+    ]
+  }
 }
 
 # Service Bus Queues
