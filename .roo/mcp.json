@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "contextstream": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "--prefer-online",
+        "-y",
+        "@contextstream/mcp-server@latest"
+      ],
+      "env": {
+        "CONTEXTSTREAM_API_URL": "https://api.contextstream.io",
+        "CONTEXTSTREAM_API_KEY": "cbiq_vGHBPci63s5euiJeU4R0alc-d2EEAMgGpoHy6oRV3C4",
+        "CONTEXTSTREAM_CONTEXT_PACK": "false"
+      }
+    }
+  }
+}

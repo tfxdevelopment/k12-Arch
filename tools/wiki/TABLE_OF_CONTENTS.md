@@ -3,6 +3,15 @@
 ## Main Wiki
 - [Home](README.md)
 
+## Content Sections (ContextStream Integrated)
+- [Plans & Tasks](../../memory-bank/tasks/_index.md)
+- [Diagrams](diagrams/README.md)
+- [Docs & Guides](guides/README.md)
+- [Notes & Principles](notes/README.md)
+- [To-Dos & Backlog](../../memory-bank/tasks/_index.md)
+- [Lessons Learned](lessons/README.md)
+- [Knowledge Base](knowledge/README.md)
+
 ## Documentation Health
 - [Documentation Health Report](DOCUMENTATION-HEALTH-REPORT.md)
 - [Incompleteness Scan](DOCUMENTATION-INCOMPLETENESS-SCAN.md)

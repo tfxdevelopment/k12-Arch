@@ -1,0 +1,14 @@
+{
+  "version": "0.4.37",
+  "workspace_id": "88a586eb-0e78-4841-b4fd-32f080419e2a",
+  "workspace_name": "K12 Azure",
+  "configured_editors": [
+    "claude-code",
+    "cline",
+    "codex",
+    "antigravity"
+  ],
+  "context_pack": true,
+  "api_url": null,
+  "updated_at": "2026-02-07T16:56:39.416937200+00:00"
+}
