@@ -16,30 +16,30 @@
 
 **Documents Updated:**
 
-1. **[WA-02-security.md](wiki/09-proposed-architecture/04-well-architected/WA-02-security.md)** (680 lines)
+1. **[WA-02-security.md](tools/wiki/09-proposed-architecture/04-well-architected/WA-02-security.md)** (680 lines)
    - Removed: SQL RLS policies and session context
    - Added: Claims-based authorization with C# code examples
    - Updated: Audit logging, threat model, penetration testing scope
    - Updated: Security KPIs to track authorization bypass attempts
 
-2. **[API-01-dab-implementation.md](wiki/09-proposed-architecture/03-hybrid-api/API-01-dab-implementation.md)** (530 lines)
+2. **[API-01-dab-implementation.md](tools/wiki/09-proposed-architecture/03-hybrid-api/API-01-dab-implementation.md)** (530 lines)
    - Removed: SQL session context setup
    - Added: DAB policy configuration with claims filtering
    - Updated: REST API endpoint examples with Authorization headers
    - Benefit: Portable across SQL, Cosmos DB, external APIs
 
-3. **[ANALYTICS-01-data-federation.md](wiki/09-proposed-architecture/05-analytics/ANALYTICS-01-data-federation.md)** (652 lines)
+3. **[ANALYTICS-01-data-federation.md](tools/wiki/09-proposed-architecture/05-analytics/ANALYTICS-01-data-federation.md)** (652 lines)
    - Removed: Trino RLS workarounds and access control rules
    - Added: CubeJS security context with JWT claims filtering
    - Updated: Provider and Household role filtering examples
    - Benefit: Works with all Trino connectors (SQL, ADLS, Cosmos)
 
-4. **[ANALYTICS-02-semantic-layer.md](wiki/09-proposed-architecture/05-analytics/ANALYTICS-02-semantic-layer.md)** (723 lines)
+4. **[ANALYTICS-02-semantic-layer.md](tools/wiki/09-proposed-architecture/05-analytics/ANALYTICS-02-semantic-layer.md)** (723 lines)
    - Updated: Section title "Multi-Tenant Claims-Based Security"
    - Updated: Subsection "Claims-Based Security in Cubes"
    - Maintained: JWT token validation and security context patterns
 
-5. **[EXECUTIVE-BRIEF.md](wiki/09-proposed-architecture/EXECUTIVE-BRIEF.md)** (520 lines)
+5. **[EXECUTIVE-BRIEF.md](tools/wiki/09-proposed-architecture/EXECUTIVE-BRIEF.md)** (520 lines)
    - Removed: "Validate RLS integration" from Week 4 tasks
    - Added: "Claims-based authorization" implementation
    - Updated: All timeline references (see below)

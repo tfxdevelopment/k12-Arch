@@ -71,7 +71,18 @@ function Candidate-Targets {
     $candidates.Add((Join-Path $p 'README.md'))
     $candidates.Add((Join-Path $p 'index.md'))
   } else {
-    $ext = [System.IO.Path]::GetExtension($p)
+    # Guard against invalid path characters that can surface from malformed links
+    $invalidChars = [System.IO.Path]::GetInvalidPathChars()
+    if ($p.IndexOfAny($invalidChars) -ge 0) {
+      return $candidates.ToArray() | Select-Object -Unique
+    }
+
+    try {
+      $ext = [System.IO.Path]::GetExtension($p)
+    } catch {
+      return $candidates.ToArray() | Select-Object -Unique
+    }
+
     if ([string]::IsNullOrWhiteSpace($ext)) {
       $candidates.Add($p + '.md')
       $candidates.Add((Join-Path $p 'README.md'))
@@ -92,7 +103,16 @@ try {
 }
 
 $mdFiles = Get-ChildItem -Path $wikiRootFull -Recurse -Filter *.md -File |
-  Where-Object { $_.FullName -ne $outputFull }
+  Where-Object { $_.FullName -ne $outputFull } |
+  Where-Object { $_.FullName -notmatch '(?i)node_modules' } |
+  Where-Object {
+    # Skip any markdown file named *full.md (e.g., wikifull.md, full.md)
+    $_.Name -notmatch 'full\.md$'
+  } |
+  Where-Object {
+    # Skip any path segment named "full" to avoid aggregated folders if present
+    $_.FullName -notmatch "[\\/]full[\\/]"
+  }
 
 $linkRegex = '\[[^\]]+\]\((?<url>[^)]+)\)'
 
