@@ -3,6 +3,20 @@
 ## Overview
 This guide covers deploying the K12 API to Azure Container Apps with VNet integration, Dapr, Redis, and Application Insights telemetry.
 
+**Per-environment toggles:** set in `terraform/environments/<env>/locals.tf`
+
+| Toggle | Purpose | Non-prod default | Prod target |
+| --- | --- | --- | --- |
+| `enable_zone_redundancy` | Zone-redundant ACA env & ACR | `false` | `true` |
+| `enable_acr_geo_replication` | ACR geo-replication | `false` | `true` |
+| `enable_internal_load_balancer` | Private ingress (ILB) for ACA env | `false` | `true` |
+| `aca_min_replicas` | HA floor | `1` | `2+` |
+| `aca_max_replicas` | Burst limit | `5` | per capacity plan |
+| `aca_cpu` | vCPU per replica | `0.5` | workload-driven |
+| `aca_memory` | Memory per replica | `1Gi` | workload-driven |
+
+Use non-prod defaults for development/staging/testing; only enable HA/ILB/geo features in production once approved.
+
 ## Prerequisites
 - Azure CLI installed and logged in (`az login`)
 - Terraform >= 1.1.0
@@ -79,6 +93,8 @@ External Services:
 - **Key Vault**: Existing `developmentapikv` (secrets integrated)
 
 ## Deployment Steps
+
+> Always run Terraform from `terraform/environments/<env>` (never from module roots).
 
 ### 1. Initialize Terraform
 ```bash
@@ -318,6 +334,7 @@ For **staging** and **testing** environments, same configuration applies:
 - Same VNet structure (`10.0.0.0/16`)
 - Same Dapr configuration
 - Different resource names (prefixed with `staging-` or `testing-`)
+- Keep `enable_zone_redundancy`, `enable_acr_geo_replication`, and `enable_internal_load_balancer` **false** to preserve lower-cost posture.
 
 To deploy:
 ```bash

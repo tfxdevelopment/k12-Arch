@@ -1,0 +1,26 @@
+direction down
+
+Development_RG [label: "Development Resource Group", icon: azure-resource-group] {
+  ACR [label: "Container Registry (Basic)", icon: azure-container-registry]
+  KeyVault [label: "Key Vault", icon: azure-key-vault]
+  
+  VNet [label: "VNet 10.0.0.0/16", icon: azure-virtual-network] {
+    ACASubnet [label: "ACA Subnet 10.0.0.0/23"]
+    RedisSubnet [label: "Redis Subnet 10.0.3.0/24"]
+    
+     ACAEnv {
+      K12API [label: "k12-api (Dapr)", icon: azure-container-apps]
+    }
+    
+    Redis [label: "Redis Cache Basic C0", icon: azure-cache-redis]
+  }
+  
+  LogAnalytics [label: "Log Analytics", icon: azure-monitor-logs]
+  AppInsights [label: "Application Insights", icon: azure-application-insights]
+}
+
+ACR > K12API: Pull image
+KeyVault > K12API: Secrets
+Redis > K12API: Dapr State/PubSub
+K12API > AppInsights: Telemetry
+ACAEnv > LogAnalytics: Logs

@@ -36,6 +36,13 @@ module "enrollment-api" {
     arm_role_receivers  = local.arm_role_receivers
     sql_connection_string  = local.sql_connection_string
     blob_storage_connection_string = local.blob_storage_connection_string
+    enable_zone_redundancy = local.enable_zone_redundancy
+    enable_acr_geo_replication = local.enable_acr_geo_replication
+    enable_internal_load_balancer = local.enable_internal_load_balancer
+    aca_min_replicas = local.aca_min_replicas
+    aca_max_replicas = local.aca_max_replicas
+    aca_cpu = local.aca_cpu
+    aca_memory = local.aca_memory
 }
 
 module "admin-web" {

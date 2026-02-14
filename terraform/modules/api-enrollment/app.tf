@@ -416,7 +416,7 @@ resource "azurerm_container_app" "api_app" {
   # ACR Integration with Managed Identity
   registry {
     server   = azurerm_container_registry.acr.login_server
-    identity = "system"  # Tells ACA to use the System Identity to pull images
+    identity = "System"  # Tells ACA to use the System Identity to pull images
   }
 
   ingress {
@@ -513,13 +513,13 @@ resource "azurerm_container_app" "api_app" {
   # Secrets from Key Vault
   secret {
     name                = "sql-connection-string"
-    identity            = "system"
+    identity            = "System"
     key_vault_secret_id = "${azurerm_key_vault.api_enrollment_kv.vault_uri}secrets/sql-connection-string"
   }
   
   secret {
     name                = "blob-connection-string"
-    identity            = "system"
+    identity            = "System"
     key_vault_secret_id = "${azurerm_key_vault.api_enrollment_kv.vault_uri}secrets/blob-connection-string"
   }
   

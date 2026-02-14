@@ -1,0 +1,32 @@
+specVersion: v1
+name: terraform-plan
+summary: Terraform fmt/validate/plan for a given environment
+inputs:
+  env:
+    description: Environment name (development/staging/testing/production)
+    required: true
+    default: development
+  tf_dir:
+    description: Path to terraform environment dir
+    required: true
+    default: terraform/environments/${env}
+steps:
+  - name: terraform-fmt
+    run: |
+      cd ${tf_dir}
+      terraform fmt -recursive
+  - name: terraform-init
+    run: |
+      cd ${tf_dir}
+      terraform init -input=false
+  - name: terraform-validate
+    run: |
+      cd ${tf_dir}
+      terraform validate
+  - name: terraform-plan
+    run: |
+      cd ${tf_dir}
+      terraform plan -input=false -out=tfplan
+artifacts:
+  - name: tfplan
+    path: ${tf_dir}/tfplan

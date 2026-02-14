@@ -1,0 +1,42 @@
+specVersion: v1
+name: deploy-container-app
+summary: Apply Terraform (if needed) and update Container App image for an environment
+inputs:
+  env:
+    description: Environment name (development/staging/testing/production)
+    required: true
+  tf_dir:
+    description: Path to terraform environment dir
+    required: true
+    default: terraform/environments/${env}
+  acr_name:
+    description: Azure Container Registry name
+    required: true
+  image_ref:
+    description: Full image reference (registry/image:tag)
+    required: true
+steps:
+  - name: terraform-init-apply
+    run: |
+      cd ${tf_dir}
+      terraform init -input=false
+      if [ -f tfplan ]; then
+        terraform apply -input=false -auto-approve tfplan
+      else
+        terraform plan -input=false -out=tfplan
+        terraform apply -input=false -auto-approve tfplan
+  - name: update-containerapp
+    run: |
+      CA_NAME="${env}-app"
+      CA_RG="${env}"
+      az containerapp update --name $CA_NAME --resource-group $CA_RG --image ${image_ref}
+  - name: smoke-test
+    run: |
+      CA_NAME="${env}-app"
+      CA_RG="${env}"
+      FQDN=$(az containerapp show --name $CA_NAME --resource-group $CA_RG --query "properties.configuration.ingress.fqdn" -o tsv)
+      URL="https://${FQDN}"
+      for path in /health/live /health/ready; do
+        echo "Testing $URL$path"
+        curl -fsSL "$URL$path"
+      done

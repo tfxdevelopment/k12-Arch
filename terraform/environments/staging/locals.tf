@@ -8,6 +8,13 @@ locals {
     publisher_name= "CFI"
     publisher_email = "luke.samuels@randstadusa.onmicrosoft.com"
     contributor_principal_id = "df8b0836-7e1b-41dc-8e66-6b6792256785"   # principal id of the group/user that will have the Contributor role assigned
+    enable_zone_redundancy = false
+    enable_acr_geo_replication = false
+    enable_internal_load_balancer = false
+    aca_min_replicas = 1
+    aca_max_replicas = 5
+    aca_cpu = 0.5
+    aca_memory = "1Gi"
     dev_ip_list = {
         Luke            = "151.196.123.136"
         Brandon         = "75.232.70.158"

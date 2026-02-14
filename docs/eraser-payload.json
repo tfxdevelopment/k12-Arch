@@ -1,0 +1,11 @@
+{
+  "elements": [{
+    "type": "diagram",
+    "id": "k12-aca-architecture",
+    "code": "direction down\n\nDevelopment_RG [label: \"Development Resource Group\", icon: azure-resource-group] {\n  ACR [label: \"Container Registry (Basic)\", icon: azure-container-registry]\n  KeyVault [label: \"Key Vault\", icon: azure-key-vault]\n  \n  VNet [label: \"VNet 10.0.0.0/16\", icon: azure-virtual-network] {\n    ACASubnet [label: \"ACA Subnet 10.0.0.0/23\"]\n    RedisSubnet [label: \"Redis Subnet 10.0.3.0/24\"]\n    \n    ACAEnv [label: \"Container App Environment\", icon: azure-container-apps]\n    ACAEnv {\n      K12API [label: \"k12-api (Dapr)\", icon: azure-container-apps]\n    }\n    \n    Redis [label: \"Redis Cache Basic C0\", icon: azure-cache-redis]\n  }\n  \n  LogAnalytics [label: \"Log Analytics\", icon: azure-monitor-logs]\n  AppInsights [label: \"Application Insights\", icon: azure-application-insights]\n}\n\nACR > K12API: Pull image\nKeyVault > K12API: Secrets\nRedis > K12API: Dapr State/PubSub\nK12API > AppInsights: Telemetry\nACAEnv > LogAnalytics: Logs",
+    "diagramType": "cloud-architecture-diagram"
+  }],
+  "scale": 2,
+  "theme": "dark",
+  "background": true
+}
