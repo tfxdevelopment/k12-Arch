@@ -1,0 +1,22 @@
+{
+  "devDependencies": {
+    "@types/node": "^20.5.9",
+    "typescript": "^5.2.2",
+    "vitepress": "^1.6.4",
+    "vitepress-mermaid-renderer": "^1.1.7",
+    "vitepress-sidebar": "^1.33.1"
+  },
+  "dependencies": {
+    "markdown-it-anchor": "9.2.0",
+    "mermaid": "^11.12.2",
+    "pagefind": "^1.4.0",
+    "vitepress-mermaid-renderer": "^1.1.7",
+    "vitepress-plugin-pagefind": "^0.4.18",
+    "vue": "^3.5.27"
+  }, 
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  }
+}
