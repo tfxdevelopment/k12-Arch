@@ -1,373 +1,598 @@
+# AGENTS.md - K12 Architecture Documentation & Tools Repository
+
+**Last Updated:** February 7, 2026  
+**Workspace ID:** 88a586eb-0e78-4841-b4fd-32f080419e2a
+
+---
+
+## Project Overview
+
+**K12 MyPortal Architecture & Documentation Repository** - Enterprise architecture knowledge base, design patterns, tools, and implementation guidance for .NET Aspire cloud-native applications.
+
+### What This Project Does
+
+This repository maintains:
+- **📚 Architecture Knowledge Base** (`wiki/`): LLM-friendly documentation of enterprise patterns, design decisions, and implementation guidance
+- **🏗️ Cloud-Native Scaffolding** (`cloud-native-scaffold/`): Docker, Dapr, and Kubernetes-ready templates
+- **🛠️ Development Tools** (`tools/`): NX monorepo (frontend), .NET utilities, MCP servers, and documentation sites
+- **📖 Memory Bank** (`memory-bank/`): ContextStream-integrated persistent context for continuous work
+- **🤖 Agent Integration**: MCP servers for AI-assisted architecture and documentation
+
+### Key Technologies
+
+- **Backend**: .NET 10.0.102, ASP.NET Core, Entity Framework, Dapr 1.16.1
+- **Frontend**: Angular (NX Monorepo), TypeScript 5.x
+- **Cloud**: Azure (Well-Architected Framework), Docker, Kubernetes
+- **Documentation**: Markdown, ContextStream MCP, Context7 library integration
+- **Agents**: ContextStream v0.4.x, Custom NX and Aspire MCP servers
+
+---
+
+## Setup Commands
+
+### Prerequisites
+
+```bash
+# Required tools
+dotnet --version          # Must be 10.0.102+
+node --version           # Must be 18+
+npm install -g @contextstream/mcp-server  # ContextStream for persistent memory
+```
+
+### Initial Setup
+
+```bash
+# Clone and navigate
+cd g:\Projects\CFI\K12\k12-Arch
+
+# Restore dependencies
+dotnet restore K12.Aspire.sln
+
+# Initialize ContextStream (if not already done)
+npm install -g @contextstream/mcp-server@latest
+
+# List available Nx projects
+nx list
+```
+
+### Environment Setup
+
+```bash
+# PowerShell setup script (Windows)
+.\setup.ps1
+
+# Or manual setup
+# 1. Create .env files in relevant project directories
+# 2. Configure DAPR_RUNTIME_VERSION=1.16.1 in environment
+# 3. Set up Aspire dashboard connection strings
+```
+
+---
+
+## Development Workflow
+
+### Start Development Server
+
+```bash
+# Method 1: .NET Aspire Watch Mode (recommended)
+dotnet watch run --project src/K12.AppHost/K12.AppHost.csproj
+
+# Method 2: Using Nx task
+nx run watch
+
+# Method 3: Start individual services
+dotnet run --project src/K12.ServiceA/K12.ServiceA.csproj
+```
+
+### Aspire Dashboard
+
+The Aspire Dashboard runs on `http://localhost:18888` and shows:
+- Service topology and health
+- Logs aggregation
+- Performance traces
+- Resource utilization
+
+### Working with Nx Monorepo (Frontend)
+
+```bash
+# Build frontend projects
+nx run k12-portal:build
+nx affected:build
+
+# Run frontend dev server
+nx run k12-portal:serve
+
+# List all projects
+nx list
+
+# View project details
+nx show project k12-portal
+nx show project k12-portal --targets  # Show available targets
+```
+
+### ContextStream Memory Bank Workflow
+
+The `memory-bank/` directory tracks persistent project context:
+
+```bash
+# Key memory bank files (auto-indexed by ContextStream)
+memory-bank/projectbrief.md      # Project goals and constraints
+memory-bank/productContext.md    # Why this exists, what it solves
+memory-bank/systemPatterns.md    # Architecture patterns and decisions
+memory-bank/techContext.md       # Technology stack and dependencies
+memory-bank/activeContext.md     # Current work focus and decisions
+memory-bank/progress.md          # Completed work and next steps
+memory-bank/tasks/               # Individual task tracking
+```
+
+### Code Organization
+
+- `src/K12.AppHost/` - Aspire orchestration and service configuration
+- `src/K12.Api/` - REST APIs (minimal APIs pattern)
+- `src/K12.Database.Migrations/` - Entity Framework Core migrations
+- `tools/k12-portal/` - Angular frontend (NX monorepo)
+- `tools/wiki/` - Architecture and design documentation
+- `tools/markdown-site/` - Documentation site generation
+- `cloud-native-scaffold/` - Docker and Kubernetes templates
+
+---
+
+## Testing Instructions
+
+### Run All Tests
+
+```bash
+# All project tests
+dotnet test K12.Aspire.sln /property:GenerateFullPaths=true
+
+# Frontend tests
+nx run-many --target=test --all
+```
+
+### Run Specific Test Projects
+
+```bash
+# Unit tests for a specific service
+dotnet test src/K12.Api.Tests/K12.Api.Tests.csproj
+
+# Frontend test for specific project
+nx run k12-portal:test
+
+# Watch mode for TDD
+nx run k12-portal:test --watch
+```
+
+### Test Coverage
+
+```bash
+# Generate coverage reports
+dotnet test K12.Aspire.sln --collect:"XPlat Code Coverage"
+```
+
+### Test Patterns
+
+- **Unit Tests**: `**/*.Tests.cs` - Test individual components in isolation
+- **Integration Tests**: `**/Integration/` - Test service integration with dependencies
+- **E2E Tests**: `tools/k12-portal/e2e/` - Playwright-based end-to-end tests
+- **Performance Tests**: `**/*.Perf.cs` - Performance benchmarks using BenchmarkDotNet
+
+---
+
+## Code Style & Conventions
+
+### C# / .NET Guidelines
+
+- **Target Framework**: .NET 10.0 / .NET Standard 2.0
+- **Pattern**: ASP.NET Core minimal APIs (YARP, Clean Architecture)
+- **Naming**: PascalCase for types, camelCase for variables
+- **Async**: Always use `async`/`await`, avoid `.Result` or `.Wait()`
+- **SOLID Principles**: Follow Object Calisthenics for business domain code
+- **Comments**: Focus on "why", not "what" (self-documenting code)
+
+### TypeScript / Angular Guidelines
+
+- **Target**: TypeScript 5.x, ES2022 output
+- **Style**: RxJS Observables, reactive patterns
+- **Components**: Standalone components (Angular 14+)
+- **Testing**: Jasmine/Karma (unit), Playwright (E2E)
+- **Linting**: ESLint with strict rules, Prettier for formatting
+
+### Documentation
+
+- **README.md**: Human-focused overview and quick start
+- **AGENTS.md**: Agent-focused technical context (this file)
+- **wiki/**: Architecture decisions, patterns, implementation guides
+- **Docstrings**: XML comments for public APIs
+
+### Formatting & Linting
+
+```bash
+# .NET formatting (via editorconfig)
+dotnet format
+
+# Frontend linting
+nx run k12-portal:lint
+nx run k12-portal:lint --fix
+
+# Frontend formatting
+npx prettier --write "tools/k12-portal/**/*.ts"
+```
+
+---
+
+## Build & Deployment
+
+### Build Commands
+
+```bash
+# Build entire solution
+dotnet build K12.Aspire.sln /property:GenerateFullPaths=true
+
+# Build specific project
+dotnet build src/K12.Api/K12.Api.csproj
+
+# Build frontend
+nx run k12-portal:build --configuration production
+
+# Publish for deployment
+dotnet publish K12.Aspire.sln /property:GenerateFullPaths=true
+```
+
+### Generate Aspire Manifest
+
+```bash
+# Create docker-compose.yml from Aspire configuration
+dotnet run --project src/K12.AppHost -- --output manifest.json
+docker-compose -f manifest.yaml up
+```
+
+### Docker & Container Deployment
+
+```bash
+# Build container images
+docker build -f src/K12.Api/Dockerfile -t k12-api:latest .
+
+# Docker Compose (from Aspire manifest)
+docker-compose -f cloud-native-scaffold/docker-compose.yml up
+
+# Kubernetes (Aspire to K8s)
+dotnet aspire generate --provider kubernetes
+```
+
+### Deployment Targets
+
+- **Local**: Docker Desktop, Aspire Dashboard
+- **Staging**: Azure Container Instances, App Service
+- **Production**: Azure Kubernetes Service (AKS), Container Registry
+
+---
+
+## Pull Request Guidelines
+
+### Title Format
+
+```
+[Area] Brief description of change
+
+Examples:
+[API] Add user authentication endpoint
+[Frontend] Fix responsive layout on mobile
+[Docs] Update architecture decision record for caching
+[DevOps] Add GitHub Actions CI/CD pipeline
+```
+
+### Required Checks Before Submission
+
+```bash
+# Run all checks locally
+dotnet build K12.Aspire.sln
+dotnet test K12.Aspire.sln
+dotnet format --verify-no-changes
+nx run-many --target=lint --all
+nx run-many --target=test --all
+nx run-many --target=build --all
+```
+
+### Commit Message Conventions
+
+```
+<type>(<scope>): <subject>
+
+<body>
+
+<footer>
+
+Types: feat, fix, docs, style, refactor, test, chore
+Scopes: api, frontend, infra, docs, tools
+Example: fix(api): resolve race condition in user service
+```
+
+### Review Requirements
+
+- ✅ All CI checks passing
+- ✅ Code coverage maintained or improved
+- ✅ Security scanning passed (SAST)
+- ✅ Documentation updated if needed
+- ✅ Memory bank (activeContext.md, tasks/) updated for significant changes
+
+---
+
+## MCP Servers & Integration
+
+### ContextStream MCP (Persistent Memory & Documentation)
+
+ContextStream is integrated for managing project context across sessions. See **[ContextStream Rules](#contextstream-rules)** section below for detailed usage.
+
+```bash
+# Update ContextStream to latest
+npm install -g @contextstream/mcp-server@latest
+
+# Verify installation
+contextstream --version
+```
+
+### Context7 MCP (Latest Library Docs)
+
+Context7 provides real-time, up-to-date documentation for libraries and frameworks:
+
+```bash
+# Use Context7 to find latest library info
+context7 query "React Hooks best practices"
+context7 query "Entity Framework Core latest migration patterns"
+context7 query "Azure Storage Blobs SDK examples"
+```
+
+**Context7 Integration in AGENTS.md**: Use when:
+- Resolving library usage questions
+- Checking for deprecated APIs
+- Finding latest version compatibility info
+- Getting code examples for libraries
+
+### Custom MCP Servers
+
+```bash
+# NX Workspace MCP (configured in mcp.json)
+# Provides nx_workspace, nx_project_details, nx_docs tools
+
+# Aspire CLI MCP
+# Provides aspire-specific operations (run, build, manifest generation)
+
+# Microsoft Learn MCP
+# Search Microsoft Learn, fetch official docs, and get code samples
+```
+
+### Microsoft Learn MCP Usage
+
+```bash
+# Search official Microsoft documentation
+microsoft_docs_search "Azure Aspire configuration"
+microsoft_docs_search ".NET Entity Framework migrations"
+microsoft_docs_search "ASP.NET Core minimal APIs"
+
+# Fetch complete documentation pages
+microsoft_docs_fetch "https://learn.microsoft.com/en-us/dotnet/aspire/"
+
+# Get code samples
+microsoft_code_sample_search "Azure Function binding examples"
+```
+
+---
+
+## Using MCP for Architecture Documentation
+
+### Documentation Generation Workflow
+
+Use ContextStream + custom MCP servers to complete architecture documentation:
+
+```bash
+# 1. Analyze existing architecture with ContextStream
+context(user_message="Analyze the K12 API architecture and identify documentation gaps")
+
+# 2. Create ADR (Architectural Decision Record)
+# Reference: wiki/adr/ADR-001-*.md pattern
+memory(action="create_node", type="adr", title="ADR-NNN: Decision Title", content="...")
+
+# 3. Search Context7 for related patterns
+context7 query "Microservices architecture patterns for ASP.NET Core"
+
+# 4. Fetch Microsoft docs for latest guidance
+microsoft_docs_fetch "https://learn.microsoft.com/en-us/dotnet/architecture/microservices/"
+
+# 5. Generate C4 diagrams for architecture
+# Use graph(action="dependencies") to analyze component relationships
+graph(action="dependencies", file_path="src/K12.AppHost/Program.cs")
+
+# 6. Capture decision in ContextStream memory
+session(action="capture", event_type="decision", 
+  title="Microservices Architecture Pattern Selected",
+  content="..." )
+```
+
+### Completing Architecture Documentation
+
+1. **Wiki Structure** (`tools/wiki/`):
+   - `01-architecture/` - System context and container diagrams
+   - `02-architecture/` - Component and deployment diagrams
+   - `adr/` - Architectural Decision Records
+   - `patterns/` - Reusable architectural patterns
+   - `standards/` - Team standards and guidelines
+
+2. **Update Documentation Health Report**:
+   ```bash
+   # Run weekly to identify gaps
+   .\scripts\generate-wiki-health-report.ps1
+   # Review: wiki/DOCUMENTATION-HEALTH-REPORT.md
+   # Review: wiki/DOCUMENTATION-INCOMPLETENESS-SCAN.md
+   ```
+
+3. **Use ContextStream for Continuous Documentation**:
+   ```bash
+   # Track documentation work in memory bank
+   memory(action="create_task", title="Complete API documentation", 
+     plan_id="<doc-plan>", priority="high")
+   
+   # Capture documentation decisions
+   session(action="capture", event_type="decision",
+     title="API documentation format: OpenAPI 3.0")
+   ```
+
+---
+
+## Monorepo Tips
+
+### Working with Frontend (NX Monorepo)
+
+```bash
+# Jump to specific project
+cd tools/k12-portal
+nx show project k12-portal
+
+# Add new package
+nx generate @nx/angular:app my-new-app --directory=apps
+
+# Run specific app
+nx run k12-portal:serve --port=4200
+
+# View project graph
+nx graph
+
+# List all apps, libs, tools
+nx list --type=app
+nx list --type=lib
+```
+
+### Working with Cloud-Native Scaffold
+
+```bash
+# Navigate to cloud-native templates
+cd cloud-native-scaffold
+
+# Build Dapr components
+dapr run --app-id k12-api --app-port 5000 -- dotnet run
+
+# Deploy to Kubernetes
+kubectl apply -f k8s-manifests/
+```
+
+---
+
+## Debugging & Troubleshooting
+
+### Common Issues
+
+**Issue**: Aspire Dashboard shows "No services"  
+**Solution**: Ensure `dotnet watch run` is running from `src/K12.AppHost/`
+
+**Issue**: ContextStream search returns 0 results  
+**Solution**: Run `project(action="index")` to re-index the workspace
+
+**Issue**: NX build fails with "Cannot find module"  
+**Solution**: Run `npm install` and verify node_modules are present
+
+**Issue**: Database migrations fail  
+**Solution**: Update connection strings in environment files, run `dotnet ef database update`
+
+### Logging & Debugging
+
+```bash
+# View Aspire logs
+# Available in Aspire Dashboard: http://localhost:18888
+
+# View .NET service logs
+dotnet run --project src/K12.Api/ --verbosity=diagnostic
+
+# View Frontend logs
+nx run k12-portal:serve --log-level=debug
+
+# Enable detailed Dapr logging
+dapr run --app-id k12-api --log-level=debug -- dotnet run
+```
+
+### Performance Considerations
+
+- Use `nx affected` for incremental builds
+- Enable parallel test execution: `dotnet test --parallel`
+- Monitor Aspire Dashboard for bottlenecks
+- Review C4 diagrams for chatty microservice patterns
+
+---
+
+# ContextStream Rules & Integration
+
 <!-- BEGIN ContextStream -->
+# Codex CLI Instructions
 # Workspace: K12 Azure
-# Project: k12-Arch
 # Workspace ID: 88a586eb-0e78-4841-b4fd-32f080419e2a
 
-# Codex CLI Instructions
-## 🚨 MANDATORY: CALL CONTEXT EVERY MESSAGE 🚨
+## 🚨 CRITICAL: CONTEXTSTREAM SEARCH FIRST 🚨
 
-<contextstream_rules>
-**EVERY response MUST start with `context(user_message="...")`**
+**BEFORE using Glob, Grep, Search, Read (for discovery), Explore, or ANY local scanning:**
+```
+STOP → Call search(mode="hybrid", query="...") FIRST
+```
+
+**Claude Code:** Tools are `mcp__contextstream__search`, `mcp__contextstream__session_init`, etc.
+
+❌ **NEVER:** `Glob`, `Grep`, `Read` for discovery, `Task(Explore)`
+✅ **ALWAYS:** `search(mode="hybrid", query="...")` first, local tools ONLY if 0 results
+
+---
+
+## 🚨 AUTO-INDEXING 🚨
+
+**`session_init` auto-indexes your project.** No manual ingestion needed.
+
+If `indexing_status: "started"`: Search will work shortly. **DO NOT fall back to local tools.**
+
+---
+
+## 🚨 LESSONS (PAST MISTAKES) - CRITICAL 🚨
+
+**After `session_init`:** Check for `lessons` field. If present, **READ and APPLY** before any work.
+
+**Before ANY risky work:** `session(action="get_lessons", query="<topic>")` — **MANDATORY**
+
+**When lessons found:** Summarize to user, state how you'll avoid past mistakes.
+
+---
+
+## ContextStream v0.4.x (Consolidated Domain Tools)
+
+v0.4.x uses ~11 consolidated domain tools for ~75% token reduction vs previous versions.
+Rules Version: 0.4.61
+
+### Required Every Message
 
 | Message | What to Call |
 |---------|--------------|
-| 1st message | `init()` → `context(user_message="<msg>")` |
-| **EVERY message after** | `context(user_message="<msg>")` **FIRST** |
+| **1st message** | `session_init(folder_path="<cwd>", context_hint="<user_message>")`, then `context_smart(...)` |
+| **⚠️ After session_init** | **CHECK `lessons` field** — read and apply BEFORE any work |
+| **2nd+ messages** | `context_smart(user_message="<user_message>", format="minified", max_tokens=400)` |
+| **🔍 ANY code search** | `search(mode="hybrid", query="...")` — ALWAYS before Glob/Grep/Search/Read |
+| **⚠️ Before risky work** | `session(action="get_lessons", query="<topic>")` — **MANDATORY** |
+| **Capture decisions** | `session(action="capture", event_type="decision", title="...", content="...")` |
+| **On user frustration** | `session(action="capture_lesson", title="...", trigger="...", impact="...", prevention="...")` |
 
-**BEFORE Glob/Grep/Read/Search:** → `search(mode="auto")` FIRST
-</contextstream_rules>
-
-**This block MUST appear at the start of EVERY response.** Failing to call `context()` means missing rules, lessons, and relevant context.
-
----
-
-## Why `context()` is MANDATORY Every Message
-
-❌ **WRONG:** "I already called init, I don't need context"
-✅ **CORRECT:** `context()` is required EVERY message, not just the first
-
-**What you lose without `context()`:**
-- Dynamic rules matched to your current task
-- Lessons from past mistakes (you WILL repeat them)
-- Semantically relevant decisions and context
-- Warnings about risky operations
-
-**`init()` gives recent items by TIME. `context()` finds items RELEVANT to THIS message.**
-
----
-
-## Handle Notices from context()
-
-- **[LESSONS_WARNING]** → Tell user about past mistakes BEFORE proceeding
-- **[PREFERENCE]** → Follow user preferences (high-priority user memories)
-- **[RULES_NOTICE]** → Run `generate_rules()` to update
-- **[VERSION_NOTICE]** → Tell user to update MCP
-
----
-
-## 🚨 HOOKS - AUTOMATIC RULE ENFORCEMENT 🚨
-
-**ContextStream installs hooks that automatically enforce rules.** You MUST follow hook output.
-
-### Installed Hooks
-
-| Hook | What It Does | Output |
-|------|--------------|--------|
-| **UserPromptSubmit** | Injects rules reminder on EVERY message | `<system-reminder>` with rules block |
-| **PreToolUse** | Blocks Glob/Grep/Search/Explore when ContextStream is available | Error message redirecting to `search()` |
-| **PostToolUse** | Auto-indexes files after Edit/Write operations | Background indexing |
-| **PreCompact** | Saves session state before context compaction | Snapshot creation |
-
-### How Hooks Work
-
-1. **`<system-reminder>` tags** - Injected by UserPromptSubmit hook on every message
-   - These tags contain the current rules
-   - **FOLLOW THE INSTRUCTIONS INSIDE** - they ARE the rules
-   - Example: `[CONTEXTSTREAM RULES] 1. BEFORE Glob/Grep... [END RULES]`
-
-2. **PreToolUse blocking** - If you try to use Glob/Grep/Search/Explore:
-   - Hook returns error: `STOP: Use mcp__contextstream__search(mode="auto") instead`
-   - **You MUST use the suggested ContextStream tool instead**
-   - Local tools are only allowed if project is not indexed or ContextStream returns 0 results
-
-3. **PostToolUse indexing** - After Edit/Write operations:
-   - Changed files are automatically re-indexed
-   - No action required from you
-
-4. **PreCompact snapshots** - Before context compaction:
-   - Hook reminds you to save important state
-   - Call `session(action="capture", event_type="session_snapshot", ...)` when warned
-
-### Disabling Hooks
-
-Set environment variable: `CONTEXTSTREAM_HOOK_ENABLED=false`
-
-**Note:** Disabling hooks removes rule enforcement. Only disable for debugging.
-
----
-
-## 🚨 CRITICAL RULE #1 - CONTEXTSTREAM SEARCH FIRST 🚨
-
-**BEFORE using Glob, Grep, Search, Read (for discovery), Explore, or ANY local file scanning:**
-```
-STOP → Call search(mode="auto", query="...") FIRST
-```
-
-**Note:** PreToolUse hooks block these tools when ContextStream is available.
-**Claude Code users:** Your tool names are `mcp__contextstream__search`, `mcp__contextstream__init`, etc.
-
-❌ **NEVER DO THIS:**
-- `Glob("**/*.ts")` → Use `search(mode="pattern", query="*.ts")` instead
-- `Grep("functionName")` → Use `search(mode="keyword", query="functionName")` instead
-- `Read(file)` for discovery → Use `search(mode="auto", query="...")` instead
-- `Task(subagent_type="Explore")` → Use `search(mode="auto")` instead
-
-✅ **ALWAYS DO THIS:**
-1. `search(mode="auto", query="what you're looking for")`
-2. Only use local tools (Glob/Grep/Read) if ContextStream returns **0 results**
-3. Use Read ONLY for exact file edits after you know the file path
-
-This applies to **EVERY search** throughout the **ENTIRE conversation**, not just the first message.
-
----
-
-## 🚨 CRITICAL RULE #2 - AUTO-INDEXING 🚨
-
-**ContextStream auto-indexes your project on `init`.** You do NOT need to:
-- Ask the user to index
-- Manually trigger ingestion
-- Check index_status before every search
-
-**When `init` returns `indexing_status: "started"` or `"refreshing"`:**
-- Background indexing is running automatically
-- Search results will be available within seconds to minutes
-- **DO NOT fall back to local tools** - wait for ContextStream search to work
-- If search returns 0 results initially, try again after a moment
-
-**Only manually trigger indexing if:**
-- `init` returned `ingest_recommendation.recommended: true` (rare edge case)
-- User explicitly asks to re-index
-
----
-
-## 🚨 CRITICAL RULE #3 - LESSONS (PAST MISTAKES) 🚨
-
-**Lessons are past mistakes that MUST inform your work.** Ignoring lessons leads to repeated failures.
-
-### On `init`:
-- Check for `lessons` and `lessons_warning` in the response
-- If present, **READ THEM IMMEDIATELY** before doing any work
-- These are high-priority lessons (critical/high severity) relevant to your context
-- **Apply the prevention steps** from each lesson to avoid repeating mistakes
-
-### On `context`:
-- Check for `[LESSONS_WARNING]` tag in the response
-- If present, you **MUST** tell the user about the lessons before proceeding
-- Lessons are proactively fetched when risky actions are detected (refactor, migrate, deploy, etc.)
-- **Do not skip or bury this warning** - lessons represent real past mistakes
-
-### Before ANY Non-Trivial Work:
-**ALWAYS call `session(action="get_lessons", query="<topic>")`** where `<topic>` matches what you're about to do:
-- Before refactoring → `session(action="get_lessons", query="refactoring")`
-- Before API changes → `session(action="get_lessons", query="API changes")`
-- Before database work → `session(action="get_lessons", query="database migrations")`
-- Before deployments → `session(action="get_lessons", query="deployment")`
-
-### When Lessons Are Found:
-1. **Summarize the lessons** to the user before proceeding
-2. **Explicitly state how you will avoid the past mistakes**
-3. If a lesson conflicts with the current approach, **warn the user**
-
-**Failing to check lessons before risky work is a critical error.**
-
----
-
-## ContextStream v0.4.x Integration (Enhanced)
-
-You have access to ContextStream MCP tools for persistent memory and context.
-v0.4.x uses **~11 consolidated domain tools** for ~75% token reduction vs previous versions.
-Rules Version: 0.4.60
-
-## TL;DR - CONTEXT EVERY MESSAGE
-
-| Message | Required |
-|---------|----------|
-| **1st message** | `init()` → `context(user_message="<msg>")` |
-| **EVERY message after** | `context(user_message="<msg>")` **FIRST** |
-| **Before file search** | `search(mode="auto")` FIRST |
-| **After significant work** | `session(action="capture", event_type="decision", ...)` |
-| **User correction** | `session(action="capture_lesson", ...)` |
-
-### Why EVERY Message?
-
-`context()` delivers:
-- **Dynamic rules** matched to your current task
-- **Lessons** from past mistakes (prevents repeating errors)
-- **Relevant decisions** and context (semantic search)
-- **Warnings** about risky operations
-
-**Without `context()`, you are blind to relevant context and will repeat past mistakes.**
-
-### Protocol
-
-| Step | What to Call |
-|------|--------------|
-| **1st message** | `init(folder_path="...", context_hint="<msg>")`, then `context(...)` |
-| **2nd+ messages** | `context(user_message="<msg>", format="minified", max_tokens=400)` |
-| **Code search** | `search(mode="auto", query="...")` — BEFORE Glob/Grep/Read |
-| **After significant work** | `session(action="capture", event_type="decision", ...)` |
-| **User correction** | `session(action="capture_lesson", ...)` |
-| **⚠️ When warnings received** | **STOP**, acknowledge, explain mitigation, then proceed |
-
-**First message rule:** After `init`:
-1. Check for `lessons` in response - if present, READ and SUMMARIZE them to user
-2. Then call `context` before any other tool or response
-
-**Context Pack (Pro+):** If enabled, use `context(..., mode="pack", distill=true)` for code/file queries. If unavailable or disabled, omit `mode` and proceed with standard `context` (the API will fall back).
+**Context Pack (Pro+):** If enabled, use `context_smart(..., mode="pack", distill=true)` for code/file queries. If unavailable or disabled, omit `mode` and proceed with standard `context_smart` (the API will fall back).
 
 **Tool naming:** Use the exact tool names exposed by your MCP client. Claude Code typically uses `mcp__<server>__<tool>` where `<server>` matches your MCP config (often `contextstream`). If a tool call fails with "No such tool available", refresh rules and match the tool list.
 
----
+### Quick Reference: Domain Tools
 
-## Consolidated Domain Tools Architecture
+| Tool | Common Usage |
+|------|--------------|
+| `search` | `search(mode="semantic", query="...", limit=3)` — modes: semantic, hybrid, keyword, pattern |
+| `session` | `session(action="capture", ...)` — actions: capture, capture_lesson, get_lessons, recall, remember, user_context, summary, compress, delta, smart_search |
+| `memory` | `memory(action="list_events", ...)` — CRUD for events/nodes, search, decisions, timeline, summary |
+| `graph` | `graph(action="dependencies", ...)` — dependencies, impact, call_path, related, ingest |
+| `project` | `project(action="list", ...)` - list, get, create, update, index, overview, statistics, files, index_status, ingest_local |
+| `workspace` | `workspace(action="list", ...)` — list, get, associate, bootstrap |
+| `integration` | `integration(provider="github", action="search", ...)` — GitHub/Slack integration |
+| `help` | `help(action="tools")` — tools, auth, version, editor_rules |
 
-v0.4.x consolidates ~58 individual tools into ~11 domain tools with action/mode dispatch:
+### Behavior Rules
 
-### Standalone Tools
-- **`init`** - Initialize session with workspace detection + context (skip for simple utility operations)
-- **`context`** - Semantic search for relevant context (skip for simple utility operations)
-
-### Domain Tools (Use action/mode parameter)
-
-| Domain | Actions/Modes | Example |
-|--------|---------------|---------|
-| **`search`** | mode: auto (recommended), semantic, hybrid (legacy alias), keyword, pattern | `search(mode="auto", query="auth implementation", limit=3)` |
-| **`session`** | action: capture, capture_lesson, get_lessons, recall, remember, user_context, summary, compress, delta, smart_search, decision_trace | `session(action="capture", event_type="decision", title="Use JWT", content="...")` |
-| **`memory`** | action: create_event, get_event, update_event, delete_event, list_events, distill_event, create_node, get_node, update_node, delete_node, list_nodes, supersede_node, search, decisions, timeline, summary | `memory(action="list_events", limit=10)` |
-| **`graph`** | action: dependencies, impact, call_path, related, path, decisions, ingest, circular_dependencies, unused_code, contradictions | `graph(action="impact", symbol_name="AuthService")` |
-| **`project`** | action: list, get, create, update, index, overview, statistics, files, index_status, ingest_local | `project(action="statistics")` |
-| **`workspace`** | action: list, get, associate, bootstrap | `workspace(action="list")` |
-| **`reminder`** | action: list, active, create, snooze, complete, dismiss | `reminder(action="active")` |
-| **`integration`** | provider: slack/github/all; action: status, search, stats, activity, contributors, knowledge, summary, channels, discussions, sync_users, repos, issues | `integration(provider="github", action="search", query="...")` |
-| **`help`** | action: tools, auth, version, editor_rules, enable_bundle | `help(action="tools")` |
-
----
-
-### Why context is Required (Even After init)
-
-**Common mistake:** "init already gave me context, I don't need context"
-
-**This is WRONG. Here's why:**
-- `init` returns the last ~10 items **BY TIME** (chronological)
-- `context` **SEARCHES** for items **RELEVANT to THIS message** (semantic)
-
-**Example failure:**
-- User asks: "how should I implement authentication?"
-- Auth decisions were made 20 conversations ago
-- `init` won't have it (too old, not in recent 10)
-- `context` FINDS it via semantic search
-
-**Without context, you WILL miss relevant older context.**
-
----
-
-### Recommended Token Budgets
-
-- For trivial/local edits: `context(..., max_tokens=200)`
-- Default: `context(..., max_tokens=400)`
-- Deep debugging/architecture: `context(..., max_tokens=800)`
-- Keep `format="minified"` (default) unless debugging
-
-If context still feels missing, use `session(action="recall", query="...")` for focused deep lookup.
-
----
-
-### Rules, Version & Lessons Notices
-
-**[RULES_NOTICE]** - Update rules via `generate_rules()` (or rerun setup).
-
-**[VERSION_NOTICE]** or **[VERSION_CRITICAL]** - You **MUST** tell the user (be helpful, not annoying):
-  1. A new MCP server version is available with improvements
-  2. Provide update commands (user chooses preferred method):
-     - macOS/Linux: `curl -fsSL https://contextstream.io/scripts/setup.sh | bash`
-     - Windows: `irm https://contextstream.io/scripts/setup.ps1 | iex`
-     - npm: `npm install -g @contextstream/mcp-server@latest`
-  3. Restart AI tool after updating
-  **Mention once** - don't nag. Users often miss stderr warnings so this helps.
-
-**[LESSONS_WARNING]** - You **MUST** before proceeding:
-  1. Read all lessons listed
-  2. Tell the user about relevant lessons
-  3. Explain how you will avoid each past mistake
-  **This is critical** - ignoring lessons leads to repeated failures.
-
----
-
-### Preferences & Lessons (Use Early)
-
-**Preferences ([PREFERENCE] in context response):**
-- High-priority user memories that should guide your behavior
-- Surfaced automatically via `context()` warnings field
-- To save: `session(action="remember", content="...")`
-- To retrieve explicitly: `session(action="user_context")`
-
-**Lessons ([LESSONS_WARNING] in context response):**
-- Past mistakes to avoid - apply prevention steps
-- Surfaced automatically via `context()` warnings field
-- Before risky changes: `session(action="get_lessons", query="<topic>")`
-- On mistakes: `session(action="capture_lesson", title="...", trigger="...", impact="...", prevention="...")`
-
----
-
-### Context Pressure & Compaction Awareness
-
-ContextStream tracks context pressure to help you stay ahead of conversation compaction:
-
-**Automatic tracking:** Token usage is tracked automatically. `context` returns `context_pressure` when usage is high.
-
-**When `context` returns `context_pressure` with high/critical level:**
-1. Review the `suggested_action` field:
-   - `prepare_save`: Start thinking about saving important state
-   - `save_now`: Immediately call `session(action="capture", event_type="session_snapshot")` to preserve state
-
-**PreCompact Hook:** Automatically saves session state before context compaction.
-Installed by default. Disable with: `CONTEXTSTREAM_HOOK_ENABLED=false`
-
-**Before compaction happens (when warned):**
-```
-session(action="capture", event_type="session_snapshot", title="Pre-compaction snapshot", content="{
-  \"conversation_summary\": \"<summarize what we've been doing>\",
-  \"current_goal\": \"<the main task>\",
-  \"active_files\": [\"file1.ts\", \"file2.ts\"],
-  \"recent_decisions\": [{title: \"...\", rationale: \"...\"}],
-  \"unfinished_work\": [{task: \"...\", status: \"...\", next_steps: \"...\"}]
-}")
-```
-
-**After compaction (when context seems lost):**
-1. Call `init(folder_path="...", is_post_compact=true)` - this auto-restores the most recent snapshot
-2. Or call `session_restore_context()` directly to get the saved state
-3. Review the `restored_context` to understand prior work
-4. Acknowledge to the user what was restored and continue
-
----
-
-### Index Status (Auto-Managed)
-
-**Indexing is automatic.** After `init`, the project is auto-indexed in the background.
-
-**You do NOT need to manually check index_status before every search.** Just use `search()`.
-
-**If search returns 0 results and you expected matches:**
-1. Check if `init` returned `indexing_status: "started"` - indexing may still be in progress
-2. Wait a moment and retry `search()`
-3. Only as a last resort: `project(action="index_status")` to check
-
-**Graph data:** If graph queries (`dependencies`, `impact`) return empty, run `graph(action="ingest")` once.
-
-**NEVER fall back to local tools (Glob/Grep/Read) just because search returned 0 results on first try.** Retry first.
-
-### Enhanced Context (Server-Side Warnings)
-
-`context` now includes **intelligent server-side filtering** that proactively surfaces relevant warnings:
-
-**Response fields:**
-- `warnings`: Array of warning strings (displayed with ⚠️ prefix)
-
-**What triggers warnings:**
-- **Lessons**: Past mistakes relevant to the current query (via semantic matching)
-- **Risky actions**: Detected high-risk operations (deployments, migrations, destructive commands)
-- **Breaking changes**: When modifications may impact other parts of the codebase
-
-**When you receive warnings:**
-1. **STOP** and read each warning carefully
-2. **Acknowledge** the warning to the user
-3. **Explain** how you will avoid the issue
-4. Only proceed after addressing the warnings
-
-### Search & Code Intelligence (ContextStream-first)
-
-⚠️ **STOP: Before using Search/Glob/Grep/Read/Explore** → Call `search(mode="auto")` FIRST. Use local tools ONLY if ContextStream returns 0 results.
+⚠️ **STOP: Before using Search/Glob/Grep/Read/Explore** → Call `search(mode="hybrid")` FIRST. Use local tools ONLY if ContextStream returns 0 results.
 
 **❌ WRONG workflow (wastes tokens, slow):**
 ```
@@ -376,30 +601,36 @@ Grep "function" → Read file1.ts → Read file2.ts → Read file3.ts → finall
 
 **✅ CORRECT workflow (fast, complete):**
 ```
-search(mode="auto", query="function implementation") → done (results include context)
+search(mode="hybrid", query="function implementation") → done (results include context)
 ```
 
 **Why?** ContextStream search returns semantic matches + context + file locations in ONE call. Local tools require multiple round-trips.
 
-**Search order:**
-1. `session(action="smart_search", query="...")` - context-enriched
-2. `search(mode="auto", query="...", limit=3)` or `search(mode="keyword", query="<filename>", limit=3)`
-3. `project(action="files")` - file tree/list (only when needed)
-4. `graph(action="dependencies", ...)` - code structure
-5. Local repo scans (rg/ls/find) - ONLY if ContextStream returns no results, errors, or the user explicitly asks
+- **First message**: Call `session_init` with context_hint, then `context_smart` before any other tool
+- **Every message**: Call `context_smart` BEFORE responding
+- **For discovery**: Use `search(mode="hybrid")` — **NEVER use local Glob/Grep/Read first**
+- **If search returns 0 results**: Retry once (indexing may be in progress), THEN try local tools
+- **For file lookups**: Use `search`/`graph` first; fall back to local ONLY if ContextStream returns nothing
+- **If ContextStream returns results**: Do NOT use local tools; Read ONLY for exact edits
+- **For code analysis**: `graph(action="dependencies")` or `graph(action="impact")`
+- **On [RULES_NOTICE]**: Use `generate_rules()` to update rules
+- **After completing work**: Capture with `session(action="capture")`
+- **On mistakes**: Capture with `session(action="capture_lesson")`
 
-**Search Mode Selection:**
+### Search Mode Selection
 
 | Need | Mode | Example |
 |------|------|---------|
-| Find code by meaning | `auto` | "authentication logic", "error handling" |
+| Find code by meaning | `hybrid` | "authentication logic", "error handling" |
 | Exact string/symbol | `keyword` | "UserAuthService", "API_KEY" |
 | File patterns | `pattern` | "*.sql", "test_*.py" |
 | ALL matches (grep-like) | `exhaustive` | "TODO", "FIXME" (find all occurrences) |
 | Symbol renaming | `refactor` | "oldFunctionName" (word-boundary matching) |
 | Conceptual search | `semantic` | "how does caching work" |
 
-**Token Efficiency:** Use `output_format` to reduce response size:
+### Token Efficiency
+
+Use `output_format` to reduce response size:
 - `full` (default): Full content for understanding code
 - `paths`: File paths only (80% token savings) - use for file listings
 - `minimal`: Compact format (60% savings) - use for refactoring
@@ -410,325 +641,36 @@ search(mode="auto", query="function implementation") → done (results include c
 - Checking if something exists → count > 0 is sufficient
 - Large exhaustive searches → get count first, then fetch if needed
 
-**Auto-suggested formats:** Search responses include `query_interpretation.suggested_output_format` when the API detects an optimal format:
-- Symbol queries (e.g., "authOptions") → suggests `minimal` (path + line + snippet)
-- Count queries (e.g., "how many") → suggests `count`
-**USE the suggested format** on subsequent searches for best token efficiency.
+**Auto-suggested formats:** Check `query_interpretation.suggested_output_format` in responses:
+- Symbol queries → suggests `minimal` (path + line + snippet)
+- Count queries → suggests `count`
+**USE the suggestion** for best efficiency.
 
-**Search defaults:** `search` returns the top 3 results with compact snippets. Use `limit` + `offset` for pagination, and `content_max_chars` to expand snippets when needed.
-
-If ContextStream returns results, stop and use them. NEVER use local Search/Explore/Read unless you need exact code edits or ContextStream returned 0 results.
-
-**Code Analysis:**
-- Dependencies: `graph(action="dependencies", file_path="...")`
-- Change impact: `graph(action="impact", symbol_name="...")`
-- Call path: `graph(action="call_path", from_symbol="...", to_symbol="...")`
-- Build graph: `graph(action="ingest")` - async, can take a few minutes
-
----
-
-### Distillation & Memory Hygiene
-
-- Quick context: `session(action="summary")`
-- Long chat: `session(action="compress", content="...")`
-- Memory summary: `memory(action="summary")`
-- Condense noisy entries: `memory(action="distill_event", event_id="...")`
-
----
-
-### When to Capture
-
-| When | Call | Example |
-|------|------|---------|
-| User makes decision | `session(action="capture", event_type="decision", ...)` | "Let's use PostgreSQL" |
-| User states preference | `session(action="capture", event_type="preference", ...)` | "I prefer TypeScript" |
-| Complete significant task | `session(action="capture", event_type="task", ...)` | Capture what was done |
-| Need past context | `session(action="recall", query="...")` | "What did we decide about X?" |
-
-**DO NOT capture utility operations:**
-- ❌ "Listed workspaces" - not meaningful context
-- ❌ "Showed version" - not a decision
-- ❌ "Listed projects" - just data retrieval
-
-**DO capture meaningful work:**
-- ✅ Decisions, preferences, completed features
-- ✅ Lessons from mistakes
-- ✅ Insights about architecture or patterns
-
----
+**Example:** User asks "how many TODO comments?" →
+`search(mode="exhaustive", query="TODO", output_format="count")` returns `{total: 47}` (not 47 full results)
 
 ### 🚨 Plans & Tasks - USE CONTEXTSTREAM, NOT FILE-BASED PLANS 🚨
 
-**CRITICAL: When the user requests planning, implementation plans, roadmaps, task breakdowns, or step-by-step approaches:**
+**CRITICAL: When user requests planning, implementation plans, roadmaps, or task breakdowns:**
 
-❌ **DO NOT** use built-in plan mode (EnterPlanMode tool)
-❌ **DO NOT** write plans to markdown files or plan documents
-❌ **DO NOT** ask "should I create a plan file?"
+❌ **DO NOT** use built-in plan mode (EnterPlanMode) or write plan files
+✅ **ALWAYS** use ContextStream's plan/task system
 
-✅ **ALWAYS** use ContextStream's plan/task system instead
+**Trigger phrases (use ContextStream immediately):**
+- "plan", "roadmap", "milestones", "break down", "steps", "task list", "implementation strategy"
 
-**Trigger phrases to detect (use ContextStream immediately):**
-- "create a plan", "make a plan", "plan this", "plan for"
-- "implementation plan", "roadmap", "milestones"
-- "break down", "breakdown", "break this into steps"
-- "what are the steps", "step by step", "outline the approach"
-- "task list", "todo list", "action items"
-- "how should we approach", "implementation strategy"
+**Create plans in ContextStream:**
+1. `session(action="capture_plan", title="...", description="...", goals=[...], steps=[{id: "1", title: "Step 1", order: 1}, ...])`
+2. `memory(action="create_task", title="...", plan_id="<plan_id>", priority="high|medium|low", description="...")`
 
-**When detected, immediately:**
-
-1. **Create the plan in ContextStream:**
-```
-session(action="capture_plan", title="<descriptive title>", description="<what this plan accomplishes>", goals=["goal1", "goal2"], steps=[{id: "1", title: "Step 1", order: 1, description: "..."}, ...])
-```
-
-2. **Create tasks for each step:**
-```
-memory(action="create_task", title="<task title>", plan_id="<plan_id from step 1>", priority="high|medium|low", description="<detailed task description>")
-```
-
-**Why ContextStream plans are better:**
-- Plans persist across sessions and are searchable
-- Tasks track status (pending/in_progress/completed/blocked)
-- Context is preserved with workspace/project association
-- Can be retrieved with `session(action="get_plan", plan_id="...", include_tasks=true)`
-- Future sessions can continue from where you left off
-
-**Managing plans/tasks:**
+**Manage plans/tasks:**
 - List plans: `session(action="list_plans")`
 - Get plan with tasks: `session(action="get_plan", plan_id="<uuid>", include_tasks=true)`
 - List tasks: `memory(action="list_tasks", plan_id="<uuid>")` or `memory(action="list_tasks")` for all
 - Update task status: `memory(action="update_task", task_id="<uuid>", task_status="pending|in_progress|completed|blocked")`
-- Link task to plan: `memory(action="update_task", task_id="<uuid>", plan_id="<plan_uuid>")`
-- Unlink task from plan: `memory(action="update_task", task_id="<uuid>", plan_id=null)`
-- Delete: `memory(action="delete_task", task_id="<uuid>")` or `memory(action="delete_event", event_id="<plan_uuid>")`
+- Delete: `memory(action="delete_task", task_id="<uuid>")`
 
----
-
-### Complete Action Reference
-
-**session actions:**
-- `capture` - Save decision/insight/task (requires: event_type, title, content)
-- `capture_lesson` - Save lesson from mistake (requires: title, category, trigger, impact, prevention)
-- `get_lessons` - Retrieve relevant lessons (optional: query, category, severity)
-- `recall` - Natural language memory recall (requires: query)
-- `remember` - Quick save to memory (requires: content)
-- `user_context` - Get user preferences/style
-- `summary` - Workspace summary
-- `compress` - Compress long conversation
-- `delta` - Changes since timestamp
-- `smart_search` - Context-enriched search
-- `decision_trace` - Trace decision provenance
-
-**memory actions:**
-- Event CRUD: `create_event`, `get_event`, `update_event`, `delete_event`, `list_events`, `distill_event`
-- Node CRUD: `create_node`, `get_node`, `update_node`, `delete_node`, `list_nodes`, `supersede_node`
-- Query: `search`, `decisions`, `timeline`, `summary`
-
-**graph actions:**
-- Analysis: `dependencies`, `impact`, `call_path`, `related`, `path`
-- Quality: `circular_dependencies`, `unused_code`, `contradictions`
-- Management: `ingest`, `decisions`
-
-See full documentation: https://contextstream.io/docs/mcp/tools
-
-
----
-## ⚠️ IMPORTANT: No Hooks Available ⚠️
-
-**This editor does NOT have hooks to enforce ContextStream behavior.**
-You MUST follow these rules manually - there is no automatic enforcement.
-
----
-
-## 🚀 SESSION START PROTOCOL
-
-**On EVERY new session, you MUST:**
-
-1. **Call `init(folder_path="<project_path>")`** FIRST
-   - This triggers project indexing
-   - Check response for `indexing_status`
-   - If `"started"` or `"refreshing"`: wait before searching
-
-2. **Generate a unique session_id** (e.g., `"session-" + timestamp` or a UUID)
-   - Use this SAME session_id for ALL context() calls in this conversation
-   - This groups all turns together in the transcript
-
-3. **Call `context(user_message="<first_message>", save_exchange=true, session_id="<your-session-id>")`**
-   - Gets task-specific rules, lessons, and preferences
-   - Check for [LESSONS_WARNING] - past mistakes to avoid
-   - Check for [PREFERENCE] - user preferences to follow
-   - Check for [RULES_NOTICE] - update rules if needed
-   - **save_exchange=true** saves each conversation turn for later retrieval
-
-4. **NEVER skip init/context** - you will miss critical context
-
----
-
-## 💾 AUTOMATIC TRANSCRIPT SAVING (CRITICAL)
-
-**This editor does NOT have hooks to auto-save transcripts.**
-You MUST save each conversation turn manually:
-
-### On EVERY message (including the first):
-```
-context(user_message="<user's message>", save_exchange=true, session_id="<session-id>")
-```
-
-### Why save_exchange matters:
-- Transcripts enable searching past conversations
-- Allows context restoration after compaction
-- Provides conversation history for debugging
-- Required for the Transcripts page in the dashboard
-
-### Session ID Guidelines:
-- Generate ONCE at the start of the conversation
-- Use a unique identifier: `"session-" + Date.now()` or a UUID
-- Keep the SAME session_id for ALL context() calls in this session
-- Different sessions = different transcripts
-
----
-
-## 📁 FILE INDEXING (CRITICAL)
-
-**There is NO automatic file indexing in this editor.**
-You MUST manage indexing manually:
-
-### After Creating/Editing Files:
-```
-project(action="index")  # Re-index entire project
-```
-
-### For Single File Updates:
-```
-project(action="ingest_local", path="<file_path>")
-```
-
-### Signs You Need to Re-index:
-- Search doesn't find code you just wrote
-- Search returns old versions of functions
-- New files don't appear in search results
-
-### Best Practice:
-After completing a feature or making multiple file changes, ALWAYS run:
-```
-project(action="index")
-```
-
----
-
-## 🔍 SEARCH-FIRST (No PreToolUse Hook)
-
-**There is NO hook to block local tools.** You MUST self-enforce:
-
-### Before ANY Search, Check Index Status:
-```
-project(action="index_status")
-```
-
-This tells you:
-- `indexed`: true/false - is project indexed?
-- `last_indexed_at`: timestamp - when was it last indexed?
-- `file_count`: number - how many files indexed?
-
-### Search Protocol:
-
-**IF project is indexed and fresh:**
-```
-search(mode="auto", query="what you're looking for")
-```
-
-**IF project is NOT indexed or very stale (>7 days):**
-→ Use local tools (Glob/Grep/Read) directly
-→ OR run `project(action="index")` first, then search
-
-**IF ContextStream search returns 0 results or errors:**
-→ Use local tools (Glob/Grep/Read) as fallback
-
-### When Local Tools Are OK:
-✅ Project is not indexed
-✅ Index is stale/outdated (>7 days old)
-✅ ContextStream search returns 0 results
-✅ ContextStream returns errors
-✅ User explicitly requests local tools
-
-### When to Use ContextStream Search:
-✅ Project is indexed and fresh
-✅ Looking for code by meaning/concept
-✅ Need semantic understanding
-
----
-
-## 💾 CONTEXT COMPACTION (No PreCompact Hook)
-
-**There is NO automatic state saving before compaction.**
-You MUST save state manually when the conversation gets long:
-
-### When to Save State:
-- After completing a major task
-- Before the conversation might be compacted
-- If `context()` returns `context_pressure.level: "high"`
-
-### How to Save State:
-```
-session(action="capture", event_type="session_snapshot",
-  title="Session checkpoint",
-  content="{ \"summary\": \"what we did\", \"active_files\": [...], \"next_steps\": [...] }")
-```
-
-### After Compaction (if context seems lost):
-```
-init(folder_path="...", is_post_compact=true)
-```
-This restores the most recent snapshot.
-
----
-
-## 📋 PLANS & TASKS (No EnterPlanMode)
-
-**Always use ContextStream for planning:**
-
-```
-session(action="capture_plan", title="...", steps=[...])
-memory(action="create_task", title="...", plan_id="...")
-```
-
-❌ DO NOT use built-in plan mode or write plans to markdown files.
-
----
-
-## 🔄 VERSION UPDATES (Check Periodically)
-
-**This editor does NOT have hooks to check for updates automatically.**
-You should check for updates using `help(action="version")` periodically (e.g., at session start).
-
-### If the response includes [VERSION_NOTICE] or [VERSION_CRITICAL]:
-
-**Tell the user** about the available update in a helpful, non-annoying way:
-- Frame it as "new features and improvements available"
-- Provide the update commands (user can choose their preferred method)
-- Don't nag repeatedly - mention once, then only if user asks
-
-### Update Commands (provide all options):
-
-**macOS/Linux:**
-```bash
-curl -fsSL https://contextstream.io/scripts/setup.sh | bash
-```
-
-**Windows (PowerShell):**
-```powershell
-irm https://contextstream.io/scripts/setup.ps1 | iex
-```
-
-**npm (requires Node.js 18+):**
-```bash
-npm install -g @contextstream/mcp-server@latest
-```
-
-After updating, user should restart their AI tool.
-
----
+Full docs: https://contextstream.io/docs/mcp/tools
 <!-- END ContextStream -->
 
 <!-- nx configuration start-->

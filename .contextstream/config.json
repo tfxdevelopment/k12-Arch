@@ -1,22 +1,13 @@
 {
+  "version": "0.4.37",
   "workspace_id": "88a586eb-0e78-4841-b4fd-32f080419e2a",
   "workspace_name": "K12 Azure",
-  "associated_at": "2026-02-07T17:40:41.486Z",
-  "version": "0.4.60",
   "configured_editors": [
+    "claude-code",
     "codex",
-    "claude",
-    "cursor",
-    "cline",
-    "kilo",
-    "roo",
-    "aider",
     "antigravity"
   ],
-  "context_pack": false,
-  "api_url": "https://api.contextstream.io",
-  "updated_at": "2026-02-07T17:40:57.910Z",
-  "indexing_enabled": true,
-  "project_id": "10306c55-1fda-4166-8076-de75790c59b9",
-  "project_name": "k12-Arch"
+  "context_pack": true,
+  "api_url": null,
+  "updated_at": "2026-02-10T18:36:32.261308100+00:00"
 }

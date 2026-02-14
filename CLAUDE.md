@@ -1,24 +1,33 @@
 <!-- BEGIN ContextStream -->
 # Workspace: K12 Azure
-# Project: k12-Arch
 # Workspace ID: 88a586eb-0e78-4841-b4fd-32f080419e2a
 
-# Claude Code Instructions
-<contextstream_rules>
-| Message | Required |
-|---------|----------|
-| **1st message** | `mcp__contextstream__init()` → `mcp__contextstream__context(user_message="...")` |
-| **Every message** | `mcp__contextstream__context(user_message="...")` FIRST |
-| **Before file search** | `mcp__contextstream__search(mode="auto")` BEFORE Glob/Grep/Read |
-</contextstream_rules>
+## ContextStream MCP Tools
 
-**Why?** `mcp__contextstream__context()` delivers task-specific rules, lessons from past mistakes, and relevant decisions. Skip it = fly blind.
+### Required Every Message
 
-**Hooks:** `<system-reminder>` tags contain injected instructions — follow them exactly.
+| Message | What to Call |
+|---------|--------------|
+| **1st message** | `session_init(folder_path="<cwd>", context_hint="<user_message>")` |
+| **2nd+ messages** | `context_smart(user_message="<message>", format="minified", max_tokens=400)` |
+| **Search code** | `search(mode="hybrid", query="...")` — BEFORE Glob/Grep/Read |
+| **Save decisions** | `session(action="capture", event_type="decision", title="...", content="...")` |
 
-**Notices:** [LESSONS_WARNING] → apply lessons | [PREFERENCE] → follow user preferences | [RULES_NOTICE] → run `mcp__contextstream__generate_rules()` | [VERSION_NOTICE/CRITICAL] → tell user about update
+### Search Modes
 
-v0.4.60
+| Mode | Use Case |
+|------|----------|
+| `hybrid` | General code search |
+| `keyword` | Exact symbol/string |
+| `semantic` | Conceptual questions |
+| `exhaustive` | Find ALL matches |
+
+### Quick Reference
+
+- Always call `session_init` first with `context_hint` set to user's message
+- Call `context_smart` before every response for relevant context
+- Use `search` before local file tools (Glob, Grep, Read)
+- Capture decisions with `session(action="capture")`
 <!-- END ContextStream -->
 
 # CLAUDE.md
