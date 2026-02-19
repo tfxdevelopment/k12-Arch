@@ -25,6 +25,28 @@ resource "azurerm_windows_function_app" "api-enrollment" {
     "AzureWebJobs.MarkAccountMessageAsRead.Disabled" = "1"
     "StorageContainerName"                           = "document-leases"
     "AzureSignalRConnectionString"                   = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault.api_enrollment_kv.vault_uri}secrets/AzureSignalRConnectionString/)"
+    "APPINSIGHTS_INSTRUMENTATIONKEY"                 = var.appinsights_instrumentationkey
+    "APPLICATIONINSIGHTS_CONNECTION_STRING"          = var.applicationinsights_connection_string
+    "AzureWebJobs.RunScheduledUserAccessMappingFullSync.Disabled" = var.run_scheduled_user_access_mapping_full_sync_disabled
+    "AzureWebJobsDashboard" = var.azurewebjobs_dashboard
+    "AzureWebJobsStorage" = var.azurewebjobs_storage
+    "Entra:ClientId" = var.entra_client_id
+    "Entra:ClientSecret" = var.entra_client_secret
+    "Entra:LogicApp:ManagedIdentityId" = var.entra_logicapp_managed_identity_id
+    "Entra:LogicApp:TenantId" = var.entra_logicapp_tenant_id
+    "Entra:SchoolTenantId" = var.entra_school_tenant_id
+    "Entra:TenantId" = var.entra_tenant_id
+    "Environment" = var.environment_var
+    "FUNCTIONS_EXTENSION_VERSION" = var.functions_extension_version
+    "FUNCTIONS_WORKER_RUNTIME" = var.functions_worker_runtime
+    "PandaDoc:ApiKey" = var.pandadoc_apikey
+    "PandaDoc:Uri" = var.pandadoc_uri
+    "Pandadoc:WebhookSharedKey" = var.pandadoc_webhook_shared_key
+    "PastDueTaskStatusCronSchedule" = var.past_due_task_status_cron_schedule
+    "SchoolsApp:Uri" = var.schoolsapp_uri
+    "StorageContainerName" = var.storage_container_name
+    "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING" = var.website_contentazurefileconnectionstring
+    "WEBSITE_CONTENTSHARE" = var.website_contentshare
   }
 
   site_config {
