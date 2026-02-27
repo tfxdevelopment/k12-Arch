@@ -1,6 +1,6 @@
 # GitOps for K12 Azure Container Apps
 
-This doc describes how we ship the K12 API to Azure Container Apps using Terraform, Azure Pipelines, and Speckit specs/specworkflows. It mirrors the guardrails in `.github/agents/gitops-aca.agent.md`.
+This doc describes how we ship the K12 API to Azure Container Apps using Terraform, Azure Pipelines, and Terramate stack orchestration. The Speckit workflow in `specworkflows/` is currently staged/secondary guidance only.
 
 ## Branch → environment mapping
 - `develop`: CI-only (plan + image build); no apply
@@ -30,16 +30,16 @@ Set these in `terraform/environments/<env>/locals.tf`.
 
 Keep dev/staging/testing at the non-prod defaults unless explicitly approved to change cost posture.
 
-## Pipeline layout (Azure Pipelines)
-Separate CI and CD stages. Use the Speckit workflow `specworkflows/gitops-multi-env.yaml` as the source of truth.
+## Pipeline layout (Azure Pipelines + Terramate)
+Separate CI and CD stages. `azure-pipelines.yml` is the primary execution path.
 
 **CI (develop):**
-1) `terraform plan` in `terraform/environments/development`
+1) `terramate run --tags env:development -- terraform plan` from `terraform/`
 2) Build & push `k12-api:${image_tag}` to `${acr_name}.azurecr.io`
 
 **CD (per env branch):**
-1) Optional gated `terraform plan` (publish plan artifact)
-2) `terraform apply` in matching env folder
+1) Optional gated `terramate run --tags env:<env> -- terraform plan` (publish plan artifact)
+2) `terramate run --tags env:<env> -- terraform apply`
 3) Roll out image `${acr_name}.azurecr.io/k12-api:${image_tag}` to the ACA app
 4) Health check `/health/live`, `/health/ready`, `/health/startup`
 
@@ -55,9 +55,16 @@ Separate CI and CD stages. Use the Speckit workflow `specworkflows/gitops-multi-
 ## Runbook
 - Validate plan artifacts before apply.
 - Never run `terraform apply` from module roots.
+- Execute from `terraform/` when using Terramate orchestration.
+- Use stack tags for targeted runs:
+	- `env:development` + `tier:ops`
+	- `env:staging` + `tier:apps`
+	- `env:testing` + `tier:apps`
 - If toggles change (e.g., enabling ILB/zone redundancy), communicate cost and downtime expectations in the PR and meeting notes.
 
 ## References
-- Speckit: `specworkflows/gitops-multi-env.yaml`
+- Primary pipeline: `azure-pipelines.yml`
+- Terramate project config: `terraform/terramate.tm.hcl`
+- Staged workflow reference: `specworkflows/gitops-multi-env.yaml`
 - ACA prod readiness: `terraform/docs/ACA_PRODUCTION_READINESS.md`
 - ACA setup: `terraform/docs/CONTAINER_APPS_SETUP.md`
