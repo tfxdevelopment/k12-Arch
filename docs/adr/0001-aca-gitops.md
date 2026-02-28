@@ -9,7 +9,8 @@ Accepted
 - We want a repeatable GitOps pipeline that promotes a single image tag across environments while keeping lower envs inexpensive and production highly available.
 
 ## Decision
-- Use Azure Pipelines with the Speckit workflow `specworkflows/gitops-multi-env.yaml` for CI/CD.
+- Use Azure Pipelines as the primary CI/CD path (`azure-pipelines.yml`) with Terramate stack orchestration from `terraform/`.
+- Keep `specworkflows/gitops-multi-env.yaml` as staged/secondary reference guidance.
 - Keep dev/staging/testing on Basic/Consumption posture with public ingress; do **not** enable ILB, zone redundancy, or ACR geo-replication there.
 - For production, enable ILB, zone redundancy, and ACR geo-replication; raise `aca_min_replicas` to 2+.
 - Store and manage toggles in `terraform/environments/<env>/locals.tf`; Terraform is always executed from the corresponding env folder.

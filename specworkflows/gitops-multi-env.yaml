@@ -1,6 +1,6 @@
 specVersion: v1
 name: gitops-multi-env
-summary: GitOps workflow across dev/staging/testing/prod using Terraform and ACR images
+summary: Staged/secondary GitOps workflow across dev/staging/testing/prod using Terraform and ACR images (legacy azure-pipelines.yml remains primary)
 steps:
   - name: plan-dev
     uses: ../specs/terraform-plan.yaml
@@ -63,3 +63,7 @@ inputs:
     description: Promote to production
     required: false
     default: false
+
+# NOTE:
+# - This spec workflow is currently staged/secondary for experimentation.
+# - The primary deployment path remains azure-pipelines.yml.
