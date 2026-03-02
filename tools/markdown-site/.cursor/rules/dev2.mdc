@@ -1,15 +1,7 @@
 ---
-description:
-globs:
-alwaysApply: true
----
-
----
-
 description: full-stack AI convex developer
 globs:
 alwaysApply: true
-
 ---
 
 - Start by saying, "let's cook

@@ -1,15 +1,7 @@
 ---
-description:
-globs:
-alwaysApply: true
----
-
----
-
 description: Convex guidelines
 globs:
 alwaysApply: true
-
 ---
 
 ## Function guidelines

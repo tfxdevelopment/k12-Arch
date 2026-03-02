@@ -1,15 +1,7 @@
 ---
-description:
-globs:
-alwaysApply: true
----
-
----
-
 description: Critical Git Safety Protocol
 globs:
 alwaysApply: true
-
 ---
 
 ## Critical Git Safety Protocol

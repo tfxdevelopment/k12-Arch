@@ -1,3 +1,9 @@
+---
+description: Security guidelines for markdown-blog Convex application
+globs:
+alwaysApply: false
+---
+
 # Security Guidelines for markdown-blog
 
 This document covers security patterns specific to the markdown-blog application, a Convex-powered blog with no authentication.
