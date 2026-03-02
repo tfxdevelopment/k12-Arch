@@ -3,15 +3,16 @@
 **K12 MyPortal Architecture Documentation via MCP Servers**  
 Last Updated: February 7, 2026
 
+> **⚠️ NOTE:** ContextStream MCP references in this document are deprecated (not compatible with Windows). Use Context7 and Microsoft Learn MCP servers instead.
+
 ---
 
 ## Overview
 
-This guide shows how to leverage MCP (Model Context Protocol) servers to complete and maintain your architecture documentation efficiently. The system uses three primary MCP servers:
+This guide shows how to leverage MCP (Model Context Protocol) servers to complete and maintain your architecture documentation efficiently. The system uses two primary MCP servers:
 
-1. **ContextStream** - Persistent memory, task tracking, decision capture
-2. **Context7** - Latest library documentation and best practices
-3. **Microsoft Learn** - Official Azure and .NET documentation
+1. **Context7** - Latest library documentation and best practices
+2. **Microsoft Learn** - Official Azure and .NET documentation
 
 ---
 

@@ -2,6 +2,8 @@
 
 **Visual Organization & MCP Integration Overview**
 
+> **⚠️ NOTE:** ContextStream MCP references in this document are deprecated (not compatible with Windows). Use Context7 and Microsoft Learn MCP servers instead.
+
 ---
 
 ## System Architecture Overview

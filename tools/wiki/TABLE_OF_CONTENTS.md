@@ -3,7 +3,7 @@
 ## Main Wiki
 - [Home](README.md)
 
-## Content Sections (ContextStream Integrated)
+## Content Sections
 - [Plans & Tasks](../../memory-bank/tasks/_index.md)
 - [Diagrams](diagrams/README.md)
 - [Docs & Guides](guides/README.md)

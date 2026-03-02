@@ -3,16 +3,18 @@
 **K12 MyPortal Architecture & Documentation Repository**  
 Last Updated: February 7, 2026
 
+> **⚠️ NOTE:** ContextStream MCP references in this document are deprecated (not compatible with Windows). Use Context7 and Microsoft Learn MCP servers instead for documentation workflows.
+
 ---
 
 ## Overview
 
-This guide explains how to organize parsed markdown documents from `sources/` into the canonical documentation structure, leveraging ContextStream MCP for continuous documentation updates.
+This guide explains how to organize parsed markdown documents from `sources/` into the canonical documentation structure.
 
 ## Current Documentation Structure
 
 ### 1. **Memory Bank** (`memory-bank/`)
-ContextStream-indexed persistent context:
+Persistent context:
 
 ```
 memory-bank/
@@ -550,5 +552,5 @@ microsoft_docs_fetch "https://learn.microsoft.com/en-us/dotnet/architecture/clou
 ---
 
 **Last Updated**: February 7, 2026  
-**Maintained By**: ContextStream-integrated K12 Architecture Team  
+**Maintained By**: K12 Architecture Team  
 **Related**: memory-bank/, tools/wiki/, AGENTS.md
