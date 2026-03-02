@@ -54,3 +54,5 @@ logs/
 .nx/cache
 .nx/workspace-data
 *.zip
+
+fake-api-keys.json

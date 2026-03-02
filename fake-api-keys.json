@@ -1,0 +1,44 @@
+﻿{
+  "_comment": "API key placeholder template. Store real keys in environment variables or secrets manager. NEVER commit real keys.",
+  "providers": {
+    "atlassian": {
+      "api_key": "<ATLASSIAN_API_KEY>",
+      "confluence_token": "<CONFLUENCE_API_TOKEN>",
+      "confluence_url": "https://cfi-nc.atlassian.net/wiki/",
+      "jira_token": "<JIRA_API_TOKEN>",
+      "jira_url": "https://cfi-nc.atlassian.net/"
+    },
+    "azure_devops": {
+      "pat": "<AZURE_DEVOPS_PAT>"
+    },
+    "context7": {
+      "api_key": "<CONTEXT7_API_KEY>"
+    },
+    "github": {
+      "pat": "<GITHUB_PAT>",
+      "models_pat": "<GITHUB_MODELS_PAT>"
+    },
+    "gemini": {
+      "api_key": "<GOOGLE_API_KEY>"
+    },
+    "anthropic": {
+      "api_key": "<ANTHROPIC_API_KEY>"
+    },
+    "openai": {
+      "api_key": "<OPENAI_API_KEY>"
+    },
+    "eraser_io": {
+      "api_key": "<ERASER_IO_API_KEY>"
+    },
+    "contextstream": {
+      "_note": "Disabled on Windows",
+      "api_key": "<CONTEXTSTREAM_API_KEY>"
+    }
+  },
+  "env_var_exports": {
+    "_comment": "Set these in your shell profile or .env file",
+    "GITHUB_TOKEN": "<GITHUB_PAT>",
+    "ANTHROPIC_API_KEY": "<ANTHROPIC_API_KEY>",
+    "GOOGLE_API_KEY": "<GOOGLE_API_KEY>"
+  }
+}
