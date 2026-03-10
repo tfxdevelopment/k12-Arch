@@ -26,8 +26,7 @@ module "enrollment-web" {
     tags = merge(module.tagging.tags, {module = "web-frontend"})
     zscaler_ip_list = local.zscaler_ip_list
     dev_ip_list = local.dev_ip_list
-    web_app_sku_size = "Standard"
-    web_app_sku_tier = "Standard"
+    web_app_sku_name = "S1"
 }
 
 module "enrollment-api" {
@@ -79,8 +78,7 @@ module "admin-web" {
     tags = merge(module.tagging.tags, {module = "web-frontend"})
     zscaler_ip_list = local.zscaler_ip_list
     dev_ip_list = local.dev_ip_list
-    web_app_sku_size = "Standard"
-    web_app_sku_tier = "Standard"
+    web_app_sku_name = "S1"
 }
 
 module "household-web" {
@@ -93,8 +91,7 @@ module "household-web" {
     tags = merge(module.tagging.tags, {module = "web-frontend"})
     zscaler_ip_list = local.zscaler_ip_list
     dev_ip_list = local.dev_ip_list
-    web_app_sku_size = "Standard"
-    web_app_sku_tier = "Standard"
+    web_app_sku_name = "S1"
 }
 
 module "providers-web" {
@@ -107,8 +104,7 @@ module "providers-web" {
     tags = merge(module.tagging.tags, {module = "web-frontend"})
     zscaler_ip_list = local.zscaler_ip_list
     dev_ip_list = local.dev_ip_list
-    web_app_sku_size = "Standard"
-    web_app_sku_tier = "Standard"
+    web_app_sku_name = "S1"
 }
 
 module "schools-web" {
@@ -121,8 +117,7 @@ module "schools-web" {
     tags = merge(module.tagging.tags, {module = "web-frontend"})
     zscaler_ip_list = local.zscaler_ip_list
     dev_ip_list = local.dev_ip_list
-    web_app_sku_size = "Standard"
-    web_app_sku_tier = "Standard"
+    web_app_sku_name = "S1"
 }
 
 module "messaging" {

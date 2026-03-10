@@ -1,18 +1,45 @@
-resource "azurerm_static_web_app" "web-app" {
+resource "azurerm_service_plan" "web-app" {
+  name                = "${var.app_name}-${var.environment_name}-web-app-plan"
+  resource_group_name = var.resource_group_name
+  location            = var.location
+  os_type             = "Linux"
+  sku_name            = var.web_app_sku_name
+  tags                = var.tags
+  lifecycle {
+    ignore_changes = [
+      tags
+    ]
+  }
+}
+
+resource "azurerm_linux_web_app" "web-app" {
   name                = "${var.app_name}-${var.environment_name}-web-app"
   resource_group_name = var.resource_group_name
-  location            = "eastus2"
-  sku_size            = var.web_app_sku_size
-  sku_tier            = var.web_app_sku_tier
+  location            = var.location
+  service_plan_id     = azurerm_service_plan.web-app.id
+  https_only          = true
 
   app_settings = {
     "PastDueTaskStatusCronSchedule"                 = "0 0 0 * * *"
     "UserResourceAccessMappingFullSyncCronSchedule" = "0 */10 * * * *"
   }
 
-  tags      = var.tags
+  site_config {
+    always_on = true
+    application_stack {
+      node_version = "20-lts"
+    }
+  }
+
+  identity {
+    type = "SystemAssigned"
+  }
+
+  tags = var.tags
   lifecycle {
     ignore_changes = [
+      site_config,
+      app_settings,
       tags
     ]
   }
@@ -47,8 +74,8 @@ resource "azurerm_cdn_frontdoor_origin" "webapp_origin" {
   cdn_frontdoor_origin_group_id = azurerm_cdn_frontdoor_origin_group.backend_pool.id
   enabled                       = true
   certificate_name_check_enabled = false
-  host_name                     = azurerm_static_web_app.web-app.default_host_name  # Always points to the latest deployed instance
-  origin_host_header            = azurerm_static_web_app.web-app.default_host_name
+  host_name                     = azurerm_linux_web_app.web-app.default_hostname
+  origin_host_header            = azurerm_linux_web_app.web-app.default_hostname
   http_port                     = 80
   https_port                    = 443
   priority                      = 1
@@ -138,7 +165,5 @@ resource "azurerm_cdn_frontdoor_route" "default_route" {
 # The actual resources will retain their names in Azure for now. 
 # Although they clutter up the code, Hashicorp recommends leaving moved blocks indefinitely to prevent accidental reuse of old resource names and to provide a clear history of changes.
 
-moved {
-  from = azurerm_static_web_app.web-enrollment
-  to   = azurerm_static_web_app.web-app
-}
+# NOTE: The azurerm_static_web_app.web-app resource was replaced with azurerm_linux_web_app.web-app (see above).
+# A moved block cannot be used here because the resource type changed. The static web app will be destroyed and the new App Service created on next apply.
