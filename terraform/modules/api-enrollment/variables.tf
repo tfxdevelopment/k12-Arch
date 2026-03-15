@@ -7,6 +7,12 @@ variable "dev_ip_list" { type = map(string) }
 variable "zscaler_ip_list" { type = map(string) }
 variable "tags" { type = map(string) }
 
+variable "db_size" {
+  description = "Maximum size in GB for the enrollment database"
+  type        = number
+  default     = 32
+}
+
 variable "enable_zone_redundancy" {
   description = "Enable zone redundancy (prod only; keep false for lower envs)"
   type        = bool

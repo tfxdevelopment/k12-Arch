@@ -297,7 +297,7 @@ resource "azurerm_role_assignment" "api_enrollment_function_app_to_logic_app" {
 }
 resource "azurerm_role_assignment" "api_enrollment_logic_app_to_enrollment_database" {
   depends_on           = [azurerm_logic_app_standard.api_enrollment_logic_app]
-  scope                = azurerm_mssql_database.api-enrollment-k12.id
+  scope                = azurerm_mssql_database.k12-database.id
   role_definition_name = "Contributor"
   principal_id         = azurerm_logic_app_standard.api_enrollment_logic_app.identity[0].principal_id
 }

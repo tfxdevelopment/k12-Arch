@@ -51,7 +51,7 @@ module "landing_zone_spoke" {
 }
 
 module "enrollment-web" {
-  source = "../../modules/web-enrollment"
+  source = "../../modules/web-frontend"
   #variables
   app_name            = "enrollment"
   environment_name    = local.environment_name
@@ -100,7 +100,7 @@ module "enrollment-api" {
 }
 
 module "admin-web" {
-  source = "../../modules/web-enrollment"
+  source = "../../modules/web-frontend"
   #variables
   app_name            = "admin"
   environment_name    = local.environment_name
@@ -116,7 +116,7 @@ module "admin-web" {
 }
 
 module "providers-web" {
-  source = "../../modules/web-enrollment"
+  source = "../../modules/web-frontend"
   #variables
   app_name            = "providers"
   environment_name    = local.environment_name
@@ -132,7 +132,7 @@ module "providers-web" {
 }
 
 module "schools-web" {
-  source = "../../modules/web-enrollment"
+  source = "../../modules/web-frontend"
   #variables
   app_name            = "schools"
   environment_name    = local.environment_name

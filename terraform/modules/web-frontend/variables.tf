@@ -4,6 +4,11 @@ variable "location" {}
 variable "resource_group_name" {}
 variable "dev_ip_list" {type = map(string)}
 variable "zscaler_ip_list" {type = map(string)}
+variable "web_app_sku_name" {
+	description = "App Service Plan SKU for frontend web apps"
+	type        = string
+	default     = "S1"
+}
 variable "tags" {type = map(string)}
 
 variable "platform_spoke_vnet_id" {
