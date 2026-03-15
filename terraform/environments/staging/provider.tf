@@ -4,6 +4,10 @@ terraform {
       source  = "hashicorp/azurerm"
       version = "~> 4.11.0"
     }
+    azuread = {
+      source  = "hashicorp/azuread"
+      version = "~> 3.0"
+    }
   }
   backend "azurerm" {
     resource_group_name  = "k12-infra"
@@ -19,3 +23,5 @@ provider "azurerm" {
   features {}
   subscription_id = "cf6841bb-b70c-4d55-a489-2d53855e78b5"
 }
+
+provider "azuread" {}

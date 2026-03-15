@@ -1,0 +1,11 @@
+.specstory/
+.specstory/history/2026-01-20_03-04Z-updating-copilot-instructions-for-codebase-productivity.md
+terraform/all_terrafrom.tf.txt
+.agent/
+.agents/
+.gitignore
+.claude/
+.github/
+.continue/
+.specify/
+.foundry/

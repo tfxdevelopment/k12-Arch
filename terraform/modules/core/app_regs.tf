@@ -30,31 +30,35 @@ resource "azuread_application_password" "devops_sp_secret" {
 }
 
 data "azurerm_key_vault" "api_enrollment_kv" {
+  count               = var.enable_key_vault_secret_sync ? 1 : 0
   name                = "${var.environment_name}apikv"
   resource_group_name = var.resource_group_name
 }
 
 # Store Client ID in Key Vault
 resource "azurerm_key_vault_secret" "sp_client_id" {
+  count        = var.enable_key_vault_secret_sync ? 1 : 0
   name         = "docker-sp-client-id"
   value        = azuread_application.devops_sp.client_id
-  key_vault_id = data.azurerm_key_vault.api_enrollment_kv.id
+  key_vault_id = data.azurerm_key_vault.api_enrollment_kv[0].id
   
   depends_on = [azuread_application.devops_sp]
 }
 
 # Store Client Secret in Key Vault
 resource "azurerm_key_vault_secret" "sp_client_secret" {
+  count        = var.enable_key_vault_secret_sync ? 1 : 0
   name         = "docker-sp-client-secret"
   value        = azuread_application_password.devops_sp_secret.value
-  key_vault_id = data.azurerm_key_vault.api_enrollment_kv.id  
+  key_vault_id = data.azurerm_key_vault.api_enrollment_kv[0].id  
   
   depends_on = [azuread_application_password.devops_sp_secret]
 }
 
 
 resource "azurerm_key_vault_access_policy" "devops_sp_policy" {
-  key_vault_id = data.azurerm_key_vault.api_enrollment_kv.id  
+  count        = var.enable_key_vault_secret_sync ? 1 : 0
+  key_vault_id = data.azurerm_key_vault.api_enrollment_kv[0].id  
   tenant_id    = data.azuread_client_config.current.tenant_id
   object_id    = azuread_service_principal.devops_sp.object_id
 

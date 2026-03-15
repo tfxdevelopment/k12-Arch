@@ -1,0 +1,36 @@
+specVersion: v1
+name: image-build
+summary: Build and push container image to ACR
+inputs:
+  acr_name:
+    description: Azure Container Registry name
+    required: true
+  image_name:
+    description: Image name
+    required: true
+    default: k12-api
+  image_tag:
+    description: Image tag (commit/branch)
+    required: true
+  dockerfile:
+    description: Dockerfile path
+    required: true
+    default: Dockerfile
+  context:
+    description: Build context
+    required: true
+    default: .
+steps:
+  - name: acr-login
+    run: |
+      az acr login --name ${acr_name}
+  - name: docker-build
+    run: |
+      docker build -t ${acr_name}.azurecr.io/${image_name}:${image_tag} -f ${dockerfile} ${context}
+  - name: docker-push
+    run: |
+      docker push ${acr_name}.azurecr.io/${image_name}:${image_tag}
+outputs:
+  image:
+    description: Full image ref
+    value: ${acr_name}.azurecr.io/${image_name}:${image_tag}

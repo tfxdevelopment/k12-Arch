@@ -17,3 +17,9 @@ output "queue_names" {
   value       = [for queue in azurerm_servicebus_queue.queues : queue.name]
   description = "Names of all created Service Bus queues"
 }
+
+output "dapr_pubsub_primary_connection_string" {
+  value       = azurerm_servicebus_namespace_authorization_rule.dapr_pubsub.primary_connection_string
+  description = "Primary connection string for Dapr pub/sub component"
+  sensitive   = true
+}

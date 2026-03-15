@@ -66,6 +66,12 @@ resource "azurerm_mssql_firewall_rule" "k12-database-allow-devs" {
   end_ip_address   = each.value
 }
 
+# Migration: Handle resource rename from k12-database-* to api-enrollment-*
+moved {
+  from = azurerm_mssql_firewall_rule.k12-database-allow-devs
+  to   = azurerm_mssql_firewall_rule.api-enrollment-allow-devs
+}
+
 # # Sometimes you have to manually set env variables before running terraform
 # # export SQLCMDUSER="CFI-AzureDevOps - K12 - Contributors"
 # # export SQLCMDAUTHMODE="ActiveDirectoryInteractive"

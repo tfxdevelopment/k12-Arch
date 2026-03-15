@@ -1,0 +1,20 @@
+steps:
+  - bash: |
+      set -euo pipefail
+
+      forbidden='docs/aca-landing-zone-accelerator/scenarios/shared/terraform/modules'
+      search_paths=(terraform/environments terraform/modules)
+
+      echo "Checking active Terraform execution paths for forbidden source pattern..."
+      echo "Pattern: ${forbidden}"
+
+      matches=$(grep -R --line-number --fixed-strings "${forbidden}" "${search_paths[@]}" || true)
+
+      if [ -n "${matches}" ]; then
+        echo "##vso[task.logissue type=error]Forbidden scenario-relative module source path detected in active Terraform paths."
+        echo "${matches}"
+        exit 1
+      fi
+
+      echo "Terraform source hygiene check passed."
+    displayName: Validate Terraform module source hygiene

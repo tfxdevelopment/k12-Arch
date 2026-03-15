@@ -1,0 +1,314 @@
+pr: none
+
+trigger:
+  branches:
+    include:
+      - develop
+      - env/development
+      - env/staging
+      - env/testing
+      - main
+
+parameters:
+  - name: imageTag
+    displayName: Existing image tag to promote (optional)
+    type: string
+    default: ""
+  - name: imageName
+    displayName: Container image name
+    type: string
+    default: k12-api
+  - name: dockerfilePath
+    displayName: Dockerfile path
+    type: string
+    default: Dockerfile
+  - name: dockerContext
+    displayName: Docker build context
+    type: string
+    default: .
+
+variables:
+  vmImage: ubuntu-latest
+  tfRoot: terraform/environments
+
+stages:
+  - stage: CI_Develop
+    displayName: CI - develop (plan + image build)
+    condition: eq(variables['Build.SourceBranch'], 'refs/heads/develop')
+    jobs:
+      - job: plan_and_build
+        displayName: Terraform plan (dev) and image build
+        pool:
+          vmImage: $(vmImage)
+        steps:
+          - checkout: self
+
+          - template: specs/validate-terraform-sources.yaml
+
+          - task: AzureCLI@2
+            displayName: Terraform fmt/validate/plan (development)
+            inputs:
+              azureSubscription: $(AZURE_SERVICE_CONNECTION)
+              scriptType: bash
+              scriptLocation: inlineScript
+              inlineScript: |
+                set -euo pipefail
+                cd $(tfRoot)/development
+                terraform init -input=false
+                terraform fmt -recursive
+                terraform validate
+                terraform plan -input=false -out=tfplan
+            env:
+              TF_IN_AUTOMATION: true
+              TF_VAR_sql_connection_string: $(SQL_CONNECTION_STRING)
+              TF_VAR_blob_storage_connection_string: $(BLOB_STORAGE_CONNECTION_STRING)
+
+          - task: PublishBuildArtifacts@1
+            displayName: Publish Terraform plan artifact (development)
+            inputs:
+              PathtoPublish: $(Build.SourcesDirectory)/$(tfRoot)/development/tfplan
+              ArtifactName: tfplan-development
+              publishLocation: Container
+
+          - task: AzureCLI@2
+            displayName: Build and push image to development ACR
+            inputs:
+              azureSubscription: $(AZURE_SERVICE_CONNECTION)
+              scriptType: bash
+              scriptLocation: inlineScript
+              inlineScript: |
+                set -euo pipefail
+                ACR_NAME="developmentk12acr"
+                IMAGE_TAG="${{ parameters.imageTag }}"
+                if [ -z "$IMAGE_TAG" ]; then
+                  IMAGE_TAG="$(Build.SourceVersion)"
+                fi
+                az acr login --name "$ACR_NAME"
+                docker build -t "$ACR_NAME.azurecr.io/${{ parameters.imageName }}:$IMAGE_TAG" -f "${{ parameters.dockerfilePath }}" "${{ parameters.dockerContext }}"
+                docker push "$ACR_NAME.azurecr.io/${{ parameters.imageName }}:$IMAGE_TAG"
+                echo "##vso[task.setvariable variable=resolvedImageTag;isOutput=true]$IMAGE_TAG"
+            name: buildImage
+
+  - stage: CD_Development
+    displayName: CD - development
+    condition: eq(variables['Build.SourceBranch'], 'refs/heads/env/development')
+    jobs:
+      - deployment: deploy_development
+        displayName: Deploy development
+        environment: development
+        pool:
+          vmImage: $(vmImage)
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - checkout: self
+
+                - template: specs/validate-terraform-sources.yaml
+
+                - task: AzureCLI@2
+                  displayName: Terraform apply (development)
+                  inputs:
+                    azureSubscription: $(AZURE_SERVICE_CONNECTION)
+                    scriptType: bash
+                    scriptLocation: inlineScript
+                    inlineScript: |
+                      set -euo pipefail
+                      cd $(tfRoot)/development
+                      terraform init -input=false
+                      terraform plan -input=false -out=tfplan
+                      terraform apply -input=false -auto-approve tfplan
+                  env:
+                    TF_IN_AUTOMATION: true
+                    TF_VAR_sql_connection_string: $(SQL_CONNECTION_STRING)
+                    TF_VAR_blob_storage_connection_string: $(BLOB_STORAGE_CONNECTION_STRING)
+
+                - task: AzureCLI@2
+                  displayName: Update ACA image + smoke checks (development)
+                  inputs:
+                    azureSubscription: $(AZURE_SERVICE_CONNECTION)
+                    scriptType: bash
+                    scriptLocation: inlineScript
+                    inlineScript: |
+                      set -euo pipefail
+                      ACR_NAME="developmentk12acr"
+                      IMAGE_TAG="${{ parameters.imageTag }}"
+                      if [ -z "$IMAGE_TAG" ]; then
+                        IMAGE_TAG="$(Build.SourceVersion)"
+                      fi
+                      IMAGE_REF="$ACR_NAME.azurecr.io/${{ parameters.imageName }}:$IMAGE_TAG"
+                      az containerapp update --name development-app --resource-group development --image "$IMAGE_REF"
+                      FQDN=$(az containerapp show --name development-app --resource-group development --query "properties.configuration.ingress.fqdn" -o tsv)
+                      URL="https://$FQDN"
+                      for path in /health/live /health/ready /health/startup; do
+                        echo "Testing $URL$path"
+                        curl -fsSL "$URL$path"
+                      done
+
+  - stage: CD_Staging
+    displayName: CD - staging
+    condition: eq(variables['Build.SourceBranch'], 'refs/heads/env/staging')
+    jobs:
+      - deployment: deploy_staging
+        displayName: Deploy staging
+        environment: staging
+        pool:
+          vmImage: $(vmImage)
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - checkout: self
+
+                - template: specs/validate-terraform-sources.yaml
+
+                - task: AzureCLI@2
+                  displayName: Terraform apply (staging)
+                  inputs:
+                    azureSubscription: $(AZURE_SERVICE_CONNECTION)
+                    scriptType: bash
+                    scriptLocation: inlineScript
+                    inlineScript: |
+                      set -euo pipefail
+                      cd $(tfRoot)/staging
+                      terraform init -input=false
+                      terraform plan -input=false -out=tfplan
+                      terraform apply -input=false -auto-approve tfplan
+                  env:
+                    TF_IN_AUTOMATION: true
+                    TF_VAR_sql_connection_string: $(SQL_CONNECTION_STRING)
+                    TF_VAR_blob_storage_connection_string: $(BLOB_STORAGE_CONNECTION_STRING)
+
+                - task: AzureCLI@2
+                  displayName: Update ACA image + smoke checks (staging)
+                  inputs:
+                    azureSubscription: $(AZURE_SERVICE_CONNECTION)
+                    scriptType: bash
+                    scriptLocation: inlineScript
+                    inlineScript: |
+                      set -euo pipefail
+                      ACR_NAME="stagingk12acr"
+                      IMAGE_TAG="${{ parameters.imageTag }}"
+                      if [ -z "$IMAGE_TAG" ]; then
+                        IMAGE_TAG="$(Build.SourceVersion)"
+                      fi
+                      IMAGE_REF="$ACR_NAME.azurecr.io/${{ parameters.imageName }}:$IMAGE_TAG"
+                      az containerapp update --name staging-app --resource-group staging --image "$IMAGE_REF"
+                      FQDN=$(az containerapp show --name staging-app --resource-group staging --query "properties.configuration.ingress.fqdn" -o tsv)
+                      URL="https://$FQDN"
+                      for path in /health/live /health/ready /health/startup; do
+                        echo "Testing $URL$path"
+                        curl -fsSL "$URL$path"
+                      done
+
+  - stage: CD_Testing
+    displayName: CD - testing
+    condition: eq(variables['Build.SourceBranch'], 'refs/heads/env/testing')
+    jobs:
+      - deployment: deploy_testing
+        displayName: Deploy testing
+        environment: testing
+        pool:
+          vmImage: $(vmImage)
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - checkout: self
+
+                - template: specs/validate-terraform-sources.yaml
+
+                - task: AzureCLI@2
+                  displayName: Terraform apply (testing)
+                  inputs:
+                    azureSubscription: $(AZURE_SERVICE_CONNECTION)
+                    scriptType: bash
+                    scriptLocation: inlineScript
+                    inlineScript: |
+                      set -euo pipefail
+                      cd $(tfRoot)/testing
+                      terraform init -input=false
+                      terraform plan -input=false -out=tfplan
+                      terraform apply -input=false -auto-approve tfplan
+                  env:
+                    TF_IN_AUTOMATION: true
+                    TF_VAR_sql_connection_string: $(SQL_CONNECTION_STRING)
+                    TF_VAR_blob_storage_connection_string: $(BLOB_STORAGE_CONNECTION_STRING)
+
+                - task: AzureCLI@2
+                  displayName: Update ACA image + smoke checks (testing)
+                  inputs:
+                    azureSubscription: $(AZURE_SERVICE_CONNECTION)
+                    scriptType: bash
+                    scriptLocation: inlineScript
+                    inlineScript: |
+                      set -euo pipefail
+                      ACR_NAME="testingk12acr"
+                      IMAGE_TAG="${{ parameters.imageTag }}"
+                      if [ -z "$IMAGE_TAG" ]; then
+                        IMAGE_TAG="$(Build.SourceVersion)"
+                      fi
+                      IMAGE_REF="$ACR_NAME.azurecr.io/${{ parameters.imageName }}:$IMAGE_TAG"
+                      az containerapp update --name testing-app --resource-group testing --image "$IMAGE_REF"
+                      FQDN=$(az containerapp show --name testing-app --resource-group testing --query "properties.configuration.ingress.fqdn" -o tsv)
+                      URL="https://$FQDN"
+                      for path in /health/live /health/ready /health/startup; do
+                        echo "Testing $URL$path"
+                        curl -fsSL "$URL$path"
+                      done
+
+  - stage: CD_Production
+    displayName: CD - production
+    condition: eq(variables['Build.SourceBranch'], 'refs/heads/main')
+    jobs:
+      - deployment: deploy_production
+        displayName: Deploy production
+        environment: production
+        pool:
+          vmImage: $(vmImage)
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - checkout: self
+
+                - template: specs/validate-terraform-sources.yaml
+
+                - task: AzureCLI@2
+                  displayName: Terraform apply (production)
+                  inputs:
+                    azureSubscription: $(AZURE_SERVICE_CONNECTION)
+                    scriptType: bash
+                    scriptLocation: inlineScript
+                    inlineScript: |
+                      set -euo pipefail
+                      cd $(tfRoot)/production
+                      terraform init -input=false
+                      terraform plan -input=false -out=tfplan
+                      terraform apply -input=false -auto-approve tfplan
+                  env:
+                    TF_IN_AUTOMATION: true
+                    TF_VAR_sql_connection_string: $(SQL_CONNECTION_STRING)
+                    TF_VAR_blob_storage_connection_string: $(BLOB_STORAGE_CONNECTION_STRING)
+
+                - task: AzureCLI@2
+                  displayName: Update ACA image + smoke checks (production)
+                  inputs:
+                    azureSubscription: $(AZURE_SERVICE_CONNECTION)
+                    scriptType: bash
+                    scriptLocation: inlineScript
+                    inlineScript: |
+                      set -euo pipefail
+                      ACR_NAME="productionk12acr"
+                      IMAGE_TAG="${{ parameters.imageTag }}"
+                      if [ -z "$IMAGE_TAG" ]; then
+                        IMAGE_TAG="$(Build.SourceVersion)"
+                      fi
+                      IMAGE_REF="$ACR_NAME.azurecr.io/${{ parameters.imageName }}:$IMAGE_TAG"
+                      az containerapp update --name production-app --resource-group production --image "$IMAGE_REF"
+                      FQDN=$(az containerapp show --name production-app --resource-group production --query "properties.configuration.ingress.fqdn" -o tsv)
+                      URL="https://$FQDN"
+                      for path in /health/live /health/ready /health/startup; do
+                        echo "Testing $URL$path"
+                        curl -fsSL "$URL$path"
+                      done

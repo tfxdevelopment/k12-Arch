@@ -1,0 +1,65 @@
+specVersion: v1
+name: gitops-multi-env
+summary: GitOps workflow across dev/staging/testing/prod using Terraform and ACR images
+steps:
+  - name: plan-dev
+    uses: ../specs/terraform-plan.yaml
+    with:
+      env: development
+  - name: build-image
+    uses: ../specs/image-build.yaml
+    needs: [plan-dev]
+    with:
+      acr_name: ${acr_name}
+      image_name: k12-api
+      image_tag: ${image_tag}
+  - name: deploy-dev
+    uses: ../specs/deploy-container-app.yaml
+    needs: [build-image]
+    with:
+      env: development
+      acr_name: ${acr_name}
+      image_ref: ${acr_name}.azurecr.io/k12-api:${image_tag}
+  - name: deploy-staging
+    if: ${deploy_staging}
+    uses: ../specs/deploy-container-app.yaml
+    needs: [build-image]
+    with:
+      env: staging
+      acr_name: ${acr_name}
+      image_ref: ${acr_name}.azurecr.io/k12-api:${image_tag}
+  - name: deploy-testing
+    if: ${deploy_testing}
+    uses: ../specs/deploy-container-app.yaml
+    needs: [build-image]
+    with:
+      env: testing
+      acr_name: ${acr_name}
+      image_ref: ${acr_name}.azurecr.io/k12-api:${image_tag}
+  - name: deploy-prod
+    if: ${deploy_prod}
+    uses: ../specs/deploy-container-app.yaml
+    needs: [build-image]
+    with:
+      env: production
+      acr_name: ${acr_name}
+      image_ref: ${acr_name}.azurecr.io/k12-api:${image_tag}
+inputs:
+  acr_name:
+    description: Azure Container Registry name
+    required: true
+  image_tag:
+    description: Image tag to promote
+    required: true
+  deploy_staging:
+    description: Promote to staging
+    required: false
+    default: false
+  deploy_testing:
+    description: Promote to testing
+    required: false
+    default: false
+  deploy_prod:
+    description: Promote to production
+    required: false
+    default: false

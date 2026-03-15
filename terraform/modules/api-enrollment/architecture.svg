@@ -1,0 +1,1351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="866" height="2488" viewBox="0 0 866 2488">
+  <defs>
+    <style>
+      .node-text { font-family: 'Segoe UI', Arial, sans-serif; font-size: 9px; fill: #201F1E; }
+      .node-text-bold { font-family: 'Segoe UI', Arial, sans-serif; font-size: 9px; font-weight: 600; fill: #201F1E; }
+      .node-detail { font-family: 'Monaco', 'Consolas', monospace; font-size: 7px; fill: #0078D4; }
+      .zone-label { font-family: 'Segoe UI', Arial, sans-serif; font-size: 11px; font-weight: 600; fill: #605E5C; }
+      .connection-line { stroke: #A19F9D; stroke-opacity: 0.6; stroke-width: 1.5; fill: none; }
+      .connection-arrow { fill: #A19F9D; fill-opacity: 0.6; }
+    </style>
+  </defs>
+  <rect width="100%" height="100%" fill="white"/>
+
+  <g>
+    <path d="M 535,248 H 523" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(523,248) rotate(90)"/>
+  </g>
+  <g>
+    <path d="M 433,424 V 716 H 337 V 1008" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(337,1008) rotate(0)"/>
+  </g>
+  <g>
+    <path d="M 433,424 V 1080" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,1080) rotate(0)"/>
+  </g>
+  <g>
+    <path d="M 433,720 V 712" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,712) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 433,784 V 2001" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,2001) rotate(0)"/>
+  </g>
+  <g>
+    <path d="M 433,792 V 712" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,712) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 337,864 V 788 H 433 V 712" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,712) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 529,864 V 788 H 433 V 712" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,712) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 433,936 V 712" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,712) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 433,1080 V 280" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,280) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 343,1112 H 385 V 1040 H 427" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(427,1040) rotate(90)"/>
+  </g>
+  <g>
+    <path d="M 433,1152 V 424" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,424) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 433,1152 V 1112 H 337 V 1072" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(337,1072) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 433,1152 V 1144" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,1144) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 433,1224 V 1148 H 337 V 1072" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(337,1072) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 433,1224 V 1144" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,1144) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 433,1368 V 1220 H 529 V 1072" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(529,1072) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 433,1368 V 824 H 241 V 280" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(241,280) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 433,1440 V 568" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,568) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 433,1584 V 1504" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,1504) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 433,1584 V 1576" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,1576) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 433,1584 V 352" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,352) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 145,1785 V 1032.5 H 625 V 280" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(625,280) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 145,1785 V 1212.5 H 433 V 640" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,640) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 337,1785 V 1068.5 H 433 V 352" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,352) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 337,1785 V 1464.5 H 433 V 1144" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,1144) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 529,1785 V 1068.5 H 433 V 352" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,352) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 721,1785 V 1068.5 H 433 V 352" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,352) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 721,1785 V 1248.5 H 433 V 712" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,712) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 145,1857 V 1644.5 H 433 V 1432" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,1432) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 145,1857 V 1500.5 H 433 V 1144" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,1144) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 337,1857 V 1644.5 H 433 V 1432" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,1432) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 337,1921 V 2105 H 433 V 2289" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,2289) rotate(0)"/>
+  </g>
+  <g>
+    <path d="M 529,1857 V 1644.5 H 433 V 1432" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,1432) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 529,1857 V 1284.5 H 433 V 712" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,712) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 721,1857 V 1716.5 H 433 V 1576" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,1576) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 631,1889 H 577 V 1616 H 523" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(523,1616) rotate(90)"/>
+  </g>
+  <g>
+    <path d="M 241,1929 V 1140.5 H 433 V 352" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,352) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 241,1929 V 1788.5 H 433 V 1648" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,1648) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 433,1929 V 1104.5 H 625 V 280" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(625,280) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 433,1929 V 1144" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,1144) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 625,1929 V 280" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(625,280) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 433,2001 V 352" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,352) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 433,2073 V 280" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,280) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 337,2145 V 1824.5 H 433 V 1504" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,1504) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 337,2145 V 1212.5 H 433 V 280" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,280) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 529,2145 V 1824.5 H 433 V 1504" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,1504) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 337,2217 V 1860.5 H 433 V 1504" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,1504) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 337,2217 V 1392.5 H 433 V 568" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,568) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 529,2217 V 1932.5 H 433 V 1648" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,1648) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 529,2217 V 1392.5 H 433 V 568" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,568) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 433,2289 V 1720" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,1720) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 433,2289 V 640" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,640) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 241,2361 V 2040.5 H 433 V 1720" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,1720) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 433,2361 V 1720" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,1720) rotate(180)"/>
+  </g>
+  <g>
+    <path d="M 625,2361 V 2040.5 H 433 V 1720" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(433,1720) rotate(180)"/>
+  </g>
+  <g>
+    <!-- Main container with shadow -->
+    <rect x="138" y="42" width="594" height="1703"
+          rx="8" ry="8" fill="rgba(0,0,0,0.05)"/>
+    <rect x="136" y="40" width="594" height="1703"
+          rx="8" ry="8" fill="#FAFAFA" stroke="#0078D4" stroke-width="2"/>
+    <!-- Header bar -->
+    <rect x="136" y="40" width="594" height="28"
+          rx="8" ry="8" fill="rgba(0, 120, 212, 0.1)"/>
+    <rect x="136" y="60" width="594" height="8" fill="#FAFAFA"/>
+    <line x1="136" y1="68" x2="730" y2="68"
+          stroke="rgba(0, 120, 212, 0.2)" stroke-width="1"/>
+    <!-- Resource Group icon (simplified) -->
+    <rect x="144" y="46" width="16" height="16" rx="2" fill="#0078D4"/>
+    <rect x="147" y="49" width="4" height="4" rx="1" fill="white"/>
+    <rect x="153" y="49" width="4" height="4" rx="1" fill="white"/>
+    <rect x="147" y="55" width="4" height="4" rx="1" fill="white"/>
+    <rect x="153" y="55" width="4" height="4" rx="1" fill="white"/>
+    <!-- Title -->
+    <text x="166" y="58" class="zone-label" fill="#0078D4">Resource Group: resource_group_name</text>
+  </g>
+  <g>
+    <!-- Main container with shadow -->
+    <rect x="42" y="1755" width="786" height="695"
+          rx="8" ry="8" fill="rgba(0,0,0,0.05)"/>
+    <rect x="40" y="1753" width="786" height="695"
+          rx="8" ry="8" fill="#FAFAFA" stroke="#0078D4" stroke-width="2"/>
+    <!-- Header bar -->
+    <rect x="40" y="1753" width="786" height="28"
+          rx="8" ry="8" fill="rgba(0, 120, 212, 0.1)"/>
+    <rect x="40" y="1773" width="786" height="8" fill="#FAFAFA"/>
+    <line x1="40" y1="1781" x2="826" y2="1781"
+          stroke="rgba(0, 120, 212, 0.2)" stroke-width="1"/>
+    <!-- Resource Group icon (simplified) -->
+    <rect x="48" y="1759" width="16" height="16" rx="2" fill="#0078D4"/>
+    <rect x="51" y="1762" width="4" height="4" rx="1" fill="white"/>
+    <rect x="57" y="1762" width="4" height="4" rx="1" fill="white"/>
+    <rect x="51" y="1768" width="4" height="4" rx="1" fill="white"/>
+    <rect x="57" y="1768" width="4" height="4" rx="1" fill="white"/>
+    <!-- Title -->
+    <text x="70" y="1771" class="zone-label" fill="#0078D4">Resource Group: default</text>
+  </g>
+  <g>
+    <rect x="343" y="72" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="343" y="72" width="3" height="64"
+          rx="2" ry="2" fill="#00485B"/>
+    <image x="347" y="90" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTE2MDZhNTItZmIxNC00NjM3LTg3ZGUtNGQ1MjRiYmExODI5IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImYwMjBmYjdlLTIyNDMtNDUwMS04MTUzLTVkNjliZDNjMzRmNyIgeDE9IjkuODgiIHkxPSI4LjU5IiB4Mj0iMTEuNTIiIHkyPSIxMC4yMyIgZ3JhZGllbnRUcmFuc2Zvcm09InRyYW5zbGF0ZSgyLjAzIC0wLjQpIHJvdGF0ZSgtMC4wOCkiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiM4NmQ2MzMiIC8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNWU5NjI0IiAvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJiM2MyYmM5NC04YzdjLTQ4YTItOTcxOS02ZWU4OTlhNDNhOTciIHgxPSI2LjE4IiB5MT0iOC41OSIgeDI9IjcuODEiIHkyPSIxMC4yMyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzg2ZDYzMyIgLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM1ZTk2MjQiIC8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9ImU5MDBjMzVkLTA5NTgtNGQ0Zi1iMjhmLTMwMmVlYWFmNTJmNSIgeDE9IjIuNDgiIHkxPSI4LjU5IiB4Mj0iNC4xMSIgeTI9IjEwLjIzIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjODZkNjMzIiAvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzVlOTYyNCIgLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48dGl0bGU+SWNvbi1uZXR3b3JraW5nLTYxPC90aXRsZT48Y2lyY2xlIGN4PSIxMi43NCIgY3k9IjguOTkiIHI9IjEuMTYiIGZpbGw9InVybCgjZjAyMGZiN2UtMjI0My00NTAxLTgxNTMtNWQ2OWJkM2MzNGY3KSIgLz48Y2lyY2xlIGN4PSI5LjA0IiBjeT0iOSIgcj0iMS4xNiIgZmlsbD0idXJsKCNiM2MyYmM5NC04YzdjLTQ4YTItOTcxOS02ZWU4OTlhNDNhOTcpIiAvPjxjaXJjbGUgY3g9IjUuMzQiIGN5PSI5IiByPSIxLjE2IiBmaWxsPSJ1cmwoI2U5MDBjMzVkLTA5NTgtNGQ0Zi1iMjhmLTMwMmVlYWFmNTJmNSkiIC8+PHBhdGggZD0iTTIuNjEsNy4yOGguOTRhLjMuMywwLDAsMSwuMy4zdjYuOTRhLjYuNiwwLDAsMS0uNi42SDIuMzFhMCwwLDAsMCwxLDAsMFY3LjU4YS4zLjMsMCwwLDEsLjMtLjNaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMy4xOCAxNi45Mykgcm90YXRlKDEzNC45MikiIGZpbGw9IiM1MGU2ZmYiIC8+PHBhdGggZD0iTTIuNTYsMi45MUgzLjVhLjMuMywwLDAsMSwuMy4zdjcuNDNhMCwwLDAsMCwxLDAsMEgyLjg2YS42LjYsMCwwLDEtLjYtLjZWMy4yMWEuMy4zLDAsMCwxLC4zLS4zWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNS42NiAtMC4xNikgcm90YXRlKDQ0LjkyKSIgZmlsbD0iIzE0OTBkZiIgLz48cGF0aCBkPSJNMTQuMTUsNy4yOGguOTRhLjYuNiwwLDAsMSwuNi42djYuOTRhLjMuMywwLDAsMS0uMy4zaC0uOTRhLjMuMywwLDAsMS0uMy0uM1Y3LjI4YTAsMCwwLDAsMSwwLDBaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMi4zMiAtNy4yOCkgcm90YXRlKDQ1LjA4KSIgZmlsbD0iIzUwZTZmZiIgLz48cGF0aCBkPSJNMTQuODEsMi45MWguOTRhMCwwLDAsMCwxLDAsMHY3LjQzYS4zLjMsMCwwLDEtLjMuM0gxNC41YS4zLjMsMCwwLDEtLjMtLjNWMy41MWEuNi42LDAsMCwxLC42LS42WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzAuMzYgMC45OSkgcm90YXRlKDEzNS4wOCkiIGZpbGw9IiMxNDkwZGYiIC8+PC9zdmc+"/>
+    <text x="379" y="86" class="node-text-bold">
+      Aca vnet
+    </text>
+    <text x="379" y="98" class="node-detail">
+      CIDR: var.aca_vnet_addres..
+    </text>
+    <text x="379" y="109" class="node-detail">
+      var.location
+    </text>
+    <g class="tag-badge" transform="translate(501, 76)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+    <text x="379" y="133" class="node-cidr" fill="#0078D4" font-size="7" font-family="monospace">
+      var.aca_vnet_address_space
+    </text>
+  </g>
+  <g>
+    <rect x="343" y="144" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="343" y="144" width="3" height="64"
+          rx="2" ry="2" fill="#00485B"/>
+    <image x="347" y="162" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImJjZWI2MGRkLThiOGMtNDA5OC05NGY4LWFlYjRkYjJlZGFlZiIgeDE9IjkuMDMzIiB5MT0iMTAuMzA1IiB4Mj0iOS4wMzMiIHkyPSI3LjY5NSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzVlOTYyNCIgLz48c3RvcCBvZmZzZXQ9IjAuMjQxIiBzdG9wLWNvbG9yPSIjNmZiMDJhIiAvPjxzdG9wIG9mZnNldD0iMC41MDEiIHN0b3AtY29sb3I9IiM3Y2M1MmYiIC8+PHN0b3Agb2Zmc2V0PSIwLjc1NiIgc3RvcC1jb2xvcj0iIzgzZDIzMiIgLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM4NmQ2MzMiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PGcgaWQ9ImFjNzVjMjFlLTJhOTMtNDY0Zi04MDQ4LWYxNTE4ZGFiOGI3NSI+PGc+PHBhdGggZD0iTTkuMDMxLDcuN0ExLjMwNSwxLjMwNSwwLDEsMCwxMC4zMzgsOSwxLjMwNSwxLjMwNSwwLDAsMCw5LjAzMSw3LjdaIiBmaWxsPSJ1cmwoI2JjZWI2MGRkLThiOGMtNDA5OC05NGY4LWFlYjRkYjJlZGFlZikiIC8+PGc+PHBhdGggZD0iTTIuOTYxLDcuMzc0aC44ODhhLjI4NC4yODQsMCwwLDEsLjI4NC4yODR2Ni41NTFhLjU2OC41NjgsMCwwLDEtLjU2OC41NjhIMi42NzdhMCwwLDAsMCwxLDAsMFY3LjY1OUEuMjg0LjI4NCwwLDAsMSwyLjk2MSw3LjM3NFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEzLjY1MyAxNi40ODUpIHJvdGF0ZSgxMzQuOTE5KSIgZmlsbD0iIzUwZTZmZiIgLz48cGF0aCBkPSJNMi45MTMsMy4yNDRIMy44YS4yODQuMjg0LDAsMCwxLC4yODQuMjg0djcuMDE1YTAsMCwwLDAsMSwwLDBIMy4yYS41NjguNTY4LDAsMCwxLS41NjgtLjU2OFYzLjUyOGEuMjg0LjI4NCwwLDAsMSwuMjg0LS4yODRaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1Ljg0NyAtMC4zNTgpIHJvdGF0ZSg0NC45MTkpIiBmaWxsPSIjMTQ5MGRmIiAvPjxwYXRoIGQ9Ik0xMy44NjcsNy4zNzRoLjg4OGEuNTY4LjU2OCwwLDAsMSwuNTY4LjU2OHY2LjU1MWEuMjg0LjI4NCwwLDAsMS0uMjg0LjI4NGgtLjg4OGEuMjg0LjI4NCwwLDAsMS0uMjg0LS4yODRWNy4zNzRhMCwwLDAsMCwxLDAsMFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEyLjEzMiAtNy4wNzkpIHJvdGF0ZSg0NS4wODEpIiBmaWxsPSIjNTBlNmZmIiAvPjxwYXRoIGQ9Ik0xNC40ODMsMy4yNDRoLjg4OGEwLDAsMCwwLDEsMCwwdjcuMDE1YS4yODQuMjg0LDAsMCwxLS4yODQuMjg0SDE0LjJhLjI4NC4yODQsMCwwLDEtLjI4NC0uMjg0VjMuODEyYS41NjguNTY4LDAsMCwxLC41NjgtLjU2OFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI5Ljg3OSAxLjQzNSkgcm90YXRlKDEzNS4wODEpIiBmaWxsPSIjMTQ5MGRmIiAvPjwvZz48L2c+PC9nPjwvc3ZnPg=="/>
+    <text x="379" y="158" class="node-text-bold">
+      Aca subnet
+    </text>
+    <text x="379" y="170" class="node-detail">
+      CIDR: var.aca_subnet_addr..
+    </text>
+    <g class="tag-badge" transform="translate(501, 148)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+    <text x="379" y="205" class="node-cidr" fill="#0078D4" font-size="7" font-family="monospace">
+      var.aca_subnet_address_prefix
+    </text>
+  </g>
+  <g>
+    <rect x="151" y="216" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="151" y="216" width="3" height="64"
+          rx="2" ry="2" fill="#0078D4"/>
+    <image x="155" y="234" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iZjJmMDQzNDktOGFlZS00NDEzLTg0YzktYTkwNTM2MTFiMzE5IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImFkNGM0Zjk2LTA5YWEtNGY5MS1iYTEwLTVjYjhhZDUzMGY3NCIgeDE9IjkiIHkxPSIxNS44MyIgeDI9IjkiIHkyPSI1Ljc5IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjYjNiM2IzIiAvPjxzdG9wIG9mZnNldD0iMC4yNiIgc3RvcC1jb2xvcj0iI2MxYzFjMSIgLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNlNmU2ZTYiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHRpdGxlPkljb24tc3RvcmFnZS04NjwvdGl0bGU+PHBhdGggZD0iTS41LDUuNzloMTdhMCwwLDAsMCwxLDAsMHY5LjQ4YS41Ny41NywwLDAsMS0uNTcuNTdIMS4wN2EuNTcuNTcsMCwwLDEtLjU3LS41N1Y1Ljc5QTAsMCwwLDAsMSwuNSw1Ljc5WiIgZmlsbD0idXJsKCNhZDRjNGY5Ni0wOWFhLTRmOTEtYmExMC01Y2I4YWQ1MzBmNzQpIiAvPjxwYXRoIGQ9Ik0xLjA3LDIuMTdIMTYuOTNhLjU3LjU3LDAsMCwxLC41Ny41N1Y1Ljc5YTAsMCwwLDAsMSwwLDBILjVhMCwwLDAsMCwxLDAsMFYyLjczQS41Ny41NywwLDAsMSwxLjA3LDIuMTdaIiBmaWxsPSIjMzdjMmIxIiAvPjxwYXRoIGQ9Ik0yLjgxLDYuODlIMTUuMThhLjI3LjI3LDAsMCwxLC4yNi4yN3YxLjRhLjI3LjI3LDAsMCwxLS4yNi4yN0gyLjgxYS4yNy4yNywwLDAsMS0uMjYtLjI3VjcuMTZBLjI3LjI3LDAsMCwxLDIuODEsNi44OVoiIGZpbGw9IiNmZmYiIC8+PHBhdGggZD0iTTIuODIsOS42OEgxNS4xOWEuMjcuMjcsMCwwLDEsLjI2LjI3djEuNDFhLjI3LjI3LDAsMCwxLS4yNi4yN0gyLjgyYS4yNy4yNywwLDAsMS0uMjYtLjI3VjEwQS4yNy4yNywwLDAsMSwyLjgyLDkuNjhaIiBmaWxsPSIjMzdjMmIxIiAvPjxwYXRoIGQ9Ik0yLjgyLDEyLjVIMTUuMTlhLjI3LjI3LDAsMCwxLC4yNi4yN3YxLjQxYS4yNy4yNywwLDAsMS0uMjYuMjdIMi44MmEuMjcuMjcsMCwwLDEtLjI2LS4yN1YxMi43N0EuMjcuMjcsMCwwLDEsMi44MiwxMi41WiIgZmlsbD0iIzI1ODI3NyIgLz48L3N2Zz4="/>
+    <text x="187" y="230" class="node-text-bold">
+      Api enrollment lo...
+    </text>
+    <text x="187" y="242" class="node-detail">
+      Standard_LRS
+    </text>
+    <g class="security-badge" transform="translate(309, 220)">
+      <title>TLS version below 1.2: Storage account accepts connections with TLS versions older than 1.2.</title>
+      <circle cx="7" cy="7" r="7" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="8" font-weight="bold">⚠</text>
+    </g>
+    <g class="tag-badge" transform="translate(293, 220)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+    <g class="cost-badge" transform="translate(281, 264)">
+      <title>Estimated monthly cost: ~$2/mo</title>
+      <rect x="0" y="0" width="46" height="12" rx="2" fill="#666666" fill-opacity="0.1" stroke="#666666" stroke-width="0.5"/>
+      <text x="23" y="9" text-anchor="middle" fill="#666666" font-size="7" font-weight="bold">~$2/mo</text>
+    </g>
+    <text x="187" y="270" class="node-sku" fill="#666666" font-size="7" font-style="italic">
+      Standard_LRS
+    </text>
+  </g>
+  <g>
+    <rect x="343" y="216" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="343" y="216" width="3" height="64"
+          rx="2" ry="2" fill="#0078D4"/>
+    <image x="347" y="234" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iZjJmMDQzNDktOGFlZS00NDEzLTg0YzktYTkwNTM2MTFiMzE5IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImFkNGM0Zjk2LTA5YWEtNGY5MS1iYTEwLTVjYjhhZDUzMGY3NCIgeDE9IjkiIHkxPSIxNS44MyIgeDI9IjkiIHkyPSI1Ljc5IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjYjNiM2IzIiAvPjxzdG9wIG9mZnNldD0iMC4yNiIgc3RvcC1jb2xvcj0iI2MxYzFjMSIgLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNlNmU2ZTYiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHRpdGxlPkljb24tc3RvcmFnZS04NjwvdGl0bGU+PHBhdGggZD0iTS41LDUuNzloMTdhMCwwLDAsMCwxLDAsMHY5LjQ4YS41Ny41NywwLDAsMS0uNTcuNTdIMS4wN2EuNTcuNTcsMCwwLDEtLjU3LS41N1Y1Ljc5QTAsMCwwLDAsMSwuNSw1Ljc5WiIgZmlsbD0idXJsKCNhZDRjNGY5Ni0wOWFhLTRmOTEtYmExMC01Y2I4YWQ1MzBmNzQpIiAvPjxwYXRoIGQ9Ik0xLjA3LDIuMTdIMTYuOTNhLjU3LjU3LDAsMCwxLC41Ny41N1Y1Ljc5YTAsMCwwLDAsMSwwLDBILjVhMCwwLDAsMCwxLDAsMFYyLjczQS41Ny41NywwLDAsMSwxLjA3LDIuMTdaIiBmaWxsPSIjMzdjMmIxIiAvPjxwYXRoIGQ9Ik0yLjgxLDYuODlIMTUuMThhLjI3LjI3LDAsMCwxLC4yNi4yN3YxLjRhLjI3LjI3LDAsMCwxLS4yNi4yN0gyLjgxYS4yNy4yNywwLDAsMS0uMjYtLjI3VjcuMTZBLjI3LjI3LDAsMCwxLDIuODEsNi44OVoiIGZpbGw9IiNmZmYiIC8+PHBhdGggZD0iTTIuODIsOS42OEgxNS4xOWEuMjcuMjcsMCwwLDEsLjI2LjI3djEuNDFhLjI3LjI3LDAsMCwxLS4yNi4yN0gyLjgyYS4yNy4yNywwLDAsMS0uMjYtLjI3VjEwQS4yNy4yNywwLDAsMSwyLjgyLDkuNjhaIiBmaWxsPSIjMzdjMmIxIiAvPjxwYXRoIGQ9Ik0yLjgyLDEyLjVIMTUuMTlhLjI3LjI3LDAsMCwxLC4yNi4yN3YxLjQxYS4yNy4yNywwLDAsMS0uMjYuMjdIMi44MmEuMjcuMjcsMCwwLDEtLjI2LS4yN1YxMi43N0EuMjcuMjcsMCwwLDEsMi44MiwxMi41WiIgZmlsbD0iIzI1ODI3NyIgLz48L3N2Zz4="/>
+    <text x="379" y="230" class="node-text-bold">
+      Api-enrollment
+    </text>
+    <text x="379" y="242" class="node-detail">
+      Standard_LRS
+    </text>
+    <g class="security-badge" transform="translate(501, 220)">
+      <title>TLS version below 1.2: Storage account accepts connections with TLS versions older than 1.2.</title>
+      <circle cx="7" cy="7" r="7" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="8" font-weight="bold">⚠</text>
+    </g>
+    <g class="tag-badge" transform="translate(485, 220)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+    <g class="cost-badge" transform="translate(473, 264)">
+      <title>Estimated monthly cost: ~$2/mo</title>
+      <rect x="0" y="0" width="46" height="12" rx="2" fill="#666666" fill-opacity="0.1" stroke="#666666" stroke-width="0.5"/>
+      <text x="23" y="9" text-anchor="middle" fill="#666666" font-size="7" font-weight="bold">~$2/mo</text>
+    </g>
+    <text x="379" y="270" class="node-sku" fill="#666666" font-size="7" font-style="italic">
+      Standard_LRS
+    </text>
+  </g>
+  <g>
+    <rect x="535" y="216" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="535" y="216" width="3" height="64"
+          rx="2" ry="2" fill="#0078D4"/>
+    <image x="539" y="234" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iZjJmMDQzNDktOGFlZS00NDEzLTg0YzktYTkwNTM2MTFiMzE5IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImFkNGM0Zjk2LTA5YWEtNGY5MS1iYTEwLTVjYjhhZDUzMGY3NCIgeDE9IjkiIHkxPSIxNS44MyIgeDI9IjkiIHkyPSI1Ljc5IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjYjNiM2IzIiAvPjxzdG9wIG9mZnNldD0iMC4yNiIgc3RvcC1jb2xvcj0iI2MxYzFjMSIgLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNlNmU2ZTYiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHRpdGxlPkljb24tc3RvcmFnZS04NjwvdGl0bGU+PHBhdGggZD0iTS41LDUuNzloMTdhMCwwLDAsMCwxLDAsMHY5LjQ4YS41Ny41NywwLDAsMS0uNTcuNTdIMS4wN2EuNTcuNTcsMCwwLDEtLjU3LS41N1Y1Ljc5QTAsMCwwLDAsMSwuNSw1Ljc5WiIgZmlsbD0idXJsKCNhZDRjNGY5Ni0wOWFhLTRmOTEtYmExMC01Y2I4YWQ1MzBmNzQpIiAvPjxwYXRoIGQ9Ik0xLjA3LDIuMTdIMTYuOTNhLjU3LjU3LDAsMCwxLC41Ny41N1Y1Ljc5YTAsMCwwLDAsMSwwLDBILjVhMCwwLDAsMCwxLDAsMFYyLjczQS41Ny41NywwLDAsMSwxLjA3LDIuMTdaIiBmaWxsPSIjMzdjMmIxIiAvPjxwYXRoIGQ9Ik0yLjgxLDYuODlIMTUuMThhLjI3LjI3LDAsMCwxLC4yNi4yN3YxLjRhLjI3LjI3LDAsMCwxLS4yNi4yN0gyLjgxYS4yNy4yNywwLDAsMS0uMjYtLjI3VjcuMTZBLjI3LjI3LDAsMCwxLDIuODEsNi44OVoiIGZpbGw9IiNmZmYiIC8+PHBhdGggZD0iTTIuODIsOS42OEgxNS4xOWEuMjcuMjcsMCwwLDEsLjI2LjI3djEuNDFhLjI3LjI3LDAsMCwxLS4yNi4yN0gyLjgyYS4yNy4yNywwLDAsMS0uMjYtLjI3VjEwQS4yNy4yNywwLDAsMSwyLjgyLDkuNjhaIiBmaWxsPSIjMzdjMmIxIiAvPjxwYXRoIGQ9Ik0yLjgyLDEyLjVIMTUuMTlhLjI3LjI3LDAsMCwxLC4yNi4yN3YxLjQxYS4yNy4yNywwLDAsMS0uMjYuMjdIMi44MmEuMjcuMjcsMCwwLDEtLjI2LS4yN1YxMi43N0EuMjcuMjcsMCwwLDEsMi44MiwxMi41WiIgZmlsbD0iIzI1ODI3NyIgLz48L3N2Zz4="/>
+    <text x="571" y="230" class="node-text-bold">
+      Api-enrollment-hns
+    </text>
+    <text x="571" y="242" class="node-detail">
+      Standard_LRS
+    </text>
+    <text x="571" y="253" class="node-detail">
+      HNS (ADLS)
+    </text>
+    <g class="security-badge" transform="translate(693, 220)">
+      <title>TLS version below 1.2: Storage account accepts connections with TLS versions older than 1.2.</title>
+      <circle cx="7" cy="7" r="7" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="8" font-weight="bold">⚠</text>
+    </g>
+    <g class="tag-badge" transform="translate(677, 220)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+    <g class="cost-badge" transform="translate(665, 264)">
+      <title>Estimated monthly cost: ~$2/mo</title>
+      <rect x="0" y="0" width="46" height="12" rx="2" fill="#666666" fill-opacity="0.1" stroke="#666666" stroke-width="0.5"/>
+      <text x="23" y="9" text-anchor="middle" fill="#666666" font-size="7" font-weight="bold">~$2/mo</text>
+    </g>
+    <text x="571" y="270" class="node-sku" fill="#666666" font-size="7" font-style="italic">
+      Standard_LRS
+    </text>
+  </g>
+  <g>
+    <rect x="343" y="288" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="343" y="288" width="3" height="64"
+          rx="2" ry="2" fill="#FF8C00"/>
+    <image x="347" y="306" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYmM5MzE2OWEtMjRjNC00Njg2LTlmMzctYzdlNGY1M2IzZDM0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48ZGVmcz48cmFkaWFsR3JhZGllbnQgaWQ9ImZiMTE0YzkzLTdjMTYtNDU0MC04OTlhLTA3OTYwNDE2MjllNiIgY3g9IjkiIGN5PSI5IiByPSI4LjUiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBvZmZzZXQ9IjAuMTgiIHN0b3AtY29sb3I9IiM1ZWEwZWYiIC8+PHN0b3Agb2Zmc2V0PSIwLjU2IiBzdG9wLWNvbG9yPSIjNWM5ZmVlIiAvPjxzdG9wIG9mZnNldD0iMC42OSIgc3RvcC1jb2xvcj0iIzU1OWNlZCIgLz48c3RvcCBvZmZzZXQ9IjAuNzgiIHN0b3AtY29sb3I9IiM0YTk3ZTkiIC8+PHN0b3Agb2Zmc2V0PSIwLjg2IiBzdG9wLWNvbG9yPSIjMzk5MGU0IiAvPjxzdG9wIG9mZnNldD0iMC45MyIgc3RvcC1jb2xvcj0iIzIzODdkZSIgLz48c3RvcCBvZmZzZXQ9IjAuOTkiIHN0b3AtY29sb3I9IiMwODdiZDYiIC8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDA3OGQ0IiAvPjwvcmFkaWFsR3JhZGllbnQ+PHJhZGlhbEdyYWRpZW50IGlkPSJlYzQ3OGJkMy01YjM4LTRlN2YtYjY2MS0xMWYzNTU1NzhiZmYiIGN4PSIzOC45NSIgY3k9IjE4Mi4wNyIgcj0iOS44OCIgZ3JhZGllbnRUcmFuc2Zvcm09InRyYW5zbGF0ZSgtMjguNzEgLTE2My4yNCkgc2NhbGUoMC45NCAwLjk0KSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIG9mZnNldD0iMC4yNyIgc3RvcC1jb2xvcj0iI2ZmZDcwZiIgLz48c3RvcCBvZmZzZXQ9IjAuNDkiIHN0b3AtY29sb3I9IiNmZmNiMTIiIC8+PHN0b3Agb2Zmc2V0PSIwLjg4IiBzdG9wLWNvbG9yPSIjZmVhYzE5IiAvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2ZlYTExYiIgLz48L3JhZGlhbEdyYWRpZW50PjwvZGVmcz48dGl0bGU+SWNvbi1zZWN1cml0eS0yNDU8L3RpdGxlPjxwYXRoIGlkPSJhYWNmODMxMS1hMzE3LTQwMGYtYjYxMy03NGJkMDBkYTVjZTMiIGQ9Ik05LC41QTguNSw4LjUsMCwxLDAsMTcuNSw5LDguNTEsOC41MSwwLDAsMCw5LC41Wk05LDE2LjM0QTcuMzQsNy4zNCwwLDEsMSwxNi4zNCw5LDcuMzQsNy4zNCwwLDAsMSw5LDE2LjM0WiIgZmlsbD0idXJsKCNmYjExNGM5My03YzE2LTQ1NDAtODk5YS0wNzk2MDQxNjI5ZTYpIiAvPjxjaXJjbGUgY3g9IjkiIGN5PSI5IiByPSI3LjM0IiBmaWxsPSIjZmZmIiAvPjxnPjxwYXRoIGlkPSJiZDk4M2M0MS1kYjczLTQwZWMtYTRmNC1kYTEyMTNmYzk5MjQiIGQ9Ik0xMy40NCw3LjMzYTEuODQsMS44NCwwLDAsMCwwLTIuNTloMEwxMC4yOSwxLjU4YTEuODMsMS44MywwLDAsMC0yLjU4LDBoMEw0LjU2LDQuNzRhMS44NCwxLjg0LDAsMCwwLDAsMi41OUw3LjE4LDEwYS41MS41MSwwLDAsMSwuMTUuMzZ2NC44OGEuNjMuNjMsMCwwLDAsLjE4LjQ0bDEuMiwxLjJhLjQxLjQxLDAsMCwwLC41OCwwbDEuMTYtMS4xNmgwbC42OC0uNjhhLjI1LjI1LDAsMCwwLDAtLjM0bC0uNDktLjQ5YS4yNy4yNywwLDAsMSwwLS4zN2wuNDktLjQ5YS4yNS4yNSwwLDAsMCwwLS4zNGwtLjQ5LS40OWEuMjcuMjcsMCwwLDEsMC0uMzdsLjQ5LS40OWEuMjUuMjUsMCwwLDAsMC0uMzRsLS42OC0uNjl2LS4yNVpNOSwyLjM1QTEsMSwwLDAsMSw5LDQuNDIsMSwxLDAsMSwxLDksMi4zNVoiIGZpbGw9InVybCgjZWM0NzhiZDMtNWIzOC00ZTdmLWI2NjEtMTFmMzU1NTc4YmZmKSIgLz48cGF0aCBpZD0iYWQyZTdlNDQtOWJmZC00Nzc1LThiZjQtOGVmMjZhNTQ0OTIxIiBkPSJNOC4xOCwxNS4zaDBhLjIzLjIzLDAsMCwwLC4zOC0uMTd2LTRhLjI0LjI0LDAsMCwwLS4xMS0uMmgwYS4yMi4yMiwwLDAsMC0uMzQuMnY0QS4yOC4yOCwwLDAsMCw4LjE4LDE1LjNaIiBmaWxsPSIjZmY5MzAwIiBvcGFjaXR5PSIwLjc1IiAvPjxyZWN0IGlkPSJhOTk2ZmJmZi0zOTM2LTRiMjQtYjQwNy0zNjkzMzZjMTQzYmEiIHg9IjYuNDgiIHk9IjUuNzkiIHdpZHRoPSI1LjE3IiBoZWlnaHQ9IjAuNjEiIHJ4PSIwLjI4IiBmaWxsPSIjZmY5MzAwIiBvcGFjaXR5PSIwLjc1IiAvPjxyZWN0IGlkPSJiYjEyZDMxYy0zMzUyLTRhMTgtODdkZC1hMTY5YTRhODcyMWQiIHg9IjYuNDgiIHk9IjYuNzgiIHdpZHRoPSI1LjE3IiBoZWlnaHQ9IjAuNjEiIHJ4PSIwLjI4IiBmaWxsPSIjZmY5MzAwIiBvcGFjaXR5PSIwLjc1IiAvPjwvZz48L3N2Zz4="/>
+    <text x="379" y="302" class="node-text-bold">
+      Api enrollment kv
+    </text>
+    <text x="379" y="314" class="node-detail">
+      SKU: standard
+    </text>
+    <text x="379" y="325" class="node-detail">
+      Retention: 7d
+    </text>
+    <text x="379" y="336" class="node-detail">
+      Purge Protected
+    </text>
+    <g class="security-badge" transform="translate(501, 292)">
+      <title>No network ACLs configured: Key Vault has no network restrictions.</title>
+      <circle cx="7" cy="7" r="7" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="8" font-weight="bold">⚠</text>
+    </g>
+    <g class="tag-badge" transform="translate(485, 292)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+    <g class="cost-badge" transform="translate(473, 336)">
+      <title>Estimated monthly cost: ~$0.03/mo</title>
+      <rect x="0" y="0" width="46" height="12" rx="2" fill="#666666" fill-opacity="0.1" stroke="#666666" stroke-width="0.5"/>
+      <text x="23" y="9" text-anchor="middle" fill="#666666" font-size="7" font-weight="bold">~$0.03/mo</text>
+    </g>
+    <text x="379" y="342" class="node-sku" fill="#666666" font-size="7" font-style="italic">
+      standard
+    </text>
+  </g>
+  <g>
+    <rect x="343" y="360" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="343" y="360" width="3" height="64"
+          rx="2" ry="2" fill="#8661C5"/>
+    <image x="347" y="378" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYjZmNmQ5OWUtZjMzMC00ODFkLTgzNmYtZWE1OGNjNDIyMTdmIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48ZGVmcz48cmFkaWFsR3JhZGllbnQgaWQ9ImE3YTFjNDMxLTZjNmQtNGE4Zi05YTY5LThkYTQzN2U1YjBjNSIgY3g9IjkiIGN5PSI3LjM1IiByPSI2LjQyIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjYjc3YWY0IiAvPjxzdG9wIG9mZnNldD0iMC4yMSIgc3RvcC1jb2xvcj0iI2IzNzhmMiIgLz48c3RvcCBvZmZzZXQ9IjAuNDMiIHN0b3AtY29sb3I9IiNhNjcyZWQiIC8+PHN0b3Agb2Zmc2V0PSIwLjY1IiBzdG9wLWNvbG9yPSIjOTI2N2U0IiAvPjxzdG9wIG9mZnNldD0iMC44OCIgc3RvcC1jb2xvcj0iIzc1NTlkOCIgLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM2MjRmZDAiIC8+PC9yYWRpYWxHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9ImVjMGM0ZjBkLTVjOGUtNDg4Mi05NmExLTg5ZDYxODA4ZWI0OSIgeDE9IjkuMDIiIHkxPSIzLjkxIiB4Mj0iOS4wOCIgeTI9IjExLjQ5IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZjJmMmYyIiAvPjxzdG9wIG9mZnNldD0iMC4yMyIgc3RvcC1jb2xvcj0iI2YxZjFmMiIgc3RvcC1vcGFjaXR5PSIwLjk5IiAvPjxzdG9wIG9mZnNldD0iMC4zNyIgc3RvcC1jb2xvcj0iI2VkZWRmMSIgc3RvcC1vcGFjaXR5PSIwLjk1IiAvPjxzdG9wIG9mZnNldD0iMC40OCIgc3RvcC1jb2xvcj0iI2U3ZTVmMCIgc3RvcC1vcGFjaXR5PSIwLjg5IiAvPjxzdG9wIG9mZnNldD0iMC41OCIgc3RvcC1jb2xvcj0iI2RlZGJlZSIgc3RvcC1vcGFjaXR5PSIwLjgxIiAvPjxzdG9wIG9mZnNldD0iMC42NyIgc3RvcC1jb2xvcj0iI2QzY2VlYiIgc3RvcC1vcGFjaXR5PSIwLjciIC8+PHN0b3Agb2Zmc2V0PSIwLjc2IiBzdG9wLWNvbG9yPSIjYzRiZWU4IiBzdG9wLW9wYWNpdHk9IjAuNTciIC8+PHN0b3Agb2Zmc2V0PSIwLjg0IiBzdG9wLWNvbG9yPSIjYjRhYmU1IiBzdG9wLW9wYWNpdHk9IjAuNDEiIC8+PHN0b3Agb2Zmc2V0PSIwLjkyIiBzdG9wLWNvbG9yPSIjYTA5NWUxIiBzdG9wLW9wYWNpdHk9IjAuMjIiIC8+PHN0b3Agb2Zmc2V0PSIwLjk5IiBzdG9wLWNvbG9yPSIjOGI3ZGRjIiBzdG9wLW9wYWNpdHk9IjAuMDIiIC8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjODk3YmRjIiBzdG9wLW9wYWNpdHk9IjAiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHRpdGxlPkljb24tbWFuYWdlLTMxMDwvdGl0bGU+PHBhdGggZD0iTTEwLjIzLDE3LjM5bC44MS0uODdWMTQuMkg3djIuMzJsLjgxLjg3QS4zMi4zMiwwLDAsMCw4LDE3LjVoMkEuMzIuMzIsMCwwLDAsMTAuMjMsMTcuMzlaIiBmaWxsPSIjY2VjZWNlIiAvPjxwYXRoIGQ9Ik05LC41QTUuODksNS44OSwwLDAsMCwzLjA5LDcuMDdjLjI3LDIuNDcsMi42MiwzLjYyLDMuMjksNi43NWEuNDkuNDksMCwwLDAsLjQ3LjM4aDQuM2EuNDkuNDksMCwwLDAsLjQ3LS4zOGMuNjctMy4xMywzLTQuMjgsMy4yOS02Ljc1QTUuODksNS44OSwwLDAsMCw5LC41Wk03LDE0LjIiIGZpbGw9InVybCgjYTdhMWM0MzEtNmM2ZC00YThmLTlhNjktOGRhNDM3ZTViMGM1KSIgLz48cGF0aCBkPSJNMTEuNDYsMy43OWExLjQsMS40LDAsMCwwLTEuMzUsMS40NFY2SDhWNS4yM0ExLjQxLDEuNDEsMCwwLDAsNi41OSwzLjc5LDEuNCwxLjQsMCwwLDAsNS4yNCw1LjIzLDEuNDEsMS40MSwwLDAsMCw2LjU5LDYuNjhoLjY0djZhLjM2LjM2LDAsMCwwLC43Miwwdi02aDIuMTZ2NmEuMzYuMzYsMCwxLDAsLjcyLDB2LTZoLjYzYTEuNCwxLjQsMCwwLDAsMS4zNS0xLjQ1QTEuNCwxLjQsMCwwLDAsMTEuNDYsMy43OVpNNy4yMyw2SDYuNTVhLjc0Ljc0LDAsMCwxLS42OC0uNzcuNzQuNzQsMCwwLDEsLjY4LS43Ny43NC43NCwwLDAsMSwuNjguNzdabTQuMjgsMGgtLjY4VjUuMTlhLjY4LjY4LDAsMSwxLDEuMzUsMEEuNzMuNzMsMCwwLDEsMTEuNTEsNloiIGZpbGw9InVybCgjZWMwYzRmMGQtNWM4ZS00ODgyLTk2YTEtODlkNjE4MDhlYjQ5KSIgLz48cG9seWdvbiBwb2ludHM9IjYuOTYgMTUuOCAxMS4wNCAxNS4wMSAxMS4wNCAxNC41NiA2Ljk2IDE1LjM2IDYuOTYgMTUuOCIgZmlsbD0iIzk5OSIgLz48cG9seWdvbiBwb2ludHM9IjExLjA0IDE2LjExIDExLjA0IDE1LjY3IDYuOTYgMTYuNDggNi45NiAxNi41MiA3LjI3IDE2Ljg2IDExLjA0IDE2LjExIiBmaWxsPSIjOTk5IiAvPjwvc3ZnPg=="/>
+    <text x="379" y="374" class="node-text-bold">
+      Api-enrollment-in...
+    </text>
+    <text x="379" y="386" class="node-detail">
+      web
+    </text>
+    <g class="tag-badge" transform="translate(501, 364)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+    <g class="cost-badge" transform="translate(473, 408)">
+      <title>Estimated monthly cost: ~$12/mo</title>
+      <rect x="0" y="0" width="46" height="12" rx="2" fill="#666666" fill-opacity="0.1" stroke="#666666" stroke-width="0.5"/>
+      <text x="23" y="9" text-anchor="middle" fill="#666666" font-size="7" font-weight="bold">~$12/mo</text>
+    </g>
+  </g>
+  <g>
+    <rect x="343" y="432" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="343" y="432" width="3" height="64"
+          rx="2" ry="2" fill="#8661C5"/>
+    <image x="347" y="450" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTlmNTZiNGUtMmE1MS00NDcxLTk0ODgtZDQ2MTQwOGFlNGViIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImU0ZTFlNDk0LTIxZjEtNGU5Yy1hNmZhLTA5OTNlZmZmMDhkMyIgeDE9IjkiIHkxPSIxNy4yIiB4Mj0iOSIgeTI9Ii0zLjI4IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjNWU5NjI0IiAvPjxzdG9wIG9mZnNldD0iMC4xOCIgc3RvcC1jb2xvcj0iIzYyOWMyNSIgLz48c3RvcCBvZmZzZXQ9IjAuNDQiIHN0b3AtY29sb3I9IiM2ZGFlMmEiIC8+PHN0b3Agb2Zmc2V0PSIwLjczIiBzdG9wLWNvbG9yPSIjN2ZjYjMwIiAvPjxzdG9wIG9mZnNldD0iMC44MiIgc3RvcC1jb2xvcj0iIzg2ZDYzMyIgLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48Zz48cGF0aCBkPSJNMTcuNSwyLjVWMTMuMzNhLjU4LjU4LDAsMCwxLS41OC41OEgxMi40YS4xNS4xNSwwLDAsMC0uMTUuMTRWMTUuOGEuMjguMjgsMCwwLDEtLjQ1LjIzTDkuMDgsMTMuOTRsLS4wOSwwSDEuMDhhLjU4LjU4LDAsMCwxLS41OC0uNThWMi41YS41OC41OCwwLDAsMSwuNTgtLjU5SDE2LjkyQS41OC41OCwwLDAsMSwxNy41LDIuNVoiIGZpbGw9InVybCgjZTRlMWU0OTQtMjFmMS00ZTljLWE2ZmEtMDk5M2VmZmYwOGQzKSIgLz48cGF0aCBkPSJNOS41NCw5LjYzSDguMzhBLjM2LjM2LDAsMCwxLDgsOS4yOUw3LjgsMy40M2EuMzUuMzUsMCwwLDEsLjM1LS4zNmgxLjdhLjM1LjM1LDAsMCwxLC4zNS4zN0w5Ljg5LDkuM0EuMzUuMzUsMCwwLDEsOS41NCw5LjYzWiIgZmlsbD0iI2ZmZiIgLz48cmVjdCB4PSI4LjEzIiB5PSIxMC42MiIgd2lkdGg9IjEuNjkiIGhlaWdodD0iMS42OSIgcng9IjAuNjEiIGZpbGw9IiNmZmYiIC8+PC9nPjwvc3ZnPg=="/>
+    <text x="379" y="446" class="node-text-bold">
+      App-insights-smar...
+    </text>
+    <g class="tag-badge" transform="translate(501, 436)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g>
+  <g>
+    <rect x="343" y="504" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="343" y="504" width="3" height="64"
+          rx="2" ry="2" fill="#8661C5"/>
+    <image x="347" y="522" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYjM4OGU5NDQtNTUwOS00OWM5LTg0ZDctZjM4YmZmYTk5NWIyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImE5OTdlMjAzLTFkN2QtNGNiOS1iMTMxLTVkYzQ0ZTAyOWI0NiIgeDE9IjUuMjMiIHkxPSIxNy40NSIgeDI9IjUuMjMiIHkyPSI4LjA5IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMTk4OGQ5IiAvPjxzdG9wIG9mZnNldD0iMC45IiBzdG9wLWNvbG9yPSIjNTRhZWYwIiAvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJlMTIyZTlkOC1hZWU1LTRmMWEtYTYwZS1iMWVhZTM1NWRhYTUiIHgxPSIxMS41IiB5MT0iMTIuNDUiIHgyPSIxMS41IiB5Mj0iMC41NSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzE5OGFiMyIgLz48c3RvcCBvZmZzZXQ9IjAuMDEiIHN0b3AtY29sb3I9IiMxOThiYjQiIC8+PHN0b3Agb2Zmc2V0PSIwLjQ0IiBzdG9wLWNvbG9yPSIjMjdiMmQ3IiAvPjxzdG9wIG9mZnNldD0iMC43OSIgc3RvcC1jb2xvcj0iIzJmY2JlZCIgLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMzMmQ0ZjUiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHRpdGxlPkljb24tbWFuYWdlLTMwNzwvdGl0bGU+PHBhdGggZD0iTTUuNTksMTMuMTNIOS45MXY0LjMySDUuNTlaTTEuMTUsMTcuNDVINC44N1YxMy4xM0guNTV2My43MkEuNi42LDAsMCwwLDEuMTUsMTcuNDVabS0uNi01SDQuODdWOC4wOUguNTVaIiBmaWxsPSJ1cmwoI2E5OTdlMjAzLTFkN2QtNGNiOS1iMTMxLTVkYzQ0ZTAyOWI0NikiIC8+PHBhdGggZD0iTTExLjUuNTVhNS44OSw1Ljg5LDAsMCwxLDUuOTUsNiw1Ljg5LDUuODksMCwwLDEtNS45NSw1Ljk1SDUuNTVWNi41QTUuODksNS44OSwwLDAsMSwxMS41LjU1WiIgZmlsbC1ydWxlPSJldmVub2RkIiBmaWxsPSJ1cmwoI2UxMjJlOWQ4LWFlZTUtNGYxYS1hNjBlLWIxZWFlMzU1ZGFhNSkiIC8+PHJlY3QgeD0iNy41OSIgeT0iNS42NSIgd2lkdGg9IjEuMzYiIGhlaWdodD0iNC4wOCIgZmlsbD0iI2ZmZiIgLz48cmVjdCB4PSIxMC4zMSIgeT0iNy4wMSIgd2lkdGg9IjEuMzYiIGhlaWdodD0iMi43MiIgZmlsbD0iI2ZmZiIgLz48cmVjdCB4PSIxMy4wMyIgeT0iNC4yOSIgd2lkdGg9IjEuMzYiIGhlaWdodD0iNS40NCIgZmlsbD0iI2ZmZiIgLz48L3N2Zz4="/>
+    <text x="379" y="518" class="node-text-bold">
+      Aca logs
+    </text>
+    <text x="379" y="530" class="node-detail">
+      SKU: PerGB2018
+    </text>
+    <text x="379" y="541" class="node-detail">
+      Retention: 30d
+    </text>
+    <g class="tag-badge" transform="translate(501, 508)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+    <g class="cost-badge" transform="translate(473, 552)">
+      <title>Estimated monthly cost: ~$0.8k/mo</title>
+      <rect x="0" y="0" width="46" height="12" rx="2" fill="#D83B01" fill-opacity="0.1" stroke="#D83B01" stroke-width="0.5"/>
+      <text x="23" y="9" text-anchor="middle" fill="#D83B01" font-size="7" font-weight="bold">~$0.8k/mo</text>
+    </g>
+    <text x="379" y="558" class="node-sku" fill="#666666" font-size="7" font-style="italic">
+      PerGB2018
+    </text>
+  </g>
+  <g>
+    <rect x="343" y="576" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="343" y="576" width="3" height="64"
+          rx="2" ry="2" fill="#5C2D91"/>
+    <image x="347" y="594" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0idXVpZC1mZGQ3NjgwZS04YWNlLTQ0MWEtOGEzYS03MzQxMGMzYjFmMjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjE4IiBoZWlnaHQ9IjE4IiB2aWV3Qm94PSIwIDAgMTggMTgiPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0idXVpZC0zOGMwNzk3Ny1hYjlhLTQ4ZWItYTY2OC1jZGEzMTAyYmJkODUiIHgxPSI3LjY5NyIgeTE9Ijc3OS4xNjgiIHgyPSIxNC4wODIiIHkyPSI3ODYuNjMxIiBncmFkaWVudFRyYW5zZm9ybT0idHJhbnNsYXRlKDAgNzkxLjUxNikgc2NhbGUoMSAtMSkiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMyMjUwODYiIC8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDA1NWM1IiAvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJ1dWlkLWFlZDRhN2JjLWIzODAtNGMzNC1iODQxLTJkMGYzNGQyNGYxNyIgeDE9IjYuMzY0IiB5MT0iNzc4LjE2NCIgeDI9IjYuMzY0IiB5Mj0iNzk0LjQxMiIgZ3JhZGllbnRUcmFuc2Zvcm09InRyYW5zbGF0ZSgwIDc5MS41MTYpIHNjYWxlKDEgLTEpIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjNmRmIiAvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzAyOTRlNCIgLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0idXVpZC1lMmE3YjdmMi1iZjE2LTRhNzYtYmEyNy03ZDE0OWFiOGExOTQiIHgxPSI5LjAwMSIgeTE9Ijc3NS45NTYiIHgyPSI5LjAwMSIgeTI9Ijc5NC44NDUiIGdyYWRpZW50VHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCA3OTEuNTE2KSBzY2FsZSgxIC0xKSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzQ0ZGJmOSIgLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNjYmY4ZmYiIC8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9InV1aWQtYzY3ZjMzNjQtMDcxYy00MWY5LWExNzUtZDNkZTFmODM3ZTBhIiB4MT0iMTMuNSIgeTE9Ijc3NC43MjEiIHgyPSIxMy41IiB5Mj0iNzkwLjc4MiIgZ3JhZGllbnRUcmFuc2Zvcm09InRyYW5zbGF0ZSgwIDc5MS41MTYpIHNjYWxlKDEgLTEpIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMDQxNjQyIiAvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzA0MTY0MiIgc3RvcC1vcGFjaXR5PSIuMjUiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PGc+PHBhdGggZD0ibTE3LjY0Nyw5LjkwNkwxMC4xNDcsMS40NDVjLS41OTktLjY3Ni0xLjY5NC0uNjc2LTIuMjk0LDBMLjM1Myw5LjkwNmMtLjU3OS42NTQtLjQyOCwxLjY0MS4zMjMsMi4xMTFsNy40OTksNC42ODhjLjUuMzEzLDEuMTQ4LjMxMywxLjY0OCwwbDcuNDk5LTQuNjg4Yy43NTEtLjQ2OS45MDItMS40NTcuMzIzLTIuMTExaDBaIiBmaWxsPSJ1cmwoI3V1aWQtMzhjMDc5NzctYWI5YS00OGViLWE2NjgtY2RhMzEwMmJiZDg1KSIgc3Ryb2tlLXdpZHRoPSIwIiAvPjxwYXRoIGQ9Im0xMC4xNDgsMS40NDVjLS41OTktLjY3Ni0xLjY5NC0uNjc2LTIuMjk0LDBMLjM1NCw5LjkwNmMtLjU3OS42NTQtLjQyOCwxLjY0MS4zMjMsMi4xMTEsMCwwLDIuNzc2LDEuNzM1LDMuMTI2LDEuOTU0LjM4OC4yNDIsMS4wMzMuNTExLDEuNzE1LjUxMS42MjEsMCwxLjE5Ny0uMTgsMS42NzYtLjQ4NywwLDAsMCwwLC4wMDItLjAwMWwxLjgwNC0xLjEyOC00LjM2NC0yLjcyOCw0LjQ3NC01LjA0N2MuNTUtLjYyNywxLjM3Ny0xLjAyNiwyLjMwMi0xLjAyNi40NzIsMCwuOTE3LjEwNywxLjMxNC4yOTJsLTIuNTc5LTIuOTA5di0uMDAyWiIgZmlsbD0idXJsKCN1dWlkLWFlZDRhN2JjLWIzODAtNGMzNC1iODQxLTJkMGYzNGQyNGYxNykiIHN0cm9rZS13aWR0aD0iMCIgLz48cG9seWdvbiBwb2ludHM9IjQuNjM2IDEwLjEzOCA0LjY4OCAxMC4xNyA5LjAwMSAxMi44NjYgOS4wMDEgMTIuODY2IDEzLjM2NSAxMC4xMzggMTMuMzY2IDEwLjEzOCAxMy4zNjUgMTAuMTM4IDkuMDAxIDUuMjE0IDQuNjM2IDEwLjEzOCIgZmlsbD0idXJsKCN1dWlkLWUyYTdiN2YyLWJmMTYtNGE3Ni1iYTI3LTdkMTQ5YWI4YTE5NCkiIHN0cm9rZS13aWR0aD0iMCIgLz48cGF0aCBkPSJtOS4wMDEsMTYuOTM5Yy4yODcsMCwuNTc0LS4wNzguODI0LS4yMzRsNy40OTktNC42ODhjLjc1MS0uNDY5LjkwMi0xLjQ1Ny4zMjMtMi4xMTFMMTAuMTQ4LDEuNDQ1Yy0uMy0uMzM4LS43MjMtLjUwNy0xLjE0Ny0uNTA3djE2LjAwMVoiIGZpbGw9InVybCgjdXVpZC1jNjdmMzM2NC0wNzFjLTQxZjktYTE3NS1kM2RlMWY4MzdlMGEpIiBmaWxsLW9wYWNpdHk9Ii41IiBpc29sYXRpb249Imlzb2xhdGUiIG9wYWNpdHk9Ii41IiBzdHJva2Utd2lkdGg9IjAiIC8+PC9nPjxnPjxwYXRoIGlkPSJ1dWlkLWY2NjQ4ZDg2LTA0OGEtNGY0MC1hNmRmLTdjZTEyMDExNmE5OCIgZD0ibTE2LjUxMiwxMC44MzFjLjQ2NC0uNDU4LjQ2OC0xLjIwNi4wMS0xLjY3LS4wMDMtLjAwMy0uMDA2LS4wMDYtLjAxLS4wMWgwbC0yLjAzNS0yLjAzNWMtLjQ2MS0uNDYxLTEuMjA4LS40NjEtMS42NjksMGgwbC0yLjAzNSwyLjAzNWMtLjQ1Ni40NjctLjQ1NiwxLjIxMywwLDEuNjc5bDEuNywxLjdjLjA2MS4wNjMuMDk0LjE0Ny4wOTIuMjM0djMuMTU1Yy0uMDAzLjEwOC4wNDEuMjEzLjEyMi4yODVsLjc3My43NzNjLjA5NS4xMDQuMjU1LjExMi4zNTkuMDE3LjAwNi0uMDA1LjAxMi0uMDExLjAxNy0uMDE3bC43NDMtLjc0M2gwbC40NDgtLjQ0OGMuMDU4LS4wNTkuMDU4LS4xNTQsMC0uMjE0bC0uMzE2LS4zMTVjLS4wNjctLjA1OS0uMDc0LS4xNjItLjAxNC0uMjMuMDA1LS4wMDUuMDA5LS4wMS4wMTQtLjAxNGwuMzE2LS4zMTZjLjA1OS0uMDYzLjA1OS0uMTYxLDAtLjIyNGwtLjMxNi0uMzE2Yy0uMDY1LS4wNTQtLjA3My0uMTUtLjAxOS0uMjE1LjAwNi0uMDA3LjAxMi0uMDEzLjAxOS0uMDE5bC4zMTYtLjMyNmMuMDU4LS4wNTkuMDU4LS4xNTQsMC0uMjE0bC0uNDQ4LS40NDh2LS4xNjNsMS45MzQtMS45NDRabS0yLjg3LTMuMjI2Yy4zNzEsMCwuNjcyLjMwMS42NzIuNjcycy0uMzAxLjY3Mi0uNjcyLjY3Mi0uNjcyLS4zMDEtLjY3Mi0uNjcyaDBjMC0uMzcxLjMwMS0uNjcyLjY3Mi0uNjcyWiIgZmlsbD0iI2ZmY2EwMCIgc3Ryb2tlLXdpZHRoPSIwIiAvPjxwYXRoIGlkPSJ1dWlkLWUxNjk3YmY0LThlNWQtNGQ2Mi05MGM5LTY1NjlkNzlkNDk0NCIgZD0ibTEzLjEzMywxNi4wNDJoMGMuMDU1LjA1Ny4xNDUuMDU4LjIwMS4wMDMuMDMxLS4wMy4wNDctLjA3Mi4wNDMtLjExNXYtMi42MDVjLjAwMi0uMDUxLS4wMjEtLjEtLjA2MS0uMTMyaDBjLS4wNjQtLjA0NS0uMTUzLS4wMy0uMTk5LjAzNC0uMDIuMDI5LS4wMjkuMDY0LS4wMjUuMDk4djIuNTU1Yy0uMDIuMDU4LS4wMDQuMTIyLjA0MS4xNjNaIiBmaWxsPSIjZmY5MzAwIiBpc29sYXRpb249Imlzb2xhdGUiIG9wYWNpdHk9Ii43NSIgc3Ryb2tlLXdpZHRoPSIwIiAvPjxyZWN0IGlkPSJ1dWlkLWM5MzBkNGMyLTlmNDEtNDhjNy1hZGY3LWFjYmQ3M2FmNmZiZiIgeD0iMTIuMDE0IiB5PSI5LjgzNCIgd2lkdGg9IjMuMzQ4IiBoZWlnaHQ9Ii4zOTciIHJ4PSIuMTgzIiByeT0iLjE4MyIgZmlsbD0iI2ZmOTMwMCIgaXNvbGF0aW9uPSJpc29sYXRlIiBvcGFjaXR5PSIuNzUiIHN0cm9rZS13aWR0aD0iMCIgLz48cmVjdCBpZD0idXVpZC03NTVhYWE0Ni04Yjg5LTQ1ZjUtOWRhMC04YTQyNzgyYzVkZGQiIHg9IjEyLjAxNCIgeT0iMTAuNDc1IiB3aWR0aD0iMy4zNDgiIGhlaWdodD0iLjM5NyIgcng9Ii4xODMiIHJ5PSIuMTgzIiBmaWxsPSIjZmY5MzAwIiBpc29sYXRpb249Imlzb2xhdGUiIG9wYWNpdHk9Ii43NSIgc3Ryb2tlLXdpZHRoPSIwIiAvPjwvZz48L3N2Zz4="/>
+    <text x="379" y="590" class="node-text-bold">
+      Adf mi
+    </text>
+    <text x="379" y="602" class="node-detail">
+      var.location
+    </text>
+    <g class="tag-badge" transform="translate(501, 580)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g>
+  <g>
+    <rect x="343" y="648" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="343" y="648" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="347" y="666" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="379" y="662" class="node-text-bold">
+      Api enrollment
+    </text>
+    <text x="379" y="674" class="node-detail">
+      SKU: Developer_1
+    </text>
+    <text x="379" y="685" class="node-detail">
+      Publisher: var.publisher_..
+    </text>
+    <g class="tag-badge" transform="translate(501, 652)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+    <text x="379" y="702" class="node-sku" fill="#666666" font-size="7" font-style="italic">
+      Developer_1
+    </text>
+  </g>
+  <g>
+    <rect x="343" y="720" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="343" y="720" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="347" y="738" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="379" y="734" class="node-text-bold">
+      Apim cert
+    </text>
+    <g class="tag-badge" transform="translate(501, 724)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g>
+  <g>
+    <rect x="343" y="792" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="343" y="792" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="347" y="810" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="379" y="806" class="node-text-bold">
+      Api-enrollment
+    </text>
+    <g class="tag-badge" transform="translate(501, 796)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g>
+  <g>
+    <rect x="247" y="864" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="247" y="864" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="251" y="882" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="283" y="878" class="node-text-bold">
+      Function backend
+    </text>
+    <g class="tag-badge" transform="translate(405, 868)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g>
+  <g>
+    <rect x="439" y="864" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="439" y="864" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="443" y="882" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="475" y="878" class="node-text-bold">
+      Aca backend
+    </text>
+    <g class="tag-badge" transform="translate(597, 868)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g>
+  <g>
+    <rect x="343" y="936" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="343" y="936" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="347" y="954" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="379" y="950" class="node-text-bold">
+      Strangler rollout
+    </text>
+    <g class="tag-badge" transform="translate(501, 940)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g>
+  <g>
+    <rect x="247" y="1008" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="247" y="1008" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="251" y="1026" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="283" y="1022" class="node-text-bold">
+      Api-enrollment
+    </text>
+    <text x="283" y="1034" class="node-detail">
+      SKU: Y1
+    </text>
+    <text x="283" y="1045" class="node-detail">
+      Windows
+    </text>
+    <g class="tag-badge" transform="translate(405, 1012)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+    <g class="cost-badge" transform="translate(377, 1056)">
+      <title>Estimated monthly cost: ~$13/mo</title>
+      <rect x="0" y="0" width="46" height="12" rx="2" fill="#666666" fill-opacity="0.1" stroke="#666666" stroke-width="0.5"/>
+      <text x="23" y="9" text-anchor="middle" fill="#666666" font-size="7" font-weight="bold">~$13/mo</text>
+    </g>
+    <text x="283" y="1062" class="node-sku" fill="#666666" font-size="7" font-style="italic">
+      Y1
+    </text>
+  </g>
+  <g>
+    <rect x="439" y="1008" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="439" y="1008" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="443" y="1026" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="475" y="1022" class="node-text-bold">
+      Api enrollment lo...
+    </text>
+    <text x="475" y="1034" class="node-detail">
+      SKU: WS1
+    </text>
+    <text x="475" y="1045" class="node-detail">
+      Windows
+    </text>
+    <g class="tag-badge" transform="translate(597, 1012)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+    <g class="cost-badge" transform="translate(569, 1056)">
+      <title>Estimated monthly cost: ~$13/mo</title>
+      <rect x="0" y="0" width="46" height="12" rx="2" fill="#666666" fill-opacity="0.1" stroke="#666666" stroke-width="0.5"/>
+      <text x="23" y="9" text-anchor="middle" fill="#666666" font-size="7" font-weight="bold">~$13/mo</text>
+    </g>
+    <text x="475" y="1062" class="node-sku" fill="#666666" font-size="7" font-style="italic">
+      WS1
+    </text>
+  </g>
+  <g>
+    <rect x="343" y="1080" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="343" y="1080" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="347" y="1098" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="379" y="1094" class="node-text-bold">
+      Api-enrollment
+    </text>
+    <g class="tag-badge" transform="translate(501, 1084)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g>
+  <g>
+    <rect x="343" y="1152" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="343" y="1152" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="347" y="1170" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="379" y="1166" class="node-text-bold">
+      -api-enrollment-
+    </text>
+    <text x="379" y="1178" class="node-detail">
+      var.location
+    </text>
+    <g class="tag-badge" transform="translate(501, 1156)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g>
+  <g>
+    <rect x="343" y="1224" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="343" y="1224" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="347" y="1242" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="379" y="1238" class="node-text-bold">
+      -api-enrollment-d...
+    </text>
+    <text x="379" y="1250" class="node-detail">
+      var.location
+    </text>
+    <g class="tag-badge" transform="translate(501, 1228)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g>
+  <g>
+    <rect x="343" y="1296" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="343" y="1296" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="347" y="1314" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="379" y="1310" class="node-text-bold">
+      Api enrollment si...
+    </text>
+    <text x="379" y="1322" class="node-detail">
+      var.location
+    </text>
+    <g class="tag-badge" transform="translate(501, 1300)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g>
+  <g>
+    <rect x="343" y="1368" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="343" y="1368" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="347" y="1386" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="379" y="1382" class="node-text-bold">
+      Api enrollment lo...
+    </text>
+    <text x="379" y="1394" class="node-detail">
+      var.location
+    </text>
+    <g class="tag-badge" transform="translate(501, 1372)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g>
+  <g>
+    <rect x="343" y="1440" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="343" y="1440" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="347" y="1458" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="379" y="1454" class="node-text-bold">
+      Api env
+    </text>
+    <text x="379" y="1466" class="node-detail">
+      var.location
+    </text>
+    <g class="tag-badge" transform="translate(501, 1444)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g>
+  <g>
+    <rect x="343" y="1512" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="343" y="1512" width="3" height="64"
+          rx="2" ry="2" fill="#00BCF2"/>
+    <image x="347" y="1530" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iZTlmN2JhNzMtNTZiOC00ODY0LTk2ZmYtZGNlODBiZWY3MjlhIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImJkZjI3ZGM2LTAyNWMtNDgwNS04YmZkLTNhMDVkZWZkM2ZiZCIgeDE9IjguNjM3IiB5MT0iLTEuOTkxIiB4Mj0iOC42MzciIHkyPSIxNi43MzkiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiM1ZWEwZWYiIC8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDA3OGQ0IiAvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJmY2Q2YzZjNy1lMmViLTRhMzItYjkxNC0zYTg0ODU1ODVhMWIiIHgxPSIxMi45NiIgeTE9IjguNTYxIiB4Mj0iMTIuOTYiIHkyPSI2LjE0MSIgZ3JhZGllbnRUcmFuc2Zvcm09Im1hdHJpeCgxLCAwLCAwLCAtMSwgMCwgMjApIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMzMzMTMyIiAvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzViNWE1YyIgLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cGF0aCBkPSJNNy40Myw4LjE3OGwyLjU4OS0xLjU3Myw3LjI1NSwyLjczMUEzLjY2NCwzLjY2NCwwLDAsMCwxNi4yMyw3LjQ5bC0uMDEtLjA1QTQuMTk0LDQuMTk0LDAsMCwwLDE0LDYuMzJhNC45MSw0LjkxLDAsMCwwLTUuMS00LjdBNS4wNzEsNS4wNzEsMCwwLDAsNC4wNiw0LjkxLDQuNjIxLDQuNjIxLDAsMCwwLDAsOS4zOWE0LjczLDQuNzMsMCwwLDAsNC44OSw0LjU0SDcuNDNaIiBmaWxsPSJ1cmwoI2JkZjI3ZGM2LTAyNWMtNDgwNS04YmZkLTNhMDVkZWZkM2ZiZCkiIC8+PHBvbHlnb24gcG9pbnRzPSIxMC4wNyA3LjE1OSAxMC4wOCAxMS40MzkgMTcuOTkgMTMuMTE5IDE3Ljk5IDEwLjEzOSAxMC4wNyA3LjE1OSIgZmlsbD0iIzc2NzY3NiIgLz48cG9seWxpbmUgcG9pbnRzPSIxMC4wNyA3LjE1OSA3LjkzIDguNDU5IDcuOTMgMTIuNDM5IDEwLjA4IDExLjQzOSIgZmlsbD0iIzk5OSIgLz48cG9seWdvbiBwb2ludHM9IjEzLjY4IDExLjQ5OSAxNC40IDExLjY5OSAxNC40IDkuMzY5IDEzLjY4IDkuMTE5IDEzLjY4IDExLjQ5OSIgZmlsbD0iI2EzYTNhMyIgLz48cG9seWdvbiBwb2ludHM9IjEyLjk2IDguODg5IDEyLjI0IDguNjI5IDEyLjI0IDExLjExOSAxMi45NiAxMS4zMTkgMTIuOTYgOC44ODkiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNS4xMiAxMS44ODkgMTUuODIgMTIuMDc5IDE1Ljg0IDkuODU5IDE1LjEyIDkuNjE5IDE1LjEyIDExLjg4OSIgZmlsbD0iI2EzYTNhMyIgLz48cG9seWdvbiBwb2ludHM9IjEwLjgxIDEwLjc0OSAxMS41MyAxMC45MjkgMTEuNTMgOC4zOTkgMTAuODEgOC4xNTkgMTAuODEgMTAuNzQ5IiBmaWxsPSIjYTNhM2EzIiAvPjxwb2x5Z29uIHBvaW50cz0iMTcuMjcgMTAuMzQ5IDE2LjU1IDEwLjA5OSAxNi41NSAxMi4yNjkgMTcuMjcgMTIuNDY5IDE3LjI3IDEwLjM0OSIgZmlsbD0iI2EzYTNhMyIgLz48cGF0aCBpZD0iZWYwZDFiNTQtYTFlNy00Y2I5LWE0ZTUtOGE4NTE4ZTdjMTI3IiBkPSJNOC42NiwxMS4zNjlsLS4zNi4yMVY4Ljc0OWwuMzYtLjE5Wm0uNzEtMy4yMkw5LDguMzg5djIuNzVsLjM3LS4yWiIgZmlsbD0iI2IzYjNiMyIgLz48cG9seWdvbiBwb2ludHM9IjE3Ljk5IDEzLjExOSAxNS44MyAxMy44NTkgNy45MyAxMi40MzkgMTAuMDggMTEuNDM5IDE3Ljk5IDEzLjExOSIgZmlsbD0idXJsKCNmY2Q2YzZjNy1lMmViLTRhMzItYjkxNC0zYTg0ODU1ODVhMWIpIiAvPjxwb2x5Z29uIHBvaW50cz0iMTcuOTkgMTYuMTY5IDEwLjA0IDE3LjY3OSAxMC4wOCAxMi4wODkgMTcuOTkgMTMuNTU5IDE3Ljk5IDE2LjE2OSIgZmlsbD0iIzc2NzY3NiIgLz48cG9seWdvbiBwb2ludHM9IjEwLjgxIDE2Ljc1OSAxMC44MSAxMy4yMDkgMTEuNTMgMTMuMjk5IDExLjUzIDE2LjYzOSAxMC44MSAxNi43NTkiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxMi45NiAxNi4zOTkgMTIuMjQgMTYuNTI5IDEyLjI0IDEzLjM4OSAxMi45NiAxMy40OTkgMTIuOTYgMTYuMzk5IDEyLjk2IDE2LjM5OSIgZmlsbD0iI2EzYTNhMyIgLz48cG9seWdvbiBwb2ludHM9IjEzLjY4IDE2LjI4OSAxMy42OCAxMy41NjkgMTQuNCAxMy42NTkgMTQuNCAxNi4xNTkgMTMuNjggMTYuMjg5IiBmaWxsPSIjYTNhM2EzIiAvPjxwb2x5Z29uIHBvaW50cz0iMTUuODMgMTUuOTA5IDE1LjEyIDE2LjAzOSAxNS4xMiAxMy43NDkgMTUuODMgMTMuODU5IDE1LjgzIDE1LjkwOSIgZmlsbD0iI2EzYTNhMyIgLz48cG9seWdvbiBwb2ludHM9IjE3LjI5IDE1LjY3OSAxNi41NSAxNS44MDkgMTYuNTUgMTMuOTI5IDE3LjI0IDE0LjAxOSAxNy4yOSAxNS42NzkiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggaWQ9ImI5ZjI1ZWI0LTRjODgtNDVjMi1iYzRkLWY5OTI3NTdkN2UwZSIgZD0iTTcuOTMsMTYuNHYtMy4yNmwyLjE2LTF2NS42WiIgZmlsbD0iIzk5OSIgLz48cGF0aCBpZD0iZWI5MjAwYTctNDY5My00NDI3LWJkYWUtYjMzY2U5MGZmN2YyIiBkPSJNOC42MSwxNi4zODlsLS4zMi0uMTZ2LTIuNzZsLjMyLS4xNVptLjc3LTMuNDUtLjM4LjE5djMuNDhsLjM3LjE5di0zLjg2WiIgZmlsbD0iI2IzYjNiMyIgLz48L3N2Zz4="/>
+    <text x="379" y="1526" class="node-text-bold">
+      Acr
+    </text>
+    <text x="379" y="1538" class="node-detail">
+      SKU: var.enable_acr_geo_r..
+    </text>
+    <text x="379" y="1549" class="node-detail">
+      Zone Redundant
+    </text>
+    <g class="tag-badge" transform="translate(501, 1516)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+    <g class="cost-badge" transform="translate(473, 1560)">
+      <title>Estimated monthly cost: ~$5/mo</title>
+      <rect x="0" y="0" width="46" height="12" rx="2" fill="#666666" fill-opacity="0.1" stroke="#666666" stroke-width="0.5"/>
+      <text x="23" y="9" text-anchor="middle" fill="#666666" font-size="7" font-weight="bold">~$5/mo</text>
+    </g>
+    <text x="379" y="1566" class="node-sku" fill="#666666" font-size="7" font-style="italic">
+      var.enable_acr_geo_replication || var.enable_zone_redundancy ? &quot;Premium&quot; : &quot;Basic&quot;
+    </text>
+  </g>
+  <g>
+    <rect x="343" y="1584" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="343" y="1584" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="347" y="1602" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="379" y="1598" class="node-text-bold">
+      Api app
+    </text>
+    <g class="tag-badge" transform="translate(501, 1588)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g>
+  <g>
+    <rect x="343" y="1656" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="343" y="1656" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="347" y="1674" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="379" y="1670" class="node-text-bold">
+      Api-enrollment-db
+    </text>
+    <text x="379" y="1682" class="node-detail">
+      SQL v12.0
+    </text>
+    <text x="379" y="1693" class="node-detail">
+      TLS: 1.2
+    </text>
+    <text x="379" y="1704" class="node-detail">
+      var.location
+    </text>
+    <g class="security-badge" transform="translate(501, 1660)">
+      <title>No Azure AD administrator: SQL Server has no Azure AD administrator configured.</title>
+      <circle cx="7" cy="7" r="7" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="8" font-weight="bold">⚠</text>
+    </g>
+    <g class="tag-badge" transform="translate(485, 1660)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g>
+  <g>
+    <rect x="55" y="1785" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="55" y="1785" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="59" y="1803" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="91" y="1799" class="node-text-bold">
+      Adf mi to enrollm...
+    </text>
+    <text x="91" y="1811" class="node-detail">
+      Role: Storage Blob Data C..
+    </text>
+    <g class="tag-badge" transform="translate(213, 1789)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g>
+  <g>
+    <rect x="247" y="1785" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="247" y="1785" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="251" y="1803" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="283" y="1799" class="node-text-bold">
+      Kv reader
+    </text>
+    <text x="283" y="1811" class="node-detail">
+      Role: Key Vault Secrets O..
+    </text>
+    <g class="tag-badge" transform="translate(405, 1789)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g>
+  <g>
+    <rect x="439" y="1785" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="439" y="1785" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="443" y="1803" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="475" y="1799" class="node-text-bold">
+      K12 contributors ...
+    </text>
+    <text x="475" y="1811" class="node-detail">
+      Role: Key Vault Secrets O..
+    </text>
+    <g class="tag-badge" transform="translate(597, 1789)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g>
+  <g>
+    <rect x="631" y="1785" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="631" y="1785" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="635" y="1803" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="667" y="1799" class="node-text-bold">
+      Kv apim secrets
+    </text>
+    <text x="667" y="1811" class="node-detail">
+      Role: Key Vault Secrets O..
+    </text>
+    <g class="tag-badge" transform="translate(789, 1789)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g>
+  <g>
+    <rect x="55" y="1857" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="55" y="1857" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="59" y="1875" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="91" y="1871" class="node-text-bold">
+      Api enrollment fu...
+    </text>
+    <text x="91" y="1883" class="node-detail">
+      Role: Contributor
+    </text>
+    <g class="tag-badge" transform="translate(213, 1861)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g>
+  <g>
+    <rect x="247" y="1857" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="247" y="1857" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="251" y="1875" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="283" y="1871" class="node-text-bold">
+      Api enrollment lo...
+    </text>
+    <text x="283" y="1883" class="node-detail">
+      Role: Contributor
+    </text>
+    <g class="tag-badge" transform="translate(405, 1861)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g>
+  <g>
+    <rect x="439" y="1857" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="439" y="1857" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="443" y="1875" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="475" y="1871" class="node-text-bold">
+      Logic app to apim...
+    </text>
+    <text x="475" y="1883" class="node-detail">
+      Role: API Management Serv..
+    </text>
+    <g class="tag-badge" transform="translate(597, 1861)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g>
+  <g>
+    <rect x="631" y="1857" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="631" y="1857" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="635" y="1875" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="667" y="1871" class="node-text-bold">
+      Acr pull
+    </text>
+    <text x="667" y="1883" class="node-detail">
+      Role: AcrPull
+    </text>
+    <g class="tag-badge" transform="translate(789, 1861)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g>
+  <g>
+    <rect x="151" y="1929" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="151" y="1929" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="155" y="1947" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="187" y="1943" class="node-text-bold">
+      Kv aca reader
+    </text>
+    <text x="187" y="1955" class="node-detail">
+      Role: Key Vault Secrets U..
+    </text>
+    <g class="tag-badge" transform="translate(309, 1933)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g>
+  <g>
+    <rect x="343" y="1929" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="343" y="1929" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="347" y="1947" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="379" y="1943" class="node-text-bold">
+      Function blob del...
+    </text>
+    <text x="379" y="1955" class="node-detail">
+      Role: Storage Blob Delega..
+    </text>
+    <g class="tag-badge" transform="translate(501, 1933)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g>
+  <g>
+    <rect x="535" y="1929" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="535" y="1929" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="539" y="1947" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="571" y="1943" class="node-text-bold">
+      K12 contributors sa
+    </text>
+    <text x="571" y="1955" class="node-detail">
+      Role: Storage Blob Delega..
+    </text>
+    <g class="tag-badge" transform="translate(693, 1933)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g>
+  <g>
+    <rect x="343" y="2001" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="343" y="2001" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="347" y="2019" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="379" y="2015" class="node-text-bold">
+      Apim cert
+    </text>
+    <g class="tag-badge" transform="translate(501, 2005)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g>
+  <g>
+    <rect x="343" y="2073" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="343" y="2073" width="3" height="64"
+          rx="2" ry="2" fill="#0078D4"/>
+    <image x="347" y="2091" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImFhMzJlYmNhLWVlYmEtNGIzYS05ZWU0LTdlMTVhNzk0YTVkNSIgeDE9IjkiIHkxPSIxNS43OTkiIHgyPSI5IiB5Mj0iNS4zMTYiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMzMmJlZGQiIC8+PHN0b3Agb2Zmc2V0PSIwLjc3NSIgc3RvcC1jb2xvcj0iIzMyZDRmNSIgLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48dGl0bGU+TXNQb3J0YWxGeC5iYXNlLmltYWdlcy0yPC90aXRsZT48ZyBpZD0iYTkzNDI5NzYtOTUxMi00Njc0LTg5ZjEtNTJhNTg4Y2Y0MjBiIj48Zz48cGF0aCBkPSJNLjU0NCw1LjMxNkgxNy40NTZhMCwwLDAsMCwxLDAsMHY5LjkxOGEuNTY1LjU2NSwwLDAsMS0uNTY1LjU2NUgxLjEwOWEuNTY1LjU2NSwwLDAsMS0uNTY1LS41NjVWNS4zMTZBMCwwLDAsMCwxLC41NDQsNS4zMTZaIiBmaWxsPSJ1cmwoI2FhMzJlYmNhLWVlYmEtNGIzYS05ZWU0LTdlMTVhNzk0YTVkNSkiIC8+PHBhdGggZD0iTTEuMTEyLDIuMkgxNi44ODhhLjU2NS41NjUsMCwwLDEsLjU2NS41NjV2Mi41NWEwLDAsMCwwLDEsMCwwSC41NDdhMCwwLDAsMCwxLDAsMFYyLjc2NkEuNTY1LjU2NSwwLDAsMSwxLjExMiwyLjJaIiBmaWxsPSIjMDA3OGQ0IiAvPjxwYXRoIGQ9Ik0xMy41MjgsNy4zNDdIOS4zODRBLjIyOC4yMjgsMCwwLDEsOS4yNiw3LjMxTDguMDc3LDYuNTIzYS4yMTguMjE4LDAsMCwwLS4xMjMtLjAzOEg0LjQ3MmEuMjIyLjIyMiwwLDAsMC0uMjIyLjIyMnY3LjMxNWEuMjIxLjIyMSwwLDAsMCwuMjIyLjIyMmg5LjA1NmEuMjIxLjIyMSwwLDAsMCwuMjIyLS4yMjJWNy41NjlBLjIyMi4yMjIsMCwwLDAsMTMuNTI4LDcuMzQ3WiIgZmlsbD0iI2Y3OGQxZSIgLz48cmVjdCB4PSI1LjExNCIgeT0iNi45MSIgd2lkdGg9IjIuMTU5IiBoZWlnaHQ9IjAuNDMyIiByeD0iMC4wOTEiIGZpbGw9IiNmZmYiIC8+PHJlY3QgeD0iNS4xMTQiIHk9IjYuOTEiIHdpZHRoPSIwLjQzMiIgaGVpZ2h0PSIwLjQzMiIgcng9IjAuMDYyIiBmaWxsPSIjZDE1OTAwIiAvPjxwYXRoIGQ9Ik0xMy41MjgsNy4zMzdIOC45NzdBLjIxOS4yMTksMCwwLDAsOC44Miw3LjRsLS43MzIuNzMxYS4yMi4yMiwwLDAsMS0uMTU3LjA2Nkg0LjQ3MmEuMjIxLjIyMSwwLDAsMC0uMjIyLjIyMXY1LjU5MWEuMjIxLjIyMSwwLDAsMCwuMjIyLjIyMmg5LjA1NmEuMjIxLjIyMSwwLDAsMCwuMjIyLS4yMjJWNy41NThBLjIyMS4yMjEsMCwwLDAsMTMuNTI4LDcuMzM3WiIgZmlsbD0iI2ZmZiIgLz48L2c+PC9nPjwvc3ZnPg=="/>
+    <text x="379" y="2087" class="node-text-bold">
+      Dapr statestore
+    </text>
+    <text x="379" y="2099" class="node-detail">
+      Access: private
+    </text>
+    <g class="tag-badge" transform="translate(501, 2077)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g>
+  <g>
+    <rect x="247" y="2145" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="247" y="2145" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="251" y="2163" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="283" y="2159" class="node-text-bold">
+      State store
+    </text>
+    <g class="tag-badge" transform="translate(405, 2149)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g>
+  <g>
+    <rect x="439" y="2145" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="439" y="2145" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="443" y="2163" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="475" y="2159" class="node-text-bold">
+      Pubsub
+    </text>
+    <g class="tag-badge" transform="translate(597, 2149)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g>
+  <g>
+    <rect x="247" y="2217" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="247" y="2217" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="251" y="2235" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="283" y="2231" class="node-text-bold">
+      Aca env
+    </text>
+    <g class="tag-badge" transform="translate(405, 2221)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g>
+  <g>
+    <rect x="439" y="2217" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="439" y="2217" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="443" y="2235" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="475" y="2231" class="node-text-bold">
+      Aca app
+    </text>
+    <g class="tag-badge" transform="translate(597, 2221)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g>
+  <g>
+    <rect x="343" y="2289" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="343" y="2289" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="347" y="2307" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="379" y="2303" class="node-text-bold">
+      Api-enrollment-k12
+    </text>
+    <text x="379" y="2315" class="node-detail">
+      SKU: GP_S_Gen5_2
+    </text>
+    <text x="379" y="2326" class="node-detail">
+      Max: 2GB
+    </text>
+    <text x="379" y="2337" class="node-detail">
+      SQL_Latin1_General_CP1_CI..
+    </text>
+    <g class="tag-badge" transform="translate(501, 2293)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+    <g class="cost-badge" transform="translate(473, 2337)">
+      <title>Estimated monthly cost: ~$0.1k/mo</title>
+      <rect x="0" y="0" width="46" height="12" rx="2" fill="#666666" fill-opacity="0.1" stroke="#666666" stroke-width="0.5"/>
+      <text x="23" y="9" text-anchor="middle" fill="#666666" font-size="7" font-weight="bold">~$0.1k/mo</text>
+    </g>
+    <text x="379" y="2343" class="node-sku" fill="#666666" font-size="7" font-style="italic">
+      GP_S_Gen5_2
+    </text>
+  </g>
+  <g>
+    <rect x="151" y="2361" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="151" y="2361" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="155" y="2379" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="187" y="2375" class="node-text-bold">
+      Api-enrollment-al...
+    </text>
+    <g class="tag-badge" transform="translate(309, 2365)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g>
+  <g>
+    <rect x="343" y="2361" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="343" y="2361" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="347" y="2379" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="379" y="2375" class="node-text-bold">
+      Api-enrollment-al...
+    </text>
+    <g class="tag-badge" transform="translate(501, 2365)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g>
+  <g>
+    <rect x="535" y="2361" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="535" y="2361" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="539" y="2379" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="571" y="2375" class="node-text-bold">
+      Api-enrollment-al...
+    </text>
+    <g class="tag-badge" transform="translate(693, 2365)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g></svg>

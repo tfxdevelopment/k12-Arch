@@ -92,5 +92,60 @@ resource "azurerm_api_management_api_version_set" "api-enrollment" {
   }
 }
 
+resource "azurerm_api_management_backend" "function_backend" {
+  count               = var.enable_apim_strangler_rollout && var.apim_function_backend_url != "" ? 1 : 0
+  name                = var.apim_function_backend_name
+  resource_group_name = var.resource_group_name
+  api_management_name = azurerm_api_management.api_enrollment.name
+  protocol            = "http"
+  url                 = var.apim_function_backend_url
+}
+
+resource "azurerm_api_management_backend" "aca_backend" {
+  count               = var.enable_apim_strangler_rollout && var.apim_aca_backend_url != "" ? 1 : 0
+  name                = var.apim_aca_backend_name
+  resource_group_name = var.resource_group_name
+  api_management_name = azurerm_api_management.api_enrollment.name
+  protocol            = "http"
+  url                 = var.apim_aca_backend_url
+}
+
+resource "azurerm_api_management_api_policy" "strangler_rollout" {
+  count               = var.enable_apim_strangler_rollout && var.apim_existing_api_name != "" && var.apim_function_backend_url != "" && var.apim_aca_backend_url != "" ? 1 : 0
+  api_name            = var.apim_existing_api_name
+  api_management_name = azurerm_api_management.api_enrollment.name
+  resource_group_name = var.resource_group_name
+
+  depends_on = [
+    azurerm_api_management_backend.function_backend,
+    azurerm_api_management_backend.aca_backend
+  ]
+
+  xml_content = <<XML
+<policies>
+  <inbound>
+    <base />
+    <choose>
+      <when condition="@((string)context.Request.Headers.GetValueOrDefault(&quot;${var.apim_rollout_header_name}&quot;, &quot;&quot;)).Equals(&quot;${var.apim_rollout_header_value_aca}&quot;, System.StringComparison.OrdinalIgnoreCase)">
+        <set-backend-service backend-id="${var.apim_aca_backend_name}" />
+      </when>
+      <otherwise>
+        <set-backend-service backend-id="${var.apim_function_backend_name}" />
+      </otherwise>
+    </choose>
+  </inbound>
+  <backend>
+    <base />
+  </backend>
+  <outbound>
+    <base />
+  </outbound>
+  <on-error>
+    <base />
+  </on-error>
+</policies>
+XML
+}
+
 
 

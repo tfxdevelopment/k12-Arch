@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="330" height="457" viewBox="0 0 330 457">
+  <defs>
+    <style>
+      .node-text { font-family: 'Segoe UI', Arial, sans-serif; font-size: 9px; fill: #201F1E; }
+      .node-text-bold { font-family: 'Segoe UI', Arial, sans-serif; font-size: 9px; font-weight: 600; fill: #201F1E; }
+      .node-detail { font-family: 'Monaco', 'Consolas', monospace; font-size: 7px; fill: #0078D4; }
+      .zone-label { font-family: 'Segoe UI', Arial, sans-serif; font-size: 11px; font-weight: 600; fill: #605E5C; }
+      .connection-line { stroke: #A19F9D; stroke-opacity: 0.6; stroke-width: 1.5; fill: none; }
+      .connection-arrow { fill: #A19F9D; fill-opacity: 0.6; }
+    </style>
+  </defs>
+  <rect width="100%" height="100%" fill="white"/>
+
+  <g>
+    <path d="M 165,136 V 201" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(165,201) rotate(0)"/>
+  </g>
+  <g>
+    <path d="M 165,330 V 265" class="connection-line"/>
+    <polygon points="0,0 -4,-8 4,-8" class="connection-arrow"
+             transform="translate(165,265) rotate(180)"/>
+  </g>
+  <g>
+    <!-- Main container with shadow -->
+    <rect x="42" y="42" width="250" height="119"
+          rx="8" ry="8" fill="rgba(0,0,0,0.05)"/>
+    <rect x="40" y="40" width="250" height="119"
+          rx="8" ry="8" fill="#FAFAFA" stroke="#0078D4" stroke-width="2"/>
+    <!-- Header bar -->
+    <rect x="40" y="40" width="250" height="28"
+          rx="8" ry="8" fill="rgba(0, 120, 212, 0.1)"/>
+    <rect x="40" y="60" width="250" height="8" fill="#FAFAFA"/>
+    <line x1="40" y1="68" x2="290" y2="68"
+          stroke="rgba(0, 120, 212, 0.2)" stroke-width="1"/>
+    <!-- Resource Group icon (simplified) -->
+    <rect x="48" y="46" width="16" height="16" rx="2" fill="#0078D4"/>
+    <rect x="51" y="49" width="4" height="4" rx="1" fill="white"/>
+    <rect x="57" y="49" width="4" height="4" rx="1" fill="white"/>
+    <rect x="51" y="55" width="4" height="4" rx="1" fill="white"/>
+    <rect x="57" y="55" width="4" height="4" rx="1" fill="white"/>
+    <!-- Title -->
+    <text x="70" y="58" class="zone-label" fill="#0078D4">Resource Group: azurerm_route_table.rt.resource_group_name</text>
+  </g>
+  <g>
+    <!-- Main container with shadow -->
+    <rect x="42" y="171" width="250" height="119"
+          rx="8" ry="8" fill="rgba(0,0,0,0.05)"/>
+    <rect x="40" y="169" width="250" height="119"
+          rx="8" ry="8" fill="#FAFAFA" stroke="#0078D4" stroke-width="2"/>
+    <!-- Header bar -->
+    <rect x="40" y="169" width="250" height="28"
+          rx="8" ry="8" fill="rgba(0, 120, 212, 0.1)"/>
+    <rect x="40" y="189" width="250" height="8" fill="#FAFAFA"/>
+    <line x1="40" y1="197" x2="290" y2="197"
+          stroke="rgba(0, 120, 212, 0.2)" stroke-width="1"/>
+    <!-- Resource Group icon (simplified) -->
+    <rect x="48" y="175" width="16" height="16" rx="2" fill="#0078D4"/>
+    <rect x="51" y="178" width="4" height="4" rx="1" fill="white"/>
+    <rect x="57" y="178" width="4" height="4" rx="1" fill="white"/>
+    <rect x="51" y="184" width="4" height="4" rx="1" fill="white"/>
+    <rect x="57" y="184" width="4" height="4" rx="1" fill="white"/>
+    <!-- Title -->
+    <text x="70" y="187" class="zone-label" fill="#0078D4">Resource Group: resourceGroupName</text>
+  </g>
+  <g>
+    <!-- Main container with shadow -->
+    <rect x="42" y="300" width="250" height="119"
+          rx="8" ry="8" fill="rgba(0,0,0,0.05)"/>
+    <rect x="40" y="298" width="250" height="119"
+          rx="8" ry="8" fill="#FAFAFA" stroke="#0078D4" stroke-width="2"/>
+    <!-- Header bar -->
+    <rect x="40" y="298" width="250" height="28"
+          rx="8" ry="8" fill="rgba(0, 120, 212, 0.1)"/>
+    <rect x="40" y="318" width="250" height="8" fill="#FAFAFA"/>
+    <line x1="40" y1="326" x2="290" y2="326"
+          stroke="rgba(0, 120, 212, 0.2)" stroke-width="1"/>
+    <!-- Resource Group icon (simplified) -->
+    <rect x="48" y="304" width="16" height="16" rx="2" fill="#0078D4"/>
+    <rect x="51" y="307" width="4" height="4" rx="1" fill="white"/>
+    <rect x="57" y="307" width="4" height="4" rx="1" fill="white"/>
+    <rect x="51" y="313" width="4" height="4" rx="1" fill="white"/>
+    <rect x="57" y="313" width="4" height="4" rx="1" fill="white"/>
+    <!-- Title -->
+    <text x="70" y="316" class="zone-label" fill="#0078D4">Resource Group: default</text>
+  </g>
+  <g>
+    <rect x="75" y="72" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="75" y="72" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="79" y="90" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="111" y="86" class="node-text-bold">
+      RouteToFirewall
+    </text>
+    <text x="111" y="98" class="node-detail">
+      Prefix: each.value.addres..
+    </text>
+    <text x="111" y="109" class="node-detail">
+      → each.value.nextHopType
+    </text>
+    <text x="111" y="120" class="node-detail">
+      Next: each.value.nextHopI..
+    </text>
+    <g class="tag-badge" transform="translate(233, 76)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g>
+  <g>
+    <rect x="75" y="201" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="75" y="201" width="3" height="64"
+          rx="2" ry="2" fill="#00485B"/>
+    <image x="79" y="219" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iZWM3MTc2MGQtZWEwNy00MWQ1LTk1MDYtOTRhMGYyNjc3YWE5IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImVjNmFkODI1LTYwMDgtNDRjMC04YzQ2LWQzMTcxMTIxMzgyNyIgeDE9IjEwLjU2IiB5MT0iNy43NyIgeDI9IjEwLjU2IiB5Mj0iMTkuMjQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBvZmZzZXQ9IjAuMjIiIHN0b3AtY29sb3I9IiMzMmQ0ZjUiIC8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMTk4YWIzIiAvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJiMmMyYmU5ZS0wYTcwLTRhODMtYWI4Zi1iZjgwMjJlNjc5MjQiIHgxPSIxMC4yMyIgeTE9IjEuNjMiIHgyPSIxMS4wNyIgeTI9IjEyLjA0IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwLjIyIiBzdG9wLWNvbG9yPSIjMzJkNGY1IiAvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzE5OGFiMyIgLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48dGl0bGU+SWNvbi1uZXR3b3JraW5nLTgyPC90aXRsZT48cGF0aCBkPSJNMTYuMjMsMTcuMTdBMS4yMSwxLjIxLDAsMCwwLDE3LjQ2LDE2VjE1LjhjLS40OS0zLjg2LTIuNjktNy02Ljg5LTdzLTYuNDgsMi42Ni02LjkxLDdhMS4yNCwxLjI0LDAsMCwwLDEuMSwxLjM2SDE2LjIzWiIgZmlsbD0idXJsKCNlYzZhZDgyNS02MDA4LTQ0YzAtOGM0Ni1kMzE3MTEyMTM4MjcpIiAvPjxwYXRoIGQ9Ik0xMC41Nyw5LjcxYTMuODYsMy44NiwwLDAsMS0yLjEtLjYxbDIuMDgsNS40MiwyLjA2LTUuMzlBMy44MywzLjgzLDAsMCwxLDEwLjU3LDkuNzFaIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjgiIC8+PGNpcmNsZSBjeD0iMTAuNTciIGN5PSI1Ljg0IiByPSIzLjg3IiBmaWxsPSJ1cmwoI2IyYzJiZTllLTBhNzAtNGE4My1hYjhmLWJmODAyMmU2NzkyNCkiIC8+PHBhdGggZD0iTTYsNS44OFYxQS4xNi4xNiwwLDAsMCw1Ljg0LjgzSDQuNTdBLjE3LjE3LDAsMCwwLDQuMzksMVY1LjcxYS4xOC4xOCwwLDAsMS0uMTcuMTdIMy4xQS4xMi4xMiwwLDAsMSwzLDUuNzZWNC40NWEuMTEuMTEsMCwwLDAtLjE5LS4wOEwuNTksNi41N2EuMTYuMTYsMCwwLDAsMCwuMjRMMi43OSw5QS4xMS4xMSwwLDAsMCwzLDguOTNWNy42MUEuMTEuMTEsMCwwLDEsMy4xLDcuNUg1Ljg0QS4xNy4xNywwLDAsMCw2LDcuMzNWNS44OFoiIGZpbGw9IiMwMDc4ZDQiIC8+PC9zdmc+"/>
+    <text x="111" y="215" class="node-text-bold">
+      Rt
+    </text>
+    <text x="111" y="227" class="node-detail">
+      UDR
+    </text>
+    <g class="tag-badge" transform="translate(233, 205)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g>
+  <g>
+    <rect x="75" y="330" width="180" height="64"
+          rx="5" ry="5" fill="white" stroke="#E1DFDD" stroke-width="1"/>
+    <rect x="75" y="330" width="3" height="64"
+          rx="2" ry="2" fill="#69797E"/>
+    <image x="79" y="348" width="28" height="28"
+                       xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iYTY4NWNjOGMtMzJiYS00ZDU0LTkxZGEtM2ExMjVjYjU4ZGVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48dGl0bGU+SWNvbi1nZW5lcmFsLTc8L3RpdGxlPjxnPjxnPjxwYXRoIGQ9Ik0uNSwxNS4wOGEuMTYuMTYsMCwwLDAsLjA4LjE0bDEuMTYuNjVMMy43LDE3YS4xNy4xNywwLDAsMCwuMjMtLjA2bC42Ni0xLjEyYS4xNi4xNiwwLDAsMC0uMDYtLjIxbC0yLjMtMS4zYS4xNy4xNywwLDAsMS0uMDgtLjE0VjMuODVhLjE2LjE2LDAsMCwxLC4wOC0uMTRsMi4zLTEuM2EuMTYuMTYsMCwwLDAsLjA2LS4yMUwzLjkzLDEuMDhBLjE3LjE3LDAsMCwwLDMuNywxTDEuNzgsMi4xMWwtMS4yLjY3YS4xNi4xNiwwLDAsMC0uMDguMTRWMTUuMDhaIiBmaWxsPSIjOTQ5NDk0IiAvPjxwYXRoIGQ9Ik0yLjE0LDMuNzdsLjA2LS4wNiwyLjMtMS4zYS4xNC4xNCwwLDAsMCwuMDYtLjIxTDMuOSwxLjA4QS4xNS4xNSwwLDAsMCwzLjY4LDFMMS43NSwyLjExLjU2LDIuNzhzLS4wNSwwLS4wNi4wNmwuOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTQuNSwxNS41OWwtMi4zLTEuM2EuMjIuMjIsMCwwLDEtLjA3LS4wOWwtMS42MiwxLC4wNSwwLDEuMTUuNjUsMiwxLjExYS4xNS4xNSwwLDAsMCwuMjItLjA2bC42Ni0xLjEyQS4xNC4xNCwwLDAsMCw0LjUsMTUuNTlaIiBmaWxsPSIjYTNhM2EzIiAvPjwvZz48cGF0aCBkPSJNMTcuNSwxNS4wOGEuMTYuMTYsMCwwLDEtLjA4LjE0bC0xLjE2LjY1TDE0LjMsMTdhLjE3LjE3LDAsMCwxLS4yMy0uMDZsLS42Ni0xLjEyYS4xNi4xNiwwLDAsMSwuMDYtLjIxbDIuMy0xLjNhLjE3LjE3LDAsMCwwLC4wOC0uMTRWMy44NWEuMTYuMTYsMCwwLDAtLjA4LS4xNGwtMi4zLTEuM2EuMTYuMTYsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTcuMTcsMCwwLDEsMTQuMywxbDEuOTIsMS4wOSwxLjIuNjdhLjE2LjE2LDAsMCwxLC4wOC4xNFYxNS4wOFoiIGZpbGw9IiM5NDk0OTQiIC8+PHBhdGggZD0iTTE1Ljg2LDMuNzdsLS4wNi0uMDYtMi4zLTEuM2EuMTQuMTQsMCwwLDEtLjA2LS4yMWwuNjYtMS4xMkEuMTUuMTUsMCwwLDEsMTQuMzIsMWwxLjkzLDEuMDksMS4xOS42N3MwLDAsLjA2LjA2bC0uOS41MVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBhdGggZD0iTTEzLjUsMTUuNTlsMi4zLTEuM2EuMjIuMjIsMCwwLDAsLjA3LS4wOWwxLjYyLDEsMCwwLTEuMTUuNjUtMiwxLjExYS4xNS4xNSwwLDAsMS0uMjItLjA2bC0uNjYtMS4xMkEuMTQuMTQsMCwwLDEsMTMuNSwxNS41OVoiIGZpbGw9IiNhM2EzYTMiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDE0LjMxIDEyLjA3IDguOTkgMTUuMTYgOC45OSA5LjAxIDE0LjMxIDUuOTMiIGZpbGw9IiMzMmJlZGQiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSA1LjkzIDkgOS4wMiAzLjY4IDUuOTMgOSAyLjg0IDE0LjMxIDUuOTMiIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSI4Ljk5IDkuMDIgOC45OSAxNS4xNiAzLjY4IDEyLjA3IDMuNjggNS45MyA4Ljk5IDkuMDIiIGZpbGw9IiM1MGU2ZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIzLjY4IDEyLjA3IDguOTkgOS4wMSA4Ljk5IDE1LjE2IDMuNjggMTIuMDciIGZpbGw9IiM5Y2ViZmYiIC8+PHBvbHlnb24gcG9pbnRzPSIxNC4zMSAxMi4wNyA4Ljk5IDkuMDEgOC45OSAxNS4xNiAxNC4zMSAxMi4wNyIgZmlsbD0iIzUwZTZmZiIgLz48L2c+PC9zdmc+"/>
+    <text x="111" y="344" class="node-text-bold">
+      AssociationRtSubn...
+    </text>
+    <g class="tag-badge" transform="translate(233, 334)">
+      <title>Missing tags: environment, owner</title>
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#FFB900" stroke="white" stroke-width="1"/>
+      <text x="7" y="10" text-anchor="middle" fill="white" font-size="7" font-weight="bold">T</text>
+    </g>
+  </g></svg>
