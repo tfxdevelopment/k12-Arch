@@ -1,0 +1,11 @@
+╷
+│ Error: Moved object still exists
+│
+│   on ..\..\modules\api-enrollment\db.tf line 70:
+│   70: moved {
+│
+│ This statement declares a move from module.enrollment-api.azurerm_mssql_firewall_rule.k12-database-allow-devs, but that resource is still declared at ..\..\modules\api-enrollment\db.tf:61,1.
+│
+│ Change your configuration so that this resource will be declared as module.enrollment-api.azurerm_mssql_firewall_rule.api-enrollment-allow-devs instead.
+╵
+Releasing state lock. This may take a few moments...

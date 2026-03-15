@@ -5,7 +5,7 @@
 This review covers:
 
 1. The **active Azure architecture** represented by `terraform/environments/*/main.tf` and current modules in `terraform/modules/*`.
-2. The **Terraform module structure** including the partially integrated landing-zone accelerator under `docs/aca-landing-zone-accelerator/scenarios` and `terraform/environments/development/modules/landing-zone`.
+2. The **Terraform module structure** including the canonical landing-zone modules under `terraform/modules/landing-zone/*` and shared platform modules under `terraform/modules/shared/*`. The reference accelerator content under `docs/aca-landing-zone-accelerator/scenarios` is non-authoritative.
 
 ---
 
@@ -117,23 +117,19 @@ graph LR
     MSG -->|dapr_pubsub_primary_connection_string| API
   end
 
-  subgraph LZ["Partial Landing-Zone Integration (development only)"]
-    HUB["development/modules/landing-zone/01-hub"]
-    SPOKE["development/modules/landing-zone/02-spoke"]
-    LZSHARED["docs/aca-landing-zone-accelerator/scenarios/shared/terraform/modules/*"]
+  subgraph LZ["Landing-Zone Platform (toggle-gated via enable_landing_zone_platform)"]
+    HUB["modules/landing-zone/hub"]
+    SPOKE["modules/landing-zone/spoke"]
 
-    HUB -->|source=../../../../../../docs/.../shared/...| LZSHARED
-    SPOKE -->|source=../../../../../../docs/.../shared/...| LZSHARED
+    MAIN -->|count-gated| HUB
+    MAIN -->|count-gated| SPOKE
+    HUB -->|sources| TFSHARED
+    SPOKE -->|sources| TFSHARED
   end
 
-  subgraph LOCALSHARED["Local Shared Module Copy"]
+  subgraph SHARED["Authoritative Shared Modules"]
     TFSHARED["terraform/modules/shared/*"]
   end
-
-  MAIN -.->|currently not wired| HUB
-  MAIN -.->|currently not wired| SPOKE
-  HUB -.->|duplicate capability overlap| TFSHARED
-  SPOKE -.->|duplicate capability overlap| TFSHARED
 ```
 
 ---
@@ -149,55 +145,42 @@ graph LR
 
 ### Gaps and risks from partial accelerator integration
 
-1. **Two shared-module sources exist**
-   - Referenced by landing-zone modules: `docs/aca-landing-zone-accelerator/scenarios/shared/terraform/modules/*`
-   - Local copy exists separately: `terraform/modules/shared/*`
-   - Risk: drift, confusion, duplicated maintenance.
+1. ~~**Two shared-module sources exist**~~ **RESOLVED**: `terraform/modules/shared/*` is the authoritative source. `docs/aca-landing-zone-accelerator/scenarios/*` is reference-only. CI guardrails enforce this.
 
-2. **Landing-zone modules are not part of active env graph**
-   - `environments/*/main.tf` does not call `development/modules/landing-zone/{01-hub,02-spoke}`.
-   - Result: integration is present in tree but not orchestrated by environment root modules.
+2. ~~**Landing-zone modules are not part of active env graph**~~ **RESOLVED**: All environment roots (`development`, `staging`, `testing`, `production`) now wire `module.landing_zone_hub` and `module.landing_zone_spoke` from `terraform/modules/landing-zone/*`, gated by `enable_landing_zone_platform`.
 
-3. **Deep relative `source` paths are brittle**
-   - Example: `../../../../../../docs/...`
-   - Risk: breakage on refactors, harder portability and reuse.
+3. ~~**Deep relative `source` paths are brittle**~~ **RESOLVED**: Canonical wrappers under `terraform/modules/landing-zone/*` use standard relative paths to `terraform/modules/shared/*`. Deprecated compatibility wrappers under `terraform/environments/development/modules/landing-zone/` are scheduled for removal (see PR-2b).
 
-4. **Landing-zone appears development-scoped only**
-   - No equivalent `modules/landing-zone` under staging/testing/production currently.
-   - Risk: asymmetry if this becomes part of promoted infrastructure.
+4. ~~**Landing-zone appears development-scoped only**~~ **RESOLVED**: All four environment roots have identical toggle-gated orchestration.
 
 5. **Temporary Terraform logs appear in working tree frequently**
    - Plan/init/validate logs under `terraform/` can create noise and accidental commits.
+   - Mitigated by `.gitignore` rules for `*.dryrun`, `tfplan*`, `*.log`.
 
 ---
 
 ## Recommended structure options
 
-### Option A (recommended): Make `terraform/modules/shared/*` the single source of truth
+### ~~Option A (recommended)~~ **ADOPTED**: `terraform/modules/shared/*` is the single source of truth
 
-- Update landing-zone modules to source from `terraform/modules/shared/*` (or publish/versioned module registry).
-- Treat `docs/aca-landing-zone-accelerator` as documentation/reference only.
-- Add explicit orchestration from env root (`main.tf`) if/when hub-spoke is activated.
+- Landing-zone modules now source from `terraform/modules/shared/*`.
+- `docs/aca-landing-zone-accelerator` is documentation/reference only.
+- Environment roots orchestrate hub/spoke via toggle-gated module calls to `terraform/modules/landing-zone/*`.
 
-### Option B: Keep scenario modules as source of truth
+### ~~Option B~~ Not selected
 
-- Remove/ignore duplicated local shared copy under `terraform/modules/shared/*`.
-- Introduce a wrapper module in `terraform/modules/landing-zone` that references scenario shared modules once.
-- Keep environment roots pointing to wrapper module.
-
-### Option C: Keep both (not recommended)
-
-- Only acceptable as short-term migration with strict ownership boundaries and drift checks.
+### ~~Option C~~ Not selected
 
 ---
 
-## Suggested next cleanup actions
+## ~~Suggested next cleanup actions~~ Status (2026-03-15)
 
-1. Decide authoritative shared-module source (A or B).
-2. Normalize module source paths (avoid deep relative chains where possible).
-3. If landing-zone is in-scope, add explicit env-level orchestration and toggle strategy.
-4. Add/extend `.gitignore` rules for Terraform runtime artifacts (plan/init/validate logs, local plans).
-5. Add a short `terraform/ARCHITECTURE.md` describing active stack vs incubating landing-zone stack.
+1. ~~Decide authoritative shared-module source (A or B).~~ **Done** — Option A adopted.
+2. ~~Normalize module source paths.~~ **Done** — canonical wrappers use standard relative paths.
+3. ~~If landing-zone is in-scope, add explicit env-level orchestration and toggle strategy.~~ **Done** — all envs wired.
+4. ~~Add/extend `.gitignore` rules for Terraform runtime artifacts.~~ **Done**.
+5. ~~Add a short `terraform/ARCHITECTURE.md`.~~ **Done** — see `terraform/ARCHITECTURE.md`.
+6. **Remaining**: Remove deprecated compatibility wrappers at `terraform/environments/development/modules/landing-zone/` (scheduled PR-2b).
 
 ---
 

@@ -14,6 +14,8 @@ locals {
   enable_landing_zone_platform  = var.enable_landing_zone_platform
   enable_private_networking     = var.enable_private_networking
   enable_internal_ingress       = var.enable_internal_ingress
+  # Contract note: enable_internal_load_balancer is an alias for enable_internal_ingress.
+  # It controls whether the ACA environment uses an internal load balancer (private ingress).
   enable_internal_load_balancer = var.enable_internal_ingress
 
   # landing-zone defaults (used when platform orchestration is enabled)
@@ -43,6 +45,9 @@ locals {
   platform_route_table_id_effective = local.enable_landing_zone_platform ? try(module.landing_zone_spoke[0].routeTableId, null) : var.landing_zone_route_table_id
   platform_firewall_private_ip_effective = local.enable_landing_zone_platform ? try(module.landing_zone_hub[0].firewallPrivateIp, null) : var.landing_zone_firewall_private_ip
   platform_app_gateway_subnet_id_effective = local.enable_landing_zone_platform ? try(module.landing_zone_spoke[0].spokeApplicationGatewaySubnetId, null) : var.landing_zone_app_gateway_subnet_id
+  # RESERVED: platform_frontdoor_profile_id is wired to workload modules but not yet consumed.
+  # It is a placeholder for future shared Front Door consolidation (see terraform/modules/shared/frontdoor).
+  # Currently each web-frontend module creates its own per-app Standard AFD profile.
   platform_frontdoor_profile_id_effective  = var.landing_zone_frontdoor_profile_id
 
   aca_min_replicas              = 2

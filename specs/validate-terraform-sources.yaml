@@ -2,19 +2,53 @@ steps:
   - bash: |
       set -euo pipefail
 
-      forbidden='docs/aca-landing-zone-accelerator/scenarios/shared/terraform/modules'
+      # Forbidden patterns: environment roots must only source from terraform/modules/*
+      forbidden_patterns=(
+        'docs/aca-landing-zone-accelerator/scenarios/shared/terraform/modules'
+        'environments/development/modules/landing-zone'
+      )
       search_paths=(terraform/environments terraform/modules)
 
-      echo "Checking active Terraform execution paths for forbidden source pattern..."
-      echo "Pattern: ${forbidden}"
+      echo "=== Terraform Module Source Hygiene Check ==="
+      echo "Checking active Terraform execution paths for forbidden source patterns..."
 
-      matches=$(grep -R --line-number --fixed-strings "${forbidden}" "${search_paths[@]}" || true)
+      exit_code=0
+      for pattern in "${forbidden_patterns[@]}"; do
+        echo ""
+        echo "Pattern: ${pattern}"
+        matches=$(grep -R --line-number --include='*.tf' --fixed-strings "${pattern}" "${search_paths[@]}" || true)
 
-      if [ -n "${matches}" ]; then
-        echo "##vso[task.logissue type=error]Forbidden scenario-relative module source path detected in active Terraform paths."
-        echo "${matches}"
+        if [ -n "${matches}" ]; then
+          echo "##vso[task.logissue type=error]Forbidden module source path detected: ${pattern}"
+          echo "${matches}"
+          exit_code=1
+        else
+          echo "  OK - no matches."
+        fi
+      done
+
+      # Additional check: ensure no environment root sources modules outside terraform/modules/*
+      echo ""
+      echo "Checking that all module source paths resolve within terraform/modules/..."
+      bad_sources=$(grep -rn --include='*.tf' 'source\s*=' terraform/environments/ \
+        | grep -v '../../modules/' \
+        | grep -v '#' \
+        | grep -v 'azurerm' \
+        | grep -v 'hashicorp' \
+        || true)
+
+      if [ -n "${bad_sources}" ]; then
+        echo "##vso[task.logissue type=warning]Module source paths found that may not resolve to terraform/modules/*:"
+        echo "${bad_sources}"
+        echo "Review these paths to ensure they follow the module source-of-truth policy."
+      fi
+
+      if [ $exit_code -ne 0 ]; then
+        echo ""
+        echo "##vso[task.logissue type=error]Source hygiene check FAILED."
         exit 1
       fi
 
+      echo ""
       echo "Terraform source hygiene check passed."
     displayName: Validate Terraform module source hygiene

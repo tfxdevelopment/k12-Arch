@@ -1,3 +1,6 @@
+# DEPRECATED: This file belongs to a compatibility wrapper scheduled for removal.
+# Canonical module: terraform/modules/landing-zone/hub
+
 output "hubVnetId" {
   description = "The resource ID of hub virtual network."
   value       = module.landing_zone_hub.hubVnetId

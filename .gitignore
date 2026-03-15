@@ -9,3 +9,6 @@ terraform/all_terrafrom.tf.txt
 .continue/
 .specify/
 .foundry/
+obj/
+Debug/
+bin/

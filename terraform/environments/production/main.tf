@@ -63,7 +63,7 @@ module "enrollment-web" {
   platform_spoke_vnet_id               = local.enable_private_networking ? local.platform_spoke_vnet_id_effective : null
   platform_private_endpoints_subnet_id = local.enable_private_networking ? local.platform_private_endpoints_subnet_id_effective : null
   platform_app_gateway_subnet_id       = local.enable_private_networking ? local.platform_app_gateway_subnet_id_effective : null
-  platform_frontdoor_profile_id        = local.platform_frontdoor_profile_id_effective
+  platform_frontdoor_profile_id        = local.platform_frontdoor_profile_id_effective # RESERVED: not yet consumed by module
 }
 
 module "enrollment-api" {
@@ -82,7 +82,7 @@ module "enrollment-api" {
   blob_storage_connection_string = local.blob_storage_connection_string
   enable_zone_redundancy         = local.enable_zone_redundancy
   enable_acr_geo_replication     = local.enable_acr_geo_replication
-  enable_internal_load_balancer  = local.enable_internal_load_balancer
+  enable_internal_load_balancer  = local.enable_internal_load_balancer # Aliased from enable_internal_ingress
   aca_min_replicas               = local.aca_min_replicas
   aca_max_replicas               = local.aca_max_replicas
   aca_cpu                        = local.aca_cpu
@@ -96,7 +96,7 @@ module "enrollment-api" {
   platform_route_table_id              = local.enable_private_networking ? local.platform_route_table_id_effective : null
   platform_firewall_private_ip         = local.enable_private_networking ? local.platform_firewall_private_ip_effective : null
   platform_app_gateway_subnet_id       = local.enable_private_networking ? local.platform_app_gateway_subnet_id_effective : null
-  platform_frontdoor_profile_id        = local.platform_frontdoor_profile_id_effective
+  platform_frontdoor_profile_id        = local.platform_frontdoor_profile_id_effective # RESERVED: not yet consumed by module
 }
 
 module "admin-web" {
@@ -112,7 +112,7 @@ module "admin-web" {
   platform_spoke_vnet_id               = local.enable_private_networking ? local.platform_spoke_vnet_id_effective : null
   platform_private_endpoints_subnet_id = local.enable_private_networking ? local.platform_private_endpoints_subnet_id_effective : null
   platform_app_gateway_subnet_id       = local.enable_private_networking ? local.platform_app_gateway_subnet_id_effective : null
-  platform_frontdoor_profile_id        = local.platform_frontdoor_profile_id_effective
+  platform_frontdoor_profile_id        = local.platform_frontdoor_profile_id_effective # RESERVED: not yet consumed by module
 }
 
 module "providers-web" {
@@ -128,7 +128,7 @@ module "providers-web" {
   platform_spoke_vnet_id               = local.enable_private_networking ? local.platform_spoke_vnet_id_effective : null
   platform_private_endpoints_subnet_id = local.enable_private_networking ? local.platform_private_endpoints_subnet_id_effective : null
   platform_app_gateway_subnet_id       = local.enable_private_networking ? local.platform_app_gateway_subnet_id_effective : null
-  platform_frontdoor_profile_id        = local.platform_frontdoor_profile_id_effective
+  platform_frontdoor_profile_id        = local.platform_frontdoor_profile_id_effective # RESERVED: not yet consumed by module
 }
 
 module "schools-web" {
@@ -144,7 +144,7 @@ module "schools-web" {
   platform_spoke_vnet_id               = local.enable_private_networking ? local.platform_spoke_vnet_id_effective : null
   platform_private_endpoints_subnet_id = local.enable_private_networking ? local.platform_private_endpoints_subnet_id_effective : null
   platform_app_gateway_subnet_id       = local.enable_private_networking ? local.platform_app_gateway_subnet_id_effective : null
-  platform_frontdoor_profile_id        = local.platform_frontdoor_profile_id_effective
+  platform_frontdoor_profile_id        = local.platform_frontdoor_profile_id_effective # RESERVED: not yet consumed by module
 }
 
 module "messaging" {

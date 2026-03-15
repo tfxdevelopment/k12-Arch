@@ -1,3 +1,6 @@
+# DEPRECATED: This file belongs to a compatibility wrapper scheduled for removal.
+# Canonical module: terraform/modules/landing-zone/spoke
+
 locals {
   hubTokens            = split("/", var.hubVnetId)
   hubSubscriptionId    = local.hubTokens[2]

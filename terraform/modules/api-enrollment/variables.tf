@@ -191,8 +191,10 @@ variable "platform_app_gateway_subnet_id" {
   default     = null
 }
 
+# RESERVED: Wired from environment roots but not yet consumed by this module.
+# Placeholder for future shared Front Door consolidation.
 variable "platform_frontdoor_profile_id" {
-  description = "Optional platform contract: Azure Front Door profile resource ID"
+  description = "Optional platform contract: Azure Front Door profile resource ID (reserved, not yet consumed)"
   type        = string
   default     = null
 }

@@ -9,7 +9,11 @@ This document serves as a guide on how to built, oragnize, and use the K12 terra
 | `docs` | Contains module and environment templates as well as additional documentation |
 | `environments` | One directory for each environment or stage which builds the environment and contains the environment-specific settings |
 | `modules` | One directory for each distinct subsystem within K12 |
-| `modules\core` | Builds resources that are shared across all (or most) subsystems like top-level DNS, base IAM, default machine images |
+| `modules/core` | Builds resources that are shared across all (or most) subsystems like top-level DNS, base IAM, default machine images |
+| `modules/landing-zone/hub` | Canonical hub networking module (Firewall, Bastion, hub VNet) — toggle-gated via `enable_landing_zone_platform` |
+| `modules/landing-zone/spoke` | Canonical spoke networking module (spoke VNet, subnets, peering, route tables) — toggle-gated |
+| `modules/shared` | Reusable shared platform primitives (Front Door, ACR, ACA environment) |
+| `ARCHITECTURE.md` | Platform vs workload ownership boundaries and module source-of-truth policy |
 
 
 ## Starting Out

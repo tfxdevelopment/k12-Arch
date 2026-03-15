@@ -29,6 +29,7 @@ Workload module orchestration is environment-scoped via `terraform/environments/
 - **Authoritative shared modules:** `terraform/modules/shared/*`
 - **Authoritative landing-zone wrappers:** `terraform/modules/landing-zone/*`
 - `docs/aca-landing-zone-accelerator/scenarios/*` is treated as reference content, not the active execution source for environment applies.
+- **DEPRECATED:** `terraform/environments/development/modules/landing-zone/{01-hub,02-spoke}` are compatibility wrappers. They are not referenced by any environment root and are scheduled for removal. Do not create new references to these paths.
 
 ## Environment promotion model
 

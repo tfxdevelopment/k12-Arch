@@ -1,5 +1,9 @@
 # Landing Zone Full Integration Implementation Plan
 
+> **Status (2026-03-15):** Tasks 1-6 have been implemented. Task 7 (CI guardrails) is active. Task 8 (cutover docs) is complete.
+> Canonical module roots: `terraform/modules/landing-zone/{hub,spoke}` and `terraform/modules/shared/*`.
+> Compatibility wrappers at `terraform/environments/development/modules/landing-zone/{01-hub,02-spoke}` are **DEPRECATED** and scheduled for removal.
+
 > **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.
 
 **Goal:** Integrate landing-zone platform modules into active environment stacks so hub/spoke networking and shared platform primitives are first-class, reusable, and promotion-safe across dev/stage/test/prod.
@@ -43,38 +47,15 @@ Commit message: `chore(terraform): add artifact guardrails and architecture boun
 
 ---
 
-### Task 2: Normalize landing-zone module roots
+### Task 2: Normalize landing-zone module roots — **COMPLETE**
 
-**Files:**
-- Create: `terraform/modules/landing-zone/hub/main.tf`
-- Create: `terraform/modules/landing-zone/hub/variables.tf`
-- Create: `terraform/modules/landing-zone/hub/outputs.tf`
-- Create: `terraform/modules/landing-zone/spoke/main.tf`
-- Create: `terraform/modules/landing-zone/spoke/variables.tf`
-- Create: `terraform/modules/landing-zone/spoke/outputs.tf`
-- Modify: `terraform/environments/development/modules/landing-zone/01-hub/*.tf`
-- Modify: `terraform/environments/development/modules/landing-zone/02-spoke/*.tf`
+**Canonical module locations:**
+- `terraform/modules/landing-zone/hub/main.tf`
+- `terraform/modules/landing-zone/spoke/main.tf`
 
-**Step 1: Create hub/spoke wrapper modules under `terraform/modules/landing-zone/`**
-
-Port current development landing-zone logic into new canonical wrappers.
-
-**Step 2: Replace deep scenario-relative module source paths**
-
-In wrappers, use local module paths under `terraform/modules/shared/*`.
-
-**Step 3: Keep old development landing-zone files as compatibility shim (temporary)**
-
-Optionally point old modules to new wrapper modules for minimal disruption.
-
-**Step 4: Validate wrappers**
-
-Run: `terraform -chdir=terraform/environments/development init -backend=false`
-Expected: init success with no module source resolution errors.
-
-**Step 5: Commit**
-
-Commit message: `refactor(terraform): normalize landing-zone module roots`
+**Deprecated (scheduled removal):**
+- `terraform/environments/development/modules/landing-zone/01-hub/` — compatibility wrapper only
+- `terraform/environments/development/modules/landing-zone/02-spoke/` — compatibility wrapper only
 
 ---
 
