@@ -1,0 +1,8 @@
+name: k12-infra
+version: 1.0.0
+description: APM project for k12-infra
+author: Terry Fraser
+dependencies:
+  apm: []
+  mcp: []
+scripts: {}
