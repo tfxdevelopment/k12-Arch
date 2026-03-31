@@ -1,0 +1,17 @@
+{
+  "name": "idp-storybook",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "storybook dev -p 6006 --host localhost --no-open",
+    "build": "storybook build"
+  },
+  "devDependencies": {
+    "@storybook/html-vite": "^8.6.14",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "storybook": "^8.6.14",
+    "typescript": "^5.9.3"
+  }
+}

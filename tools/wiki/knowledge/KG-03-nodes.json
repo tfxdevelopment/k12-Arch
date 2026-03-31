@@ -1,0 +1,2218 @@
+[
+  {
+    "id": "tools/wiki/01-project-overview/_all.md",
+    "title": "_all",
+    "path": "tools/wiki/01-project-overview/_all.md",
+    "category": "Guides",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.022852+00:00"
+  },
+  {
+    "id": "tools/wiki/01-project-overview/external-repositories.md",
+    "title": "external-repositories",
+    "path": "tools/wiki/01-project-overview/external-repositories.md",
+    "category": "Guides",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.023852+00:00"
+  },
+  {
+    "id": "tools/wiki/01-project-overview/readme.md",
+    "title": "README",
+    "path": "tools/wiki/01-project-overview/README.md",
+    "category": "Guides",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.022852+00:00"
+  },
+  {
+    "id": "tools/wiki/01-project-overview/roadmap/readme.md",
+    "title": "README",
+    "path": "tools/wiki/01-project-overview/roadmap/README.md",
+    "category": "Guides",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.024854+00:00"
+  },
+  {
+    "id": "tools/wiki/01-project-overview/roadmap/roadmap-01-current-sprint-features.md",
+    "title": "ROADMAP-01-current-sprint-features",
+    "path": "tools/wiki/01-project-overview/roadmap/ROADMAP-01-current-sprint-features.md",
+    "category": "Guides",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.025852+00:00"
+  },
+  {
+    "id": "tools/wiki/01-project-overview/roadmap/roadmap-02-feature-roadmap.md",
+    "title": "ROADMAP-02-feature-roadmap",
+    "path": "tools/wiki/01-project-overview/roadmap/ROADMAP-02-feature-roadmap.md",
+    "category": "Guides",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.025852+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/architecture-documentation-framework.md",
+    "title": "ARCHITECTURE-DOCUMENTATION-FRAMEWORK",
+    "path": "tools/wiki/02-architecture/ARCHITECTURE-DOCUMENTATION-FRAMEWORK.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.027358+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/azure-infrastructure.md",
+    "title": "azure-infrastructure",
+    "path": "tools/wiki/02-architecture/azure-infrastructure.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.029893+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/azure-rds-integration-infrastructure.md",
+    "title": "azure-rds-integration-infrastructure",
+    "path": "tools/wiki/02-architecture/azure-rds-integration-infrastructure.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.030489+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/backend/be-01-layered-architecture-deep-dive.md",
+    "title": "BE-01-layered-architecture-deep-dive",
+    "path": "tools/wiki/02-architecture/backend/BE-01-layered-architecture-deep-dive.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.030943+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/backend/be-02-api-design-patterns.md",
+    "title": "BE-02-api-design-patterns",
+    "path": "tools/wiki/02-architecture/backend/BE-02-api-design-patterns.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.030943+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/backend/be-03-data-access-patterns.md",
+    "title": "BE-03-data-access-patterns",
+    "path": "tools/wiki/02-architecture/backend/BE-03-data-access-patterns.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.031448+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/backend/be-04-external-service-integration-patterns.md",
+    "title": "BE-04-external-service-integration-patterns",
+    "path": "tools/wiki/02-architecture/backend/BE-04-external-service-integration-patterns.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.031448+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/backend/readme.md",
+    "title": "README",
+    "path": "tools/wiki/02-architecture/backend/README.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.031903+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/bff-orchestrators.md",
+    "title": "BFF-ORCHESTRATORS",
+    "path": "tools/wiki/02-architecture/BFF-ORCHESTRATORS.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.027358+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/c4-diagrams/00-architecture-overview.md",
+    "title": "00-architecture-overview",
+    "path": "tools/wiki/02-architecture/c4-diagrams/00-architecture-overview.md",
+    "category": "Diagrams",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.032406+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/c4-diagrams/01-system-context.md",
+    "title": "01-system-context",
+    "path": "tools/wiki/02-architecture/c4-diagrams/01-system-context.md",
+    "category": "Diagrams",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.032927+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/c4-diagrams/02-container-diagram.md",
+    "title": "02-container-diagram",
+    "path": "tools/wiki/02-architecture/c4-diagrams/02-container-diagram.md",
+    "category": "Diagrams",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.033961+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/c4-diagrams/03-backend-components.md",
+    "title": "03-backend-components",
+    "path": "tools/wiki/02-architecture/c4-diagrams/03-backend-components.md",
+    "category": "Diagrams",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.034727+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/c4-diagrams/03-deployment-diagram.md",
+    "title": "03-deployment-diagram",
+    "path": "tools/wiki/02-architecture/c4-diagrams/03-deployment-diagram.md",
+    "category": "Diagrams",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.035231+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/c4-diagrams/04-frontend-components.md",
+    "title": "04-frontend-components",
+    "path": "tools/wiki/02-architecture/c4-diagrams/04-frontend-components.md",
+    "category": "Diagrams",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.035835+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/c4-diagrams/04-roster-workflow-context.md",
+    "title": "04-roster-workflow-context",
+    "path": "tools/wiki/02-architecture/c4-diagrams/04-roster-workflow-context.md",
+    "category": "Diagrams",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.036519+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/c4-diagrams/05-rds-integration-context.md",
+    "title": "05-rds-integration-context",
+    "path": "tools/wiki/02-architecture/c4-diagrams/05-rds-integration-context.md",
+    "category": "Diagrams",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.037023+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/c4-diagrams/06-backend-component-diagram.md",
+    "title": "06-backend-component-diagram",
+    "path": "tools/wiki/02-architecture/c4-diagrams/06-backend-component-diagram.md",
+    "category": "Diagrams",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.038028+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/c4-diagrams/07-frontend-component-diagram.md",
+    "title": "07-frontend-component-diagram",
+    "path": "tools/wiki/02-architecture/c4-diagrams/07-frontend-component-diagram.md",
+    "category": "Diagrams",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.038686+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/c4-diagrams/08-data-architecture-diagram.md",
+    "title": "08-data-architecture-diagram",
+    "path": "tools/wiki/02-architecture/c4-diagrams/08-data-architecture-diagram.md",
+    "category": "Diagrams",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.039110+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/c4-diagrams/level-4/c4-05-domain-model-class-diagram.md",
+    "title": "C4-05-domain-model-class-diagram",
+    "path": "tools/wiki/02-architecture/c4-diagrams/level-4/C4-05-domain-model-class-diagram.md",
+    "category": "Diagrams",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.039614+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/c4-diagrams/level-4/c4-06-authorization-sequence-diagram.md",
+    "title": "C4-06-authorization-sequence-diagram",
+    "path": "tools/wiki/02-architecture/c4-diagrams/level-4/C4-06-authorization-sequence-diagram.md",
+    "category": "Diagrams",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.040364+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/c4-diagrams/level-4/c4-07-enrollment-process-sequence-diagram.md",
+    "title": "C4-07-enrollment-process-sequence-diagram",
+    "path": "tools/wiki/02-architecture/c4-diagrams/level-4/C4-07-enrollment-process-sequence-diagram.md",
+    "category": "Diagrams",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.040364+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/c4-diagrams/level-4/c4-08-payment-process-sequence-diagram.md",
+    "title": "C4-08-payment-process-sequence-diagram",
+    "path": "tools/wiki/02-architecture/c4-diagrams/level-4/C4-08-payment-process-sequence-diagram.md",
+    "category": "Diagrams",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.041256+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/c4-diagrams/level-4/readme.md",
+    "title": "README",
+    "path": "tools/wiki/02-architecture/c4-diagrams/level-4/README.md",
+    "category": "Diagrams",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.041256+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/c4-diagrams/readme.md",
+    "title": "README",
+    "path": "tools/wiki/02-architecture/c4-diagrams/README.md",
+    "category": "Diagrams",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.039614+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/cloud-native/background-azure-architecture-framework.md",
+    "title": "background-azure-architecture-framework",
+    "path": "tools/wiki/02-architecture/cloud-native/background-azure-architecture-framework.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.041761+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/cloud-native/background-modernization-strategy-start.md",
+    "title": "background-modernization-strategy-start",
+    "path": "tools/wiki/02-architecture/cloud-native/background-modernization-strategy-start.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.042228+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/cloud-native/cloud-native-architecture.md",
+    "title": "cloud-native-architecture",
+    "path": "tools/wiki/02-architecture/cloud-native/cloud-native-architecture.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:19:33.665674+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/cloud-native/pointer-async-event-flows-dapr.md",
+    "title": "pointer-async-event-flows-dapr",
+    "path": "tools/wiki/02-architecture/cloud-native/pointer-async-event-flows-dapr.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.042732+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/cloud-native/pointer-container-diagram.md",
+    "title": "pointer-container-diagram",
+    "path": "tools/wiki/02-architecture/cloud-native/pointer-container-diagram.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.043636+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/cloud-native/pointer-devops-iac-cicd.md",
+    "title": "pointer-devops-iac-cicd",
+    "path": "tools/wiki/02-architecture/cloud-native/pointer-devops-iac-cicd.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.043636+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/cloud-native/pointer-hybrid-data-strategy.md",
+    "title": "pointer-hybrid-data-strategy",
+    "path": "tools/wiki/02-architecture/cloud-native/pointer-hybrid-data-strategy.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.044140+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/cloud-native/pointer-resiliency-observability.md",
+    "title": "pointer-resiliency-observability",
+    "path": "tools/wiki/02-architecture/cloud-native/pointer-resiliency-observability.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.044140+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/cloud-native/readme.md",
+    "title": "README",
+    "path": "tools/wiki/02-architecture/cloud-native/README.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.041761+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/contracts.md",
+    "title": "CONTRACTS",
+    "path": "tools/wiki/02-architecture/CONTRACTS.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.027358+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/data/data-01-data-flow-diagrams.md",
+    "title": "DATA-01-data-flow-diagrams",
+    "path": "tools/wiki/02-architecture/data/DATA-01-data-flow-diagrams.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.045146+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/data/data-02-adls-gen2-structure.md",
+    "title": "DATA-02-adls-gen2-structure",
+    "path": "tools/wiki/02-architecture/data/DATA-02-adls-gen2-structure.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.045146+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/data/data-03-data-retention-policies.md",
+    "title": "DATA-03-data-retention-policies",
+    "path": "tools/wiki/02-architecture/data/DATA-03-data-retention-policies.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.045146+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/data/data-04-backup-and-recovery.md",
+    "title": "DATA-04-backup-and-recovery",
+    "path": "tools/wiki/02-architecture/data/DATA-04-backup-and-recovery.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.046147+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/data/readme.md",
+    "title": "README",
+    "path": "tools/wiki/02-architecture/data/README.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.046147+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/documentation-maintenance-guide.md",
+    "title": "DOCUMENTATION-MAINTENANCE-GUIDE",
+    "path": "tools/wiki/02-architecture/DOCUMENTATION-MAINTENANCE-GUIDE.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.028365+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/integrations/int-01-classwallet-integration.md",
+    "title": "INT-01-classwallet-integration",
+    "path": "tools/wiki/02-architecture/integrations/INT-01-classwallet-integration.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.047828+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/integrations/int-02-pandadoc-integration.md",
+    "title": "INT-02-pandadoc-integration",
+    "path": "tools/wiki/02-architecture/integrations/INT-02-pandadoc-integration.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.048834+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/integrations/int-03-sendgrid-integration.md",
+    "title": "INT-03-sendgrid-integration",
+    "path": "tools/wiki/02-architecture/integrations/INT-03-sendgrid-integration.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.049843+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/integrations/int-04-melissa-data-integration.md",
+    "title": "INT-04-melissa-data-integration",
+    "path": "tools/wiki/02-architecture/integrations/INT-04-melissa-data-integration.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.050610+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/integrations/int-05-nc-dmv-dor-integration.md",
+    "title": "INT-05-nc-dmv-dor-integration",
+    "path": "tools/wiki/02-architecture/integrations/INT-05-nc-dmv-dor-integration.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.051117+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/integrations/int-06-nc-dpi-integration.md",
+    "title": "INT-06-nc-dpi-integration",
+    "path": "tools/wiki/02-architecture/integrations/INT-06-nc-dpi-integration.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.052122+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/integrations/int-07-rds-residency-determination-service.md",
+    "title": "INT-07-rds-residency-determination-service",
+    "path": "tools/wiki/02-architecture/integrations/INT-07-rds-residency-determination-service.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.052122+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/integrations/querybuilder/data-platform.md",
+    "title": "Data-Platform",
+    "path": "tools/wiki/02-architecture/integrations/QueryBuilder/Data-Platform.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.053890+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/integrations/querybuilder/sdk-design.md",
+    "title": "SDK-Design",
+    "path": "tools/wiki/02-architecture/integrations/QueryBuilder/SDK-Design.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.053890+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/integrations/readme.md",
+    "title": "README",
+    "path": "tools/wiki/02-architecture/integrations/README.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.054894+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/project-structure.md",
+    "title": "PROJECT-STRUCTURE",
+    "path": "tools/wiki/02-architecture/PROJECT-STRUCTURE.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.028365+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/readme.md",
+    "title": "README",
+    "path": "tools/wiki/02-architecture/README.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.028886+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/repo-organization-issues.md",
+    "title": "REPO-ORGANIZATION-ISSUES",
+    "path": "tools/wiki/02-architecture/REPO-ORGANIZATION-ISSUES.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.028886+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/security/hub-spoke-security-model.md",
+    "title": "hub-spoke-security-model",
+    "path": "tools/wiki/02-architecture/security/hub-spoke-security-model.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.058424+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/security/readme.md",
+    "title": "README",
+    "path": "tools/wiki/02-architecture/security/README.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.054894+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/security/sec-01-entra-id-configuration.md",
+    "title": "SEC-01-entra-id-configuration",
+    "path": "tools/wiki/02-architecture/security/SEC-01-entra-id-configuration.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.056286+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/security/sec-02-authorization-model.md",
+    "title": "SEC-02-authorization-model",
+    "path": "tools/wiki/02-architecture/security/SEC-02-authorization-model.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.056791+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/security/sec-03-row-level-security.md",
+    "title": "SEC-03-row-level-security",
+    "path": "tools/wiki/02-architecture/security/SEC-03-row-level-security.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.057796+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/security/sec-04-audit-logging.md",
+    "title": "SEC-04-audit-logging",
+    "path": "tools/wiki/02-architecture/security/SEC-04-audit-logging.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.058424+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/sensei-pdf-concerns.md",
+    "title": "SENSEI-PDF-CONCERNS",
+    "path": "tools/wiki/02-architecture/SENSEI-PDF-CONCERNS.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.028886+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/workflows/readme.md",
+    "title": "README",
+    "path": "tools/wiki/02-architecture/workflows/README.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.059045+00:00"
+  },
+  {
+    "id": "tools/wiki/02-architecture/workflows/wf-01-roster-to-be-certified.md",
+    "title": "WF-01-roster-to-be-certified",
+    "path": "tools/wiki/02-architecture/workflows/WF-01-roster-to-be-certified.md",
+    "category": "Architecture",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.059549+00:00"
+  },
+  {
+    "id": "tools/wiki/04-standards/readme.md",
+    "title": "README",
+    "path": "tools/wiki/04-standards/README.md",
+    "category": "Knowledge",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.061256+00:00"
+  },
+  {
+    "id": "tools/wiki/04-standards/std-01-frontend-coding-standards.md",
+    "title": "STD-01-frontend-coding-standards",
+    "path": "tools/wiki/04-standards/STD-01-frontend-coding-standards.md",
+    "category": "Knowledge",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.061966+00:00"
+  },
+  {
+    "id": "tools/wiki/04-standards/std-02-backend-coding-standards.md",
+    "title": "STD-02-backend-coding-standards",
+    "path": "tools/wiki/04-standards/STD-02-backend-coding-standards.md",
+    "category": "Knowledge",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.062473+00:00"
+  },
+  {
+    "id": "tools/wiki/04-standards/std-03-code-review-guidelines.md",
+    "title": "STD-03-code-review-guidelines",
+    "path": "tools/wiki/04-standards/STD-03-code-review-guidelines.md",
+    "category": "Knowledge",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.062473+00:00"
+  },
+  {
+    "id": "tools/wiki/04-standards/std-04-git-workflow.md",
+    "title": "STD-04-git-workflow",
+    "path": "tools/wiki/04-standards/STD-04-git-workflow.md",
+    "category": "Knowledge",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.062473+00:00"
+  },
+  {
+    "id": "tools/wiki/05-development/frontend/fe-01-nx-monorepo-architecture-guide.md",
+    "title": "FE-01-nx-monorepo-architecture-guide",
+    "path": "tools/wiki/05-development/frontend/FE-01-nx-monorepo-architecture-guide.md",
+    "category": "Guides",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.063479+00:00"
+  },
+  {
+    "id": "tools/wiki/05-development/frontend/fe-02-shared-library-documentation.md",
+    "title": "FE-02-shared-library-documentation",
+    "path": "tools/wiki/05-development/frontend/FE-02-shared-library-documentation.md",
+    "category": "Guides",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.064206+00:00"
+  },
+  {
+    "id": "tools/wiki/05-development/frontend/fe-03-component-architecture-patterns.md",
+    "title": "FE-03-component-architecture-patterns",
+    "path": "tools/wiki/05-development/frontend/FE-03-component-architecture-patterns.md",
+    "category": "Guides",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.064710+00:00"
+  },
+  {
+    "id": "tools/wiki/05-development/frontend/fe-04-state-management-strategy.md",
+    "title": "FE-04-state-management-strategy",
+    "path": "tools/wiki/05-development/frontend/FE-04-state-management-strategy.md",
+    "category": "Guides",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.064710+00:00"
+  },
+  {
+    "id": "tools/wiki/05-development/frontend/fe-05-routing-strategy.md",
+    "title": "FE-05-routing-strategy",
+    "path": "tools/wiki/05-development/frontend/FE-05-routing-strategy.md",
+    "category": "Guides",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.064710+00:00"
+  },
+  {
+    "id": "tools/wiki/05-development/frontend/readme.md",
+    "title": "README",
+    "path": "tools/wiki/05-development/frontend/README.md",
+    "category": "Guides",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.065577+00:00"
+  },
+  {
+    "id": "tools/wiki/05-development/readme.md",
+    "title": "README",
+    "path": "tools/wiki/05-development/README.md",
+    "category": "Guides",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.063479+00:00"
+  },
+  {
+    "id": "tools/wiki/05-testing/load-test.md",
+    "title": "LOAD-TEST",
+    "path": "tools/wiki/05-testing/LOAD-TEST.md",
+    "category": "Guides",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.066081+00:00"
+  },
+  {
+    "id": "tools/wiki/06-operations/ops-01-azure-defender-runbook.md",
+    "title": "OPS-01-azure-defender-runbook",
+    "path": "tools/wiki/06-operations/OPS-01-azure-defender-runbook.md",
+    "category": "Ops",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.066081+00:00"
+  },
+  {
+    "id": "tools/wiki/06-operations/ops-02-rbac-guide.md",
+    "title": "OPS-02-rbac-guide",
+    "path": "tools/wiki/06-operations/OPS-02-rbac-guide.md",
+    "category": "Ops",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.066081+00:00"
+  },
+  {
+    "id": "tools/wiki/06-operations/ops-03-test-user-account-management.md",
+    "title": "OPS-03-test-user-account-management",
+    "path": "tools/wiki/06-operations/OPS-03-test-user-account-management.md",
+    "category": "Ops",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.066081+00:00"
+  },
+  {
+    "id": "tools/wiki/06-operations/ops-04-cutover-planning.md",
+    "title": "OPS-04-cutover-planning",
+    "path": "tools/wiki/06-operations/OPS-04-cutover-planning.md",
+    "category": "Ops",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.066081+00:00"
+  },
+  {
+    "id": "tools/wiki/06-operations/readme.md",
+    "title": "README",
+    "path": "tools/wiki/06-operations/README.md",
+    "category": "Ops",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.067086+00:00"
+  },
+  {
+    "id": "tools/wiki/07-deployment/deploy-01-environment-topology.md",
+    "title": "DEPLOY-01-environment-topology",
+    "path": "tools/wiki/07-deployment/DEPLOY-01-environment-topology.md",
+    "category": "Ops",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.067431+00:00"
+  },
+  {
+    "id": "tools/wiki/07-deployment/deploy-02-network-architecture.md",
+    "title": "DEPLOY-02-network-architecture",
+    "path": "tools/wiki/07-deployment/DEPLOY-02-network-architecture.md",
+    "category": "Ops",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.067935+00:00"
+  },
+  {
+    "id": "tools/wiki/07-deployment/deploy-03-cicd-pipeline-architecture.md",
+    "title": "DEPLOY-03-cicd-pipeline-architecture",
+    "path": "tools/wiki/07-deployment/DEPLOY-03-cicd-pipeline-architecture.md",
+    "category": "Ops",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.067935+00:00"
+  },
+  {
+    "id": "tools/wiki/07-deployment/deploy-04-infrastructure-monitoring.md",
+    "title": "DEPLOY-04-infrastructure-monitoring",
+    "path": "tools/wiki/07-deployment/DEPLOY-04-infrastructure-monitoring.md",
+    "category": "Ops",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.067935+00:00"
+  },
+  {
+    "id": "tools/wiki/07-deployment/readme.md",
+    "title": "README",
+    "path": "tools/wiki/07-deployment/README.md",
+    "category": "Ops",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.067935+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/01-container-apps/cont-01-container-functions-architecture.md",
+    "title": "CONT-01-container-functions-architecture",
+    "path": "tools/wiki/09-proposed-architecture/01-container-apps/CONT-01-container-functions-architecture.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.068939+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/01-container-apps/cont-02-environment-design.md",
+    "title": "CONT-02-environment-design",
+    "path": "tools/wiki/09-proposed-architecture/01-container-apps/CONT-02-environment-design.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.070011+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/01-container-apps/cont-03-data-api-builder.md",
+    "title": "CONT-03-data-api-builder",
+    "path": "tools/wiki/09-proposed-architecture/01-container-apps/CONT-03-data-api-builder.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.070011+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/01-container-apps/cont-03-metabase-integration.md",
+    "title": "CONT-03-metabase-integration",
+    "path": "tools/wiki/09-proposed-architecture/01-container-apps/CONT-03-metabase-integration.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.070795+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/01-container-apps/cont-04-trino-integration.md",
+    "title": "CONT-04-trino-integration",
+    "path": "tools/wiki/09-proposed-architecture/01-container-apps/CONT-04-trino-integration.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.071305+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/01-container-apps/cont-05-cubejs-integration.md",
+    "title": "CONT-05-cubejs-integration",
+    "path": "tools/wiki/09-proposed-architecture/01-container-apps/CONT-05-cubejs-integration.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.071305+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/01-container-apps/cont-06-dapr-integration.md",
+    "title": "CONT-06-dapr-integration",
+    "path": "tools/wiki/09-proposed-architecture/01-container-apps/CONT-06-dapr-integration.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.071305+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/01-container-apps/cont-07-keda-scaling.md",
+    "title": "CONT-07-keda-scaling",
+    "path": "tools/wiki/09-proposed-architecture/01-container-apps/CONT-07-keda-scaling.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.072311+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/01-container-apps/cont-08-observability.md",
+    "title": "CONT-08-observability",
+    "path": "tools/wiki/09-proposed-architecture/01-container-apps/CONT-08-observability.md",
+    "category": "Proposed",
+    "status": "tbd",
+    "updated_at": "2026-02-14T10:11:30.072311+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/01-container-apps/cont-09-networking-security.md",
+    "title": "CONT-09-networking-security",
+    "path": "tools/wiki/09-proposed-architecture/01-container-apps/CONT-09-networking-security.md",
+    "category": "Proposed",
+    "status": "tbd",
+    "updated_at": "2026-02-14T10:11:30.072311+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/01-container-apps/cont-10-cost-model.md",
+    "title": "CONT-10-cost-model",
+    "path": "tools/wiki/09-proposed-architecture/01-container-apps/CONT-10-cost-model.md",
+    "category": "Proposed",
+    "status": "tbd",
+    "updated_at": "2026-02-14T10:11:30.073311+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/02-adrs/adr-prop-002-container-apps-platform.md",
+    "title": "ADR-PROP-002-container-apps-platform",
+    "path": "tools/wiki/09-proposed-architecture/02-adrs/ADR-PROP-002-container-apps-platform.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.073311+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/02-adrs/adr-prop-003-data-api-builder.md",
+    "title": "ADR-PROP-003-data-api-builder",
+    "path": "tools/wiki/09-proposed-architecture/02-adrs/ADR-PROP-003-data-api-builder.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.073311+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/02-adrs/adr-prop-004-trino-query-engine.md",
+    "title": "ADR-PROP-004-trino-query-engine",
+    "path": "tools/wiki/09-proposed-architecture/02-adrs/ADR-PROP-004-trino-query-engine.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.073311+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/02-adrs/adr-prop-005-cubejs-analytics.md",
+    "title": "ADR-PROP-005-cubejs-analytics",
+    "path": "tools/wiki/09-proposed-architecture/02-adrs/ADR-PROP-005-cubejs-analytics.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.074314+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/02-adrs/adr-prop-006-nrules-engine.md",
+    "title": "ADR-PROP-006-nrules-engine",
+    "path": "tools/wiki/09-proposed-architecture/02-adrs/ADR-PROP-006-nrules-engine.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.074314+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/02-architecture/database-schema-documentation.md",
+    "title": "database-schema-documentation",
+    "path": "tools/wiki/09-proposed-architecture/02-architecture/database-schema-documentation.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.074314+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/02-architecture/security/hub-and-spoke-security-model.md",
+    "title": "hub-and-spoke-security-model",
+    "path": "tools/wiki/09-proposed-architecture/02-architecture/security/hub-and-spoke-security-model.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.075312+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/02-aspire/aspire-01-apphost-setup.md",
+    "title": "ASPIRE-01-apphost-setup",
+    "path": "tools/wiki/09-proposed-architecture/02-aspire/ASPIRE-01-apphost-setup.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.075312+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/02-aspire/aspire-02-local-development.md",
+    "title": "ASPIRE-02-local-development",
+    "path": "tools/wiki/09-proposed-architecture/02-aspire/ASPIRE-02-local-development.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.076232+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/02-aspire/aspire-03-service-discovery.md",
+    "title": "ASPIRE-03-service-discovery",
+    "path": "tools/wiki/09-proposed-architecture/02-aspire/ASPIRE-03-service-discovery.md",
+    "category": "Proposed",
+    "status": "tbd",
+    "updated_at": "2026-02-14T10:11:30.076232+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/02-aspire/aspire-04-dapr-integration.md",
+    "title": "ASPIRE-04-dapr-integration",
+    "path": "tools/wiki/09-proposed-architecture/02-aspire/ASPIRE-04-dapr-integration.md",
+    "category": "Proposed",
+    "status": "tbd",
+    "updated_at": "2026-02-14T10:11:30.076232+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/02-aspire/aspire-05-deployment-azd.md",
+    "title": "ASPIRE-05-deployment-azd",
+    "path": "tools/wiki/09-proposed-architecture/02-aspire/ASPIRE-05-deployment-azd.md",
+    "category": "Proposed",
+    "status": "tbd",
+    "updated_at": "2026-02-14T10:11:30.076738+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/02-aspire/aspire-06-hybrid-iac.md",
+    "title": "ASPIRE-06-hybrid-iac",
+    "path": "tools/wiki/09-proposed-architecture/02-aspire/ASPIRE-06-hybrid-iac.md",
+    "category": "Proposed",
+    "status": "tbd",
+    "updated_at": "2026-02-14T10:11:30.076738+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/02-aspire/aspire-07-testing.md",
+    "title": "ASPIRE-07-testing",
+    "path": "tools/wiki/09-proposed-architecture/02-aspire/ASPIRE-07-testing.md",
+    "category": "Proposed",
+    "status": "tbd",
+    "updated_at": "2026-02-14T10:11:30.076738+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/03-hybrid-api/01-architecture-overview.md",
+    "title": "01-architecture-overview",
+    "path": "tools/wiki/09-proposed-architecture/03-hybrid-api/01-architecture-overview.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.077451+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/03-hybrid-api/api-01-dab-implementation.md",
+    "title": "API-01-dab-implementation",
+    "path": "tools/wiki/09-proposed-architecture/03-hybrid-api/API-01-dab-implementation.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.077964+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/03-hybrid-api/api-01-functions-logic.md",
+    "title": "API-01-functions-logic",
+    "path": "tools/wiki/09-proposed-architecture/03-hybrid-api/API-01-functions-logic.md",
+    "category": "Proposed",
+    "status": "tbd",
+    "updated_at": "2026-02-14T10:11:30.077964+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/03-hybrid-api/api-02-analytics-apis.md",
+    "title": "API-02-analytics-apis",
+    "path": "tools/wiki/09-proposed-architecture/03-hybrid-api/API-02-analytics-apis.md",
+    "category": "Proposed",
+    "status": "tbd",
+    "updated_at": "2026-02-14T10:11:30.077964+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/03-hybrid-api/api-02-functions-business-logic.md",
+    "title": "API-02-functions-business-logic",
+    "path": "tools/wiki/09-proposed-architecture/03-hybrid-api/API-02-functions-business-logic.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.079480+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/03-hybrid-api/api-03-analytics-apis.md",
+    "title": "API-03-analytics-apis",
+    "path": "tools/wiki/09-proposed-architecture/03-hybrid-api/API-03-analytics-apis.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.080383+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/03-hybrid-api/api-03-api-gateway.md",
+    "title": "API-03-api-gateway",
+    "path": "tools/wiki/09-proposed-architecture/03-hybrid-api/API-03-api-gateway.md",
+    "category": "Proposed",
+    "status": "tbd",
+    "updated_at": "2026-02-14T10:11:30.080383+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/03-hybrid-api/api-04-api-gateway.md",
+    "title": "API-04-api-gateway",
+    "path": "tools/wiki/09-proposed-architecture/03-hybrid-api/API-04-api-gateway.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.080383+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/03-hybrid-api/api-04-caching-strategy.md",
+    "title": "API-04-caching-strategy",
+    "path": "tools/wiki/09-proposed-architecture/03-hybrid-api/API-04-caching-strategy.md",
+    "category": "Proposed",
+    "status": "tbd",
+    "updated_at": "2026-02-14T10:11:30.080988+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/03-hybrid-api/api-05-caching-strategy.md",
+    "title": "API-05-caching-strategy",
+    "path": "tools/wiki/09-proposed-architecture/03-hybrid-api/API-05-caching-strategy.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.080988+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/03-hybrid-api/api-05-performance-testing.md",
+    "title": "API-05-performance-testing",
+    "path": "tools/wiki/09-proposed-architecture/03-hybrid-api/API-05-performance-testing.md",
+    "category": "Proposed",
+    "status": "tbd",
+    "updated_at": "2026-02-14T10:11:30.080988+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/03-hybrid-api/api-06-performance-testing.md",
+    "title": "API-06-performance-testing",
+    "path": "tools/wiki/09-proposed-architecture/03-hybrid-api/API-06-performance-testing.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.081492+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/03-hybrid-api/readme.md",
+    "title": "README",
+    "path": "tools/wiki/09-proposed-architecture/03-hybrid-api/README.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.081492+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/04-analytics/analytics-01-data-federation.md",
+    "title": "ANALYTICS-01-data-federation",
+    "path": "tools/wiki/09-proposed-architecture/04-analytics/ANALYTICS-01-data-federation.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.081492+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/04-analytics/analytics-01-metabase-deployment.md",
+    "title": "ANALYTICS-01-metabase-deployment",
+    "path": "tools/wiki/09-proposed-architecture/04-analytics/ANALYTICS-01-metabase-deployment.md",
+    "category": "Proposed",
+    "status": "tbd",
+    "updated_at": "2026-02-14T10:11:30.081492+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/04-analytics/analytics-02-metabase-models.md",
+    "title": "ANALYTICS-02-metabase-models",
+    "path": "tools/wiki/09-proposed-architecture/04-analytics/ANALYTICS-02-metabase-models.md",
+    "category": "Proposed",
+    "status": "tbd",
+    "updated_at": "2026-02-14T10:11:30.081492+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/04-analytics/analytics-02-semantic-layer.md",
+    "title": "ANALYTICS-02-semantic-layer",
+    "path": "tools/wiki/09-proposed-architecture/04-analytics/ANALYTICS-02-semantic-layer.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.081492+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/04-analytics/analytics-03-dashboard-embedding.md",
+    "title": "ANALYTICS-03-dashboard-embedding",
+    "path": "tools/wiki/09-proposed-architecture/04-analytics/ANALYTICS-03-dashboard-embedding.md",
+    "category": "Proposed",
+    "status": "tbd",
+    "updated_at": "2026-02-14T10:11:30.082498+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/04-analytics/analytics-03-data-quality.md",
+    "title": "ANALYTICS-03-data-quality",
+    "path": "tools/wiki/09-proposed-architecture/04-analytics/ANALYTICS-03-data-quality.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.082498+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/04-analytics/analytics-03-realtime-batch.md",
+    "title": "ANALYTICS-03-realtime-batch",
+    "path": "tools/wiki/09-proposed-architecture/04-analytics/ANALYTICS-03-realtime-batch.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.082498+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/04-analytics/analytics-04-data-lake.md",
+    "title": "ANALYTICS-04-data-lake",
+    "path": "tools/wiki/09-proposed-architecture/04-analytics/ANALYTICS-04-data-lake.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.082498+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/04-analytics/analytics-04-observability.md",
+    "title": "ANALYTICS-04-observability",
+    "path": "tools/wiki/09-proposed-architecture/04-analytics/ANALYTICS-04-observability.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.082498+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/04-analytics/analytics-04-query-optimization.md",
+    "title": "ANALYTICS-04-query-optimization",
+    "path": "tools/wiki/09-proposed-architecture/04-analytics/ANALYTICS-04-query-optimization.md",
+    "category": "Proposed",
+    "status": "tbd",
+    "updated_at": "2026-02-14T10:11:30.083130+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/04-analytics/analytics-05-data-contracts.md",
+    "title": "ANALYTICS-05-data-contracts",
+    "path": "tools/wiki/09-proposed-architecture/04-analytics/ANALYTICS-05-data-contracts.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.083130+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/04-analytics/analytics-05-reporting.md",
+    "title": "ANALYTICS-05-reporting",
+    "path": "tools/wiki/09-proposed-architecture/04-analytics/ANALYTICS-05-reporting.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.083130+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/04-business-rules/rules-01-nrules-implementation.md",
+    "title": "RULES-01-nrules-implementation",
+    "path": "tools/wiki/09-proposed-architecture/04-business-rules/RULES-01-nrules-implementation.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.083130+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/04-well-architected/wa-01-reliability.md",
+    "title": "WA-01-reliability",
+    "path": "tools/wiki/09-proposed-architecture/04-well-architected/WA-01-reliability.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.085926+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/04-well-architected/wa-02-security.md",
+    "title": "WA-02-security",
+    "path": "tools/wiki/09-proposed-architecture/04-well-architected/WA-02-security.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.085926+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/04-well-architected/wa-03-cost-optimization.md",
+    "title": "WA-03-cost-optimization",
+    "path": "tools/wiki/09-proposed-architecture/04-well-architected/WA-03-cost-optimization.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.086932+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/05-analytics/analytics-01-data-federation.md",
+    "title": "ANALYTICS-01-data-federation",
+    "path": "tools/wiki/09-proposed-architecture/05-analytics/ANALYTICS-01-data-federation.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.087540+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/05-analytics/analytics-02-semantic-layer.md",
+    "title": "ANALYTICS-02-semantic-layer",
+    "path": "tools/wiki/09-proposed-architecture/05-analytics/ANALYTICS-02-semantic-layer.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.088546+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/05-analytics/analytics-03-dashboard-architecture.md",
+    "title": "ANALYTICS-03-dashboard-architecture",
+    "path": "tools/wiki/09-proposed-architecture/05-analytics/ANALYTICS-03-dashboard-architecture.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.088546+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/05-analytics/analytics-03-realtime-vs-batch.md",
+    "title": "ANALYTICS-03-realtime-vs-batch",
+    "path": "tools/wiki/09-proposed-architecture/05-analytics/ANALYTICS-03-realtime-vs-batch.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.088546+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/05-testing/load-test.md",
+    "title": "LOAD-TEST",
+    "path": "tools/wiki/09-proposed-architecture/05-testing/LOAD-TEST.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.090362+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/05-well-architected/wa-01-reliability.md",
+    "title": "WA-01-reliability",
+    "path": "tools/wiki/09-proposed-architecture/05-well-architected/WA-01-reliability.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-18T07:59:51.369038+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/05-well-architected/wa-02-security.md",
+    "title": "WA-02-security",
+    "path": "tools/wiki/09-proposed-architecture/05-well-architected/WA-02-security.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-18T07:59:51.370097+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/05-well-architected/wa-03-cost-optimization.md",
+    "title": "WA-03-cost-optimization",
+    "path": "tools/wiki/09-proposed-architecture/05-well-architected/WA-03-cost-optimization.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-18T07:59:51.371655+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/05-well-architected/wa-04-operational-excellence.md",
+    "title": "WA-04-operational-excellence",
+    "path": "tools/wiki/09-proposed-architecture/05-well-architected/WA-04-operational-excellence.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-18T07:59:51.372655+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/05-well-architected/wa-05-performance-efficiency.md",
+    "title": "WA-05-performance-efficiency",
+    "path": "tools/wiki/09-proposed-architecture/05-well-architected/WA-05-performance-efficiency.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-18T07:59:51.372655+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/06-cloud-adoption/caf-01-strategy.md",
+    "title": "CAF-01-strategy",
+    "path": "tools/wiki/09-proposed-architecture/06-cloud-adoption/CAF-01-strategy.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-18T07:59:51.374098+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/06-cloud-adoption/caf-02-plan.md",
+    "title": "CAF-02-plan",
+    "path": "tools/wiki/09-proposed-architecture/06-cloud-adoption/CAF-02-plan.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-18T07:59:51.375598+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/06-cloud-adoption/caf-03-adopt.md",
+    "title": "CAF-03-adopt",
+    "path": "tools/wiki/09-proposed-architecture/06-cloud-adoption/CAF-03-adopt.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-18T07:59:51.376902+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/06-cloud-adoption/caf-04-govern-manage.md",
+    "title": "CAF-04-govern-manage",
+    "path": "tools/wiki/09-proposed-architecture/06-cloud-adoption/CAF-04-govern-manage.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-18T07:59:51.377908+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/07-adr-proposed/adr-prop-001-container-functions.md",
+    "title": "ADR-PROP-001-container-functions",
+    "path": "tools/wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-001-container-functions.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.092872+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/07-adr-proposed/adr-prop-002-aspire.md",
+    "title": "ADR-PROP-002-aspire",
+    "path": "tools/wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-002-aspire.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.093183+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/07-adr-proposed/adr-prop-003-data-api-builder.md",
+    "title": "ADR-PROP-003-data-api-builder",
+    "path": "tools/wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-003-data-api-builder.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.093687+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/07-adr-proposed/adr-prop-004-trino.md",
+    "title": "ADR-PROP-004-trino",
+    "path": "tools/wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-004-trino.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.094202+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/07-adr-proposed/adr-prop-005-cubejs.md",
+    "title": "ADR-PROP-005-cubejs",
+    "path": "tools/wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-005-cubejs.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.098835+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/07-adr-proposed/adr-prop-006-dapr.md",
+    "title": "ADR-PROP-006-dapr",
+    "path": "tools/wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-006-dapr.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.102107+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/07-adr-proposed/adr-prop-007-hybrid-iac.md",
+    "title": "ADR-PROP-007-hybrid-iac",
+    "path": "tools/wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-007-hybrid-iac.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.105112+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/07-adr-proposed/adr-prop-008-no-microservices.md",
+    "title": "ADR-PROP-008-no-microservices",
+    "path": "tools/wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-008-no-microservices.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.107971+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/07-adr-proposed/adr-prop-azure-service-bus-standard.md",
+    "title": "ADR-PROP-azure-service-bus-standard",
+    "path": "tools/wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-azure-service-bus-standard.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.108629+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/07-adr-proposed/adr-prop-event-schema-versioning.md",
+    "title": "ADR-PROP-event-schema-versioning",
+    "path": "tools/wiki/09-proposed-architecture/07-adr-proposed/ADR-PROP-event-schema-versioning.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.108629+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/08-c4-diagrams/c4-prop-01-system-context.md",
+    "title": "C4-PROP-01-system-context",
+    "path": "tools/wiki/09-proposed-architecture/08-c4-diagrams/C4-PROP-01-system-context.md",
+    "category": "Proposed",
+    "status": "tbd",
+    "updated_at": "2026-02-14T10:11:30.109584+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/08-c4-diagrams/c4-prop-02-container-diagram.md",
+    "title": "C4-PROP-02-container-diagram",
+    "path": "tools/wiki/09-proposed-architecture/08-c4-diagrams/C4-PROP-02-container-diagram.md",
+    "category": "Proposed",
+    "status": "tbd",
+    "updated_at": "2026-02-14T10:11:30.110141+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/08-c4-diagrams/c4-prop-03-component-diagrams.md",
+    "title": "C4-PROP-03-component-diagrams",
+    "path": "tools/wiki/09-proposed-architecture/08-c4-diagrams/C4-PROP-03-component-diagrams.md",
+    "category": "Proposed",
+    "status": "tbd",
+    "updated_at": "2026-02-14T10:11:30.112148+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/08-c4-diagrams/c4-prop-04-deployment-diagram.md",
+    "title": "C4-PROP-04-deployment-diagram",
+    "path": "tools/wiki/09-proposed-architecture/08-c4-diagrams/C4-PROP-04-deployment-diagram.md",
+    "category": "Proposed",
+    "status": "tbd",
+    "updated_at": "2026-02-14T10:11:30.112148+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/09-migration/migrate-01-containerize-functions.md",
+    "title": "MIGRATE-01-containerize-functions",
+    "path": "tools/wiki/09-proposed-architecture/09-migration/MIGRATE-01-containerize-functions.md",
+    "category": "Proposed",
+    "status": "tbd",
+    "updated_at": "2026-02-14T10:11:30.113064+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/09-migration/migrate-02-aspire-dab.md",
+    "title": "MIGRATE-02-aspire-dab",
+    "path": "tools/wiki/09-proposed-architecture/09-migration/MIGRATE-02-aspire-dab.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.113064+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/09-migration/migrate-02-aspire-dapr.md",
+    "title": "MIGRATE-02-aspire-dapr",
+    "path": "tools/wiki/09-proposed-architecture/09-migration/MIGRATE-02-aspire-dapr.md",
+    "category": "Proposed",
+    "status": "tbd",
+    "updated_at": "2026-02-14T10:11:30.113573+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/09-migration/migrate-03-dapr-service-mesh.md",
+    "title": "MIGRATE-03-dapr-service-mesh",
+    "path": "tools/wiki/09-proposed-architecture/09-migration/MIGRATE-03-dapr-service-mesh.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.113573+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/09-migration/migrate-03-metabase-analytics.md",
+    "title": "MIGRATE-03-metabase-analytics",
+    "path": "tools/wiki/09-proposed-architecture/09-migration/MIGRATE-03-metabase-analytics.md",
+    "category": "Proposed",
+    "status": "tbd",
+    "updated_at": "2026-02-14T10:11:30.114584+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/09-migration/migrate-04-analytics-stack.md",
+    "title": "MIGRATE-04-analytics-stack",
+    "path": "tools/wiki/09-proposed-architecture/09-migration/MIGRATE-04-analytics-stack.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.114584+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/09-migration/migrate-04-optimization.md",
+    "title": "MIGRATE-04-optimization",
+    "path": "tools/wiki/09-proposed-architecture/09-migration/MIGRATE-04-optimization.md",
+    "category": "Proposed",
+    "status": "tbd",
+    "updated_at": "2026-02-14T10:11:30.114584+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/09-migration/migrate-05-optimization.md",
+    "title": "MIGRATE-05-optimization",
+    "path": "tools/wiki/09-proposed-architecture/09-migration/MIGRATE-05-optimization.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.114584+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/10-operations/ops-01-monitoring.md",
+    "title": "OPS-01-monitoring",
+    "path": "tools/wiki/09-proposed-architecture/10-operations/OPS-01-monitoring.md",
+    "category": "Proposed",
+    "status": "tbd",
+    "updated_at": "2026-02-14T10:11:30.115582+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/10-operations/ops-02-incident-response.md",
+    "title": "OPS-02-incident-response",
+    "path": "tools/wiki/09-proposed-architecture/10-operations/OPS-02-incident-response.md",
+    "category": "Proposed",
+    "status": "tbd",
+    "updated_at": "2026-02-14T10:11:30.115897+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/10-operations/ops-03-continuous-improvement.md",
+    "title": "OPS-03-continuous-improvement",
+    "path": "tools/wiki/09-proposed-architecture/10-operations/OPS-03-continuous-improvement.md",
+    "category": "Proposed",
+    "status": "tbd",
+    "updated_at": "2026-02-14T10:11:30.115897+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/executive-brief.md",
+    "title": "EXECUTIVE-BRIEF",
+    "path": "tools/wiki/09-proposed-architecture/EXECUTIVE-BRIEF.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.116405+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/executive-presentation.md",
+    "title": "EXECUTIVE-PRESENTATION",
+    "path": "tools/wiki/09-proposed-architecture/EXECUTIVE-PRESENTATION.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.116918+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/executive-progress-report.md",
+    "title": "EXECUTIVE-PROGRESS-REPORT",
+    "path": "tools/wiki/09-proposed-architecture/EXECUTIVE-PROGRESS-REPORT.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.117469+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/ops-messaging.md",
+    "title": "OPS-messaging",
+    "path": "tools/wiki/09-proposed-architecture/OPS-messaging.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.117982+00:00"
+  },
+  {
+    "id": "tools/wiki/09-proposed-architecture/readme.md",
+    "title": "README",
+    "path": "tools/wiki/09-proposed-architecture/README.md",
+    "category": "Proposed",
+    "status": "draft",
+    "updated_at": "2026-02-14T10:11:30.118510+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/_archive/adr-009-analytics-query-engine-abstraction.md",
+    "title": "ADR-009-analytics-query-engine-abstraction",
+    "path": "tools/wiki/adr/_archive/ADR-009-analytics-query-engine-abstraction.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.140637+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/_archive/adr-010-embedded-analytics-components.md",
+    "title": "ADR-010-embedded-analytics-components",
+    "path": "tools/wiki/adr/_archive/ADR-010-embedded-analytics-components.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.141642+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/_archive/adr-prop-001-container-functions.md",
+    "title": "ADR-PROP-001-container-functions",
+    "path": "tools/wiki/adr/_archive/ADR-PROP-001-container-functions.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.141642+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/_archive/adr-prop-003-data-api-builder.md",
+    "title": "ADR-PROP-003-data-api-builder",
+    "path": "tools/wiki/adr/_archive/ADR-PROP-003-data-api-builder.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.142643+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/_archive/adr-prop-004-trino.md",
+    "title": "ADR-PROP-004-trino",
+    "path": "tools/wiki/adr/_archive/ADR-PROP-004-trino.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.142643+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/_archive/adr-prop-005-cubejs.md",
+    "title": "ADR-PROP-005-cubejs",
+    "path": "tools/wiki/adr/_archive/ADR-PROP-005-cubejs.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.142643+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/adr-001-azure-government-cloud.md",
+    "title": "ADR-001-azure-government-cloud",
+    "path": "tools/wiki/adr/ADR-001-azure-government-cloud.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.123041+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/adr-002-aspire-nx-multi-app.md",
+    "title": "ADR-002-aspire-nx-multi-app",
+    "path": "tools/wiki/adr/ADR-002-aspire-nx-multi-app.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.123041+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/adr-002-dapper-over-entity-framework.md",
+    "title": "ADR-002-dapper-over-entity-framework",
+    "path": "tools/wiki/adr/ADR-002-dapper-over-entity-framework.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.123041+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/adr-003-api-to-azure-container-apps.md",
+    "title": "ADR-003-api-to-azure-container-apps",
+    "path": "tools/wiki/adr/ADR-003-api-to-azure-container-apps.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.123813+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/adr-003-entra-id-b2c-ciam.md",
+    "title": "ADR-003-entra-id-b2c-ciam",
+    "path": "tools/wiki/adr/ADR-003-entra-id-b2c-ciam.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.123813+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/adr-004-dapr-sidecars-and-components.md",
+    "title": "ADR-004-dapr-sidecars-and-components",
+    "path": "tools/wiki/adr/ADR-004-dapr-sidecars-and-components.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.123813+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/adr-004-nx-monorepo-frontend.md",
+    "title": "ADR-004-nx-monorepo-frontend",
+    "path": "tools/wiki/adr/ADR-004-nx-monorepo-frontend.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.123813+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/adr-005-local-dev-apim-bypass.md",
+    "title": "ADR-005-local-dev-apim-bypass",
+    "path": "tools/wiki/adr/ADR-005-local-dev-apim-bypass.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.125326+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/adr-005-nrules-business-rules.md",
+    "title": "ADR-005-nrules-business-rules",
+    "path": "tools/wiki/adr/ADR-005-nrules-business-rules.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.125326+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/adr-006-pipelines-aca-deployment.md",
+    "title": "ADR-006-pipelines-aca-deployment",
+    "path": "tools/wiki/adr/ADR-006-pipelines-aca-deployment.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.125326+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/adr-006-terraform-iac.md",
+    "title": "ADR-006-terraform-iac",
+    "path": "tools/wiki/adr/ADR-006-terraform-iac.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.126331+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/adr-007-angular-19-framework.md",
+    "title": "ADR-007-angular-19-framework",
+    "path": "tools/wiki/adr/ADR-007-angular-19-framework.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.126331+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/adr-008-multi-schema-database.md",
+    "title": "ADR-008-multi-schema-database",
+    "path": "tools/wiki/adr/ADR-008-multi-schema-database.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.128036+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/adr-009-analytics-query-engine-abstraction.md",
+    "title": "ADR-009-analytics-query-engine-abstraction",
+    "path": "tools/wiki/adr/ADR-009-analytics-query-engine-abstraction.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.128036+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/adr-010-embedded-analytics-components.md",
+    "title": "ADR-010-embedded-analytics-components",
+    "path": "tools/wiki/adr/ADR-010-embedded-analytics-components.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.129042+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/adr-011-azure-data-api-builder.md",
+    "title": "ADR-011-azure-data-api-builder",
+    "path": "tools/wiki/adr/ADR-011-azure-data-api-builder.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.129549+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/adr-012-payment-processing.md",
+    "title": "ADR-012-payment-processing",
+    "path": "tools/wiki/adr/ADR-012-payment-processing.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.129549+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/adr-012-roster-workflow-orchestration.md",
+    "title": "ADR-012-roster-workflow-orchestration",
+    "path": "tools/wiki/adr/ADR-012-roster-workflow-orchestration.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.131082+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/adr-013-rds-async-integration-pattern.md",
+    "title": "ADR-013-rds-async-integration-pattern",
+    "path": "tools/wiki/adr/ADR-013-rds-async-integration-pattern.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.132095+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/adr-014-metabase-analytics.md",
+    "title": "ADR-014-metabase-analytics",
+    "path": "tools/wiki/adr/ADR-014-metabase-analytics.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.132837+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/adr-015-observability.md",
+    "title": "ADR-015-observability",
+    "path": "tools/wiki/adr/ADR-015-observability.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.133341+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/adr-prop-001-container-functions.md",
+    "title": "ADR-PROP-001-container-functions",
+    "path": "tools/wiki/adr/ADR-PROP-001-container-functions.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.133341+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/adr-prop-002-aspire.md",
+    "title": "ADR-PROP-002-aspire",
+    "path": "tools/wiki/adr/ADR-PROP-002-aspire.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.134122+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/adr-prop-003-data-api-builder.md",
+    "title": "ADR-PROP-003-data-api-builder",
+    "path": "tools/wiki/adr/ADR-PROP-003-data-api-builder.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.134639+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/adr-prop-004-trino.md",
+    "title": "ADR-PROP-004-trino",
+    "path": "tools/wiki/adr/ADR-PROP-004-trino.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.135196+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/adr-prop-005-cubejs.md",
+    "title": "ADR-PROP-005-cubejs",
+    "path": "tools/wiki/adr/ADR-PROP-005-cubejs.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.135196+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/adr-prop-006-dapr.md",
+    "title": "ADR-PROP-006-dapr",
+    "path": "tools/wiki/adr/ADR-PROP-006-dapr.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.136201+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/adr-prop-008-no-microservices.md",
+    "title": "ADR-PROP-008-no-microservices",
+    "path": "tools/wiki/adr/ADR-PROP-008-no-microservices.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.137745+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/adr-prop-azure-service-bus-standard.md",
+    "title": "ADR-PROP-azure-service-bus-standard",
+    "path": "tools/wiki/adr/ADR-PROP-azure-service-bus-standard.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.137745+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/adr-prop-event-schema-versioning.md",
+    "title": "ADR-PROP-event-schema-versioning",
+    "path": "tools/wiki/adr/ADR-PROP-event-schema-versioning.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.137745+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/adr-template.md",
+    "title": "ADR-template",
+    "path": "tools/wiki/adr/ADR-template.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.138750+00:00"
+  },
+  {
+    "id": "tools/wiki/adr/readme.md",
+    "title": "README",
+    "path": "tools/wiki/adr/README.md",
+    "category": "ADR",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.140637+00:00"
+  },
+  {
+    "id": "tools/wiki/adr_archive/adr-prop-001-container-functions.md",
+    "title": "ADR-PROP-001-container-functions",
+    "path": "tools/wiki/adr_archive/ADR-PROP-001-container-functions.md",
+    "category": "ADR",
+    "status": "archived",
+    "updated_at": "2026-02-14T10:11:30.142643+00:00"
+  },
+  {
+    "id": "tools/wiki/api-examples.md",
+    "title": "api-examples",
+    "path": "tools/wiki/api-examples.md",
+    "category": "Uncategorized",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.145775+00:00"
+  },
+  {
+    "id": "tools/wiki/broken-link-fix-plan.md",
+    "title": "BROKEN-LINK-FIX-PLAN",
+    "path": "tools/wiki/BROKEN-LINK-FIX-PLAN.md",
+    "category": "Uncategorized",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.118510+00:00"
+  },
+  {
+    "id": "tools/wiki/database-schema-documentation.md",
+    "title": "Database-Schema-Documentation",
+    "path": "tools/wiki/Database-Schema-Documentation.md",
+    "category": "Uncategorized",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.119551+00:00"
+  },
+  {
+    "id": "tools/wiki/documentation-health-report.md",
+    "title": "DOCUMENTATION-HEALTH-REPORT",
+    "path": "tools/wiki/DOCUMENTATION-HEALTH-REPORT.md",
+    "category": "Uncategorized",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.119030+00:00"
+  },
+  {
+    "id": "tools/wiki/documentation-incompleteness-scan.md",
+    "title": "DOCUMENTATION-INCOMPLETENESS-SCAN",
+    "path": "tools/wiki/DOCUMENTATION-INCOMPLETENESS-SCAN.md",
+    "category": "Uncategorized",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.119030+00:00"
+  },
+  {
+    "id": "tools/wiki/glossary.md",
+    "title": "GLOSSARY",
+    "path": "tools/wiki/GLOSSARY.md",
+    "category": "Uncategorized",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.120597+00:00"
+  },
+  {
+    "id": "tools/wiki/guides/event-driven-guide.md",
+    "title": "event-driven-guide",
+    "path": "tools/wiki/guides/event-driven-guide.md",
+    "category": "Guides",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.164009+00:00"
+  },
+  {
+    "id": "tools/wiki/guides/implementing-clean-architecture.md",
+    "title": "implementing-clean-architecture",
+    "path": "tools/wiki/guides/implementing-clean-architecture.md",
+    "category": "Guides",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.165013+00:00"
+  },
+  {
+    "id": "tools/wiki/guides/microservices-getting-started.md",
+    "title": "microservices-getting-started",
+    "path": "tools/wiki/guides/microservices-getting-started.md",
+    "category": "Guides",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.165541+00:00"
+  },
+  {
+    "id": "tools/wiki/guides/readme.md",
+    "title": "README",
+    "path": "tools/wiki/guides/README.md",
+    "category": "Guides",
+    "status": "active",
+    "updated_at": "2026-02-14T10:19:33.689560+00:00"
+  },
+  {
+    "id": "tools/wiki/index.md",
+    "title": "index",
+    "path": "tools/wiki/index.md",
+    "category": "Uncategorized",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.165541+00:00"
+  },
+  {
+    "id": "tools/wiki/knowledge/kg-02-knowledge-graph-schema.md",
+    "title": "KG-02-knowledge-graph-schema",
+    "path": "tools/wiki/knowledge/KG-02-knowledge-graph-schema.md",
+    "category": "Knowledge",
+    "status": "tbd",
+    "updated_at": "2026-02-27T08:43:48.188772+00:00"
+  },
+  {
+    "id": "tools/wiki/knowledge/kg-02b-uncategorized-mapping.md",
+    "title": "KG-02b-uncategorized-mapping",
+    "path": "tools/wiki/knowledge/KG-02b-uncategorized-mapping.md",
+    "category": "Knowledge",
+    "status": "active",
+    "updated_at": "2026-02-27T10:06:24.873206+00:00"
+  },
+  {
+    "id": "tools/wiki/knowledge/kg-03-ingestion-report.md",
+    "title": "KG-03-ingestion-report",
+    "path": "tools/wiki/knowledge/KG-03-ingestion-report.md",
+    "category": "Knowledge",
+    "status": "active",
+    "updated_at": "2026-02-27T14:37:00.092237+00:00"
+  },
+  {
+    "id": "tools/wiki/knowledge/readme.md",
+    "title": "README",
+    "path": "tools/wiki/knowledge/README.md",
+    "category": "Knowledge",
+    "status": "active",
+    "updated_at": "2026-02-27T14:37:00.092237+00:00"
+  },
+  {
+    "id": "tools/wiki/lessons/readme.md",
+    "title": "README",
+    "path": "tools/wiki/lessons/README.md",
+    "category": "Lessons",
+    "status": "active",
+    "updated_at": "2026-02-14T10:19:33.689560+00:00"
+  },
+  {
+    "id": "tools/wiki/markdown-examples.md",
+    "title": "markdown-examples",
+    "path": "tools/wiki/markdown-examples.md",
+    "category": "Uncategorized",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.166046+00:00"
+  },
+  {
+    "id": "tools/wiki/notes/readme.md",
+    "title": "README",
+    "path": "tools/wiki/notes/README.md",
+    "category": "Notes",
+    "status": "active",
+    "updated_at": "2026-02-14T10:19:33.691074+00:00"
+  },
+  {
+    "id": "tools/wiki/patterns/api-gateway.md",
+    "title": "api-gateway",
+    "path": "tools/wiki/patterns/api-gateway.md",
+    "category": "Knowledge",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.169790+00:00"
+  },
+  {
+    "id": "tools/wiki/patterns/backend-for-frontend.md",
+    "title": "backend-for-frontend",
+    "path": "tools/wiki/patterns/backend-for-frontend.md",
+    "category": "Knowledge",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.169790+00:00"
+  },
+  {
+    "id": "tools/wiki/patterns/circuit-breaker.md",
+    "title": "circuit-breaker",
+    "path": "tools/wiki/patterns/circuit-breaker.md",
+    "category": "Knowledge",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.170625+00:00"
+  },
+  {
+    "id": "tools/wiki/patterns/clean-architecture.md",
+    "title": "clean-architecture",
+    "path": "tools/wiki/patterns/clean-architecture.md",
+    "category": "Knowledge",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.171130+00:00"
+  },
+  {
+    "id": "tools/wiki/patterns/cqrs.md",
+    "title": "cqrs",
+    "path": "tools/wiki/patterns/cqrs.md",
+    "category": "Knowledge",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.171130+00:00"
+  },
+  {
+    "id": "tools/wiki/patterns/data-mapper.md",
+    "title": "data-mapper",
+    "path": "tools/wiki/patterns/data-mapper.md",
+    "category": "Knowledge",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.171130+00:00"
+  },
+  {
+    "id": "tools/wiki/patterns/domain-driven-design.md",
+    "title": "domain-driven-design",
+    "path": "tools/wiki/patterns/domain-driven-design.md",
+    "category": "Knowledge",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.171130+00:00"
+  },
+  {
+    "id": "tools/wiki/patterns/event-driven.md",
+    "title": "event-driven",
+    "path": "tools/wiki/patterns/event-driven.md",
+    "category": "Knowledge",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.172136+00:00"
+  },
+  {
+    "id": "tools/wiki/patterns/event-sourcing.md",
+    "title": "event-sourcing",
+    "path": "tools/wiki/patterns/event-sourcing.md",
+    "category": "Knowledge",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.172136+00:00"
+  },
+  {
+    "id": "tools/wiki/patterns/hexagonal-architecture.md",
+    "title": "hexagonal-architecture",
+    "path": "tools/wiki/patterns/hexagonal-architecture.md",
+    "category": "Knowledge",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.172136+00:00"
+  },
+  {
+    "id": "tools/wiki/patterns/layered-architecture.md",
+    "title": "layered-architecture",
+    "path": "tools/wiki/patterns/layered-architecture.md",
+    "category": "Knowledge",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.172778+00:00"
+  },
+  {
+    "id": "tools/wiki/patterns/microservices.md",
+    "title": "microservices",
+    "path": "tools/wiki/patterns/microservices.md",
+    "category": "Knowledge",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.173282+00:00"
+  },
+  {
+    "id": "tools/wiki/patterns/onion-architecture.md",
+    "title": "onion-architecture",
+    "path": "tools/wiki/patterns/onion-architecture.md",
+    "category": "Knowledge",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.173282+00:00"
+  },
+  {
+    "id": "tools/wiki/patterns/repository.md",
+    "title": "repository",
+    "path": "tools/wiki/patterns/repository.md",
+    "category": "Knowledge",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.173282+00:00"
+  },
+  {
+    "id": "tools/wiki/patterns/saga.md",
+    "title": "saga",
+    "path": "tools/wiki/patterns/saga.md",
+    "category": "Knowledge",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.174288+00:00"
+  },
+  {
+    "id": "tools/wiki/patterns/service-mesh.md",
+    "title": "service-mesh",
+    "path": "tools/wiki/patterns/service-mesh.md",
+    "category": "Knowledge",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.174288+00:00"
+  },
+  {
+    "id": "tools/wiki/patterns/specification.md",
+    "title": "specification",
+    "path": "tools/wiki/patterns/specification.md",
+    "category": "Knowledge",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.174288+00:00"
+  },
+  {
+    "id": "tools/wiki/patterns/unit-of-work.md",
+    "title": "unit-of-work",
+    "path": "tools/wiki/patterns/unit-of-work.md",
+    "category": "Knowledge",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.174288+00:00"
+  },
+  {
+    "id": "tools/wiki/pipeline-architecture.md",
+    "title": "PIPELINE-ARCHITECTURE",
+    "path": "tools/wiki/PIPELINE-ARCHITECTURE.md",
+    "category": "Ops",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.120597+00:00"
+  },
+  {
+    "id": "tools/wiki/pipeline-summary.md",
+    "title": "PIPELINE-SUMMARY",
+    "path": "tools/wiki/PIPELINE-SUMMARY.md",
+    "category": "Ops",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.120597+00:00"
+  },
+  {
+    "id": "tools/wiki/principles/dependency-injection.md",
+    "title": "dependency-injection",
+    "path": "tools/wiki/principles/dependency-injection.md",
+    "category": "Notes",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.175067+00:00"
+  },
+  {
+    "id": "tools/wiki/principles/design-patterns.md",
+    "title": "design-patterns",
+    "path": "tools/wiki/principles/design-patterns.md",
+    "category": "Notes",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.175067+00:00"
+  },
+  {
+    "id": "tools/wiki/principles/dry.md",
+    "title": "dry",
+    "path": "tools/wiki/principles/dry.md",
+    "category": "Notes",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.175067+00:00"
+  },
+  {
+    "id": "tools/wiki/principles/kiss.md",
+    "title": "kiss",
+    "path": "tools/wiki/principles/kiss.md",
+    "category": "Notes",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.175572+00:00"
+  },
+  {
+    "id": "tools/wiki/principles/separation-of-concerns.md",
+    "title": "separation-of-concerns",
+    "path": "tools/wiki/principles/separation-of-concerns.md",
+    "category": "Notes",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.175572+00:00"
+  },
+  {
+    "id": "tools/wiki/principles/solid.md",
+    "title": "solid",
+    "path": "tools/wiki/principles/solid.md",
+    "category": "Notes",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.176263+00:00"
+  },
+  {
+    "id": "tools/wiki/principles/yagni.md",
+    "title": "yagni",
+    "path": "tools/wiki/principles/yagni.md",
+    "category": "Notes",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.176263+00:00"
+  },
+  {
+    "id": "tools/wiki/readme.md",
+    "title": "README",
+    "path": "tools/wiki/README.md",
+    "category": "Uncategorized",
+    "status": "active",
+    "updated_at": "2026-02-14T10:11:30.121725+00:00"
+  },
+  {
+    "id": "tools/wiki/table_of_contents.md",
+    "title": "TABLE_OF_CONTENTS",
+    "path": "tools/wiki/TABLE_OF_CONTENTS.md",
+    "category": "Uncategorized",
+    "status": "active",
+    "updated_at": "2026-02-14T10:19:33.667187+00:00"
+  }
+]
