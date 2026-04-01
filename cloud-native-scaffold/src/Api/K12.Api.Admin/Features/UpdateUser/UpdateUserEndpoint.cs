@@ -29,7 +29,10 @@ public static class UpdateUserEndpoint
 
             return result.IsSuccess
                 ? Results.NoContent()
-                : Results.BadRequest(new { Error = result.Error.Message });
+                : Results.Problem(
+                    detail: result.Error.Message,
+                    statusCode: StatusCodes.Status400BadRequest,
+                    title: "Bad Request");
         })
         .WithName("UpdateUser")
         .WithTags("Admin")
@@ -39,7 +42,7 @@ public static class UpdateUserEndpoint
             Description = "Updates an existing system user"
         })
         .Produces(StatusCodes.Status204NoContent)
-        .Produces<object>(StatusCodes.Status400BadRequest);
+        .ProducesProblem(StatusCodes.Status400BadRequest);
 
         return builder;
     }
