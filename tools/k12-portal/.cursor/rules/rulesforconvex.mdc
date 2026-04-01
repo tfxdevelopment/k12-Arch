@@ -1,15 +1,9 @@
 ---
-description:
-globs:
-alwaysApply: true
----
-
----
-
 description: Convex guidelines
 globs:
+  - "**/*.ts"
+  - "**/*.tsx"
 alwaysApply: true
-
 ---
 
 ## Function guidelines
@@ -41,5 +35,3 @@ alwaysApply: true
 - do not use emoji in the readme or app
 - do not over engineer the code but make it type-safe
 - do not do more than what the user ask for unless it related to fixing, adding, or updating the code to what the user is asking for
-
-waynesutton@WS-Convex merge2 %
