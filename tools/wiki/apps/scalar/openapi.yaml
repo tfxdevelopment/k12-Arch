@@ -1,0 +1,26 @@
+openapi: 3.1.0
+info:
+  title: K12 IDP Demo API
+  version: 1.0.0
+  description: API surface for CAF/WAF and IDP demo workflows.
+servers:
+  - url: https://api.demo.k12.local
+paths:
+  /health:
+    get:
+      summary: Health check
+      responses:
+        '200':
+          description: Healthy
+  /caf/status:
+    get:
+      summary: Get CAF execution status
+      responses:
+        '200':
+          description: CAF status payload
+  /waf/scorecard:
+    get:
+      summary: Get WAF scorecard
+      responses:
+        '200':
+          description: WAF scorecard payload

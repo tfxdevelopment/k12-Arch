@@ -1,0 +1,5 @@
+{
+  "name": "MyPortal IDP",
+  "description": "Internal Developer Platform for K12 MyPortal. Orchestrate tools, view logs, and access documentation.",
+  "requestFramePermissions": []
+}

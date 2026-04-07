@@ -1,0 +1,12 @@
+{
+  "name": "caf-waf",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "sync-docs": "node scripts/sync-docs.mjs",
+    "build-nav": "node scripts/build-nav.mjs",
+    "build-matrix": "node scripts/migration-matrix.mjs",
+    "build": "npm run sync-docs && npm run build-nav && npm run build-matrix"
+  }
+}
