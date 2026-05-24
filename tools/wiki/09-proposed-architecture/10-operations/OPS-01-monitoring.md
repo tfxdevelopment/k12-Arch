@@ -1,3 +1,0 @@
-# TBD
-
-Detailed content pending.
