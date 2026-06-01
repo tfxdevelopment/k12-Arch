@@ -32,7 +32,7 @@
     "@anthropic-ai/sdk": "^0.71.2",
     "@convex-dev/aggregate": "^0.2.1",
     "@convex-dev/persistent-text-streaming": "^0.3.0",
-    "@convex-dev/workos": "^0.0.1",
+    "@convex-dev/workos": "^0.0.3",
     "convex-helpers": "^0.1.111",
         "convex": "^1.31.7",
     "convex-fs": "^0.2.1",
