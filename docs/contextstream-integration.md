@@ -49,11 +49,28 @@ Verified in the remote environment: node 22 + npx present, npm registry reachabl
 **Takes effect on the next session** — MCP servers are launched at session start, so a reload
 is required; the tools will not appear mid-session.
 
+## 🔴 Verified 2026-06-08: the committed API keys are INVALID
+
+Both committed keys (`cbiq_vGHBPci…` from `.cursor`/`.roo`/`.kilocode` and `cbiq_KqNbAsVJ…`
+from `tools/wiki`) were tested against `api.contextstream.io` by driving
+`@contextstream/mcp-server` over stdio. **Every authenticated operation returns
+`UNAUTHORIZED`** — including `help(action="auth")` ("who am I"), `session(capture_plan)`,
+`memory(create_task)`, and `session(capture)`.
+
+`init` *appears* to succeed only because it resolves the workspace from the local
+`.contextstream/config.json` (`resolved via: local_config`) — it does **not** prove the key
+works against the API.
+
+**Consequence:** the integration cannot function (and the re-homing below cannot run) until a
+**valid** key is generated in the ContextStream console and supplied. This is required, not just
+a hygiene nice-to-have. The key currently inlined in `.mcp.json` is a known-dead placeholder.
+
 ## ⚠️ Security: committed API keys
 
-Live ContextStream API keys are committed in plaintext across `.cursor/mcp.json`,
+Live-looking ContextStream API keys are committed in plaintext across `.cursor/mcp.json`,
 `.roo/mcp.json`, `.kilocode/mcp.json`, `tools/wiki/.mcp.json`, and now `.mcp.json`
-(two distinct `cbiq_…` keys). They are in git history and should be treated as exposed.
+(two distinct `cbiq_…` keys). They are in git history and should be treated as exposed
+(and, per above, are already non-functional — replace, don't just rotate).
 
 Recommended (owner action — requires ContextStream console access):
 1. **Rotate** both keys in the ContextStream console.
@@ -97,10 +114,19 @@ Note: there is **no "remote agent" or "skills" tool in ContextStream itself** �
 (`.claude/agents/`) and "skills" (`.agent/skills/`) are editor-side concepts in this repo, not
 ContextStream features.
 
-### Next steps once reconnected
-- Re-home the CAF/WAF plan into ContextStream: `session(action="capture_plan", …)` +
-  `memory(action="create_task", …)` per stub doc, instead of `docs/plans/*.md`.
-- Capture the key decisions (multi-agent handoff approach; CAF/WAF doc structure) via
-  `session(action="capture", event_type="decision", …)`.
+### Re-homing (prepared, one command — blocked on a valid key)
+
+A ready-to-run script captures the CAF/WAF plan, its 9 tasks, and the 3 key decisions into the
+workspace. It is written and committed; it could not be executed because the committed keys are
+`UNAUTHORIZED` (see above). Once a valid key exists:
+
+```bash
+CONTEXTSTREAM_API_KEY=cbiq_<valid> node scripts/contextstream-rehome.mjs
+```
+
+It runs `init` → `session(capture_plan)` → `memory(create_task)` ×9 → `session(capture)` ×3.
+
+### Remaining next step
 - Pull the **"Azure resource groups and security roles best practices"** chat into the workspace
-  and reconcile it against CAF-04 (the reconciliation wave in the handoff charter).
+  and reconcile it against CAF-04 (the reconciliation wave in the handoff charter). This needs an
+  authenticated session, so it is likewise blocked on a valid key.
