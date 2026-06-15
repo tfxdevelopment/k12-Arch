@@ -1,8 +1,13 @@
 {
   "mcpServers": {
-"context-awesome": {
-      "type": "http",
-      "url": "https://www.context-awesome.com/api/mcp"
+    "contextstream": {
+      "command": "npx",
+      "args": ["-y", "@contextstream/mcp-server@latest"],
+      "env": {
+        "CONTEXTSTREAM_API_URL": "https://api.contextstream.io",
+        "CONTEXTSTREAM_API_KEY": "cbiq_vGHBPci63s5euiJeU4R0alc-d2EEAMgGpoHy6oRV3C4",
+        "CONTEXTSTREAM_CONTEXT_PACK": "true"
+      }
     }
   }
 }
