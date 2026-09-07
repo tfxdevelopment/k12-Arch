@@ -1,0 +1,34 @@
+%% Management-group hierarchy and where the guardrails attach (CAF landing zone shape)
+flowchart TB
+  classDef mg fill:#1E2761,stroke:#1E2761,color:#FFFFFF
+  classDef audit fill:#FFF3D6,stroke:#B57A12,color:#4A3100
+  classDef deny fill:#FADBD8,stroke:#B03A2E,color:#641E16
+  classDef sub fill:#CADCFC,stroke:#1E2761,color:#1E2761
+
+  root[Tenant Root Group]:::mg
+  cfi[CFI · intermediate root<br/>initiative k12-platform-security-guardrails defined here]:::mg
+  platform[Platform<br/>identity · connectivity · management<br/>shared private DNS zones · hub firewall]:::mg
+  lz[Landing Zones]:::mg
+  sandbox[Sandboxes<br/>relaxed policy · architect POCs]:::mg
+  corp[Corp]:::mg
+  nonprod[NonProd MG<br/>assignment k12-guardrails-nonprod → Audit]:::audit
+  prod[Prod MG<br/>assignment k12-guardrails-prod → Deny]:::deny
+  subnp[sub-k12-nonprod<br/>rg-k12-dev · rg-k12-test<br/>Defender: CSPM + Key Vault]:::sub
+  substage[sub-k12-stage<br/>rg-k12-stage<br/>Defender: full plan set]:::sub
+  subprod[sub-k12-prod<br/>rg-k12-prod<br/>Defender: full plan set]:::sub
+  ops[Ops/Architects group<br/>Contributor + data-plane Owner]
+  opsprod[Ops/Architects group<br/>Reader + PIM Contributor]
+
+  root --> cfi
+  cfi --> platform
+  cfi --> lz
+  cfi --> sandbox
+  lz --> corp
+  corp --> nonprod
+  corp --> prod
+  nonprod --> subnp
+  prod --> substage
+  prod --> subprod
+  ops -.-> subnp
+  opsprod -.-> substage
+  opsprod -.-> subprod

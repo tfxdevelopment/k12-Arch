@@ -1,0 +1,39 @@
+{
+  "count": 4,
+  "data": [
+    {
+      "localAuth": false,
+      "name": "development-api-enrollment-signalr",
+      "pna": "Enabled",
+      "resourceGroup": "development",
+      "sku": "Standard_S1",
+      "tls": false
+    },
+    {
+      "localAuth": false,
+      "name": "development-signalr",
+      "pna": "Enabled",
+      "resourceGroup": "development",
+      "sku": "Standard_S1",
+      "tls": false
+    },
+    {
+      "localAuth": false,
+      "name": "staging-api-enrollment-signalr",
+      "pna": "Enabled",
+      "resourceGroup": "staging",
+      "sku": "Standard_S1",
+      "tls": false
+    },
+    {
+      "localAuth": false,
+      "name": "testing-api-enrollment-signalr",
+      "pna": "Enabled",
+      "resourceGroup": "testing",
+      "sku": "Standard_S1",
+      "tls": false
+    }
+  ],
+  "skip_token": null,
+  "total_records": 4
+}

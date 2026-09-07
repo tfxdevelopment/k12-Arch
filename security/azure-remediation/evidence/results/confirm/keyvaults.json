@@ -1,0 +1,79 @@
+{
+  "count": 8,
+  "data": [
+    {
+      "defaultAction": "Allow",
+      "name": "classWallet",
+      "pna": "Enabled",
+      "purge": true,
+      "rbac": true,
+      "resourceGroup": "k12-infra",
+      "softDeleteDays": 90
+    },
+    {
+      "defaultAction": null,
+      "name": "development-k12-kv",
+      "pna": "Enabled",
+      "purge": true,
+      "rbac": true,
+      "resourceGroup": "development",
+      "softDeleteDays": 90
+    },
+    {
+      "defaultAction": null,
+      "name": "developmentapikv",
+      "pna": "Enabled",
+      "purge": true,
+      "rbac": true,
+      "resourceGroup": "development",
+      "softDeleteDays": 7
+    },
+    {
+      "defaultAction": "Allow",
+      "name": "k12-rds-integration",
+      "pna": "Enabled",
+      "purge": null,
+      "rbac": true,
+      "resourceGroup": "k12-infra",
+      "softDeleteDays": 90
+    },
+    {
+      "defaultAction": "Deny",
+      "name": "k12-shared-accounts",
+      "pna": "Enabled",
+      "purge": true,
+      "rbac": true,
+      "resourceGroup": "k12-infra",
+      "softDeleteDays": 90
+    },
+    {
+      "defaultAction": "Deny",
+      "name": "lowerenvfdcfnccert",
+      "pna": "Enabled",
+      "purge": null,
+      "rbac": true,
+      "resourceGroup": "k12-infra",
+      "softDeleteDays": 90
+    },
+    {
+      "defaultAction": null,
+      "name": "stagingapikv",
+      "pna": "Enabled",
+      "purge": true,
+      "rbac": true,
+      "resourceGroup": "staging",
+      "softDeleteDays": 7
+    },
+    {
+      "defaultAction": null,
+      "name": "testingapikv",
+      "pna": "Enabled",
+      "purge": true,
+      "rbac": true,
+      "resourceGroup": "testing",
+      "softDeleteDays": 7
+    }
+  ],
+  "skip_token": null,
+  "total_records": 8
+}

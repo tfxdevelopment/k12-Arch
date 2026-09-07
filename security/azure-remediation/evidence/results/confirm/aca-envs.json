@@ -1,0 +1,117 @@
+{
+  "count": 7,
+  "data": [
+    {
+      "internal": null,
+      "mtls": false,
+      "name": "cae-6okwxqo3pdluq",
+      "resourceGroup": "development",
+      "subnet": null,
+      "workloadProfiles": [
+        {
+          "enableFips": false,
+          "name": "consumption",
+          "workloadProfileType": "Consumption"
+        }
+      ],
+      "zoneRedundant": false
+    },
+    {
+      "internal": null,
+      "mtls": false,
+      "name": "development-k12-cae",
+      "resourceGroup": "development",
+      "subnet": null,
+      "workloadProfiles": [
+        {
+          "enableFips": false,
+          "name": "Consumption",
+          "workloadProfileType": "Consumption"
+        }
+      ],
+      "zoneRedundant": false
+    },
+    {
+      "internal": false,
+      "mtls": false,
+      "name": "development-secure-cae",
+      "resourceGroup": "development",
+      "subnet": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/development/providers/Microsoft.Network/virtualNetworks/development-vnet/subnets/development-runner-subnet",
+      "workloadProfiles": [
+        {
+          "enableFips": false,
+          "name": "Consumption",
+          "workloadProfileType": "Consumption"
+        }
+      ],
+      "zoneRedundant": false
+    },
+    {
+      "internal": false,
+      "mtls": false,
+      "name": "k12-infra-ops-apps-cae",
+      "resourceGroup": "development",
+      "subnet": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/development/providers/Microsoft.Network/virtualNetworks/k12-cae-ops-vbet/subnets/apps-cae-subnet",
+      "workloadProfiles": [
+        {
+          "enableFips": false,
+          "name": "Consumption",
+          "workloadProfileType": "Consumption"
+        },
+        {
+          "enableFips": false,
+          "name": "Flex",
+          "workloadProfileType": "Flex"
+        }
+      ],
+      "zoneRedundant": false
+    },
+    {
+      "internal": true,
+      "mtls": false,
+      "name": "k12-infra-ops-cae",
+      "resourceGroup": "development",
+      "subnet": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/development/providers/Microsoft.Network/virtualNetworks/k12-cae-ops-vbet/subnets/ops-cae-subnet",
+      "workloadProfiles": [
+        {
+          "enableFips": false,
+          "name": "Consumption",
+          "workloadProfileType": "Consumption"
+        }
+      ],
+      "zoneRedundant": false
+    },
+    {
+      "internal": null,
+      "mtls": false,
+      "name": "staging-k12-cae",
+      "resourceGroup": "staging",
+      "subnet": null,
+      "workloadProfiles": [
+        {
+          "enableFips": false,
+          "name": "Consumption",
+          "workloadProfileType": "Consumption"
+        }
+      ],
+      "zoneRedundant": false
+    },
+    {
+      "internal": null,
+      "mtls": false,
+      "name": "testing-k12-cae",
+      "resourceGroup": "testing",
+      "subnet": null,
+      "workloadProfiles": [
+        {
+          "enableFips": false,
+          "name": "Consumption",
+          "workloadProfileType": "Consumption"
+        }
+      ],
+      "zoneRedundant": false
+    }
+  ],
+  "skip_token": null,
+  "total_records": 7
+}

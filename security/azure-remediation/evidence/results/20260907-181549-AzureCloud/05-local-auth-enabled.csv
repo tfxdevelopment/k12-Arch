@@ -1,0 +1,7 @@
+"name","resourceGroup","subscriptionId","type"
+"k12-development-app-configuration","development","cf6841bb-b70c-4d55-a489-2d53855e78b5","microsoft.appconfiguration/configurationstores"
+"k12-staging-app-configuration","staging","cf6841bb-b70c-4d55-a489-2d53855e78b5","microsoft.appconfiguration/configurationstores"
+"k12-testing-app-configuration","testing","cf6841bb-b70c-4d55-a489-2d53855e78b5","microsoft.appconfiguration/configurationstores"
+"k12eventhub-k12-development-sbns","development","cf6841bb-b70c-4d55-a489-2d53855e78b5","microsoft.servicebus/namespaces"
+"k12eventhub-k12-staging-sbns","staging","cf6841bb-b70c-4d55-a489-2d53855e78b5","microsoft.servicebus/namespaces"
+"k12eventhub-k12-testing-sbns","testing","cf6841bb-b70c-4d55-a489-2d53855e78b5","microsoft.servicebus/namespaces"

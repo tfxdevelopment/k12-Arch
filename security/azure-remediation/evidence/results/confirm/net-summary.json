@@ -1,0 +1,62 @@
+{
+  "count": 11,
+  "data": [
+    {
+      "count_": 1,
+      "resourceGroup": "testing",
+      "type": "microsoft.network/natgateways"
+    },
+    {
+      "count_": 1,
+      "resourceGroup": "development",
+      "type": "microsoft.network/virtualnetworkgateways"
+    },
+    {
+      "count_": 1,
+      "resourceGroup": "development-k12-caev",
+      "type": "microsoft.network/networksecuritygroups"
+    },
+    {
+      "count_": 1,
+      "resourceGroup": "testing",
+      "type": "microsoft.network/virtualnetworkgateways"
+    },
+    {
+      "count_": 1,
+      "resourceGroup": "staging",
+      "type": "microsoft.network/natgateways"
+    },
+    {
+      "count_": 1,
+      "resourceGroup": "staging",
+      "type": "microsoft.network/virtualnetworkgateways"
+    },
+    {
+      "count_": 2,
+      "resourceGroup": "development",
+      "type": "microsoft.network/natgateways"
+    },
+    {
+      "count_": 2,
+      "resourceGroup": "k12-infra",
+      "type": "microsoft.network/privateendpoints"
+    },
+    {
+      "count_": 11,
+      "resourceGroup": "staging",
+      "type": "microsoft.network/privateendpoints"
+    },
+    {
+      "count_": 11,
+      "resourceGroup": "testing",
+      "type": "microsoft.network/privateendpoints"
+    },
+    {
+      "count_": 14,
+      "resourceGroup": "development",
+      "type": "microsoft.network/privateendpoints"
+    }
+  ],
+  "skip_token": null,
+  "total_records": 11
+}

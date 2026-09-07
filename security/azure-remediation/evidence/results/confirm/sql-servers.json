@@ -1,0 +1,43 @@
+{
+  "count": 4,
+  "data": [
+    {
+      "entraAdmin": "CFI-AzureDevOps - K12 - Contributors",
+      "entraOnly": false,
+      "minTls": "1.2",
+      "name": "development-api-enrollment",
+      "pna": "Disabled",
+      "resourceGroup": "development",
+      "version": "12.0"
+    },
+    {
+      "entraAdmin": "CFI-AzureDevOps - K12 - Contributors",
+      "entraOnly": false,
+      "minTls": "1.2",
+      "name": "development-api-replic",
+      "pna": "Enabled",
+      "resourceGroup": "development",
+      "version": "12.0"
+    },
+    {
+      "entraAdmin": "CFI-AzureDevOps - K12 - Contributors",
+      "entraOnly": false,
+      "minTls": "1.2",
+      "name": "staging-api-enrollment",
+      "pna": "Disabled",
+      "resourceGroup": "staging",
+      "version": "12.0"
+    },
+    {
+      "entraAdmin": "CFI-AzureDevOps - K12 - Contributors",
+      "entraOnly": false,
+      "minTls": "1.2",
+      "name": "testing-api-enrollment",
+      "pna": "Disabled",
+      "resourceGroup": "testing",
+      "version": "12.0"
+    }
+  ],
+  "skip_token": null,
+  "total_records": 4
+}

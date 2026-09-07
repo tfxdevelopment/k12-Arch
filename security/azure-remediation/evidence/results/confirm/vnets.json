@@ -1,0 +1,39 @@
+{
+  "count": 4,
+  "data": [
+    {
+      "name": "development-vnet",
+      "prefixes": [
+        "10.0.0.0/16"
+      ],
+      "resourceGroup": "development",
+      "subnets": 6
+    },
+    {
+      "name": "k12-cae-ops-vbet",
+      "prefixes": [
+        "10.1.0.0/16"
+      ],
+      "resourceGroup": "development",
+      "subnets": 4
+    },
+    {
+      "name": "staging-vnet",
+      "prefixes": [
+        "10.2.0.0/16"
+      ],
+      "resourceGroup": "staging",
+      "subnets": 5
+    },
+    {
+      "name": "testing-vnet",
+      "prefixes": [
+        "10.1.0.0/16"
+      ],
+      "resourceGroup": "testing",
+      "subnets": 5
+    }
+  ],
+  "skip_token": null,
+  "total_records": 4
+}

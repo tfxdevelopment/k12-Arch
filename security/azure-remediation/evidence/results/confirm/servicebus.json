@@ -1,0 +1,31 @@
+{
+  "count": 3,
+  "data": [
+    {
+      "minTls": "1.2",
+      "name": "k12eventhub-k12-development-sbns",
+      "pna": "Enabled",
+      "resourceGroup": "development",
+      "sku": "Premium",
+      "type": "microsoft.servicebus/namespaces"
+    },
+    {
+      "minTls": "1.2",
+      "name": "k12eventhub-k12-staging-sbns",
+      "pna": "Disabled",
+      "resourceGroup": "staging",
+      "sku": "Premium",
+      "type": "microsoft.servicebus/namespaces"
+    },
+    {
+      "minTls": "1.2",
+      "name": "k12eventhub-k12-testing-sbns",
+      "pna": "Disabled",
+      "resourceGroup": "testing",
+      "sku": "Premium",
+      "type": "microsoft.servicebus/namespaces"
+    }
+  ],
+  "skip_token": null,
+  "total_records": 3
+}

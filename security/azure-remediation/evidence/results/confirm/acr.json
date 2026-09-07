@@ -1,0 +1,47 @@
+{
+  "count": 5,
+  "data": [
+    {
+      "adminUser": false,
+      "exports": "enabled",
+      "name": "acr6okwxqo3pdluq",
+      "pna": "Enabled",
+      "resourceGroup": "development",
+      "sku": "Basic"
+    },
+    {
+      "adminUser": false,
+      "exports": "enabled",
+      "name": "developmentk12acr",
+      "pna": "Disabled",
+      "resourceGroup": "development",
+      "sku": "Premium"
+    },
+    {
+      "adminUser": false,
+      "exports": "enabled",
+      "name": "developmentk12caeacr6okwxqo3pdluq",
+      "pna": "Enabled",
+      "resourceGroup": "development",
+      "sku": "Basic"
+    },
+    {
+      "adminUser": false,
+      "exports": "enabled",
+      "name": "stagingk12acr",
+      "pna": "Disabled",
+      "resourceGroup": "staging",
+      "sku": "Premium"
+    },
+    {
+      "adminUser": false,
+      "exports": "enabled",
+      "name": "testingk12acr",
+      "pna": "Disabled",
+      "resourceGroup": "testing",
+      "sku": "Premium"
+    }
+  ],
+  "skip_token": null,
+  "total_records": 5
+}

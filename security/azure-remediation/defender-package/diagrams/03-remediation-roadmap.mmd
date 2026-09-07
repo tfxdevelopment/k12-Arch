@@ -1,0 +1,17 @@
+%% Phased roadmap — identity before network; dev → test → stage → prod within each phase
+gantt
+  title Defender for Cloud remediation roadmap (weeks from kickoff)
+  dateFormat  YYYY-MM-DD
+  axisFormat  W%V
+  section Phase 0 · Hygiene
+  Security contact, MFA CA, owners, diagnostics allLogs, Defender CSPM   :p0, 2026-09-14, 5d
+  section Phase 1 · Config quick wins
+  KV RBAC/purge/expiry, TLS 1.2, HTTPS-only, storage hardening, SQL admin :p1, 2026-09-14, 10d
+  section Phase 2 · Identity (BC)
+  Managed identity + Dapr azureClientId, disable local auth, AMR, WIF       :p2, after p1, 21d
+  section Phase 3 · Network (BC)
+  VNet + private DNS, internal ACA env, private endpoints, App GW WAF      :p3, 2026-10-05, 28d
+  section Phase 4 · Guardrails & structure
+  Per-env RGs/subscriptions, MG hierarchy, initiative Audit→Deny, NIST     :p4, 2026-10-19, 21d
+  section Gates
+  Deny enforced in Prod                                                    :milestone, m1, 2026-11-09, 0d

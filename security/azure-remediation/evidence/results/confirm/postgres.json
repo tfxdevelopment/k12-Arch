@@ -1,0 +1,16 @@
+{
+  "count": 1,
+  "data": [
+    {
+      "entraAuth": "Disabled",
+      "name": "development-k12-postgres",
+      "pna": "Enabled",
+      "pwAuth": "Enabled",
+      "resourceGroup": "development",
+      "sku": "Standard_D2s_v3",
+      "version": "18"
+    }
+  ],
+  "skip_token": null,
+  "total_records": 1
+}

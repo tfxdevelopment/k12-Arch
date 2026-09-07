@@ -1,0 +1,1722 @@
+{
+  "count": 245,
+  "data": [
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/providers/microsoft.security/pricings/cloudposture/securityentitydata/d8bd0d83-8116-4b58-a1aa-7ec71f96c28f",
+      "name": "Guest accounts with write permissions on Azure resources should be removed",
+      "resources": 53,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/staging/providers/microsoft.web/sites/k12-stage-integration",
+      "name": "App Service apps should have authentication enabled",
+      "resources": 30,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/staging/providers/microsoft.containerregistry/registries/stagingk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:8b66eae7edf80e40da608a7c7f12df9e33b30d5b5b99c81481f7e2268ec5d96a",
+      "name": "Update libmount1",
+      "resources": 21,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.app/containerapps/k12-querybuilder-gateway___k12-querybuilder-gateway",
+      "name": "Update openssl",
+      "resources": 21,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.containerregistry/registries/testingk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:06bd3e4ecd691a338cc70472114f71e21270fe6b9be8b8516c6b2ae8c5808d2e",
+      "name": "Update perl-base",
+      "resources": 21,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.containerregistry/registries/testingk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:06bd3e4ecd691a338cc70472114f71e21270fe6b9be8b8516c6b2ae8c5808d2e",
+      "name": "Update mount",
+      "resources": 21,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.containerregistry/registries/testingk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:5648b0eddc2166f9e6464eb069433a479a7322e02e6c608e970ea4e7a74acd58",
+      "name": "Update libattr1",
+      "resources": 21,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/staging/providers/microsoft.containerregistry/registries/stagingk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:8b66eae7edf80e40da608a7c7f12df9e33b30d5b5b99c81481f7e2268ec5d96a",
+      "name": "Update libblkid1",
+      "resources": 21,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.containerregistry/registries/testingk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:06bd3e4ecd691a338cc70472114f71e21270fe6b9be8b8516c6b2ae8c5808d2e",
+      "name": "Update libsmartcols1",
+      "resources": 21,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.containerregistry/registries/testingk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:06bd3e4ecd691a338cc70472114f71e21270fe6b9be8b8516c6b2ae8c5808d2e",
+      "name": "Update libuuid1",
+      "resources": 21,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.containerregistry/registries/testingk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:06bd3e4ecd691a338cc70472114f71e21270fe6b9be8b8516c6b2ae8c5808d2e",
+      "name": "Update util-linux",
+      "resources": 21,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/staging/providers/microsoft.containerregistry/registries/stagingk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:8b66eae7edf80e40da608a7c7f12df9e33b30d5b5b99c81481f7e2268ec5d96a",
+      "name": "Update bsdutils",
+      "resources": 21,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/providers/microsoft.security/pricings/cloudposture/securityentitydata/c877e36d-dfab-4b1f-93d3-bbf251d04ded",
+      "name": "Privileged roles should not have permanent access at the subscription and resource group level",
+      "resources": 19,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:a9d58c5235896c6d5fd40567088f1963c7e7f1b6cf5c9d85da410d50bf96d91f",
+      "name": "Update libc6",
+      "resources": 18,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.app/containerapps/k12-querybuilder-api",
+      "name": "Authentication should be enabled on Azure Container Apps",
+      "resources": 18,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:a9d58c5235896c6d5fd40567088f1963c7e7f1b6cf5c9d85da410d50bf96d91f",
+      "name": "Update libc-bin",
+      "resources": 18,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-querybuilder-gateway-images-sha256:0a009f04620ab25d438d9ce88f7a70c5e282e3de46a6bfebb3b12ba9703db55d",
+      "name": "Update libssl3t64",
+      "resources": 16,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.containerregistry/registries/testingk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:06bd3e4ecd691a338cc70472114f71e21270fe6b9be8b8516c6b2ae8c5808d2e",
+      "name": "Update perl",
+      "resources": 15,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:8b66eae7edf80e40da608a7c7f12df9e33b30d5b5b99c81481f7e2268ec5d96a",
+      "name": "Update cryptography",
+      "resources": 15,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.containerregistry/registries/testingk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:8b66eae7edf80e40da608a7c7f12df9e33b30d5b5b99c81481f7e2268ec5d96a",
+      "name": "Update curl",
+      "resources": 15,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.app/containerapps/k12-querybuilder-gateway___k12-querybuilder-gateway",
+      "name": "Update microsoft.netcore.app.runtime.linux-x64",
+      "resources": 12,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.containerregistry/registries/testingk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:06bd3e4ecd691a338cc70472114f71e21270fe6b9be8b8516c6b2ae8c5808d2e",
+      "name": "Update libperl5.38t64",
+      "resources": 10,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.containerregistry/registries/testingk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:06bd3e4ecd691a338cc70472114f71e21270fe6b9be8b8516c6b2ae8c5808d2e",
+      "name": "Update perl-modules-5.38",
+      "resources": 10,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.containerregistry/registries/testingk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:8b66eae7edf80e40da608a7c7f12df9e33b30d5b5b99c81481f7e2268ec5d96a",
+      "name": "Update libcurl4t64",
+      "resources": 10,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.containerregistry/registries/testingk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:8b66eae7edf80e40da608a7c7f12df9e33b30d5b5b99c81481f7e2268ec5d96a",
+      "name": "Update libcurl3t64-gnutls",
+      "resources": 10,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:8b66eae7edf80e40da608a7c7f12df9e33b30d5b5b99c81481f7e2268ec5d96a",
+      "name": "Update system.security.cryptography.xml",
+      "resources": 10,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/k12-infra/providers/microsoft.keyvault/vaults/k12-rds-integration",
+      "name": "Key Vault secrets should have an expiration date",
+      "resources": 7,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:8b66eae7edf80e40da608a7c7f12df9e33b30d5b5b99c81481f7e2268ec5d96a",
+      "name": "Update system.formats.asn1",
+      "resources": 7,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:8b66eae7edf80e40da608a7c7f12df9e33b30d5b5b99c81481f7e2268ec5d96a",
+      "name": "Update system.io.packaging",
+      "resources": 7,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:8b66eae7edf80e40da608a7c7f12df9e33b30d5b5b99c81481f7e2268ec5d96a",
+      "name": "Update system.text.json",
+      "resources": 7,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/staging/providers/microsoft.containerregistry/registries/stagingk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:5648b0eddc2166f9e6464eb069433a479a7322e02e6c608e970ea4e7a74acd58",
+      "name": "Update perl-modules-5.34",
+      "resources": 5,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/staging/providers/microsoft.containerregistry/registries/stagingk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:5648b0eddc2166f9e6464eb069433a479a7322e02e6c608e970ea4e7a74acd58",
+      "name": "Update libperl5.34",
+      "resources": 5,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:a9d58c5235896c6d5fd40567088f1963c7e7f1b6cf5c9d85da410d50bf96d91f",
+      "name": "Update libpython3.10-minimal",
+      "resources": 5,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:a9d58c5235896c6d5fd40567088f1963c7e7f1b6cf5c9d85da410d50bf96d91f",
+      "name": "Update libpython3.10-stdlib",
+      "resources": 5,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:a9d58c5235896c6d5fd40567088f1963c7e7f1b6cf5c9d85da410d50bf96d91f",
+      "name": "Update python3.10",
+      "resources": 5,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:a9d58c5235896c6d5fd40567088f1963c7e7f1b6cf5c9d85da410d50bf96d91f",
+      "name": "Update python3.10-minimal",
+      "resources": 5,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:a9d58c5235896c6d5fd40567088f1963c7e7f1b6cf5c9d85da410d50bf96d91f",
+      "name": "Update pyjwt",
+      "resources": 5,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/providers/microsoft.security/pricings/cloudposture/securityentitydata/ba1d8390-c1b1-4f4c-bfb2-b818db14fbf6",
+      "name": "Service Principals should not be assigned with administrative roles at the subscription and resource group level",
+      "resources": 5,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/staging/providers/microsoft.containerregistry/registries/stagingk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:5648b0eddc2166f9e6464eb069433a479a7322e02e6c608e970ea4e7a74acd58",
+      "name": "Update libssl3",
+      "resources": 5,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:a9d58c5235896c6d5fd40567088f1963c7e7f1b6cf5c9d85da410d50bf96d91f",
+      "name": "Update libsqlite3-0",
+      "resources": 5,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:a9d58c5235896c6d5fd40567088f1963c7e7f1b6cf5c9d85da410d50bf96d91f",
+      "name": "Update libasound2-data",
+      "resources": 5,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:a9d58c5235896c6d5fd40567088f1963c7e7f1b6cf5c9d85da410d50bf96d91f",
+      "name": "Update libcurl3-gnutls",
+      "resources": 5,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:a9d58c5235896c6d5fd40567088f1963c7e7f1b6cf5c9d85da410d50bf96d91f",
+      "name": "Update libcurl4",
+      "resources": 5,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.app/containerapps/k12-querybuilder-gateway___k12-querybuilder-gateway",
+      "name": "Update microsoft.openapi",
+      "resources": 4,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.sql/servers/development-api-replic/databases/k12",
+      "name": "Minimal set of principals should be members of fixed high impact database roles in SQL databases",
+      "resources": 4,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:a9d58c5235896c6d5fd40567088f1963c7e7f1b6cf5c9d85da410d50bf96d91f",
+      "name": "Update libasound2",
+      "resources": 4,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:a9d58c5235896c6d5fd40567088f1963c7e7f1b6cf5c9d85da410d50bf96d91f",
+      "name": "Update libxml2",
+      "resources": 4,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.sql/servers/development-api-replic/databases/k12",
+      "name": "Database owners should be as expected for SQL databases",
+      "resources": 4,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:a9d58c5235896c6d5fd40567088f1963c7e7f1b6cf5c9d85da410d50bf96d91f",
+      "name": "Update libnss3",
+      "resources": 4,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:a9d58c5235896c6d5fd40567088f1963c7e7f1b6cf5c9d85da410d50bf96d91f",
+      "name": "Update libgraphite2-3",
+      "resources": 4,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.sql/servers/development-api-replic/databases/master",
+      "name": "Server-level firewall rules should be tracked and maintained at a strict minimum on SQL Servers",
+      "resources": 4,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.app/containerapps/k12-querybuilder-gateway",
+      "name": "Azure Container Apps should not be exposed to the public internet unless required",
+      "resources": 4,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/providers/microsoft.security/pricings/cloudposture/securityentitydata/f436ae07-6d71-4bb6-9657-4f55031bafba",
+      "name": "Guest accounts with owner permissions on Azure resources should be removed",
+      "resources": 4,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/staging/providers/microsoft.web/sites/k12-stage-gateway",
+      "name": "Managed identity should be enabled on web apps",
+      "resources": 2,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/staging/providers/microsoft.sql/servers/staging-api-enrollment/databases/master",
+      "name": "Auditing should be enabled at the server level for SQL Servers",
+      "resources": 2,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/providers/microsoft.security/pricings/cloudposture/securityentitydata/39f2f308-1ff3-4715-9cff-64e980a1bb93",
+      "name": "Disabled accounts with read and write permissions on Azure resources should be removed",
+      "resources": 2,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.dbforpostgresql/flexibleservers/development-k12-postgres",
+      "name": "'Allow access to Azure services' should be disabled for PostgreSQL Servers",
+      "resources": 1,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.dbforpostgresql/flexibleservers/development-k12-postgres",
+      "name": "pgaudit.log should include role, ddl, and misc for Azure Database for PostgreSQL Servers",
+      "resources": 1,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:cde58be6a0312a0b35aecbe56437c7d3caa1f6203a438ebc9e20feb2da858938",
+      "name": "Update microsoft.netcore.app.runtime.linux-arm64",
+      "resources": 1,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5",
+      "name": "Microsoft Defender for Containers should be enabled",
+      "resources": 1,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:4fe52b359125bbbc6e9d5c2079de9e2793c1d37bef61a62a1150d32719fda23c",
+      "name": "Update libasound2t64",
+      "resources": 1,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:4fe52b359125bbbc6e9d5c2079de9e2793c1d37bef61a62a1150d32719fda23c",
+      "name": "Update wget",
+      "resources": 1,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.dbforpostgresql/flexibleservers/development-k12-postgres",
+      "name": "Private endpoint should be configured for Azure Database for PostgreSQL Servers",
+      "resources": 1,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5",
+      "name": "A maximum of 3 owners should be designated for subscriptions",
+      "resources": 1,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5",
+      "name": "Microsoft Defender for Resource Manager should be enabled",
+      "resources": 1,
+      "sev": "High",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/staging/providers/microsoft.web/sites/k12-stage-admin",
+      "name": "App Service apps should enable configuration routing to Azure Virtual Network",
+      "resources": 30,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/staging/providers/microsoft.web/sites/k12-stage-admin",
+      "name": "App Service apps should enable end to end encryption",
+      "resources": 30,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.web/sites/schools-testing-web-app",
+      "name": "App Service apps should use private link",
+      "resources": 30,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/staging/providers/microsoft.web/sites/k12-stage-admin",
+      "name": "App Service apps should enable outbound application traffic routing to Azure Virtual Network",
+      "resources": 30,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.web/sites/k12-test-infrastructure",
+      "name": "App Service apps should disable public network access",
+      "resources": 30,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/staging/providers/microsoft.web/sites/k12-stage-admin",
+      "name": "App Service apps should have local authentication methods disabled for SCM site deployments",
+      "resources": 29,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/staging/providers/microsoft.web/sites/k12-stage-portal",
+      "name": "App Service apps should have local authentication methods disabled for FTP deployments",
+      "resources": 27,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/networkwatcherrg/providers/microsoft.network/networkwatchers/networkwatcher_eastus2",
+      "name": "Audit resource location matches resource group location",
+      "resources": 22,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:4fe52b359125bbbc6e9d5c2079de9e2793c1d37bef61a62a1150d32719fda23c",
+      "name": "Update gpgv",
+      "resources": 16,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.app/containerapps/k12-sqlserver",
+      "name": "Managed Identity should be enabled for Container Apps",
+      "resources": 14,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.cdn/profiles/schools-testing-afd-profile",
+      "name": "Enable logging by category group for Front Door and CDN profiles (microsoft.cdn/profiles) to Log Analytics",
+      "resources": 12,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/staging/providers/microsoft.web/sites/providers-staging-web-app",
+      "name": "App Service apps should use latest 'HTTP Version'",
+      "resources": 12,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.cdn/profiles/schools-testing-afd-profile",
+      "name": "Azure Front Door profiles should use Premium tier that supports managed WAF rules and private link",
+      "resources": 12,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.storage/storageaccounts/developmentk12caestorage",
+      "name": "Storage accounts should have infrastructure encryption",
+      "resources": 12,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.storage/storageaccounts/testingenrollmenthns",
+      "name": "Storage accounts should have infrastructure encryption (excluding storage accounts managed by Azure Red Hat OpenShift)",
+      "resources": 12,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.storage/storageaccounts/testingenrollmenthns",
+      "name": "[Enable if required] Storage accounts should use customer-managed key (CMK) for encryption",
+      "resources": 12,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.storage/storageaccounts/testingenrollmenthns",
+      "name": "Storage accounts should prevent shared key access (excluding storage accounts managed by Azure Red Hat OpenShift)",
+      "resources": 11,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.storage/storageaccounts/testingenrollmenthns",
+      "name": "Storage accounts should prevent shared key access (excluding storage accounts created by Databricks)",
+      "resources": 11,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:4fe52b359125bbbc6e9d5c2079de9e2793c1d37bef61a62a1150d32719fda23c",
+      "name": "Update gpgconf",
+      "resources": 10,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.app/containerapps/k12-trino",
+      "name": "Container Apps should disable external network access",
+      "resources": 10,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:4fe52b359125bbbc6e9d5c2079de9e2793c1d37bef61a62a1150d32719fda23c",
+      "name": "Update gpgsm",
+      "resources": 10,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:4fe52b359125bbbc6e9d5c2079de9e2793c1d37bef61a62a1150d32719fda23c",
+      "name": "Update keyboxd",
+      "resources": 10,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:4fe52b359125bbbc6e9d5c2079de9e2793c1d37bef61a62a1150d32719fda23c",
+      "name": "Update gnupg-utils",
+      "resources": 10,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/k12-infra/providers/microsoft.storage/storageaccounts/k12nonprodrefundsftp",
+      "name": "Geo-redundant storage should be enabled for Storage Accounts",
+      "resources": 10,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:4fe52b359125bbbc6e9d5c2079de9e2793c1d37bef61a62a1150d32719fda23c",
+      "name": "Update gnupg",
+      "resources": 10,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:4fe52b359125bbbc6e9d5c2079de9e2793c1d37bef61a62a1150d32719fda23c",
+      "name": "Update gpg",
+      "resources": 10,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:4fe52b359125bbbc6e9d5c2079de9e2793c1d37bef61a62a1150d32719fda23c",
+      "name": "Update gpg-agent",
+      "resources": 10,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:4fe52b359125bbbc6e9d5c2079de9e2793c1d37bef61a62a1150d32719fda23c",
+      "name": "Update dirmngr",
+      "resources": 10,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/k12-infra/providers/microsoft.storage/storageaccounts/k12nonprodrefundsftp",
+      "name": "Storage Accounts should restrict network access through network ACL bypass configuration only.",
+      "resources": 9,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.storage/storageaccounts/testingenrollmenthns",
+      "name": "Storage accounts should restrict network access using virtual network rules (excluding storage accounts created by Databricks)",
+      "resources": 9,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.storage/storageaccounts/testingenrollmenthns",
+      "name": "Storage accounts should restrict network access using virtual network rules (excluding storage accounts managed by ARO)",
+      "resources": 9,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/staging/providers/microsoft.network/publicipaddresses/staging-vpn-gw-ip",
+      "name": "Enable logging by category group for Public IP addresses (microsoft.network/publicipaddresses) to Log Analytics",
+      "resources": 8,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.sql/servers/development-api-replic/databases/k12",
+      "name": "Track all users with access to the database for SQL Databases",
+      "resources": 8,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/k12-infra/providers/microsoft.keyvault/vaults/k12-rds-integration",
+      "name": "Azure Key Vault should disable public network access",
+      "resources": 8,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/staging/providers/microsoft.network/publicipaddresses/staging-vpn-gw-ip",
+      "name": "Public IP addresses should have resource logs enabled for Azure DDoS Protection",
+      "resources": 8,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.sql/servers/testing-api-enrollment/encryptionprotector/current",
+      "name": "SQL servers should use customer-managed keys to encrypt data at rest",
+      "resources": 8,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.storage/storageaccounts/developmentenrollmenthns",
+      "name": "Access to storage accounts with firewall and virtual network configurations should be restricted",
+      "resources": 8,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/k12-infra/providers/microsoft.keyvault/vaults/k12-rds-integration",
+      "name": "Secrets should have the specified maximum validity period",
+      "resources": 7,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.app/managedenvironments/testing-k12-cae",
+      "name": "Container Apps environment should disable public network access",
+      "resources": 6,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/k12-infra/providers/microsoft.keyvault/vaults/k12-rds-integration",
+      "name": "Secrets should have content type set",
+      "resources": 6,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.containerregistry/registries/testingk12acr",
+      "name": "[Preview]: Container Registry should use a virtual network service endpoint",
+      "resources": 5,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.containerregistry/registries/testingk12acr",
+      "name": "Container registries should have ARM audience token authentication disabled.",
+      "resources": 5,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.containerregistry/registries/testingk12acr",
+      "name": "Container registries should have exports disabled",
+      "resources": 5,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/k12-infra/providers/microsoft.keyvault/vaults/k12-rds-integration",
+      "name": "Diagnostic logs in Key Vault should be enabled",
+      "resources": 5,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/acr6okwxqo3pdluq",
+      "name": "[Enable if required] Container registries should be encrypted with a customer-managed key (CMK)",
+      "resources": 5,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/providers/microsoft.security/pricings/virtualmachines",
+      "name": "Security Center standard pricing tier should be selected",
+      "resources": 5,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/k12-infra/providers/microsoft.storage/storageaccounts/k12infra",
+      "name": "Storage accounts should use private link (excluding storage accounts managed by Azure Red Hat OpenShift)",
+      "resources": 4,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.datafactory/factories/k12datafactorydev/linkedservices/ls_sqldb",
+      "name": "Azure Data Factory linked services should use system-assigned managed identity authentication when it is supported",
+      "resources": 4,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.network/virtualnetworks/k12-cae-ops-vbet",
+      "name": "Virtual networks should be protected by Azure DDoS Protection",
+      "resources": 4,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.network/virtualnetworks/k12-cae-ops-vbet",
+      "name": "Virtual networks should be protected by Azure Firewall",
+      "resources": 4,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.network/virtualnetworks/k12-cae-ops-vbet",
+      "name": "Enable logging by category group for Virtual networks (microsoft.network/virtualnetworks) to Log Analytics",
+      "resources": 4,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.sql/servers/development-api-replic/databases/k12",
+      "name": "Minimal set of principals should be members of fixed low impact database roles in SQL databases",
+      "resources": 4,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.sql/servers/development-api-replic/databases/k12",
+      "name": "Excessive permissions should not be granted to PUBLIC role on objects or columns in SQL databases",
+      "resources": 4,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.app/managedenvironments/testing-k12-cae",
+      "name": "Container App environments should use network injection",
+      "resources": 4,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.storage/storageaccounts/k12sqlauditdev",
+      "name": "Storage accounts should use private link (excluding storage accounts created by Databricks)",
+      "resources": 4,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/staging/providers/microsoft.keyvault/vaults/stagingapikv",
+      "name": "Certificates should be issued by the specified integrated certificate authority",
+      "resources": 4,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.sql/servers/development-api-enrollment/azureadonlyauthentications/default",
+      "name": "Azure SQL Database should have Microsoft Entra-only authentication enabled",
+      "resources": 4,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.network/virtualnetworkgateways/testing-vpn-gw",
+      "name": "Enable logging by category group for Virtual network gateways (microsoft.network/virtualnetworkgateways) to Log Analytics",
+      "resources": 3,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.servicebus/namespaces/k12eventhub-k12-testing-sbns",
+      "name": "Azure Service Bus namespaces should have local authentication methods disabled",
+      "resources": 3,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.servicebus/namespaces/k12eventhub-k12-testing-sbns",
+      "name": "Service Bus namespaces should have double encryption enabled",
+      "resources": 3,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/providers/microsoft.authorization/roledefinitions/71128b0a-59c9-4b0f-b3c7-b5b058c5ada5",
+      "name": "Audit usage of custom RBAC roles",
+      "resources": 3,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.cache/redis/development-k12-redis",
+      "name": "Azure Cache for Redis should disable public network access",
+      "resources": 3,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/me_k12-infra-ops-cae_development_eastus2/providers/microsoft.network/loadbalancers/capp-svc-lb",
+      "name": "Enable logging by category group for Load balancers (microsoft.network/loadbalancers) to Log Analytics",
+      "resources": 2,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.app/containerapps/k12-cubestore",
+      "name": "Container Apps should only be accessible over HTTPS",
+      "resources": 2,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12caeacr6okwxqo3pdluq",
+      "name": "Container registries should have SKUs that support Private Links",
+      "resources": 2,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.cognitiveservices/accounts/k12-foundry-resource",
+      "name": "Diagnostic logs in Microsoft Foundry resources should be enabled",
+      "resources": 2,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/staging/providers/microsoft.sql/servers/staging-api-enrollment",
+      "name": "Auditing on SQL server should be enabled",
+      "resources": 2,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.servicebus/namespaces/k12eventhub-k12-development-sbns/networkrulesets/default",
+      "name": "Service Bus Namespaces should disable public network access",
+      "resources": 2,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.datafactory/factories/testing-api-enrollment-adf",
+      "name": "Public network access on Azure Data Factory should be disabled",
+      "resources": 2,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.dbforpostgresql/flexibleservers/development-k12-postgres",
+      "name": "PostgreSQL flexible servers should use customer-managed keys to encrypt data at rest",
+      "resources": 1,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5",
+      "name": "Activity log should be retained for at least one year",
+      "resources": 1,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development-k12-caev/providers/microsoft.network/networksecuritygroups/container_apps_nsg-paxzoosrdquso",
+      "name": "Enable logging by category group for Network security groups (microsoft.network/networksecuritygroups) to Log Analytics",
+      "resources": 1,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/providers/microsoft.security/pricings/sqlservervirtualmachines",
+      "name": "SQL server-targeted autoprovisioning should be enabled for SQL servers on machines plan",
+      "resources": 1,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.datafactory/factories/testing-api-enrollment-adf",
+      "name": "Azure Data Factory should use a Git repository for source control",
+      "resources": 1,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5",
+      "name": "An activity log alert should exist for specific Administrative operations",
+      "resources": 1,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5",
+      "name": "An activity log alert should exist for specific Policy operations",
+      "resources": 1,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5",
+      "name": "Configure subscriptions to enable service health alert monitoring rule",
+      "resources": 1,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/k12-infra/providers/microsoft.automation/automationaccounts/k12nonprodrefundsftp-window",
+      "name": "Azure Automation accounts should use customer-managed keys to encrypt data at rest",
+      "resources": 1,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.apimanagement/service/development-api-enrollment/apis/682b87e6f46c3194ab324a75/operations/createparenttopic",
+      "name": "APIs that are unused should be disabled and removed from the Azure API Management service",
+      "resources": 1,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/k12-infra/providers/microsoft.automation/automationaccounts/k12nonprodrefundsftp-window",
+      "name": "Private endpoint connections on Automation Accounts should be enabled",
+      "resources": 1,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5",
+      "name": "An activity log alert should exist for specific Security operations",
+      "resources": 1,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5",
+      "name": "Azure subscriptions should have a log profile for Activity Log",
+      "resources": 1,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.signalrservice/signalr/development-signalr",
+      "name": "Azure SignalR Service should use private link",
+      "resources": 1,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/k12-content-dev/providers/microsoft.cognitiveservices/accounts/cog-k12-transloator-dev",
+      "name": "[Enable if required] Microsoft Foundry resources should encrypt data at rest with a customer-managed key (CMK)",
+      "resources": 1,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/k12-content-dev/providers/microsoft.cognitiveservices/accounts/cog-k12-transloator-dev",
+      "name": "Cognitive Services accounts should use a managed identity",
+      "resources": 1,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.eventgrid/namespaces/k12deveventgrid",
+      "name": "Azure Event Grid namespace topic broker should use private link",
+      "resources": 1,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/k12-infra/providers/microsoft.automation/automationaccounts/k12nonprodrefundsftp-window",
+      "name": "Automation accounts should disable public network access",
+      "resources": 1,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/staging/providers/microsoft.sql/servers/staging-api-enrollment/databases/k12",
+      "name": "Minimal set of principals should be granted EXECUTE permission on objects or columns in SQL databases",
+      "resources": 1,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.dbforpostgresql/flexibleservers/development-k12-postgres",
+      "name": "Geo-redundant backups should be enabled for PostgreSQL Servers",
+      "resources": 1,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5",
+      "name": "Azure Monitor solution 'Security and Audit' must be deployed",
+      "resources": 1,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5",
+      "name": "Azure Monitor should collect activity logs from all regions",
+      "resources": 1,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5",
+      "name": "Azure Monitor log profile should collect logs for categories 'write,' 'delete,' and 'action'",
+      "resources": 1,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.network/virtualnetworks/k12-cae-ops-vbet",
+      "name": "Virtual networks should use specified virtual network gateway",
+      "resources": 1,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.keyvault/vaults/developmentapikv",
+      "name": "Certificates should not expire within the specified number of days",
+      "resources": 1,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/k12-infra/providers/microsoft.automation/automationaccounts/k12nonprodrefundsftp-window",
+      "name": "Azure Automation account should have local authentication method disabled",
+      "resources": 1,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.eventgrid/namespaces/k12deveventgrid",
+      "name": "Azure Event Grid namespaces should disable public network access",
+      "resources": 1,
+      "sev": "Low",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/ai_k12-stage-admin-insights_f1a1a21c-a74c-4ff3-aca6-4fb4ca6dfc7e_managed/providers/microsoft.operationalinsights/workspaces/managed-k12-stage-admin-insights-ws",
+      "name": "Log Analytics workspaces should block log ingestion and querying from public networks",
+      "resources": 31,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/ai_k12-stage-admin-insights_f1a1a21c-a74c-4ff3-aca6-4fb4ca6dfc7e_managed/providers/microsoft.operationalinsights/workspaces/managed-k12-stage-admin-insights-ws",
+      "name": "Log Analytics Workspaces should block non-Azure Active Directory based ingestion.",
+      "resources": 31,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/staging/providers/microsoft.insights/components/k12-stage-gateway-insights",
+      "name": "Application Insights components should block non-Azure Active Directory based ingestion.",
+      "resources": 31,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/staging/providers/microsoft.insights/components/k12-stage-gateway-insights",
+      "name": "Application Insights components should block log ingestion and querying from public networks",
+      "resources": 31,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/staging/providers/microsoft.insights/components/k12-stage-gateway-insights",
+      "name": "Application Insights components with Private Link enabled should use Bring Your Own Storage accounts for profiler and debugger.",
+      "resources": 31,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.operationalinsights/workspaces/workspace-developmentngxk",
+      "name": "Saved-queries in Azure Monitor should be saved in customer storage account for logs encryption",
+      "resources": 31,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/providers/microsoft.security/pricings/cloudposture/securityentitydata/ca1c420e-638c-41de-b637-174c93756d40",
+      "name": "Azure overprovisioned identities should have only the necessary permissions",
+      "resources": 29,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/providers/microsoft.security/pricings/cloudposture/securityentitydata/a74f912b-afc3-42d3-91db-7e1c958efdd9",
+      "name": "Permissions of inactive identities in your Azure subscription should be revoked",
+      "resources": 28,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.app/containerapps/k12-dashboard___k12-dashboard",
+      "name": "Update libncursesw6",
+      "resources": 21,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.app/containerapps/k12-querybuilder-gateway___k12-querybuilder-gateway",
+      "name": "Update libtinfo6",
+      "resources": 21,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/staging/providers/microsoft.containerregistry/registries/stagingk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:8b66eae7edf80e40da608a7c7f12df9e33b30d5b5b99c81481f7e2268ec5d96a",
+      "name": "Update libgcrypt20",
+      "resources": 21,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.containerregistry/registries/testingk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:06bd3e4ecd691a338cc70472114f71e21270fe6b9be8b8516c6b2ae8c5808d2e",
+      "name": "Update ncurses-base",
+      "resources": 21,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/staging/providers/microsoft.containerregistry/registries/stagingk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:8b66eae7edf80e40da608a7c7f12df9e33b30d5b5b99c81481f7e2268ec5d96a",
+      "name": "Update coreutils",
+      "resources": 21,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.containerregistry/registries/testingk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:06bd3e4ecd691a338cc70472114f71e21270fe6b9be8b8516c6b2ae8c5808d2e",
+      "name": "Update libp11-kit0",
+      "resources": 21,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.containerregistry/registries/testingk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:06bd3e4ecd691a338cc70472114f71e21270fe6b9be8b8516c6b2ae8c5808d2e",
+      "name": "Update libbz2-1.0",
+      "resources": 21,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.containerregistry/registries/testingk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:06bd3e4ecd691a338cc70472114f71e21270fe6b9be8b8516c6b2ae8c5808d2e",
+      "name": "Update ncurses-bin",
+      "resources": 21,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:a9d58c5235896c6d5fd40567088f1963c7e7f1b6cf5c9d85da410d50bf96d91f",
+      "name": "Update libpam-modules-bin",
+      "resources": 18,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:a9d58c5235896c6d5fd40567088f1963c7e7f1b6cf5c9d85da410d50bf96d91f",
+      "name": "Update libpam0g",
+      "resources": 18,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:a9d58c5235896c6d5fd40567088f1963c7e7f1b6cf5c9d85da410d50bf96d91f",
+      "name": "Update tar",
+      "resources": 18,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:a9d58c5235896c6d5fd40567088f1963c7e7f1b6cf5c9d85da410d50bf96d91f",
+      "name": "Update libudev1",
+      "resources": 18,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:a9d58c5235896c6d5fd40567088f1963c7e7f1b6cf5c9d85da410d50bf96d91f",
+      "name": "Update libpam-runtime",
+      "resources": 18,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:a9d58c5235896c6d5fd40567088f1963c7e7f1b6cf5c9d85da410d50bf96d91f",
+      "name": "Update libsystemd0",
+      "resources": 18,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:a9d58c5235896c6d5fd40567088f1963c7e7f1b6cf5c9d85da410d50bf96d91f",
+      "name": "Update libpam-modules",
+      "resources": 18,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:8b66eae7edf80e40da608a7c7f12df9e33b30d5b5b99c81481f7e2268ec5d96a",
+      "name": "Update setuptools",
+      "resources": 15,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.containerregistry/registries/testingk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:06bd3e4ecd691a338cc70472114f71e21270fe6b9be8b8516c6b2ae8c5808d2e",
+      "name": "Update libssh-4",
+      "resources": 15,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:06bd3e4ecd691a338cc70472114f71e21270fe6b9be8b8516c6b2ae8c5808d2e",
+      "name": "Update pip",
+      "resources": 12,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.cdn/profiles/schools-testing-afd-profile",
+      "name": "Azure Front Door Standard or Premium (Plus WAF) should have resource logs enabled",
+      "resources": 12,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:a9d58c5235896c6d5fd40567088f1963c7e7f1b6cf5c9d85da410d50bf96d91f",
+      "name": "Update libkrb5support0",
+      "resources": 12,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:a9d58c5235896c6d5fd40567088f1963c7e7f1b6cf5c9d85da410d50bf96d91f",
+      "name": "Update libgssapi-krb5-2",
+      "resources": 12,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/k12-infra/providers/microsoft.storage/storageaccounts/k12nonprodrefundsftp",
+      "name": "Storage Accounts should use a virtual network service endpoint",
+      "resources": 12,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:a9d58c5235896c6d5fd40567088f1963c7e7f1b6cf5c9d85da410d50bf96d91f",
+      "name": "Update libk5crypto3",
+      "resources": 12,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:a9d58c5235896c6d5fd40567088f1963c7e7f1b6cf5c9d85da410d50bf96d91f",
+      "name": "Update libkrb5-3",
+      "resources": 12,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:a9d58c5235896c6d5fd40567088f1963c7e7f1b6cf5c9d85da410d50bf96d91f",
+      "name": "Update libgif7",
+      "resources": 11,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.storage/storageaccounts/developmentapienrollment",
+      "name": "Storage accounts should prevent shared key access",
+      "resources": 11,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:a9d58c5235896c6d5fd40567088f1963c7e7f1b6cf5c9d85da410d50bf96d91f",
+      "name": "Update gzip",
+      "resources": 11,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/k12-infra/providers/microsoft.storage/storageaccounts/k12nonprodrefundsftp",
+      "name": "Storage accounts should restrict network access using virtual network rules",
+      "resources": 9,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.storage/storageaccounts/testingenrollmenthns",
+      "name": "Storage accounts should disable public network access",
+      "resources": 9,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/k12-infra/providers/microsoft.keyvault/vaults/k12-rds-integration",
+      "name": "Key Vault should use a virtual network service endpoint",
+      "resources": 8,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.containerregistry/registries/testingk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:06bd3e4ecd691a338cc70472114f71e21270fe6b9be8b8516c6b2ae8c5808d2e",
+      "name": "Update libsqlite3-0",
+      "resources": 7,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.app/containerapps/k12-querybuilder-gateway___k12-querybuilder-gateway",
+      "name": "Update opentelemetry.exporter.opentelemetryprotocol",
+      "resources": 6,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.containerregistry/registries/testingk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:06bd3e4ecd691a338cc70472114f71e21270fe6b9be8b8516c6b2ae8c5808d2e",
+      "name": "Update wget",
+      "resources": 6,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.storage/storageaccounts/developmentapienrollment",
+      "name": "Storage account public access should be disallowed",
+      "resources": 6,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/k12-infra/providers/microsoft.keyvault/vaults/k12-rds-integration",
+      "name": "Firewall should be enabled on Key Vault",
+      "resources": 6,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:a9d58c5235896c6d5fd40567088f1963c7e7f1b6cf5c9d85da410d50bf96d91f",
+      "name": "Update libnghttp2-14",
+      "resources": 5,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/k12-infra/providers/microsoft.keyvault/vaults/k12-rds-integration",
+      "name": "Azure Key Vaults should use private link",
+      "resources": 5,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:5648b0eddc2166f9e6464eb069433a479a7322e02e6c608e970ea4e7a74acd58",
+      "name": "Update libncurses6",
+      "resources": 5,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/staging/providers/microsoft.sql/servers/staging-api-enrollment/databases/k12",
+      "name": "Long-term geo-redundant backup should be enabled for Azure SQL Databases",
+      "resources": 4,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.sql/servers/development-api-replic/databases/k12",
+      "name": "All memberships for user-defined roles should be intended in SQL databases",
+      "resources": 4,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/staging/providers/microsoft.network/virtualnetworks/staging-vnet",
+      "name": "Audit flow logs configuration for every virtual network",
+      "resources": 4,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.sql/servers/development-api-replic/databases/k12",
+      "name": "User-defined database roles should not be members of fixed roles in SQL databases",
+      "resources": 4,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.storage/storageaccounts/developmentk12appversion",
+      "name": "Storage account should use a private link connection",
+      "resources": 4,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.sql/servers/testing-api-enrollment",
+      "name": "Azure SQL Database should have Azure Active Directory Only Authentication enabled",
+      "resources": 4,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerinstance/containergroups/k12-development-devops-agents",
+      "name": "Azure Container Instance container group should use customer-managed key for encryption",
+      "resources": 4,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.app/containerapps/k12-dashboard___k12-dashboard",
+      "name": "Update opentelemetry.api",
+      "resources": 4,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.signalrservice/signalr/testing-api-enrollment-signalr",
+      "name": "Azure SignalR Service should disable public network access",
+      "resources": 4,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/staging/providers/microsoft.containerregistry/registries/stagingk12acr/securityentitydata/repositories-k12-ado-runner-images-sha256:5648b0eddc2166f9e6464eb069433a479a7322e02e6c608e970ea4e7a74acd58",
+      "name": "Update libpng16-16",
+      "resources": 4,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.sql/servers/testing-api-enrollment",
+      "name": "SQL Server should use a virtual network service endpoint",
+      "resources": 4,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.appconfiguration/configurationstores/k12-development-app-configuration",
+      "name": "App Configuration should use a customer-managed key",
+      "resources": 3,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.web/sites/k12-dev-gateway",
+      "name": "App Service apps should be injected into a virtual network",
+      "resources": 3,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.cache/redis/development-k12-redis",
+      "name": "Azure Cache for Redis should use private link",
+      "resources": 3,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.appconfiguration/configurationstores/k12-development-app-configuration",
+      "name": "App Configuration should use private link",
+      "resources": 3,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/staging/providers/microsoft.web/sites/k12-stage-gateway",
+      "name": "App Service apps should use a virtual network service endpoint",
+      "resources": 3,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.appconfiguration/configurationstores/k12-development-app-configuration",
+      "name": "App Configuration should disable public network access",
+      "resources": 3,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.servicebus/namespaces/k12eventhub-k12-testing-sbns",
+      "name": "Service Bus Premium namespaces should use a customer-managed key for encryption",
+      "resources": 3,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/acr6okwxqo3pdluq",
+      "name": "Container registries should not allow unrestricted network access",
+      "resources": 2,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/k12-infra/providers/microsoft.keyvault/vaults/k12-rds-integration",
+      "name": "Key vaults should have deletion protection enabled",
+      "resources": 2,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.datafactory/factories/testing-api-enrollment-adf",
+      "name": "Azure Data Factory should use private link",
+      "resources": 2,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/k12-content-dev/providers/microsoft.cognitiveservices/accounts/cog-k12-transloator-dev",
+      "name": "Microsoft Foundry resources should have key access disabled (disable local authentication)",
+      "resources": 2,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/k12-content-dev/providers/microsoft.cognitiveservices/accounts/cog-k12-transloator-dev",
+      "name": "Microsoft Foundry resources should use Azure Private Link",
+      "resources": 2,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.sql/servers/testing-api-enrollment",
+      "name": "SQL Auditing settings should have Action-Groups configured to capture critical activities",
+      "resources": 2,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/developmentk12caeacr6okwxqo3pdluq",
+      "name": "Public network access should be disabled for Container registries",
+      "resources": 2,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/testing/providers/microsoft.datafactory/factories/testing-api-enrollment-adf",
+      "name": "Azure data factories should be encrypted with a customer-managed key",
+      "resources": 2,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.containerregistry/registries/acr6okwxqo3pdluq",
+      "name": "Container registries should use private link",
+      "resources": 2,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.sql/servers/development-api-replic",
+      "name": "Public network access on Azure SQL Database should be disabled",
+      "resources": 1,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.dbforpostgresql/flexibleservers/development-k12-postgres",
+      "name": "Azure Database for PostgreSQL flexible server should have Microsoft Entra authentication only enabled",
+      "resources": 1,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.cognitiveservices/accounts/k12-foundry-resource",
+      "name": "Cognitive Services accounts should use customer owned storage",
+      "resources": 1,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.compute/diskaccesses/dev-snapshot-endpoint",
+      "name": "Disk access resources should use private link",
+      "resources": 1,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.dbforpostgresql/flexibleservers/development-k12-postgres",
+      "name": "pgaudit.log_statement_once should be set to 'on' for Azure Database for PostgreSQL Servers",
+      "resources": 1,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.dbforpostgresql/flexibleservers/development-k12-postgres",
+      "name": "Public IP access should be disabled for Azure Database for PostgreSQL Servers",
+      "resources": 1,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.dbforpostgresql/flexibleservers/development-k12-postgres",
+      "name": "Public network access should be disabled for PostgreSQL flexible servers",
+      "resources": 1,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.dbforpostgresql/flexibleservers/development-k12-postgres",
+      "name": "logfiles.retention_days should be greater than 3 for PostgreSQL Servers",
+      "resources": 1,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/k12-content-dev/providers/microsoft.cognitiveservices/accounts/cog-k12-transloator-dev",
+      "name": "Microsoft Foundry resources should restrict network access",
+      "resources": 1,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development-k12-caev/providers/microsoft.network/networksecuritygroups/container_apps_nsg-paxzoosrdquso",
+      "name": "Flow logs should be configured for every network security group",
+      "resources": 1,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "example": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourcegroups/development/providers/microsoft.servicebus/namespaces/k12eventhub-k12-development-sbns/authorizationrules/cfi-mule-rds",
+      "name": "All authorization rules except RootManageSharedAccessKey should be removed from Service Bus namespace",
+      "resources": 1,
+      "sev": "Medium",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    }
+  ],
+  "skip_token": null,
+  "total_records": 245
+}

@@ -1,0 +1,3887 @@
+{
+  "count": 776,
+  "data": [
+    {
+      "count_": 1,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "67dcad1a-ec60-45df-8fd0-14c9d29eeaa2"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "955a914f-bf86-4f0e-acd5-e0766b0efcb6"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "6a379d74-903b-244a-4c44-838728bea6b0"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "a43d5475-c569-45ce-a268-28fa79f4e87a"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "311802f9-098d-0659-245a-94c5d47c0182"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "83eea3d3-0d2c-9ccd-1021-2111b29b2a62"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "b8dad106-6444-5f55-307e-1e1cc9723e39"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "6abdf7c7-362b-3f35-099e-533ed50988f9"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "7a114735-a420-057d-a651-9a73cd0416ef"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "5c40f27b-6791-18c5-3f85-7b863bd99c11"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "098dcde7-016a-06c3-0985-0daaf3301d3a"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "575ed5e8-4c29-99d0-0e4d-689fb1d29827"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "4a15c15f-90d5-4a1f-8b63-2903944963fd"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "056a723b-4946-9d2a-5243-3aa27c4d31a1"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "db8b35d6-8adb-3f51-44ff-c648ab5b1530"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "3e37c891-840c-3eb4-78d2-e2e0bb5063e0"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "68a39c2b-0f17-69ee-37a3-aa10f9853a08"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "f131c8c5-a54a-4888-1efc-158928924bc1"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "fd81a1b3-2d7a-107c-507e-29b87d040c19"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "676c3c35-3c36-612c-9523-36d266a65000"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "22c16ae4-19d0-29cb-422f-cb44061180ee"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "13ef3484-3a51-785a-9c96-500f21f84edd"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "f96d2186-79df-262d-3f76-f371e3b71798"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "1e876c5c-0f2a-8eb6-69f7-5f91e7918ed6"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "7805a343-275c-41be-9d62-7215b96212d8"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "68d2e478-3b19-23eb-1357-31b296547457"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "7d10debd-4775-85a7-1a41-7e128e0e8c50"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "ae1b9a8c-dfce-4605-bd91-69213b4a26fc"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "98903777-a9f6-47f5-90a9-acaf62ab01a8"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "c8aa992d-76b7-7ca0-07b3-31a58d773fa9"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "1fdeb7c4-4c93-8271-a135-17ebe85f1cc7"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "92b49e92-570f-1765-804a-378e6c592e28"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "75262d3e-ba4a-4f43-85f8-9f72c090e5e3"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "4a15c15f-90d5-4a1f-8b63-2903944963fd"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "db580551-0b3c-4ea1-8a4c-4cdb5feb340f"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "4ee5975d-2507-5530-a20a-83a725889c6f"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "43ac3ccb-4ef6-7d63-9a3f-6848485ba4e8"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "c72fc0c8-2df8-7506-30be-6ba1971747e1"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "0471c6b7-1588-701c-2713-1fade73b75f6"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "d041726f-00e0-41ca-368c-b1a122066482"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "0f4fa857-079d-9d3d-5c49-21f616189e03"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "1b8a7ec3-11cc-a2d3-8cd0-eedf074424a4"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "85335602-93f5-7730-830b-d43426fd51fa"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "c7e8ddc1-14aa-1814-7fe1-aad1742b27da"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "ae1b9a8c-dfce-4605-bd91-69213b4a26fc"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "07b42fb5-027e-5a3c-4915-9d9ef3020ec7"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "f801d58e-5659-9a4a-6e8d-02c9334732e5"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "d074ddf8-01a5-4b5e-a2b8-964aed452c0a"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "0f31d98d-5ce2-705b-4aa5-b4f6705110dd"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "245fe58b-96f8-9f1e-48c5-7f49903f66fd"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "d4e6a629-28eb-79a9-000b-88030e4823ca"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "d25cbded-121e-0ed6-1857-dc698c9095b1"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "60442979-6333-85f0-84c5-b887bac67448"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "ba99d512-3baa-1c38-8b0b-ae16bbd34274"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "9c954fcf-6dd8-81f1-41b5-832ae5c62caf"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "98e33927-8d7f-6d5f-44f5-2469b40b7215"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "86ecd378-a3a0-5d5b-207c-05e6aaca43fc"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "d9edcea6-6cb8-0266-a48c-2061fbac4310"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "76d66b5c-85e4-93f5-96a5-ebb2fad61dc6"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "23d1a569-2d1e-7f43-9e22-1f94115b7dd5"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "1e0d5ba8-a433-01aa-829c-86b06c9631ec"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "12af7c7a-92af-9e96-0d0c-5e732d1a3751"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "396f465d-375e-57de-58ba-021adb008191"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "3eecf628-a1c8-1b48-1b5c-7ca781e97970"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "c0559109-6a27-a217-6821-5a6d44f92897"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "f772fb64-8e40-40ad-87bc-7706e1949427"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "6f3866e8-6e12-69cf-788c-809d426094a1"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "a930f477-9dcb-2113-8aa7-45bb6fc90861"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "214ea241-010d-8926-44cc-b90a96d52adc"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "3ad7f0bc-3d03-0585-4d24-529779bb02c2"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "d200f199-69f4-95a6-90b0-37ff0cf1040c"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "e3905a3c-97e7-0b4f-15fb-465c0927536f"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "729c8708-2bec-093c-8427-2e87d2cd426d"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "baa4c6de-b7cf-4b12-b436-6e40ef44c8cb"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "f1776c76-f58c-4245-a8d0-2b207198dc8b"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "c2eabc28-1e5c-78a2-a712-7cc176c44c07"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "ae62c456-33de-4dc8-b100-7ce9028a7d99"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "fd1a8e20-2c4f-4a6c-9354-b58d786d9a1f"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "2571b7c3-3056-4a61-b00a-9bc5232234f5"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "fe3fd216-4f83-4fc1-8984-2bbec80a3418"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "fe3fd216-4f83-4fc1-8984-2bbec80a3418"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "80029bc5-834f-3a9c-a2d8-acbc1aab4e9f"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "bcff6755-335b-484d-b435-d1161db39cdc"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "48c5f1cb-14ad-4797-8e3b-f78ab3f8d700"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "dea83a72-443c-4292-83d5-54a2f98749c0"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "77d40665-3120-4348-b539-3192ec808307"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "77d40665-3120-4348-b539-3192ec808307"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "10c3a1b1-29b0-a2d5-8f4c-a284b0f07830"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "5bac5fb7-7735-357b-767d-02264bfe5c3b"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "0c2b3618-68a8-4034-a150-ff4abc873462"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "74041cfe-3f87-1d17-79ec-34ca5f895542"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "b8587fce-138f-86e8-33a3-c60768bf1da6"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "12c74c95-0efd-48da-b8d9-2a7d68470c92"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "2a6ae02f-7590-40d7-88ba-b18e205a32fd"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "cd8f7644-6fe8-4516-bded-0e465ead03ac"
+    },
+    {
+      "count_": 1,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "1301a000-bc6b-4d90-8414-7091e3abdc40"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "7c7032fe-9ce6-9092-5890-87a1a3755db1"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "24b7a1c6-44fe-40cc-a2e6-242d2ef70e98"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "123aed70-491a-4f07-a569-e1f3a8dd651e"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "701a595d-38fb-4a66-ae6d-fb3735217622"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "eda0cbb7-6043-05bf-645b-67411f1a59b3"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "5715bf33-a5bd-1084-4e19-bc3c83ec1c35"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "4ee5b817-627a-435a-8932-116193268172"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "cae7c12e-764b-4c87-841a-fdc6675d196f"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "a08ae1ab-8d1d-422b-a123-df82b307ba61"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "4dcfb8b5-05cd-4090-a931-2ec29057e1fc"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "d639b3af-a535-4bef-8dcf-15078cddf5e2"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "e1379836-3492-6395-451d-2f5062e14136"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "55be3260-a7a2-3c06-7fe6-072d07525ab7"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "b53aa659-513e-032c-52e6-1ce0ba46582f"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "2d2ca910-7957-23ee-2945-33f401606efc"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "ae5345d5-8dab-086a-7290-db43a3272198"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "a8df9c78-4044-98be-2c05-31a315ac8957"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "75b42dcf-7840-1271-260b-852273d7906e"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "b28c8687-4bbd-8614-0b96-cdffa1ac6d9c"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "d42a8f69-a193-6cbc-48b9-04a9e29961f1"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "2d4d0e90-32d9-4deb-2166-a00d51ed57c0"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "cbd11fd3-3002-4907-b6c8-579f0e700e13"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "c6283572-73bb-4deb-bf2c-7a2b8f7462cb"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "ee4bbbbb-2e52-9adb-4e3a-e641f7ac68ab"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "5d3abfea-a130-1208-29c0-e57de80aa6b0"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "84245967-7882-54f6-2d34-85059f725b47"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "a8f9c283-9a66-3eb3-9e10-bdba95b85884"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "01c387ea-383d-4ca9-295a-977fab516b03"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "5fc24b95-53f7-0ed1-2330-701b539b97fe"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "83dfb2b8-678b-20a0-4c44-5c75ada023e6"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "2c6bee3a-2180-2430-440d-db3c7a849870"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "a1334a65-2622-28ee-5067-9d7f5b915cc5"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "b470a37a-7a47-3792-34dd-7a793140702e"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "dad8a2e9-6f27-4fc2-8933-7e99fe700c9c"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "037c0089-6606-2dab-49ad-437005b5035f"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "08c11b48-8745-034d-1c1b-a144feec73b9"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "0fd1ca29-677b-2f12-1879-639716459160"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "2401b496-7f23-79b2-9f80-89bb5abf3d4a"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "69d90ee6-9f9f-262a-2038-d909fb4e5723"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "4502e506-5f35-0df4-684f-b326e3cc7093"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "9622aaa9-5c49-40e2-5bf8-660b7cd23deb"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "22457e81-3ec6-5271-a786-c3ca284601dd"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "0e80e269-43a4-4ae9-b5bc-178126b8a5cb"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "279052a0-8238-694d-9661-bf649f951747"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "bb048641-6017-7272-7772-a008f285a520"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "b4409bff-2287-8407-05fd-c73175a68302"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "eaaae23f-92c9-4460-51cf-913feaea4d52"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "1fb1cb0e-1936-6f32-42fd-89970b535855"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "043c1e56-5a16-52f8-6af8-583098ff3e60"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "0123edae-3567-a05a-9b05-b53ebe9d3e7e"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "5c33538e-02f8-0a7f-998b-a4c1e22076d3"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "58a51cde-008b-1a5d-61b5-d95849770677"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "585af6e9-90c0-4575-67a7-2f9548972e32"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "e29a8f1b-149b-2fa3-969d-ebee1baa9472"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "77cc89bb-774f-48d7-8a84-fb8c322c3000"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "cb8841d4-9d13-7292-1d06-ba4d68384681"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "8c5d3d8d-5cba-0def-257c-5ab9ea9644dc"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "0088bc63-6dee-4a9c-9d29-91cfdc848952"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "4ce91e4e-6dab-3c46-011a-aa14ae1561bf"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "1cf164be-6819-4a50-b8fa-4bcaa4f98fb6"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "7a489c62-242c-5db9-74df-c073056d6fa3"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "b320aa42-33b4-53af-87ce-100091d48918"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "b4e19d22-8c0e-7cad-3219-c84c62dc250f"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "bd4dc286-2f30-5b95-777c-681f3a7913d3"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "1fdf0b24-4043-3c55-357e-036985d50b52"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "41172402-8d73-64c7-0921-909083c086b0"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "477bd136-7dd9-55f8-48ac-bae096b86a07"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "4ac81669-00e2-9790-8648-71bc11bc91eb"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "6122970b-8d4a-7811-0278-4c6c68f61e4f"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "67121cc7-ff39-4ab8-b7e3-95b84dab487d"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "91cf132e-0c9f-37a8-a523-dc6a92cd2fb2"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "46aa9b05-0e60-4eae-a88b-1e9d374fa515"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "05ec66a2-137c-14b8-8e75-3d7a2bef07f8"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "46aa9b05-0e60-4eae-a88b-1e9d374fa515"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "51e4b233-8ee3-8bdc-8f5f-f33bd0d229b7"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "af5ff768-a34b-720e-1224-e6b3214f3ba6"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "3baee3fd-30f5-882c-018c-cc78703a0106"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "9b55929b-0101-47c0-a16e-d6ac5c7d21f8"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "aa0ddd99-43eb-302d-3f8f-42b499182960"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "f2222056-062d-1060-6dc2-0107a68c34b2"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "aa892c0d-2c40-200c-0dd8-eac8c4748ede"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "d48a6f19-a284-6fc6-0623-3367a74d3f50"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "25a1f840-65d0-900a-43e4-bee253de04de"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "28aa060e-25c7-6121-05d8-a846f11433df"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "04837a26-2601-1982-3da7-bf463e6408f4"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "6b957f60-54cd-5752-44d5-ff5a64366c93"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "39eb03c1-97cc-11ab-0960-6209ed2869f7"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "096a7055-30cb-2db4-3fda-41b20ac72667"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "afbecd30-37ee-a27b-8e09-6ac49951a0ee"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "df2e9507-169b-4114-3a52-877561ee3198"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "42116f15-5665-a52a-87bb-b40e64c74b6c"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "fd9903f1-38c2-4d36-8e44-5c1c20c561e8"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "05f95bb8-8ef8-4cef-8cad-5d30f9912850"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "509552f5-6528-3540-7959-fbeae4832533"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "d02498e0-8a6f-6b02-8332-19adf6711d1e"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "836f8406-3b8a-11bb-12cb-6c7fa0765668"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "a4493012-908c-5f48-a468-1e243be884ce"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "efef28d0-3226-966a-a1e8-70e89c1b30bc"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "1ecb79d7-1a06-9a3b-3be8-f434d04d1ec1"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "4f23967c-a74b-9a09-9dc2-f566f61a87b9"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "0e696f5a-451f-5c15-5532-044136538491"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "2c843d78-8f64-92b5-6a9b-e8186c0e7eb6"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "be38a620-000b-21cf-3cb3-ea151b704c3b"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "21633c09-804e-7fcd-78e3-635c6bfe2be7"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "27ce30dd-3d56-8b54-6144-e26d9a37a541"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "44f8a42d-739f-8030-89a8-4c2d5b3f6af3"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "70fe686f-1f91-7dab-11bf-bca4201e183b"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "271a3e58-1b38-933d-74c9-a580006b80aa"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "f48b60c6-4b37-332f-7288-b6ea50d300eb"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "de936662-13dc-204c-75ec-1af80f994088"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "8cd815bf-97e1-5144-0735-11f6ddb50a59"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "f27a298f-9443-014a-0d40-fef12adf0259"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "9fdde4a9-85fa-7850-6df4-ae9c4a2e56f9"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "f741c4e6-41eb-15a4-25a2-61ac7ca232f0"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "d18af1ac-0086-4762-6dc8-87cdded90e39"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "5fe84a4c-1b0c-a738-2aba-ed49c9069d3b"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "f78fc35e-1268-0bca-a798-afcba9d2330a"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "6c0a312f-04c5-5c97-36a5-e56763a02b6b"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "055da733-55c6-9e10-8194-c40731057ec4"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "6610f662-37e9-2f71-65be-502bdc2f554d"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "bd560fc0-3c69-498a-ae9f-aa8eb7de0e13"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "7ad83b58-2042-085d-08f0-13e946f26f89"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "bd6cbcba-4a2d-507c-53e3-296b5c238a8e"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "ced291b8-1d3d-7e27-40cf-829e9dd523c8"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "b65c5d8e-9043-9612-2c17-65f231d763bb"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "e7422f08-65b4-50e4-3779-d793156e0079"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "2b05dca2-25ec-9335-495c-29155f785082"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "9b8b05ec-3d21-215e-5d98-0f7cf0998202"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "516be556-1353-080d-2c2f-f46f000d5785"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "d136ae80-54dd-321c-98b4-17acf4af2169"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "1cb7bf71-841c-4741-438a-67c65fdd7194"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "5226dee6-3420-711b-4709-8e675ebd828f"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "524e7136-9f6a-75ba-9089-501018151346"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "e5c5fc78-4aa5-3d6b-81bc-5fcc88b318e9"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "af38215f-70c4-0cd6-40c2-c52d86690a45"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "b7897ddc-9716-2460-96f7-7757ad038cc4"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "c42f19c9-5d88-92da-0742-371a0ea03126"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "8e49107c-3338-40d1-02aa-d524178a2afe"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "e0c480bf-0d68-a42d-4cbb-b60f851f8716"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "c6aeb800-0b19-944d-92dc-59b893722329"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "a315c657-4a00-8eba-15ac-44692ad24423"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "80a97208-264e-79da-0cc7-4fca179a0c9c"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "dc7ec756-221c-33c8-0afe-c48e10e42321"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "5f2e834d-7e40-a4d5-a216-e49b16955ccf"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "3c93dba1-84fd-57de-33c7-ef0400a08134"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "70a7a065-a060-85f8-7863-eb7850ed2af9"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "496b407d-9b9e-81e8-4ba4-44bc686b016a"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "c79d378a-2521-822a-0407-57454f8d2c74"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "426c172c-9914-10d1-25dd-669641fc1af4"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "e89436d8-6a93-3b62-4444-1d2a42ad56b2"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "aa305b4d-8c84-1754-0c74-dec004e66be0"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "bab9ef1d-a16d-421a-822d-3fa94e808156"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "b11697e8-9515-16f1-7a35-477d5c8a1344"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "fe2dff43-0a8c-95df-0432-cb1c794b17d0"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "518eafdd-08e5-37a9-795b-15a8d798056d"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "cd36eeec-67e7-205a-4b64-dbfe3b4e3e4e"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "c423e64d-995c-9f67-0403-b540f65ba42a"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "b8a9bb2f-7290-3259-85ce-dca7d521302d"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "979ed3b6-83f9-26bc-4b86-5b05464700bf"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "c981fa70-2e58-8141-1457-e7f62ebc2ade"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "3af53f59-979f-24a8-540f-d7cdbc366607"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "1c258345-5cd4-30c8-9ef3-5ee4dd5231d6"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "e21f91d1-2803-0282-5f2d-26ebc4b170ef"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "e7589f4e-1e8b-72c2-3692-1e14d7f3699f"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "92ede480-154e-0e22-4dca-8b46a74a3a51"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "3881168c-5d38-6f04-61cc-b5d87b2c4c58"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "889bfebf-7428-426e-a86f-79e2a7de2f71"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "a90c4d44-7fac-8e02-6d5b-0d92046b20e6"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "dd2523d5-2db3-642b-a1cf-83ac973b32c2"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "63f63e71-6c3f-9add-4c43-64de23e554a7"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "4a6f5cbd-6c6b-006f-2bb1-091af1441bce"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "fad161f5-5261-401a-22dd-e037bae011bd"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "ea9d7c95-2f10-8a4d-61d8-7469bd2e8d65"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "d9af7f88-686a-5a8b-704b-eafdab278977"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "7fc1f0da-0050-19bb-3d75-81ae15940df6"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "e4e1f896-8a93-1151-43c7-0ad23b081ee2"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "8f835d6a-4d13-9a9c-37dc-176cebd37fda"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "90a156a6-49ed-18d1-1052-69aac27c05cd"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "33d34fac-56a8-1c0f-0636-3ed94892a709"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "b0e3035d-6366-2e37-796e-8bcab9c649e6"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "1ee4c7eb-480a-0007-77ff-4ba370776266"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "9c93ef57-7000-63fb-9b74-88f2e17ca5d2"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "26d178a4-9261-6f04-a100-47ed85314c6e"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "b8689b2e-4308-a58b-a0b4-6f3343a000df"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "ece8bb17-4080-5127-915f-dc7267ee8549"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "f30edfad-4e1d-1eef-27ee-9292d6d89842"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "18e9d748-73d4-0c96-55ab-b108bfbd5bc3"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "cc2f7339-2fac-1ea9-9ca3-cd530fbb0da2"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "3f1216b0-30ee-1ac9-3899-63eb744e85f5"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "8b1f29eb-1b22-4217-5337-9207cb55231e"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "2af551d5-1775-326a-0589-590bfb7e9eb2"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "20762f1e-85fb-31b0-a600-e833633f10fe"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "cbfa1bd0-714d-8d6f-0480-2ad6a53972df"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "b3a22bc9-66de-45fb-98fa-00f5df42f41a"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "8aec4343-9153-9641-172c-defb201f56b3"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "abda6d70-9778-44e7-84a8-06713e6db027"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "6de65dc4-8b4f-34b7-9290-eb137a2e2929"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "6625638f-3ba1-7404-5983-0ea33d719d34"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "3a868d0c-538f-968b-0191-bddb44da5b75"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "f8a63511-66f1-503f-196d-d6217ee0823a"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "adf517f3-6dcd-3546-9928-34777d0c277e"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "b8972f60-8d77-1cb8-686f-9c9f4cdd8a59"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "27965e62-141f-8cca-426f-d09514ee5216"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "b3c8cc83-20d3-3890-8bc8-5568777670f4"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "10874318-0bf7-a41f-8463-03e395482080"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "7ded6497-815d-6506-242b-e043e0273928"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "333b4ada-4a02-0648-3d4d-d812974f1bb2"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "d36700f2-2f0d-7c2a-059c-bdadd1d79f70"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "a3e98638-51d4-4e28-910a-60e98c1a756f"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "16c54e01-9e65-7524-7c33-beda48a75779"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "2f67e567-03db-9d1f-67dc-b6ffb91312f4"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "33602e78-35e3-4f06-17fb-13dd887448e4"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "af227964-5b8b-22a2-9364-06d2cb9d6d7c"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "203101f5-99a3-1491-1b56-acccd9b66a9e"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "a28323fe-276d-3787-32d2-cef6395764c4"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "3153d9c0-2584-14d3-362d-578b01358aeb"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "1282809c-9001-176b-4a81-260a085f4872"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "82bd024a-5c99-05d6-96ff-01f539676a1a"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "9ac8621d-9acd-55bf-9f99-ee4212cc3d85"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "8747b573-8294-86a0-8914-49e9b06a5ace"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "4c385143-09fd-3a34-790c-a5fd9ec77ddc"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "67ada943-8539-083d-35d0-7af648974125"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "e714b481-8fac-64a2-14a9-6f079b2501a4"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "ed87d27a-9abf-7c71-714c-61d881889da4"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "2af4640d-11a6-a64b-5ceb-a468f4341c0c"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "d9d48ffb-0d8c-0bd5-5f31-5a5826d19f10"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "48c816c5-2190-61fc-8806-25d6f3df162f"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "2cc9c165-46bd-9762-5739-d2aae5ba90a1"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "7bdb79ea-16b8-453e-4ca4-ad5b16012414"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "f33c3238-11d2-508c-877c-4262ec1132e1"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "ba02d0a0-566a-25dc-73f1-101c726a19c5"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "de770ba6-50dd-a316-2932-e0d972eaa734"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "29acfac0-4bb4-121b-8283-8943198b1549"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "e336d5f4-4d8f-0059-759c-ae10f63d1747"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "1d39b5d9-0392-8954-8359-575ce1957d1a"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "7d7a8356-5c34-9a95-3118-1424cfaf192a"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "5e4e9685-3818-5934-0071-2620c4fa2ca5"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "33832848-42ab-63f3-1a55-c0ad309d44cd"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "b269a749-705e-8bff-055a-147744675cdf"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "526ed90e-890f-69e7-0386-ba5c0f1f784f"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "e54901fe-42c2-7f3b-3c5f-327aa5320a69"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "7380631c-5bf5-0e3a-4509-0873becd8a63"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "058e9719-1ff9-3653-4230-23f76b6492e0"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "0065241c-72e9-3b2c-556f-75de66332a94"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "4012c2b7-4e0e-a7ab-1688-4aab43f14420"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "37dbe3dc-0e9c-24fa-36f2-11197cbfa207"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "2f20840e-7925-221c-725d-757442753e7c"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "eff6e4a5-3efe-94dd-2ed1-25d56a019a82"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "1ff03f2a-974b-3272-34f2-f6cd51420b30"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "6f1de470-79f3-1572-866e-db0771352fc8"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "9ca3a3ea-3a1f-8ba0-31a8-6aed0fe1a7a4"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "eb8a8df9-521f-3ccd-7e2c-3d1fcc812340"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "04b3e7f6-4841-888d-4799-cda19a0084f6"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "3545c827-26ee-282d-4629-23952a12008b"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "4edaca8c-0912-1ac5-9eaa-6a1057740fae"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "611ebc63-8600-50b6-a0e3-fef272457132"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "2b4e134f-1e4c-2bff-573e-082d85479b6e"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "423f6d9c-0c73-9cc6-64f4-b52242490368"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "8c255136-994b-9616-79f5-ae87810e0dcf"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "54a9c072-4a93-2a03-6a43-a060d30383d7"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "ba78efc6-795c-64f4-7a02-91effbd34af9"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "433de59e-7a53-a766-02c2-f80f8421469a"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "50e81644-923d-33fc-6ebb-9733bc8d1a06"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "98145a9b-428a-7e81-9d14-ebb154a24f93"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "37b0045b-3887-367b-8b4d-b9a6fa911bb9"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "37546841-8ea1-5be0-214d-8ac599588332"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "3d492600-27ba-62cc-a1c3-66eb919f6a0d"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "e9c60c37-65b0-2d72-6c3c-af66036203ae"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "2927e340-60e4-43ad-6b5f-7a1468232cc2"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "92a7591f-73b3-1173-a09c-a08882d84c70"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "449ebb52-945b-36e5-3446-af6f33770f8f"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "d8350d4c-9314-400b-288f-20ddfce04fbd"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "0716f0f5-4955-2ccb-8d5e-c6be14d57c0f"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "2067b904-9552-3259-0cdd-84468e284b7c"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "b6ad009f-5c24-1dc0-a25e-74b60e4da45f"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "8eea8c14-4d93-63a3-0c82-000343ee5204"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "13939f8c-4cd5-a6db-9af4-9dfec35e3722"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "cc057769-01d9-95ad-a36f-1e62a7f9540b"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "81b6267b-97a7-9aa5-51ee-d2584a160424"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "b273f1e3-79e7-13ee-5b5d-dca6c66c3d5d"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "725164e5-3b21-1ec2-7e42-14f077862841"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "eb598832-4bcc-658d-4381-3ecbe17b9866"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "55a7f9a0-6397-7589-05ef-5ed59a8149e7"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "874a6f2e-2098-53bc-3a16-20dcdc425a7e"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "e603da3a-8af7-4f8a-94cb-1bcc0e0333d2"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "01ae60e2-38bb-0a32-7b20-d3a091423409"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "178c8b7e-1b6e-4289-44dd-2f1526b678a1"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "b2ea1058-8998-3dd1-84f1-82132ad482fd"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "3054c74b-9b45-2581-56cf-053a1a716c39"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "0a412110-3874-9f22-187a-c7a81c8a6704"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "8bfdbaa6-6824-3fec-9b06-7961bf7389a6"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "e8c31e15-642d-600f-78ab-bad47a5787e6"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "dad1887d-161b-7b61-2e4d-5124a7b5724e"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "afd5d60a-48d2-8073-1ec2-6687e22f2ddd"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "f8ded0c6-a668-9371-6bb6-661d58787198"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "5decc032-95bd-2163-9549-a41aba83228e"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "6228396e-2ace-7ca5-3247-45767dbf52f4"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "20012034-96f0-85c2-4a86-1ae1eb457802"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "93fa357f-2e38-22a9-5138-8cc5124e1923"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "11ba0508-58a8-44de-5f3a-9e05d80571da"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "e23444b9-9662-40f3-289e-6d25c02b48fa"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "6c79c3e5-5f7b-a48a-5c7b-8c158bc01115"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "1dbd51c2-2bd1-5e26-75ba-ed075d8f0d68"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "677e1da4-00c3-287a-563d-f4a1cf9b99a0"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "d7c1ecc3-2980-a079-1569-91aec8ac4a77"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "3c5e0e1a-216f-8f49-0a15-76ed0d8b8e1f"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "5b802722-71dd-a13d-2e7e-231e09589efb"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "ff136354-1c92-76dc-2dab-80fb7c6a9f1a"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "bf883b14-9c19-0f37-8825-5e39a8b66d5b"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "a30bd8e9-7064-312a-0e1f-e1b485d59f6e"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "f49925aa-9b11-76ae-10e2-6e973cc60f37"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "ab02bb73-4ce1-89dd-3905-d93042809ba0"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "70057208-70cc-7b31-3c3a-121af6bc1966"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "06af77de-02ca-0f3e-838a-a9420fe466f5"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "ef5a7059-6651-73b1-18b3-75b1b79c1565"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "0dcbaf2f-075e-947b-8f4c-74ecc5cd302c"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "00f12b6f-10d7-8117-9577-0f2b76488385"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "0803eaa7-671c-08a7-52fd-ac419f775e75"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "f9ec3263-9562-1768-65a1-729793635a8d"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "d78f95ba-870a-a500-6104-8a5ce2534f19"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "0ba211ef-0e85-2a45-17fc-401d1b3f8f85"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "13efd2d7-3980-a2a4-39d0-527180c009e8"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "a465e8e9-0095-85cb-a05f-1dd4960d02af"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "57927290-8000-59bf-3776-90c468ac5b4b"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "c148208b-1a6f-a4ac-7abc-23b1d41121b1"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "77acc53d-0f67-6e06-7d04-5750653d4629"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "44b71aa8-099d-8b97-1557-0e853ec38e0d"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "22a02c9a-49e4-5dc9-0d14-eb35ad717154"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "ca6d7878-3189-1833-4620-6c7254ed1607"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "f6da5cca-5795-60ff-49e1-4972567815fe"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "8b333332-6efd-7c0d-5a9f-d1eb95105214"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "be1c34ab-295a-07a6-785c-36f63c1d223e"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "8c44a0ea-9b09-4d9c-0e91-f9bee3d05bfb"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "09960521-759e-5d12-086f-4192a72a5e92"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "c2cb4658-44dc-9d11-3dad-7c6802dd5ba3"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "ef718fe4-7ceb-9ddf-3198-0ee8f6fe9cba"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "84a01872-5318-049e-061e-d56734183e84"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "4e45863d-9ea9-32b4-a204-2680bc6007a6"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "ffea18d9-13de-6505-37f3-4c1f88070ad7"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "0d04cb93-a0f1-2f4b-4b1b-a72a1b510d08"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "92b94485-1c49-3350-9ada-dffe94f08e87"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "46ab2c5e-6654-1f58-8c83-e97a44f39308"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "3eabed6d-1912-2d3c-858b-f438d08d0412"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "0040d2e5-2779-170d-6a2c-1f5fca353335"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "318b2bd9-9c39-9f8b-46a7-048401f33476"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "e750ca06-1824-464a-2cf3-d0fa754d1cb4"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "b33d61c1-7463-7025-0ec0-a47585b59147"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "085467a6-9679-5c65-584a-f55acefd0d43"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "db28735f-518f-870e-15b4-49623cbe3aa0"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "8a703eb5-4e53-701b-67e4-05ba2f7930c8"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "b7306e73-0494-83a2-31f5-280e934a8f70"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "edcc36f1-511b-81e0-7125-abee29752fe7"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "b262e1dd-08e9-41d4-963a-258909ad794b"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "ff1efad2-6b09-54cc-01bf-d386c4d558a8"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "66e5cb69-9f1c-8b8d-8fbd-b832466d5aa8"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "d91558ce-5a5c-551b-8fbb-83f793255e09"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "dd6d00a8-701a-5935-a22b-c7b9c0c698b2"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "df54d34f-65f3-39f1-103c-a0464b8615df"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "26daf649-22d1-97e9-2a8a-01b182194d59"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "d6653f89-7cb5-24a4-9d71-51581038231b"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "c4ccd607-702b-8ae6-8eeb-fc3339cd4b42"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "d661e9eb-4e15-5ba1-6f02-cdc467db0d6c"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "7a0ecd94-3699-5273-76a5-edb8499f655a"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "97d91b33-7050-237b-3e23-a77d57d84e13"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "9c276cf3-596f-581a-7fbd-f5e46edaa0f4"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "de077e7e-0cc8-65a6-6e08-9ab46c827b05"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "678ca228-042d-6d8e-a598-c58d5670437d"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "62fa14f0-4cbe-762d-5469-0899a99b98aa"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "ffdaa742-0d6f-726f-3eac-6e6c34e36c93"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "291f20d4-8d93-1d73-89f3-6ce28b825563"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "ced727b3-005e-3c5b-5cd5-230b79d56ee8"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "bbb2e6d6-085f-5a35-a55d-e45daad38933"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "c7d57a6a-7cc2-66c0-299f-83bf90558f5d"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "3c9aa856-6b86-35dc-83f4-bc72cec74dea"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "bfc540fe-376c-2eef-4355-121312fa4437"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "6bededc0-2985-54d5-4158-eb8bad8070a0"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "34aac8b2-488a-2b96-7280-5b9b481a317a"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "1bc7fd64-291f-028e-4ed6-6e07886e163f"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "03b6427e-6072-4226-4bd9-a410ab65317e"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "341bc9f1-7489-07d9-4ec6-971573e1546a"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "e6f7b584-877a-0d69-77d4-ab8b923a9650"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "60ee1260-97f0-61bb-8155-5d8b75743655"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "c7fddb0e-3f44-8635-2b35-dc6b8e740b7c"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "f476f3b0-4152-526e-a209-44e5f8c968d7"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "398fdbd8-56fd-274d-35c6-fa2d3b2755a1"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "79365f13-8ba4-1f6c-2ac4-aa39929f56d0"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "59bedbdc-0ba9-39b9-66bb-1d1c192384e6"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "eb1c944e-0e94-647b-9b7e-fdb8d2af0838"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "10c4210b-3ec9-9603-050d-77e4d26c7ebb"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "50e9324a-7410-0539-0662-2c1e775538b7"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "aeed863a-0f56-429f-945d-8bb66bd06841"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "e4054c0e-1184-09e6-4c5e-701e0bc90f81"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "f26af0b1-65b6-689a-a03f-352ad2d00f98"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "32f22cfa-770b-057c-965b-450898425519"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "8489ff90-8d29-61df-2d84-f9ab0f4c5e84"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "34d38ea7-6754-1838-7031-d7fd07099821"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "2f204e72-1896-3bf8-75c9-9128b8683a36"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "f7eb1d0b-6d4f-2d59-1591-7563e11a9313"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "79f081c7-1634-01a1-708e-376197999289"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "a830fe9e-08c9-a4fb-420c-6f6bf1702395"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "49c23d9b-02b0-0e42-4f94-e8cef1b8381b"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "4b8fd5da-609b-33bf-9724-1c946285a14c"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "7b28ba4f-0a87-46ac-62e1-46b7c09202a8"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "873895e8-0e3a-6492-42e9-22cd030e9fcd"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "97cfd944-6f0c-7db2-3796-8e890ef70819"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "a08b18c7-9e0a-89f1-3696-d80902196719"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "4c6df5ff-4ef2-4f17-a516-0da9189c603b"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "623b5f0a-8cbd-03a6-4892-201d27302f0c"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "03d550b4-34ee-03f4-515f-f2e2faf7a413"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "1a2a03a4-9992-5788-5953-d8f6615306de"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "b1666a13-8f67-9c47-155e-69e027ff6823"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "59f7feff-02aa-6539-2cf7-bea75b762140"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "08ad71d0-52be-6503-4908-e015460a16ae"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "b5244f81-6cab-3188-2412-179162294996"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "f29b17a4-0df2-8a50-058a-8570f9979d28"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "14a4fd0a-9100-1e12-1362-792014a28155"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "4781e5fd-76b8-7d34-6df3-a0a7fca47665"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "9e3c505e-7aeb-2096-3417-b132242731fc"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "ca748dfe-3e28-1d18-4221-89aea30aa0a5"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "53fc1282-0ee3-2764-1319-e20143bb0ea5"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "72889284-15d2-90b2-4b39-a1e9541e1152"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "97f0d974-1486-01e2-2088-b888f46c0589"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "921ae4c1-507f-5ddb-8a58-cfa9b5fd96f0"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "35963d41-4263-0ef9-98d5-70eb058f9e3c"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "b4512986-80f5-1656-0c58-08866bd2673a"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "4aacaec9-0628-272c-3e83-0d68446694e0"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "29363ae1-68cd-01ca-799d-92c9197c8404"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "1a4e592a-6a6e-44a5-9814-e36264ca96e7"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "3ae68d9a-5696-8c32-62d3-c6f9c52e437c"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "e4b00788-7e1c-33ec-0418-d048508e095b"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "a44c9fba-43f8-4b7b-7ee6-db52c96b4366"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "ebb0ba89-6d8c-84a7-252b-7393881e43de"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "c5784049-959f-6067-420c-f4cefae93076"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "d8bbd80e-3bb1-5983-06c2-428526ec6a63"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "e435f7e3-0dd9-58c9-451f-9b44b96c0232"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "3b30aa25-0f19-6c04-5ca4-bd3f880a763d"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "b2d3e5a2-97ab-5497-565a-71172a729d93"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "36b74844-4a99-4c80-1800-b18a516d1585"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "8d140e8b-76c7-77de-1d46-ed1b2e112444"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "6f311b49-9b0d-8c67-3d6e-db80ae528173"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "3d399cf3-8fc6-0efc-6ab0-1412f1198517"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "f5c0bfb3-acea-47b1-b477-b0edcdf6edc1"
+    },
+    {
+      "count_": 2,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "5747353b-1ca9-42c1-a4dd-b874b894f3d4"
+    },
+    {
+      "count_": 3,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "8b346db6-85af-419b-8557-92cee2c0f9bb"
+    },
+    {
+      "count_": 3,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "3b980d31-7904-4bb7-8575-5665739a8052"
+    },
+    {
+      "count_": 3,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "fc26e2fd-3149-74b4-5988-d64bb90f8ef7"
+    },
+    {
+      "count_": 3,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "470baccb-7e51-4549-8b1a-3e5be069f663"
+    },
+    {
+      "count_": 3,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "b2982f36-99f2-4db5-8eff-283140c09693"
+    },
+    {
+      "count_": 3,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "b02aacc0-b073-424e-8298-42b22829ee0a"
+    },
+    {
+      "count_": 3,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "f1776c76-f58c-4245-a8d0-2b207198dc8b"
+    },
+    {
+      "count_": 3,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "171e377b-5224-4a97-1eaa-62a3b5231dac"
+    },
+    {
+      "count_": 3,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "bd560fc0-3c69-498a-ae9f-aa8eb7de0e13"
+    },
+    {
+      "count_": 3,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "f772fb64-8e40-40ad-87bc-7706e1949427"
+    },
+    {
+      "count_": 3,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "89c8a434-18f0-402c-8147-630a8dea54e0"
+    },
+    {
+      "count_": 3,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "fa498b91-8a7e-4710-9578-da944c68d1fe"
+    },
+    {
+      "count_": 3,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "7809fda1-ba27-48c1-9c63-1f5aee46ba89"
+    },
+    {
+      "count_": 3,
+      "properties_complianceState": "Unknown",
+      "properties_policyDefinitionName": "1afada58-8b34-7ac2-a38a-983218635201"
+    },
+    {
+      "count_": 3,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "cfb11c26-f069-4c14-8e36-56c394dae5af"
+    },
+    {
+      "count_": 3,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "f39f5f49-4abf-44de-8c70-0756997bfb51"
+    },
+    {
+      "count_": 3,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "ed6ae75a-828f-4fea-88fd-dead1145f1dd"
+    },
+    {
+      "count_": 3,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "ebaf4f25-a4e8-415f-86a8-42d9155bef0b"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "d9f1f9a9-8795-49f9-9e7b-e11db14caeb2"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "037eea7a-bd0a-46c5-9a66-03aea78705d3"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "94de2ad3-e0c1-4caf-ad78-5d47bbc83d3d"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "8b346db6-85af-419b-8557-92cee2c0f9bb"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "a9b99dd8-06c5-4317-8629-9d86a3c6e7d9"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "f78ccdb4-7bf4-4106-8647-270491d2978a"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "3e596b57-105f-48a6-be97-03e9243bad6e"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "c251913d-7d24-4958-af87-478ed3b9ba41"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "12ef42cb-9903-4e39-9c26-422d29570417"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "3234ff41-8bec-40a3-b5cb-109c95f1c8ce"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "1b4d1c4e-934c-4703-944c-27c82c06bebb"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "037eea7a-bd0a-46c5-9a66-03aea78705d3"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "b954148f-4c11-4c38-8221-be76711e194a"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "bd78111f-4953-4367-9fd5-7e08808b54bf"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "1151cede-290b-4ba0-8b38-0ad145ac888f"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "09024ccc-0c5f-475e-9457-b7c0d9ed487b"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "56a5ee18-2ae6-4810-86f7-18e39ce5629b"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "0b15565f-aa9e-48ba-8619-45960f2c314d"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "640d2586-54d2-465f-877f-9ffc1d2109f4"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "94e1c2ac-cbbe-4cac-a2b5-389c812dee87"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "41388f1c-2db0-4c25-95b2-35d7f5ccbfa9"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "339353f6-2387-4a45-abe4-7f529d121046"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "0cfea604-3201-4e14-88fc-fae4c427a6c5"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "21a9766a-82a5-4747-abb5-650b6dbba6d0"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "8c6a50c6-9ffd-4ae7-986f-5fa6111f9a54"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "c5447c04-a4d7-4ba8-a263-c9ee321a6858"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "7796937f-307b-4598-941c-67d3a05ebfe7"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "8d7e1fde-fe26-4b5f-8108-f8e432cbc2be"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "e9ac8f8e-ce22-4355-8f04-99b911d6be52"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "4f11b553-d42e-4e3a-89be-32ca364cad4c"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "cee51871-e572-4576-855c-047c820360f0"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "464a1620-21b5-448d-8ce6-d4ac6d1bc49a"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "cbd11fd3-3002-4907-b6c8-579f0e700e13"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "5e1de0e3-42cb-4ebc-a86d-61d0c619ca48"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "a1817ec0-a368-432a-8057-8371e17ac6ee"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "8e826246-c976-48f6-b03e-619bb92b3d82"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "adbe85b5-83e6-4350-ab58-bf3a4f736e5e"
+    },
+    {
+      "count_": 4,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "a22f4a40-01d3-4c7d-8071-da157eeff341"
+    },
+    {
+      "count_": 5,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "12d4fa5e-1f9f-4c21-97a9-b99b3c6611b5"
+    },
+    {
+      "count_": 5,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "7926a6d1-b268-4586-8197-e8ae90c877d7"
+    },
+    {
+      "count_": 5,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "42781ec6-6127-4c30-bdfa-fb423a0047d3"
+    },
+    {
+      "count_": 5,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "dc921057-6b28-4fbe-9b83-f7bec05db6c2"
+    },
+    {
+      "count_": 5,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "d38668f5-d155-42c7-ab3d-9b57b50f8fbf"
+    },
+    {
+      "count_": 5,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "9f2dea28-e834-476c-99c5-3507b4728395"
+    },
+    {
+      "count_": 5,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "2913021d-f2fd-4f3d-b958-22354e2bdbcb"
+    },
+    {
+      "count_": 5,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "1f90fc71-a595-4066-8974-d4d0802e8ef0"
+    },
+    {
+      "count_": 5,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "524b0254-c285-4903-bee6-bb8126cde579"
+    },
+    {
+      "count_": 5,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "0a9fbe0d-c5c4-4da8-87d8-f4fd77338835"
+    },
+    {
+      "count_": 6,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "aede300b-d67f-480a-ae26-4b3dfb1a1fdc"
+    },
+    {
+      "count_": 6,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "f78ccdb4-7bf4-4106-8647-270491d2978a"
+    },
+    {
+      "count_": 6,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "967a4b4b-2da9-43c1-b7d0-f98d0d74d0b1"
+    },
+    {
+      "count_": 6,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "4da35fc9-c9e7-4960-aec9-797fe7d9051d"
+    },
+    {
+      "count_": 6,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "4ec52d6d-beb7-40c4-9a9e-fe753254690e"
+    },
+    {
+      "count_": 6,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "0fdf0491-d080-4575-b627-ad0e843cba0f"
+    },
+    {
+      "count_": 6,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "7ff426e2-515f-405a-91c8-4f2333442eb5"
+    },
+    {
+      "count_": 6,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "36d49e87-48c4-4f2e-beed-ba4ed02b71f5"
+    },
+    {
+      "count_": 6,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "0e6763cc-5078-4e64-889d-ff4d9a839047"
+    },
+    {
+      "count_": 6,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "d074ddf8-01a5-4b5e-a2b8-964aed452c0a"
+    },
+    {
+      "count_": 6,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "8b0323be-cc25-4b61-935d-002c3798c6ea"
+    },
+    {
+      "count_": 6,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "ed9bd083-7bfb-4fec-bbb4-12635e096a09"
+    },
+    {
+      "count_": 6,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "e345b6c3-24bd-4c93-9bbb-7e5e49a17b78"
+    },
+    {
+      "count_": 6,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "c3d20c29-b36d-48fe-808b-99a87530ad99"
+    },
+    {
+      "count_": 6,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "7ff426e2-515f-405a-91c8-4f2333442eb5"
+    },
+    {
+      "count_": 6,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "db4f9b05-5ffd-4b34-b714-3c710dbb3fd6"
+    },
+    {
+      "count_": 7,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "2393d2cf-a342-44cd-a2e2-fe0188fd1234"
+    },
+    {
+      "count_": 7,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "1c988dd6-ade4-430f-a608-2a3e5b0a6d38"
+    },
+    {
+      "count_": 7,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "75262d3e-ba4a-4f43-85f8-9f72c090e5e3"
+    },
+    {
+      "count_": 7,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "6581d072-105e-4418-827f-bd446d56421b"
+    },
+    {
+      "count_": 7,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "6e2593d9-add6-4083-9c9b-4b7d2188c899"
+    },
+    {
+      "count_": 7,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "4f4f78b8-e367-4b10-a341-d9a4ad5cf1c7"
+    },
+    {
+      "count_": 7,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "7fe3b40f-802b-4cdd-8bd4-fd799c948cc2"
+    },
+    {
+      "count_": 8,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "d0793b48-0edc-4296-a390-4c75d1bdfd71"
+    },
+    {
+      "count_": 8,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "72d04c29-f87d-4575-9731-419ff16a2757"
+    },
+    {
+      "count_": 8,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "871b205b-57cf-4e1e-a234-492616998bf7"
+    },
+    {
+      "count_": 8,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "e8d99835-8a06-45ae-a8e0-87a91941ccfe"
+    },
+    {
+      "count_": 8,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "b874ab2d-72dd-47f1-8cb5-4a306478a4e7"
+    },
+    {
+      "count_": 8,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "71ef260a-8f18-47b7-abcb-62d0673d94dc"
+    },
+    {
+      "count_": 8,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "752154a7-1e0f-45c6-a880-ac75a7e4f648"
+    },
+    {
+      "count_": 8,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "d6759c02-b87f-42b7-892e-71b3f471d782"
+    },
+    {
+      "count_": 8,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "7698e800-9299-47a6-b3b6-5a0fee576eed"
+    },
+    {
+      "count_": 8,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "342e8053-e12e-4c44-be01-c3c2f318400f"
+    },
+    {
+      "count_": 8,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "e8eef0a8-67cf-4eb4-9386-14b0e78733d4"
+    },
+    {
+      "count_": 8,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "b0eb591a-5e70-4534-a8bf-04b9c489584a"
+    },
+    {
+      "count_": 8,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "1513498c-3091-461a-b321-e9b433218d28"
+    },
+    {
+      "count_": 9,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "405c5871-3e91-4644-8a63-58e19d68ff5b"
+    },
+    {
+      "count_": 9,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "a6abeaec-4d90-4a02-805f-6b26c4d3fbe9"
+    },
+    {
+      "count_": 9,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "679da822-78a7-4eff-8fff-a899454a9970"
+    },
+    {
+      "count_": 9,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "21a6bc25-125e-4d13-b82d-2e19b7208ab7"
+    },
+    {
+      "count_": 9,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "bf045164-79ba-4215-8f95-f8048dc1780b"
+    },
+    {
+      "count_": 9,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "1c06e275-d63d-4540-b761-71f364c2111d"
+    },
+    {
+      "count_": 9,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "295fc8b1-dc9f-4f53-9c61-3f313ceab40a"
+    },
+    {
+      "count_": 9,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "783ea2a8-b8fd-46be-896a-9ae79643a0b1"
+    },
+    {
+      "count_": 9,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "0fdf0491-d080-4575-b627-ad0e843cba0f"
+    },
+    {
+      "count_": 10,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "abda6d70-9778-44e7-84a8-06713e6db027"
+    },
+    {
+      "count_": 10,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "5b9159ae-1701-4a6f-9a7a-aa9c8ddd0580"
+    },
+    {
+      "count_": 10,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "127ef6d7-242f-43b3-9eef-947faf1725d0"
+    },
+    {
+      "count_": 10,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "783ea2a8-b8fd-46be-896a-9ae79643a0b1"
+    },
+    {
+      "count_": 10,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "b3a22bc9-66de-45fb-98fa-00f5df42f41a"
+    },
+    {
+      "count_": 11,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "b2982f36-99f2-4db5-8eff-283140c09693"
+    },
+    {
+      "count_": 11,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "b874ab2d-72dd-47f1-8cb5-4a306478a4e7"
+    },
+    {
+      "count_": 11,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "7809fda1-ba27-48c1-9c63-1f5aee46ba89"
+    },
+    {
+      "count_": 12,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "ae5d2f14-d830-42b6-9899-df6cfe9c71a3"
+    },
+    {
+      "count_": 12,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "4c3c6c5f-0d47-4402-99b8-aa543dd8bcee"
+    },
+    {
+      "count_": 12,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "18ac0011-fb88-42b6-a025-b33b6f0d2cb3"
+    },
+    {
+      "count_": 12,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "1604f626-4d8d-4124-8bb8-b1e5f95562de"
+    },
+    {
+      "count_": 12,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "a451c1ef-c6ca-483d-87ed-f49761e3ffb5"
+    },
+    {
+      "count_": 12,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "3d9f5e4c-9947-4579-9539-2a7695fbc187"
+    },
+    {
+      "count_": 12,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "a1817ec0-a368-432a-8057-8371e17ac6ee"
+    },
+    {
+      "count_": 12,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "8af8f826-edcb-4178-b35f-851ea6fea615"
+    },
+    {
+      "count_": 12,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "2a1a9cdf-e04d-429a-8416-3bfb72a1b26f"
+    },
+    {
+      "count_": 12,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "ca610c1d-041c-4332-9d88-7ed3094967c7"
+    },
+    {
+      "count_": 12,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "55615ac9-af46-4a59-874e-391cc3dfb490"
+    },
+    {
+      "count_": 12,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "d0793b48-0edc-4296-a390-4c75d1bdfd71"
+    },
+    {
+      "count_": 12,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "34c877ad-507e-4c82-993e-3452a6e0ad3c"
+    },
+    {
+      "count_": 12,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "e8eef0a8-67cf-4eb4-9386-14b0e78733d4"
+    },
+    {
+      "count_": 13,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "dfc212af-17ea-423a-9dcb-91e2cb2caa6b"
+    },
+    {
+      "count_": 13,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "cd906338-3453-47ba-9334-2d654bf845af"
+    },
+    {
+      "count_": 13,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "6201aeb7-2b5c-4671-8ab4-5d3ba4d77f3b"
+    },
+    {
+      "count_": 14,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "0b60c0b2-2dc2-4e1c-b5c9-abbed971de53"
+    },
+    {
+      "count_": 14,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "92a89a79-6c52-4a7e-a03f-61306fc49312"
+    },
+    {
+      "count_": 14,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "f0e5abd0-2554-4736-b7c0-4ffef23475ef"
+    },
+    {
+      "count_": 14,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "f87b2739-92be-4121-af7f-39c0a5a24f20"
+    },
+    {
+      "count_": 14,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "7c322315-e26d-4174-a99e-f49d351b4688"
+    },
+    {
+      "count_": 15,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "496223c3-ad65-4ecd-878a-bae78737e9ed"
+    },
+    {
+      "count_": 15,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "7008174a-fd10-4ef0-817e-fc820a951d73"
+    },
+    {
+      "count_": 15,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "7261b898-8a84-4db8-9e04-18527132abb3"
+    },
+    {
+      "count_": 15,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "c4857be7-912a-4c75-87e6-e30292bcdf78"
+    },
+    {
+      "count_": 16,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "fc5e4038-4584-4632-8c85-c0448d374b2c"
+    },
+    {
+      "count_": 16,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "b6e2945c-0b7b-40f5-9233-7a5323b5cdc6"
+    },
+    {
+      "count_": 16,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "0aa61e00-0a01-4a3c-9945-e93cffedf0e6"
+    },
+    {
+      "count_": 16,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "1604f626-4d8d-4124-8bb8-b1e5f95562de"
+    },
+    {
+      "count_": 16,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "a7aca53f-2ed4-4466-a25e-0b45ade68efd"
+    },
+    {
+      "count_": 16,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "18ac0011-fb88-42b6-a025-b33b6f0d2cb3"
+    },
+    {
+      "count_": 16,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "7698e800-9299-47a6-b3b6-5a0fee576eed"
+    },
+    {
+      "count_": 17,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "0e80e269-43a4-4ae9-b5bc-178126b8a5cb"
+    },
+    {
+      "count_": 18,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "a6abeaec-4d90-4a02-805f-6b26c4d3fbe9"
+    },
+    {
+      "count_": 18,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "ea4d6841-2173-4317-9747-ff522a45120f"
+    },
+    {
+      "count_": 20,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "0a075868-4c26-42ef-914c-5bc007359560"
+    },
+    {
+      "count_": 20,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "a1181c5f-672a-477a-979a-7d58aa086233"
+    },
+    {
+      "count_": 21,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "cf820ca0-f99e-4f3e-84fb-66e913812d21"
+    },
+    {
+      "count_": 21,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "a6fb4358-5bf4-4ad7-ba82-2cd2f41ce5e9"
+    },
+    {
+      "count_": 21,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "1b8ca024-1d5c-4dec-8995-b1a932b41780"
+    },
+    {
+      "count_": 21,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "7803067c-7d34-46e3-8c79-0ca68fc4036d"
+    },
+    {
+      "count_": 21,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "1b8ca024-1d5c-4dec-8995-b1a932b41780"
+    },
+    {
+      "count_": 21,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "a6fb4358-5bf4-4ad7-ba82-2cd2f41ce5e9"
+    },
+    {
+      "count_": 21,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "f8d36e2f-389b-4ee4-898d-21aeb69a0f45"
+    },
+    {
+      "count_": 21,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "22bee202-a82f-4305-9a2a-6d7f44d4dedb"
+    },
+    {
+      "count_": 21,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "2393d2cf-a342-44cd-a2e2-fe0188fd1234"
+    },
+    {
+      "count_": 22,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "db4f9b05-5ffd-4b34-b714-3c710dbb3fd6"
+    },
+    {
+      "count_": 22,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "ed9bd083-7bfb-4fec-bbb4-12635e096a09"
+    },
+    {
+      "count_": 24,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "6edd7eda-6dd8-40f7-810d-67160c639cd9"
+    },
+    {
+      "count_": 24,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "feedbf84-6b99-488c-acc2-71c829aa5ffc"
+    },
+    {
+      "count_": 24,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "32e6bbec-16b6-44c2-be37-c5b672d103cf"
+    },
+    {
+      "count_": 24,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "2d21331d-a4c2-4def-a9ad-ee4e1e023beb"
+    },
+    {
+      "count_": 24,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "1f314764-cb73-4fc9-b863-8eca98ac36e9"
+    },
+    {
+      "count_": 25,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "090c7b07-b4ed-4561-ad20-e9075f3ccaff"
+    },
+    {
+      "count_": 25,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "546fe8d2-368d-4029-a418-6af48a7f61e5"
+    },
+    {
+      "count_": 26,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "fd9903f1-38c2-4d36-8e44-5c1c20c561e8"
+    },
+    {
+      "count_": 26,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "05f95bb8-8ef8-4cef-8cad-5d30f9912850"
+    },
+    {
+      "count_": 27,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "72d04c29-f87d-4575-9731-419ff16a2757"
+    },
+    {
+      "count_": 27,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "871b205b-57cf-4e1e-a234-492616998bf7"
+    },
+    {
+      "count_": 28,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "6fac406b-40ca-413b-bf8e-0bf964659c25"
+    },
+    {
+      "count_": 28,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "044985bb-afe1-42cd-8a36-9d5d42424537"
+    },
+    {
+      "count_": 28,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "fe83a0eb-a853-422d-aac2-1bffd182c5d0"
+    },
+    {
+      "count_": 29,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "aede300b-d67f-480a-ae26-4b3dfb1a1fdc"
+    },
+    {
+      "count_": 30,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "89099bee-89e0-4b26-a5f4-165451757743"
+    },
+    {
+      "count_": 30,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "34c877ad-507e-4c82-993e-3452a6e0ad3c"
+    },
+    {
+      "count_": 30,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "91a78b24-f231-4a8a-8da9-02c35b2b6510"
+    },
+    {
+      "count_": 30,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "2b9ad585-36bc-4615-b300-fd4435808332"
+    },
+    {
+      "count_": 32,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "98728c90-32c7-4049-8429-847dc0f4fe37"
+    },
+    {
+      "count_": 32,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "6edd7eda-6dd8-40f7-810d-67160c639cd9"
+    },
+    {
+      "count_": 33,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "bf045164-79ba-4215-8f95-f8048dc1780b"
+    },
+    {
+      "count_": 34,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "199d5677-e4d9-4264-9465-efe1839c06bd"
+    },
+    {
+      "count_": 34,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "0c4bd2e8-8872-4f37-a654-03f6f38ddc76"
+    },
+    {
+      "count_": 35,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "687aa49d-0982-40f8-bf6b-66d1da97a04b"
+    },
+    {
+      "count_": 35,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "1b5ef780-c53c-4a64-87f3-bb9c8c8094ba"
+    },
+    {
+      "count_": 35,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "801543d1-1953-4a90-b8b0-8cf6d41473a5"
+    },
+    {
+      "count_": 35,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "af1d7e88-c1c8-4ea8-be1f-87bff0df9101"
+    },
+    {
+      "count_": 35,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "a691eacb-474d-47e4-b287-b4813ca44222"
+    },
+    {
+      "count_": 36,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "0a370ff3-6cab-4e85-8995-295fd854c5b8"
+    },
+    {
+      "count_": 38,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "d416745a-506c-48b6-8ab1-83cb814bcaa3"
+    },
+    {
+      "count_": 40,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "12d4fa5e-1f9f-4c21-97a9-b99b3c6611b5"
+    },
+    {
+      "count_": 42,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "ef2a8f2a-b3d9-49cd-a8a8-9a3aaaf647d9"
+    },
+    {
+      "count_": 42,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "55615ac9-af46-4a59-874e-391cc3dfb490"
+    },
+    {
+      "count_": 42,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "4fa4b6c0-31ca-4c0d-b10d-24b96f62a751"
+    },
+    {
+      "count_": 42,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "60d21c4f-21a3-4d94-85f4-b924e6aeeda4"
+    },
+    {
+      "count_": 42,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "c9d007d0-c057-4772-b18c-01e546713bcd"
+    },
+    {
+      "count_": 42,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "4733ea7b-a883-42fe-8cac-97454c2a9e4a"
+    },
+    {
+      "count_": 42,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "abfb4388-5bf4-4ad7-ba82-2cd2f41ceae9"
+    },
+    {
+      "count_": 42,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "cf820ca0-f99e-4f3e-84fb-66e913812d21"
+    },
+    {
+      "count_": 44,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "2a1a9cdf-e04d-429a-8416-3bfb72a1b26f"
+    },
+    {
+      "count_": 45,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "1e66c121-a66a-4b1f-9b83-0fd99bf0fc2d"
+    },
+    {
+      "count_": 45,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "d38fc420-0735-4ef3-ac11-c806f651a570"
+    },
+    {
+      "count_": 45,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "17k78e20-9358-41c9-923c-fb736d382a12"
+    },
+    {
+      "count_": 49,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "0b60c0b2-2dc2-4e1c-b5c9-abbed971de53"
+    },
+    {
+      "count_": 52,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "8c6a50c6-9ffd-4ae7-986f-5fa6111f9a54"
+    },
+    {
+      "count_": 52,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "a1181c5f-672a-477a-979a-7d58aa086233"
+    },
+    {
+      "count_": 56,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "4fa4b6c0-31ca-4c0d-b10d-24b96f62a751"
+    },
+    {
+      "count_": 64,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "8c122334-9d20-4eb8-89ea-ac9a705b74ae"
+    },
+    {
+      "count_": 70,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "37e0d2fe-28a5-43d6-a273-67d37d1f5606"
+    },
+    {
+      "count_": 76,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "8c122334-9d20-4eb8-89ea-ac9a705b74ae"
+    },
+    {
+      "count_": 80,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "e71308d3-144b-4262-b144-efdc3cc90517"
+    },
+    {
+      "count_": 81,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "2d21331d-a4c2-4def-a9ad-ee4e1e023beb"
+    },
+    {
+      "count_": 84,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "0a914e76-4921-4c19-b460-a2d36003525a"
+    },
+    {
+      "count_": 84,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "404c3081-a854-4457-ae30-26a93ef643f9"
+    },
+    {
+      "count_": 102,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "fa298e57-9444-42ba-bf04-86e8470e32c7"
+    },
+    {
+      "count_": 102,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "d550e854-df1a-4de9-bf44-cd894b39a95e"
+    },
+    {
+      "count_": 136,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "6c53d030-cc64-46f0-906d-2bc061cd1334"
+    },
+    {
+      "count_": 136,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "1bc02227-0cb6-4e11-8f53-eb0b22eab7e8"
+    },
+    {
+      "count_": 136,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "e15effd4-2278-4c65-a0da-4d6f6d1890e2"
+    },
+    {
+      "count_": 140,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "5744710e-cc2f-4ee8-8809-3b11e89f4bc9"
+    },
+    {
+      "count_": 140,
+      "properties_complianceState": "NonCompliant",
+      "properties_policyDefinitionName": "95bccee9-a7f8-4bec-9ee9-62c3473701fc"
+    },
+    {
+      "count_": 175,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "f0e6e85b-9b9f-4a4b-b67b-f730d42f1b0b"
+    },
+    {
+      "count_": 175,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "a4af4a39-4135-47fb-b175-47fbdf85311d"
+    },
+    {
+      "count_": 175,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "cb510bfd-1cba-4d9f-a230-cb0976f4bb71"
+    },
+    {
+      "count_": 175,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "4d24b6d4-5e53-4a4f-a7f4-618fa573ee4b"
+    },
+    {
+      "count_": 180,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "91a78b24-f231-4a8a-8da9-02c35b2b6510"
+    },
+    {
+      "count_": 180,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "2b9ad585-36bc-4615-b300-fd4435808332"
+    },
+    {
+      "count_": 1794,
+      "properties_complianceState": "Compliant",
+      "properties_policyDefinitionName": "0a914e76-4921-4c19-b460-a2d36003525a"
+    }
+  ],
+  "skip_token": null,
+  "total_records": 776
+}

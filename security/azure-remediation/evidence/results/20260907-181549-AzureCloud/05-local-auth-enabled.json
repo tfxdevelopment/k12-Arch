@@ -1,0 +1,43 @@
+{
+  "count": 6,
+  "data": [
+    {
+      "name": "k12-development-app-configuration",
+      "resourceGroup": "development",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5",
+      "type": "microsoft.appconfiguration/configurationstores"
+    },
+    {
+      "name": "k12-staging-app-configuration",
+      "resourceGroup": "staging",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5",
+      "type": "microsoft.appconfiguration/configurationstores"
+    },
+    {
+      "name": "k12-testing-app-configuration",
+      "resourceGroup": "testing",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5",
+      "type": "microsoft.appconfiguration/configurationstores"
+    },
+    {
+      "name": "k12eventhub-k12-development-sbns",
+      "resourceGroup": "development",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5",
+      "type": "microsoft.servicebus/namespaces"
+    },
+    {
+      "name": "k12eventhub-k12-staging-sbns",
+      "resourceGroup": "staging",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5",
+      "type": "microsoft.servicebus/namespaces"
+    },
+    {
+      "name": "k12eventhub-k12-testing-sbns",
+      "resourceGroup": "testing",
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5",
+      "type": "microsoft.servicebus/namespaces"
+    }
+  ],
+  "skip_token": null,
+  "total_records": 6
+}
