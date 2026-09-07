@@ -72,9 +72,11 @@ Refs:
   (gateway only, runs on dedicated ASE).
 - **No in-place migration** classic → v2; v2 is for new instances, and multi-region + Event
   Grid/Event Hubs metric features are still missing in v2.
-- v2 region availability is a subset of commercial regions; **Gov availability of v2 tiers is
-  not listed** — Gov compare page only notes "Azure AD B2C integration" unavailable for APIM.
-  `[verify: az apim check in Gov / products-by-region]`
+- v2 region availability is a subset of regions and the current official v2 table lists no
+  US Gov regions for **Basic v2 / Standard v2 / Premium v2** (treated as **not available in US Gov
+  Virginia/Texas** as of 2026-09-07; source:
+  https://learn.microsoft.com/en-us/azure/api-management/api-management-region-availability).
+  Gov compare page still only calls out Azure AD B2C integration differences for APIM.
 - Practical read for K12: current instances are 3× (dev/test/staging, tier `[confirm]`,
   likely Developer). Non-prod: Developer tier already allows internal VNet injection at no
   extra cost. Prod (Gov): classic **Premium** is the safe VNet-injection choice today; consider
@@ -92,13 +94,17 @@ Refs:
 |---|---|---|
 | Front Door Standard/**Premium** | **GA** (deployed from US Gov Arizona/Texas) | N4 target OK in Gov |
 | Application Gateway v2 (WAF v2) | **GA** | N5 / Track B OK |
-| **Static Web Apps** | **Not on the Gov GA roadmap; not in compare doc** | Target "SWA Standard + private endpoint" for Admin portal is at risk for Gov prod. `[verify products-by-region; fallback: App Service static hosting or Front Door + Storage static website in Gov]` |
-| **Container Apps** | **Not on the Gov GA roadmap page** (Container Instances/Registry are) | Track B's core platform — `[verify products-by-region before committing Track B for Gov prod]` |
-| **Azure Managed Redis** | Not listed; only classic "Redis Cache" is GA in Gov | Track B Redis target: commercial only for now; Gov keeps Azure Cache for Redis (Premium for VNet/persistence). Also note AMR quirks: **no VNet injection (Private Link only), no Entra RBAC data-plane roles yet, TLS-or-not chosen at creation, clustered by default** |
+| **Static Web Apps** | **Not available (Gov not listed in current public availability docs)** — not listed in Gov GA roadmap; product matrix entry is only non-regional SWA (no Gov geography). Source: https://learn.microsoft.com/en-us/azure/azure-government/documentation-government-product-roadmap and https://azure.microsoft.com/en-us/explore/global-infrastructure/products-by-region/table (accessed 2026-09-07). | Target "SWA Standard + private endpoint" for Admin portal is at risk for Gov prod. Use fallback: App Service static hosting or Front Door + Storage static website in Gov. |
+| **Container Apps** | **GA (Azure Government cloud)** per FedRAMP/DoD IL2 compliance scope, but **US Gov Virginia/Texas per-region confirmation remains ambiguous** because the current public Products-by-region table endpoint doesn't expose Gov geographies. Source: https://learn.microsoft.com/en-us/azure/azure-government/compliance/azure-services-in-fedramp-auditscope and https://azure.microsoft.com/en-us/explore/global-infrastructure/products-by-region/table (accessed 2026-09-07). | Track B's core platform can proceed only with tenant-side region validation for US Gov Virginia/Texas before Gov prod commitment. |
+| **Azure Managed Redis** | **Not available in Azure Government (Preview in global Azure only)**. Source: https://learn.microsoft.com/en-us/azure/redis/planning-faq (accessed 2026-09-07). | Track B Redis target: commercial only for now; Gov keeps Azure Cache for Redis (Premium for VNet/persistence). Also note AMR quirks: **no VNet injection (Private Link only), no Entra RBAC data-plane roles yet, TLS-or-not chosen at creation, clustered by default** |
+| **API Management v2 tiers (Basic v2 / Standard v2 / Premium v2)** | **Not available in US Gov Virginia/Texas** (official v2 region table lists no US Gov regions). Source: https://learn.microsoft.com/en-us/azure/api-management/api-management-region-availability (accessed 2026-09-07). | Track B should assume classic APIM tiers for Gov until v2 Gov regions appear in official region table. |
 | SignalR, Service Bus Premium, Event Hubs (+Premium), Functions Premium, Logic Apps Standard, App Config, Key Vault, ACR, SQL DB, ADLS Gen2, NAT (VNet NAT), Private Link, Azure Policy | GA in Gov | Track A hardening carries to Gov unchanged |
 
-Ref: https://learn.microsoft.com/azure/azure-government/documentation-government-product-roadmap
-Ref: https://learn.microsoft.com/azure/azure-government/compare-azure-government-global-azure
+Ref (accessed 2026-09-07): https://learn.microsoft.com/en-us/azure/azure-government/documentation-government-product-roadmap
+Ref (accessed 2026-09-07): https://azure.microsoft.com/en-us/explore/global-infrastructure/products-by-region/table
+Ref (accessed 2026-09-07): https://learn.microsoft.com/en-us/azure/azure-government/compliance/azure-services-in-fedramp-auditscope
+Ref (accessed 2026-09-07): https://learn.microsoft.com/en-us/azure/redis/planning-faq
+Ref (accessed 2026-09-07): https://learn.microsoft.com/en-us/azure/api-management/api-management-region-availability
 
 ## 5. Splunk forwarding mechanism (plan §8 item 6, L2)
 
