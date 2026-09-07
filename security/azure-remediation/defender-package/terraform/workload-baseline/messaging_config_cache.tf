@@ -24,8 +24,12 @@ resource "azurerm_app_configuration" "this" {
 # ---------------------------------------------------------------------------
 # Plan 5.5 — Redis: Azure Managed Redis replaces Azure Cache for Redis
 # (retires 30 Sep 2028). Entra auth only, TLS only, private endpoint.
+# Gated: AMR is not on the Azure Government GA roadmap — Gov environments set
+# deploy_managed_redis = false and keep classic Azure Cache for Redis there
+# until availability is confirmed.
 # ---------------------------------------------------------------------------
 resource "azurerm_managed_redis" "this" {
+  count               = var.deploy_managed_redis ? 1 : 0
   name                = "redis-${local.prefix}"
   resource_group_name = azurerm_resource_group.this.name
   location            = azurerm_resource_group.this.location
@@ -50,7 +54,8 @@ resource "azurerm_managed_redis" "this" {
 
 # Entra data-access policy for the app identity (replaces the access key).
 resource "azurerm_managed_redis_access_policy_assignment" "enrollment_api" {
-  managed_redis_id = azurerm_managed_redis.this.id
+  count            = var.deploy_managed_redis ? 1 : 0
+  managed_redis_id = azurerm_managed_redis.this[0].id
   object_id        = azurerm_user_assigned_identity.enrollment_api.principal_id
   # Assigned to the "default" database with the built-in "default" access policy.
 }

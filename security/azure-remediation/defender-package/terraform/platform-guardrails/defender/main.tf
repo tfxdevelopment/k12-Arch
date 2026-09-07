@@ -19,7 +19,7 @@ variable "subscription_id" {
 }
 
 variable "plan_tier" {
-  description = "full = stage/prod plan set (plan decision D-8); baseline = CSPM + Key Vault for dev/test."
+  description = "full = stage/prod plan set (plan decision D-8); baseline = CSPM + Key Vault + Containers + Resource Manager for dev/test (the live 2026-09-07 export shows Containers and Arm as the two missing plans on the shared subscription — gap G2)."
   type        = string
   default     = "baseline"
   validation {
@@ -59,12 +59,14 @@ locals {
   baseline_plans = {
     CloudPosture = { tier = "Standard", subplan = null }
     KeyVaults    = { tier = "Standard", subplan = null }
+    # Live export (2026-09-07): these two are the only missing plans on the
+    # shared subscription — the gap register (G2) enables them everywhere now.
+    Containers = { tier = "Standard", subplan = null }
+    Arm        = { tier = "Standard", subplan = "PerSubscription" }
   }
   full_plans = merge(local.baseline_plans, {
     StorageAccounts = { tier = "Standard", subplan = "DefenderForStorageV2" }
     SqlServers      = { tier = "Standard", subplan = null }
-    Arm             = { tier = "Standard", subplan = "PerSubscription" }
-    Containers      = { tier = "Standard", subplan = null }
     },
     var.workload_has_app_service ? { AppServices = { tier = "Standard", subplan = null } } : {},
     var.workload_has_apim ? { Api = { tier = "Standard", subplan = "P1" } } : {}

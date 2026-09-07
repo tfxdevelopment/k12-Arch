@@ -75,11 +75,12 @@ Refs:
 - v2 region availability is a subset of commercial regions; **Gov availability of v2 tiers is
   not listed** — Gov compare page only notes "Azure AD B2C integration" unavailable for APIM.
   `[verify: az apim check in Gov / products-by-region]`
-- Practical read for K12: current instances are 3× (dev/test/staging, tier `[confirm]`,
-  likely Developer). Non-prod: Developer tier already allows internal VNet injection at no
-  extra cost. Prod (Gov): classic **Premium** is the safe VNet-injection choice today; consider
-  Standard v2 + inbound private endpoint only if the Front Door → APIM path stays
-  header-restricted rather than network-isolated.
+- Practical read for K12 (**updated after the live run**): the Dec-2025 inventory's 3 instances
+  are **historical — no APIM exists in the visible tenant as of 2026-09-07**. Any tier guidance
+  here is therefore for a *future/Gov* APIM only: Developer allows internal VNet injection for
+  non-prod at no extra cost; classic **Premium** is the safe VNet-injection choice for prod;
+  Standard v2 + inbound private endpoint fits if the edge stays header-restricted rather than
+  network-isolated.
 
 Refs:
 - https://learn.microsoft.com/azure/api-management/virtual-network-concepts
@@ -126,7 +127,7 @@ Refs:
 
 `00-inventory-dryrun-portal-only.md`: Dec 2025 commercial inventory = **184 resources; 35
 excluded as k12-cms estate; 149 in scope** (development 56 / testing 39 / staging 31 + shared
-RGs). Notables vs. the gap register: 3 APIM instances, 4 Key Vaults, 12 storage accounts,
+RGs). Notables vs. the gap register: 3 APIM instances (historical — none exist per the 2026-09-07 live check), 4 Key Vaults, 12 storage accounts,
 3 SQL servers, 12 Front Door profiles, 12 Static Web Apps, 4 SignalR, 2 Defender DevOps
 connectors, 5 managed identities, no Container Apps environment rows and no Service Bus rows in
 this export `[old export — refresh with query 06]`. Gov-tenant inventory not present in this
@@ -134,7 +135,7 @@ CSV — the runner script must be executed once per cloud.
 
 ## 7. What still needs tenant access (can't be researched from docs)
 
-- The actual Defender export (plan §1 queries) — runner script ready, needs `az login`.
+- ~~The actual Defender export~~ — **commercial run complete 2026-09-07** (`results/`); remaining: the **Gov tenant** run (`run-remediation-queries.sh --cloud AzureUSGovernment`).
 - Defender plan states per subscription (G2), Key Vault RBAC/purge state (I4), SQL Entra-only
   state (I2), public-network-access per PaaS (N2), APIM tiers per env (N3), WAF policy state
   (N4), diagnostic-settings coverage (L1).

@@ -20,6 +20,14 @@ eventhub_capacity          = 1
 redis_sku                  = "Balanced_B0"
 sql_sku                    = "GP_S_Gen5_1"
 
+# Digest-pinned (S1/K12-8497): resolve with
+#   docker buildx imagetools inspect <registry>/<repo>:<tag>
+# and paste the sha256 — mutable tags are rejected by validation.
+container_app_image = "mcr.microsoft.com/k8se/quickstart@sha256:0000000000000000000000000000000000000000000000000000000000000000"
+
+deploy_managed_redis  = true
+deploy_static_web_app = true
+
 ops_architects_group_object_id = "00000000-0000-0000-0000-000000000000" # sg-k12-ops-architects
 sql_entra_admin_login          = "sg-k12-ops-architects"
 

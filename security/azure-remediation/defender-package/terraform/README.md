@@ -12,6 +12,12 @@ Every file is annotated with the plan section and the Defender recommendation it
 
 ## What this is (and is not)
 
+- **Deliberate deviation from `azure-verified-modules-terraform.instructions.md`:** this
+  baseline uses direct `azurerm_*` resources, not Azure Verified Modules. The package's purpose
+  is lift-over into the existing K12 Terraform (k12-infra), which is written with direct
+  resources — AVM wrappers would make every block harder to transplant and bury the
+  per-recommendation annotations. Revisit AVM if/when the K12 modules themselves adopt it.
+
 - It is a **reference implementation of the target state** in `Defender-Remediation-Plan.md`, written so each resource block can be lifted into the existing K12 modules. Names, CIDRs, SKUs and IDs are placeholders.
 - It is **not** a drop-in replacement for the current Terraform, and `apply` has not been run anywhere. `terraform validate` passes against azurerm `~> 4.60` (v4.81 at time of writing; 5.0 requires the upgrade guide).
 - Container Apps environments, Service Bus SKU changes and Redis migration are **replace** operations — sequence them per the roadmap (identity before network, dev → test → stage → prod).

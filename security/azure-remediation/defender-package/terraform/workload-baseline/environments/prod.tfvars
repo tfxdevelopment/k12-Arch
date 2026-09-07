@@ -20,6 +20,17 @@ eventhub_capacity          = 2
 redis_sku                  = "Balanced_B5"
 sql_sku                    = "GP_Gen5_4"
 
+# Digest-pinned (S1/K12-8497): resolve with
+#   docker buildx imagetools inspect <registry>/<repo>:<tag>
+# and paste the sha256 — mutable tags are rejected by validation.
+container_app_image = "mcr.microsoft.com/k8se/quickstart@sha256:0000000000000000000000000000000000000000000000000000000000000000"
+
+# Prod runs in Azure Government: AMR and SWA are absent from the Gov GA
+# roadmap, so both gates are off (classic Redis / SWA fallback per data_web.tf
+# and messaging_config_cache.tf comments) until availability is confirmed.
+deploy_managed_redis  = false
+deploy_static_web_app = false
+
 ops_architects_group_object_id = "00000000-0000-0000-0000-000000000000" # DBA / platform group in prod
 sql_entra_admin_login          = "sg-k12-sql-admins"
 

@@ -54,6 +54,9 @@ securityresources
 | summarize resources = dcount(rid), example = any(rid) by name, sev, subscriptionId
 | order by sev asc, resources desc"
 
+# NOTE: secure score is computed per subscription and cannot be scoped to
+# exclude k12-cms — treat query 02's number as SUBSCRIPTION-WIDE. The findings
+# queries (01, 04–07) are the portal-only (k12-cms-excluded) view.
 run "02-secure-score" "
 securityresources
 | where type == 'microsoft.security/securescores'

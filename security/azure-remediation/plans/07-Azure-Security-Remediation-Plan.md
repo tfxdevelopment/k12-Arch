@@ -7,13 +7,13 @@
 > for the full findings and raw query output. **Gov tenant still pending.**
 > This copy lives in Terry's private mirror org (`tfxdevelopment/k12-Arch`), not client systems.
 
-**Scope:** every MyPortal workload — Admin, Enrollment/Household, Providers and Schools portals (SWA + Front Door), the APIs (today: Function Apps on App Service plans behind APIM; target: Container Apps `enrollment-api` / `admin-api` / `validation-api`), Logic Apps / workflow engine, querybuilder gateway, Metabase, audit-sink jobs, SignalR, Service Bus / Event Hubs / Event Grid, Azure SQL, Storage (general + ADLS Gen2), Key Vault, App Configuration, Redis, ACR, ADF, Log Analytics, ADO runners and service connections — across Dev, Testing, Staging (commercial) and Pre-prod / Prod (Azure Government).
+**Scope:** every MyPortal workload — Admin, Enrollment/Household, Providers and Schools portals (SWA + Front Door), the APIs (today: Function Apps on App Service plans reached **directly via Front Door — the Dec-2025 APIM layer no longer exists in the tenant**; target: Container Apps `enrollment-api` / `admin-api` / `validation-api`), Logic Apps / workflow engine, querybuilder gateway, Metabase, audit-sink jobs, SignalR, Service Bus / Event Hubs / Event Grid, Azure SQL, Storage (general + ADLS Gen2), Key Vault, App Configuration, Redis, ACR, ADF, Log Analytics, ADO runners and service connections — across Dev, Testing, Staging (commercial) and Pre-prod / Prod (Azure Government).
 **Out of scope:** the `k12-cms` estate (`app-k12-site-prd*`, `sql-k12-site-shared*`, `fd-k12-site-shared`, `Notify_Netsupport`).
 **Sources:** target-state diagrams (`01targetstatearchitecture`, `02governancehierarchy`), *02-Azure Architecture* inventory (Dec 2025), Luke's *Multi-region Support* page, AzD4D runbook, CFI audit-log policy (3-year retention, 4 months online), K12-8497 / K12-8385 / K12-9219.
 **Now in this plan:** the live commercial Defender/Resource Graph export (2026-09-07). Remaining `[...]` = still open (mostly Gov-tenant or ADO-side).
 
 Two tracks, kept apart on purpose so security remediation doesn't get held hostage by re-platforming:
-- **Track A — harden in place** (Functions/App Service + APIM as they run today). This is what closes Defender findings before launch.
+- **Track A — harden in place** (Functions/App Service behind Front Door as they run today — live check: no APIM exists, so the Front Door inbound restriction is the only gate). This is what closes Defender findings before launch.
 - **Track B — target platform** (Container Apps, App Gateway WAF, Managed Redis, MG hierarchy). Phase 2 / extension scope; designed now so Track A fixes carry forward.
 
 ---

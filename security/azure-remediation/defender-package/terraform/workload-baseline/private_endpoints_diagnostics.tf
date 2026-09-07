@@ -3,7 +3,7 @@
 # link" recommendation in plan Section 5.
 # ---------------------------------------------------------------------------
 locals {
-  private_endpoints = {
+  private_endpoints_always = {
     keyvault = {
       resource_id = azurerm_key_vault.this.id
       subresource = "vault"
@@ -39,22 +39,29 @@ locals {
       subresource = "registry"
       dns_zone    = "acr"
     }
-    redis = {
-      resource_id = azurerm_managed_redis.this.id
-      subresource = "redisEnterprise"
-      dns_zone    = "redis"
-    }
     containerapps = {
       resource_id = azurerm_container_app_environment.this.id
       subresource = "managedEnvironments"
       dns_zone    = "containerapps"
     }
-    staticwebapp = {
-      resource_id = azurerm_static_web_app.admin_portal.id
-      subresource = "staticSites"
-      dns_zone    = "staticwebapp"
-    }
   }
+  # Cloud-gated endpoints (see deploy_managed_redis / deploy_static_web_app).
+  private_endpoints = merge(local.private_endpoints_always,
+    var.deploy_managed_redis ? {
+      redis = {
+        resource_id = azurerm_managed_redis.this[0].id
+        subresource = "redisEnterprise"
+        dns_zone    = "redis"
+      }
+    } : {},
+    var.deploy_static_web_app ? {
+      staticwebapp = {
+        resource_id = azurerm_static_web_app.admin_portal[0].id
+        subresource = "staticSites"
+        dns_zone    = "staticwebapp"
+      }
+    } : {}
+  )
 }
 
 resource "azurerm_private_endpoint" "this" {
@@ -88,18 +95,19 @@ resource "azurerm_private_endpoint" "this" {
 # outside this module.
 # ---------------------------------------------------------------------------
 locals {
-  diagnostic_targets = {
+  diagnostic_targets = merge({
     keyvault      = azurerm_key_vault.this.id
     appconfig     = azurerm_app_configuration.this.id
     servicebus    = azurerm_servicebus_namespace.this.id
     eventhub      = azurerm_eventhub_namespace.this.id
     acr           = azurerm_container_registry.this.id
     containerapps = azurerm_container_app_environment.this.id
-    redis         = azurerm_managed_redis.this.id
     nsg_pe        = azurerm_network_security_group.pe.id
     blob          = "${azurerm_storage_account.this.id}/blobServices/default"
     sqldb         = azurerm_mssql_database.enrollment.id
-  }
+    },
+    var.deploy_managed_redis ? { redis = azurerm_managed_redis.this[0].id } : {}
+  )
 }
 
 resource "azurerm_monitor_diagnostic_setting" "all_logs" {

@@ -14,8 +14,9 @@ ADO, client Azure) without explicit approval.
 
 ## State (2026-09-07)
 
-- **Commercial tenant (`K12 Azure`): queried.** Secure score **12.9/27**; 65 High / 84 Medium /
-  96 Low distinct recommendations. Headlines: guest/PIM identity block is the top High cluster;
+- **Commercial tenant (`K12 Azure`): queried.** Secure score **12.9/27** (subscription-wide —
+  secure score can't exclude k12-cms; the findings queries can and do); 65 High / 84 Medium /
+  96 Low distinct portal-scoped recommendations. Headlines: guest/PIM identity block is the top High cluster;
   ~85 recs are container-image package updates; **no WAF + all Front Door profiles Standard**;
   SQL auditing off, PITR 7 d, no LTR; 38 private endpoints already deployed (public access not
   yet flipped); Key Vault RBAC everywhere; Service Bus already Premium; ACR admin off.

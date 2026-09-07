@@ -144,6 +144,7 @@ resource "azurerm_container_app_environment_dapr_component" "pubsub_servicebus" 
 }
 
 resource "azurerm_container_app_environment_dapr_component" "statestore_redis" {
+  count                        = var.deploy_managed_redis ? 1 : 0
   name                         = "statestore"
   container_app_environment_id = azurerm_container_app_environment.this.id
   component_type               = "state.redis"
@@ -152,7 +153,7 @@ resource "azurerm_container_app_environment_dapr_component" "statestore_redis" {
 
   metadata {
     name  = "redisHost"
-    value = "${azurerm_managed_redis.this.hostname}:10000"
+    value = "${azurerm_managed_redis.this[0].hostname}:10000"
   }
   metadata {
     name  = "useEntraID"

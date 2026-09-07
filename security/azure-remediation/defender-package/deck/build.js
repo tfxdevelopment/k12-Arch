@@ -49,18 +49,18 @@ function arrow(s, x1, y1, x2, y2, color = NAVY, dash) {
   s.addText("K12 MyPortal platform · target-state security baseline and phased plan", { x: 0.7, y: 2.4, w: 8.6, h: 0.5, fontFace: B, fontSize: 18, color: ICE, isTextBox: true, margin: 0 });
   s.addText("Grounded in the Microsoft Cloud Security Benchmark, Cloud Adoption Framework landing-zone guidance and the Well-Architected Framework Security pillar.", { x: 0.7, y: 3.1, w: 8.0, h: 0.7, fontFace: B, fontSize: 13, color: WHITE, isTextBox: true, margin: 0 });
   s.addText("Architecture review draft · for DevOps leads · September 2026 · nothing in this package has been applied", { x: 0.7, y: 4.6, w: 8.6, h: 0.4, fontFace: B, fontSize: 11, color: ICE, isTextBox: true, margin: 0 });
-  s.addNotes("Frame: this is a review draft built from the MCSB recommendation catalog for our service stack. Once the Defender export is in, the catalog is pruned to actual findings and the phases re-sequenced by severity counts.");
+  s.addNotes("Frame: review draft grounded in the live commercial export (2026-09-07): secure score 12.9/27, 245 unhealthy recommendations (65 High / 84 Medium / 96 Low). The Gov tenant export is still pending; its counts get folded in the same way.");
 }
 
 // ---------------------------------------------------------------- 2 What Defender is telling us
 {
   const s = base();
-  title(s, "What Defender is telling us", "Findings cluster into four families — counts to be filled from the Recommendations export");
+  title(s, "What Defender is telling us", "Live commercial export 2026-09-07 — secure score 12.9/27; 245 recommendations: 65 High / 84 Medium / 96 Low");
   const fam = [
-    ["Public PaaS endpoints", "Medium", AMBER, "“…should use private link”, “…should disable public network access”, “Key Vault should have firewall enabled…” — every Key Vault, App Config, Service Bus, Event Hubs, SQL, Storage and Redis resource, in every environment."],
-    ["Local auth & keys", "Medium", AMBER, "“…local authentication methods disabled”, “…should not use access keys”, “…prevent shared key access”, “SQL … Entra-only”. Connection strings and SAS keys are still the default in Dapr components and App Configuration."],
-    ["Defender plans off", "High", RED, "“Microsoft Defender for Key Vault / Storage / SQL / Containers / Resource Manager should be enabled”. No threat detection, no attack-path analysis, NIST overlay unavailable."],
-    ["Subscription hygiene", "High / Low", RED, "MFA on privileged accounts, owner count, guest accounts, security contact, high-severity email alerts, resource logs not routed to Log Analytics."],
+    ["Public PaaS endpoints", "Medium", AMBER, "27 resources still answer publicly — 8 Key Vaults, 9 storage accounts, App Config ×3, SignalR ×4, 5 Container Apps envs. 38 private endpoints already exist: the work is flipping public access off and validating DNS."],
+    ["Local auth & keys", "Medium", AMBER, "Shared key ON for 10/12 storage accounts; local auth ON for App Config ×3, Service Bus ×3, SignalR ×4; SQL Entra-only off on all 4 servers. Plus ~85 container-image ‘Update <pkg>’ vulns — one rebuild-and-pin fix."],
+    ["Defender plans off", "High", RED, "Only two plans are missing: Containers and Resource Manager — CSPM, Key Vault, Storage, SQL and App Service are already Standard. Enabling the two closes both High findings and turns on registry scanning."],
+    ["Subscription hygiene", "High / Low", RED, "The top High block: 53 guest accounts with write + 4 with owner, 19 privileged roles without PIM, >3 owners. Security contact and email alerts are already configured — the guest/PIM cleanup is the cheap big win."],
   ];
   fam.forEach((f, i) => {
     const x = 0.5 + i * 2.3;
@@ -269,7 +269,7 @@ function arrow(s, x1, y1, x2, y2, color = NAVY, dash) {
   const s = base();
   title(s, "What we need from DevOps", "Five items — three are hours, not days");
   const asks = [
-    ["Defender export (read-only)", "Recommendations CSV for all four environments, or the Resource Graph output from plan Section 8. Prunes the catalog to real findings and re-sequences the phases."],
+    ["Gov-tenant export (read-only)", "Commercial is done (evidence/ in the repo, 2026-09-07). Remaining: the same Section 8 queries or Recommendations CSV from the Azure Government pre-prod/prod subscriptions."],
     ["30 minutes on decisions D-1 to D-9", "D-2 (RGs / subscriptions / MGs) and D-3 (policy initiative) are yours and gate Phase 4."],
     ["Entra actions for Phase 0", "Security contact, Conditional Access requiring MFA for Azure management, owner clean-up, guest-account removal."],
     ["Workload identity federation + VNet-capable agents", "Removes the last long-lived pipeline secrets; Managed DevOps Pools reach the private endpoints in Phase 3."],
@@ -288,7 +288,7 @@ function arrow(s, x1, y1, x2, y2, color = NAVY, dash) {
 {
   const s = base(true);
   s.addText("Next steps", { x: 0.7, y: 0.6, w: 8.6, h: 0.7, fontFace: H, fontSize: 32, bold: true, color: WHITE, isTextBox: true, margin: 0 });
-  const steps = ["Approve the standard (MCSB / CAF / WAF) and decisions D-1 … D-9", "Share the Defender export → catalog pruned, phases re-sequenced by real counts", "Phase 0 this week: hygiene items + diagnostics — no application impact", "Terraform reviewed by DevOps: terraform/platform-guardrails (yours) and terraform/workload-baseline (ours)", "Guardrail initiative assigned in Audit on NonProd — compliance dashboard becomes the shared scorecard"];
+  const steps = ["Approve the standard (MCSB / CAF / WAF) and decisions D-1 … D-9", "Commercial export done (12.9/27, 65/84/96) — share the Gov export to complete the picture", "Phase 0 this week: hygiene items + diagnostics — no application impact", "Terraform reviewed by DevOps: terraform/platform-guardrails (yours) and terraform/workload-baseline (ours)", "Guardrail initiative assigned in Audit on NonProd — compliance dashboard becomes the shared scorecard"];
   steps.forEach((t, i) => {
     num(s, 0.7, 1.55 + i * 0.6, i + 1, WHITE, 0.4, NAVY);
     s.addText(t, { x: 1.3, y: 1.5 + i * 0.6, w: 8.0, h: 0.5, fontFace: B, fontSize: 14, color: WHITE, isTextBox: true, margin: 0, valign: "middle" });
@@ -297,4 +297,4 @@ function arrow(s, x1, y1, x2, y2, color = NAVY, dash) {
   // subtle change on closing num circle text color for contrast
 }
 
-pres.writeFile({ fileName: "/home/claude/defender-remediation/deck/Defender-Remediation-DevOps.pptx" }).then(() => console.log("written"));
+pres.writeFile({ fileName: require("path").join(__dirname, "Defender-Remediation-DevOps.pptx") }).then(() => console.log("written"));

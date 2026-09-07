@@ -9,7 +9,7 @@ Gap-row IDs reference `07AzureSecurityRemediationPlan.md` §3; catalog sections 
 
 | Metric | Value |
 |---|---|
-| Secure score | **12.9 / 27 (~48%)** (legacy scope row: 4.34 / 8) |
+| Secure score | **12.9 / 27 (~48%)** — subscription-wide, so it includes the k12-cms estate (secure score cannot be filtered by RG; queries 01/04–07 ARE portal-only). Legacy scope row: 4.34 / 8 |
 | Distinct unhealthy recommendations | **245** — 65 High · 84 Medium · 96 Low |
 | Affected resource-instances | 637 High · 850 Medium · 676 Low |
 | Subscriptions found | **One** — dev/test/staging all share `K12 Azure` (confirms RC-1/D-2) |
@@ -30,9 +30,10 @@ Gap-row IDs reference `07AzureSecurityRemediationPlan.md` §3; catalog sections 
    → The plans only touch this via §5.11 "Log Analytics AMPLS (prod)". Real fix: Azure Monitor
    Private Link Scope + Entra-only ingestion; fold into L1/L2 work.
 4. **"Authentication should be enabled" on App Service (30, High) and Container Apps (18, High)**
-   EasyAuth is not configured on the Function/App Service apps and ACA apps. For APIs already
-   validating JWTs behind APIM this is a triage call: enable built-in auth where it fits,
-   exempt-with-justification (D-9) where APIM/JWT is the control. → N3/C2.
+   EasyAuth is not configured on the Function/App Service apps and ACA apps. There is no APIM in
+   the tenant (see below), so the triage is against the actual controls: enable built-in Entra
+   auth where it fits, exempt-with-justification (D-9) where **application-level JWT validation
+   (EntraAuthenticationMiddleware) plus the Front Door inbound restriction** is the control. → N3/C2.
 5. **Network/private-endpoint block (Medium, wide but known)** — matches N2 exactly:
    Storage (9 public / 9 vnet-rules / 4 private-link / 11 shared-key), Key Vault (8 service
    endpoint / 6 firewall / 5 private link / 8 public access), App Config (3+3), SignalR (4),

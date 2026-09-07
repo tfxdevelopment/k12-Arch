@@ -35,7 +35,19 @@ resource "azurerm_mssql_database" "enrollment" {
   sku_name       = var.sql_sku
   zone_redundant = var.is_production_like
   ledger_enabled = var.is_production_like # aligns with the Audit & Ledger design
-  tags           = local.tags
+
+  # Gap D3 / DR brief: live export shows PITR 7 d and no LTR on every K12 DB.
+  short_term_retention_policy {
+    retention_days = 35
+  }
+  long_term_retention_policy {
+    weekly_retention  = "P4W"
+    monthly_retention = "P12M"
+    yearly_retention  = "P3Y" # CFI retention policy: 3 years
+    week_of_year      = 1
+  }
+
+  tags = local.tags
 }
 
 # Auditing → Log Analytics (SQLSecurityAuditEvents), consistent with the
@@ -118,8 +130,12 @@ resource "azurerm_storage_container" "documents" {
 # ---------------------------------------------------------------------------
 # Plan 5.8 — Static Web Apps (internal admin portal shape). Citizen-facing
 # portals stay public behind Front Door Premium + WAF instead.
+# Gated: SWA is absent from the Azure Government GA roadmap — Gov environments
+# set deploy_static_web_app = false and use the documented fallback
+# (App Service static hosting or Front Door + Storage static website).
 # ---------------------------------------------------------------------------
 resource "azurerm_static_web_app" "admin_portal" {
+  count               = var.deploy_static_web_app ? 1 : 0
   name                = "stapp-${local.prefix}-admin"
   resource_group_name = azurerm_resource_group.this.name
   location            = "eastus2" # SWA is available in a subset of regions

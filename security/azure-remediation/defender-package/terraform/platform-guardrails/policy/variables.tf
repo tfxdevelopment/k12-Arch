@@ -24,9 +24,9 @@ variable "nonprod_effect" {
 }
 
 variable "prod_effect" {
-  description = "Effect for Audit/Deny-capable policies on the Prod assignment. Start with Audit; flip to Deny at Phase 4 exit."
+  description = "Effect for Audit/Deny-capable policies on the Prod assignment. Start with Audit (the default); flip to Deny at Phase 4 exit, once resources are compliant."
   type        = string
-  default     = "Deny"
+  default     = "Audit"
   validation {
     condition     = contains(["Audit", "Deny", "Disabled"], var.prod_effect)
     error_message = "prod_effect must be Audit, Deny or Disabled."

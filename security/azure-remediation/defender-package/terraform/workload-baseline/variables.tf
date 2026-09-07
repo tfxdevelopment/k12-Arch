@@ -97,9 +97,24 @@ variable "sql_sku" {
 }
 
 variable "container_app_image" {
-  description = "Image for the reference app (only used to show the secure app shape)."
+  description = "Digest-pinned image for the reference app (only used to show the secure app shape). Mutable tags are rejected — supply-chain remediation S1/K12-8497 requires digest pinning."
   type        = string
-  default     = "mcr.microsoft.com/k8se/quickstart:latest"
+  validation {
+    condition     = can(regex("@sha256:[0-9a-f]{64}$", var.container_app_image))
+    error_message = "container_app_image must be digest-pinned: <registry>/<repo>@sha256:<64-hex-digest>."
+  }
+}
+
+variable "deploy_managed_redis" {
+  description = "Deploy Azure Managed Redis. Set false where AMR is unavailable (absent from the Azure Government GA roadmap — pending products-by-region confirmation; Gov keeps classic Azure Cache for Redis until then)."
+  type        = bool
+  default     = true
+}
+
+variable "deploy_static_web_app" {
+  description = "Deploy the Static Web App admin-portal shape. Set false where SWA is unavailable (absent from the Azure Government GA roadmap; Gov fallback = App Service static hosting or Front Door + Storage static website)."
+  type        = bool
+  default     = true
 }
 
 # ---------------------------------------------------------------------------
