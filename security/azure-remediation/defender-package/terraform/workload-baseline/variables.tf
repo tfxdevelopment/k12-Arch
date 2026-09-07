@@ -106,13 +106,13 @@ variable "container_app_image" {
 }
 
 variable "deploy_managed_redis" {
-  description = "Deploy Azure Managed Redis. Set false where AMR is unavailable (absent from the Azure Government GA roadmap — pending products-by-region confirmation; Gov keeps classic Azure Cache for Redis until then)."
+  description = "Deploy Azure Managed Redis. Set false in Azure Government — AMR is not available there (research 2026-09-07); Gov keeps classic Azure Cache for Redis."
   type        = bool
   default     = true
 }
 
 variable "deploy_static_web_app" {
-  description = "Deploy the Static Web App admin-portal shape. Set false where SWA is unavailable (absent from the Azure Government GA roadmap; Gov fallback = App Service static hosting or Front Door + Storage static website)."
+  description = "Deploy the Static Web App admin-portal shape. Set false in Azure Government — SWA is not available there (research 2026-09-07); Gov fallback = App Service static hosting or Front Door + Storage static website."
   type        = bool
   default     = true
 }

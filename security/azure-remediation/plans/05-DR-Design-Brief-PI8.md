@@ -11,8 +11,10 @@
 > are **Standard_LRS with blob soft delete off** (GRS + soft delete are this brief's asks);
 > **no APIM exists** in the commercial tenant (removes the 30–60 min APIM long pole from the
 > commercial-rehearsal RTO); Gov availability research: **Front Door Standard/Premium and
-> SignalR are GA in Azure Government**, while **Static Web Apps is absent from the Gov GA
-> roadmap** `[verify products-by-region]`. Gov-tenant state itself not yet queried.
+> SignalR are GA in Azure Government**, **Container Apps is available in Gov** (FedRAMP
+> audit-scope table; VA/TX region check pending), while **Static Web Apps is not available in
+> Gov** per current public availability docs (roadmap + products-by-region, 2026-09-07).
+> Gov-tenant state itself not yet queried.
 
 ---
 
@@ -58,7 +60,7 @@ Per Luke's table, everything stateful has a multi-region option; everything stat
 | Function Apps / App Service, Logic Apps | Rebuild via Terraform; Logic App storage rebuilt | Durable/Logic state is lost — workflows must be re-entrant; long-running workflow instances need a "resume from SQL state" path `[verify with Rex]`. |
 | APIM | Rebuild via Terraform (Developer/Standard) **or** multi-region gateway (Premium only) | APIM deploy is the long pole in RTO (30–60 min). Keep policies/APIs in code. |
 | VNet, NAT Gateway, VPN Gateway, private endpoints | Rebuild via Terraform with a DR address space | Pre-allocate non-overlapping CIDRs for the DR region now so peering/VPN doesn't collide at 2 a.m. |
-| Front Door + Static Web Apps | Front Door is global; origin group per API with **priority failover + health probes** | Static Web Apps are not regional in the usual sense. **Researched:** Front Door Standard/Premium is **GA in Azure Government** (deployed from US Gov Arizona/Texas); **SWA is absent from the Gov GA roadmap** `[verify products-by-region; fallback = App Service static hosting or Front Door + Storage static site in Gov]`. Note (live): commercial profiles are currently Standard tier with **no WAF** — the Premium upgrade in remediation N4 also unlocks Private Link origins for DR. |
+| Front Door + Static Web Apps | Front Door is global; origin group per API with **priority failover + health probes** | Static Web Apps are not regional in the usual sense. **Researched (2026-09-07):** Front Door Standard/Premium is **GA in Azure Government** (deployed from US Gov Arizona/Texas); **SWA is not available in Gov** per current public availability docs (roadmap omission + products-by-region shows non-regional SWA only) — fallback = App Service static hosting or Front Door + Storage static site in Gov. Note (live): commercial profiles are currently Standard tier with **no WAF** — the Premium upgrade in remediation N4 also unlocks Private Link origins for DR. |
 | Service Bus / Event Grid | Launch: rebuild + idempotent consumers. Phase 2: Geo-replication (Premium) | Metadata Geo-DR alias only replicates entities, not messages. |
 | SignalR | Launch: rebuild (transient). Phase 2: geo-replication (Premium) | Clients reconnect; no data loss by design. |
 | Log Analytics / App Insights | Workspace replication (Luke's table) or accept a separate DR workspace | Alerts and workbooks must exist in the DR workspace too (Monitoring & Alerting epic K12-4697). |
@@ -119,4 +121,4 @@ Each scenario carries: trigger, detection (which alert fires), decision owner, R
 | Runbook + monitoring in DR workspace | Terry + Matt V | 53 |
 | Tabletop scenarios + client pre-training (K12-9268) | Luke + Terry | PI8 end → PI9 |
 
-Open items to confirm before 9/8 — status 2026-09-07: primary Gov region `[still open]`; ~~current replica type~~ **answered: geo-secondary (dev)**; ~~SWA / Front Door / SignalR availability~~ **answered: FD + SignalR GA in Gov; SWA absent from Gov roadmap `[verify]`**; APIM tier in prod `[still open — no APIM exists in commercial; check Gov]`; November add-on window for the prod drill `[still open]`.
+Open items to confirm before 9/8 — status 2026-09-07: primary Gov region `[still open]`; ~~current replica type~~ **answered: geo-secondary (dev)**; ~~SWA / Front Door / SignalR availability~~ **answered: FD + SignalR GA in Gov; SWA not available in Gov per current public availability docs (2026-09-07)**; APIM tier in prod `[still open — no APIM exists in commercial; check Gov]`; November add-on window for the prod drill `[still open]`.
