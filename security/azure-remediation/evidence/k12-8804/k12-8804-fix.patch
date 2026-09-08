@@ -1,24 +1,31 @@
 diff --git a/apps/K12.QueryBuilder.Gateway/Dockerfile b/apps/K12.QueryBuilder.Gateway/Dockerfile
-index 9a8a558..ad58428 100644
+index 9a8a558..eac7118 100644
 --- a/apps/K12.QueryBuilder.Gateway/Dockerfile
 +++ b/apps/K12.QueryBuilder.Gateway/Dockerfile
-@@ -1,7 +1,10 @@
+@@ -1,7 +1,11 @@
  # See https://aka.ms/customizecontainer
  # Multi-stage build for K12.QueryBuilder.Gateway (YARP reverse proxy)
  
 -FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS base
-+# K12-8804: Ubuntu chiseled runtime image — no shell/apt/perl/util-linux in the final layer,
-+# so the OS-package CVE classes Defender flagged cannot recur; -extra keeps ICU + tzdata.
-+# Rebuilding also pulls the current .NET 10 runtime (>= 10.0.11, fixes 9 runtime CVEs).
++# K12-8804: Ubuntu chiseled runtime image. The final layer has no shell/apt/perl/util-linux/pam/
++# ncurses/coreutils, which removes most of the OS packages Defender flagged; glibc, openssl, ICU and
++# tzdata remain (-extra keeps ICU + tzdata), so the image still needs regular rebuilds on a current
++# base. Rebuilding also pulls the current .NET 10 runtime (>= 10.0.11).
 +FROM mcr.microsoft.com/dotnet/aspnet:10.0-noble-chiseled-extra AS base
  USER $APP_UID
  WORKDIR /app
  EXPOSE 8080
 diff --git a/apps/K12.QueryBuilder.Gateway/K12.QueryBuilder.Gateway.csproj b/apps/K12.QueryBuilder.Gateway/K12.QueryBuilder.Gateway.csproj
-index 38c3f96..a780554 100644
+index 38c3f96..e96512f 100644
 --- a/apps/K12.QueryBuilder.Gateway/K12.QueryBuilder.Gateway.csproj
 +++ b/apps/K12.QueryBuilder.Gateway/K12.QueryBuilder.Gateway.csproj
-@@ -8,7 +8,7 @@
+@@ -4,11 +4,13 @@
+     <TargetFramework>net10.0</TargetFramework>
+     <Nullable>enable</Nullable>
+     <ImplicitUsings>enable</ImplicitUsings>
++    <!-- K12-8804: SDK/Aspire container publish uses the chiseled base too (aspnet:10.0-noble-chiseled-extra) -->
++    <ContainerFamily>noble-chiseled-extra</ContainerFamily>
+   </PropertyGroup>
  
    <ItemGroup>
      <PackageReference Include="Markdig" Version="0.40.0" />
@@ -49,26 +56,36 @@ index 4022192..1a2b212 100644
  
  </Project>
 diff --git a/demo/K12.QueryBuilder.Api/Dockerfile b/demo/K12.QueryBuilder.Api/Dockerfile
-index 0ccc1cb..1463805 100644
+index 0ccc1cb..95e7929 100644
 --- a/demo/K12.QueryBuilder.Api/Dockerfile
 +++ b/demo/K12.QueryBuilder.Api/Dockerfile
-@@ -1,7 +1,10 @@
+@@ -1,7 +1,11 @@
  # Multi-stage build for K12.QueryBuilder.Api
  # Build context: repo root (required for solution-level restore)
  
 -FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS base
-+# K12-8804: Ubuntu chiseled runtime image — no shell/apt/perl/util-linux in the final layer,
-+# so the OS-package CVE classes Defender flagged cannot recur; -extra keeps ICU + tzdata.
-+# Rebuilding also pulls the current .NET 10 runtime (>= 10.0.11, fixes 9 runtime CVEs).
++# K12-8804: Ubuntu chiseled runtime image. The final layer has no shell/apt/perl/util-linux/pam/
++# ncurses/coreutils, which removes most of the OS packages Defender flagged; glibc, openssl, ICU and
++# tzdata remain (-extra keeps ICU + tzdata), so the image still needs regular rebuilds on a current
++# base. Rebuilding also pulls the current .NET 10 runtime (>= 10.0.11).
 +FROM mcr.microsoft.com/dotnet/aspnet:10.0-noble-chiseled-extra AS base
  USER $APP_UID
  WORKDIR /app
  EXPOSE 8080
 diff --git a/demo/K12.QueryBuilder.Api/K12.QueryBuilder.Api.csproj b/demo/K12.QueryBuilder.Api/K12.QueryBuilder.Api.csproj
-index df7ac41..69f348b 100644
+index df7ac41..4cd23b5 100644
 --- a/demo/K12.QueryBuilder.Api/K12.QueryBuilder.Api.csproj
 +++ b/demo/K12.QueryBuilder.Api/K12.QueryBuilder.Api.csproj
-@@ -11,7 +11,7 @@
+@@ -4,6 +4,8 @@
+     <TargetFramework>net10.0</TargetFramework>
+     <Nullable>enable</Nullable>
+     <ImplicitUsings>enable</ImplicitUsings>
++    <!-- K12-8804: SDK/Aspire container publish uses the chiseled base too (aspnet:10.0-noble-chiseled-extra) -->
++    <ContainerFamily>noble-chiseled-extra</ContainerFamily>
+     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+     <NoWarn>$(NoWarn);1591</NoWarn>
+   </PropertyGroup>
+@@ -11,7 +13,7 @@
    <ItemGroup>
      <PackageReference Include="Aspire.Microsoft.Data.SqlClient" Version="13.3.0" />
      <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.1" />
@@ -78,17 +95,46 @@ index df7ac41..69f348b 100644
    </ItemGroup>
  
 diff --git a/demo/K12.QueryBuilder.Dashboard/Dockerfile b/demo/K12.QueryBuilder.Dashboard/Dockerfile
-index f1c6a95..0783509 100644
+index f1c6a95..f795031 100644
 --- a/demo/K12.QueryBuilder.Dashboard/Dockerfile
 +++ b/demo/K12.QueryBuilder.Dashboard/Dockerfile
-@@ -1,6 +1,9 @@
+@@ -1,6 +1,10 @@
  # Multi-stage build for K12.QueryBuilder.Dashboard (BFF + portal)
  
 -FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS base
-+# K12-8804: Ubuntu chiseled runtime image — no shell/apt/perl/util-linux in the final layer,
-+# so the OS-package CVE classes Defender flagged cannot recur; -extra keeps ICU + tzdata.
-+# Rebuilding also pulls the current .NET 10 runtime (>= 10.0.11, fixes 9 runtime CVEs).
++# K12-8804: Ubuntu chiseled runtime image. The final layer has no shell/apt/perl/util-linux/pam/
++# ncurses/coreutils, which removes most of the OS packages Defender flagged; glibc, openssl, ICU and
++# tzdata remain (-extra keeps ICU + tzdata), so the image still needs regular rebuilds on a current
++# base. Rebuilding also pulls the current .NET 10 runtime (>= 10.0.11).
 +FROM mcr.microsoft.com/dotnet/aspnet:10.0-noble-chiseled-extra AS base
  USER $APP_UID
  WORKDIR /app
  EXPOSE 8080
+diff --git a/demo/K12.QueryBuilder.Dashboard/K12.QueryBuilder.Dashboard.csproj b/demo/K12.QueryBuilder.Dashboard/K12.QueryBuilder.Dashboard.csproj
+index f0a8173..107fbb3 100644
+--- a/demo/K12.QueryBuilder.Dashboard/K12.QueryBuilder.Dashboard.csproj
++++ b/demo/K12.QueryBuilder.Dashboard/K12.QueryBuilder.Dashboard.csproj
+@@ -4,6 +4,8 @@
+     <TargetFramework>net10.0</TargetFramework>
+     <Nullable>enable</Nullable>
+     <ImplicitUsings>enable</ImplicitUsings>
++    <!-- K12-8804: SDK/Aspire container publish uses the chiseled base too (aspnet:10.0-noble-chiseled-extra) -->
++    <ContainerFamily>noble-chiseled-extra</ContainerFamily>
+   </PropertyGroup>
+ 
+   <ItemGroup>
+diff --git a/pipelines/templates/stages/docker-push.yml b/pipelines/templates/stages/docker-push.yml
+index 155d8e1..ede65d3 100644
+--- a/pipelines/templates/stages/docker-push.yml
++++ b/pipelines/templates/stages/docker-push.yml
+@@ -103,7 +103,9 @@ stages:
+             cp -R "$artifact_dir"/. "$build_dir/app/"
+ 
+             {
+-              echo 'FROM mcr.microsoft.com/dotnet/aspnet:10.0'
++              # K12-8804: chiseled runtime base (no shell/apt/perl/util-linux/pam/ncurses in the final layer);
++              # -extra keeps ICU + tzdata. glibc/openssl remain, so images still need regular rebuilds.
++              echo 'FROM mcr.microsoft.com/dotnet/aspnet:10.0-noble-chiseled-extra'
+               echo 'USER $APP_UID'
+               echo 'WORKDIR /app'
+               printf '%s\n' "$expose_lines"

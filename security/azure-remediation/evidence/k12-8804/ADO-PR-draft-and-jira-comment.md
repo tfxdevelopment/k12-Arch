@@ -1,50 +1,75 @@
-# ADO PR draft — k12-query-builder → `development`
+# ADO PR 6024 — k12-query-builder → `development` (K12-8804)
 
-> **Opened 2026-09-08:** draft PR 6024 → `development`: https://dev.azure.com/CFI-AzureDevOps/K12/_git/k12-query-builder/pullrequest/6024  
-> Branch `fix/k12-8804-image-vulns`, commit `dcdb98be` (parent `37222fe`). The description below was condensed to fit ADO's 4,000-character limit; PR text, commit message and branch content carry no tooling attribution, per repo convention.
+> **Status 2026-09-08:** draft PR open — https://dev.azure.com/CFI-AzureDevOps/K12/_git/k12-query-builder/pullrequest/6024
+> Branch `fix/k12-8804-image-vulns` off `development` @ `37222fe`; commits `dcdb98be` (Dockerfiles + NuGet bumps) and `4a80bb57` (docker-push.yml inline base image, `ContainerFamily` in the three service csproj files, corrected comments). 8 files, +31/−11 — see `k12-8804-fix.patch`.
+> PR text, commit messages and branch content carry no tooling attribution (repo convention). The description is condensed to fit ADO's 4,000-character limit.
 
 **Title:** `K12-8804: rebuild gateway/api/dashboard on chiseled aspnet:10.0 and bump vulnerable packages`
 
-**Branch:** `fix/k12-8804-image-vulns` → target `development` (pushed; PR 6024)
+## Why the PR touches three places (found while opening it)
+
+The repo has three image build paths on `development`, and only one of them uses the repo Dockerfiles:
+
+| Path | Where | Base before | Tag scheme | Change in the PR |
+|---|---|---|---|---|
+| `docker` stage | `pipelines/templates/stages/docker-push.yml` writes an inline Dockerfile from the CI publish artifacts and pushes `k12-querybuilder-api`, `k12-querybuilder-gateway`, `k12-dashboard` | `aspnet:10.0`, hard-coded in the YAML | `{branch}-{sha}` — matches the live gateway tag `development-844bf4c` | inline `FROM` → `aspnet:10.0-noble-chiseled-extra` |
+| `az acr build` fallback | `app-deploy.yml`, only when `aspire deploy` hits the RBAC block; builds with the repo Dockerfiles | `aspnet:10.0` in the Dockerfiles | `sha-{gitsha}` | Dockerfiles → chiseled-extra |
+| `aspire deploy` (SDK container publish) | `AddProject<…>` in `AppHostExtensions.cs`; the SDK infers `aspnet:10.0` unless the csproj says otherwise | SDK default | Aspire | `<ContainerFamily>noble-chiseled-extra</ContainerFamily>` in the Gateway, Api and Dashboard csproj |
+
+Also found: `pipelines/templates/stages/deploy-aca.yml` is not referenced by `azure-pipelines.app.yml` and names `k12-gateway` / `k12-query-api`, while the live apps and `docker-push.yml` use `k12-querybuilder-*` — a legacy template, listed as a follow-up. The app pipeline (`k12-query-builder.app`, definition 68) last ran 2026-05-11 (all stages green); the live July images were not produced by it, and the repo has no PR-validation build policy, so nothing ran for PR 6024. The self-hosted pool `k12-development-pool` had 3 agents online on 2026-08-31.
+
+Chiseled caveat (from the `dotnet-docker` `runtime-deps/10.0/noble-chiseled-extra` Dockerfile): the image still contains `base-files`, `ca-certificates`, `libc6`, `libgcc-s1`, `libicu74`, `libssl3t64`, `libstdc++6` and `tzdata`. It removes the shell/apt/perl/util-linux/pam/ncurses/coreutils classes (most of today's 30 base-layer findings) but not glibc or openssl, so the images still need regular rebuilds on a current base.
+
+## PR description (as posted on ADO)
 
 ## Why
-Defender for Cloud flags 34 vulnerable packages (15 High, max CVSS 9.8) on `k12-querybuilder-gateway`, and the identical set on `k12-querybuilder-api` and `k12-dashboard`. The running images (`development-844bf4c`, revision `patched0707`; `auditdemo-20260714`) were built in July from the floating `aspnet:10.0` tag and never rebuilt, so the base layer and the .NET runtime aged; two NuGet families are also behind.
 
-| Layer | Finding | Fix in this PR |
+Defender for Cloud flags vulnerable packages on the three QueryBuilder images: `k12-querybuilder-gateway` 34 packages / 15 High (max CVSS 9.8), `k12-querybuilder-api` 33 / 15, `k12-dashboard` 33 / 14. Same base-layer and runtime findings; the delta is per-app NuGet packages. The running images (`k12-querybuilder-gateway:development-844bf4c`, revision `patched0707`; api/dashboard `auditdemo-20260714`) date from July and were not produced by the current pipeline (`k12-query-builder.app` last ran 2026-05-11), so the base layer and runtime aged in place.
+
+| Layer | Finding | Fix |
 |---|---|---|
-| Ubuntu base layer — 30 pkgs (perl-base 9.8, glibc 9.1, libattr1 8.4, openssl/libssl3 7.5, util-linux ×7, pam ×4, systemd libs, ncurses ×4, tar, gzip, coreutils, libgcrypt20, libp11-kit0, libbz2, gpgv) | all have fixed versions in noble-updates | `FROM mcr.microsoft.com/dotnet/aspnet:10.0-noble-chiseled-extra` — chiseled images ship no shell/apt/perl/util-linux/pam/ncurses, removing those package classes permanently; `-extra` keeps ICU + tzdata for globalization |
-| .NET runtime (`Microsoft.NETCore.App.Runtime.linux-x64`) — 9 CVEs, 8.2 | fixed 10.0.10/10.0.11 | rebuild pulls the current 10.0 runtime |
-| `Microsoft.OpenApi` — High 7.5 (transitive via `Microsoft.AspNetCore.OpenApi` 10.0.0) | fixed 2.7.5 | `Microsoft.AspNetCore.OpenApi` 10.0.0 → **10.0.11** (depends on `Microsoft.OpenApi [2.7.5, 3.0.0)`) in Gateway + Api |
-| `OpenTelemetry.Exporter.OpenTelemetryProtocol` 6.5, `OpenTelemetry.Api` 5.3 (transitive) | fixed 1.15.2 / 1.15.3 | OpenTelemetry family 1.15.0 → **1.18.0** (current stable, all five packages aligned) in ServiceDefaults |
+| Ubuntu base layer, 30 packages (perl-base 9.8, glibc 9.1, openssl 7.5, util-linux, pam, ncurses ...) | fixed in noble-updates | `aspnet:10.0-noble-chiseled-extra`: no shell/apt/perl/util-linux/pam/ncurses/coreutils in the final layer. glibc, openssl, ICU and tzdata remain, so regular rebuilds are still required |
+| .NET runtime, 9 CVEs, 8.2 | fixed in 10.0.10/10.0.11 | rebuild pulls the current 10.0 runtime |
+| `Microsoft.OpenApi` 7.5 via `Microsoft.AspNetCore.OpenApi` 10.0.0 (gateway, api) | fixed in 2.7.5 | `Microsoft.AspNetCore.OpenApi` -> 10.0.11 |
+| `OpenTelemetry.Exporter.OpenTelemetryProtocol` 6.5, `OpenTelemetry.Api` 5.3 (gateway) | fixed in 1.15.2 / 1.15.3 | OpenTelemetry family 1.15.0 -> 1.18.0 (ServiceDefaults) |
 
-## Files changed (6)
-- `apps/K12.QueryBuilder.Gateway/Dockerfile`, `demo/K12.QueryBuilder.Api/Dockerfile`, `demo/K12.QueryBuilder.Dashboard/Dockerfile` — base image tag
-- `apps/K12.QueryBuilder.Gateway/K12.QueryBuilder.Gateway.csproj`, `demo/K12.QueryBuilder.Api/K12.QueryBuilder.Api.csproj` — `Microsoft.AspNetCore.OpenApi` 10.0.11
-- `apps/K12.QueryBuilder.ServiceDefaults/K12.QueryBuilder.ServiceDefaults.csproj` — OpenTelemetry.* 1.18.0
+## Changes
 
-Patch: `k12-8804-fix.patch` (apply with `git apply` on a branch off `development`).
+The repo has three image build paths; the base image changes in all three so the fix holds whichever one runs.
 
-## Risk / review notes
-- **Chiseled = no shell.** `docker exec … sh` and shell-based probes stop working; Container Apps HTTP health probes are unaffected. The Dockerfiles already run as `$APP_UID` with an exec-form `ENTRYPOINT ["dotnet", …]`, which is the supported shape. If anything needs a shell later, fall back to `10.0-noble` (still fixes today's findings; loses the permanent class removal).
-- The `SecurityScan` stage (`dotnet list package --vulnerable`, fails on High) is the gate that would have caught the NuGet drift on a rebuild — it should now pass; if it reports anything new, that is a transitive we haven't seen in Defender yet and belongs in this PR.
-- OpenTelemetry 1.15 → 1.18 is minor-version only; no API changes expected in `Extensions.ServiceDefaults`-style usage, but run the Gateway/Dashboard tests.
-- Infra images (`infra/trino`, `infra/cube`, `infra/sqlserver`) are built by Aspire, not this PR; they carry no Defender package findings today.
+- `pipelines/templates/stages/docker-push.yml`: the inline Dockerfile the `docker` stage writes from CI publish artifacts (the `{branch}-{sha}` tag scheme of the live gateway image) now starts `FROM aspnet:10.0-noble-chiseled-extra`.
+- `apps/K12.QueryBuilder.Gateway/Dockerfile`, `demo/K12.QueryBuilder.Api/Dockerfile`, `demo/K12.QueryBuilder.Dashboard/Dockerfile`: same base (used by the `az acr build` fallback in app-deploy.yml and local builds).
+- Gateway / Api / Dashboard csproj: `<ContainerFamily>noble-chiseled-extra</ContainerFamily>` so the SDK/Aspire container publish (`aspire deploy`) resolves the same base instead of the default `aspnet:10.0`.
+- Gateway and Api csproj: `Microsoft.AspNetCore.OpenApi` 10.0.11. ServiceDefaults csproj: `OpenTelemetry.*` 1.18.0.
 
-## Verification (closure evidence for K12-8804)
-1. Pipeline on `development`: `ci` → `SecurityScan` → `docker` (new immutable `development-<sha>` tags) → `deploy-aca` updates all three container apps.
-2. Defender re-scans the new digests within ~24 h: the 34 `Update <pkg>` recommendations on `k12-querybuilder-gateway`, `-api` and `k12-dashboard` should drop to 0 (Resource Graph: `securityresources | where type == 'microsoft.security/assessments' | where properties.displayName startswith 'Update ' and tolower(tostring(properties.resourceDetails.Id)) has 'querybuilder'`).
-3. Optional immediate check: `trivy image developmentk12acr.azurecr.io/k12-gateway:<new-tag>`.
+No pipeline flow or infra changes; Trino, Cube and SQL Server images are unaffected.
 
-## Follow-ups (not in this PR)
-- Deploy by digest (`@sha256:`) instead of tag in `deploy-aca.yml`; purge superseded manifests from `developmentk12acr` so old digests stop being scanned.
-- Gateway ingress is `external=true` ("Container Apps should not be exposed to the public internet", High) — remediation gap C2, separate change.
-- Same rebuild pattern for `k12-ado-runner` (K12-8497): 80 packages / 121 CVEs across two Ubuntu generations in three ACRs.
+## Validation
+
+- Applies cleanly on `development` @ 37222fe.
+- `aspnet:10.0.11-noble-chiseled-extra` confirmed on MCR; `Microsoft.AspNetCore.OpenApi` 10.0.11 and `OpenTelemetry.*` 1.18.0 confirmed on nuget.org.
+- Not yet run: `k12-query-builder.app` on this branch. `SecurityScan` (`dotnet list package --vulnerable`, fails on High) should pass; anything it still reports belongs in this PR.
+
+## Closure evidence for K12-8804
+
+1. After merge, `k12-query-builder.app` on `development` pushes new `development-<sha>` tags for the three repos and Deploy -> development rolls them out.
+2. Defender re-scans the new digests within about 24 h: the `Update <package>` assessments on the three container apps drop to 0 (Resource Graph `securityresources`, displayName starts with `Update `).
+3. Optional immediate check: `trivy image developmentk12acr.azurecr.io/k12-querybuilder-gateway:<new-tag>`.
+
+## Review Notes
+
+Intentionally draft until the first pipeline run on the branch is reviewed.
+
+- Chiseled means no shell: `docker exec ... sh` stops working; Container Apps HTTP probes are unaffected; the images already run as `$APP_UID` with an exec-form `ENTRYPOINT`. If a shell is needed later, `10.0-noble` still fixes today's findings.
+- OpenTelemetry 1.15 -> 1.18 is minor-version only; run the Gateway and Dashboard tests.
+
+Follow-ups, not in this PR: `deploy-aca.yml` is unreferenced and names `k12-gateway` / `k12-query-api` while the live apps and `docker-push.yml` use `k12-querybuilder-*`; deploy by digest and purge old manifests; the gateway `external=true` ingress finding; the same rebuild for `k12-ado-runner` (K12-8497).
 
 ---
 # Jira comment draft for K12-8804 (paste after review — nothing posted)
 
 PR (draft): https://dev.azure.com/CFI-AzureDevOps/K12/_git/k12-query-builder/pullrequest/6024
 
-Root cause confirmed from Defender package-level data (2026-09-08): the running gateway image (`development-844bf4c`, deployed 7 Jul) carries 34 vulnerable packages — 30 in the Ubuntu base layer (perl-base 9.8, glibc 9.1, openssl 7.5, util-linux 7.0 …; all fixed in noble-updates), 9 CVEs in the .NET 10 runtime (fixed in 10.0.10+), and two NuGet families (Microsoft.OpenApi via Microsoft.AspNetCore.OpenApi 10.0.0; OpenTelemetry 1.15.0). `k12-querybuilder-api` and `k12-dashboard` share the base and show the same set.
+Root cause confirmed from Defender package-level data (2026-09-08): the running gateway image (`k12-querybuilder-gateway:development-844bf4c`, revision `patched0707`, deployed 7 Jul) carries 34 vulnerable packages (15 High, max CVSS 9.8): 30 in the Ubuntu base layer (perl-base 9.8, glibc 9.1, openssl 7.5, util-linux 7.0 …; all fixed in noble-updates), 9 CVEs in the .NET 10 runtime (fixed in 10.0.10+), plus Microsoft.OpenApi (via Microsoft.AspNetCore.OpenApi 10.0.0) and OpenTelemetry 1.15.0. `k12-querybuilder-api` (`auditdemo-20260714`) shows 33 packages / 15 High and `k12-dashboard` (`auditdemo-20260714`) 33 / 14 — the same base-layer and runtime set; the delta is per-app NuGet packages.
 
-Fix (draft PR 6024 to `development`, https://dev.azure.com/CFI-AzureDevOps/K12/_git/k12-query-builder/pullrequest/6024): base image → `aspnet:10.0-noble-chiseled-extra` (removes the shell/perl/util-linux package classes for good), `Microsoft.AspNetCore.OpenApi` → 10.0.11, OpenTelemetry → 1.18.0; one pipeline run rebuilds and redeploys all three images. Closure evidence = Defender re-scan of the new digests → 0 package findings on the three apps. Follow-ups tracked separately: deploy-by-digest + ACR manifest purge, the gateway external-ingress finding, and the runner image (K12-8497).
+Fix (draft PR 6024 to `development`): base image → `aspnet:10.0-noble-chiseled-extra` in all three build paths (docker-push.yml inline Dockerfile, repo Dockerfiles, SDK/Aspire `ContainerFamily`), `Microsoft.AspNetCore.OpenApi` → 10.0.11, OpenTelemetry → 1.18.0. Chiseled removes the shell/apt/perl/util-linux/pam/ncurses package classes; glibc/openssl/ICU/tzdata remain, so images still need regular rebuilds. Closure evidence = merge + one `k12-query-builder.app` run on development, then a Defender re-scan of the new digests → 0 `Update <package>` findings on the three container apps. Follow-ups tracked separately: deploy-by-digest + ACR manifest purge, the unreferenced deploy-aca.yml naming mismatch, the gateway external-ingress finding, and the runner image (K12-8497).
