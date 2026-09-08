@@ -1,0 +1,1759 @@
+{
+  "count": 292,
+  "data": [
+    {
+      "count_": 53,
+      "rec": "Guest accounts with write permissions on Azure resources should be removed",
+      "resourceType": "microsoft.security/pricings",
+      "severity": "High"
+    },
+    {
+      "count_": 30,
+      "rec": "App Service apps should have authentication enabled",
+      "resourceType": "microsoft.web/sites",
+      "severity": "High"
+    },
+    {
+      "count_": 19,
+      "rec": "Privileged roles should not have permanent access at the subscription and resource group level",
+      "resourceType": "microsoft.security/pricings",
+      "severity": "High"
+    },
+    {
+      "count_": 18,
+      "rec": "Update bsdutils",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 18,
+      "rec": "Update mount",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 18,
+      "rec": "Update libsmartcols1",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 18,
+      "rec": "Update util-linux",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 18,
+      "rec": "Update libattr1",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 18,
+      "rec": "Update perl-base",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 18,
+      "rec": "Authentication should be enabled on Azure Container Apps",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "High"
+    },
+    {
+      "count_": 18,
+      "rec": "Update libblkid1",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 18,
+      "rec": "Update openssl",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 18,
+      "rec": "Update libmount1",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 18,
+      "rec": "Update libuuid1",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 15,
+      "rec": "Update cryptography",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 15,
+      "rec": "Update libc6",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 15,
+      "rec": "Update curl",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 15,
+      "rec": "Update libc-bin",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 15,
+      "rec": "Update perl",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 13,
+      "rec": "Update libssl3t64",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 10,
+      "rec": "Update libcurl3t64-gnutls",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 10,
+      "rec": "Update system.security.cryptography.xml",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 10,
+      "rec": "Update libcurl4t64",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 10,
+      "rec": "Update libperl5.38t64",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 10,
+      "rec": "Update perl-modules-5.38",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 9,
+      "rec": "Update microsoft.netcore.app.runtime.linux-x64",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 7,
+      "rec": "Update system.text.json",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 7,
+      "rec": "Update system.formats.asn1",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 7,
+      "rec": "Update system.io.packaging",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 7,
+      "rec": "Key Vault secrets should have an expiration date",
+      "resourceType": "microsoft.keyvault/vaults",
+      "severity": "High"
+    },
+    {
+      "count_": 5,
+      "rec": "Update python3.10-minimal",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 5,
+      "rec": "Update libcurl3-gnutls",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 5,
+      "rec": "Update python3.10",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 5,
+      "rec": "Update libperl5.34",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 5,
+      "rec": "Update libcurl4",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 5,
+      "rec": "Update libpython3.10-minimal",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 5,
+      "rec": "Service Principals should not be assigned with administrative roles at the subscription and resource group level",
+      "resourceType": "microsoft.security/pricings",
+      "severity": "High"
+    },
+    {
+      "count_": 5,
+      "rec": "Update libasound2-data",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 5,
+      "rec": "Update libssl3",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 5,
+      "rec": "Update libpython3.10-stdlib",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 5,
+      "rec": "Update perl-modules-5.34",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 5,
+      "rec": "Update libsqlite3-0",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 5,
+      "rec": "Update pyjwt",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 4,
+      "rec": "Minimal set of principals should be members of fixed high impact database roles in SQL databases",
+      "resourceType": "microsoft.sql/servers",
+      "severity": "High"
+    },
+    {
+      "count_": 4,
+      "rec": "Database owners should be as expected for SQL databases",
+      "resourceType": "microsoft.sql/servers",
+      "severity": "High"
+    },
+    {
+      "count_": 4,
+      "rec": "Update libgraphite2-3",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 4,
+      "rec": "Update libasound2",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 4,
+      "rec": "Update libxml2",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 4,
+      "rec": "Guest accounts with owner permissions on Azure resources should be removed",
+      "resourceType": "microsoft.security/pricings",
+      "severity": "High"
+    },
+    {
+      "count_": 4,
+      "rec": "Update libnss3",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 4,
+      "rec": "Azure Container Apps should not be exposed to the public internet unless required",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "High"
+    },
+    {
+      "count_": 4,
+      "rec": "Server-level firewall rules should be tracked and maintained at a strict minimum on SQL Servers",
+      "resourceType": "microsoft.sql/servers",
+      "severity": "High"
+    },
+    {
+      "count_": 3,
+      "rec": "Update util-linux",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "High"
+    },
+    {
+      "count_": 3,
+      "rec": "Update libmount1",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "High"
+    },
+    {
+      "count_": 3,
+      "rec": "Update libuuid1",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "High"
+    },
+    {
+      "count_": 3,
+      "rec": "Update bsdutils",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "High"
+    },
+    {
+      "count_": 3,
+      "rec": "Update libc-bin",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "High"
+    },
+    {
+      "count_": 3,
+      "rec": "Update perl-base",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "High"
+    },
+    {
+      "count_": 3,
+      "rec": "Update mount",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "High"
+    },
+    {
+      "count_": 3,
+      "rec": "Update libssl3t64",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "High"
+    },
+    {
+      "count_": 3,
+      "rec": "Update libblkid1",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "High"
+    },
+    {
+      "count_": 3,
+      "rec": "Update libsmartcols1",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "High"
+    },
+    {
+      "count_": 3,
+      "rec": "Update libc6",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "High"
+    },
+    {
+      "count_": 3,
+      "rec": "Update microsoft.netcore.app.runtime.linux-x64",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "High"
+    },
+    {
+      "count_": 3,
+      "rec": "Update openssl",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "High"
+    },
+    {
+      "count_": 3,
+      "rec": "Update libattr1",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "High"
+    },
+    {
+      "count_": 2,
+      "rec": "Update microsoft.openapi",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 2,
+      "rec": "Managed identity should be enabled on web apps",
+      "resourceType": "microsoft.web/sites",
+      "severity": "High"
+    },
+    {
+      "count_": 2,
+      "rec": "Disabled accounts with read and write permissions on Azure resources should be removed",
+      "resourceType": "microsoft.security/pricings",
+      "severity": "High"
+    },
+    {
+      "count_": 2,
+      "rec": "Auditing should be enabled at the server level for SQL Servers",
+      "resourceType": "microsoft.sql/servers",
+      "severity": "High"
+    },
+    {
+      "count_": 2,
+      "rec": "Update microsoft.openapi",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "High"
+    },
+    {
+      "count_": 1,
+      "rec": "'Allow access to Azure services' should be disabled for PostgreSQL Servers",
+      "resourceType": "microsoft.dbforpostgresql/flexibleservers",
+      "severity": "High"
+    },
+    {
+      "count_": 1,
+      "rec": "Microsoft Defender for Containers should be enabled",
+      "resourceType": "",
+      "severity": "High"
+    },
+    {
+      "count_": 1,
+      "rec": "Update microsoft.netcore.app.runtime.linux-arm64",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 1,
+      "rec": "Update wget",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 1,
+      "rec": "Update libasound2t64",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "High"
+    },
+    {
+      "count_": 1,
+      "rec": "Microsoft Defender for Resource Manager should be enabled",
+      "resourceType": "",
+      "severity": "High"
+    },
+    {
+      "count_": 1,
+      "rec": "pgaudit.log should include role, ddl, and misc for Azure Database for PostgreSQL Servers",
+      "resourceType": "microsoft.dbforpostgresql/flexibleservers",
+      "severity": "High"
+    },
+    {
+      "count_": 1,
+      "rec": "Private endpoint should be configured for Azure Database for PostgreSQL Servers",
+      "resourceType": "microsoft.dbforpostgresql/flexibleservers",
+      "severity": "High"
+    },
+    {
+      "count_": 1,
+      "rec": "A maximum of 3 owners should be designated for subscriptions",
+      "resourceType": "",
+      "severity": "High"
+    },
+    {
+      "count_": 30,
+      "rec": "App Service apps should enable outbound application traffic routing to Azure Virtual Network",
+      "resourceType": "microsoft.web/sites",
+      "severity": "Low"
+    },
+    {
+      "count_": 30,
+      "rec": "App Service apps should disable public network access",
+      "resourceType": "microsoft.web/sites",
+      "severity": "Low"
+    },
+    {
+      "count_": 30,
+      "rec": "App Service apps should enable configuration routing to Azure Virtual Network",
+      "resourceType": "microsoft.web/sites",
+      "severity": "Low"
+    },
+    {
+      "count_": 30,
+      "rec": "App Service apps should enable end to end encryption",
+      "resourceType": "microsoft.web/sites",
+      "severity": "Low"
+    },
+    {
+      "count_": 30,
+      "rec": "App Service apps should use private link",
+      "resourceType": "microsoft.web/sites",
+      "severity": "Low"
+    },
+    {
+      "count_": 29,
+      "rec": "App Service apps should have local authentication methods disabled for SCM site deployments",
+      "resourceType": "microsoft.web/sites",
+      "severity": "Low"
+    },
+    {
+      "count_": 27,
+      "rec": "App Service apps should have local authentication methods disabled for FTP deployments",
+      "resourceType": "microsoft.web/sites",
+      "severity": "Low"
+    },
+    {
+      "count_": 14,
+      "rec": "Managed Identity should be enabled for Container Apps",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "Low"
+    },
+    {
+      "count_": 13,
+      "rec": "Update gpgv",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Low"
+    },
+    {
+      "count_": 12,
+      "rec": "Storage accounts should have infrastructure encryption (excluding storage accounts managed by Azure Red Hat OpenShift)",
+      "resourceType": "microsoft.storage/storageaccounts",
+      "severity": "Low"
+    },
+    {
+      "count_": 12,
+      "rec": "[Enable if required] Storage accounts should use customer-managed key (CMK) for encryption",
+      "resourceType": "microsoft.storage/storageaccounts",
+      "severity": "Low"
+    },
+    {
+      "count_": 12,
+      "rec": "Enable logging by category group for Front Door and CDN profiles (microsoft.cdn/profiles) to Log Analytics",
+      "resourceType": "microsoft.cdn/profiles",
+      "severity": "Low"
+    },
+    {
+      "count_": 12,
+      "rec": "App Service apps should use latest 'HTTP Version'",
+      "resourceType": "microsoft.web/sites",
+      "severity": "Low"
+    },
+    {
+      "count_": 12,
+      "rec": "Storage accounts should have infrastructure encryption",
+      "resourceType": "microsoft.storage/storageaccounts",
+      "severity": "Low"
+    },
+    {
+      "count_": 12,
+      "rec": "Azure Front Door profiles should use Premium tier that supports managed WAF rules and private link",
+      "resourceType": "microsoft.cdn/profiles",
+      "severity": "Low"
+    },
+    {
+      "count_": 11,
+      "rec": "Storage accounts should prevent shared key access (excluding storage accounts managed by Azure Red Hat OpenShift)",
+      "resourceType": "microsoft.storage/storageaccounts",
+      "severity": "Low"
+    },
+    {
+      "count_": 11,
+      "rec": "Storage accounts should prevent shared key access (excluding storage accounts created by Databricks)",
+      "resourceType": "microsoft.storage/storageaccounts",
+      "severity": "Low"
+    },
+    {
+      "count_": 10,
+      "rec": "Update gnupg",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Low"
+    },
+    {
+      "count_": 10,
+      "rec": "Update dirmngr",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Low"
+    },
+    {
+      "count_": 10,
+      "rec": "Update gpgconf",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Low"
+    },
+    {
+      "count_": 10,
+      "rec": "Update keyboxd",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Low"
+    },
+    {
+      "count_": 10,
+      "rec": "Update gnupg-utils",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Low"
+    },
+    {
+      "count_": 10,
+      "rec": "Update gpgsm",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Low"
+    },
+    {
+      "count_": 10,
+      "rec": "Update gpg-agent",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Low"
+    },
+    {
+      "count_": 10,
+      "rec": "Update gpg",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Low"
+    },
+    {
+      "count_": 10,
+      "rec": "Container Apps should disable external network access",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "Low"
+    },
+    {
+      "count_": 10,
+      "rec": "Geo-redundant storage should be enabled for Storage Accounts",
+      "resourceType": "microsoft.storage/storageaccounts",
+      "severity": "Low"
+    },
+    {
+      "count_": 9,
+      "rec": "Storage accounts should restrict network access using virtual network rules (excluding storage accounts created by Databricks)",
+      "resourceType": "microsoft.storage/storageaccounts",
+      "severity": "Low"
+    },
+    {
+      "count_": 9,
+      "rec": "Storage accounts should restrict network access using virtual network rules (excluding storage accounts managed by ARO)",
+      "resourceType": "microsoft.storage/storageaccounts",
+      "severity": "Low"
+    },
+    {
+      "count_": 9,
+      "rec": "Storage Accounts should restrict network access through network ACL bypass configuration only.",
+      "resourceType": "microsoft.storage/storageaccounts",
+      "severity": "Low"
+    },
+    {
+      "count_": 8,
+      "rec": "Public IP addresses should have resource logs enabled for Azure DDoS Protection",
+      "resourceType": "microsoft.network/publicipaddresses",
+      "severity": "Low"
+    },
+    {
+      "count_": 8,
+      "rec": "Access to storage accounts with firewall and virtual network configurations should be restricted",
+      "resourceType": "microsoft.storage/storageaccounts",
+      "severity": "Low"
+    },
+    {
+      "count_": 8,
+      "rec": "Enable logging by category group for Public IP addresses (microsoft.network/publicipaddresses) to Log Analytics",
+      "resourceType": "microsoft.network/publicipaddresses",
+      "severity": "Low"
+    },
+    {
+      "count_": 8,
+      "rec": "Track all users with access to the database for SQL Databases",
+      "resourceType": "microsoft.sql/servers",
+      "severity": "Low"
+    },
+    {
+      "count_": 8,
+      "rec": "Azure Key Vault should disable public network access",
+      "resourceType": "microsoft.keyvault/vaults",
+      "severity": "Low"
+    },
+    {
+      "count_": 8,
+      "rec": "SQL servers should use customer-managed keys to encrypt data at rest",
+      "resourceType": "microsoft.sql/servers",
+      "severity": "Low"
+    },
+    {
+      "count_": 7,
+      "rec": "Secrets should have the specified maximum validity period",
+      "resourceType": "microsoft.keyvault/vaults",
+      "severity": "Low"
+    },
+    {
+      "count_": 6,
+      "rec": "Container Apps environment should disable public network access",
+      "resourceType": "microsoft.app/managedenvironments",
+      "severity": "Low"
+    },
+    {
+      "count_": 6,
+      "rec": "Secrets should have content type set",
+      "resourceType": "microsoft.keyvault/vaults",
+      "severity": "Low"
+    },
+    {
+      "count_": 5,
+      "rec": "Security Center standard pricing tier should be selected",
+      "resourceType": "microsoft.security/pricings",
+      "severity": "Low"
+    },
+    {
+      "count_": 5,
+      "rec": "[Enable if required] Container registries should be encrypted with a customer-managed key (CMK)",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Low"
+    },
+    {
+      "count_": 5,
+      "rec": "Container registries should have exports disabled",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Low"
+    },
+    {
+      "count_": 5,
+      "rec": "Container registries should have ARM audience token authentication disabled.",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Low"
+    },
+    {
+      "count_": 5,
+      "rec": "Diagnostic logs in Key Vault should be enabled",
+      "resourceType": "microsoft.keyvault/vaults",
+      "severity": "Low"
+    },
+    {
+      "count_": 5,
+      "rec": "[Preview]: Container Registry should use a virtual network service endpoint",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Low"
+    },
+    {
+      "count_": 4,
+      "rec": "Virtual networks should be protected by Azure DDoS Protection",
+      "resourceType": "microsoft.network/virtualnetworks",
+      "severity": "Low"
+    },
+    {
+      "count_": 4,
+      "rec": "Storage accounts should use private link (excluding storage accounts managed by Azure Red Hat OpenShift)",
+      "resourceType": "microsoft.storage/storageaccounts",
+      "severity": "Low"
+    },
+    {
+      "count_": 4,
+      "rec": "Enable logging by category group for Virtual networks (microsoft.network/virtualnetworks) to Log Analytics",
+      "resourceType": "microsoft.network/virtualnetworks",
+      "severity": "Low"
+    },
+    {
+      "count_": 4,
+      "rec": "Container App environments should use network injection",
+      "resourceType": "microsoft.app/managedenvironments",
+      "severity": "Low"
+    },
+    {
+      "count_": 4,
+      "rec": "Certificates should be issued by the specified integrated certificate authority",
+      "resourceType": "microsoft.keyvault/vaults",
+      "severity": "Low"
+    },
+    {
+      "count_": 4,
+      "rec": "Azure SQL Database should have Microsoft Entra-only authentication enabled",
+      "resourceType": "microsoft.sql/servers",
+      "severity": "Low"
+    },
+    {
+      "count_": 4,
+      "rec": "Minimal set of principals should be members of fixed low impact database roles in SQL databases",
+      "resourceType": "microsoft.sql/servers",
+      "severity": "Low"
+    },
+    {
+      "count_": 4,
+      "rec": "Excessive permissions should not be granted to PUBLIC role on objects or columns in SQL databases",
+      "resourceType": "microsoft.sql/servers",
+      "severity": "Low"
+    },
+    {
+      "count_": 4,
+      "rec": "Virtual networks should be protected by Azure Firewall",
+      "resourceType": "microsoft.network/virtualnetworks",
+      "severity": "Low"
+    },
+    {
+      "count_": 4,
+      "rec": "Azure Data Factory linked services should use system-assigned managed identity authentication when it is supported",
+      "resourceType": "microsoft.datafactory/factories",
+      "severity": "Low"
+    },
+    {
+      "count_": 4,
+      "rec": "Storage accounts should use private link (excluding storage accounts created by Databricks)",
+      "resourceType": "microsoft.storage/storageaccounts",
+      "severity": "Low"
+    },
+    {
+      "count_": 3,
+      "rec": "Update gpgv",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "Low"
+    },
+    {
+      "count_": 3,
+      "rec": "Azure Cache for Redis should disable public network access",
+      "resourceType": "microsoft.cache/redis",
+      "severity": "Low"
+    },
+    {
+      "count_": 3,
+      "rec": "Enable logging by category group for Virtual network gateways (microsoft.network/virtualnetworkgateways) to Log Analytics",
+      "resourceType": "microsoft.network/virtualnetworkgateways",
+      "severity": "Low"
+    },
+    {
+      "count_": 3,
+      "rec": "Azure Service Bus namespaces should have local authentication methods disabled",
+      "resourceType": "microsoft.servicebus/namespaces",
+      "severity": "Low"
+    },
+    {
+      "count_": 3,
+      "rec": "Service Bus namespaces should have double encryption enabled",
+      "resourceType": "microsoft.servicebus/namespaces",
+      "severity": "Low"
+    },
+    {
+      "count_": 3,
+      "rec": "Audit usage of custom RBAC roles",
+      "resourceType": "microsoft.authorization/roledefinitions",
+      "severity": "Low"
+    },
+    {
+      "count_": 2,
+      "rec": "Audit resource location matches resource group location",
+      "resourceType": "microsoft.keyvault/vaults",
+      "severity": "Low"
+    },
+    {
+      "count_": 2,
+      "rec": "Enable logging by category group for Load balancers (microsoft.network/loadbalancers) to Log Analytics",
+      "resourceType": "microsoft.network/loadbalancers",
+      "severity": "Low"
+    },
+    {
+      "count_": 2,
+      "rec": "Diagnostic logs in Microsoft Foundry resources should be enabled",
+      "resourceType": "microsoft.cognitiveservices/accounts",
+      "severity": "Low"
+    },
+    {
+      "count_": 2,
+      "rec": "Auditing on SQL server should be enabled",
+      "resourceType": "microsoft.sql/servers",
+      "severity": "Low"
+    },
+    {
+      "count_": 2,
+      "rec": "Audit resource location matches resource group location",
+      "resourceType": "microsoft.network/privateendpoints",
+      "severity": "Low"
+    },
+    {
+      "count_": 2,
+      "rec": "Audit resource location matches resource group location",
+      "resourceType": "microsoft.automation/automationaccounts",
+      "severity": "Low"
+    },
+    {
+      "count_": 2,
+      "rec": "Audit resource location matches resource group location",
+      "resourceType": "microsoft.eventgrid/systemtopics",
+      "severity": "Low"
+    },
+    {
+      "count_": 2,
+      "rec": "Public network access on Azure Data Factory should be disabled",
+      "resourceType": "microsoft.datafactory/factories",
+      "severity": "Low"
+    },
+    {
+      "count_": 2,
+      "rec": "Container Apps should only be accessible over HTTPS",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "Low"
+    },
+    {
+      "count_": 2,
+      "rec": "Service Bus Namespaces should disable public network access",
+      "resourceType": "microsoft.servicebus/namespaces",
+      "severity": "Low"
+    },
+    {
+      "count_": 2,
+      "rec": "Audit resource location matches resource group location",
+      "resourceType": "microsoft.security/securityconnectors",
+      "severity": "Low"
+    },
+    {
+      "count_": 2,
+      "rec": "Audit resource location matches resource group location",
+      "resourceType": "microsoft.web/connections",
+      "severity": "Low"
+    },
+    {
+      "count_": 2,
+      "rec": "Audit resource location matches resource group location",
+      "resourceType": "microsoft.storage/storageaccounts",
+      "severity": "Low"
+    },
+    {
+      "count_": 2,
+      "rec": "Audit resource location matches resource group location",
+      "resourceType": "microsoft.network/networkinterfaces",
+      "severity": "Low"
+    },
+    {
+      "count_": 2,
+      "rec": "Container registries should have SKUs that support Private Links",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Low"
+    },
+    {
+      "count_": 1,
+      "rec": "[Enable if required] Microsoft Foundry resources should encrypt data at rest with a customer-managed key (CMK)",
+      "resourceType": "microsoft.cognitiveservices/accounts",
+      "severity": "Low"
+    },
+    {
+      "count_": 1,
+      "rec": "Audit resource location matches resource group location",
+      "resourceType": "microsoft.portalservices/dashboards",
+      "severity": "Low"
+    },
+    {
+      "count_": 1,
+      "rec": "Audit resource location matches resource group location",
+      "resourceType": "microsoft.network/networkwatchers",
+      "severity": "Low"
+    },
+    {
+      "count_": 1,
+      "rec": "Azure Data Factory should use a Git repository for source control",
+      "resourceType": "microsoft.datafactory/factories",
+      "severity": "Low"
+    },
+    {
+      "count_": 1,
+      "rec": "Certificates should not expire within the specified number of days",
+      "resourceType": "microsoft.keyvault/vaults",
+      "severity": "Low"
+    },
+    {
+      "count_": 1,
+      "rec": "SQL server-targeted autoprovisioning should be enabled for SQL servers on machines plan",
+      "resourceType": "microsoft.security/pricings",
+      "severity": "Low"
+    },
+    {
+      "count_": 1,
+      "rec": "Azure SignalR Service should use private link",
+      "resourceType": "microsoft.signalrservice/signalr",
+      "severity": "Low"
+    },
+    {
+      "count_": 1,
+      "rec": "An activity log alert should exist for specific Security operations",
+      "resourceType": "",
+      "severity": "Low"
+    },
+    {
+      "count_": 1,
+      "rec": "PostgreSQL flexible servers should use customer-managed keys to encrypt data at rest",
+      "resourceType": "microsoft.dbforpostgresql/flexibleservers",
+      "severity": "Low"
+    },
+    {
+      "count_": 1,
+      "rec": "Enable logging by category group for Network security groups (microsoft.network/networksecuritygroups) to Log Analytics",
+      "resourceType": "microsoft.network/networksecuritygroups",
+      "severity": "Low"
+    },
+    {
+      "count_": 1,
+      "rec": "Virtual networks should use specified virtual network gateway",
+      "resourceType": "microsoft.network/virtualnetworks",
+      "severity": "Low"
+    },
+    {
+      "count_": 1,
+      "rec": "Configure subscriptions to enable service health alert monitoring rule",
+      "resourceType": "",
+      "severity": "Low"
+    },
+    {
+      "count_": 1,
+      "rec": "Activity log should be retained for at least one year",
+      "resourceType": "",
+      "severity": "Low"
+    },
+    {
+      "count_": 1,
+      "rec": "Private endpoint connections on Automation Accounts should be enabled",
+      "resourceType": "microsoft.automation/automationaccounts",
+      "severity": "Low"
+    },
+    {
+      "count_": 1,
+      "rec": "Azure subscriptions should have a log profile for Activity Log",
+      "resourceType": "",
+      "severity": "Low"
+    },
+    {
+      "count_": 1,
+      "rec": "Audit resource location matches resource group location",
+      "resourceType": "microsoft.eventgrid/namespaces",
+      "severity": "Low"
+    },
+    {
+      "count_": 1,
+      "rec": "Azure Automation account should have local authentication method disabled",
+      "resourceType": "microsoft.automation/automationaccounts",
+      "severity": "Low"
+    },
+    {
+      "count_": 1,
+      "rec": "Minimal set of principals should be granted EXECUTE permission on objects or columns in SQL databases",
+      "resourceType": "microsoft.sql/servers",
+      "severity": "Low"
+    },
+    {
+      "count_": 1,
+      "rec": "Audit resource location matches resource group location",
+      "resourceType": "microsoft.managedidentity/userassignedidentities",
+      "severity": "Low"
+    },
+    {
+      "count_": 1,
+      "rec": "Azure Monitor should collect activity logs from all regions",
+      "resourceType": "",
+      "severity": "Low"
+    },
+    {
+      "count_": 1,
+      "rec": "Azure Event Grid namespaces should disable public network access",
+      "resourceType": "microsoft.eventgrid/namespaces",
+      "severity": "Low"
+    },
+    {
+      "count_": 1,
+      "rec": "Cognitive Services accounts should use a managed identity",
+      "resourceType": "microsoft.cognitiveservices/accounts",
+      "severity": "Low"
+    },
+    {
+      "count_": 1,
+      "rec": "Azure Event Grid namespace topic broker should use private link",
+      "resourceType": "microsoft.eventgrid/namespaces",
+      "severity": "Low"
+    },
+    {
+      "count_": 1,
+      "rec": "Azure Monitor solution 'Security and Audit' must be deployed",
+      "resourceType": "",
+      "severity": "Low"
+    },
+    {
+      "count_": 1,
+      "rec": "Audit resource location matches resource group location",
+      "resourceType": "microsoft.datafactory/factories",
+      "severity": "Low"
+    },
+    {
+      "count_": 1,
+      "rec": "Azure Automation accounts should use customer-managed keys to encrypt data at rest",
+      "resourceType": "microsoft.automation/automationaccounts",
+      "severity": "Low"
+    },
+    {
+      "count_": 1,
+      "rec": "Azure Monitor log profile should collect logs for categories 'write,' 'delete,' and 'action'",
+      "resourceType": "",
+      "severity": "Low"
+    },
+    {
+      "count_": 1,
+      "rec": "An activity log alert should exist for specific Administrative operations",
+      "resourceType": "",
+      "severity": "Low"
+    },
+    {
+      "count_": 1,
+      "rec": "An activity log alert should exist for specific Policy operations",
+      "resourceType": "",
+      "severity": "Low"
+    },
+    {
+      "count_": 1,
+      "rec": "APIs that are unused should be disabled and removed from the Azure API Management service",
+      "resourceType": "microsoft.apimanagement/service",
+      "severity": "Low"
+    },
+    {
+      "count_": 1,
+      "rec": "Automation accounts should disable public network access",
+      "resourceType": "microsoft.automation/automationaccounts",
+      "severity": "Low"
+    },
+    {
+      "count_": 1,
+      "rec": "Audit resource location matches resource group location",
+      "resourceType": "microsoft.web/serverfarms",
+      "severity": "Low"
+    },
+    {
+      "count_": 1,
+      "rec": "Geo-redundant backups should be enabled for PostgreSQL Servers",
+      "resourceType": "microsoft.dbforpostgresql/flexibleservers",
+      "severity": "Low"
+    },
+    {
+      "count_": 31,
+      "rec": "Application Insights components should block log ingestion and querying from public networks",
+      "resourceType": "microsoft.insights/components",
+      "severity": "Medium"
+    },
+    {
+      "count_": 31,
+      "rec": "Application Insights components should block non-Azure Active Directory based ingestion.",
+      "resourceType": "microsoft.insights/components",
+      "severity": "Medium"
+    },
+    {
+      "count_": 31,
+      "rec": "Saved-queries in Azure Monitor should be saved in customer storage account for logs encryption",
+      "resourceType": "microsoft.operationalinsights/workspaces",
+      "severity": "Medium"
+    },
+    {
+      "count_": 31,
+      "rec": "Application Insights components with Private Link enabled should use Bring Your Own Storage accounts for profiler and debugger.",
+      "resourceType": "microsoft.insights/components",
+      "severity": "Medium"
+    },
+    {
+      "count_": 31,
+      "rec": "Log Analytics workspaces should block log ingestion and querying from public networks",
+      "resourceType": "microsoft.operationalinsights/workspaces",
+      "severity": "Medium"
+    },
+    {
+      "count_": 31,
+      "rec": "Log Analytics Workspaces should block non-Azure Active Directory based ingestion.",
+      "resourceType": "microsoft.operationalinsights/workspaces",
+      "severity": "Medium"
+    },
+    {
+      "count_": 29,
+      "rec": "Azure overprovisioned identities should have only the necessary permissions",
+      "resourceType": "microsoft.security/pricings",
+      "severity": "Medium"
+    },
+    {
+      "count_": 28,
+      "rec": "Permissions of inactive identities in your Azure subscription should be revoked",
+      "resourceType": "microsoft.security/pricings",
+      "severity": "Medium"
+    },
+    {
+      "count_": 18,
+      "rec": "Update coreutils",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Medium"
+    },
+    {
+      "count_": 18,
+      "rec": "Update ncurses-bin",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Medium"
+    },
+    {
+      "count_": 18,
+      "rec": "Update libgcrypt20",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Medium"
+    },
+    {
+      "count_": 18,
+      "rec": "Update libbz2-1.0",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Medium"
+    },
+    {
+      "count_": 18,
+      "rec": "Update libp11-kit0",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Medium"
+    },
+    {
+      "count_": 18,
+      "rec": "Update libtinfo6",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Medium"
+    },
+    {
+      "count_": 18,
+      "rec": "Update ncurses-base",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Medium"
+    },
+    {
+      "count_": 18,
+      "rec": "Update libncursesw6",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Medium"
+    },
+    {
+      "count_": 15,
+      "rec": "Update libpam-modules-bin",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Medium"
+    },
+    {
+      "count_": 15,
+      "rec": "Update tar",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Medium"
+    },
+    {
+      "count_": 15,
+      "rec": "Update libsystemd0",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Medium"
+    },
+    {
+      "count_": 15,
+      "rec": "Update libpam-modules",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Medium"
+    },
+    {
+      "count_": 15,
+      "rec": "Update libpam-runtime",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Medium"
+    },
+    {
+      "count_": 15,
+      "rec": "Update libpam0g",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Medium"
+    },
+    {
+      "count_": 15,
+      "rec": "Update setuptools",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Medium"
+    },
+    {
+      "count_": 15,
+      "rec": "Update libudev1",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Medium"
+    },
+    {
+      "count_": 15,
+      "rec": "Update libssh-4",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Medium"
+    },
+    {
+      "count_": 12,
+      "rec": "Update libkrb5-3",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Medium"
+    },
+    {
+      "count_": 12,
+      "rec": "Update libgssapi-krb5-2",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Medium"
+    },
+    {
+      "count_": 12,
+      "rec": "Storage Accounts should use a virtual network service endpoint",
+      "resourceType": "microsoft.storage/storageaccounts",
+      "severity": "Medium"
+    },
+    {
+      "count_": 12,
+      "rec": "Azure Front Door Standard or Premium (Plus WAF) should have resource logs enabled",
+      "resourceType": "microsoft.cdn/profiles",
+      "severity": "Medium"
+    },
+    {
+      "count_": 12,
+      "rec": "Update pip",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Medium"
+    },
+    {
+      "count_": 12,
+      "rec": "Update libkrb5support0",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Medium"
+    },
+    {
+      "count_": 12,
+      "rec": "Update libk5crypto3",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Medium"
+    },
+    {
+      "count_": 11,
+      "rec": "Storage accounts should prevent shared key access",
+      "resourceType": "microsoft.storage/storageaccounts",
+      "severity": "Medium"
+    },
+    {
+      "count_": 11,
+      "rec": "Update libgif7",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Medium"
+    },
+    {
+      "count_": 9,
+      "rec": "Storage accounts should restrict network access using virtual network rules",
+      "resourceType": "microsoft.storage/storageaccounts",
+      "severity": "Medium"
+    },
+    {
+      "count_": 9,
+      "rec": "Storage accounts should disable public network access",
+      "resourceType": "microsoft.storage/storageaccounts",
+      "severity": "Medium"
+    },
+    {
+      "count_": 8,
+      "rec": "Key Vault should use a virtual network service endpoint",
+      "resourceType": "microsoft.keyvault/vaults",
+      "severity": "Medium"
+    },
+    {
+      "count_": 8,
+      "rec": "Update gzip",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Medium"
+    },
+    {
+      "count_": 7,
+      "rec": "Update libsqlite3-0",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Medium"
+    },
+    {
+      "count_": 6,
+      "rec": "Storage account public access should be disallowed",
+      "resourceType": "microsoft.storage/storageaccounts",
+      "severity": "Medium"
+    },
+    {
+      "count_": 6,
+      "rec": "Update wget",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Medium"
+    },
+    {
+      "count_": 6,
+      "rec": "Firewall should be enabled on Key Vault",
+      "resourceType": "microsoft.keyvault/vaults",
+      "severity": "Medium"
+    },
+    {
+      "count_": 5,
+      "rec": "Azure Key Vaults should use private link",
+      "resourceType": "microsoft.keyvault/vaults",
+      "severity": "Medium"
+    },
+    {
+      "count_": 5,
+      "rec": "Update libncurses6",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Medium"
+    },
+    {
+      "count_": 5,
+      "rec": "Update libnghttp2-14",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Medium"
+    },
+    {
+      "count_": 4,
+      "rec": "Azure Container Instance container group should use customer-managed key for encryption",
+      "resourceType": "microsoft.containerinstance/containergroups",
+      "severity": "Medium"
+    },
+    {
+      "count_": 4,
+      "rec": "Azure SQL Database should have Azure Active Directory Only Authentication enabled",
+      "resourceType": "microsoft.sql/servers",
+      "severity": "Medium"
+    },
+    {
+      "count_": 4,
+      "rec": "Long-term geo-redundant backup should be enabled for Azure SQL Databases",
+      "resourceType": "microsoft.sql/servers",
+      "severity": "Medium"
+    },
+    {
+      "count_": 4,
+      "rec": "Update libpng16-16",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Medium"
+    },
+    {
+      "count_": 4,
+      "rec": "SQL Server should use a virtual network service endpoint",
+      "resourceType": "microsoft.sql/servers",
+      "severity": "Medium"
+    },
+    {
+      "count_": 4,
+      "rec": "User-defined database roles should not be members of fixed roles in SQL databases",
+      "resourceType": "microsoft.sql/servers",
+      "severity": "Medium"
+    },
+    {
+      "count_": 4,
+      "rec": "All memberships for user-defined roles should be intended in SQL databases",
+      "resourceType": "microsoft.sql/servers",
+      "severity": "Medium"
+    },
+    {
+      "count_": 4,
+      "rec": "Audit flow logs configuration for every virtual network",
+      "resourceType": "microsoft.network/virtualnetworks",
+      "severity": "Medium"
+    },
+    {
+      "count_": 4,
+      "rec": "Storage account should use a private link connection",
+      "resourceType": "microsoft.storage/storageaccounts",
+      "severity": "Medium"
+    },
+    {
+      "count_": 4,
+      "rec": "Azure SignalR Service should disable public network access",
+      "resourceType": "microsoft.signalrservice/signalr",
+      "severity": "Medium"
+    },
+    {
+      "count_": 3,
+      "rec": "Update libncursesw6",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "Medium"
+    },
+    {
+      "count_": 3,
+      "rec": "Update opentelemetry.exporter.opentelemetryprotocol",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "Medium"
+    },
+    {
+      "count_": 3,
+      "rec": "Update libp11-kit0",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "Medium"
+    },
+    {
+      "count_": 3,
+      "rec": "App Service apps should be injected into a virtual network",
+      "resourceType": "microsoft.web/sites",
+      "severity": "Medium"
+    },
+    {
+      "count_": 3,
+      "rec": "Update libtinfo6",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "Medium"
+    },
+    {
+      "count_": 3,
+      "rec": "Azure Cache for Redis should use private link",
+      "resourceType": "microsoft.cache/redis",
+      "severity": "Medium"
+    },
+    {
+      "count_": 3,
+      "rec": "Update coreutils",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "Medium"
+    },
+    {
+      "count_": 3,
+      "rec": "Update ncurses-bin",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "Medium"
+    },
+    {
+      "count_": 3,
+      "rec": "Update tar",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "Medium"
+    },
+    {
+      "count_": 3,
+      "rec": "Update libudev1",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "Medium"
+    },
+    {
+      "count_": 3,
+      "rec": "Update libgcrypt20",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "Medium"
+    },
+    {
+      "count_": 3,
+      "rec": "Update libpam-modules",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "Medium"
+    },
+    {
+      "count_": 3,
+      "rec": "App Service apps should use a virtual network service endpoint",
+      "resourceType": "microsoft.web/sites",
+      "severity": "Medium"
+    },
+    {
+      "count_": 3,
+      "rec": "Update libpam0g",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "Medium"
+    },
+    {
+      "count_": 3,
+      "rec": "Service Bus Premium namespaces should use a customer-managed key for encryption",
+      "resourceType": "microsoft.servicebus/namespaces",
+      "severity": "Medium"
+    },
+    {
+      "count_": 3,
+      "rec": "Update libbz2-1.0",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "Medium"
+    },
+    {
+      "count_": 3,
+      "rec": "Update libpam-modules-bin",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "Medium"
+    },
+    {
+      "count_": 3,
+      "rec": "Update libpam-runtime",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "Medium"
+    },
+    {
+      "count_": 3,
+      "rec": "Update opentelemetry.exporter.opentelemetryprotocol",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Medium"
+    },
+    {
+      "count_": 3,
+      "rec": "App Configuration should use private link",
+      "resourceType": "microsoft.appconfiguration/configurationstores",
+      "severity": "Medium"
+    },
+    {
+      "count_": 3,
+      "rec": "App Configuration should disable public network access",
+      "resourceType": "microsoft.appconfiguration/configurationstores",
+      "severity": "Medium"
+    },
+    {
+      "count_": 3,
+      "rec": "App Configuration should use a customer-managed key",
+      "resourceType": "microsoft.appconfiguration/configurationstores",
+      "severity": "Medium"
+    },
+    {
+      "count_": 3,
+      "rec": "Update gzip",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "Medium"
+    },
+    {
+      "count_": 3,
+      "rec": "Update ncurses-base",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "Medium"
+    },
+    {
+      "count_": 3,
+      "rec": "Update libsystemd0",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "Medium"
+    },
+    {
+      "count_": 2,
+      "rec": "Microsoft Foundry resources should have key access disabled (disable local authentication)",
+      "resourceType": "microsoft.cognitiveservices/accounts",
+      "severity": "Medium"
+    },
+    {
+      "count_": 2,
+      "rec": "Container registries should not allow unrestricted network access",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Medium"
+    },
+    {
+      "count_": 2,
+      "rec": "SQL Auditing settings should have Action-Groups configured to capture critical activities",
+      "resourceType": "microsoft.sql/servers",
+      "severity": "Medium"
+    },
+    {
+      "count_": 2,
+      "rec": "Public network access should be disabled for Container registries",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Medium"
+    },
+    {
+      "count_": 2,
+      "rec": "Azure data factories should be encrypted with a customer-managed key",
+      "resourceType": "microsoft.datafactory/factories",
+      "severity": "Medium"
+    },
+    {
+      "count_": 2,
+      "rec": "Key vaults should have deletion protection enabled",
+      "resourceType": "microsoft.keyvault/vaults",
+      "severity": "Medium"
+    },
+    {
+      "count_": 2,
+      "rec": "Update opentelemetry.api",
+      "resourceType": "microsoft.app/containerapps",
+      "severity": "Medium"
+    },
+    {
+      "count_": 2,
+      "rec": "Microsoft Foundry resources should use Azure Private Link",
+      "resourceType": "microsoft.cognitiveservices/accounts",
+      "severity": "Medium"
+    },
+    {
+      "count_": 2,
+      "rec": "Update opentelemetry.api",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Medium"
+    },
+    {
+      "count_": 2,
+      "rec": "Azure Data Factory should use private link",
+      "resourceType": "microsoft.datafactory/factories",
+      "severity": "Medium"
+    },
+    {
+      "count_": 2,
+      "rec": "Container registries should use private link",
+      "resourceType": "microsoft.containerregistry/registries",
+      "severity": "Medium"
+    },
+    {
+      "count_": 1,
+      "rec": "All authorization rules except RootManageSharedAccessKey should be removed from Service Bus namespace",
+      "resourceType": "microsoft.servicebus/namespaces",
+      "severity": "Medium"
+    },
+    {
+      "count_": 1,
+      "rec": "Azure Database for PostgreSQL flexible server should have Microsoft Entra authentication only enabled",
+      "resourceType": "microsoft.dbforpostgresql/flexibleservers",
+      "severity": "Medium"
+    },
+    {
+      "count_": 1,
+      "rec": "Cognitive Services accounts should use customer owned storage",
+      "resourceType": "microsoft.cognitiveservices/accounts",
+      "severity": "Medium"
+    },
+    {
+      "count_": 1,
+      "rec": "Public network access on Azure SQL Database should be disabled",
+      "resourceType": "microsoft.sql/servers",
+      "severity": "Medium"
+    },
+    {
+      "count_": 1,
+      "rec": "Public network access should be disabled for PostgreSQL flexible servers",
+      "resourceType": "microsoft.dbforpostgresql/flexibleservers",
+      "severity": "Medium"
+    },
+    {
+      "count_": 1,
+      "rec": "Public IP access should be disabled for Azure Database for PostgreSQL Servers",
+      "resourceType": "microsoft.dbforpostgresql/flexibleservers",
+      "severity": "Medium"
+    },
+    {
+      "count_": 1,
+      "rec": "logfiles.retention_days should be greater than 3 for PostgreSQL Servers",
+      "resourceType": "microsoft.dbforpostgresql/flexibleservers",
+      "severity": "Medium"
+    },
+    {
+      "count_": 1,
+      "rec": "Flow logs should be configured for every network security group",
+      "resourceType": "microsoft.network/networksecuritygroups",
+      "severity": "Medium"
+    },
+    {
+      "count_": 1,
+      "rec": "Microsoft Foundry resources should restrict network access",
+      "resourceType": "microsoft.cognitiveservices/accounts",
+      "severity": "Medium"
+    },
+    {
+      "count_": 1,
+      "rec": "Disk access resources should use private link",
+      "resourceType": "microsoft.compute/diskaccesses",
+      "severity": "Medium"
+    },
+    {
+      "count_": 1,
+      "rec": "pgaudit.log_statement_once should be set to 'on' for Azure Database for PostgreSQL Servers",
+      "resourceType": "microsoft.dbforpostgresql/flexibleservers",
+      "severity": "Medium"
+    }
+  ],
+  "skip_token": null,
+  "total_records": 292
+}

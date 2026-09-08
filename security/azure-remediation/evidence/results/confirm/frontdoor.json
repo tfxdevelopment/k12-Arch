@@ -1,0 +1,67 @@
+{
+  "count": 12,
+  "data": [
+    {
+      "name": "admin-development-afd-profile",
+      "resourceGroup": "development",
+      "sku": "Standard_AzureFrontDoor"
+    },
+    {
+      "name": "admin-staging-afd-profile",
+      "resourceGroup": "staging",
+      "sku": "Standard_AzureFrontDoor"
+    },
+    {
+      "name": "admin-testing-afd-profile",
+      "resourceGroup": "testing",
+      "sku": "Standard_AzureFrontDoor"
+    },
+    {
+      "name": "household-development-afd-profile",
+      "resourceGroup": "development",
+      "sku": "Standard_AzureFrontDoor"
+    },
+    {
+      "name": "household-staging-afd-profile",
+      "resourceGroup": "staging",
+      "sku": "Standard_AzureFrontDoor"
+    },
+    {
+      "name": "household-testing-afd-profile",
+      "resourceGroup": "testing",
+      "sku": "Standard_AzureFrontDoor"
+    },
+    {
+      "name": "providers-development-afd-profile",
+      "resourceGroup": "development",
+      "sku": "Standard_AzureFrontDoor"
+    },
+    {
+      "name": "providers-staging-afd-profile",
+      "resourceGroup": "staging",
+      "sku": "Standard_AzureFrontDoor"
+    },
+    {
+      "name": "providers-testing-afd-profile",
+      "resourceGroup": "testing",
+      "sku": "Standard_AzureFrontDoor"
+    },
+    {
+      "name": "schools-development-afd-profile",
+      "resourceGroup": "development",
+      "sku": "Standard_AzureFrontDoor"
+    },
+    {
+      "name": "schools-staging-afd-profile",
+      "resourceGroup": "staging",
+      "sku": "Standard_AzureFrontDoor"
+    },
+    {
+      "name": "schools-testing-afd-profile",
+      "resourceGroup": "testing",
+      "sku": "Standard_AzureFrontDoor"
+    }
+  ],
+  "skip_token": null,
+  "total_records": 12
+}

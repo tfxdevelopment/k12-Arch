@@ -1,0 +1,197 @@
+{
+  "count": 38,
+  "data": [
+    {
+      "name": "cae-acr-pe",
+      "resourceGroup": "development",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/development/providers/Microsoft.ContainerRegistry/registries/developmentk12acr"
+    },
+    {
+      "name": "cae-files-pe",
+      "resourceGroup": "development",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/development/providers/Microsoft.Storage/storageAccounts/developmentk12caestorage"
+    },
+    {
+      "name": "cae-sql-pe",
+      "resourceGroup": "development",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/development/providers/Microsoft.Sql/servers/development-api-replic"
+    },
+    {
+      "name": "development-acr-pe",
+      "resourceGroup": "development",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/development/providers/Microsoft.ContainerRegistry/registries/developmentk12acr"
+    },
+    {
+      "name": "development-kv-pe",
+      "resourceGroup": "development",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/development/providers/Microsoft.KeyVault/vaults/developmentapikv"
+    },
+    {
+      "name": "development-sa-blob-pe",
+      "resourceGroup": "development",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/development/providers/Microsoft.Storage/storageAccounts/developmentapienrollment"
+    },
+    {
+      "name": "development-sa-file-pe",
+      "resourceGroup": "development",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/development/providers/Microsoft.Storage/storageAccounts/developmentapienrollment"
+    },
+    {
+      "name": "development-sa-hns-blob-pe",
+      "resourceGroup": "development",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/development/providers/Microsoft.Storage/storageAccounts/developmentenrollmenthns"
+    },
+    {
+      "name": "development-sa-hns-dfs-pe",
+      "resourceGroup": "development",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/development/providers/Microsoft.Storage/storageAccounts/developmentenrollmenthns"
+    },
+    {
+      "name": "development-sa-queue-pe",
+      "resourceGroup": "development",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/development/providers/Microsoft.Storage/storageAccounts/developmentapienrollment"
+    },
+    {
+      "name": "development-sa-table-pe",
+      "resourceGroup": "development",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/development/providers/Microsoft.Storage/storageAccounts/developmentapienrollment"
+    },
+    {
+      "name": "development-sb-pe",
+      "resourceGroup": "development",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/development/providers/Microsoft.ServiceBus/namespaces/k12eventhub-k12-development-sbns"
+    },
+    {
+      "name": "development-signalr-pe",
+      "resourceGroup": "development",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/development/providers/Microsoft.SignalRService/signalR/development-api-enrollment-signalr"
+    },
+    {
+      "name": "development-sql-pe",
+      "resourceGroup": "development",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/development/providers/Microsoft.Sql/servers/development-api-enrollment"
+    },
+    {
+      "name": "k12nonprodrefundsftp-blob-pe",
+      "resourceGroup": "k12-infra",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/k12-infra/providers/Microsoft.Storage/storageAccounts/k12nonprodrefundsftp"
+    },
+    {
+      "name": "k12nonprodrefundsftp-dfs-pe",
+      "resourceGroup": "k12-infra",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/k12-infra/providers/Microsoft.Storage/storageAccounts/k12nonprodrefundsftp"
+    },
+    {
+      "name": "staging-acr-pe",
+      "resourceGroup": "staging",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/staging/providers/Microsoft.ContainerRegistry/registries/stagingk12acr"
+    },
+    {
+      "name": "staging-kv-pe",
+      "resourceGroup": "staging",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/staging/providers/Microsoft.KeyVault/vaults/stagingapikv"
+    },
+    {
+      "name": "staging-sa-blob-pe",
+      "resourceGroup": "staging",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/staging/providers/Microsoft.Storage/storageAccounts/stagingapienrollment"
+    },
+    {
+      "name": "staging-sa-file-pe",
+      "resourceGroup": "staging",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/staging/providers/Microsoft.Storage/storageAccounts/stagingapienrollment"
+    },
+    {
+      "name": "staging-sa-hns-blob-pe",
+      "resourceGroup": "staging",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/staging/providers/Microsoft.Storage/storageAccounts/stagingenrollmenthns"
+    },
+    {
+      "name": "staging-sa-hns-dfs-pe",
+      "resourceGroup": "staging",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/staging/providers/Microsoft.Storage/storageAccounts/stagingenrollmenthns"
+    },
+    {
+      "name": "staging-sa-queue-pe",
+      "resourceGroup": "staging",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/staging/providers/Microsoft.Storage/storageAccounts/stagingapienrollment"
+    },
+    {
+      "name": "staging-sa-table-pe",
+      "resourceGroup": "staging",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/staging/providers/Microsoft.Storage/storageAccounts/stagingapienrollment"
+    },
+    {
+      "name": "staging-sb-pe",
+      "resourceGroup": "staging",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/staging/providers/Microsoft.ServiceBus/namespaces/k12eventhub-k12-staging-sbns"
+    },
+    {
+      "name": "staging-signalr-pe",
+      "resourceGroup": "staging",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/staging/providers/Microsoft.SignalRService/signalR/staging-api-enrollment-signalr"
+    },
+    {
+      "name": "staging-sql-pe",
+      "resourceGroup": "staging",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/staging/providers/Microsoft.Sql/servers/staging-api-enrollment"
+    },
+    {
+      "name": "testing-acr-pe",
+      "resourceGroup": "testing",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/testing/providers/Microsoft.ContainerRegistry/registries/testingk12acr"
+    },
+    {
+      "name": "testing-kv-pe",
+      "resourceGroup": "testing",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/testing/providers/Microsoft.KeyVault/vaults/testingapikv"
+    },
+    {
+      "name": "testing-sa-blob-pe",
+      "resourceGroup": "testing",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/testing/providers/Microsoft.Storage/storageAccounts/testingapienrollment"
+    },
+    {
+      "name": "testing-sa-file-pe",
+      "resourceGroup": "testing",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/testing/providers/Microsoft.Storage/storageAccounts/testingapienrollment"
+    },
+    {
+      "name": "testing-sa-hns-blob-pe",
+      "resourceGroup": "testing",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/testing/providers/Microsoft.Storage/storageAccounts/testingenrollmenthns"
+    },
+    {
+      "name": "testing-sa-hns-dfs-pe",
+      "resourceGroup": "testing",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/testing/providers/Microsoft.Storage/storageAccounts/testingenrollmenthns"
+    },
+    {
+      "name": "testing-sa-queue-pe",
+      "resourceGroup": "testing",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/testing/providers/Microsoft.Storage/storageAccounts/testingapienrollment"
+    },
+    {
+      "name": "testing-sa-table-pe",
+      "resourceGroup": "testing",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/testing/providers/Microsoft.Storage/storageAccounts/testingapienrollment"
+    },
+    {
+      "name": "testing-sb-pe",
+      "resourceGroup": "testing",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/testing/providers/Microsoft.ServiceBus/namespaces/k12eventhub-k12-testing-sbns"
+    },
+    {
+      "name": "testing-signalr-pe",
+      "resourceGroup": "testing",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/testing/providers/Microsoft.SignalRService/signalR/testing-api-enrollment-signalr"
+    },
+    {
+      "name": "testing-sql-pe",
+      "resourceGroup": "testing",
+      "target": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/testing/providers/Microsoft.Sql/servers/testing-api-enrollment"
+    }
+  ],
+  "skip_token": null,
+  "total_records": 38
+}

@@ -1,0 +1,53 @@
+%% K12 MyPortal — CURRENT state, commercial tenant (live query 2026-09-07, k12-cms excluded)
+%% Counts are per the whole subscription (dev + testing + staging share sub "K12 Azure")
+flowchart LR
+  classDef edge fill:#CADCFC,stroke:#1E2761,color:#1E2761
+  classDef warn fill:#FADBD8,stroke:#B03A2E,color:#641E16
+  classDef ok fill:#E3F4EA,stroke:#2E8B57,color:#1B4D33
+  classDef paas fill:#FFFFFF,stroke:#1E2761,color:#1E2761
+  classDef gov fill:#FFF3D6,stroke:#B57A12,color:#4A3100
+
+  users([Citizens · Schools · SEAA admins])
+
+  subgraph edge[Edge — NO WAF anywhere]
+    afd[Front Door ×12<br/>ALL Standard tier<br/>no WAF policies exist]:::warn
+    swa[Static Web Apps ×12]:::paas
+  end
+
+  subgraph vnets[Per-env VNets — dev 10.0/16 · testing 10.1/16 · staging 10.2/16]
+    direction TB
+    collide[k12-cae-ops-vbet 10.1.0.0/16<br/>COLLIDES with testing-vnet]:::warn
+    apps[App Service ×30<br/>httpsOnly + VNet-integrated ✓<br/>except 3 gateway apps · EasyAuth off ×30]:::paas
+    aca[Container Apps envs ×7<br/>1 internal · 4 no VNet · mTLS off<br/>Consumption-only profiles]:::warn
+    nat[NAT gateways ×4 · VPN gateways ×3<br/>NSGs: only 1 in the estate]:::warn
+    pes[Private endpoints ×38 ✓<br/>SQL·KV·ACR·Storage·SB·SignalR per env<br/>missing: App Config, Redis]:::ok
+  end
+
+  subgraph data[Data & messaging]
+    sql[(SQL servers ×4 · Entra admin = DevOps group<br/>Entra-only OFF · audit OFF<br/>PITR 7d · no LTR · dev geo-replica ✓)]:::warn
+    st[(Storage ×12 · TLS1.2 ✓<br/>shared key ON ×10 · public-blob allowed ×6<br/>HNS doc stores LRS, soft delete OFF)]:::warn
+    sb[Service Bus Premium ×3 ✓<br/>local auth ON]:::paas
+    sr[SignalR ×4 · access keys ON]:::paas
+    redis[(Redis Standard ×3 · TLS ✓ · public)]:::paas
+    pg[(PostgreSQL 18 dev<br/>Entra auth OFF · public<br/>uninventoried)]:::warn
+    kv[Key Vaults ×8 · RBAC ✓<br/>purge protection missing ×2<br/>7 secrets no expiry]:::paas
+    acr[ACR: 3 Premium private ✓ admin off ✓<br/>+2 stray Basic public]:::paas
+  end
+
+  subgraph govn[Governance — single subscription]
+    defender[Defender plans: CSPM·AppSvc·KV·SQL·Storage ON<br/>Containers + Resource Manager OFF]:::gov
+    policy[No guardrail initiative deployed]:::warn
+    idn[Entra: 53 guests w/ write · 4 owners<br/>19 roles without PIM]:::warn
+  end
+
+  law[(Log Analytics ×31 workspaces<br/>all 30d retention · all public ingestion)]:::warn
+
+  users --> afd --> swa
+  users --> afd --> apps
+  apps --> pes --> sql & st & sb & sr & kv & acr
+  aca --> acr
+  apps -.-> law
+  defender -. assesses .-> data
+  policy -. absent .-> vnets
+
+  score[Secure score 12.9 / 27 subscription-wide<br/>245 portal-scoped unhealthy recs:<br/>65 High · 84 Med · 96 Low]:::warn

@@ -1,0 +1,169 @@
+{
+  "count": 27,
+  "data": [
+    {
+      "name": "cae-6okwxqo3pdluq",
+      "pna": "Enabled",
+      "resourceGroup": "development",
+      "type": "microsoft.app/managedenvironments"
+    },
+    {
+      "name": "cfik12sbom",
+      "pna": "Enabled",
+      "resourceGroup": "k12-infra",
+      "type": "microsoft.storage/storageaccounts"
+    },
+    {
+      "name": "classWallet",
+      "pna": "Enabled",
+      "resourceGroup": "k12-infra",
+      "type": "microsoft.keyvault/vaults"
+    },
+    {
+      "name": "development-api-replic",
+      "pna": "Enabled",
+      "resourceGroup": "development",
+      "type": "microsoft.sql/servers"
+    },
+    {
+      "name": "development-k12-cae",
+      "pna": "Enabled",
+      "resourceGroup": "development",
+      "type": "microsoft.app/managedenvironments"
+    },
+    {
+      "name": "development-k12-kv",
+      "pna": "Enabled",
+      "resourceGroup": "development",
+      "type": "microsoft.keyvault/vaults"
+    },
+    {
+      "name": "developmentapikv",
+      "pna": "Enabled",
+      "resourceGroup": "development",
+      "type": "microsoft.keyvault/vaults"
+    },
+    {
+      "name": "developmentenrollmenthns",
+      "pna": "Enabled",
+      "resourceGroup": "development",
+      "type": "microsoft.storage/storageaccounts"
+    },
+    {
+      "name": "developmentk12appversion",
+      "pna": "Enabled",
+      "resourceGroup": "development",
+      "type": "microsoft.storage/storageaccounts"
+    },
+    {
+      "name": "developmentk12caestorage",
+      "pna": "",
+      "resourceGroup": "development",
+      "type": "microsoft.storage/storageaccounts"
+    },
+    {
+      "name": "k12-development-app-configuration",
+      "pna": "Enabled",
+      "resourceGroup": "development",
+      "type": "microsoft.appconfiguration/configurationstores"
+    },
+    {
+      "name": "k12-infra-ops-apps-cae",
+      "pna": "Enabled",
+      "resourceGroup": "development",
+      "type": "microsoft.app/managedenvironments"
+    },
+    {
+      "name": "k12-rds-integration",
+      "pna": "Enabled",
+      "resourceGroup": "k12-infra",
+      "type": "microsoft.keyvault/vaults"
+    },
+    {
+      "name": "k12-shared-accounts",
+      "pna": "Enabled",
+      "resourceGroup": "k12-infra",
+      "type": "microsoft.keyvault/vaults"
+    },
+    {
+      "name": "k12-staging-app-configuration",
+      "pna": "Enabled",
+      "resourceGroup": "staging",
+      "type": "microsoft.appconfiguration/configurationstores"
+    },
+    {
+      "name": "k12-testing-app-configuration",
+      "pna": "Enabled",
+      "resourceGroup": "testing",
+      "type": "microsoft.appconfiguration/configurationstores"
+    },
+    {
+      "name": "k12eventhub-k12-development-sbns",
+      "pna": "Enabled",
+      "resourceGroup": "development",
+      "type": "microsoft.servicebus/namespaces"
+    },
+    {
+      "name": "k12infra",
+      "pna": "Enabled",
+      "resourceGroup": "k12-infra",
+      "type": "microsoft.storage/storageaccounts"
+    },
+    {
+      "name": "k12nonprodrefundsftp",
+      "pna": "Enabled",
+      "resourceGroup": "k12-infra",
+      "type": "microsoft.storage/storageaccounts"
+    },
+    {
+      "name": "k12sqlauditdev",
+      "pna": "",
+      "resourceGroup": "development",
+      "type": "microsoft.storage/storageaccounts"
+    },
+    {
+      "name": "lowerenvfdcfnccert",
+      "pna": "Enabled",
+      "resourceGroup": "k12-infra",
+      "type": "microsoft.keyvault/vaults"
+    },
+    {
+      "name": "staging-k12-cae",
+      "pna": "Enabled",
+      "resourceGroup": "staging",
+      "type": "microsoft.app/managedenvironments"
+    },
+    {
+      "name": "stagingapikv",
+      "pna": "Enabled",
+      "resourceGroup": "staging",
+      "type": "microsoft.keyvault/vaults"
+    },
+    {
+      "name": "testing-k12-cae",
+      "pna": "Enabled",
+      "resourceGroup": "testing",
+      "type": "microsoft.app/managedenvironments"
+    },
+    {
+      "name": "testingapienrollment",
+      "pna": "Enabled",
+      "resourceGroup": "testing",
+      "type": "microsoft.storage/storageaccounts"
+    },
+    {
+      "name": "testingapikv",
+      "pna": "Enabled",
+      "resourceGroup": "testing",
+      "type": "microsoft.keyvault/vaults"
+    },
+    {
+      "name": "testingenrollmenthns",
+      "pna": "Enabled",
+      "resourceGroup": "testing",
+      "type": "microsoft.storage/storageaccounts"
+    }
+  ],
+  "skip_token": null,
+  "total_records": 27
+}

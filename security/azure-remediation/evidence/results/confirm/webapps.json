@@ -1,0 +1,247 @@
+{
+  "count": 30,
+  "data": [
+    {
+      "httpsOnly": true,
+      "kind": "app",
+      "name": "k12-dev-portal",
+      "resourceGroup": "development",
+      "state": "Running",
+      "vnetSubnet": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/development/providers/Microsoft.Network/virtualNetworks/development-vnet/subnets/app-integration-subnet"
+    },
+    {
+      "httpsOnly": true,
+      "kind": "app,linux",
+      "name": "providers-development-web-app",
+      "resourceGroup": "development",
+      "state": "Running",
+      "vnetSubnet": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/development/providers/Microsoft.Network/virtualNetworks/development-vnet/subnets/app-integration-subnet"
+    },
+    {
+      "httpsOnly": true,
+      "kind": "app",
+      "name": "k12-dev-infrastructure",
+      "resourceGroup": "development",
+      "state": "Running",
+      "vnetSubnet": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/development/providers/Microsoft.Network/virtualNetworks/development-vnet/subnets/app-integration-subnet"
+    },
+    {
+      "httpsOnly": true,
+      "kind": "app,linux",
+      "name": "household-development-web-app",
+      "resourceGroup": "development",
+      "state": "Running",
+      "vnetSubnet": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/development/providers/Microsoft.Network/virtualNetworks/development-vnet/subnets/app-integration-subnet"
+    },
+    {
+      "httpsOnly": true,
+      "kind": "app,linux",
+      "name": "k12-dev-gateway",
+      "resourceGroup": "development",
+      "state": "Running",
+      "vnetSubnet": null
+    },
+    {
+      "httpsOnly": true,
+      "kind": "app,linux",
+      "name": "schools-development-web-app",
+      "resourceGroup": "development",
+      "state": "Running",
+      "vnetSubnet": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/development/providers/Microsoft.Network/virtualNetworks/development-vnet/subnets/app-integration-subnet"
+    },
+    {
+      "httpsOnly": true,
+      "kind": "app",
+      "name": "k12-dev-integration",
+      "resourceGroup": "development",
+      "state": "Running",
+      "vnetSubnet": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/development/providers/Microsoft.Network/virtualNetworks/development-vnet/subnets/app-integration-subnet"
+    },
+    {
+      "httpsOnly": true,
+      "kind": "app",
+      "name": "k12-development-workflows",
+      "resourceGroup": "development",
+      "state": "Running",
+      "vnetSubnet": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/development/providers/Microsoft.Network/virtualNetworks/development-vnet/subnets/app-integration-subnet"
+    },
+    {
+      "httpsOnly": true,
+      "kind": "app",
+      "name": "k12-dev-admin",
+      "resourceGroup": "development",
+      "state": "Running",
+      "vnetSubnet": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/development/providers/Microsoft.Network/virtualNetworks/development-vnet/subnets/app-integration-subnet"
+    },
+    {
+      "httpsOnly": true,
+      "kind": "app,linux",
+      "name": "admin-development-web-app",
+      "resourceGroup": "development",
+      "state": "Running",
+      "vnetSubnet": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/development/providers/Microsoft.Network/virtualNetworks/development-vnet/subnets/app-integration-subnet"
+    },
+    {
+      "httpsOnly": true,
+      "kind": "app,linux",
+      "name": "household-staging-web-app",
+      "resourceGroup": "staging",
+      "state": "Running",
+      "vnetSubnet": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/staging/providers/Microsoft.Network/virtualNetworks/staging-vnet/subnets/app-integration-subnet"
+    },
+    {
+      "httpsOnly": true,
+      "kind": "app",
+      "name": "k12-stage-admin",
+      "resourceGroup": "staging",
+      "state": "Running",
+      "vnetSubnet": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/staging/providers/Microsoft.Network/virtualNetworks/staging-vnet/subnets/app-integration-subnet"
+    },
+    {
+      "httpsOnly": true,
+      "kind": "app,linux",
+      "name": "k12-stage-gateway",
+      "resourceGroup": "staging",
+      "state": "Running",
+      "vnetSubnet": null
+    },
+    {
+      "httpsOnly": true,
+      "kind": "app,linux",
+      "name": "providers-staging-web-app",
+      "resourceGroup": "staging",
+      "state": "Running",
+      "vnetSubnet": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/staging/providers/Microsoft.Network/virtualNetworks/staging-vnet/subnets/app-integration-subnet"
+    },
+    {
+      "httpsOnly": true,
+      "kind": "app,linux",
+      "name": "schools-staging-web-app",
+      "resourceGroup": "staging",
+      "state": "Running",
+      "vnetSubnet": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/staging/providers/Microsoft.Network/virtualNetworks/staging-vnet/subnets/app-integration-subnet"
+    },
+    {
+      "httpsOnly": true,
+      "kind": "app",
+      "name": "k12-stage-infrastructure",
+      "resourceGroup": "staging",
+      "state": "Running",
+      "vnetSubnet": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/staging/providers/Microsoft.Network/virtualNetworks/staging-vnet/subnets/app-integration-subnet"
+    },
+    {
+      "httpsOnly": true,
+      "kind": "app",
+      "name": "k12-stage-portal",
+      "resourceGroup": "staging",
+      "state": "Running",
+      "vnetSubnet": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/staging/providers/Microsoft.Network/virtualNetworks/staging-vnet/subnets/app-integration-subnet"
+    },
+    {
+      "httpsOnly": true,
+      "kind": "app",
+      "name": "k12-staging-workflows",
+      "resourceGroup": "staging",
+      "state": "Running",
+      "vnetSubnet": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/staging/providers/Microsoft.Network/virtualNetworks/staging-vnet/subnets/app-integration-subnet"
+    },
+    {
+      "httpsOnly": true,
+      "kind": "app,linux",
+      "name": "admin-staging-web-app",
+      "resourceGroup": "staging",
+      "state": "Running",
+      "vnetSubnet": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/staging/providers/Microsoft.Network/virtualNetworks/staging-vnet/subnets/app-integration-subnet"
+    },
+    {
+      "httpsOnly": true,
+      "kind": "app",
+      "name": "k12-stage-integration",
+      "resourceGroup": "staging",
+      "state": "Running",
+      "vnetSubnet": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/staging/providers/Microsoft.Network/virtualNetworks/staging-vnet/subnets/app-integration-subnet"
+    },
+    {
+      "httpsOnly": true,
+      "kind": "app,linux",
+      "name": "providers-testing-web-app",
+      "resourceGroup": "testing",
+      "state": "Running",
+      "vnetSubnet": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/testing/providers/Microsoft.Network/virtualNetworks/testing-vnet/subnets/app-integration-subnet"
+    },
+    {
+      "httpsOnly": true,
+      "kind": "app",
+      "name": "k12-test-integration",
+      "resourceGroup": "testing",
+      "state": "Running",
+      "vnetSubnet": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/testing/providers/Microsoft.Network/virtualNetworks/testing-vnet/subnets/app-integration-subnet"
+    },
+    {
+      "httpsOnly": true,
+      "kind": "app",
+      "name": "k12-testing-workflows",
+      "resourceGroup": "testing",
+      "state": "Running",
+      "vnetSubnet": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/testing/providers/Microsoft.Network/virtualNetworks/testing-vnet/subnets/app-integration-subnet"
+    },
+    {
+      "httpsOnly": true,
+      "kind": "app,linux",
+      "name": "schools-testing-web-app",
+      "resourceGroup": "testing",
+      "state": "Running",
+      "vnetSubnet": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/testing/providers/Microsoft.Network/virtualNetworks/testing-vnet/subnets/app-integration-subnet"
+    },
+    {
+      "httpsOnly": true,
+      "kind": "app",
+      "name": "k12-test-infrastructure",
+      "resourceGroup": "testing",
+      "state": "Running",
+      "vnetSubnet": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/testing/providers/Microsoft.Network/virtualNetworks/testing-vnet/subnets/app-integration-subnet"
+    },
+    {
+      "httpsOnly": true,
+      "kind": "app,linux",
+      "name": "k12-test-gateway",
+      "resourceGroup": "testing",
+      "state": "Running",
+      "vnetSubnet": null
+    },
+    {
+      "httpsOnly": true,
+      "kind": "app",
+      "name": "k12-test-portal",
+      "resourceGroup": "testing",
+      "state": "Running",
+      "vnetSubnet": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/testing/providers/Microsoft.Network/virtualNetworks/testing-vnet/subnets/app-integration-subnet"
+    },
+    {
+      "httpsOnly": true,
+      "kind": "app",
+      "name": "k12-test-admin",
+      "resourceGroup": "testing",
+      "state": "Running",
+      "vnetSubnet": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/testing/providers/Microsoft.Network/virtualNetworks/testing-vnet/subnets/app-integration-subnet"
+    },
+    {
+      "httpsOnly": true,
+      "kind": "app,linux",
+      "name": "admin-testing-web-app",
+      "resourceGroup": "testing",
+      "state": "Running",
+      "vnetSubnet": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/testing/providers/Microsoft.Network/virtualNetworks/testing-vnet/subnets/app-integration-subnet"
+    },
+    {
+      "httpsOnly": true,
+      "kind": "app,linux",
+      "name": "household-testing-web-app",
+      "resourceGroup": "testing",
+      "state": "Running",
+      "vnetSubnet": "/subscriptions/cf6841bb-b70c-4d55-a489-2d53855e78b5/resourceGroups/testing/providers/Microsoft.Network/virtualNetworks/testing-vnet/subnets/app-integration-subnet"
+    }
+  ],
+  "skip_token": null,
+  "total_records": 30
+}

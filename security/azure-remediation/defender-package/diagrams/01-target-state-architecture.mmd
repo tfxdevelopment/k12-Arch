@@ -1,0 +1,64 @@
+%% K12 MyPortal — target-state security architecture (one environment)
+flowchart LR
+  classDef edge fill:#CADCFC,stroke:#1E2761,color:#1E2761
+  classDef aca fill:#E9F0FF,stroke:#1E2761,color:#1E2761
+  classDef paas fill:#FFFFFF,stroke:#1E2761,color:#1E2761
+  classDef gov fill:#FFF3D6,stroke:#B57A12,color:#4A3100
+  classDef obs fill:#E3F4EA,stroke:#2E8B57,color:#1B4D33
+
+  users([Citizens · Schools · SEAA admins])
+  partners([NSC · SFTP partners])
+  pipe([Azure Pipelines<br/>Managed DevOps Pool agent in VNet<br/>workload identity federation])
+
+  subgraph edge[Edge]
+    afd[Front Door Premium + WAF]:::edge
+    agw[Application Gateway WAF v2<br/>snet-appgw]:::edge
+  end
+
+  subgraph vnet[vnet-k12-env · 10.x.0.0/20]
+    direction TB
+    subgraph aca[snet-aca · Container Apps environment<br/>workload profiles · internal LB · public access Disabled · mTLS]
+      direction LR
+      api1[enrollment-api<br/>UAMI + Dapr]:::aca
+      api2[admin-api<br/>UAMI + Dapr]:::aca
+      api3[validation-api<br/>UAMI + Dapr]:::aca
+    end
+    nat[NAT Gateway<br/>stable egress IP]
+    pesub[snet-private-endpoints<br/>NSG deny-by-default<br/>10 private endpoints + private DNS zones]
+  end
+
+  subgraph paas[PaaS · public network access Disabled · local auth Disabled · TLS 1.2]
+    direction TB
+    kv[Key Vault<br/>RBAC · soft delete · purge protection]:::paas
+    appcfg[App Configuration Standard<br/>Entra-only]:::paas
+    sb[Service Bus Premium<br/>Entra-only]:::paas
+    eh[Event Hubs Standard<br/>Entra-only]:::paas
+    sql[(Azure SQL<br/>Entra-only · audit → LAW · ledger)]:::paas
+    st[(Storage<br/>no shared key · no public blobs)]:::paas
+    redis[(Azure Managed Redis<br/>Entra auth · TLS only)]:::paas
+    acr[Container Registry Premium<br/>admin disabled]:::paas
+    swa[Static Web App Standard<br/>admin portal · private endpoint]:::paas
+  end
+
+  subgraph gov[Governance]
+    direction TB
+    entra[Microsoft Entra ID<br/>managed identities · Ops/Architects group]:::gov
+    policy[Azure Policy initiative<br/>K12 Guardrails · Audit NonProd · Deny Prod]:::gov
+    defender[Defender for Cloud<br/>MCSB · CSPM · KV · Storage · SQL · Containers · ARM]:::gov
+  end
+
+  law[(Log Analytics log-k12-env<br/>allLogs · SQL audit · ACA logs<br/>prod: 120d + archive to 3y)]:::obs
+
+  users --> afd --> swa
+  users --> agw --> pesub --> aca
+  aca -- managed identity via private endpoints --> pesub
+  pesub --> kv & appcfg & sb & eh & sql & st & redis & acr
+  aca --> nat --> partners
+  pipe -- push / deploy --> acr
+  pipe -- deploy --> aca
+  paas -. diagnostic settings .-> law
+  aca -. logs .-> law
+  policy -. governs .-> vnet
+  policy -. governs .-> paas
+  defender -. assesses .-> paas
+  entra -. issues tokens .-> aca

@@ -1,0 +1,34 @@
+{
+  "count": 3,
+  "data": [
+    {
+      "minTls": "1.2",
+      "name": "development-k12-redis",
+      "nonSsl": false,
+      "pna": "Enabled",
+      "resourceGroup": "development",
+      "sku": "Standard",
+      "type": "microsoft.cache/redis"
+    },
+    {
+      "minTls": "1.2",
+      "name": "staging-k12-redis",
+      "nonSsl": false,
+      "pna": "Enabled",
+      "resourceGroup": "staging",
+      "sku": "Standard",
+      "type": "microsoft.cache/redis"
+    },
+    {
+      "minTls": "1.2",
+      "name": "testing-k12-redis",
+      "nonSsl": false,
+      "pna": "Enabled",
+      "resourceGroup": "testing",
+      "sku": "Standard",
+      "type": "microsoft.cache/redis"
+    }
+  ],
+  "skip_token": null,
+  "total_records": 3
+}

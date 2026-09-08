@@ -1,0 +1,17 @@
+{
+  "count": 2,
+  "data": [
+    {
+      "max": 8,
+      "score": 4.34,
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    },
+    {
+      "max": 27,
+      "score": 12.9,
+      "subscriptionId": "cf6841bb-b70c-4d55-a489-2d53855e78b5"
+    }
+  ],
+  "skip_token": null,
+  "total_records": 2
+}

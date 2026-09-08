@@ -1,0 +1,255 @@
+{
+  "count": 31,
+  "data": [
+    {
+      "name": "DefaultWorkspace-cf6841bb-b70c-4d55-a489-2d53855e78b5-EUS",
+      "pnaIngest": "Enabled",
+      "pnaQuery": "Enabled",
+      "resourceGroup": "defaultresourcegroup-eus",
+      "retention": 30,
+      "sku": "PerGB2018"
+    },
+    {
+      "name": "DefaultWorkspace-cf6841bb-b70c-4d55-a489-2d53855e78b5-EUS2",
+      "pnaIngest": "Enabled",
+      "pnaQuery": "Enabled",
+      "resourceGroup": "defaultresourcegroup-eus2",
+      "retention": 30,
+      "sku": "PerGB2018"
+    },
+    {
+      "name": "cf6841bb-b70c-4d55-a489-2d53855e78b5-k12-FE-insights-deve-EUS",
+      "pnaIngest": "Enabled",
+      "pnaQuery": "Enabled",
+      "resourceGroup": "k12-fe-insights-development",
+      "retention": 30,
+      "sku": "PerGB2018"
+    },
+    {
+      "name": "development-aca-logs",
+      "pnaIngest": "Enabled",
+      "pnaQuery": "Enabled",
+      "resourceGroup": "development",
+      "retention": 30,
+      "sku": "PerGB2018"
+    },
+    {
+      "name": "development-k12-law",
+      "pnaIngest": "Enabled",
+      "pnaQuery": "Enabled",
+      "resourceGroup": "development",
+      "retention": 30,
+      "sku": "PerGB2018"
+    },
+    {
+      "name": "developmentk12caelaw-6okwxqo3pdluq",
+      "pnaIngest": "Enabled",
+      "pnaQuery": "Enabled",
+      "resourceGroup": "development",
+      "retention": 30,
+      "sku": "PerGB2018"
+    },
+    {
+      "name": "k12-dev-log-analytics",
+      "pnaIngest": "Enabled",
+      "pnaQuery": "Enabled",
+      "resourceGroup": "development",
+      "retention": 30,
+      "sku": "PerGB2018"
+    },
+    {
+      "name": "k12-development-law",
+      "pnaIngest": "Enabled",
+      "pnaQuery": "Enabled",
+      "resourceGroup": "development",
+      "retention": 30,
+      "sku": "PerGB2018"
+    },
+    {
+      "name": "k12-development-workflows-log-analytics",
+      "pnaIngest": "Enabled",
+      "pnaQuery": "Enabled",
+      "resourceGroup": "development",
+      "retention": 30,
+      "sku": "PerGB2018"
+    },
+    {
+      "name": "k12-infra-ops-apps-law",
+      "pnaIngest": "Enabled",
+      "pnaQuery": "Enabled",
+      "resourceGroup": "development",
+      "retention": 30,
+      "sku": "PerGB2018"
+    },
+    {
+      "name": "k12-infra-ops-law",
+      "pnaIngest": "Enabled",
+      "pnaQuery": "Enabled",
+      "resourceGroup": "development",
+      "retention": 30,
+      "sku": "PerGB2018"
+    },
+    {
+      "name": "k12-staging-law",
+      "pnaIngest": "Enabled",
+      "pnaQuery": "Enabled",
+      "resourceGroup": "staging",
+      "retention": 30,
+      "sku": "PerGB2018"
+    },
+    {
+      "name": "k12-staging-workflows-log-analytics",
+      "pnaIngest": "Enabled",
+      "pnaQuery": "Enabled",
+      "resourceGroup": "staging",
+      "retention": 30,
+      "sku": "PerGB2018"
+    },
+    {
+      "name": "k12-testing-law",
+      "pnaIngest": "Enabled",
+      "pnaQuery": "Enabled",
+      "resourceGroup": "testing",
+      "retention": 30,
+      "sku": "PerGB2018"
+    },
+    {
+      "name": "k12-testing-workflows-log-analytics",
+      "pnaIngest": "Enabled",
+      "pnaQuery": "Enabled",
+      "resourceGroup": "testing",
+      "retention": 30,
+      "sku": "PerGB2018"
+    },
+    {
+      "name": "law-6okwxqo3pdluq",
+      "pnaIngest": "Enabled",
+      "pnaQuery": "Enabled",
+      "resourceGroup": "development",
+      "retention": 30,
+      "sku": "PerGB2018"
+    },
+    {
+      "name": "lawdevelopmentk12ai-6okwxqo3pdluq",
+      "pnaIngest": "Enabled",
+      "pnaQuery": "Enabled",
+      "resourceGroup": "development",
+      "retention": 30,
+      "sku": "PerGB2018"
+    },
+    {
+      "name": "managed-development-api-enrollment-insights-ws",
+      "pnaIngest": "Enabled",
+      "pnaQuery": "Enabled",
+      "resourceGroup": "ai_development-api-enrollment-insights_999d8e7f-d6c9-425c-92b5-1967d47e6b6a_managed",
+      "retention": 90,
+      "sku": "PerGB2018"
+    },
+    {
+      "name": "managed-k12-stage-admin-insights-ws",
+      "pnaIngest": "Enabled",
+      "pnaQuery": "Enabled",
+      "resourceGroup": "ai_k12-stage-admin-insights_f1a1a21c-a74c-4ff3-aca6-4fb4ca6dfc7e_managed",
+      "retention": 30,
+      "sku": "PerGB2018"
+    },
+    {
+      "name": "managed-k12-stage-infrastructure-insights-ws",
+      "pnaIngest": "Enabled",
+      "pnaQuery": "Enabled",
+      "resourceGroup": "ai_k12-stage-infrastructure-insights_7b2d4808-49fb-421a-8a62-4468279a42af_managed",
+      "retention": 30,
+      "sku": "PerGB2018"
+    },
+    {
+      "name": "managed-k12-stage-integration-insights-ws",
+      "pnaIngest": "Enabled",
+      "pnaQuery": "Enabled",
+      "resourceGroup": "ai_k12-stage-integration-insights_30967c2d-a4c9-4093-be3e-906baf5c69f2_managed",
+      "retention": 30,
+      "sku": "PerGB2018"
+    },
+    {
+      "name": "managed-k12-stage-portal-insights-ws",
+      "pnaIngest": "Enabled",
+      "pnaQuery": "Enabled",
+      "resourceGroup": "ai_k12-stage-portal-insights_fb798459-0ee7-4f98-bcf6-8885b9db2dd3_managed",
+      "retention": 30,
+      "sku": "PerGB2018"
+    },
+    {
+      "name": "managed-k12-test-admin-insights-ws",
+      "pnaIngest": "Enabled",
+      "pnaQuery": "Enabled",
+      "resourceGroup": "ai_k12-test-admin-insights_fac5ab0e-3b0c-4f2e-a639-f7a884e82869_managed",
+      "retention": 30,
+      "sku": "PerGB2018"
+    },
+    {
+      "name": "managed-k12-test-infrastructure-insights-ws",
+      "pnaIngest": "Enabled",
+      "pnaQuery": "Enabled",
+      "resourceGroup": "ai_k12-test-infrastructure-insights_8b320a05-be59-45a2-b4d9-68b158ab4948_managed",
+      "retention": 30,
+      "sku": "PerGB2018"
+    },
+    {
+      "name": "managed-k12-test-integration-insights-ws",
+      "pnaIngest": "Enabled",
+      "pnaQuery": "Enabled",
+      "resourceGroup": "ai_k12-test-integration-insights_e291baee-495d-46a8-90f2-3a2d5e78cb59_managed",
+      "retention": 30,
+      "sku": "PerGB2018"
+    },
+    {
+      "name": "managed-k12-test-portal-insights-ws",
+      "pnaIngest": "Enabled",
+      "pnaQuery": "Enabled",
+      "resourceGroup": "ai_k12-test-portal-insights_3a6e7366-5662-4ebe-ace9-bfdfa06d19f6_managed",
+      "retention": 30,
+      "sku": "PerGB2018"
+    },
+    {
+      "name": "managed-staging-api-enrollment-insights-ws",
+      "pnaIngest": "Enabled",
+      "pnaQuery": "Enabled",
+      "resourceGroup": "ai_staging-api-enrollment-insights_f9e70d9a-0a30-432b-be96-74c858cf272d_managed",
+      "retention": 90,
+      "sku": "PerGB2018"
+    },
+    {
+      "name": "managed-testing-api-enrollment-insights-ws",
+      "pnaIngest": "Enabled",
+      "pnaQuery": "Enabled",
+      "resourceGroup": "ai_testing-api-enrollment-insights_871ff6a9-81e0-43a6-aa8e-d97294fe9b99_managed",
+      "retention": 90,
+      "sku": "PerGB2018"
+    },
+    {
+      "name": "staging-aca-logs",
+      "pnaIngest": "Enabled",
+      "pnaQuery": "Enabled",
+      "resourceGroup": "staging",
+      "retention": 30,
+      "sku": "PerGB2018"
+    },
+    {
+      "name": "testing-aca-logs",
+      "pnaIngest": "Enabled",
+      "pnaQuery": "Enabled",
+      "resourceGroup": "testing",
+      "retention": 30,
+      "sku": "PerGB2018"
+    },
+    {
+      "name": "workspace-developmentNgXk",
+      "pnaIngest": "Enabled",
+      "pnaQuery": "Enabled",
+      "resourceGroup": "development",
+      "retention": 30,
+      "sku": "PerGB2018"
+    }
+  ],
+  "skip_token": null,
+  "total_records": 31
+}

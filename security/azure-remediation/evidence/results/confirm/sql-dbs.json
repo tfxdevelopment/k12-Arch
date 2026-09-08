@@ -1,0 +1,47 @@
+{
+  "count": 4,
+  "data": [
+    {
+      "backupRedundancy": "Geo",
+      "name": "K12",
+      "resourceGroup": "testing",
+      "secondaryType": null,
+      "sku": "GP_S_Gen5",
+      "status": "Online",
+      "tier": "GeneralPurpose",
+      "zone": false
+    },
+    {
+      "backupRedundancy": "Geo",
+      "name": "K12",
+      "resourceGroup": "development",
+      "secondaryType": "Geo",
+      "sku": "GP_S_Gen5",
+      "status": "Online",
+      "tier": "GeneralPurpose",
+      "zone": false
+    },
+    {
+      "backupRedundancy": "Geo",
+      "name": "K12",
+      "resourceGroup": "development",
+      "secondaryType": null,
+      "sku": "GP_S_Gen5",
+      "status": "Online",
+      "tier": "GeneralPurpose",
+      "zone": false
+    },
+    {
+      "backupRedundancy": "Geo",
+      "name": "K12",
+      "resourceGroup": "staging",
+      "secondaryType": null,
+      "sku": "GP_S_Gen5",
+      "status": "Online",
+      "tier": "GeneralPurpose",
+      "zone": false
+    }
+  ],
+  "skip_token": null,
+  "total_records": 4
+}
