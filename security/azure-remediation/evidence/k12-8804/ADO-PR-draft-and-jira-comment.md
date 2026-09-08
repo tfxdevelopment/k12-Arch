@@ -1,8 +1,11 @@
 # ADO PR draft — k12-query-builder → `development`
 
+> **Opened 2026-09-08:** draft PR 6024 → `development`: https://dev.azure.com/CFI-AzureDevOps/K12/_git/k12-query-builder/pullrequest/6024  
+> Branch `fix/k12-8804-image-vulns`, commit `dcdb98be` (parent `37222fe`). The description below was condensed to fit ADO's 4,000-character limit; PR text, commit message and branch content carry no tooling attribution, per repo convention.
+
 **Title:** `K12-8804: rebuild gateway/api/dashboard on chiseled aspnet:10.0 and bump vulnerable packages`
 
-**Branch (proposed):** `fix/k12-8804-image-vulns` → target `development`
+**Branch:** `fix/k12-8804-image-vulns` → target `development` (pushed; PR 6024)
 
 ## Why
 Defender for Cloud flags 34 vulnerable packages (15 High, max CVSS 9.8) on `k12-querybuilder-gateway`, and the identical set on `k12-querybuilder-api` and `k12-dashboard`. The running images (`development-844bf4c`, revision `patched0707`; `auditdemo-20260714`) were built in July from the floating `aspnet:10.0` tag and never rebuilt, so the base layer and the .NET runtime aged; two NuGet families are also behind.
@@ -40,6 +43,8 @@ Patch: `k12-8804-fix.patch` (apply with `git apply` on a branch off `development
 ---
 # Jira comment draft for K12-8804 (paste after review — nothing posted)
 
+PR (draft): https://dev.azure.com/CFI-AzureDevOps/K12/_git/k12-query-builder/pullrequest/6024
+
 Root cause confirmed from Defender package-level data (2026-09-08): the running gateway image (`development-844bf4c`, deployed 7 Jul) carries 34 vulnerable packages — 30 in the Ubuntu base layer (perl-base 9.8, glibc 9.1, openssl 7.5, util-linux 7.0 …; all fixed in noble-updates), 9 CVEs in the .NET 10 runtime (fixed in 10.0.10+), and two NuGet families (Microsoft.OpenApi via Microsoft.AspNetCore.OpenApi 10.0.0; OpenTelemetry 1.15.0). `k12-querybuilder-api` and `k12-dashboard` share the base and show the same set.
 
-Fix (PR to `development`): base image → `aspnet:10.0-noble-chiseled-extra` (removes the shell/perl/util-linux package classes for good), `Microsoft.AspNetCore.OpenApi` → 10.0.11, OpenTelemetry → 1.18.0; one pipeline run rebuilds and redeploys all three images. Closure evidence = Defender re-scan of the new digests → 0 package findings on the three apps. Follow-ups tracked separately: deploy-by-digest + ACR manifest purge, the gateway external-ingress finding, and the runner image (K12-8497).
+Fix (draft PR 6024 to `development`, https://dev.azure.com/CFI-AzureDevOps/K12/_git/k12-query-builder/pullrequest/6024): base image → `aspnet:10.0-noble-chiseled-extra` (removes the shell/perl/util-linux package classes for good), `Microsoft.AspNetCore.OpenApi` → 10.0.11, OpenTelemetry → 1.18.0; one pipeline run rebuilds and redeploys all three images. Closure evidence = Defender re-scan of the new digests → 0 package findings on the three apps. Follow-ups tracked separately: deploy-by-digest + ACR manifest purge, the gateway external-ingress finding, and the runner image (K12-8497).

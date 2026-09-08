@@ -7,4 +7,4 @@
 | `standup-brief.md` | Evidence summary, 30-second standup line, runner-image (K12-8497) scope. |
 | `defender-package-assessments-2026-09-08.json` | Raw Defender package-level assessments (Resource Graph, read-only) for gateway/api/dashboard/runner — CVE ids, severities, fixed versions. |
 
-Status 2026-09-08: evidence complete; fix drafted; ADO PR **not** opened (needs approval — ADO write). Runner image (K12-8497) is the next easy win.
+Status 2026-09-08 (updated): **ADO PR 6024 opened as draft** — [https://dev.azure.com/CFI-AzureDevOps/K12/_git/k12-query-builder/pullrequest/6024](https://dev.azure.com/CFI-AzureDevOps/K12/_git/k12-query-builder/pullrequest/6024), branch `fix/k12-8804-image-vulns` @ `dcdb98be` (parent `37222fe`, 6 files, +19/−10). No pipeline run yet (repo has no PR validation policy; `ci`/`SecurityScan` must be queued on the branch). Jira comment still **not** posted (Atlassian write needs approval). Runner image (K12-8497) is the next easy win.

@@ -1,5 +1,7 @@
 # K12-8804 — k12-querybuilder-gateway package vulnerabilities (evidence pack, 2026-09-08)
 
+> **Update 2026-09-08:** fix is up as draft ADO PR 6024 (https://dev.azure.com/CFI-AzureDevOps/K12/_git/k12-query-builder/pullrequest/6024); waiting on a `ci`/`SecurityScan` run on the branch, then un-draft → merge → Defender re-scan for closure.
+
 Source: Defender for Cloud package-level assessments via Azure Resource Graph (read-only), sub K12 Azure, RG development.
 Running image: developmentk12acr.azurecr.io/k12-querybuilder-gateway:development-844bf4c (revision patched0707, 7 Jul) — ~2 months stale.
 Same base ⇒ same 33–34 findings on k12-querybuilder-api (auditdemo-20260714) and k12-dashboard (auditdemo-20260714).
