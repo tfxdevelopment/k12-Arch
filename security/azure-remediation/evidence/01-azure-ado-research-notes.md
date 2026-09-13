@@ -45,9 +45,14 @@ Refs:
   Azure DevOps Services and Azure public cloud, and isn't supported on any other national cloud
   offerings" (architecture-overview). Unsupported regions explicitly include US Gov.
   **Consequence:** the target "Managed DevOps Pool agent in the VNet" (§2 Delivery row) works
-  for Dev/Testing/Staging (commercial) only. For Gov pre-prod/prod use **VMSS agent pools or
-  self-hosted agents in the Gov VNet, registered via service principal (no PAT), images
-  digest-pinned** — same posture, different host.
+  for Dev/Testing/Staging (commercial) only. For Gov pre-prod/prod use **Container Apps Jobs (KEDA `azure-pipelines`
+  scaler) or ACI self-hosted agents in the Gov VNet** — **VMSS agent pools are Azure Public
+  only** (Learn, verified 2026-09-13: "Using Virtual Machine Scale Sets agent pools ... is only
+  supported for Azure Public (global service) cloud"); images digest-pinned. **Cross-tenant
+  constraint (2026-09-13):** the ADO org is bound to the commercial tenant, so Gov managed
+  identities cannot register agents or poll queues; registration uses a commercial-tenant
+  service principal (`--auth SP`) and the KEDA scaler a read-only PAT. Decision 2026-09-13:
+  Container Apps Jobs (plan 08 §B2.3).
 - **WIF → Gov subscriptions:** Entra **Workload Identities are GA in Azure Government**
   (Gov GA roadmap). The service-connection manual flow lets you pick the Azure Government
   environment. `[verify: create one manual WIF (managed-identity) service connection against
